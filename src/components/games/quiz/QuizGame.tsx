@@ -24,6 +24,10 @@ export function QuizGame({ title, questions, voiceEnabled, onBack, onFinish }: Q
   }, [currentQuestion, speak, stop]);
 
   useEffect(() => {
+    if (isAnswered && feedback) speak(feedback);
+  }, [feedback, isAnswered, speak]);
+
+  useEffect(() => {
     if (isFinished) onFinish(score, total, stars);
   }, [isFinished, onFinish, score, stars, total]);
 

@@ -1,3 +1,5 @@
+const CHILD_FRIENDLY_SPEECH_RATE = 0.75;
+
 export function canSpeak(): boolean {
   return typeof window !== 'undefined' && 'speechSynthesis' in window;
 }
@@ -7,7 +9,7 @@ export function speakHebrew(text: string): void {
 
   const utterance = new SpeechSynthesisUtterance(text);
   utterance.lang = 'he-IL';
-  utterance.rate = 0.9;
+  utterance.rate = CHILD_FRIENDLY_SPEECH_RATE;
   utterance.pitch = 1.05;
 
   window.speechSynthesis.cancel();

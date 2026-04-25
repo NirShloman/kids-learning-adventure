@@ -8,6 +8,7 @@ import { getDefaultDifficultyByAge } from './data/levels';
 import { getQuizQuestions } from './services/questionService';
 import { HomePage } from './pages/HomePage';
 import { SummaryPage } from './pages/SummaryPage';
+import { LandingPage } from './pages/LandingPage';
 import { GameId, GameResult, LearnerSettings } from './types';
 
 function App() {
@@ -15,10 +16,15 @@ function App() {
   const [selectedGameId, setSelectedGameId] = useState<GameId | null>(null);
   const [result, setResult] = useState<GameResult | null>(null);
   const [playSessionKey, setPlaySessionKey] = useState(0);
+  const [showLanding, setShowLanding] = useState(true);
 
   const selectedGame = useMemo(() => gameDefinitions.find((game) => game.id === selectedGameId) ?? null, [selectedGameId]);
 
   function handleSettingsChange(nextSettings: LearnerSettings) {
+    // Sync difficulty with age when age changes
+    if (nextSettings.age !== settings.age) {
+      nextSettings.difficulty = getDefaultDifficultyByAge(nextSettings.age);
+    }
     setSettings(nextSettings);
   }
 
@@ -35,6 +41,7 @@ function App() {
   function handleBackHome() {
     setSelectedGameId(null);
     setResult(null);
+    setShowLanding(true);
   }
 
   function handlePlayAgain() {
@@ -43,6 +50,16 @@ function App() {
   }
 
   function renderContent() {
+    if (showLanding) {
+      return (
+        <LandingPage
+          settings={settings}
+          onSettingsChange={handleSettingsChange}
+          onStart={() => setShowLanding(false)}
+        />
+      );
+    }
+
     if (!selectedGame || !selectedGameId) {
       return <HomePage settings={settings} onSettingsChange={handleSettingsChange} onSelectGame={handleSelectGame} />;
     }
