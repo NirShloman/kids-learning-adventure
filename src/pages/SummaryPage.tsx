@@ -20,7 +20,7 @@ export function SummaryPage({ result, title, onPlayAgain, onBackHome }: SummaryP
       </div>
       <div className="summary-card__actions">
         <Button onClick={onPlayAgain}>לשחק שוב</Button>
-        <Button variant="secondary" onClick={onBackHome}>למסך הבית</Button>
+        <Button variant="secondary" onClick={onBackHome}>לתפריט המשחקים</Button>
       </div>
     </section>
   );

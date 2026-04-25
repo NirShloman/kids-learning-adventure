@@ -64,7 +64,7 @@ export function MatchingGame({ age, difficulty, voiceEnabled, onBack, onFinish }
   return (
     <section className="panel">
       <div className="panel__header">
-        <Button variant="ghost" onClick={onBack}>חזרה למסך הבית</Button>
+        <Button variant="ghost" onClick={onBack}>חזרה לתפריט המשחקים</Button>
         <div className="score-pill">הצלחות: {matchedIds.length}</div>
       </div>
 

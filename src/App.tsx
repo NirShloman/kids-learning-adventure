@@ -3,6 +3,7 @@ import { AppShell } from './components/layout/AppShell';
 import { MatchingGame } from './components/games/matching/MatchingGame';
 import { MemoryGame } from './components/games/memory/MemoryGame';
 import { QuizGame } from './components/games/quiz/QuizGame';
+import { Button } from './components/common/Button';
 import { gameDefinitions } from './data/games';
 import { getDefaultDifficultyByAge } from './data/levels';
 import { getQuizQuestions } from './services/questionService';
@@ -38,7 +39,13 @@ function App() {
     setResult({ score, total, stars });
   }
 
-  function handleBackHome() {
+  function handleBackToGamesMenu() {
+    setSelectedGameId(null);
+    setResult(null);
+    setShowLanding(false);
+  }
+
+  function handleBackToLobby() {
     setSelectedGameId(null);
     setResult(null);
     setShowLanding(true);
@@ -50,30 +57,20 @@ function App() {
   }
 
   function renderContent() {
-    if (showLanding) {
-      return (
-        <LandingPage
-          settings={settings}
-          onSettingsChange={handleSettingsChange}
-          onStart={() => setShowLanding(false)}
-        />
-      );
-    }
-
     if (!selectedGame || !selectedGameId) {
       return <HomePage settings={settings} onSettingsChange={handleSettingsChange} onSelectGame={handleSelectGame} />;
     }
 
     if (result) {
-      return <SummaryPage title={selectedGame.title} result={result} onPlayAgain={handlePlayAgain} onBackHome={handleBackHome} />;
+      return <SummaryPage title={selectedGame.title} result={result} onPlayAgain={handlePlayAgain} onBackHome={handleBackToGamesMenu} />;
     }
 
     if (selectedGameId === 'matching') {
-      return <MatchingGame key={playSessionKey} age={settings.age} difficulty={settings.difficulty} voiceEnabled={settings.voiceEnabled} onBack={handleBackHome} onFinish={handleFinish} />;
+      return <MatchingGame key={playSessionKey} age={settings.age} difficulty={settings.difficulty} voiceEnabled={settings.voiceEnabled} onBack={handleBackToGamesMenu} onFinish={handleFinish} />;
     }
 
     if (selectedGameId === 'memory') {
-      return <MemoryGame key={playSessionKey} age={settings.age} difficulty={settings.difficulty} voiceEnabled={settings.voiceEnabled} onBack={handleBackHome} onFinish={handleFinish} />;
+      return <MemoryGame key={playSessionKey} age={settings.age} difficulty={settings.difficulty} voiceEnabled={settings.voiceEnabled} onBack={handleBackToGamesMenu} onFinish={handleFinish} />;
     }
 
     return (
@@ -82,14 +79,32 @@ function App() {
         title={selectedGame.title}
         questions={getQuizQuestions(selectedGameId, settings.age, settings.difficulty)}
         voiceEnabled={settings.voiceEnabled}
-        onBack={handleBackHome}
+        onBack={handleBackToGamesMenu}
         onFinish={handleFinish}
       />
     );
   }
 
+  if (showLanding) {
+    return (
+      <LandingPage
+        settings={settings}
+        onSettingsChange={handleSettingsChange}
+        onStart={() => setShowLanding(false)}
+      />
+    );
+  }
+
   return (
-    <AppShell title="לומדים בכיף" subtitle="משחקי למידה צבעוניים ומהנים בעברית לילדים בגילאי 3 עד 6, מותאמים לדפדפן ולמובייל.">
+    <AppShell
+      title="לומדים בכיף"
+      subtitle="משחקי למידה צבעוניים ומהנים בעברית לילדים בגילאי 3 עד 6, מותאמים לדפדפן ולמובייל."
+      rightSlot={(
+        <Button variant="ghost" className="app-shell__lobby-button" onClick={handleBackToLobby}>
+          חזרה ללובי
+        </Button>
+      )}
+    >
       {renderContent()}
     </AppShell>
   );

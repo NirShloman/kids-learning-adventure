@@ -36,7 +36,7 @@ export function QuizGame({ title, questions, voiceEnabled, onBack, onFinish }: Q
   return (
     <section className="panel">
       <div className="panel__header">
-        <Button variant="ghost" onClick={onBack}>חזרה למסך הבית</Button>
+        <Button variant="ghost" onClick={onBack}>חזרה לתפריט המשחקים</Button>
         <div className="score-pill">ניקוד: {score}</div>
       </div>
 
