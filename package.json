@@ -1,0 +1,23 @@
+{
+  "name": "kids-learning-adventure-web",
+  "private": true,
+  "version": "1.1.0",
+  "type": "module",
+  "description": "אפליקציית Web/PWA ללימוד עברית, מספרים, צבעים, צורות ומשחקי זיכרון לילדים בגילאי 3-6.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "typecheck": "tsc -b"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.8",
+    "typescript": "^5.6.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1"
+  },
+  "devDependencies": {}
+}

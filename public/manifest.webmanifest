@@ -1,0 +1,21 @@
+{
+  "name": "לומדים בכיף - Kids Learning Adventure",
+  "short_name": "לומדים בכיף",
+  "description": "משחקי למידה בעברית לילדים בגילאי 3 עד 6",
+  "lang": "he",
+  "dir": "rtl",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#7c3aed",
+  "background_color": "#f2f5ff",
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
