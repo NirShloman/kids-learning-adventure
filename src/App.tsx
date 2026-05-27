@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import { AppShell } from './components/layout/AppShell';
 import { MatchingGame } from './components/games/matching/MatchingGame';
 import { MemoryGame } from './components/games/memory/MemoryGame';
@@ -14,15 +14,23 @@ import { SummaryPage } from './pages/SummaryPage';
 import { LandingPage } from './pages/LandingPage';
 import { GameId, GameResult, LearnerSettings } from './types';
 import { useSpeech } from './hooks/useSpeech';
+import { ParentDashboardPage } from './pages/ParentDashboardPage';
+import { createPlayerProfile, getStoredPlayers, getStoredSessions, saveGameSession, savePlayers } from './services/playerProgressService';
 
 const quizGameIds: GameId[] = ['letters', 'numbers', 'shapes', 'colors'];
 
 function App() {
-  const [settings, setSettings] = useState<LearnerSettings>({ age: 4, difficulty: getDefaultDifficultyByAge(4), voiceEnabled: true });
+  const [players, setPlayers] = useState(() => getStoredPlayers());
+  const [sessions, setSessions] = useState(() => getStoredSessions());
+  const [activePlayerId, setActivePlayerId] = useState(() => getStoredPlayers()[0]?.id ?? '');
+  const activePlayer = players.find((player) => player.id === activePlayerId) ?? players[0];
+  const [settings, setSettings] = useState<LearnerSettings>({ age: activePlayer?.age ?? 4, difficulty: getDefaultDifficultyByAge(activePlayer?.age ?? 4), voiceEnabled: true });
   const [selectedGameId, setSelectedGameId] = useState<GameId | null>(null);
   const [result, setResult] = useState<GameResult | null>(null);
   const [playSessionKey, setPlaySessionKey] = useState(0);
+  const recordedPlaySessionKeyRef = useRef<number | null>(null);
   const [showLanding, setShowLanding] = useState(true);
+  const [showParentDashboard, setShowParentDashboard] = useState(false);
   const { getSpeakProps } = useSpeech(settings.voiceEnabled);
 
   const selectedGame = useMemo(() => gameDefinitions.find((game) => game.id === selectedGameId) ?? null, [selectedGameId]);
@@ -30,18 +38,56 @@ function App() {
   function handleSettingsChange(nextSettings: LearnerSettings) {
     if (nextSettings.age !== settings.age) {
       nextSettings.difficulty = getDefaultDifficultyByAge(nextSettings.age);
+      const updatedPlayers = players.map((player) => player.id === activePlayer.id ? { ...player, age: nextSettings.age } : player);
+      setPlayers(updatedPlayers);
+      savePlayers(updatedPlayers);
     }
     setSettings(nextSettings);
+  }
+
+  function handleAddPlayer(name: string) {
+    const nextPlayer = createPlayerProfile(name, settings.age);
+    const updatedPlayers = [...players, nextPlayer];
+    setPlayers(updatedPlayers);
+    savePlayers(updatedPlayers);
+    setActivePlayerId(nextPlayer.id);
+  }
+
+  function handleSelectPlayer(playerId: string) {
+    const nextPlayer = players.find((player) => player.id === playerId);
+    if (!nextPlayer) return;
+    setActivePlayerId(playerId);
+    setSettings((previous) => ({
+      ...previous,
+      age: nextPlayer.age,
+      difficulty: getDefaultDifficultyByAge(nextPlayer.age)
+    }));
   }
 
   function handleSelectGame(gameId: GameId) {
     setSelectedGameId(gameId);
     setResult(null);
+    recordedPlaySessionKeyRef.current = null;
     setPlaySessionKey((previous) => previous + 1);
   }
 
   function handleFinish(score: number, total: number, stars: number) {
+    if (recordedPlaySessionKeyRef.current === playSessionKey) return;
+    recordedPlaySessionKeyRef.current = playSessionKey;
     setResult({ score, total, stars });
+    if (!selectedGame || !selectedGameId || !activePlayer) return;
+
+    const savedSession = saveGameSession({
+      playerId: activePlayer.id,
+      gameId: selectedGameId,
+      gameTitle: selectedGame.title,
+      age: settings.age,
+      difficulty: settings.difficulty,
+      score,
+      total,
+      stars
+    });
+    setSessions((previous) => [savedSession, ...previous].slice(0, 240));
   }
 
   function handleBackToGamesMenu() {
@@ -58,12 +104,24 @@ function App() {
 
   function handlePlayAgain() {
     setResult(null);
+    recordedPlaySessionKeyRef.current = null;
     setPlaySessionKey((previous) => previous + 1);
   }
 
   function renderContent() {
     if (!selectedGame || !selectedGameId) {
-      return <HomePage settings={settings} onSettingsChange={handleSettingsChange} onSelectGame={handleSelectGame} />;
+      return (
+        <HomePage
+          settings={settings}
+          players={players}
+          activePlayer={activePlayer}
+          onSettingsChange={handleSettingsChange}
+          onAddPlayer={handleAddPlayer}
+          onSelectPlayer={handleSelectPlayer}
+          onShowParentArea={() => setShowParentDashboard(true)}
+          onSelectGame={handleSelectGame}
+        />
+      );
     }
 
     if (result) {
@@ -110,6 +168,22 @@ function App() {
         onSettingsChange={handleSettingsChange}
         onStart={() => setShowLanding(false)}
       />
+    );
+  }
+
+  if (showParentDashboard) {
+    return (
+      <AppShell
+        title="אזור ההורים"
+        subtitle="מעקב רגוע אחר התקדמות הילדים בכל המשחקים, לפי שחקן ולפי פעילות."
+        rightSlot={(
+          <Button variant="ghost" className="app-shell__lobby-button" onClick={() => setShowParentDashboard(false)}>
+            חזרה למשחקים
+          </Button>
+        )}
+      >
+        <ParentDashboardPage players={players} sessions={sessions} onBack={() => setShowParentDashboard(false)} />
+      </AppShell>
     );
   }
 

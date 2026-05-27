@@ -23,3 +23,23 @@ export interface LearnerSettings {
   difficulty: Difficulty;
   voiceEnabled: boolean;
 }
+
+export interface PlayerProfile {
+  id: string;
+  name: string;
+  age: Age;
+  createdAt: string;
+}
+
+export interface GameSession {
+  id: string;
+  playerId: string;
+  gameId: GameId;
+  gameTitle: string;
+  age: Age;
+  difficulty: Difficulty;
+  score: number;
+  total: number;
+  stars: number;
+  completedAt: string;
+}

@@ -1,12 +1,19 @@
 import { gameDefinitions } from '../data/games';
-import { GameId, LearnerSettings } from '../types';
+import { GameId, LearnerSettings, PlayerProfile } from '../types';
 import { GameCard } from '../components/games/GameCard';
 import { ageOptions, difficultyOptions } from '../data/levels';
 import { useSpeech } from '../hooks/useSpeech';
+import { Button } from '../components/common/Button';
+import { useState } from 'react';
 
 interface HomePageProps {
   settings: LearnerSettings;
+  players: PlayerProfile[];
+  activePlayer: PlayerProfile;
   onSettingsChange: (settings: LearnerSettings) => void;
+  onAddPlayer: (name: string) => void;
+  onSelectPlayer: (playerId: string) => void;
+  onShowParentArea: () => void;
   onSelectGame: (gameId: GameId) => void;
 }
 
@@ -17,14 +24,47 @@ const learningPathByAge: Record<LearnerSettings['age'], GameId[]> = {
   6: ['numbers', 'patterns', 'sorting']
 };
 
-export function HomePage({ settings, onSettingsChange, onSelectGame }: HomePageProps) {
+export function HomePage({ settings, players, activePlayer, onSettingsChange, onAddPlayer, onSelectPlayer, onShowParentArea, onSelectGame }: HomePageProps) {
   const { getSpeakProps } = useSpeech(settings.voiceEnabled);
+  const [newPlayerName, setNewPlayerName] = useState('');
   const recommendedPath = learningPathByAge[settings.age]
     .map((gameId) => gameDefinitions.find((game) => game.id === gameId))
     .filter((game): game is (typeof gameDefinitions)[number] => Boolean(game));
 
+  function handleAddPlayer() {
+    onAddPlayer(newPlayerName);
+    setNewPlayerName('');
+  }
+
   return (
     <section className="home-page">
+      <section className="player-zone" aria-label="בחירת שחקן">
+        <div className="player-zone__active" {...getSpeakProps<HTMLDivElement>(`השחקן הפעיל הוא ${activePlayer.name}`)}>
+          <span>השחקן הפעיל</span>
+          <strong>{activePlayer.name}</strong>
+          <small>גיל {activePlayer.age}</small>
+        </div>
+
+        <label className="player-zone__select" {...getSpeakProps<HTMLLabelElement>('בחירת שחקן או שחקנית')}>
+          בחירת שחקן
+          <select value={activePlayer.id} onChange={(event) => onSelectPlayer(event.target.value)}>
+            {players.map((player) => <option key={player.id} value={player.id}>{player.name}</option>)}
+          </select>
+        </label>
+
+        <div className="player-zone__new">
+          <input
+            aria-label="שם שחקן חדש"
+            value={newPlayerName}
+            onChange={(event) => setNewPlayerName(event.target.value)}
+            placeholder="שם שחקן חדש"
+          />
+          <Button type="button" variant="secondary" onClick={handleAddPlayer}>הוספה</Button>
+        </div>
+
+        <Button type="button" variant="ghost" onClick={onShowParentArea}>אזור הורים</Button>
+      </section>
+
       <div className="settings-card settings-card--premium" aria-label="הגדרות משחק" {...getSpeakProps<HTMLDivElement>('כאן בוחרים גיל, רמת קושי והאם להפעיל קול הדרכה')}>
         <div>
           <h2>לפני שמתחילים</h2>

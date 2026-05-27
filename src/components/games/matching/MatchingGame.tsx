@@ -5,6 +5,7 @@ import { useSpeech } from '../../../hooks/useSpeech';
 import { Button } from '../../common/Button';
 import { shuffleArray } from '../../../utils/helpers';
 import { gameInstructions } from '../../../data/gameInstructions';
+import { calculateStars } from '../../../utils/helpers';
 
 interface MatchingGameProps {
   age: Age;
@@ -40,7 +41,11 @@ export function MatchingGame({ age, difficulty, voiceEnabled, onBack, onFinish }
       setSelectedRight(null);
       speak('כל הכבוד, מצאתם התאמה!');
       if (updated.length === total) {
-        const stars = tries + 1 <= total + 1 ? 3 : tries + 1 <= total + 3 ? 2 : 1;
+        const stars = calculateStars(updated.length, total, {
+          attempts: tries + 1,
+          idealAttempts: total,
+          forgivingExtraAttempts: Math.ceil(total * 0.75)
+        });
         onFinish(updated.length, total, stars);
       }
       return;

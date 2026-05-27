@@ -4,6 +4,7 @@ import { getMemoryCards } from '../../../services/questionService';
 import { useSpeech } from '../../../hooks/useSpeech';
 import { Button } from '../../common/Button';
 import { gameInstructions } from '../../../data/gameInstructions';
+import { calculateStars } from '../../../utils/helpers';
 
 interface MemoryGameProps {
   age: Age;
@@ -28,7 +29,11 @@ export function MemoryGame({ age, difficulty, voiceEnabled, onBack, onFinish }: 
 
   useEffect(() => {
     if (matchedPairIds.length === totalPairs && totalPairs > 0) {
-      const stars = moves <= totalPairs + 2 ? 3 : moves <= totalPairs + 5 ? 2 : 1;
+      const stars = calculateStars(matchedPairIds.length, totalPairs, {
+        attempts: moves,
+        idealAttempts: totalPairs,
+        forgivingExtraAttempts: Math.ceil(totalPairs * 0.9)
+      });
       onFinish(matchedPairIds.length, totalPairs, stars);
     }
   }, [matchedPairIds.length, moves, onFinish, totalPairs]);
