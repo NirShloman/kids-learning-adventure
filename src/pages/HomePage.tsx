@@ -10,8 +10,18 @@ interface HomePageProps {
   onSelectGame: (gameId: GameId) => void;
 }
 
+const learningPathByAge: Record<LearnerSettings['age'], GameId[]> = {
+  3: ['colors', 'shapes', 'memory'],
+  4: ['letters', 'numbers', 'matching'],
+  5: ['letters', 'patterns', 'sorting'],
+  6: ['numbers', 'patterns', 'sorting']
+};
+
 export function HomePage({ settings, onSettingsChange, onSelectGame }: HomePageProps) {
   const { getSpeakProps } = useSpeech(settings.voiceEnabled);
+  const recommendedPath = learningPathByAge[settings.age]
+    .map((gameId) => gameDefinitions.find((game) => game.id === gameId))
+    .filter((game): game is (typeof gameDefinitions)[number] => Boolean(game));
 
   return (
     <section className="home-page">
@@ -52,6 +62,33 @@ export function HomePage({ settings, onSettingsChange, onSelectGame }: HomePageP
           </label>
         </div>
       </div>
+
+      <section className="learning-path" aria-label="מסלול למידה מומלץ" {...getSpeakProps<HTMLElement>(`מסלול מומלץ לגיל ${settings.age}. שלוש תחנות קצרות לבניית ביטחון לפני קריאה`)}>
+        <div className="learning-path__intro">
+          <span className="learning-path__eyebrow">מסלול מומלץ</span>
+          <h2>שלוש תחנות קצרות לבניית ביטחון</h2>
+          <p>המסלול מתאים לגיל שבחרתם ומשלב זיהוי, חשיבה ומשחק עצמאי עם קול מנחה.</p>
+        </div>
+
+        <div className="learning-path__steps">
+          {recommendedPath.map((game, index) => (
+            <button
+              className={`learning-path__step learning-path__step--${game.accent}`}
+              key={game.id}
+              type="button"
+              onClick={() => onSelectGame(game.id)}
+              {...getSpeakProps<HTMLButtonElement>(`תחנה ${index + 1}: ${game.title}. ${game.description}`)}
+            >
+              <span className="learning-path__number">{index + 1}</span>
+              <span className="learning-path__icon" aria-hidden="true">{game.emoji}</span>
+              <span>
+                <strong>{game.title}</strong>
+                <small>{game.description}</small>
+              </span>
+            </button>
+          ))}
+        </div>
+      </section>
 
       <section className="home-grid home-grid--premium" aria-label="בחירת משחק">
         {gameDefinitions.map((game) => <GameCard key={game.id} game={game} voiceEnabled={settings.voiceEnabled} onPlay={onSelectGame} />)}

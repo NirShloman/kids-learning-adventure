@@ -1,7 +1,13 @@
-const CHILD_FRIENDLY_SPEECH_RATE = 0.62;
-const CHILD_FRIENDLY_SPEECH_PITCH = 1.14;
+const CHILD_FRIENDLY_SPEECH_RATE = 0.84;
+const CHILD_FRIENDLY_SPEECH_PITCH = 1.04;
 const MAX_SPOKEN_TEXT_LENGTH = 260;
 const REPEAT_GUARD_MS = 900;
+
+export type SpeechMode = 'hint' | 'guided' | 'manual';
+
+export interface SpeakOptions {
+  mode?: SpeechMode;
+}
 
 const FEMALE_HEBREW_VOICE_HINTS = [
   'hila',
@@ -29,6 +35,8 @@ const MALE_HEBREW_VOICE_HINTS = ['asaf', 'אסף', 'avri', 'אברי', 'david', 
 let cachedHebrewVoice: SpeechSynthesisVoice | null = null;
 let lastSpokenText = '';
 let lastSpokenAt = 0;
+let isSpeaking = false;
+let pendingGuidedText = '';
 
 export function canSpeak(): boolean {
   return typeof window !== 'undefined' && 'speechSynthesis' in window;
@@ -88,24 +96,62 @@ function shouldSkipRepeatedSpeech(text: string): boolean {
   return shouldSkip;
 }
 
-export function speakHebrew(text: string): void {
+function refreshSpeechState() {
   if (!canSpeak()) return;
+  isSpeaking = window.speechSynthesis.speaking || window.speechSynthesis.pending;
+}
 
-  const safeText = normalizeSpeechText(text);
-  if (!safeText || shouldSkipRepeatedSpeech(safeText)) return;
-
+function speakSafeText(safeText: string, mode: SpeechMode): void {
   const utterance = new SpeechSynthesisUtterance(safeText);
   utterance.lang = 'he-IL';
   utterance.rate = CHILD_FRIENDLY_SPEECH_RATE;
   utterance.pitch = CHILD_FRIENDLY_SPEECH_PITCH;
   utterance.voice = cachedHebrewVoice ?? getPreferredHebrewVoice();
+  utterance.onstart = () => {
+    isSpeaking = true;
+  };
+  utterance.onend = () => {
+    isSpeaking = false;
+    if (!pendingGuidedText) return;
+    const nextText = pendingGuidedText;
+    pendingGuidedText = '';
+    speakHebrew(nextText, { mode: 'guided' });
+  };
+  utterance.onerror = () => {
+    isSpeaking = false;
+  };
 
-  window.speechSynthesis.cancel();
+  if (mode === 'manual') {
+    pendingGuidedText = '';
+    window.speechSynthesis.cancel();
+  }
+
   window.speechSynthesis.speak(utterance);
+}
+
+export function speakHebrew(text: string, options: SpeakOptions = {}): void {
+  if (!canSpeak()) return;
+
+  const mode = options.mode ?? 'manual';
+  const safeText = normalizeSpeechText(text);
+  if (!safeText || shouldSkipRepeatedSpeech(safeText)) return;
+
+  refreshSpeechState();
+
+  if (isSpeaking && mode === 'hint') return;
+
+  if (isSpeaking && mode === 'guided') {
+    pendingGuidedText = safeText;
+    return;
+  }
+
+  speakSafeText(safeText, mode);
 }
 
 export function stopSpeaking(): void {
   if (!canSpeak()) return;
+  pendingGuidedText = '';
+  isSpeaking = false;
   window.speechSynthesis.cancel();
 }
 
