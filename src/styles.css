@@ -127,6 +127,8 @@ button { touch-action: manipulation; -webkit-tap-highlight-color: transparent; u
   display: flex;
   align-items: center;
   gap: 14px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .hero-card__logo-mark .brand-logo__mark { width: 62px; height: 62px; }
@@ -142,7 +144,24 @@ button { touch-action: manipulation; -webkit-tap-highlight-color: transparent; u
   font-weight: 700;
 }
 
-.app-shell__lobby-button { white-space: nowrap; }
+.app-shell__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.app-shell__lobby-button,
+.app-shell__profile-button {
+  white-space: nowrap;
+}
+
+.app-shell__profile-button {
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 .brand-logo {
   display: inline-flex;
@@ -183,7 +202,7 @@ button { touch-action: manipulation; -webkit-tap-highlight-color: transparent; u
 
 .player-zone {
   display: grid;
-  grid-template-columns: minmax(180px, .8fr) minmax(180px, .9fr) minmax(220px, 1fr) auto;
+  grid-template-columns: minmax(160px, .75fr) minmax(170px, .8fr) minmax(340px, 1.35fr) auto auto;
   gap: 12px;
   align-items: end;
   border-radius: 24px;
@@ -229,7 +248,7 @@ button { touch-action: manipulation; -webkit-tap-highlight-color: transparent; u
 
 .player-zone__new {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(120px, 1fr) 96px 120px auto;
   gap: 8px;
 }
 
@@ -646,6 +665,101 @@ button { touch-action: manipulation; -webkit-tap-highlight-color: transparent; u
 .parent-dashboard {
   display: grid;
   gap: 18px;
+}
+
+.player-profile-page {
+  display: grid;
+  gap: 18px;
+}
+
+.player-profile-page__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: start;
+  border-radius: 24px;
+  padding: 22px;
+  background: var(--glass-strong);
+  border: 2px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.player-profile-page__header h2 {
+  margin: 8px 0;
+  color: var(--ink);
+  font-size: 2rem;
+}
+
+.player-profile-page__header p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.player-profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.player-profile-card {
+  display: grid;
+  gap: 14px;
+  border-radius: 24px;
+  padding: 20px;
+  background: var(--glass-strong);
+  border: 2px solid var(--border);
+  box-shadow: var(--shadow-soft);
+}
+
+.player-profile-card h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.45rem;
+}
+
+.player-profile-card label {
+  display: grid;
+  gap: 8px;
+  color: var(--ink-soft);
+  font-weight: 900;
+}
+
+.player-profile-card input,
+.player-profile-card select {
+  width: 100%;
+  min-height: 50px;
+  border-radius: 16px;
+  border: 2px solid var(--border);
+  background: var(--paper-strong);
+  padding: 8px 12px;
+  color: var(--ink);
+}
+
+.player-profile-card__active {
+  display: grid;
+  gap: 6px;
+  border-radius: 20px;
+  padding: 16px;
+  background: linear-gradient(135deg, var(--pastel-mint), var(--pastel-sky));
+  border: 2px solid var(--border-strong);
+}
+
+.player-profile-card__active strong {
+  color: var(--ink);
+  font-size: 1.45rem;
+  line-height: 1.1;
+}
+
+.player-profile-card__active span {
+  color: var(--ink-soft);
+  font-weight: 800;
+}
+
+.player-profile-card__settings {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
 }
 
 .parent-gate {
@@ -1395,6 +1509,8 @@ button { touch-action: manipulation; -webkit-tap-highlight-color: transparent; u
 
   .hero-card__side { justify-content: space-between; }
   .hero-card__side-logo .brand-logo__text { display: none; }
+  .app-shell__actions { justify-content: stretch; }
+  .app-shell__actions .btn { flex: 1 1 160px; }
   .player-zone { grid-template-columns: 1fr; }
   .player-zone__new { grid-template-columns: 1fr; }
   .settings-card { grid-template-columns: 1fr; }
@@ -1406,7 +1522,10 @@ button { touch-action: manipulation; -webkit-tap-highlight-color: transparent; u
   .panel__header { flex-direction: column-reverse; align-items: stretch; }
   .panel__header .btn, .score-pill { width: 100%; text-align: center; }
   .parent-dashboard__header,
+  .player-profile-page__header,
   .parent-player-card__top { display: grid; }
+  .player-profile-grid,
+  .player-profile-card__settings { grid-template-columns: 1fr; }
   .parent-dashboard__stats,
   .parent-player-card__metrics,
   .parent-session-row { grid-template-columns: 1fr; }

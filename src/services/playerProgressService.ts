@@ -1,4 +1,5 @@
 import { Age, GameId, GameSession, PlayerProfile } from '../types';
+import { getDefaultDifficultyByAge } from '../data/levels';
 import { progressRepository } from './progressRepository';
 
 function createId(prefix: string): string {
@@ -14,13 +15,24 @@ export function createPlayerProfile(name: string, age: Age): PlayerProfile {
     id: createId('player'),
     name: name.trim() || 'שחקן/ית חדש/ה',
     age,
+    difficulty: getDefaultDifficultyByAge(age),
     createdAt: new Date().toISOString()
   };
 }
 
+function normalizePlayerProfile(player: PlayerProfile): PlayerProfile {
+  return {
+    ...player,
+    difficulty: player.difficulty ?? getDefaultDifficultyByAge(player.age)
+  };
+}
+
 export function getStoredPlayers(): PlayerProfile[] {
-  const players = progressRepository.getPlayers();
-  if (players.length) return players;
+  const players = progressRepository.getPlayers().map(normalizePlayerProfile);
+  if (players.length) {
+    progressRepository.savePlayers(players);
+    return players;
+  }
 
   const defaultPlayer = createPlayerProfile('שחקן/ית 1', 4);
   progressRepository.savePlayers([defaultPlayer]);
@@ -33,6 +45,10 @@ export function savePlayers(players: PlayerProfile[]): void {
 
 export function getStoredSessions(): GameSession[] {
   return progressRepository.getSessions();
+}
+
+export function saveSessions(sessions: GameSession[]): void {
+  progressRepository.saveSessions(sessions);
 }
 
 export function saveGameSession(session: Omit<GameSession, 'id' | 'completedAt'>): GameSession {

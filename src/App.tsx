@@ -12,47 +12,66 @@ import { getQuizQuestions } from './services/questionService';
 import { HomePage } from './pages/HomePage';
 import { SummaryPage } from './pages/SummaryPage';
 import { LandingPage } from './pages/LandingPage';
-import { GameId, GameResult, LearnerSettings } from './types';
+import { Age, Difficulty, GameId, GameResult, LearnerSettings, PlayerProfile } from './types';
 import { useSpeech } from './hooks/useSpeech';
 import { ParentDashboardPage } from './pages/ParentDashboardPage';
 import { ParentGatePage } from './pages/ParentGatePage';
-import { createPlayerProfile, getStoredPlayers, getStoredSessions, saveGameSession, savePlayers } from './services/playerProgressService';
+import { PlayerProfilePage } from './pages/PlayerProfilePage';
+import { createPlayerProfile, getStoredPlayers, getStoredSessions, saveGameSession, savePlayers, saveSessions } from './services/playerProgressService';
 
 const quizGameIds: GameId[] = ['letters', 'numbers', 'shapes', 'colors'];
 
 function App() {
-  const [players, setPlayers] = useState(() => getStoredPlayers());
+  const [players, setPlayers] = useState<PlayerProfile[]>(() => getStoredPlayers());
   const [sessions, setSessions] = useState(() => getStoredSessions());
   const [activePlayerId, setActivePlayerId] = useState(() => getStoredPlayers()[0]?.id ?? '');
   const activePlayer = players.find((player) => player.id === activePlayerId) ?? players[0];
-  const [settings, setSettings] = useState<LearnerSettings>({ age: activePlayer?.age ?? 4, difficulty: getDefaultDifficultyByAge(activePlayer?.age ?? 4), voiceEnabled: true });
+  const [settings, setSettings] = useState<LearnerSettings>({
+    age: activePlayer?.age ?? 4,
+    difficulty: activePlayer?.difficulty ?? getDefaultDifficultyByAge(activePlayer?.age ?? 4),
+    voiceEnabled: true
+  });
   const [selectedGameId, setSelectedGameId] = useState<GameId | null>(null);
   const [result, setResult] = useState<GameResult | null>(null);
   const [playSessionKey, setPlaySessionKey] = useState(0);
   const recordedPlaySessionKeyRef = useRef<number | null>(null);
   const [showLanding, setShowLanding] = useState(true);
   const [showParentDashboard, setShowParentDashboard] = useState(false);
+  const [showPlayerProfile, setShowPlayerProfile] = useState(false);
   const [isParentAreaUnlocked, setIsParentAreaUnlocked] = useState(false);
   const { getSpeakProps } = useSpeech(settings.voiceEnabled);
 
   const selectedGame = useMemo(() => gameDefinitions.find((game) => game.id === selectedGameId) ?? null, [selectedGameId]);
 
+  function persistPlayers(nextPlayers: PlayerProfile[]) {
+    setPlayers(nextPlayers);
+    savePlayers(nextPlayers);
+  }
+
   function handleSettingsChange(nextSettings: LearnerSettings) {
-    if (nextSettings.age !== settings.age) {
-      nextSettings.difficulty = getDefaultDifficultyByAge(nextSettings.age);
-      const updatedPlayers = players.map((player) => player.id === activePlayer.id ? { ...player, age: nextSettings.age } : player);
-      setPlayers(updatedPlayers);
-      savePlayers(updatedPlayers);
-    }
+    if (!activePlayer) return;
+    const updatedPlayer = {
+      ...activePlayer,
+      age: nextSettings.age,
+      difficulty: nextSettings.difficulty
+    };
+    persistPlayers(players.map((player) => player.id === activePlayer.id ? updatedPlayer : player));
     setSettings(nextSettings);
   }
 
-  function handleAddPlayer(name: string) {
-    const nextPlayer = createPlayerProfile(name, settings.age);
+  function handleAddPlayer(name: string, age: Age, difficulty: Difficulty) {
+    const nextPlayer = {
+      ...createPlayerProfile(name, age),
+      difficulty
+    };
     const updatedPlayers = [...players, nextPlayer];
-    setPlayers(updatedPlayers);
-    savePlayers(updatedPlayers);
+    persistPlayers(updatedPlayers);
     setActivePlayerId(nextPlayer.id);
+    setSettings((previous) => ({
+      ...previous,
+      age: nextPlayer.age,
+      difficulty: nextPlayer.difficulty
+    }));
   }
 
   function handleSelectPlayer(playerId: string) {
@@ -62,7 +81,23 @@ function App() {
     setSettings((previous) => ({
       ...previous,
       age: nextPlayer.age,
-      difficulty: getDefaultDifficultyByAge(nextPlayer.age)
+      difficulty: nextPlayer.difficulty
+    }));
+  }
+
+  function handleDeletePlayer(playerId: string) {
+    const nextPlayers = players.filter((player) => player.id !== playerId);
+    const safePlayers = nextPlayers.length ? nextPlayers : [createPlayerProfile('שחקן/ית 1', 4)];
+    const nextActivePlayer = safePlayers[0];
+    const nextSessions = sessions.filter((session) => session.playerId !== playerId);
+    persistPlayers(safePlayers);
+    setSessions(nextSessions);
+    saveSessions(nextSessions);
+    setActivePlayerId(nextActivePlayer.id);
+    setSettings((previous) => ({
+      ...previous,
+      age: nextActivePlayer.age,
+      difficulty: nextActivePlayer.difficulty
     }));
   }
 
@@ -103,6 +138,7 @@ function App() {
     setResult(null);
     setShowLanding(true);
     setShowParentDashboard(false);
+    setShowPlayerProfile(false);
     setIsParentAreaUnlocked(false);
   }
 
@@ -117,12 +153,7 @@ function App() {
       return (
         <HomePage
           settings={settings}
-          players={players}
-          activePlayer={activePlayer}
           onSettingsChange={handleSettingsChange}
-          onAddPlayer={handleAddPlayer}
-          onSelectPlayer={handleSelectPlayer}
-          onShowParentArea={() => setShowParentDashboard(true)}
           onSelectGame={handleSelectGame}
         />
       );
@@ -202,14 +233,60 @@ function App() {
     );
   }
 
+  if (showPlayerProfile && activePlayer) {
+    return (
+      <AppShell
+        title="פרופיל שחקן"
+        subtitle="ניהול שחקנים, גיל ורמת קושי לפני שמתחילים לשחק."
+        rightSlot={(
+          <div className="app-shell__actions">
+            <Button variant="secondary" className="app-shell__lobby-button" onClick={() => {
+              setShowPlayerProfile(false);
+              setShowParentDashboard(true);
+            }}>
+              אזור הורים
+            </Button>
+            <Button variant="ghost" className="app-shell__lobby-button" onClick={() => setShowPlayerProfile(false)}>
+              חזרה למשחקים
+            </Button>
+          </div>
+        )}
+      >
+        <PlayerProfilePage
+          players={players}
+          activePlayer={activePlayer}
+          settings={settings}
+          onSettingsChange={handleSettingsChange}
+          onAddPlayer={handleAddPlayer}
+          onSelectPlayer={handleSelectPlayer}
+          onDeletePlayer={handleDeletePlayer}
+          onBack={() => setShowPlayerProfile(false)}
+        />
+      </AppShell>
+    );
+  }
+
   return (
     <AppShell
       title="לומדים בכיף"
       subtitle="משחקי למידה צבעוניים ומהנים בעברית לילדים בגילאי 3 עד 6, עם קול הדרכה, אנימציות ותוכן מותאם גיל."
       rightSlot={(
-        <Button variant="ghost" className="app-shell__lobby-button" onClick={handleBackToLobby} {...getSpeakProps<HTMLButtonElement>('חזרה ללובי')}>
-          חזרה ללובי
-        </Button>
+        <div className="app-shell__actions">
+          {activePlayer ? (
+            <Button variant="secondary" className="app-shell__profile-button" onClick={() => setShowPlayerProfile(true)} {...getSpeakProps<HTMLButtonElement>(`פרופיל השחקן ${activePlayer.name}`)}>
+              {activePlayer.name}
+            </Button>
+          ) : null}
+          <Button variant="secondary" className="app-shell__lobby-button" onClick={() => {
+            setShowPlayerProfile(false);
+            setShowParentDashboard(true);
+          }} {...getSpeakProps<HTMLButtonElement>('אזור הורים')}>
+            אזור הורים
+          </Button>
+          <Button variant="ghost" className="app-shell__lobby-button" onClick={handleBackToLobby} {...getSpeakProps<HTMLButtonElement>('חזרה ללובי')}>
+            חזרה ללובי
+          </Button>
+        </div>
       )}
     >
       {renderContent()}
