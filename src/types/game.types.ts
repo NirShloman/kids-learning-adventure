@@ -28,6 +28,7 @@ export interface PlayerProfile {
   id: string;
   name: string;
   age: Age;
+  difficulty: Difficulty;
   createdAt: string;
 }
 
@@ -42,4 +43,5 @@ export interface GameSession {
   total: number;
   stars: number;
   completedAt: string;
+  syncStatus?: 'local' | 'pending' | 'synced';
 }

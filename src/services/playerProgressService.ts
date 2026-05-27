@@ -1,7 +1,5 @@
 import { Age, GameId, GameSession, PlayerProfile } from '../types';
-
-const PLAYERS_STORAGE_KEY = 'kids-learning-adventure.players';
-const SESSIONS_STORAGE_KEY = 'kids-learning-adventure.sessions';
+import { progressRepository } from './progressRepository';
 
 function createId(prefix: string): string {
   if (typeof crypto !== 'undefined' && 'randomUUID' in crypto) {
@@ -9,22 +7,6 @@ function createId(prefix: string): string {
   }
 
   return `${prefix}-${Date.now()}-${Math.random().toString(16).slice(2)}`;
-}
-
-function readStorage<T>(key: string, fallback: T): T {
-  if (typeof window === 'undefined') return fallback;
-
-  try {
-    const rawValue = window.localStorage.getItem(key);
-    return rawValue ? JSON.parse(rawValue) as T : fallback;
-  } catch {
-    return fallback;
-  }
-}
-
-function writeStorage<T>(key: string, value: T): void {
-  if (typeof window === 'undefined') return;
-  window.localStorage.setItem(key, JSON.stringify(value));
 }
 
 export function createPlayerProfile(name: string, age: Age): PlayerProfile {
@@ -37,30 +19,31 @@ export function createPlayerProfile(name: string, age: Age): PlayerProfile {
 }
 
 export function getStoredPlayers(): PlayerProfile[] {
-  const players = readStorage<PlayerProfile[]>(PLAYERS_STORAGE_KEY, []);
+  const players = progressRepository.getPlayers();
   if (players.length) return players;
 
   const defaultPlayer = createPlayerProfile('שחקן/ית 1', 4);
-  writeStorage(PLAYERS_STORAGE_KEY, [defaultPlayer]);
+  progressRepository.savePlayers([defaultPlayer]);
   return [defaultPlayer];
 }
 
 export function savePlayers(players: PlayerProfile[]): void {
-  writeStorage(PLAYERS_STORAGE_KEY, players);
+  progressRepository.savePlayers(players);
 }
 
 export function getStoredSessions(): GameSession[] {
-  return readStorage<GameSession[]>(SESSIONS_STORAGE_KEY, []);
+  return progressRepository.getSessions();
 }
 
 export function saveGameSession(session: Omit<GameSession, 'id' | 'completedAt'>): GameSession {
   const nextSession: GameSession = {
     ...session,
     id: createId('session'),
-    completedAt: new Date().toISOString()
+    completedAt: new Date().toISOString(),
+    syncStatus: session.syncStatus ?? 'local'
   };
   const sessions = [nextSession, ...getStoredSessions()].slice(0, 240);
-  writeStorage(SESSIONS_STORAGE_KEY, sessions);
+  progressRepository.saveSessions(sessions);
   return nextSession;
 }
 

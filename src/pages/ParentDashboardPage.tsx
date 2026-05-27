@@ -17,6 +17,12 @@ function formatPercent(score: number, total: number): string {
   return `${Math.round((score / total) * 100)}%`;
 }
 
+function getSyncLabel(status: GameSession['syncStatus']): string {
+  if (status === 'synced') return 'מגובה בענן';
+  if (status === 'pending') return 'ממתין לסנכרון';
+  return 'נשמר במכשיר';
+}
+
 export function ParentDashboardPage({ players, sessions, onBack }: ParentDashboardPageProps) {
   const totalSessions = sessions.length;
   const totalStars = sessions.reduce((sum, session) => sum + session.stars, 0);
@@ -89,6 +95,7 @@ export function ParentDashboardPage({ players, sessions, onBack }: ParentDashboa
                       <span>{getGameLabel(session.gameId)}</span>
                       <span>{formatPercent(session.score, session.total)}</span>
                       <span>{'★'.repeat(session.stars)}{'☆'.repeat(3 - session.stars)}</span>
+                      <span className="parent-session-row__sync">{getSyncLabel(session.syncStatus)}</span>
                       <small>{formatDate(session.completedAt)}</small>
                     </div>
                   ))}

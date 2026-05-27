@@ -15,6 +15,7 @@ import { LandingPage } from './pages/LandingPage';
 import { GameId, GameResult, LearnerSettings } from './types';
 import { useSpeech } from './hooks/useSpeech';
 import { ParentDashboardPage } from './pages/ParentDashboardPage';
+import { ParentGatePage } from './pages/ParentGatePage';
 import { createPlayerProfile, getStoredPlayers, getStoredSessions, saveGameSession, savePlayers } from './services/playerProgressService';
 
 const quizGameIds: GameId[] = ['letters', 'numbers', 'shapes', 'colors'];
@@ -31,6 +32,7 @@ function App() {
   const recordedPlaySessionKeyRef = useRef<number | null>(null);
   const [showLanding, setShowLanding] = useState(true);
   const [showParentDashboard, setShowParentDashboard] = useState(false);
+  const [isParentAreaUnlocked, setIsParentAreaUnlocked] = useState(false);
   const { getSpeakProps } = useSpeech(settings.voiceEnabled);
 
   const selectedGame = useMemo(() => gameDefinitions.find((game) => game.id === selectedGameId) ?? null, [selectedGameId]);
@@ -100,6 +102,8 @@ function App() {
     setSelectedGameId(null);
     setResult(null);
     setShowLanding(true);
+    setShowParentDashboard(false);
+    setIsParentAreaUnlocked(false);
   }
 
   function handlePlayAgain() {
@@ -177,12 +181,23 @@ function App() {
         title="אזור ההורים"
         subtitle="מעקב רגוע אחר התקדמות הילדים בכל המשחקים, לפי שחקן ולפי פעילות."
         rightSlot={(
-          <Button variant="ghost" className="app-shell__lobby-button" onClick={() => setShowParentDashboard(false)}>
-            חזרה למשחקים
-          </Button>
+          <>
+            {isParentAreaUnlocked ? (
+              <Button variant="secondary" className="app-shell__lobby-button" onClick={() => setIsParentAreaUnlocked(false)}>
+                נעילת אזור הורים
+              </Button>
+            ) : null}
+            <Button variant="ghost" className="app-shell__lobby-button" onClick={() => setShowParentDashboard(false)}>
+              חזרה למשחקים
+            </Button>
+          </>
         )}
       >
-        <ParentDashboardPage players={players} sessions={sessions} onBack={() => setShowParentDashboard(false)} />
+        {isParentAreaUnlocked ? (
+          <ParentDashboardPage players={players} sessions={sessions} onBack={() => setShowParentDashboard(false)} />
+        ) : (
+          <ParentGatePage onBack={() => setShowParentDashboard(false)} onUnlocked={() => setIsParentAreaUnlocked(true)} />
+        )}
       </AppShell>
     );
   }

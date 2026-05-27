@@ -648,6 +648,80 @@ button { touch-action: manipulation; -webkit-tap-highlight-color: transparent; u
   gap: 18px;
 }
 
+.parent-gate {
+  min-height: 420px;
+  display: grid;
+  place-items: center;
+}
+
+.parent-gate__card {
+  width: min(520px, 100%);
+  display: grid;
+  gap: 16px;
+  border-radius: 28px;
+  padding: 26px;
+  background:
+    linear-gradient(135deg, rgb(255 255 255 / .92), rgb(255 255 255 / .74)),
+    linear-gradient(120deg, var(--pastel-sky), var(--pastel-lemon), var(--pastel-pink));
+  border: 2px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.parent-gate__card h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 2rem;
+}
+
+.parent-gate__card p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.parent-gate__card label {
+  display: grid;
+  gap: 8px;
+  color: var(--ink-soft);
+  font-weight: 900;
+}
+
+.parent-gate__card input {
+  min-height: 64px;
+  border-radius: 20px;
+  border: 2px solid var(--border-strong);
+  background: var(--paper-strong);
+  color: var(--ink);
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: .18em;
+  text-align: center;
+}
+
+.parent-gate__message {
+  border-radius: 16px;
+  padding: 10px 12px;
+  background: var(--warning-bg);
+  border: 2px solid var(--warning-border);
+  color: var(--ink) !important;
+}
+
+.parent-gate__actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.parent-gate__reset {
+  justify-self: start;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-weight: 800;
+  text-decoration: underline;
+}
+
 .parent-dashboard__header {
   display: flex;
   justify-content: space-between;
@@ -757,7 +831,7 @@ button { touch-action: manipulation; -webkit-tap-highlight-color: transparent; u
 
 .parent-session-row {
   display: grid;
-  grid-template-columns: minmax(100px, 1fr) 70px 90px minmax(120px, 1fr);
+  grid-template-columns: minmax(100px, 1fr) 70px 90px minmax(104px, auto) minmax(120px, 1fr);
   gap: 10px;
   align-items: center;
   min-height: 44px;
@@ -771,6 +845,15 @@ button { touch-action: manipulation; -webkit-tap-highlight-color: transparent; u
 .parent-session-row small {
   color: var(--muted);
   font-weight: 700;
+}
+
+.parent-session-row__sync {
+  justify-self: start;
+  border-radius: 999px;
+  padding: 4px 8px;
+  background: var(--pastel-sky);
+  color: var(--ink-soft);
+  font-size: .85rem;
 }
 
 /* Landing lobby */
