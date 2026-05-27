@@ -1,0 +1,22 @@
+{
+  "name": "kids-learning-adventure-web",
+  "private": true,
+  "version": "1.2.0",
+  "type": "module",
+  "description": "אפליקציית Web/PWA משודרגת ללימוד חוויתי בעברית לילדים בגילאי 3-6, עם קול הדרכה, לובי עשיר, אנימציות, משחקים נוספים ומאגר שאלות מורחב.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "typecheck": "tsc -b"
+  },
+  "dependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "5.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.6.2",
+    "vite": "8.0.10"
+  }
+}
