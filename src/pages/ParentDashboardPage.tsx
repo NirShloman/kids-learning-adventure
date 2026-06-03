@@ -1,11 +1,16 @@
+import { useEffect, useState } from 'react';
+import { User } from 'firebase/auth';
 import { GameSession, PlayerProfile } from '../types';
 import { Button } from '../components/common/Button';
 import { getGameLabel, getSessionsByPlayer } from '../services/playerProgressService';
+import { pullProgressFromCloud, pushProgressToCloud } from '../services/cloudProgressRepository';
+import { registerParent, signInParent, signOutParent, watchParentAuth } from '../services/parentAuthService';
 
 interface ParentDashboardPageProps {
   players: PlayerProfile[];
   sessions: GameSession[];
   onBack: () => void;
+  onProgressReplace: (players: PlayerProfile[], sessions: GameSession[]) => void;
 }
 
 function formatDate(value: string): string {
@@ -23,10 +28,73 @@ function getSyncLabel(status: GameSession['syncStatus']): string {
   return 'נשמר במכשיר';
 }
 
-export function ParentDashboardPage({ players, sessions, onBack }: ParentDashboardPageProps) {
+export function ParentDashboardPage({ players, sessions, onBack, onProgressReplace }: ParentDashboardPageProps) {
+  const [parentUser, setParentUser] = useState<User | null>(null);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [cloudMessage, setCloudMessage] = useState('הנתונים נשמרים כרגע במכשיר הזה.');
+  const [isCloudBusy, setIsCloudBusy] = useState(false);
   const totalSessions = sessions.length;
   const totalStars = sessions.reduce((sum, session) => sum + session.stars, 0);
   const averageStars = totalSessions ? (totalStars / totalSessions).toFixed(1) : '0';
+
+  useEffect(() => watchParentAuth((user) => setParentUser(user && !user.isAnonymous ? user : null)), []);
+
+  async function handleParentAuth(mode: 'sign-in' | 'register') {
+    setIsCloudBusy(true);
+    setCloudMessage(mode === 'sign-in' ? 'מתחברים לחשבון ההורה...' : 'יוצרים חשבון הורה...');
+
+    try {
+      const user = mode === 'sign-in' ? await signInParent(email, password) : await registerParent(email, password);
+      setParentUser(user);
+      setCloudMessage('חשבון ההורה מחובר. אפשר לגבות או לטעון התקדמות מהענן.');
+    } catch {
+      setCloudMessage('לא הצלחנו להתחבר. ודאו ש-Email/Password Auth מופעל ב-Firebase ושהפרטים נכונים.');
+    } finally {
+      setIsCloudBusy(false);
+    }
+  }
+
+  async function handlePushToCloud() {
+    if (!parentUser) return;
+    setIsCloudBusy(true);
+    setCloudMessage('מגבים את ההתקדמות לענן...');
+
+    try {
+      const syncedSessions = await pushProgressToCloud(parentUser.uid, players, sessions);
+      onProgressReplace(players, syncedSessions);
+      setCloudMessage('ההתקדמות גובתה לענן בהצלחה.');
+    } catch {
+      setCloudMessage('הגיבוי נכשל. ודאו ש-Firestore נוצר ושכללי הגישה מאפשרים למשתמש מחובר לקרוא ולכתוב.');
+    } finally {
+      setIsCloudBusy(false);
+    }
+  }
+
+  async function handlePullFromCloud() {
+    if (!parentUser) return;
+    setIsCloudBusy(true);
+    setCloudMessage('טוענים התקדמות מהענן...');
+
+    try {
+      const cloudProgress = await pullProgressFromCloud(parentUser.uid);
+      if (!cloudProgress.players.length) {
+        setCloudMessage('לא נמצאו עדיין שחקנים בענן. אפשר לבצע גיבוי ראשון מהמכשיר הזה.');
+        return;
+      }
+      onProgressReplace(cloudProgress.players, cloudProgress.sessions);
+      setCloudMessage('ההתקדמות נטענה מהענן.');
+    } catch {
+      setCloudMessage('טעינה מהענן נכשלה. בדקו ש-Firestore פעיל ושכללי הגישה תקינים.');
+    } finally {
+      setIsCloudBusy(false);
+    }
+  }
+
+  async function handleSignOut() {
+    await signOutParent();
+    setCloudMessage('התנתקתם מחשבון ההורה. הנתונים המקומיים נשארים במכשיר.');
+  }
 
   return (
     <section className="parent-dashboard" dir="rtl">
@@ -53,6 +121,32 @@ export function ParentDashboardPage({ players, sessions, onBack }: ParentDashboa
           <span>כוכבים בממוצע</span>
         </div>
       </div>
+
+      <section className="parent-cloud-panel">
+        <div>
+          <span className="question-card__tag">גיבוי ענן</span>
+          <h3>{parentUser ? `מחובר כ-${parentUser.email}` : 'חיבור חשבון הורה'}</h3>
+          <p>{cloudMessage}</p>
+        </div>
+
+        {parentUser ? (
+          <div className="parent-cloud-panel__actions">
+            <Button type="button" onClick={handlePushToCloud} disabled={isCloudBusy}>גיבוי לענן</Button>
+            <Button type="button" variant="secondary" onClick={handlePullFromCloud} disabled={isCloudBusy}>טעינה מהענן</Button>
+            <Button type="button" variant="ghost" onClick={handleSignOut} disabled={isCloudBusy}>התנתקות</Button>
+          </div>
+        ) : (
+          <form className="parent-cloud-panel__form" onSubmit={(event) => {
+            event.preventDefault();
+            if (!isCloudBusy && email && password.length >= 6) handleParentAuth('sign-in');
+          }}>
+            <input type="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="אימייל הורה" />
+            <input type="password" value={password} onChange={(event) => setPassword(event.target.value)} placeholder="סיסמה" />
+            <Button type="button" disabled={isCloudBusy || !email || password.length < 6} onClick={() => handleParentAuth('sign-in')}>כניסה</Button>
+            <Button type="button" variant="secondary" disabled={isCloudBusy || !email || password.length < 6} onClick={() => handleParentAuth('register')}>הרשמה</Button>
+          </form>
+        )}
+      </section>
 
       <div className="parent-dashboard__players">
         {players.map((player) => {

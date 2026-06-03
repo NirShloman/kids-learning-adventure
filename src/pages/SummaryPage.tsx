@@ -3,6 +3,8 @@ import { GameResult } from '../types';
 import { Button } from '../components/common/Button';
 import { useSpeech } from '../hooks/useSpeech';
 import { getStarMessage } from '../utils/helpers';
+import { GameImage } from '../components/common/GameImage';
+import { RewardAnimation } from '../components/common/RewardAnimation';
 
 interface SummaryPageProps {
   result: GameResult;
@@ -22,6 +24,8 @@ export function SummaryPage({ result, title, voiceEnabled, onPlayAgain, onBackHo
 
   return (
     <section className="summary-card summary-card--premium">
+      <RewardAnimation event="confetti" />
+      <GameImage assetId={result.stars >= 3 ? 'trophy' : 'medal'} alt="" className="summary-card__reward" decorative />
       <div className="summary-card__emoji" aria-hidden="true">🏆</div>
       <span className="question-card__tag">סיכום משחק</span>
       <h2>סיימתם את {title}</h2>

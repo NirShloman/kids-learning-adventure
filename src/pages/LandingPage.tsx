@@ -4,6 +4,7 @@ import { ageOptions, difficultyOptions } from '../data/levels';
 import { BrandLogo } from '../components/common/BrandLogo';
 import { useSpeech } from '../hooks/useSpeech';
 import { gameInstructions } from '../data/gameInstructions';
+import { GameImage } from '../components/common/GameImage';
 
 interface LandingPageProps {
   settings: LearnerSettings;
@@ -65,6 +66,7 @@ export function LandingPage({ settings, onSettingsChange, onStart }: LandingPage
             </div>
 
             <div className="landing-lobby__stage" aria-label="שער לתפריט המשחקים">
+              <GameImage assetId="guideHappy" alt="" className="landing-lobby__guide-image" decorative />
               <div className="landing-lobby__mascot" aria-hidden="true">
                 <div className="landing-lobby__mascot-face">😊</div>
                 <div className="landing-lobby__mascot-book">א 1</div>

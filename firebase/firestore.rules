@@ -1,0 +1,194 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(ownerId) {
+      return signedIn() && ownerId == request.auth.uid;
+    }
+
+    function isContentAdmin() {
+      return signedIn()
+        && (
+          request.auth.token.admin == true
+          || request.auth.token.role in ['admin', 'content_editor']
+        );
+    }
+
+    function validDifficulty(value) {
+      return value in ['easy', 'medium', 'hard'];
+    }
+
+    function validGameId(value) {
+      return value in ['letters', 'numbers', 'shapes', 'colors', 'matching', 'memory', 'patterns', 'sorting'];
+    }
+
+    function validSyncStatus(value) {
+      return value in ['local', 'pending', 'synced'];
+    }
+
+    function validQuestionStatus(value) {
+      return value in ['draft', 'pending_review', 'approved', 'rejected', 'needs_changes', 'archived'];
+    }
+
+    function validAgeRange(value) {
+      return value in ['3-4', '4-5', '5-6'];
+    }
+
+    function validManagedQuestion(data) {
+      return data.keys().hasAll([
+          'id',
+          'prompt',
+          'options',
+          'correctOptionId',
+          'worldId',
+          'skillId',
+          'ageRange',
+          'difficulty',
+          'questionType',
+          'language',
+          'tags',
+          'estimatedTimeSeconds',
+          'pedagogicalGoal',
+          'status',
+          'createdBy',
+          'createdAt',
+          'updatedAt',
+          'version'
+        ])
+        && data.id is string
+        && data.prompt is string
+        && data.prompt.size() >= 4
+        && data.prompt.size() <= 240
+        && data.options is list
+        && data.options.size() >= 2
+        && data.options.size() <= 4
+        && data.correctOptionId is string
+        && data.worldId is string
+        && data.skillId is string
+        && validAgeRange(data.ageRange)
+        && data.difficulty in [1, 2, 3, 4, 5]
+        && data.questionType is string
+        && data.language == 'he'
+        && data.tags is list
+        && data.tags.size() <= 16
+        && data.estimatedTimeSeconds is int
+        && data.estimatedTimeSeconds >= 5
+        && data.estimatedTimeSeconds <= 90
+        && data.pedagogicalGoal is string
+        && data.pedagogicalGoal.size() <= 500
+        && validQuestionStatus(data.status)
+        && data.createdBy in ['system', 'admin', 'parent', 'teacher', 'content_editor']
+        && data.createdAt is string
+        && data.updatedAt is string
+        && data.version is int;
+    }
+
+    function validApprovedQuestion(data) {
+      return validManagedQuestion(data)
+        && data.status in ['approved', 'archived'];
+    }
+
+    function validPendingQuestion(data) {
+      return validManagedQuestion(data)
+        && data.status in ['pending_review', 'needs_changes', 'rejected', 'draft'];
+    }
+
+    function validPlayer(data) {
+      return data.keys().hasAll(['id', 'ownerId', 'name', 'age', 'difficulty', 'createdAt'])
+        && data.keys().hasOnly(['id', 'ownerId', 'name', 'age', 'difficulty', 'createdAt'])
+        && data.id is string
+        && data.ownerId is string
+        && data.name is string
+        && data.name.size() <= 50
+        && data.age in [3, 4, 5, 6]
+        && validDifficulty(data.difficulty)
+        && data.createdAt is string;
+    }
+
+    function validSession(data) {
+      return data.keys().hasAll(['id', 'ownerId', 'playerId', 'gameId', 'gameTitle', 'age', 'difficulty', 'score', 'total', 'stars', 'completedAt'])
+        && data.keys().hasOnly(['id', 'ownerId', 'playerId', 'gameId', 'gameTitle', 'age', 'difficulty', 'score', 'total', 'stars', 'completedAt', 'syncStatus'])
+        && data.id is string
+        && data.ownerId is string
+        && data.playerId is string
+        && validGameId(data.gameId)
+        && data.gameTitle is string
+        && data.gameTitle.size() <= 80
+        && data.age in [3, 4, 5, 6]
+        && validDifficulty(data.difficulty)
+        && data.score is int
+        && data.total is int
+        && data.score >= 0
+        && data.total > 0
+        && data.score <= data.total
+        && data.stars in [1, 2, 3]
+        && (!data.keys().hasAny(['syncStatus']) || validSyncStatus(data.syncStatus))
+        && data.completedAt is string;
+    }
+
+    match /questions/{questionId} {
+      allow read: if resource.data.status == 'approved' || isContentAdmin();
+      allow create, update: if isContentAdmin() && validApprovedQuestion(request.resource.data);
+      allow delete: if isContentAdmin();
+    }
+
+    match /pendingQuestionSubmissions/{submissionId} {
+      allow create: if signedIn() && validPendingQuestion(request.resource.data);
+      allow read, update, delete: if isContentAdmin();
+    }
+
+    match /questionReviewReports/{reportId} {
+      allow read, write: if isContentAdmin();
+    }
+
+    match /questionDuplicates/{duplicateId} {
+      allow read, write: if isContentAdmin();
+    }
+
+    match /contentVersions/{versionId} {
+      allow read: if resource.data.status == 'published';
+      allow write: if isContentAdmin();
+    }
+
+    match /auditLogs/{logId} {
+      allow read, write: if isContentAdmin();
+    }
+
+    match /questionBank/{document=**} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    match /players/{playerId} {
+      allow create: if isOwner(request.resource.data.ownerId) && validPlayer(request.resource.data);
+      allow read, delete: if isOwner(resource.data.ownerId);
+      allow update: if isOwner(resource.data.ownerId)
+        && isOwner(request.resource.data.ownerId)
+        && validPlayer(request.resource.data);
+    }
+
+    match /sessions/{sessionId} {
+      allow create: if isOwner(request.resource.data.ownerId) && validSession(request.resource.data);
+      allow read, delete: if isOwner(resource.data.ownerId);
+      allow update: if isOwner(resource.data.ownerId)
+        && isOwner(request.resource.data.ownerId)
+        && validSession(request.resource.data);
+    }
+
+    match /parents/{parentId} {
+      allow read, write: if isOwner(parentId);
+
+      match /children/{childId} {
+        allow read, write: if isOwner(parentId);
+      }
+
+      match /sessions/{sessionId} {
+        allow read, write: if isOwner(parentId);
+      }
+    }
+  }
+}

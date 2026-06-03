@@ -7,7 +7,9 @@ export const gameDefinitions: GameDefinition[] = [
     emoji: '🔤',
     description: 'זיהוי אותיות, צלילים ומילים ראשונות בעברית.',
     accent: 'purple',
-    recommendedAges: [3, 4, 5, 6]
+    recommendedAges: [3, 4, 5, 6],
+    imageAssetId: 'book',
+    backgroundAssetId: 'bgLetters'
   },
   {
     id: 'numbers',
@@ -15,7 +17,9 @@ export const gameDefinitions: GameDefinition[] = [
     emoji: '🔢',
     description: 'ספירה, התאמת כמות למספר וזיהוי ספרות.',
     accent: 'blue',
-    recommendedAges: [3, 4, 5, 6]
+    recommendedAges: [3, 4, 5, 6],
+    imageAssetId: 'ball',
+    backgroundAssetId: 'bgNumbers'
   },
   {
     id: 'shapes',
@@ -23,7 +27,9 @@ export const gameDefinitions: GameDefinition[] = [
     emoji: '🟠',
     description: 'מזהים עיגול, ריבוע, משולש, כוכב ועוד.',
     accent: 'orange',
-    recommendedAges: [3, 4, 5, 6]
+    recommendedAges: [3, 4, 5, 6],
+    imageAssetId: 'starReward',
+    backgroundAssetId: 'bgShapes'
   },
   {
     id: 'colors',
@@ -31,7 +37,9 @@ export const gameDefinitions: GameDefinition[] = [
     emoji: '🎨',
     description: 'לומדים צבעים בסיסיים דרך תמונות ובחירה מהירה.',
     accent: 'pink',
-    recommendedAges: [3, 4, 5, 6]
+    recommendedAges: [3, 4, 5, 6],
+    imageAssetId: 'flower',
+    backgroundAssetId: 'bgColors'
   },
   {
     id: 'matching',
@@ -39,7 +47,9 @@ export const gameDefinitions: GameDefinition[] = [
     emoji: '🧩',
     description: 'מחברים בין ציור, מילה, צורה או מספר.',
     accent: 'green',
-    recommendedAges: [3, 4, 5, 6]
+    recommendedAges: [3, 4, 5, 6],
+    imageAssetId: 'apple',
+    backgroundAssetId: 'bgMatching'
   },
   {
     id: 'memory',
@@ -47,7 +57,9 @@ export const gameDefinitions: GameDefinition[] = [
     emoji: '🃏',
     description: 'מוצאים זוגות תואמים ומאמנים זיכרון חזותי.',
     accent: 'yellow',
-    recommendedAges: [3, 4, 5, 6]
+    recommendedAges: [3, 4, 5, 6],
+    imageAssetId: 'balloon',
+    backgroundAssetId: 'bgMemory'
   },
   {
     id: 'patterns',
@@ -55,7 +67,9 @@ export const gameDefinitions: GameDefinition[] = [
     emoji: '🌈',
     description: 'משלימים סדרות של צבעים, צורות ומספרים.',
     accent: 'teal',
-    recommendedAges: [4, 5, 6]
+    recommendedAges: [3, 4, 5, 6],
+    imageAssetId: 'sun',
+    backgroundAssetId: 'bgPatterns'
   },
   {
     id: 'sorting',
@@ -63,6 +77,8 @@ export const gameDefinitions: GameDefinition[] = [
     emoji: '🧺',
     description: 'ממיינים חיות, אוכל, צעצועים וכלי תחבורה לקבוצות.',
     accent: 'coral',
-    recommendedAges: [3, 4, 5, 6]
+    recommendedAges: [3, 4, 5, 6],
+    imageAssetId: 'car',
+    backgroundAssetId: 'bgSorting'
   }
 ];

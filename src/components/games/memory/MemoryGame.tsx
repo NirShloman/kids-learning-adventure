@@ -1,10 +1,12 @@
-import { useEffect, useMemo, useState } from 'react';
-import { Age, Difficulty } from '../../../types';
+import { useEffect, useState } from 'react';
+import { Age, Difficulty, MemoryCard } from '../../../types';
 import { getMemoryCards } from '../../../services/questionService';
 import { useSpeech } from '../../../hooks/useSpeech';
 import { Button } from '../../common/Button';
 import { gameInstructions } from '../../../data/gameInstructions';
 import { calculateStars } from '../../../utils/helpers';
+import { GameWorld, GameWorldMessage } from '../GameWorld';
+import { GameImage } from '../../common/GameImage';
 
 interface MemoryGameProps {
   age: Age;
@@ -16,11 +18,36 @@ interface MemoryGameProps {
 
 export function MemoryGame({ age, difficulty, voiceEnabled, onBack, onFinish }: MemoryGameProps) {
   const { speak, stop, getSpeakProps } = useSpeech(voiceEnabled);
-  const cards = useMemo(() => getMemoryCards(age, difficulty), [age, difficulty]);
+  const [cards, setCards] = useState<MemoryCard[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
   const [flippedIds, setFlippedIds] = useState<string[]>([]);
   const [matchedPairIds, setMatchedPairIds] = useState<string[]>([]);
   const [moves, setMoves] = useState(0);
   const totalPairs = cards.length / 2;
+
+  useEffect(() => {
+    let isActive = true;
+    setIsLoading(true);
+    setFlippedIds([]);
+    setMatchedPairIds([]);
+    setMoves(0);
+
+    getMemoryCards(age, difficulty)
+      .then((items) => {
+        if (!isActive) return;
+        setCards(items);
+        setIsLoading(false);
+      })
+      .catch(() => {
+        if (!isActive) return;
+        setCards([]);
+        setIsLoading(false);
+      });
+
+    return () => {
+      isActive = false;
+    };
+  }, [age, difficulty]);
 
   useEffect(() => {
     speak(gameInstructions.memory.intro);
@@ -68,29 +95,54 @@ export function MemoryGame({ age, difficulty, voiceEnabled, onBack, onFinish }: 
     }
   }
 
-  return (
-    <section className="panel game-panel game-panel--memory">
-      <div className="panel__header">
-        <Button variant="ghost" onClick={onBack} {...getSpeakProps<HTMLButtonElement>('חזרה לתפריט המשחקים')}>חזרה לתפריט המשחקים</Button>
-        <div className="score-pill">זוגות: {matchedPairIds.length}</div>
-      </div>
+  if (isLoading) {
+    return (
+      <GameWorld gameId="memory" scoreLabel="זוגות" scoreValue={matchedPairIds.length} status="מערבבים קלפים" onBack={onBack} backSpeakProps={getSpeakProps<HTMLButtonElement>('חזרה לתפריט המשחקים')}>
+        <GameWorldMessage title="טוענים קלפים..." />
+      </GameWorld>
+    );
+  }
 
-      <div className="question-card question-card--animated">
-        <span className="question-card__tag">🃏 משחק זיכרון</span>
+  if (!cards.length) {
+    return (
+      <GameWorld gameId="memory" onBack={onBack} backSpeakProps={getSpeakProps<HTMLButtonElement>('חזרה לתפריט המשחקים')}>
+        <GameWorldMessage title="אין קלפים זמינים כרגע">
+          <Button onClick={onBack}>חזרה</Button>
+        </GameWorldMessage>
+      </GameWorld>
+    );
+  }
+
+  return (
+    <GameWorld gameId="memory" scoreLabel="זוגות" scoreValue={matchedPairIds.length} status={`${moves} מהלכים`} onBack={onBack} backSpeakProps={getSpeakProps<HTMLButtonElement>('חזרה לתפריט המשחקים')}>
+      <div className="game-play-card game-play-card--memory">
+        <span className="question-card__tag">משחק זיכרון</span>
         <h2>מצאו זוגות תואמים</h2>
         <p>הפכו שני קלפים בכל פעם וזכרו איפה כל ציור נמצא.</p>
 
-        <div className="memory-grid">
+        <div className="memory-grid game-memory-grid">
           {cards.map((card) => {
             const isVisible = flippedIds.includes(card.id) || matchedPairIds.includes(card.pairId);
             return (
-              <button key={card.id} type="button" className={`memory-card ${isVisible ? 'memory-card--visible' : ''}`} onClick={() => handleCardClick(card.id)} aria-label={isVisible ? `קלף ${card.value}` : 'קלף מוסתר'} {...getSpeakProps<HTMLButtonElement>(isVisible ? `קלף ${card.value}` : 'קלף מוסתר')}>
-                <span>{isVisible ? card.value : '❓'}</span>
+              <button
+                key={card.id}
+                type="button"
+                className={`memory-card game-memory-card ${isVisible ? 'memory-card--visible' : ''}`}
+                data-testid="memory-card"
+                data-pair-id={card.pairId}
+                onClick={() => handleCardClick(card.id)}
+                aria-label={isVisible ? `קלף ${card.value}` : 'קלף מוסתר'}
+                {...getSpeakProps<HTMLButtonElement>(isVisible ? `קלף ${card.value}` : 'קלף מוסתר')}
+              >
+                <span className="game-memory-card__back" aria-hidden="true">?</span>
+                <span className="game-memory-card__front">
+                  {card.imageAssetId ? <GameImage assetId={card.imageAssetId} alt="" decorative className="game-token__image" /> : card.value}
+                </span>
               </button>
             );
           })}
         </div>
       </div>
-    </section>
+    </GameWorld>
   );
 }

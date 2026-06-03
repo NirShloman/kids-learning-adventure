@@ -1,11 +1,14 @@
-import { useEffect, useMemo, useState } from 'react';
-import { Age, Difficulty } from '../../../types';
+import { useEffect, useState } from 'react';
+import { Age, Difficulty, SortingChallenge } from '../../../types';
 import { getSortingChallenges } from '../../../services/questionService';
 import { useSpeech } from '../../../hooks/useSpeech';
 import { Button } from '../../common/Button';
 import { ProgressBar } from '../../common/ProgressBar';
 import { calculateStars, getEncouragementMessage } from '../../../utils/helpers';
 import { gameInstructions } from '../../../data/gameInstructions';
+import { GameWorld, GameWorldMessage } from '../GameWorld';
+import { GameImage } from '../../common/GameImage';
+import { AnimatedFeedback } from '../../common/AnimatedFeedback';
 
 interface SortingGameProps {
   age: Age;
@@ -17,7 +20,8 @@ interface SortingGameProps {
 
 export function SortingGame({ age, difficulty, voiceEnabled, onBack, onFinish }: SortingGameProps) {
   const { speak, stop, getSpeakProps } = useSpeech(voiceEnabled);
-  const challenges = useMemo(() => getSortingChallenges(age, difficulty), [age, difficulty]);
+  const [challenges, setChallenges] = useState<SortingChallenge[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
@@ -25,6 +29,32 @@ export function SortingGame({ age, difficulty, voiceEnabled, onBack, onFinish }:
   const [isAnswered, setIsAnswered] = useState(false);
   const currentChallenge = challenges[currentIndex];
   const total = challenges.length;
+
+  useEffect(() => {
+    let isActive = true;
+    setIsLoading(true);
+    setCurrentIndex(0);
+    setScore(0);
+    setSelectedOptionId(null);
+    setFeedback('');
+    setIsAnswered(false);
+
+    getSortingChallenges(age, difficulty)
+      .then((items) => {
+        if (!isActive) return;
+        setChallenges(items);
+        setIsLoading(false);
+      })
+      .catch(() => {
+        if (!isActive) return;
+        setChallenges([]);
+        setIsLoading(false);
+      });
+
+    return () => {
+      isActive = false;
+    };
+  }, [age, difficulty]);
 
   useEffect(() => {
     if (!currentChallenge) return;
@@ -58,34 +88,54 @@ export function SortingGame({ age, difficulty, voiceEnabled, onBack, onFinish }:
     setCurrentIndex((previous) => previous + 1);
   }
 
-  if (!currentChallenge) return null;
+  if (isLoading) {
+    return (
+      <GameWorld gameId="sorting" scoreLabel="ניקוד" scoreValue={score} status="מסדרים סלים" onBack={onBack} backSpeakProps={getSpeakProps<HTMLButtonElement>('חזרה לתפריט המשחקים')}>
+        <GameWorldMessage title="טוענים אתגרי מיון..." />
+      </GameWorld>
+    );
+  }
+
+  if (!currentChallenge) {
+    return (
+      <GameWorld gameId="sorting" onBack={onBack} backSpeakProps={getSpeakProps<HTMLButtonElement>('חזרה לתפריט המשחקים')}>
+        <GameWorldMessage title="אין אתגרי מיון זמינים כרגע">
+          <Button onClick={onBack}>חזרה</Button>
+        </GameWorldMessage>
+      </GameWorld>
+    );
+  }
 
   return (
-    <section className="panel game-panel game-panel--sorting">
-      <div className="panel__header">
-        <Button variant="ghost" onClick={onBack} {...getSpeakProps<HTMLButtonElement>('חזרה לתפריט המשחקים')}>חזרה לתפריט המשחקים</Button>
-        <div className="score-pill">ניקוד: {score}</div>
-      </div>
-
+    <GameWorld gameId="sorting" scoreLabel="ניקוד" scoreValue={score} status={`${currentIndex + 1}/${total}`} onBack={onBack} backSpeakProps={getSpeakProps<HTMLButtonElement>('חזרה לתפריט המשחקים')}>
       <ProgressBar current={currentIndex + 1} total={total} />
 
-      <div className="question-card question-card--animated sorting-card">
-        <span className="question-card__tag">🧺 משחק מיון וסיווג</span>
+      <div className="game-play-card game-play-card--sorting">
+        <span className="question-card__tag">משחק מיון וסיווג</span>
         <h2>{currentChallenge.prompt}</h2>
         <p>בחרו את הסל שהפריט מתאים אליו.</p>
 
-        <div className="sorting-item" aria-label={`הפריט למיון הוא ${currentChallenge.itemName}`} {...getSpeakProps<HTMLDivElement>(currentChallenge.itemName)}>
-          <span>{currentChallenge.item}</span>
+        <div className="sorting-item game-sorting-item" aria-label={`הפריט למיון הוא ${currentChallenge.itemName}`} {...getSpeakProps<HTMLDivElement>(currentChallenge.itemName)}>
+          {currentChallenge.itemImageAssetId ? <GameImage assetId={currentChallenge.itemImageAssetId} alt="" decorative className="game-token__image" /> : <span>{currentChallenge.item}</span>}
           <strong>{currentChallenge.itemName}</strong>
         </div>
 
-        <div className="sorting-baskets">
+        <div className="sorting-baskets game-sorting-baskets">
           {currentChallenge.options.map((option) => {
             const isCorrectOption = option.id === currentChallenge.correctOptionId;
             const isSelected = option.id === selectedOptionId;
-            const optionClassName = ['sorting-basket', isAnswered && isCorrectOption ? 'sorting-basket--correct' : '', isAnswered && isSelected && !isCorrectOption ? 'sorting-basket--wrong' : ''].join(' ').trim();
+            const optionClassName = ['sorting-basket', 'game-sorting-basket', isAnswered && isCorrectOption ? 'sorting-basket--correct' : '', isAnswered && isSelected && !isCorrectOption ? 'sorting-basket--wrong' : ''].join(' ').trim();
             return (
-              <button key={option.id} type="button" className={optionClassName} onClick={() => submitAnswer(option.id)} disabled={isAnswered} {...getSpeakProps<HTMLButtonElement>(option.label)}>
+              <button
+                key={option.id}
+                type="button"
+                className={optionClassName}
+                data-testid="sorting-option"
+                data-correct={isCorrectOption ? 'true' : 'false'}
+                onClick={() => submitAnswer(option.id)}
+                disabled={isAnswered}
+                {...getSpeakProps<HTMLButtonElement>(option.label)}
+              >
                 <span className="sorting-basket__emoji">{option.emoji}</span>
                 <span>{option.label}</span>
               </button>
@@ -93,12 +143,12 @@ export function SortingGame({ age, difficulty, voiceEnabled, onBack, onFinish }:
           })}
         </div>
 
-        {feedback ? <div className={`feedback ${isAnswered ? 'feedback--visible' : ''}`}>{feedback}</div> : null}
+        <AnimatedFeedback message={feedback} tone={isAnswered && selectedOptionId === currentChallenge.correctOptionId ? 'correct' : 'wrong'} />
 
         <div className="question-card__actions">
           <Button onClick={nextChallenge} disabled={!isAnswered} {...getSpeakProps<HTMLButtonElement>('לפריט הבא')}>לפריט הבא</Button>
         </div>
       </div>
-    </section>
+    </GameWorld>
   );
 }

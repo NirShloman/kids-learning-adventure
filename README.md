@@ -79,6 +79,68 @@ dist/
 npm run preview
 ```
 
+## Firebase ותוכן מנוהל
+
+הגדרות Firebase מגיעות מקובצי env מקומיים לפי `.env.example`. אין לשמור secrets או service account בתוך הקוד.
+
+```bash
+VITE_FIREBASE_API_KEY=
+VITE_FIREBASE_AUTH_DOMAIN=
+VITE_FIREBASE_PROJECT_ID=
+VITE_FIREBASE_STORAGE_BUCKET=
+VITE_FIREBASE_MESSAGING_SENDER_ID=
+VITE_FIREBASE_APP_ID=
+```
+
+Firestore rules הקנוניים נמצאים ב-`firebase/firestore.rules`, ו-`firebase.json` מצביע אליהם.
+
+## בדיקות תוכן
+
+```bash
+npm run validate:content
+npm run review:content
+npm run check:duplicates
+```
+
+ה-seed הראשוני נמצא ב-`shared-content/seed/questions.seed.json` וכולל 120 שאלות במבנה `GameQuestion`.
+
+## ייבוא וייצוא שאלות
+
+ייבוא/ייצוא מתבצעים ממחשב פיתוח מהימן עם Admin SDK:
+
+```bash
+npm run firebase:import
+npm run firebase:export
+```
+
+יש להגדיר `FIREBASE_PROJECT_ID` וגם `GOOGLE_APPLICATION_CREDENTIALS` או `FIREBASE_SERVICE_ACCOUNT_PATH`.
+
+## Admin לאישור שאלות
+
+אחרי פתיחת אזור ההורים מופיע כפתור `ניהול תוכן`. שם אפשר להוסיף שאלה, להריץ בדיקת כפילות ו-Agent, לצפות בדוח איכות, לאשר/לדחות/לבקש תיקון, לבצע Preview, לייבא seed ולייצא JSON לגיבוי.
+
+שאלות משתמש נשמרות תמיד במסלול `pendingQuestionSubmissions` ולא נכנסות ישירות למאגר המאושר.
+
+## בדיקות E2E עם Playwright
+
+התוסף של Playwright ב-VS Code קורא את `playwright.config.ts`, ולכן כל הבדיקות מופיעות גם ב-Test Explorer.
+
+```bash
+npm run test:e2e
+npm run test:e2e:ui
+npm run test:e2e:debug
+```
+
+בדיקות ברירת המחדל מריצות את האפליקציה במצב local/fallback בלי Firebase, גם אם קיים `.env.local`.
+
+לבדיקות Firebase יש להריץ Auth + Firestore Emulator בנפרד, ואז:
+
+```bash
+npm run test:e2e:firebase
+```
+
+ה-Firebase suite מדלג אוטומטית אם ה-emulators לא זמינים, ואינו כותב ל-production.
+
 ## מבנה תיקיות מרכזי
 
 ```text
@@ -107,6 +169,10 @@ src/
   pages/
   services/
     questionService.ts
+    questions/questionProvider.ts
+    firebase/questionRepository.ts
+    contentReview/contentReviewAgent.ts
+    contentReview/duplicateQuestionDetector.ts
     speechService.ts
     speechTherapistAgent.ts
     versionService.ts

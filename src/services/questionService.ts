@@ -1,8 +1,7 @@
-import { allQuizQuestions } from '../data/questions';
-import { matchingPairs, memoryCards, patternPuzzles, sortingChallenges } from '../data/activityData';
 import { Age, Difficulty, GameId, MatchingPair, MemoryCard, PatternPuzzle, QuizQuestion, SortingChallenge } from '../types';
 import { shuffleArray } from '../utils/helpers';
-import { getApprovedQuizQuestions } from './speechTherapistAgent';
+import { loadQuestionBank } from './questionCacheService';
+import { getPlayableQuizQuestions } from './questions/questionProvider';
 
 const quizGameIds: QuizQuestion['category'][] = ['letters', 'numbers', 'shapes', 'colors'];
 
@@ -12,25 +11,23 @@ function byAgeAndDifficulty<T extends { age: Age[]; difficulty: Difficulty }>(it
   return exact.length > 0 ? exact : fallback;
 }
 
-export function getQuizQuestions(gameId: GameId, age: Age, difficulty: Difficulty): QuizQuestion[] {
+export async function getQuizQuestions(gameId: GameId, age: Age, difficulty: Difficulty): Promise<QuizQuestion[]> {
   if (!quizGameIds.includes(gameId as QuizQuestion['category'])) return [];
 
-  const approvedQuestions = getApprovedQuizQuestions(allQuizQuestions);
-  const eligible = byAgeAndDifficulty(
-    approvedQuestions.filter((question) => question.category === gameId),
-    age,
-    difficulty
-  );
+  const eligible = await getPlayableQuizQuestions(gameId as QuizQuestion['category'], age, difficulty);
 
   return shuffleArray(eligible).slice(0, age <= 3 ? 8 : 10);
 }
 
-export function getMatchingPairs(age: Age, difficulty: Difficulty): MatchingPair[] {
-  const list = byAgeAndDifficulty(matchingPairs, age, difficulty);
+export async function getMatchingPairs(age: Age, difficulty: Difficulty): Promise<MatchingPair[]> {
+  const questionBank = await loadQuestionBank();
+  const list = byAgeAndDifficulty(questionBank.matchingPairs, age, difficulty);
   return shuffleArray(list).slice(0, age <= 3 ? 4 : age <= 4 ? 5 : 6);
 }
 
-export function getMemoryCards(age: Age, difficulty: Difficulty): MemoryCard[] {
+export async function getMemoryCards(age: Age, difficulty: Difficulty): Promise<MemoryCard[]> {
+  const questionBank = await loadQuestionBank();
+  const memoryCards = questionBank.memoryCards;
   const exactPairIds = new Set(
     memoryCards.filter((card) => card.age.includes(age) && card.difficulty === difficulty).map((card) => card.pairId)
   );
@@ -41,12 +38,14 @@ export function getMemoryCards(age: Age, difficulty: Difficulty): MemoryCard[] {
   return shuffleArray(memoryCards.filter((card) => selectedPairIds.includes(card.pairId)));
 }
 
-export function getPatternPuzzles(age: Age, difficulty: Difficulty): PatternPuzzle[] {
-  const list = byAgeAndDifficulty(patternPuzzles, age, difficulty);
+export async function getPatternPuzzles(age: Age, difficulty: Difficulty): Promise<PatternPuzzle[]> {
+  const questionBank = await loadQuestionBank();
+  const list = byAgeAndDifficulty(questionBank.patternPuzzles, age, difficulty);
   return shuffleArray(list).slice(0, age <= 4 ? 5 : 7);
 }
 
-export function getSortingChallenges(age: Age, difficulty: Difficulty): SortingChallenge[] {
-  const list = byAgeAndDifficulty(sortingChallenges, age, difficulty);
+export async function getSortingChallenges(age: Age, difficulty: Difficulty): Promise<SortingChallenge[]> {
+  const questionBank = await loadQuestionBank();
+  const list = byAgeAndDifficulty(questionBank.sortingChallenges, age, difficulty);
   return shuffleArray(list).slice(0, age <= 3 ? 5 : 7);
 }

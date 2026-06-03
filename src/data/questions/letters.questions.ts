@@ -1,28 +1,160 @@
 import { QuizQuestion } from '../../types';
 
-export const letterQuestions: QuizQuestion[] = [
-  { id: 'letters-easy-1', category: 'letters', age: [3, 4], difficulty: 'easy', prompt: 'באיזו אות מתחילה המילה אבא?', visual: '👨', audioText: 'באיזו אות מתחילה המילה אבא?', options: [{ id: 'a', label: 'א' }, { id: 'b', label: 'ב' }, { id: 'g', label: 'ג' }], correctOptionId: 'a' },
-  { id: 'letters-easy-2', category: 'letters', age: [3, 4], difficulty: 'easy', prompt: 'בחרו את האות מ', subtitle: 'חפשו את האות המתאימה', audioText: 'בחרו את האות מם', options: [{ id: 'm', label: 'מ' }, { id: 'n', label: 'נ' }, { id: 's', label: 'ס' }], correctOptionId: 'm' },
-  { id: 'letters-easy-3', category: 'letters', age: [3, 4], difficulty: 'easy', prompt: 'באיזו אות מתחילה המילה דג?', visual: '🐟', audioText: 'באיזו אות מתחילה המילה דג?', options: [{ id: 'd', label: 'ד' }, { id: 'r', label: 'ר' }, { id: 't', label: 'ת' }], correctOptionId: 'd' },
-  { id: 'letters-easy-4', category: 'letters', age: [3, 4], difficulty: 'easy', prompt: 'באיזו אות מתחילה המילה בית?', visual: '🏠', audioText: 'באיזו אות מתחילה המילה בית?', options: [{ id: 'b', label: 'ב' }, { id: 'h', label: 'ה' }, { id: 'k', label: 'כ' }], correctOptionId: 'b' },
-  { id: 'letters-easy-5', category: 'letters', age: [3, 4], difficulty: 'easy', prompt: 'בחרו את האות ש', audioText: 'בחרו את האות שין', options: [{ id: 'sh', label: 'ש' }, { id: 'sin', label: 'ס' }, { id: 'ts', label: 'צ' }], correctOptionId: 'sh' },
-  { id: 'letters-easy-6', category: 'letters', age: [3, 4], difficulty: 'easy', prompt: 'באיזו אות מתחילה המילה כלב?', visual: '🐶', audioText: 'באיזו אות מתחילה המילה כלב?', options: [{ id: 'k', label: 'כ' }, { id: 'l', label: 'ל' }, { id: 'd', label: 'ד' }], correctOptionId: 'k' },
-  { id: 'letters-easy-7', category: 'letters', age: [3, 4], difficulty: 'easy', prompt: 'בחרו את האות ל', audioText: 'בחרו את האות למד', options: [{ id: 'l', label: 'ל' }, { id: 'r', label: 'ר' }, { id: 'v', label: 'ו' }], correctOptionId: 'l' },
-  { id: 'letters-easy-8', category: 'letters', age: [3, 4], difficulty: 'easy', prompt: 'באיזו אות מתחילה המילה תות?', visual: '🍓', audioText: 'באיזו אות מתחילה המילה תות?', options: [{ id: 'tav', label: 'ת' }, { id: 'tet', label: 'ט' }, { id: 'nun', label: 'נ' }], correctOptionId: 'tav' },
-  { id: 'letters-medium-1', category: 'letters', age: [4, 5], difficulty: 'medium', prompt: 'איזו מילה מתחילה באות ש?', audioText: 'איזו מילה מתחילה באות שין?', options: [{ id: 'sun', label: 'שמש', emoji: '☀️' }, { id: 'house', label: 'בית', emoji: '🏠' }, { id: 'dog', label: 'כלב', emoji: '🐶' }], correctOptionId: 'sun' },
-  { id: 'letters-medium-2', category: 'letters', age: [4, 5], difficulty: 'medium', prompt: 'איזו אות חסרה במילה _רפרף?', visual: '🦋', audioText: 'איזו אות חסרה במילה פרפר?', options: [{ id: 'p', label: 'פ' }, { id: 'k', label: 'כ' }, { id: 'l', label: 'ל' }], correctOptionId: 'p' },
-  { id: 'letters-medium-3', category: 'letters', age: [4, 5], difficulty: 'medium', prompt: 'איזו מילה מתחילה באות ג?', audioText: 'איזו מילה מתחילה באות גימל?', options: [{ id: 'carrot', label: 'גזר', emoji: '🥕' }, { id: 'banana', label: 'בננה', emoji: '🍌' }, { id: 'clock', label: 'שעון', emoji: '⏰' }], correctOptionId: 'carrot' },
-  { id: 'letters-medium-4', category: 'letters', age: [4, 5], difficulty: 'medium', prompt: 'איזו אות שומעים בתחילת המילה נעל?', visual: '👟', audioText: 'איזו אות שומעים בתחילת המילה נעל?', options: [{ id: 'n', label: 'נ' }, { id: 'a', label: 'א' }, { id: 'm', label: 'מ' }], correctOptionId: 'n' },
-  { id: 'letters-medium-5', category: 'letters', age: [4, 5], difficulty: 'medium', prompt: 'איזו מילה מתחילה באות ר?', audioText: 'איזו מילה מתחילה באות ריש?', options: [{ id: 'train', label: 'רכבת', emoji: '🚂' }, { id: 'cat', label: 'חתול', emoji: '🐱' }, { id: 'flower', label: 'פרח', emoji: '🌸' }], correctOptionId: 'train' },
-  { id: 'letters-medium-6', category: 'letters', age: [4, 5], difficulty: 'medium', prompt: 'בחרו את המילה שמתחילה באות ח', audioText: 'בחרו את המילה שמתחילה באות חית', options: [{ id: 'cat', label: 'חתול', emoji: '🐱' }, { id: 'ball', label: 'כדור', emoji: '⚽' }, { id: 'leaf', label: 'עלה', emoji: '🍃' }], correctOptionId: 'cat' },
-  { id: 'letters-medium-7', category: 'letters', age: [4, 5], difficulty: 'medium', prompt: 'מה האות הראשונה במילה פרח?', visual: '🌸', audioText: 'מה האות הראשונה במילה פרח?', options: [{ id: 'p', label: 'פ' }, { id: 'f', label: 'ף' }, { id: 'r', label: 'ר' }], correctOptionId: 'p' },
-  { id: 'letters-medium-8', category: 'letters', age: [4, 5], difficulty: 'medium', prompt: 'איזו מילה מתחילה באות ס?', audioText: 'איזו מילה מתחילה באות סמך?', options: [{ id: 'book', label: 'ספר', emoji: '📘' }, { id: 'chair', label: 'כיסא', emoji: '🪑' }, { id: 'window', label: 'חלון', emoji: '🪟' }], correctOptionId: 'book' },
-  { id: 'letters-hard-1', category: 'letters', age: [5, 6], difficulty: 'hard', prompt: 'בחרו את האות הסופית המתאימה למילה ים_', audioText: 'בחרו את האות הסופית המתאימה למילה ים', options: [{ id: 'final-mem', label: 'ם' }, { id: 'mem', label: 'מ' }, { id: 'nun', label: 'ן' }], correctOptionId: 'final-mem' },
-  { id: 'letters-hard-2', category: 'letters', age: [5, 6], difficulty: 'hard', prompt: 'איזו מילה מסתיימת באות ת?', audioText: 'איזו מילה מסתיימת באות תו?', options: [{ id: 'door', label: 'דלת', emoji: '🚪' }, { id: 'ball', label: 'כדור', emoji: '⚽' }, { id: 'flower', label: 'פרח', emoji: '🌸' }], correctOptionId: 'door' },
-  { id: 'letters-hard-3', category: 'letters', age: [5, 6], difficulty: 'hard', prompt: 'איזו אות סופית מתאימה למילה חלו_', visual: '🪟', audioText: 'איזו אות סופית מתאימה למילה חלון?', options: [{ id: 'final-nun', label: 'ן' }, { id: 'nun', label: 'נ' }, { id: 'final-mem', label: 'ם' }], correctOptionId: 'final-nun' },
-  { id: 'letters-hard-4', category: 'letters', age: [5, 6], difficulty: 'hard', prompt: 'איזו מילה מתחילה ונגמרת באות ת?', audioText: 'איזו מילה מתחילה ונגמרת באות תו?', options: [{ id: 'strawberry', label: 'תות', emoji: '🍓' }, { id: 'apple', label: 'תפוח', emoji: '🍎' }, { id: 'bag', label: 'תיק', emoji: '🎒' }], correctOptionId: 'strawberry' },
-  { id: 'letters-hard-5', category: 'letters', age: [5, 6], difficulty: 'hard', prompt: 'בחרו את המילה שבה שומעים את הצליל צ', audioText: 'בחרו את המילה שבה שומעים את הצליל צדי', options: [{ id: 'bird', label: 'ציפור', emoji: '🐦' }, { id: 'table', label: 'שולחן', emoji: '🪑' }, { id: 'moon', label: 'ירח', emoji: '🌙' }], correctOptionId: 'bird' },
-  { id: 'letters-hard-6', category: 'letters', age: [5, 6], difficulty: 'hard', prompt: 'איזו אות חסרה במילה כ_ור?', visual: '⚽', audioText: 'איזו אות חסרה במילה כדור?', options: [{ id: 'd', label: 'ד' }, { id: 'g', label: 'ג' }, { id: 'z', label: 'ז' }], correctOptionId: 'd' },
-  { id: 'letters-hard-7', category: 'letters', age: [5, 6], difficulty: 'hard', prompt: 'איזו מילה מסתיימת באות ך?', audioText: 'איזו מילה מסתיימת באות כף סופית?', options: [{ id: 'king', label: 'מלך', emoji: '👑' }, { id: 'water', label: 'מים', emoji: '💧' }, { id: 'milk', label: 'חלב', emoji: '🥛' }], correctOptionId: 'king' },
-  { id: 'letters-hard-8', category: 'letters', age: [5, 6], difficulty: 'hard', prompt: 'מה האות האמצעית במילה דגל?', visual: '🚩', audioText: 'מה האות האמצעית במילה דגל?', options: [{ id: 'g', label: 'ג' }, { id: 'd', label: 'ד' }, { id: 'l', label: 'ל' }], correctOptionId: 'g' }
+type LetterDraft = Omit<QuizQuestion, 'id' | 'category'>;
+
+const allAges: QuizQuestion['age'] = [3, 4, 5, 6];
+
+interface WordCard {
+  word: string;
+  visual: string;
+  first: string;
+  last: string;
+  middle?: string;
+  firstDistractors: string[];
+  lastDistractors: string[];
+}
+
+const wordCards: WordCard[] = [
+  { word: 'אבא', visual: '👨', first: 'א', last: 'א', middle: 'ב', firstDistractors: ['ב', 'מ'], lastDistractors: ['ה', 'ב'] },
+  { word: 'בית', visual: '🏠', first: 'ב', last: 'ת', middle: 'י', firstDistractors: ['כ', 'ה'], lastDistractors: ['ב', 'ד'] },
+  { word: 'דג', visual: '🐟', first: 'ד', last: 'ג', firstDistractors: ['ג', 'ר'], lastDistractors: ['ד', 'ז'] },
+  { word: 'כלב', visual: '🐶', first: 'כ', last: 'ב', middle: 'ל', firstDistractors: ['ק', 'ל'], lastDistractors: ['כ', 'ד'] },
+  { word: 'תות', visual: '🍓', first: 'ת', last: 'ת', middle: 'ו', firstDistractors: ['ט', 'ש'], lastDistractors: ['ד', 'ט'] },
+  { word: 'שמש', visual: '☀️', first: 'ש', last: 'ש', middle: 'מ', firstDistractors: ['ס', 'צ'], lastDistractors: ['ס', 'מ'] },
+  { word: 'ספר', visual: '📘', first: 'ס', last: 'ר', middle: 'פ', firstDistractors: ['ש', 'פ'], lastDistractors: ['ס', 'ל'] },
+  { word: 'פרח', visual: '🌸', first: 'פ', last: 'ח', middle: 'ר', firstDistractors: ['ב', 'ר'], lastDistractors: ['פ', 'ה'] },
+  { word: 'גזר', visual: '🥕', first: 'ג', last: 'ר', middle: 'ז', firstDistractors: ['ד', 'ז'], lastDistractors: ['ג', 'ל'] },
+  { word: 'נעל', visual: '👟', first: 'נ', last: 'ל', middle: 'ע', firstDistractors: ['מ', 'ע'], lastDistractors: ['נ', 'ר'] },
+  { word: 'בלון', visual: '🎈', first: 'ב', last: 'ן', middle: 'ו', firstDistractors: ['פ', 'ל'], lastDistractors: ['נ', 'ם'] },
+  { word: 'ירח', visual: '🌙', first: 'י', last: 'ח', middle: 'ר', firstDistractors: ['ו', 'ר'], lastDistractors: ['י', 'ך'] },
+  { word: 'כדור', visual: '⚽', first: 'כ', last: 'ר', middle: 'ד', firstDistractors: ['ק', 'ד'], lastDistractors: ['כ', 'ל'] },
+  { word: 'חתול', visual: '🐱', first: 'ח', last: 'ל', middle: 'ת', firstDistractors: ['ה', 'ת'], lastDistractors: ['ח', 'ר'] },
+  { word: 'רכבת', visual: '🚂', first: 'ר', last: 'ת', middle: 'כ', firstDistractors: ['ד', 'כ'], lastDistractors: ['ר', 'ב'] },
+  { word: 'עיפרון', visual: '✏️', first: 'ע', last: 'ן', middle: 'פ', firstDistractors: ['א', 'פ'], lastDistractors: ['נ', 'ם'] },
+  { word: 'מלך', visual: '👑', first: 'מ', last: 'ך', middle: 'ל', firstDistractors: ['נ', 'ל'], lastDistractors: ['כ', 'ם'] },
+  { word: 'ים', visual: '🌊', first: 'י', last: 'ם', firstDistractors: ['ו', 'מ'], lastDistractors: ['מ', 'ן'] },
+  { word: 'ציפור', visual: '🐦', first: 'צ', last: 'ר', middle: 'פ', firstDistractors: ['ס', 'פ'], lastDistractors: ['צ', 'ל'] },
+  { word: 'קוביה', visual: '🎲', first: 'ק', last: 'ה', middle: 'ו', firstDistractors: ['כ', 'ב'], lastDistractors: ['ק', 'י'] },
+  { word: 'חלב', visual: '🥛', first: 'ח', last: 'ב', middle: 'ל', firstDistractors: ['כ', 'ל'], lastDistractors: ['ח', 'ד'] },
+  { word: 'כוס', visual: '🥤', first: 'כ', last: 'ס', middle: 'ו', firstDistractors: ['ק', 'ס'], lastDistractors: ['כ', 'ש'] },
+  { word: 'לחם', visual: '🍞', first: 'ל', last: 'ם', middle: 'ח', firstDistractors: ['מ', 'ח'], lastDistractors: ['מ', 'ן'] },
+  { word: 'שעון', visual: '⏰', first: 'ש', last: 'ן', middle: 'ע', firstDistractors: ['ס', 'ע'], lastDistractors: ['נ', 'ם'] }
 ];
+
+const targetLetters = [
+  { letter: 'א', name: 'אלף', distractors: ['ע', 'מ'] },
+  { letter: 'ב', name: 'בית', distractors: ['כ', 'פ'] },
+  { letter: 'ג', name: 'גימל', distractors: ['ז', 'ד'] },
+  { letter: 'ד', name: 'דלת', distractors: ['ר', 'ג'] },
+  { letter: 'ה', name: 'הא', distractors: ['ח', 'ת'] },
+  { letter: 'ו', name: 'וָו', distractors: ['י', 'ז'] },
+  { letter: 'ח', name: 'חית', distractors: ['כ', 'ה'] },
+  { letter: 'כ', name: 'כף', distractors: ['ק', 'ב'] },
+  { letter: 'ל', name: 'למד', distractors: ['ר', 'ו'] },
+  { letter: 'מ', name: 'מם', distractors: ['נ', 'ס'] },
+  { letter: 'נ', name: 'נון', distractors: ['מ', 'י'] },
+  { letter: 'ס', name: 'סמך', distractors: ['ש', 'צ'] },
+  { letter: 'פ', name: 'פא', distractors: ['ב', 'כ'] },
+  { letter: 'ר', name: 'ריש', distractors: ['ד', 'ל'] },
+  { letter: 'ש', name: 'שין', distractors: ['ס', 'צ'] },
+  { letter: 'ת', name: 'תו', distractors: ['ט', 'ח'] }
+];
+
+function option(id: string, label: string, emoji?: string): QuizQuestion['options'][number] {
+  return emoji ? { id, label, emoji } : { id, label };
+}
+
+function letterOptions(correct: string, distractors: string[]): QuizQuestion['options'] {
+  return [option(correct, correct), ...distractors.map((letter) => option(letter, letter))];
+}
+
+function wordOptions(correct: WordCard, distractors: WordCard[]): QuizQuestion['options'] {
+  return [correct, ...distractors].map((card) => option(card.word, card.word, card.visual));
+}
+
+function makeQuestion(draft: LetterDraft, index: number): QuizQuestion {
+  return {
+    id: `letters-${draft.difficulty}-${String(index + 1).padStart(3, '0')}`,
+    category: 'letters',
+    ...draft,
+    age: [...draft.age],
+    options: draft.options.map((item) => ({ ...item }))
+  };
+}
+
+const initialSoundQuestions: LetterDraft[] = wordCards.slice(0, 18).map((card) => ({
+  age: [...allAges],
+  difficulty: 'easy',
+  prompt: `באיזו אות מתחילה המילה ${card.word}?`,
+  visual: card.visual,
+  audioText: `באיזו אות מתחילה המילה ${card.word}?`,
+  options: letterOptions(card.first, card.firstDistractors),
+  correctOptionId: card.first
+}));
+
+const chooseLetterQuestions: LetterDraft[] = targetLetters.map((item) => ({
+  age: [...allAges],
+  difficulty: 'easy',
+  prompt: `בחרו את האות ${item.letter}`,
+  subtitle: `חפשו את האות ${item.name}`,
+  visual: item.letter,
+  audioText: `בחרו את האות ${item.name}`,
+  options: letterOptions(item.letter, item.distractors),
+  correctOptionId: item.letter
+}));
+
+const wordByFirstLetterQuestions: LetterDraft[] = wordCards.slice(0, 18).map((card, index) => {
+  const distractors = wordCards.filter((item) => item.first !== card.first).slice(index % 5, index % 5 + 2);
+  return {
+    age: [...allAges],
+    difficulty: 'medium',
+    prompt: `איזו מילה מתחילה באות ${card.first}?`,
+    audioText: `איזו מילה מתחילה באות ${card.first}?`,
+    options: wordOptions(card, distractors),
+    correctOptionId: card.word
+  };
+});
+
+const missingFirstLetterQuestions: LetterDraft[] = wordCards.slice(6, 24).map((card) => ({
+  age: [...allAges],
+  difficulty: 'medium',
+  prompt: `איזו אות חסרה במילה _${card.word.slice(1)}?`,
+  visual: card.visual,
+  audioText: `איזו אות חסרה בתחילת המילה ${card.word}?`,
+  options: letterOptions(card.first, card.firstDistractors),
+  correctOptionId: card.first
+}));
+
+const lastLetterQuestions: LetterDraft[] = wordCards.slice(0, 18).map((card) => ({
+  age: [...allAges],
+  difficulty: 'hard',
+  prompt: `באיזו אות מסתיימת המילה ${card.word}?`,
+  visual: card.visual,
+  audioText: `באיזו אות מסתיימת המילה ${card.word}?`,
+  options: letterOptions(card.last, card.lastDistractors),
+  correctOptionId: card.last
+}));
+
+const middleLetterQuestions: LetterDraft[] = wordCards.filter((card) => card.middle).slice(0, 12).map((card) => ({
+  age: [5, 6],
+  difficulty: 'hard',
+  prompt: `מה האות האמצעית במילה ${card.word}?`,
+  visual: card.visual,
+  audioText: `מה האות האמצעית במילה ${card.word}?`,
+  options: letterOptions(
+    card.middle ?? card.first,
+    Array.from(new Set([card.first, card.last, ...card.firstDistractors, ...card.lastDistractors]))
+      .filter((letter) => letter !== card.middle)
+      .slice(0, 2)
+  ),
+  correctOptionId: card.middle ?? card.first
+}));
+
+export const letterQuestions: QuizQuestion[] = [
+  ...initialSoundQuestions,
+  ...chooseLetterQuestions,
+  ...wordByFirstLetterQuestions,
+  ...missingFirstLetterQuestions,
+  ...lastLetterQuestions,
+  ...middleLetterQuestions
+].map(makeQuestion);

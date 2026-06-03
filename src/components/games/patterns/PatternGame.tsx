@@ -1,11 +1,13 @@
-import { useEffect, useMemo, useState } from 'react';
-import { Age, Difficulty } from '../../../types';
+import { useEffect, useState } from 'react';
+import { Age, Difficulty, PatternPuzzle } from '../../../types';
 import { getPatternPuzzles } from '../../../services/questionService';
 import { useSpeech } from '../../../hooks/useSpeech';
 import { Button } from '../../common/Button';
 import { ProgressBar } from '../../common/ProgressBar';
 import { calculateStars, getEncouragementMessage } from '../../../utils/helpers';
 import { gameInstructions } from '../../../data/gameInstructions';
+import { GameWorld, GameWorldMessage } from '../GameWorld';
+import { AnimatedFeedback } from '../../common/AnimatedFeedback';
 
 interface PatternGameProps {
   age: Age;
@@ -17,7 +19,8 @@ interface PatternGameProps {
 
 export function PatternGame({ age, difficulty, voiceEnabled, onBack, onFinish }: PatternGameProps) {
   const { speak, stop, getSpeakProps } = useSpeech(voiceEnabled);
-  const puzzles = useMemo(() => getPatternPuzzles(age, difficulty), [age, difficulty]);
+  const [puzzles, setPuzzles] = useState<PatternPuzzle[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
@@ -25,6 +28,32 @@ export function PatternGame({ age, difficulty, voiceEnabled, onBack, onFinish }:
   const [isAnswered, setIsAnswered] = useState(false);
   const currentPuzzle = puzzles[currentIndex];
   const total = puzzles.length;
+
+  useEffect(() => {
+    let isActive = true;
+    setIsLoading(true);
+    setCurrentIndex(0);
+    setScore(0);
+    setSelectedOptionId(null);
+    setFeedback('');
+    setIsAnswered(false);
+
+    getPatternPuzzles(age, difficulty)
+      .then((items) => {
+        if (!isActive) return;
+        setPuzzles(items);
+        setIsLoading(false);
+      })
+      .catch(() => {
+        if (!isActive) return;
+        setPuzzles([]);
+        setIsLoading(false);
+      });
+
+    return () => {
+      isActive = false;
+    };
+  }, [age, difficulty]);
 
   useEffect(() => {
     if (!currentPuzzle) return;
@@ -58,37 +87,57 @@ export function PatternGame({ age, difficulty, voiceEnabled, onBack, onFinish }:
     setCurrentIndex((previous) => previous + 1);
   }
 
-  if (!currentPuzzle) return null;
+  if (isLoading) {
+    return (
+      <GameWorld gameId="patterns" scoreLabel="ניקוד" scoreValue={score} status="בונים רצף" onBack={onBack} backSpeakProps={getSpeakProps<HTMLButtonElement>('חזרה לתפריט המשחקים')}>
+        <GameWorldMessage title="טוענים רצפים..." />
+      </GameWorld>
+    );
+  }
+
+  if (!currentPuzzle) {
+    return (
+      <GameWorld gameId="patterns" onBack={onBack} backSpeakProps={getSpeakProps<HTMLButtonElement>('חזרה לתפריט המשחקים')}>
+        <GameWorldMessage title="אין רצפים זמינים כרגע">
+          <Button onClick={onBack}>חזרה</Button>
+        </GameWorldMessage>
+      </GameWorld>
+    );
+  }
 
   return (
-    <section className="panel game-panel game-panel--patterns">
-      <div className="panel__header">
-        <Button variant="ghost" onClick={onBack} {...getSpeakProps<HTMLButtonElement>('חזרה לתפריט המשחקים')}>חזרה לתפריט המשחקים</Button>
-        <div className="score-pill">ניקוד: {score}</div>
-      </div>
-
+    <GameWorld gameId="patterns" scoreLabel="ניקוד" scoreValue={score} status={`${currentIndex + 1}/${total}`} onBack={onBack} backSpeakProps={getSpeakProps<HTMLButtonElement>('חזרה לתפריט המשחקים')}>
       <ProgressBar current={currentIndex + 1} total={total} />
 
-      <div className="question-card question-card--animated">
-        <span className="question-card__tag">🌈 משחק רצפים</span>
+      <div className="game-play-card game-play-card--patterns">
+        <span className="question-card__tag">משחק רצפים</span>
         <h2>{currentPuzzle.prompt}</h2>
         <p>הסתכלו על הסדר וחפשו מה חוזר.</p>
 
-        <div className="pattern-strip" aria-label="רצף להשלמה">
+        <div className="pattern-strip game-pattern-track" aria-label="רצף להשלמה">
           {currentPuzzle.sequence.map((item, index) => (
-            <span className={`pattern-strip__item${item === '?' ? ' pattern-strip__item--missing' : ''}`} key={`${item}-${index}`}>
+            <span className={`pattern-strip__item game-token ${item === '?' ? 'pattern-strip__item--missing game-token--missing' : ''}`} key={`${item}-${index}`}>
               {item}
             </span>
           ))}
         </div>
 
-        <div className="options-grid">
+        <div className="options-grid game-options-grid">
           {currentPuzzle.options.map((option) => {
             const isCorrectOption = option.id === currentPuzzle.correctOptionId;
             const isSelected = option.id === selectedOptionId;
-            const optionClassName = ['option-card', isAnswered && isCorrectOption ? 'option-card--correct' : '', isAnswered && isSelected && !isCorrectOption ? 'option-card--wrong' : ''].join(' ').trim();
+            const optionClassName = ['option-card', 'game-answer-token', isAnswered && isCorrectOption ? 'option-card--correct' : '', isAnswered && isSelected && !isCorrectOption ? 'option-card--wrong' : ''].join(' ').trim();
             return (
-              <button key={option.id} type="button" className={optionClassName} onClick={() => submitAnswer(option.id)} disabled={isAnswered} {...getSpeakProps<HTMLButtonElement>(`${option.label}`)}>
+              <button
+                key={option.id}
+                type="button"
+                className={optionClassName}
+                data-testid="pattern-option"
+                data-correct={isCorrectOption ? 'true' : 'false'}
+                onClick={() => submitAnswer(option.id)}
+                disabled={isAnswered}
+                {...getSpeakProps<HTMLButtonElement>(option.label)}
+              >
                 {option.emoji ? <span>{option.emoji}</span> : null}
                 <span>{option.label}</span>
               </button>
@@ -96,12 +145,12 @@ export function PatternGame({ age, difficulty, voiceEnabled, onBack, onFinish }:
           })}
         </div>
 
-        {feedback ? <div className={`feedback ${isAnswered ? 'feedback--visible' : ''}`}>{feedback}</div> : null}
+        <AnimatedFeedback message={feedback} tone={isAnswered && selectedOptionId === currentPuzzle.correctOptionId ? 'correct' : 'wrong'} />
 
         <div className="question-card__actions">
           <Button onClick={nextPuzzle} disabled={!isAnswered} {...getSpeakProps<HTMLButtonElement>('לרצף הבא')}>לרצף הבא</Button>
         </div>
       </div>
-    </section>
+    </GameWorld>
   );
 }

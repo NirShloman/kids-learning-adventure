@@ -6,11 +6,12 @@ interface AppShellProps {
   title: string;
   subtitle: string;
   rightSlot?: ReactNode;
+  compact?: boolean;
 }
 
-export function AppShell({ title, subtitle, rightSlot, children }: PropsWithChildren<AppShellProps>) {
+export function AppShell({ title, subtitle, rightSlot, compact = false, children }: PropsWithChildren<AppShellProps>) {
   return (
-    <div className="app-shell">
+    <div className={`app-shell ${compact ? 'app-shell--compact' : ''}`}>
       <header className="hero-card">
         <div className="hero-card__content">
           <div className="hero-card__brand-row">

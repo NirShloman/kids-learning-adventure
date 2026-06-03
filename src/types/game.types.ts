@@ -10,6 +10,8 @@ export interface GameDefinition {
   description: string;
   accent: GameAccent;
   recommendedAges: Age[];
+  imageAssetId?: import('../assets/assetManifest').ImageAssetId;
+  backgroundAssetId?: import('../assets/assetManifest').ImageAssetId;
 }
 
 export interface GameResult {
@@ -26,6 +28,7 @@ export interface LearnerSettings {
 
 export interface PlayerProfile {
   id: string;
+  ownerId?: string;
   name: string;
   age: Age;
   difficulty: Difficulty;
@@ -34,6 +37,7 @@ export interface PlayerProfile {
 
 export interface GameSession {
   id: string;
+  ownerId?: string;
   playerId: string;
   gameId: GameId;
   gameTitle: string;

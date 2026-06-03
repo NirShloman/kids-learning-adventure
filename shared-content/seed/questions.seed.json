@@ -1,0 +1,6017 @@
+{
+  "versionId": "content-v1-trial-2026-06",
+  "generatedAt": "2026-06-03T15:17:02.958Z",
+  "minimumTarget": 120,
+  "questions": [
+    {
+      "id": "letters-easy-001",
+      "prompt": "באיזו אות מתחילה המילה אבא?",
+      "options": [
+        {
+          "id": "א",
+          "text": "א"
+        },
+        {
+          "id": "ב",
+          "text": "ב"
+        },
+        {
+          "id": "מ",
+          "text": "מ"
+        }
+      ],
+      "correctOptionId": "א",
+      "worldId": "letters",
+      "skillId": "letters",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "👨"
+      },
+      "language": "he",
+      "tags": [
+        "letters",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice Hebrew letter recognition and early phonological awareness.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "באיזו אות מתחילה המילה אבא?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "letters-easy-002",
+      "prompt": "באיזו אות מתחילה המילה בית?",
+      "options": [
+        {
+          "id": "ב",
+          "text": "ב"
+        },
+        {
+          "id": "כ",
+          "text": "כ"
+        },
+        {
+          "id": "ה",
+          "text": "ה"
+        }
+      ],
+      "correctOptionId": "ב",
+      "worldId": "letters",
+      "skillId": "letters",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🏠"
+      },
+      "language": "he",
+      "tags": [
+        "letters",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice Hebrew letter recognition and early phonological awareness.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "באיזו אות מתחילה המילה בית?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "letters-easy-003",
+      "prompt": "באיזו אות מתחילה המילה דג?",
+      "options": [
+        {
+          "id": "ד",
+          "text": "ד"
+        },
+        {
+          "id": "ג",
+          "text": "ג"
+        },
+        {
+          "id": "ר",
+          "text": "ר"
+        }
+      ],
+      "correctOptionId": "ד",
+      "worldId": "letters",
+      "skillId": "letters",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🐟"
+      },
+      "language": "he",
+      "tags": [
+        "letters",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice Hebrew letter recognition and early phonological awareness.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "באיזו אות מתחילה המילה דג?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "letters-easy-004",
+      "prompt": "באיזו אות מתחילה המילה כלב?",
+      "options": [
+        {
+          "id": "כ",
+          "text": "כ"
+        },
+        {
+          "id": "ק",
+          "text": "ק"
+        },
+        {
+          "id": "ל",
+          "text": "ל"
+        }
+      ],
+      "correctOptionId": "כ",
+      "worldId": "letters",
+      "skillId": "letters",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🐶"
+      },
+      "language": "he",
+      "tags": [
+        "letters",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice Hebrew letter recognition and early phonological awareness.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "באיזו אות מתחילה המילה כלב?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "letters-easy-005",
+      "prompt": "באיזו אות מתחילה המילה תות?",
+      "options": [
+        {
+          "id": "ת",
+          "text": "ת"
+        },
+        {
+          "id": "ט",
+          "text": "ט"
+        },
+        {
+          "id": "ש",
+          "text": "ש"
+        }
+      ],
+      "correctOptionId": "ת",
+      "worldId": "letters",
+      "skillId": "letters",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🍓"
+      },
+      "language": "he",
+      "tags": [
+        "letters",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice Hebrew letter recognition and early phonological awareness.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "באיזו אות מתחילה המילה תות?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "letters-easy-006",
+      "prompt": "באיזו אות מתחילה המילה שמש?",
+      "options": [
+        {
+          "id": "ש",
+          "text": "ש"
+        },
+        {
+          "id": "ס",
+          "text": "ס"
+        },
+        {
+          "id": "צ",
+          "text": "צ"
+        }
+      ],
+      "correctOptionId": "ש",
+      "worldId": "letters",
+      "skillId": "letters",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "☀️"
+      },
+      "language": "he",
+      "tags": [
+        "letters",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice Hebrew letter recognition and early phonological awareness.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "באיזו אות מתחילה המילה שמש?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "letters-easy-007",
+      "prompt": "באיזו אות מתחילה המילה ספר?",
+      "options": [
+        {
+          "id": "ס",
+          "text": "ס"
+        },
+        {
+          "id": "ש",
+          "text": "ש"
+        },
+        {
+          "id": "פ",
+          "text": "פ"
+        }
+      ],
+      "correctOptionId": "ס",
+      "worldId": "letters",
+      "skillId": "letters",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "📘"
+      },
+      "language": "he",
+      "tags": [
+        "letters",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice Hebrew letter recognition and early phonological awareness.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "באיזו אות מתחילה המילה ספר?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "letters-easy-008",
+      "prompt": "באיזו אות מתחילה המילה פרח?",
+      "options": [
+        {
+          "id": "פ",
+          "text": "פ"
+        },
+        {
+          "id": "ב",
+          "text": "ב"
+        },
+        {
+          "id": "ר",
+          "text": "ר"
+        }
+      ],
+      "correctOptionId": "פ",
+      "worldId": "letters",
+      "skillId": "letters",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🌸"
+      },
+      "language": "he",
+      "tags": [
+        "letters",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice Hebrew letter recognition and early phonological awareness.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "באיזו אות מתחילה המילה פרח?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "letters-easy-009",
+      "prompt": "באיזו אות מתחילה המילה גזר?",
+      "options": [
+        {
+          "id": "ג",
+          "text": "ג"
+        },
+        {
+          "id": "ד",
+          "text": "ד"
+        },
+        {
+          "id": "ז",
+          "text": "ז"
+        }
+      ],
+      "correctOptionId": "ג",
+      "worldId": "letters",
+      "skillId": "letters",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🥕"
+      },
+      "language": "he",
+      "tags": [
+        "letters",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice Hebrew letter recognition and early phonological awareness.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "באיזו אות מתחילה המילה גזר?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "letters-easy-010",
+      "prompt": "באיזו אות מתחילה המילה נעל?",
+      "options": [
+        {
+          "id": "נ",
+          "text": "נ"
+        },
+        {
+          "id": "מ",
+          "text": "מ"
+        },
+        {
+          "id": "ע",
+          "text": "ע"
+        }
+      ],
+      "correctOptionId": "נ",
+      "worldId": "letters",
+      "skillId": "letters",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "👟"
+      },
+      "language": "he",
+      "tags": [
+        "letters",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice Hebrew letter recognition and early phonological awareness.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "באיזו אות מתחילה המילה נעל?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "numbers-easy-001",
+      "prompt": "כמה תפוחים יש כאן?",
+      "options": [
+        {
+          "id": "1",
+          "text": "1"
+        },
+        {
+          "id": "0",
+          "text": "0"
+        },
+        {
+          "id": "2",
+          "text": "2"
+        }
+      ],
+      "correctOptionId": "1",
+      "worldId": "numbers",
+      "skillId": "numbers",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🍎"
+      },
+      "language": "he",
+      "tags": [
+        "numbers",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice number recognition, counting, and early quantity reasoning.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "כמה תפוחים יש כאן?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "numbers-easy-002",
+      "prompt": "כמה כדורים יש כאן?",
+      "options": [
+        {
+          "id": "2",
+          "text": "2"
+        },
+        {
+          "id": "1",
+          "text": "1"
+        },
+        {
+          "id": "3",
+          "text": "3"
+        }
+      ],
+      "correctOptionId": "2",
+      "worldId": "numbers",
+      "skillId": "numbers",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "⚽ ⚽"
+      },
+      "language": "he",
+      "tags": [
+        "numbers",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice number recognition, counting, and early quantity reasoning.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "כמה כדורים יש כאן?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "numbers-easy-003",
+      "prompt": "כמה כוכבים יש כאן?",
+      "options": [
+        {
+          "id": "3",
+          "text": "3"
+        },
+        {
+          "id": "2",
+          "text": "2"
+        },
+        {
+          "id": "4",
+          "text": "4"
+        }
+      ],
+      "correctOptionId": "3",
+      "worldId": "numbers",
+      "skillId": "numbers",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "⭐ ⭐ ⭐"
+      },
+      "language": "he",
+      "tags": [
+        "numbers",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice number recognition, counting, and early quantity reasoning.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "כמה כוכבים יש כאן?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "numbers-easy-004",
+      "prompt": "כמה בננות יש כאן?",
+      "options": [
+        {
+          "id": "4",
+          "text": "4"
+        },
+        {
+          "id": "3",
+          "text": "3"
+        },
+        {
+          "id": "5",
+          "text": "5"
+        }
+      ],
+      "correctOptionId": "4",
+      "worldId": "numbers",
+      "skillId": "numbers",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🍌 🍌 🍌 🍌"
+      },
+      "language": "he",
+      "tags": [
+        "numbers",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice number recognition, counting, and early quantity reasoning.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "כמה בננות יש כאן?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "numbers-easy-005",
+      "prompt": "כמה פרחים יש כאן?",
+      "options": [
+        {
+          "id": "5",
+          "text": "5"
+        },
+        {
+          "id": "4",
+          "text": "4"
+        },
+        {
+          "id": "6",
+          "text": "6"
+        }
+      ],
+      "correctOptionId": "5",
+      "worldId": "numbers",
+      "skillId": "numbers",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🌸 🌸 🌸 🌸 🌸"
+      },
+      "language": "he",
+      "tags": [
+        "numbers",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice number recognition, counting, and early quantity reasoning.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "כמה פרחים יש כאן?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "numbers-easy-006",
+      "prompt": "כמה עפרונות יש כאן?",
+      "options": [
+        {
+          "id": "6",
+          "text": "6"
+        },
+        {
+          "id": "5",
+          "text": "5"
+        },
+        {
+          "id": "7",
+          "text": "7"
+        }
+      ],
+      "correctOptionId": "6",
+      "worldId": "numbers",
+      "skillId": "numbers",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "✏️ ✏️ ✏️ ✏️ ✏️ ✏️"
+      },
+      "language": "he",
+      "tags": [
+        "numbers",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice number recognition, counting, and early quantity reasoning.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "כמה עפרונות יש כאן?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "numbers-easy-007",
+      "prompt": "כמה בלונים יש כאן?",
+      "options": [
+        {
+          "id": "7",
+          "text": "7"
+        },
+        {
+          "id": "6",
+          "text": "6"
+        },
+        {
+          "id": "8",
+          "text": "8"
+        }
+      ],
+      "correctOptionId": "7",
+      "worldId": "numbers",
+      "skillId": "numbers",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🎈 🎈 🎈 🎈 🎈 🎈 🎈"
+      },
+      "language": "he",
+      "tags": [
+        "numbers",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice number recognition, counting, and early quantity reasoning.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "כמה בלונים יש כאן?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "numbers-easy-008",
+      "prompt": "כמה ספרים יש כאן?",
+      "options": [
+        {
+          "id": "8",
+          "text": "8"
+        },
+        {
+          "id": "7",
+          "text": "7"
+        },
+        {
+          "id": "9",
+          "text": "9"
+        }
+      ],
+      "correctOptionId": "8",
+      "worldId": "numbers",
+      "skillId": "counting",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "📘 📘 📘 📘 📘 📘 📘 📘"
+      },
+      "language": "he",
+      "tags": [
+        "numbers",
+        "counting",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice number recognition, counting, and early quantity reasoning.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "כמה ספרים יש כאן?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "numbers-easy-009",
+      "prompt": "כמה קוביות יש כאן?",
+      "options": [
+        {
+          "id": "9",
+          "text": "9"
+        },
+        {
+          "id": "8",
+          "text": "8"
+        },
+        {
+          "id": "10",
+          "text": "10"
+        }
+      ],
+      "correctOptionId": "9",
+      "worldId": "numbers",
+      "skillId": "numbers",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🎲 🎲 🎲 🎲 🎲 🎲 🎲 🎲 🎲"
+      },
+      "language": "he",
+      "tags": [
+        "numbers",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice number recognition, counting, and early quantity reasoning.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "כמה קוביות יש כאן?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "numbers-easy-010",
+      "prompt": "כמה לבבות יש כאן?",
+      "options": [
+        {
+          "id": "10",
+          "text": "10"
+        },
+        {
+          "id": "9",
+          "text": "9"
+        },
+        {
+          "id": "11",
+          "text": "11"
+        }
+      ],
+      "correctOptionId": "10",
+      "worldId": "numbers",
+      "skillId": "numbers",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️"
+      },
+      "language": "he",
+      "tags": [
+        "numbers",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice number recognition, counting, and early quantity reasoning.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "כמה לבבות יש כאן?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "shapes-easy-001",
+      "prompt": "איזו צורה זו?",
+      "options": [
+        {
+          "id": "circle",
+          "text": "עיגול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        },
+        {
+          "id": "square",
+          "text": "ריבוע",
+          "media": {
+            "illustrationKey": "🟦"
+          }
+        },
+        {
+          "id": "triangle",
+          "text": "משולש",
+          "media": {
+            "illustrationKey": "🔺"
+          }
+        }
+      ],
+      "correctOptionId": "circle",
+      "worldId": "shapes",
+      "skillId": "shapes",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🔵"
+      },
+      "language": "he",
+      "tags": [
+        "shapes",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice shape recognition and visual classification.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזו צורה זו?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "shapes-easy-002",
+      "prompt": "בחרו עיגול",
+      "options": [
+        {
+          "id": "circle",
+          "text": "עיגול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        },
+        {
+          "id": "square",
+          "text": "ריבוע",
+          "media": {
+            "illustrationKey": "🟦"
+          }
+        },
+        {
+          "id": "triangle",
+          "text": "משולש",
+          "media": {
+            "illustrationKey": "🔺"
+          }
+        }
+      ],
+      "correctOptionId": "circle",
+      "worldId": "shapes",
+      "skillId": "shapes",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "language": "he",
+      "tags": [
+        "shapes",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice shape recognition and visual classification.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "בחרו עיגול",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "shapes-easy-003",
+      "prompt": "איזו צורה זו?",
+      "options": [
+        {
+          "id": "square",
+          "text": "ריבוע",
+          "media": {
+            "illustrationKey": "🟦"
+          }
+        },
+        {
+          "id": "circle",
+          "text": "עיגול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        },
+        {
+          "id": "triangle",
+          "text": "משולש",
+          "media": {
+            "illustrationKey": "🔺"
+          }
+        }
+      ],
+      "correctOptionId": "square",
+      "worldId": "shapes",
+      "skillId": "shapes",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🟦"
+      },
+      "language": "he",
+      "tags": [
+        "shapes",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice shape recognition and visual classification.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזו צורה זו?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "shapes-easy-004",
+      "prompt": "בחרו ריבוע",
+      "options": [
+        {
+          "id": "square",
+          "text": "ריבוע",
+          "media": {
+            "illustrationKey": "🟦"
+          }
+        },
+        {
+          "id": "circle",
+          "text": "עיגול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        },
+        {
+          "id": "triangle",
+          "text": "משולש",
+          "media": {
+            "illustrationKey": "🔺"
+          }
+        }
+      ],
+      "correctOptionId": "square",
+      "worldId": "shapes",
+      "skillId": "shapes",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "language": "he",
+      "tags": [
+        "shapes",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice shape recognition and visual classification.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "בחרו ריבוע",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "shapes-easy-005",
+      "prompt": "איזו צורה זו?",
+      "options": [
+        {
+          "id": "triangle",
+          "text": "משולש",
+          "media": {
+            "illustrationKey": "🔺"
+          }
+        },
+        {
+          "id": "square",
+          "text": "ריבוע",
+          "media": {
+            "illustrationKey": "🟦"
+          }
+        },
+        {
+          "id": "circle",
+          "text": "עיגול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        }
+      ],
+      "correctOptionId": "triangle",
+      "worldId": "shapes",
+      "skillId": "shapes",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🔺"
+      },
+      "language": "he",
+      "tags": [
+        "shapes",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice shape recognition and visual classification.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזו צורה זו?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "shapes-easy-006",
+      "prompt": "בחרו משולש",
+      "options": [
+        {
+          "id": "triangle",
+          "text": "משולש",
+          "media": {
+            "illustrationKey": "🔺"
+          }
+        },
+        {
+          "id": "square",
+          "text": "ריבוע",
+          "media": {
+            "illustrationKey": "🟦"
+          }
+        },
+        {
+          "id": "circle",
+          "text": "עיגול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        }
+      ],
+      "correctOptionId": "triangle",
+      "worldId": "shapes",
+      "skillId": "shapes",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "language": "he",
+      "tags": [
+        "shapes",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice shape recognition and visual classification.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "בחרו משולש",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "shapes-easy-007",
+      "prompt": "איזו צורה זו?",
+      "options": [
+        {
+          "id": "rectangle",
+          "text": "מלבן",
+          "media": {
+            "illustrationKey": "▭"
+          }
+        },
+        {
+          "id": "circle",
+          "text": "עיגול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        },
+        {
+          "id": "triangle",
+          "text": "משולש",
+          "media": {
+            "illustrationKey": "🔺"
+          }
+        }
+      ],
+      "correctOptionId": "rectangle",
+      "worldId": "shapes",
+      "skillId": "shapes",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "▭"
+      },
+      "language": "he",
+      "tags": [
+        "shapes",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice shape recognition and visual classification.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזו צורה זו?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "shapes-easy-008",
+      "prompt": "בחרו מלבן",
+      "options": [
+        {
+          "id": "rectangle",
+          "text": "מלבן",
+          "media": {
+            "illustrationKey": "▭"
+          }
+        },
+        {
+          "id": "circle",
+          "text": "עיגול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        },
+        {
+          "id": "triangle",
+          "text": "משולש",
+          "media": {
+            "illustrationKey": "🔺"
+          }
+        }
+      ],
+      "correctOptionId": "rectangle",
+      "worldId": "shapes",
+      "skillId": "shapes",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "language": "he",
+      "tags": [
+        "shapes",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice shape recognition and visual classification.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "בחרו מלבן",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "shapes-easy-009",
+      "prompt": "איזו צורה זו?",
+      "options": [
+        {
+          "id": "star",
+          "text": "כוכב",
+          "media": {
+            "illustrationKey": "⭐"
+          }
+        },
+        {
+          "id": "circle",
+          "text": "עיגול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        },
+        {
+          "id": "square",
+          "text": "ריבוע",
+          "media": {
+            "illustrationKey": "🟦"
+          }
+        }
+      ],
+      "correctOptionId": "star",
+      "worldId": "shapes",
+      "skillId": "shapes",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "⭐"
+      },
+      "language": "he",
+      "tags": [
+        "shapes",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice shape recognition and visual classification.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזו צורה זו?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "shapes-easy-010",
+      "prompt": "בחרו כוכב",
+      "options": [
+        {
+          "id": "star",
+          "text": "כוכב",
+          "media": {
+            "illustrationKey": "⭐"
+          }
+        },
+        {
+          "id": "circle",
+          "text": "עיגול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        },
+        {
+          "id": "square",
+          "text": "ריבוע",
+          "media": {
+            "illustrationKey": "🟦"
+          }
+        }
+      ],
+      "correctOptionId": "star",
+      "worldId": "shapes",
+      "skillId": "shapes",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "language": "he",
+      "tags": [
+        "shapes",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice shape recognition and visual classification.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "בחרו כוכב",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "colors-easy-001",
+      "prompt": "בחרו את הצבע אדום",
+      "options": [
+        {
+          "id": "red",
+          "text": "אדום",
+          "media": {
+            "illustrationKey": "🔴"
+          }
+        },
+        {
+          "id": "green",
+          "text": "ירוק",
+          "media": {
+            "illustrationKey": "🟢"
+          }
+        },
+        {
+          "id": "blue",
+          "text": "כחול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        }
+      ],
+      "correctOptionId": "red",
+      "worldId": "colors",
+      "skillId": "colors",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🔴"
+      },
+      "language": "he",
+      "tags": [
+        "colors",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice color recognition and object-color matching.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "בחרו את הצבע אדום",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "colors-easy-002",
+      "prompt": "בחרו את הצבע כחול",
+      "options": [
+        {
+          "id": "blue",
+          "text": "כחול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        },
+        {
+          "id": "yellow",
+          "text": "צהוב",
+          "media": {
+            "illustrationKey": "🟡"
+          }
+        },
+        {
+          "id": "red",
+          "text": "אדום",
+          "media": {
+            "illustrationKey": "🔴"
+          }
+        }
+      ],
+      "correctOptionId": "blue",
+      "worldId": "colors",
+      "skillId": "colors",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🔵"
+      },
+      "language": "he",
+      "tags": [
+        "colors",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice color recognition and object-color matching.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "בחרו את הצבע כחול",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "colors-easy-003",
+      "prompt": "בחרו את הצבע צהוב",
+      "options": [
+        {
+          "id": "yellow",
+          "text": "צהוב",
+          "media": {
+            "illustrationKey": "🟡"
+          }
+        },
+        {
+          "id": "green",
+          "text": "ירוק",
+          "media": {
+            "illustrationKey": "🟢"
+          }
+        },
+        {
+          "id": "purple",
+          "text": "סגול",
+          "media": {
+            "illustrationKey": "🟣"
+          }
+        }
+      ],
+      "correctOptionId": "yellow",
+      "worldId": "colors",
+      "skillId": "colors",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🟡"
+      },
+      "language": "he",
+      "tags": [
+        "colors",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice color recognition and object-color matching.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "בחרו את הצבע צהוב",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "colors-easy-004",
+      "prompt": "בחרו את הצבע ירוק",
+      "options": [
+        {
+          "id": "green",
+          "text": "ירוק",
+          "media": {
+            "illustrationKey": "🟢"
+          }
+        },
+        {
+          "id": "red",
+          "text": "אדום",
+          "media": {
+            "illustrationKey": "🔴"
+          }
+        },
+        {
+          "id": "orange",
+          "text": "כתום",
+          "media": {
+            "illustrationKey": "🟠"
+          }
+        }
+      ],
+      "correctOptionId": "green",
+      "worldId": "colors",
+      "skillId": "colors",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🟢"
+      },
+      "language": "he",
+      "tags": [
+        "colors",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice color recognition and object-color matching.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "בחרו את הצבע ירוק",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "colors-easy-005",
+      "prompt": "בחרו את הצבע כתום",
+      "options": [
+        {
+          "id": "orange",
+          "text": "כתום",
+          "media": {
+            "illustrationKey": "🟠"
+          }
+        },
+        {
+          "id": "blue",
+          "text": "כחול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        },
+        {
+          "id": "white",
+          "text": "לבן",
+          "media": {
+            "illustrationKey": "⚪"
+          }
+        }
+      ],
+      "correctOptionId": "orange",
+      "worldId": "colors",
+      "skillId": "colors",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🟠"
+      },
+      "language": "he",
+      "tags": [
+        "colors",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice color recognition and object-color matching.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "בחרו את הצבע כתום",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "colors-easy-006",
+      "prompt": "בחרו את הצבע סגול",
+      "options": [
+        {
+          "id": "purple",
+          "text": "סגול",
+          "media": {
+            "illustrationKey": "🟣"
+          }
+        },
+        {
+          "id": "yellow",
+          "text": "צהוב",
+          "media": {
+            "illustrationKey": "🟡"
+          }
+        },
+        {
+          "id": "green",
+          "text": "ירוק",
+          "media": {
+            "illustrationKey": "🟢"
+          }
+        }
+      ],
+      "correctOptionId": "purple",
+      "worldId": "colors",
+      "skillId": "colors",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🟣"
+      },
+      "language": "he",
+      "tags": [
+        "colors",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice color recognition and object-color matching.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "בחרו את הצבע סגול",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "colors-easy-007",
+      "prompt": "בחרו את הצבע ורוד",
+      "options": [
+        {
+          "id": "pink",
+          "text": "ורוד",
+          "media": {
+            "illustrationKey": "🩷"
+          }
+        },
+        {
+          "id": "brown",
+          "text": "חום",
+          "media": {
+            "illustrationKey": "🟤"
+          }
+        },
+        {
+          "id": "gray",
+          "text": "אפור",
+          "media": {
+            "illustrationKey": "⬜"
+          }
+        }
+      ],
+      "correctOptionId": "pink",
+      "worldId": "colors",
+      "skillId": "colors",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🩷"
+      },
+      "language": "he",
+      "tags": [
+        "colors",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice color recognition and object-color matching.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "בחרו את הצבע ורוד",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "colors-easy-008",
+      "prompt": "בחרו את הצבע לבן",
+      "options": [
+        {
+          "id": "white",
+          "text": "לבן",
+          "media": {
+            "illustrationKey": "⚪"
+          }
+        },
+        {
+          "id": "black",
+          "text": "שחור",
+          "media": {
+            "illustrationKey": "⚫"
+          }
+        },
+        {
+          "id": "orange",
+          "text": "כתום",
+          "media": {
+            "illustrationKey": "🟠"
+          }
+        }
+      ],
+      "correctOptionId": "white",
+      "worldId": "colors",
+      "skillId": "colors",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "⚪"
+      },
+      "language": "he",
+      "tags": [
+        "colors",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice color recognition and object-color matching.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "בחרו את הצבע לבן",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "colors-easy-009",
+      "prompt": "בחרו את הצבע שחור",
+      "options": [
+        {
+          "id": "black",
+          "text": "שחור",
+          "media": {
+            "illustrationKey": "⚫"
+          }
+        },
+        {
+          "id": "white",
+          "text": "לבן",
+          "media": {
+            "illustrationKey": "⚪"
+          }
+        },
+        {
+          "id": "yellow",
+          "text": "צהוב",
+          "media": {
+            "illustrationKey": "🟡"
+          }
+        }
+      ],
+      "correctOptionId": "black",
+      "worldId": "colors",
+      "skillId": "colors",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "⚫"
+      },
+      "language": "he",
+      "tags": [
+        "colors",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice color recognition and object-color matching.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "בחרו את הצבע שחור",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "colors-easy-010",
+      "prompt": "בחרו את הצבע חום",
+      "options": [
+        {
+          "id": "brown",
+          "text": "חום",
+          "media": {
+            "illustrationKey": "🟤"
+          }
+        },
+        {
+          "id": "blue",
+          "text": "כחול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        },
+        {
+          "id": "pink",
+          "text": "ורוד",
+          "media": {
+            "illustrationKey": "🩷"
+          }
+        }
+      ],
+      "correctOptionId": "brown",
+      "worldId": "colors",
+      "skillId": "colors",
+      "ageRange": "3-4",
+      "difficulty": 1,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🟤"
+      },
+      "language": "he",
+      "tags": [
+        "colors",
+        "easy",
+        "3-4",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 18,
+      "pedagogicalGoal": "Practice color recognition and object-color matching.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "בחרו את הצבע חום",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "letters-medium-035",
+      "prompt": "איזו מילה מתחילה באות א?",
+      "options": [
+        {
+          "id": "אבא",
+          "text": "אבא",
+          "media": {
+            "illustrationKey": "👨"
+          }
+        },
+        {
+          "id": "בית",
+          "text": "בית",
+          "media": {
+            "illustrationKey": "🏠"
+          }
+        },
+        {
+          "id": "דג",
+          "text": "דג",
+          "media": {
+            "illustrationKey": "🐟"
+          }
+        }
+      ],
+      "correctOptionId": "אבא",
+      "worldId": "letters",
+      "skillId": "letters",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "image-choice",
+      "language": "he",
+      "tags": [
+        "letters",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice Hebrew letter recognition and early phonological awareness.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזו מילה מתחילה באות א?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "letters-medium-036",
+      "prompt": "איזו מילה מתחילה באות ב?",
+      "options": [
+        {
+          "id": "בית",
+          "text": "בית",
+          "media": {
+            "illustrationKey": "🏠"
+          }
+        },
+        {
+          "id": "דג",
+          "text": "דג",
+          "media": {
+            "illustrationKey": "🐟"
+          }
+        },
+        {
+          "id": "כלב",
+          "text": "כלב",
+          "media": {
+            "illustrationKey": "🐶"
+          }
+        }
+      ],
+      "correctOptionId": "בית",
+      "worldId": "letters",
+      "skillId": "letters",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "image-choice",
+      "language": "he",
+      "tags": [
+        "letters",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice Hebrew letter recognition and early phonological awareness.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזו מילה מתחילה באות ב?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "letters-medium-037",
+      "prompt": "איזו מילה מתחילה באות ד?",
+      "options": [
+        {
+          "id": "דג",
+          "text": "דג",
+          "media": {
+            "illustrationKey": "🐟"
+          }
+        },
+        {
+          "id": "כלב",
+          "text": "כלב",
+          "media": {
+            "illustrationKey": "🐶"
+          }
+        },
+        {
+          "id": "תות",
+          "text": "תות",
+          "media": {
+            "illustrationKey": "🍓"
+          }
+        }
+      ],
+      "correctOptionId": "דג",
+      "worldId": "letters",
+      "skillId": "letters",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "image-choice",
+      "language": "he",
+      "tags": [
+        "letters",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice Hebrew letter recognition and early phonological awareness.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזו מילה מתחילה באות ד?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "letters-medium-038",
+      "prompt": "איזו מילה מתחילה באות כ?",
+      "options": [
+        {
+          "id": "כלב",
+          "text": "כלב",
+          "media": {
+            "illustrationKey": "🐶"
+          }
+        },
+        {
+          "id": "תות",
+          "text": "תות",
+          "media": {
+            "illustrationKey": "🍓"
+          }
+        },
+        {
+          "id": "שמש",
+          "text": "שמש",
+          "media": {
+            "illustrationKey": "☀️"
+          }
+        }
+      ],
+      "correctOptionId": "כלב",
+      "worldId": "letters",
+      "skillId": "letters",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "image-choice",
+      "language": "he",
+      "tags": [
+        "letters",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice Hebrew letter recognition and early phonological awareness.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזו מילה מתחילה באות כ?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "letters-medium-039",
+      "prompt": "איזו מילה מתחילה באות ת?",
+      "options": [
+        {
+          "id": "תות",
+          "text": "תות",
+          "media": {
+            "illustrationKey": "🍓"
+          }
+        },
+        {
+          "id": "שמש",
+          "text": "שמש",
+          "media": {
+            "illustrationKey": "☀️"
+          }
+        },
+        {
+          "id": "ספר",
+          "text": "ספר",
+          "media": {
+            "illustrationKey": "📘"
+          }
+        }
+      ],
+      "correctOptionId": "תות",
+      "worldId": "letters",
+      "skillId": "letters",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "image-choice",
+      "language": "he",
+      "tags": [
+        "letters",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice Hebrew letter recognition and early phonological awareness.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזו מילה מתחילה באות ת?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "letters-medium-040",
+      "prompt": "איזו מילה מתחילה באות ש?",
+      "options": [
+        {
+          "id": "שמש",
+          "text": "שמש",
+          "media": {
+            "illustrationKey": "☀️"
+          }
+        },
+        {
+          "id": "אבא",
+          "text": "אבא",
+          "media": {
+            "illustrationKey": "👨"
+          }
+        },
+        {
+          "id": "בית",
+          "text": "בית",
+          "media": {
+            "illustrationKey": "🏠"
+          }
+        }
+      ],
+      "correctOptionId": "שמש",
+      "worldId": "letters",
+      "skillId": "letters",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "image-choice",
+      "language": "he",
+      "tags": [
+        "letters",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice Hebrew letter recognition and early phonological awareness.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזו מילה מתחילה באות ש?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "letters-medium-041",
+      "prompt": "איזו מילה מתחילה באות ס?",
+      "options": [
+        {
+          "id": "ספר",
+          "text": "ספר",
+          "media": {
+            "illustrationKey": "📘"
+          }
+        },
+        {
+          "id": "בית",
+          "text": "בית",
+          "media": {
+            "illustrationKey": "🏠"
+          }
+        },
+        {
+          "id": "דג",
+          "text": "דג",
+          "media": {
+            "illustrationKey": "🐟"
+          }
+        }
+      ],
+      "correctOptionId": "ספר",
+      "worldId": "letters",
+      "skillId": "letters",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "image-choice",
+      "language": "he",
+      "tags": [
+        "letters",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice Hebrew letter recognition and early phonological awareness.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזו מילה מתחילה באות ס?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "letters-medium-042",
+      "prompt": "איזו מילה מתחילה באות פ?",
+      "options": [
+        {
+          "id": "פרח",
+          "text": "פרח",
+          "media": {
+            "illustrationKey": "🌸"
+          }
+        },
+        {
+          "id": "דג",
+          "text": "דג",
+          "media": {
+            "illustrationKey": "🐟"
+          }
+        },
+        {
+          "id": "כלב",
+          "text": "כלב",
+          "media": {
+            "illustrationKey": "🐶"
+          }
+        }
+      ],
+      "correctOptionId": "פרח",
+      "worldId": "letters",
+      "skillId": "letters",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "image-choice",
+      "language": "he",
+      "tags": [
+        "letters",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice Hebrew letter recognition and early phonological awareness.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזו מילה מתחילה באות פ?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "letters-medium-043",
+      "prompt": "איזו מילה מתחילה באות ג?",
+      "options": [
+        {
+          "id": "גזר",
+          "text": "גזר",
+          "media": {
+            "illustrationKey": "🥕"
+          }
+        },
+        {
+          "id": "כלב",
+          "text": "כלב",
+          "media": {
+            "illustrationKey": "🐶"
+          }
+        },
+        {
+          "id": "תות",
+          "text": "תות",
+          "media": {
+            "illustrationKey": "🍓"
+          }
+        }
+      ],
+      "correctOptionId": "גזר",
+      "worldId": "letters",
+      "skillId": "letters",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "image-choice",
+      "language": "he",
+      "tags": [
+        "letters",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice Hebrew letter recognition and early phonological awareness.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזו מילה מתחילה באות ג?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "letters-medium-044",
+      "prompt": "איזו מילה מתחילה באות נ?",
+      "options": [
+        {
+          "id": "נעל",
+          "text": "נעל",
+          "media": {
+            "illustrationKey": "👟"
+          }
+        },
+        {
+          "id": "תות",
+          "text": "תות",
+          "media": {
+            "illustrationKey": "🍓"
+          }
+        },
+        {
+          "id": "שמש",
+          "text": "שמש",
+          "media": {
+            "illustrationKey": "☀️"
+          }
+        }
+      ],
+      "correctOptionId": "נעל",
+      "worldId": "letters",
+      "skillId": "letters",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "image-choice",
+      "language": "he",
+      "tags": [
+        "letters",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice Hebrew letter recognition and early phonological awareness.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזו מילה מתחילה באות נ?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "numbers-medium-027",
+      "prompt": "מה בא אחרי 1?",
+      "options": [
+        {
+          "id": "2",
+          "text": "2"
+        },
+        {
+          "id": "1",
+          "text": "1"
+        },
+        {
+          "id": "3",
+          "text": "3"
+        }
+      ],
+      "correctOptionId": "2",
+      "worldId": "numbers",
+      "skillId": "numbers",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "single-choice",
+      "language": "he",
+      "tags": [
+        "numbers",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice number recognition, counting, and early quantity reasoning.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "מה בא אחרי המספר אחת?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "numbers-medium-028",
+      "prompt": "מה בא אחרי 2?",
+      "options": [
+        {
+          "id": "3",
+          "text": "3"
+        },
+        {
+          "id": "2",
+          "text": "2"
+        },
+        {
+          "id": "4",
+          "text": "4"
+        }
+      ],
+      "correctOptionId": "3",
+      "worldId": "numbers",
+      "skillId": "numbers",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "single-choice",
+      "language": "he",
+      "tags": [
+        "numbers",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice number recognition, counting, and early quantity reasoning.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "מה בא אחרי המספר שתיים?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "numbers-medium-029",
+      "prompt": "מה בא אחרי 3?",
+      "options": [
+        {
+          "id": "4",
+          "text": "4"
+        },
+        {
+          "id": "3",
+          "text": "3"
+        },
+        {
+          "id": "5",
+          "text": "5"
+        }
+      ],
+      "correctOptionId": "4",
+      "worldId": "numbers",
+      "skillId": "numbers",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "single-choice",
+      "language": "he",
+      "tags": [
+        "numbers",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice number recognition, counting, and early quantity reasoning.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "מה בא אחרי המספר שלוש?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "numbers-medium-030",
+      "prompt": "מה בא אחרי 4?",
+      "options": [
+        {
+          "id": "5",
+          "text": "5"
+        },
+        {
+          "id": "4",
+          "text": "4"
+        },
+        {
+          "id": "6",
+          "text": "6"
+        }
+      ],
+      "correctOptionId": "5",
+      "worldId": "numbers",
+      "skillId": "numbers",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "single-choice",
+      "language": "he",
+      "tags": [
+        "numbers",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice number recognition, counting, and early quantity reasoning.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "מה בא אחרי המספר ארבע?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "numbers-medium-031",
+      "prompt": "מה בא אחרי 5?",
+      "options": [
+        {
+          "id": "6",
+          "text": "6"
+        },
+        {
+          "id": "5",
+          "text": "5"
+        },
+        {
+          "id": "7",
+          "text": "7"
+        }
+      ],
+      "correctOptionId": "6",
+      "worldId": "numbers",
+      "skillId": "numbers",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "single-choice",
+      "language": "he",
+      "tags": [
+        "numbers",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice number recognition, counting, and early quantity reasoning.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "מה בא אחרי המספר חמש?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "numbers-medium-032",
+      "prompt": "מה בא אחרי 6?",
+      "options": [
+        {
+          "id": "7",
+          "text": "7"
+        },
+        {
+          "id": "6",
+          "text": "6"
+        },
+        {
+          "id": "8",
+          "text": "8"
+        }
+      ],
+      "correctOptionId": "7",
+      "worldId": "numbers",
+      "skillId": "numbers",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "single-choice",
+      "language": "he",
+      "tags": [
+        "numbers",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice number recognition, counting, and early quantity reasoning.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "מה בא אחרי המספר שש?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "numbers-medium-033",
+      "prompt": "מה בא אחרי 7?",
+      "options": [
+        {
+          "id": "8",
+          "text": "8"
+        },
+        {
+          "id": "7",
+          "text": "7"
+        },
+        {
+          "id": "9",
+          "text": "9"
+        }
+      ],
+      "correctOptionId": "8",
+      "worldId": "numbers",
+      "skillId": "numbers",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "single-choice",
+      "language": "he",
+      "tags": [
+        "numbers",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice number recognition, counting, and early quantity reasoning.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "מה בא אחרי המספר שבע?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "numbers-medium-034",
+      "prompt": "מה בא אחרי 8?",
+      "options": [
+        {
+          "id": "9",
+          "text": "9"
+        },
+        {
+          "id": "8",
+          "text": "8"
+        },
+        {
+          "id": "10",
+          "text": "10"
+        }
+      ],
+      "correctOptionId": "9",
+      "worldId": "numbers",
+      "skillId": "numbers",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "single-choice",
+      "language": "he",
+      "tags": [
+        "numbers",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice number recognition, counting, and early quantity reasoning.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "מה בא אחרי המספר שמונה?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "numbers-medium-035",
+      "prompt": "מה בא אחרי 9?",
+      "options": [
+        {
+          "id": "10",
+          "text": "10"
+        },
+        {
+          "id": "9",
+          "text": "9"
+        },
+        {
+          "id": "11",
+          "text": "11"
+        }
+      ],
+      "correctOptionId": "10",
+      "worldId": "numbers",
+      "skillId": "numbers",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "single-choice",
+      "language": "he",
+      "tags": [
+        "numbers",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice number recognition, counting, and early quantity reasoning.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "מה בא אחרי המספר תשע?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "numbers-medium-036",
+      "prompt": "מה בא אחרי 10?",
+      "options": [
+        {
+          "id": "11",
+          "text": "11"
+        },
+        {
+          "id": "10",
+          "text": "10"
+        },
+        {
+          "id": "12",
+          "text": "12"
+        }
+      ],
+      "correctOptionId": "11",
+      "worldId": "numbers",
+      "skillId": "numbers",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "single-choice",
+      "language": "he",
+      "tags": [
+        "numbers",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice number recognition, counting, and early quantity reasoning.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "מה בא אחרי המספר עשר?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "shapes-medium-017",
+      "prompt": "איזו צורה דומה לכדור?",
+      "options": [
+        {
+          "id": "circle",
+          "text": "עיגול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        },
+        {
+          "id": "square",
+          "text": "ריבוע",
+          "media": {
+            "illustrationKey": "🟦"
+          }
+        },
+        {
+          "id": "triangle",
+          "text": "משולש",
+          "media": {
+            "illustrationKey": "🔺"
+          }
+        }
+      ],
+      "correctOptionId": "circle",
+      "worldId": "shapes",
+      "skillId": "shapes",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "⚽"
+      },
+      "language": "he",
+      "tags": [
+        "shapes",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice shape recognition and visual classification.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזו צורה דומה לכדור?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "shapes-medium-019",
+      "prompt": "איזו צורה דומה לחלון?",
+      "options": [
+        {
+          "id": "square",
+          "text": "ריבוע",
+          "media": {
+            "illustrationKey": "🟦"
+          }
+        },
+        {
+          "id": "circle",
+          "text": "עיגול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        },
+        {
+          "id": "triangle",
+          "text": "משולש",
+          "media": {
+            "illustrationKey": "🔺"
+          }
+        }
+      ],
+      "correctOptionId": "square",
+      "worldId": "shapes",
+      "skillId": "shapes",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🪟"
+      },
+      "language": "he",
+      "tags": [
+        "shapes",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice shape recognition and visual classification.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזו צורה דומה לחלון?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "shapes-medium-020",
+      "prompt": "איזו צורה דומה לדלת?",
+      "options": [
+        {
+          "id": "rectangle",
+          "text": "מלבן",
+          "media": {
+            "illustrationKey": "▭"
+          }
+        },
+        {
+          "id": "circle",
+          "text": "עיגול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        },
+        {
+          "id": "triangle",
+          "text": "משולש",
+          "media": {
+            "illustrationKey": "🔺"
+          }
+        }
+      ],
+      "correctOptionId": "rectangle",
+      "worldId": "shapes",
+      "skillId": "shapes",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🚪"
+      },
+      "language": "he",
+      "tags": [
+        "shapes",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice shape recognition and visual classification.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזו צורה דומה לדלת?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "shapes-medium-022",
+      "prompt": "איזו צורה דומה לפיצה משולשת?",
+      "options": [
+        {
+          "id": "triangle",
+          "text": "משולש",
+          "media": {
+            "illustrationKey": "🔺"
+          }
+        },
+        {
+          "id": "square",
+          "text": "ריבוע",
+          "media": {
+            "illustrationKey": "🟦"
+          }
+        },
+        {
+          "id": "circle",
+          "text": "עיגול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        }
+      ],
+      "correctOptionId": "triangle",
+      "worldId": "shapes",
+      "skillId": "shapes",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🍕"
+      },
+      "language": "he",
+      "tags": [
+        "shapes",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice shape recognition and visual classification.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזו צורה דומה לפיצה משולשת?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "shapes-medium-023",
+      "prompt": "איזו צורה דומה לגג של בית?",
+      "options": [
+        {
+          "id": "triangle",
+          "text": "משולש",
+          "media": {
+            "illustrationKey": "🔺"
+          }
+        },
+        {
+          "id": "square",
+          "text": "ריבוע",
+          "media": {
+            "illustrationKey": "🟦"
+          }
+        },
+        {
+          "id": "circle",
+          "text": "עיגול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        }
+      ],
+      "correctOptionId": "triangle",
+      "worldId": "shapes",
+      "skillId": "shapes",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🏠"
+      },
+      "language": "he",
+      "tags": [
+        "shapes",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice shape recognition and visual classification.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזו צורה דומה לגג של בית?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "shapes-medium-024",
+      "prompt": "איזו צורה דומה לשרביט קסמים?",
+      "options": [
+        {
+          "id": "star",
+          "text": "כוכב",
+          "media": {
+            "illustrationKey": "⭐"
+          }
+        },
+        {
+          "id": "circle",
+          "text": "עיגול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        },
+        {
+          "id": "square",
+          "text": "ריבוע",
+          "media": {
+            "illustrationKey": "🟦"
+          }
+        }
+      ],
+      "correctOptionId": "star",
+      "worldId": "shapes",
+      "skillId": "shapes",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🪄"
+      },
+      "language": "he",
+      "tags": [
+        "shapes",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice shape recognition and visual classification.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזו צורה דומה לשרביט קסמים?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "shapes-medium-025",
+      "prompt": "איזו צורה דומה לביצה?",
+      "options": [
+        {
+          "id": "oval",
+          "text": "אליפסה",
+          "media": {
+            "illustrationKey": "🥚"
+          }
+        },
+        {
+          "id": "rectangle",
+          "text": "מלבן",
+          "media": {
+            "illustrationKey": "▭"
+          }
+        },
+        {
+          "id": "triangle",
+          "text": "משולש",
+          "media": {
+            "illustrationKey": "🔺"
+          }
+        }
+      ],
+      "correctOptionId": "oval",
+      "worldId": "shapes",
+      "skillId": "shapes",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🥚"
+      },
+      "language": "he",
+      "tags": [
+        "shapes",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice shape recognition and visual classification.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזו צורה דומה לביצה?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "shapes-medium-026",
+      "prompt": "איזו צורה דומה לתמרור אזהרה?",
+      "options": [
+        {
+          "id": "triangle",
+          "text": "משולש",
+          "media": {
+            "illustrationKey": "🔺"
+          }
+        },
+        {
+          "id": "square",
+          "text": "ריבוע",
+          "media": {
+            "illustrationKey": "🟦"
+          }
+        },
+        {
+          "id": "circle",
+          "text": "עיגול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        }
+      ],
+      "correctOptionId": "triangle",
+      "worldId": "shapes",
+      "skillId": "shapes",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "⚠️"
+      },
+      "language": "he",
+      "tags": [
+        "shapes",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice shape recognition and visual classification.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזו צורה דומה לתמרור אזהרה?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "shapes-medium-027",
+      "prompt": "איזו צורה דומה לאריח רצפה?",
+      "options": [
+        {
+          "id": "square",
+          "text": "ריבוע",
+          "media": {
+            "illustrationKey": "🟦"
+          }
+        },
+        {
+          "id": "circle",
+          "text": "עיגול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        },
+        {
+          "id": "triangle",
+          "text": "משולש",
+          "media": {
+            "illustrationKey": "🔺"
+          }
+        }
+      ],
+      "correctOptionId": "square",
+      "worldId": "shapes",
+      "skillId": "shapes",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "⬜"
+      },
+      "language": "he",
+      "tags": [
+        "shapes",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice shape recognition and visual classification.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזו צורה דומה לאריח רצפה?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "shapes-medium-028",
+      "prompt": "איזו צורה דומה לקלף משחק?",
+      "options": [
+        {
+          "id": "rectangle",
+          "text": "מלבן",
+          "media": {
+            "illustrationKey": "▭"
+          }
+        },
+        {
+          "id": "circle",
+          "text": "עיגול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        },
+        {
+          "id": "triangle",
+          "text": "משולש",
+          "media": {
+            "illustrationKey": "🔺"
+          }
+        }
+      ],
+      "correctOptionId": "rectangle",
+      "worldId": "shapes",
+      "skillId": "shapes",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🃏"
+      },
+      "language": "he",
+      "tags": [
+        "shapes",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice shape recognition and visual classification.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזו צורה דומה לקלף משחק?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "colors-medium-030",
+      "prompt": "איזה צבע מתאים לבננה?",
+      "options": [
+        {
+          "id": "yellow",
+          "text": "צהוב",
+          "media": {
+            "illustrationKey": "🟡"
+          }
+        },
+        {
+          "id": "green",
+          "text": "ירוק",
+          "media": {
+            "illustrationKey": "🟢"
+          }
+        },
+        {
+          "id": "purple",
+          "text": "סגול",
+          "media": {
+            "illustrationKey": "🟣"
+          }
+        }
+      ],
+      "correctOptionId": "yellow",
+      "worldId": "colors",
+      "skillId": "colors",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🍌"
+      },
+      "language": "he",
+      "tags": [
+        "colors",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice color recognition and object-color matching.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזה צבע מתאים לבננה?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "colors-medium-031",
+      "prompt": "איזה צבע מתאים לתות?",
+      "options": [
+        {
+          "id": "red",
+          "text": "אדום",
+          "media": {
+            "illustrationKey": "🔴"
+          }
+        },
+        {
+          "id": "green",
+          "text": "ירוק",
+          "media": {
+            "illustrationKey": "🟢"
+          }
+        },
+        {
+          "id": "blue",
+          "text": "כחול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        }
+      ],
+      "correctOptionId": "red",
+      "worldId": "colors",
+      "skillId": "colors",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🍓"
+      },
+      "language": "he",
+      "tags": [
+        "colors",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice color recognition and object-color matching.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזה צבע מתאים לתות?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "colors-medium-032",
+      "prompt": "איזה צבע מתאים לדשא?",
+      "options": [
+        {
+          "id": "green",
+          "text": "ירוק",
+          "media": {
+            "illustrationKey": "🟢"
+          }
+        },
+        {
+          "id": "red",
+          "text": "אדום",
+          "media": {
+            "illustrationKey": "🔴"
+          }
+        },
+        {
+          "id": "orange",
+          "text": "כתום",
+          "media": {
+            "illustrationKey": "🟠"
+          }
+        }
+      ],
+      "correctOptionId": "green",
+      "worldId": "colors",
+      "skillId": "colors",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🌱"
+      },
+      "language": "he",
+      "tags": [
+        "colors",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice color recognition and object-color matching.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזה צבע מתאים לדשא?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "colors-medium-033",
+      "prompt": "איזה צבע מתאים לים?",
+      "options": [
+        {
+          "id": "blue",
+          "text": "כחול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        },
+        {
+          "id": "yellow",
+          "text": "צהוב",
+          "media": {
+            "illustrationKey": "🟡"
+          }
+        },
+        {
+          "id": "red",
+          "text": "אדום",
+          "media": {
+            "illustrationKey": "🔴"
+          }
+        }
+      ],
+      "correctOptionId": "blue",
+      "worldId": "colors",
+      "skillId": "colors",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🌊"
+      },
+      "language": "he",
+      "tags": [
+        "colors",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice color recognition and object-color matching.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזה צבע מתאים לים?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "colors-medium-034",
+      "prompt": "איזה צבע מתאים לגזר?",
+      "options": [
+        {
+          "id": "orange",
+          "text": "כתום",
+          "media": {
+            "illustrationKey": "🟠"
+          }
+        },
+        {
+          "id": "blue",
+          "text": "כחול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        },
+        {
+          "id": "white",
+          "text": "לבן",
+          "media": {
+            "illustrationKey": "⚪"
+          }
+        }
+      ],
+      "correctOptionId": "orange",
+      "worldId": "colors",
+      "skillId": "colors",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🥕"
+      },
+      "language": "he",
+      "tags": [
+        "colors",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice color recognition and object-color matching.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזה צבע מתאים לגזר?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "colors-medium-035",
+      "prompt": "איזה צבע מתאים לענבים?",
+      "options": [
+        {
+          "id": "purple",
+          "text": "סגול",
+          "media": {
+            "illustrationKey": "🟣"
+          }
+        },
+        {
+          "id": "yellow",
+          "text": "צהוב",
+          "media": {
+            "illustrationKey": "🟡"
+          }
+        },
+        {
+          "id": "green",
+          "text": "ירוק",
+          "media": {
+            "illustrationKey": "🟢"
+          }
+        }
+      ],
+      "correctOptionId": "purple",
+      "worldId": "colors",
+      "skillId": "colors",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🍇"
+      },
+      "language": "he",
+      "tags": [
+        "colors",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice color recognition and object-color matching.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזה צבע מתאים לענבים?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "colors-medium-036",
+      "prompt": "איזה צבע מתאים לענן?",
+      "options": [
+        {
+          "id": "white",
+          "text": "לבן",
+          "media": {
+            "illustrationKey": "⚪"
+          }
+        },
+        {
+          "id": "black",
+          "text": "שחור",
+          "media": {
+            "illustrationKey": "⚫"
+          }
+        },
+        {
+          "id": "orange",
+          "text": "כתום",
+          "media": {
+            "illustrationKey": "🟠"
+          }
+        }
+      ],
+      "correctOptionId": "white",
+      "worldId": "colors",
+      "skillId": "colors",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "☁️"
+      },
+      "language": "he",
+      "tags": [
+        "colors",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice color recognition and object-color matching.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזה צבע מתאים לענן?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "colors-medium-037",
+      "prompt": "איזה צבע מתאים ללילה?",
+      "options": [
+        {
+          "id": "black",
+          "text": "שחור",
+          "media": {
+            "illustrationKey": "⚫"
+          }
+        },
+        {
+          "id": "white",
+          "text": "לבן",
+          "media": {
+            "illustrationKey": "⚪"
+          }
+        },
+        {
+          "id": "yellow",
+          "text": "צהוב",
+          "media": {
+            "illustrationKey": "🟡"
+          }
+        }
+      ],
+      "correctOptionId": "black",
+      "worldId": "colors",
+      "skillId": "colors",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🌙"
+      },
+      "language": "he",
+      "tags": [
+        "colors",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice color recognition and object-color matching.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזה צבע מתאים ללילה?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "colors-medium-038",
+      "prompt": "איזה צבע מתאים לשוקולד?",
+      "options": [
+        {
+          "id": "brown",
+          "text": "חום",
+          "media": {
+            "illustrationKey": "🟤"
+          }
+        },
+        {
+          "id": "blue",
+          "text": "כחול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        },
+        {
+          "id": "pink",
+          "text": "ורוד",
+          "media": {
+            "illustrationKey": "🩷"
+          }
+        }
+      ],
+      "correctOptionId": "brown",
+      "worldId": "colors",
+      "skillId": "colors",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🍫"
+      },
+      "language": "he",
+      "tags": [
+        "colors",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice color recognition and object-color matching.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזה צבע מתאים לשוקולד?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "colors-medium-039",
+      "prompt": "איזה צבע מתאים לפיל בציור?",
+      "options": [
+        {
+          "id": "gray",
+          "text": "אפור",
+          "media": {
+            "illustrationKey": "⬜"
+          }
+        },
+        {
+          "id": "green",
+          "text": "ירוק",
+          "media": {
+            "illustrationKey": "🟢"
+          }
+        },
+        {
+          "id": "red",
+          "text": "אדום",
+          "media": {
+            "illustrationKey": "🔴"
+          }
+        }
+      ],
+      "correctOptionId": "gray",
+      "worldId": "colors",
+      "skillId": "colors",
+      "ageRange": "4-5",
+      "difficulty": 2,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🐘"
+      },
+      "language": "he",
+      "tags": [
+        "colors",
+        "medium",
+        "4-5",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 24,
+      "pedagogicalGoal": "Practice color recognition and object-color matching.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזה צבע מתאים לפיל בציור?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "letters-hard-071",
+      "prompt": "באיזו אות מסתיימת המילה אבא?",
+      "options": [
+        {
+          "id": "א",
+          "text": "א"
+        },
+        {
+          "id": "ה",
+          "text": "ה"
+        },
+        {
+          "id": "ב",
+          "text": "ב"
+        }
+      ],
+      "correctOptionId": "א",
+      "worldId": "letters",
+      "skillId": "letters",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "👨"
+      },
+      "language": "he",
+      "tags": [
+        "letters",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice Hebrew letter recognition and early phonological awareness.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "באיזו אות מסתיימת המילה אבא?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "letters-hard-072",
+      "prompt": "באיזו אות מסתיימת המילה בית?",
+      "options": [
+        {
+          "id": "ת",
+          "text": "ת"
+        },
+        {
+          "id": "ב",
+          "text": "ב"
+        },
+        {
+          "id": "ד",
+          "text": "ד"
+        }
+      ],
+      "correctOptionId": "ת",
+      "worldId": "letters",
+      "skillId": "letters",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🏠"
+      },
+      "language": "he",
+      "tags": [
+        "letters",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice Hebrew letter recognition and early phonological awareness.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "באיזו אות מסתיימת המילה בית?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "letters-hard-073",
+      "prompt": "באיזו אות מסתיימת המילה דג?",
+      "options": [
+        {
+          "id": "ג",
+          "text": "ג"
+        },
+        {
+          "id": "ד",
+          "text": "ד"
+        },
+        {
+          "id": "ז",
+          "text": "ז"
+        }
+      ],
+      "correctOptionId": "ג",
+      "worldId": "letters",
+      "skillId": "letters",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🐟"
+      },
+      "language": "he",
+      "tags": [
+        "letters",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice Hebrew letter recognition and early phonological awareness.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "באיזו אות מסתיימת המילה דג?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "letters-hard-074",
+      "prompt": "באיזו אות מסתיימת המילה כלב?",
+      "options": [
+        {
+          "id": "ב",
+          "text": "ב"
+        },
+        {
+          "id": "כ",
+          "text": "כ"
+        },
+        {
+          "id": "ד",
+          "text": "ד"
+        }
+      ],
+      "correctOptionId": "ב",
+      "worldId": "letters",
+      "skillId": "letters",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🐶"
+      },
+      "language": "he",
+      "tags": [
+        "letters",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice Hebrew letter recognition and early phonological awareness.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "באיזו אות מסתיימת המילה כלב?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "letters-hard-076",
+      "prompt": "באיזו אות מסתיימת המילה שמש?",
+      "options": [
+        {
+          "id": "ש",
+          "text": "ש"
+        },
+        {
+          "id": "ס",
+          "text": "ס"
+        },
+        {
+          "id": "מ",
+          "text": "מ"
+        }
+      ],
+      "correctOptionId": "ש",
+      "worldId": "letters",
+      "skillId": "letters",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "☀️"
+      },
+      "language": "he",
+      "tags": [
+        "letters",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice Hebrew letter recognition and early phonological awareness.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "באיזו אות מסתיימת המילה שמש?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "letters-hard-077",
+      "prompt": "באיזו אות מסתיימת המילה ספר?",
+      "options": [
+        {
+          "id": "ר",
+          "text": "ר"
+        },
+        {
+          "id": "ס",
+          "text": "ס"
+        },
+        {
+          "id": "ל",
+          "text": "ל"
+        }
+      ],
+      "correctOptionId": "ר",
+      "worldId": "letters",
+      "skillId": "letters",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "📘"
+      },
+      "language": "he",
+      "tags": [
+        "letters",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice Hebrew letter recognition and early phonological awareness.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "באיזו אות מסתיימת המילה ספר?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "letters-hard-078",
+      "prompt": "באיזו אות מסתיימת המילה פרח?",
+      "options": [
+        {
+          "id": "ח",
+          "text": "ח"
+        },
+        {
+          "id": "פ",
+          "text": "פ"
+        },
+        {
+          "id": "ה",
+          "text": "ה"
+        }
+      ],
+      "correctOptionId": "ח",
+      "worldId": "letters",
+      "skillId": "letters",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🌸"
+      },
+      "language": "he",
+      "tags": [
+        "letters",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice Hebrew letter recognition and early phonological awareness.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "באיזו אות מסתיימת המילה פרח?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "letters-hard-080",
+      "prompt": "באיזו אות מסתיימת המילה נעל?",
+      "options": [
+        {
+          "id": "ל",
+          "text": "ל"
+        },
+        {
+          "id": "נ",
+          "text": "נ"
+        },
+        {
+          "id": "ר",
+          "text": "ר"
+        }
+      ],
+      "correctOptionId": "ל",
+      "worldId": "letters",
+      "skillId": "letters",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "👟"
+      },
+      "language": "he",
+      "tags": [
+        "letters",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice Hebrew letter recognition and early phonological awareness.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "באיזו אות מסתיימת המילה נעל?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "letters-hard-081",
+      "prompt": "באיזו אות מסתיימת המילה בלון?",
+      "options": [
+        {
+          "id": "ן",
+          "text": "ן"
+        },
+        {
+          "id": "נ",
+          "text": "נ"
+        },
+        {
+          "id": "ם",
+          "text": "ם"
+        }
+      ],
+      "correctOptionId": "ן",
+      "worldId": "letters",
+      "skillId": "letters",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🎈"
+      },
+      "language": "he",
+      "tags": [
+        "letters",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice Hebrew letter recognition and early phonological awareness.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "באיזו אות מסתיימת המילה בלון?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "letters-hard-087",
+      "prompt": "באיזו אות מסתיימת המילה מלך?",
+      "options": [
+        {
+          "id": "ך",
+          "text": "ך"
+        },
+        {
+          "id": "כ",
+          "text": "כ"
+        },
+        {
+          "id": "ם",
+          "text": "ם"
+        }
+      ],
+      "correctOptionId": "ך",
+      "worldId": "letters",
+      "skillId": "letters",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "👑"
+      },
+      "language": "he",
+      "tags": [
+        "letters",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice Hebrew letter recognition and early phonological awareness.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "באיזו אות מסתיימת המילה מלך?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "numbers-hard-054",
+      "prompt": "כמה זה 1 ועוד 1?",
+      "options": [
+        {
+          "id": "2",
+          "text": "2"
+        },
+        {
+          "id": "1",
+          "text": "1"
+        },
+        {
+          "id": "3",
+          "text": "3"
+        }
+      ],
+      "correctOptionId": "2",
+      "worldId": "numbers",
+      "skillId": "numbers",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "1 + 1"
+      },
+      "language": "he",
+      "tags": [
+        "numbers",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice number recognition, counting, and early quantity reasoning.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "כמה זה אחת ועוד אחת?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "numbers-hard-055",
+      "prompt": "כמה זה 1 ועוד 2?",
+      "options": [
+        {
+          "id": "3",
+          "text": "3"
+        },
+        {
+          "id": "2",
+          "text": "2"
+        },
+        {
+          "id": "4",
+          "text": "4"
+        }
+      ],
+      "correctOptionId": "3",
+      "worldId": "numbers",
+      "skillId": "numbers",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "1 + 2"
+      },
+      "language": "he",
+      "tags": [
+        "numbers",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice number recognition, counting, and early quantity reasoning.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "כמה זה אחת ועוד שתיים?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "numbers-hard-056",
+      "prompt": "כמה זה 2 ועוד 2?",
+      "options": [
+        {
+          "id": "4",
+          "text": "4"
+        },
+        {
+          "id": "3",
+          "text": "3"
+        },
+        {
+          "id": "5",
+          "text": "5"
+        }
+      ],
+      "correctOptionId": "4",
+      "worldId": "numbers",
+      "skillId": "numbers",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "2 + 2"
+      },
+      "language": "he",
+      "tags": [
+        "numbers",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice number recognition, counting, and early quantity reasoning.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "כמה זה שתיים ועוד שתיים?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "numbers-hard-057",
+      "prompt": "כמה זה 2 ועוד 3?",
+      "options": [
+        {
+          "id": "5",
+          "text": "5"
+        },
+        {
+          "id": "4",
+          "text": "4"
+        },
+        {
+          "id": "6",
+          "text": "6"
+        }
+      ],
+      "correctOptionId": "5",
+      "worldId": "numbers",
+      "skillId": "numbers",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "2 + 3"
+      },
+      "language": "he",
+      "tags": [
+        "numbers",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice number recognition, counting, and early quantity reasoning.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "כמה זה שתיים ועוד שלוש?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "numbers-hard-058",
+      "prompt": "כמה זה 3 ועוד 3?",
+      "options": [
+        {
+          "id": "6",
+          "text": "6"
+        },
+        {
+          "id": "5",
+          "text": "5"
+        },
+        {
+          "id": "7",
+          "text": "7"
+        }
+      ],
+      "correctOptionId": "6",
+      "worldId": "numbers",
+      "skillId": "numbers",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "3 + 3"
+      },
+      "language": "he",
+      "tags": [
+        "numbers",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice number recognition, counting, and early quantity reasoning.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "כמה זה שלוש ועוד שלוש?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "numbers-hard-061",
+      "prompt": "כמה זה 3 ועוד 4?",
+      "options": [
+        {
+          "id": "7",
+          "text": "7"
+        },
+        {
+          "id": "6",
+          "text": "6"
+        },
+        {
+          "id": "8",
+          "text": "8"
+        }
+      ],
+      "correctOptionId": "7",
+      "worldId": "numbers",
+      "skillId": "numbers",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "3 + 4"
+      },
+      "language": "he",
+      "tags": [
+        "numbers",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice number recognition, counting, and early quantity reasoning.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "כמה זה שלוש ועוד ארבע?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "numbers-hard-062",
+      "prompt": "כמה זה 4 ועוד 4?",
+      "options": [
+        {
+          "id": "8",
+          "text": "8"
+        },
+        {
+          "id": "7",
+          "text": "7"
+        },
+        {
+          "id": "9",
+          "text": "9"
+        }
+      ],
+      "correctOptionId": "8",
+      "worldId": "numbers",
+      "skillId": "numbers",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "4 + 4"
+      },
+      "language": "he",
+      "tags": [
+        "numbers",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice number recognition, counting, and early quantity reasoning.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "כמה זה ארבע ועוד ארבע?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "numbers-hard-069",
+      "prompt": "כמה זה 6 ועוד 3?",
+      "options": [
+        {
+          "id": "9",
+          "text": "9"
+        },
+        {
+          "id": "8",
+          "text": "8"
+        },
+        {
+          "id": "10",
+          "text": "10"
+        }
+      ],
+      "correctOptionId": "9",
+      "worldId": "numbers",
+      "skillId": "numbers",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "6 + 3"
+      },
+      "language": "he",
+      "tags": [
+        "numbers",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice number recognition, counting, and early quantity reasoning.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "כמה זה שש ועוד שלוש?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "numbers-hard-071",
+      "prompt": "כמה זה 4 פחות 2?",
+      "options": [
+        {
+          "id": "2",
+          "text": "2"
+        },
+        {
+          "id": "1",
+          "text": "1"
+        },
+        {
+          "id": "3",
+          "text": "3"
+        }
+      ],
+      "correctOptionId": "2",
+      "worldId": "numbers",
+      "skillId": "numbers",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "4 - 2"
+      },
+      "language": "he",
+      "tags": [
+        "numbers",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice number recognition, counting, and early quantity reasoning.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "כמה זה ארבע פחות שתיים?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "numbers-hard-073",
+      "prompt": "כמה זה 6 פחות 1?",
+      "options": [
+        {
+          "id": "5",
+          "text": "5"
+        },
+        {
+          "id": "4",
+          "text": "4"
+        },
+        {
+          "id": "6",
+          "text": "6"
+        }
+      ],
+      "correctOptionId": "5",
+      "worldId": "numbers",
+      "skillId": "numbers",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "6 - 1"
+      },
+      "language": "he",
+      "tags": [
+        "numbers",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice number recognition, counting, and early quantity reasoning.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "כמה זה שש פחות אחת?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "shapes-hard-038",
+      "prompt": "כמה פינות יש לעיגול?",
+      "options": [
+        {
+          "id": "0",
+          "text": "0"
+        },
+        {
+          "id": "3",
+          "text": "3"
+        },
+        {
+          "id": "4",
+          "text": "4"
+        }
+      ],
+      "correctOptionId": "0",
+      "worldId": "shapes",
+      "skillId": "shapes",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🔵"
+      },
+      "language": "he",
+      "tags": [
+        "shapes",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice shape recognition and visual classification.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "כמה פינות יש לעיגול?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "shapes-hard-039",
+      "prompt": "כמה פינות יש לריבוע?",
+      "options": [
+        {
+          "id": "4",
+          "text": "4"
+        },
+        {
+          "id": "3",
+          "text": "3"
+        },
+        {
+          "id": "5",
+          "text": "5"
+        }
+      ],
+      "correctOptionId": "4",
+      "worldId": "shapes",
+      "skillId": "shapes",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🟦"
+      },
+      "language": "he",
+      "tags": [
+        "shapes",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice shape recognition and visual classification.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "כמה פינות יש לריבוע?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "shapes-hard-040",
+      "prompt": "כמה פינות יש למשולש?",
+      "options": [
+        {
+          "id": "3",
+          "text": "3"
+        },
+        {
+          "id": "2",
+          "text": "2"
+        },
+        {
+          "id": "4",
+          "text": "4"
+        }
+      ],
+      "correctOptionId": "3",
+      "worldId": "shapes",
+      "skillId": "shapes",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🔺"
+      },
+      "language": "he",
+      "tags": [
+        "shapes",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice shape recognition and visual classification.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "כמה פינות יש למשולש?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "shapes-hard-042",
+      "prompt": "כמה פינות יש לכוכב?",
+      "options": [
+        {
+          "id": "5",
+          "text": "5"
+        },
+        {
+          "id": "4",
+          "text": "4"
+        },
+        {
+          "id": "6",
+          "text": "6"
+        }
+      ],
+      "correctOptionId": "5",
+      "worldId": "shapes",
+      "skillId": "shapes",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "⭐"
+      },
+      "language": "he",
+      "tags": [
+        "shapes",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice shape recognition and visual classification.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "כמה פינות יש לכוכב?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "shapes-hard-043",
+      "prompt": "לאיזו צורה אין פינות?",
+      "options": [
+        {
+          "id": "circle",
+          "text": "עיגול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        },
+        {
+          "id": "square",
+          "text": "ריבוע",
+          "media": {
+            "illustrationKey": "🟦"
+          }
+        },
+        {
+          "id": "triangle",
+          "text": "משולש",
+          "media": {
+            "illustrationKey": "🔺"
+          }
+        }
+      ],
+      "correctOptionId": "circle",
+      "worldId": "shapes",
+      "skillId": "shapes",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🔵"
+      },
+      "language": "he",
+      "tags": [
+        "shapes",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice shape recognition and visual classification.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "לאיזו צורה אין פינות?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "shapes-hard-044",
+      "prompt": "איזו צורה מתגלגלת בקלות?",
+      "options": [
+        {
+          "id": "circle",
+          "text": "עיגול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        },
+        {
+          "id": "square",
+          "text": "ריבוע",
+          "media": {
+            "illustrationKey": "🟦"
+          }
+        },
+        {
+          "id": "triangle",
+          "text": "משולש",
+          "media": {
+            "illustrationKey": "🔺"
+          }
+        }
+      ],
+      "correctOptionId": "circle",
+      "worldId": "shapes",
+      "skillId": "shapes",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "⚽"
+      },
+      "language": "he",
+      "tags": [
+        "shapes",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice shape recognition and visual classification.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזו צורה מתגלגלת בקלות?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "shapes-hard-045",
+      "prompt": "איזו צורה יכולה להיות גג של בית?",
+      "options": [
+        {
+          "id": "triangle",
+          "text": "משולש",
+          "media": {
+            "illustrationKey": "🔺"
+          }
+        },
+        {
+          "id": "circle",
+          "text": "עיגול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        },
+        {
+          "id": "square",
+          "text": "ריבוע",
+          "media": {
+            "illustrationKey": "🟦"
+          }
+        }
+      ],
+      "correctOptionId": "triangle",
+      "worldId": "shapes",
+      "skillId": "shapes",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🏠"
+      },
+      "language": "he",
+      "tags": [
+        "shapes",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice shape recognition and visual classification.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזו צורה יכולה להיות גג של בית?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "shapes-hard-046",
+      "prompt": "איזו צורה ארוכה כמו דלת?",
+      "options": [
+        {
+          "id": "rectangle",
+          "text": "מלבן",
+          "media": {
+            "illustrationKey": "▭"
+          }
+        },
+        {
+          "id": "circle",
+          "text": "עיגול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        },
+        {
+          "id": "triangle",
+          "text": "משולש",
+          "media": {
+            "illustrationKey": "🔺"
+          }
+        }
+      ],
+      "correctOptionId": "rectangle",
+      "worldId": "shapes",
+      "skillId": "shapes",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🚪"
+      },
+      "language": "he",
+      "tags": [
+        "shapes",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice shape recognition and visual classification.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזו צורה ארוכה כמו דלת?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "shapes-hard-047",
+      "prompt": "לאיזו צורה יש ארבע צלעות שוות?",
+      "options": [
+        {
+          "id": "square",
+          "text": "ריבוע",
+          "media": {
+            "illustrationKey": "🟦"
+          }
+        },
+        {
+          "id": "triangle",
+          "text": "משולש",
+          "media": {
+            "illustrationKey": "🔺"
+          }
+        },
+        {
+          "id": "circle",
+          "text": "עיגול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        }
+      ],
+      "correctOptionId": "square",
+      "worldId": "shapes",
+      "skillId": "shapes",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "🟦"
+      },
+      "language": "he",
+      "tags": [
+        "shapes",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice shape recognition and visual classification.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "לאיזו צורה יש ארבע צלעות שוות?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "shapes-hard-048",
+      "prompt": "איזו צורה מלאה בקצוות מחודדים?",
+      "options": [
+        {
+          "id": "star",
+          "text": "כוכב",
+          "media": {
+            "illustrationKey": "⭐"
+          }
+        },
+        {
+          "id": "circle",
+          "text": "עיגול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        },
+        {
+          "id": "rectangle",
+          "text": "מלבן",
+          "media": {
+            "illustrationKey": "▭"
+          }
+        }
+      ],
+      "correctOptionId": "star",
+      "worldId": "shapes",
+      "skillId": "shapes",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "media": {
+        "illustrationKey": "⭐"
+      },
+      "language": "he",
+      "tags": [
+        "shapes",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice shape recognition and visual classification.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזו צורה מלאה בקצוות מחודדים?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "colors-hard-056",
+      "prompt": "איזה צבע מתקבל מאדום וצהוב?",
+      "options": [
+        {
+          "id": "orange",
+          "text": "כתום",
+          "media": {
+            "illustrationKey": "🟠"
+          }
+        },
+        {
+          "id": "green",
+          "text": "ירוק",
+          "media": {
+            "illustrationKey": "🟢"
+          }
+        },
+        {
+          "id": "brown",
+          "text": "חום",
+          "media": {
+            "illustrationKey": "🟤"
+          }
+        }
+      ],
+      "correctOptionId": "orange",
+      "worldId": "colors",
+      "skillId": "colors",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "language": "he",
+      "tags": [
+        "colors",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice color recognition and object-color matching.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזה צבע מתקבל מאדום וצהוב?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "colors-hard-057",
+      "prompt": "איזה צבע מתקבל מכחול וצהוב?",
+      "options": [
+        {
+          "id": "green",
+          "text": "ירוק",
+          "media": {
+            "illustrationKey": "🟢"
+          }
+        },
+        {
+          "id": "orange",
+          "text": "כתום",
+          "media": {
+            "illustrationKey": "🟠"
+          }
+        },
+        {
+          "id": "pink",
+          "text": "ורוד",
+          "media": {
+            "illustrationKey": "🩷"
+          }
+        }
+      ],
+      "correctOptionId": "green",
+      "worldId": "colors",
+      "skillId": "colors",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "language": "he",
+      "tags": [
+        "colors",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice color recognition and object-color matching.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזה צבע מתקבל מכחול וצהוב?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "colors-hard-058",
+      "prompt": "איזה צבע מתקבל מאדום וכחול?",
+      "options": [
+        {
+          "id": "purple",
+          "text": "סגול",
+          "media": {
+            "illustrationKey": "🟣"
+          }
+        },
+        {
+          "id": "yellow",
+          "text": "צהוב",
+          "media": {
+            "illustrationKey": "🟡"
+          }
+        },
+        {
+          "id": "green",
+          "text": "ירוק",
+          "media": {
+            "illustrationKey": "🟢"
+          }
+        }
+      ],
+      "correctOptionId": "purple",
+      "worldId": "colors",
+      "skillId": "colors",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "language": "he",
+      "tags": [
+        "colors",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice color recognition and object-color matching.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזה צבע מתקבל מאדום וכחול?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "colors-hard-059",
+      "prompt": "איזה צבע בהיר יותר?",
+      "options": [
+        {
+          "id": "white",
+          "text": "לבן",
+          "media": {
+            "illustrationKey": "⚪"
+          }
+        },
+        {
+          "id": "black",
+          "text": "שחור",
+          "media": {
+            "illustrationKey": "⚫"
+          }
+        },
+        {
+          "id": "brown",
+          "text": "חום",
+          "media": {
+            "illustrationKey": "🟤"
+          }
+        }
+      ],
+      "correctOptionId": "white",
+      "worldId": "colors",
+      "skillId": "colors",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "language": "he",
+      "tags": [
+        "colors",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice color recognition and object-color matching.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזה צבע בהיר יותר?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "colors-hard-060",
+      "prompt": "איזה צבע כהה יותר?",
+      "options": [
+        {
+          "id": "black",
+          "text": "שחור",
+          "media": {
+            "illustrationKey": "⚫"
+          }
+        },
+        {
+          "id": "yellow",
+          "text": "צהוב",
+          "media": {
+            "illustrationKey": "🟡"
+          }
+        },
+        {
+          "id": "white",
+          "text": "לבן",
+          "media": {
+            "illustrationKey": "⚪"
+          }
+        }
+      ],
+      "correctOptionId": "black",
+      "worldId": "colors",
+      "skillId": "colors",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "language": "he",
+      "tags": [
+        "colors",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice color recognition and object-color matching.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזה צבע כהה יותר?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "colors-hard-061",
+      "prompt": "איזה צבע נחשב צבע חם?",
+      "options": [
+        {
+          "id": "red",
+          "text": "אדום",
+          "media": {
+            "illustrationKey": "🔴"
+          }
+        },
+        {
+          "id": "blue",
+          "text": "כחול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        },
+        {
+          "id": "gray",
+          "text": "אפור",
+          "media": {
+            "illustrationKey": "⬜"
+          }
+        }
+      ],
+      "correctOptionId": "red",
+      "worldId": "colors",
+      "skillId": "colors",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "language": "he",
+      "tags": [
+        "colors",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice color recognition and object-color matching.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזה צבע נחשב צבע חם?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "colors-hard-062",
+      "prompt": "איזה צבע נחשב צבע קר?",
+      "options": [
+        {
+          "id": "blue",
+          "text": "כחול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        },
+        {
+          "id": "orange",
+          "text": "כתום",
+          "media": {
+            "illustrationKey": "🟠"
+          }
+        },
+        {
+          "id": "red",
+          "text": "אדום",
+          "media": {
+            "illustrationKey": "🔴"
+          }
+        }
+      ],
+      "correctOptionId": "blue",
+      "worldId": "colors",
+      "skillId": "colors",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "language": "he",
+      "tags": [
+        "colors",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice color recognition and object-color matching.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזה צבע נחשב צבע קר?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "colors-hard-063",
+      "prompt": "איזה צבע מתאים לרמזור עצור?",
+      "options": [
+        {
+          "id": "red",
+          "text": "אדום",
+          "media": {
+            "illustrationKey": "🔴"
+          }
+        },
+        {
+          "id": "green",
+          "text": "ירוק",
+          "media": {
+            "illustrationKey": "🟢"
+          }
+        },
+        {
+          "id": "blue",
+          "text": "כחול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        }
+      ],
+      "correctOptionId": "red",
+      "worldId": "colors",
+      "skillId": "colors",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "language": "he",
+      "tags": [
+        "colors",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice color recognition and object-color matching.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזה צבע מתאים לרמזור עצור?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "colors-hard-064",
+      "prompt": "איזה צבע מתאים לרמזור סע?",
+      "options": [
+        {
+          "id": "green",
+          "text": "ירוק",
+          "media": {
+            "illustrationKey": "🟢"
+          }
+        },
+        {
+          "id": "red",
+          "text": "אדום",
+          "media": {
+            "illustrationKey": "🔴"
+          }
+        },
+        {
+          "id": "yellow",
+          "text": "צהוב",
+          "media": {
+            "illustrationKey": "🟡"
+          }
+        }
+      ],
+      "correctOptionId": "green",
+      "worldId": "colors",
+      "skillId": "colors",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "language": "he",
+      "tags": [
+        "colors",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice color recognition and object-color matching.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזה צבע מתאים לרמזור סע?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "colors-hard-065",
+      "prompt": "איזה צבע נראה כמו שמיים בהירים?",
+      "options": [
+        {
+          "id": "blue",
+          "text": "כחול",
+          "media": {
+            "illustrationKey": "🔵"
+          }
+        },
+        {
+          "id": "brown",
+          "text": "חום",
+          "media": {
+            "illustrationKey": "🟤"
+          }
+        },
+        {
+          "id": "black",
+          "text": "שחור",
+          "media": {
+            "illustrationKey": "⚫"
+          }
+        }
+      ],
+      "correctOptionId": "blue",
+      "worldId": "colors",
+      "skillId": "colors",
+      "ageRange": "5-6",
+      "difficulty": 4,
+      "questionType": "image-choice",
+      "language": "he",
+      "tags": [
+        "colors",
+        "hard",
+        "5-6",
+        "trial-seed",
+        "content-v1-trial-2026-06"
+      ],
+      "estimatedTimeSeconds": 30,
+      "pedagogicalGoal": "Practice color recognition and object-color matching.",
+      "explanationForParent": "This question practices one focused early-learning skill in a short, game-ready format.",
+      "hint": "בחרו את התשובה המתאימה.",
+      "audioText": "איזה צבע נראה כמו שמיים בהירים?",
+      "status": "approved",
+      "createdBy": "system",
+      "createdAt": "2026-06-03T00:00:00.000Z",
+      "updatedAt": "2026-06-03T00:00:00.000Z",
+      "approvedAt": "2026-06-03T00:00:00.000Z",
+      "version": 1
+    }
+  ]
+}
