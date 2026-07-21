@@ -26,7 +26,8 @@ export async function registerServiceWorker(): Promise<void> {
   }
 
   try {
-    await navigator.serviceWorker.register('/sw.js');
+    const registration = await navigator.serviceWorker.register('/sw.js', { updateViaCache: 'none' });
+    await registration.update();
   } catch (error) {
     console.error('Service Worker registration failed:', error);
   }

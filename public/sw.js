@@ -1,4 +1,4 @@
-const CACHE_NAME = 'lomdim-bekef-v1.2.0';
+const CACHE_NAME = 'lomdim-bekef-v1.2.0-20260721';
 const STATIC_ASSETS = ['/', '/manifest.webmanifest', '/icons/icon.svg'];
 
 function isSameOriginRequest(request) {
