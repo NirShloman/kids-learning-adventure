@@ -1,45 +1,16 @@
-# Content Quality Guidelines
+# Content quality guidelines
 
-## Audience
+The audience is Hebrew-speaking children ages 3–6. Prompts and spoken instructions must be short, concrete, positive, inclusive plural, and understandable without fluent reading.
 
-Questions are for Hebrew-speaking children ages 3-6. Prompts should be short, concrete, positive, and easy to read aloud.
+Every item requires a unique id, explicit ages, difficulty, skill, valid game-specific answer data, and three approvals in `review-status.json`: linguistic, conceptual, and age fit.
 
-## Required Fields
+Reject content containing fear, shame, failure language, violence, stereotypes, political persuasion, personal data, ambiguous answers, reading demands above the target age, or copied wording and assets.
 
-Every seed or submitted question must include:
-
-- prompt
-- 2-4 options
-- one valid correct option
-- world
-- skill
-- age range
-- difficulty
-- question type
-- hint
-- parent explanation
-- pedagogical goal
-- tags
-- status
-
-## Safety
-
-Avoid fear, shame, violence, stereotypes, political content, sensitive religious content, and any personal information. User content must always go through pending review.
-
-## Duplicate Policy
-
-- `>= 0.92`: duplicate, do not approve.
-- `0.78-0.92`: similar, manual review.
-- `< 0.78`: continue to agent review.
-
-## Seed Workflow
-
-Run:
+Run before every release:
 
 ```bash
 npm run validate:content
-npm run review:content
-npm run check:duplicates
+npm run test:unit
 ```
 
-The current trial seed has 120 reviewed canonical questions in `shared-content/seed/questions.seed.json`.
+The build fails when structure, semantics, coverage, identifiers, answers, Hebrew constraints, or review status are invalid.

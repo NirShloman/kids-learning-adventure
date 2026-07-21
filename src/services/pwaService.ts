@@ -1,7 +1,5 @@
 // Service Worker registration for PWA functionality
 
-const LOCAL_DEV_HOSTS = new Set(['localhost', '127.0.0.1', '::1']);
-
 async function unregisterDevelopmentServiceWorkers(): Promise<void> {
   const registrations = await navigator.serviceWorker.getRegistrations();
   await Promise.all(registrations.map((registration) => registration.unregister()));
@@ -17,7 +15,7 @@ export async function registerServiceWorker(): Promise<void> {
     return;
   }
 
-  if (LOCAL_DEV_HOSTS.has(window.location.hostname)) {
+  if (import.meta.env.DEV) {
     try {
       await unregisterDevelopmentServiceWorkers();
       console.info('Development Service Workers and caches cleared.');

@@ -1,0 +1,3674 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": "2026.07.1",
+  "gameId": "patterns",
+  "items": [
+    {
+      "id": "patterns-001",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🔴",
+        "🌙",
+        "🔴",
+        "🌙",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🔴"
+        },
+        {
+          "id": "option-2",
+          "label": "🌙"
+        },
+        {
+          "id": "option-3",
+          "label": "🟦"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-002",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🔵",
+        "⭐",
+        "🟦",
+        "🔵",
+        "⭐",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🔵"
+        },
+        {
+          "id": "option-2",
+          "label": "⭐"
+        },
+        {
+          "id": "option-3",
+          "label": "🟦"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-003",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "8"
+        },
+        {
+          "id": "option-2",
+          "label": "7"
+        },
+        {
+          "id": "option-3",
+          "label": "6"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-004",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🟢",
+        "🟦",
+        "🟢",
+        "🟦",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🟢"
+        },
+        {
+          "id": "option-2",
+          "label": "🟦"
+        },
+        {
+          "id": "option-3",
+          "label": "🐱"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-005",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "⭐",
+        "🍌",
+        "🐱",
+        "⭐",
+        "🍌",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "⭐"
+        },
+        {
+          "id": "option-2",
+          "label": "🍌"
+        },
+        {
+          "id": "option-3",
+          "label": "🐱"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-006",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "7"
+        },
+        {
+          "id": "option-2",
+          "label": "6"
+        },
+        {
+          "id": "option-3",
+          "label": "5"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-007",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🍎",
+        "🐱",
+        "🍎",
+        "🐱",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🍎"
+        },
+        {
+          "id": "option-2",
+          "label": "🐱"
+        },
+        {
+          "id": "option-3",
+          "label": "🟡"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-008",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🍌",
+        "🐶",
+        "🟡",
+        "🍌",
+        "🐶",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🍌"
+        },
+        {
+          "id": "option-2",
+          "label": "🐶"
+        },
+        {
+          "id": "option-3",
+          "label": "🟡"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-009",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "6"
+        },
+        {
+          "id": "option-2",
+          "label": "5"
+        },
+        {
+          "id": "option-3",
+          "label": "4"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-010",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🔺",
+        "🟡",
+        "🔺",
+        "🟡",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🔺"
+        },
+        {
+          "id": "option-2",
+          "label": "🟡"
+        },
+        {
+          "id": "option-3",
+          "label": "🌙"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-011",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🐶",
+        "🔵",
+        "🌙",
+        "🐶",
+        "🔵",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🐶"
+        },
+        {
+          "id": "option-2",
+          "label": "🔵"
+        },
+        {
+          "id": "option-3",
+          "label": "🌙"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-012",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "4",
+        "5",
+        "6",
+        "7",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "9"
+        },
+        {
+          "id": "option-2",
+          "label": "8"
+        },
+        {
+          "id": "option-3",
+          "label": "7"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-013",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🔴",
+        "🌙",
+        "🔴",
+        "🌙",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🔴"
+        },
+        {
+          "id": "option-2",
+          "label": "🌙"
+        },
+        {
+          "id": "option-3",
+          "label": "🟦"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-014",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🔵",
+        "⭐",
+        "🟦",
+        "🔵",
+        "⭐",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🔵"
+        },
+        {
+          "id": "option-2",
+          "label": "⭐"
+        },
+        {
+          "id": "option-3",
+          "label": "🟦"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-015",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "8"
+        },
+        {
+          "id": "option-2",
+          "label": "7"
+        },
+        {
+          "id": "option-3",
+          "label": "6"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-016",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🟢",
+        "🟦",
+        "🟢",
+        "🟦",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🟢"
+        },
+        {
+          "id": "option-2",
+          "label": "🟦"
+        },
+        {
+          "id": "option-3",
+          "label": "🐱"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-017",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "⭐",
+        "🍌",
+        "🐱",
+        "⭐",
+        "🍌",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "⭐"
+        },
+        {
+          "id": "option-2",
+          "label": "🍌"
+        },
+        {
+          "id": "option-3",
+          "label": "🐱"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-018",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "7"
+        },
+        {
+          "id": "option-2",
+          "label": "6"
+        },
+        {
+          "id": "option-3",
+          "label": "5"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-019",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🍎",
+        "🐱",
+        "🍎",
+        "🐱",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🍎"
+        },
+        {
+          "id": "option-2",
+          "label": "🐱"
+        },
+        {
+          "id": "option-3",
+          "label": "🟡"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-020",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🍌",
+        "🐶",
+        "🟡",
+        "🍌",
+        "🐶",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🍌"
+        },
+        {
+          "id": "option-2",
+          "label": "🐶"
+        },
+        {
+          "id": "option-3",
+          "label": "🟡"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-021",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "6"
+        },
+        {
+          "id": "option-2",
+          "label": "5"
+        },
+        {
+          "id": "option-3",
+          "label": "4"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-022",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🔺",
+        "🟡",
+        "🔺",
+        "🟡",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🔺"
+        },
+        {
+          "id": "option-2",
+          "label": "🟡"
+        },
+        {
+          "id": "option-3",
+          "label": "🌙"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-023",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🐶",
+        "🔵",
+        "🌙",
+        "🐶",
+        "🔵",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🐶"
+        },
+        {
+          "id": "option-2",
+          "label": "🔵"
+        },
+        {
+          "id": "option-3",
+          "label": "🌙"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-024",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "4",
+        "5",
+        "6",
+        "7",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "9"
+        },
+        {
+          "id": "option-2",
+          "label": "8"
+        },
+        {
+          "id": "option-3",
+          "label": "7"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-025",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🔴",
+        "🌙",
+        "🔴",
+        "🌙",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🔴"
+        },
+        {
+          "id": "option-2",
+          "label": "🌙"
+        },
+        {
+          "id": "option-3",
+          "label": "🟦"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-026",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🔵",
+        "⭐",
+        "🟦",
+        "🔵",
+        "⭐",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🔵"
+        },
+        {
+          "id": "option-2",
+          "label": "⭐"
+        },
+        {
+          "id": "option-3",
+          "label": "🟦"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-027",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "8"
+        },
+        {
+          "id": "option-2",
+          "label": "7"
+        },
+        {
+          "id": "option-3",
+          "label": "6"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-028",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🟢",
+        "🟦",
+        "🟢",
+        "🟦",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🟢"
+        },
+        {
+          "id": "option-2",
+          "label": "🟦"
+        },
+        {
+          "id": "option-3",
+          "label": "🐱"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-029",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "⭐",
+        "🍌",
+        "🐱",
+        "⭐",
+        "🍌",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "⭐"
+        },
+        {
+          "id": "option-2",
+          "label": "🍌"
+        },
+        {
+          "id": "option-3",
+          "label": "🐱"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-030",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "7"
+        },
+        {
+          "id": "option-2",
+          "label": "6"
+        },
+        {
+          "id": "option-3",
+          "label": "5"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-031",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🍎",
+        "🐱",
+        "🍎",
+        "🐱",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🍎"
+        },
+        {
+          "id": "option-2",
+          "label": "🐱"
+        },
+        {
+          "id": "option-3",
+          "label": "🟡"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-032",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🍌",
+        "🐶",
+        "🟡",
+        "🍌",
+        "🐶",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🍌"
+        },
+        {
+          "id": "option-2",
+          "label": "🐶"
+        },
+        {
+          "id": "option-3",
+          "label": "🟡"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-033",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "1",
+        "3",
+        "5",
+        "7",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "10"
+        },
+        {
+          "id": "option-2",
+          "label": "9"
+        },
+        {
+          "id": "option-3",
+          "label": "8"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-034",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🔺",
+        "🟡",
+        "🔺",
+        "🟡",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🔺"
+        },
+        {
+          "id": "option-2",
+          "label": "🟡"
+        },
+        {
+          "id": "option-3",
+          "label": "🌙"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-035",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🐶",
+        "🔵",
+        "🌙",
+        "🐶",
+        "🔵",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🐶"
+        },
+        {
+          "id": "option-2",
+          "label": "🔵"
+        },
+        {
+          "id": "option-3",
+          "label": "🌙"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-036",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "13"
+        },
+        {
+          "id": "option-2",
+          "label": "12"
+        },
+        {
+          "id": "option-3",
+          "label": "11"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-037",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🔴",
+        "🌙",
+        "🔴",
+        "🌙",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🔴"
+        },
+        {
+          "id": "option-2",
+          "label": "🌙"
+        },
+        {
+          "id": "option-3",
+          "label": "🟦"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-038",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🔵",
+        "⭐",
+        "🟦",
+        "🔵",
+        "⭐",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🔵"
+        },
+        {
+          "id": "option-2",
+          "label": "⭐"
+        },
+        {
+          "id": "option-3",
+          "label": "🟦"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-039",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "3",
+        "5",
+        "7",
+        "9",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "12"
+        },
+        {
+          "id": "option-2",
+          "label": "11"
+        },
+        {
+          "id": "option-3",
+          "label": "10"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-040",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🟢",
+        "🟦",
+        "🟢",
+        "🟦",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🟢"
+        },
+        {
+          "id": "option-2",
+          "label": "🟦"
+        },
+        {
+          "id": "option-3",
+          "label": "🐱"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-041",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "⭐",
+        "🍌",
+        "🐱",
+        "⭐",
+        "🍌",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "⭐"
+        },
+        {
+          "id": "option-2",
+          "label": "🍌"
+        },
+        {
+          "id": "option-3",
+          "label": "🐱"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-042",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "2",
+        "4",
+        "6",
+        "8",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "11"
+        },
+        {
+          "id": "option-2",
+          "label": "10"
+        },
+        {
+          "id": "option-3",
+          "label": "9"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-043",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🍎",
+        "🐱",
+        "🍎",
+        "🐱",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🍎"
+        },
+        {
+          "id": "option-2",
+          "label": "🐱"
+        },
+        {
+          "id": "option-3",
+          "label": "🟡"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-044",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🍌",
+        "🐶",
+        "🟡",
+        "🍌",
+        "🐶",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🍌"
+        },
+        {
+          "id": "option-2",
+          "label": "🐶"
+        },
+        {
+          "id": "option-3",
+          "label": "🟡"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-045",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "1",
+        "3",
+        "5",
+        "7",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "10"
+        },
+        {
+          "id": "option-2",
+          "label": "9"
+        },
+        {
+          "id": "option-3",
+          "label": "8"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-046",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🔺",
+        "🟡",
+        "🔺",
+        "🟡",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🔺"
+        },
+        {
+          "id": "option-2",
+          "label": "🟡"
+        },
+        {
+          "id": "option-3",
+          "label": "🌙"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-047",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🐶",
+        "🔵",
+        "🌙",
+        "🐶",
+        "🔵",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🐶"
+        },
+        {
+          "id": "option-2",
+          "label": "🔵"
+        },
+        {
+          "id": "option-3",
+          "label": "🌙"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-048",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "13"
+        },
+        {
+          "id": "option-2",
+          "label": "12"
+        },
+        {
+          "id": "option-3",
+          "label": "11"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-049",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🔴",
+        "🌙",
+        "🔴",
+        "🌙",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🔴"
+        },
+        {
+          "id": "option-2",
+          "label": "🌙"
+        },
+        {
+          "id": "option-3",
+          "label": "🟦"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-050",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🔵",
+        "⭐",
+        "🟦",
+        "🔵",
+        "⭐",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🔵"
+        },
+        {
+          "id": "option-2",
+          "label": "⭐"
+        },
+        {
+          "id": "option-3",
+          "label": "🟦"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-051",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "3",
+        "5",
+        "7",
+        "9",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "12"
+        },
+        {
+          "id": "option-2",
+          "label": "11"
+        },
+        {
+          "id": "option-3",
+          "label": "10"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-052",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🟢",
+        "🟦",
+        "🟢",
+        "🟦",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🟢"
+        },
+        {
+          "id": "option-2",
+          "label": "🟦"
+        },
+        {
+          "id": "option-3",
+          "label": "🐱"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-053",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "⭐",
+        "🍌",
+        "🐱",
+        "⭐",
+        "🍌",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "⭐"
+        },
+        {
+          "id": "option-2",
+          "label": "🍌"
+        },
+        {
+          "id": "option-3",
+          "label": "🐱"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-054",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "2",
+        "4",
+        "6",
+        "8",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "11"
+        },
+        {
+          "id": "option-2",
+          "label": "10"
+        },
+        {
+          "id": "option-3",
+          "label": "9"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-055",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🍎",
+        "🐱",
+        "🍎",
+        "🐱",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🍎"
+        },
+        {
+          "id": "option-2",
+          "label": "🐱"
+        },
+        {
+          "id": "option-3",
+          "label": "🟡"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-056",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🍌",
+        "🐶",
+        "🟡",
+        "🍌",
+        "🐶",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🍌"
+        },
+        {
+          "id": "option-2",
+          "label": "🐶"
+        },
+        {
+          "id": "option-3",
+          "label": "🟡"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-057",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "1",
+        "3",
+        "5",
+        "7",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "10"
+        },
+        {
+          "id": "option-2",
+          "label": "9"
+        },
+        {
+          "id": "option-3",
+          "label": "8"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-058",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🔺",
+        "🟡",
+        "🔺",
+        "🟡",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🔺"
+        },
+        {
+          "id": "option-2",
+          "label": "🟡"
+        },
+        {
+          "id": "option-3",
+          "label": "🌙"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-059",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🐶",
+        "🔵",
+        "🌙",
+        "🐶",
+        "🔵",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🐶"
+        },
+        {
+          "id": "option-2",
+          "label": "🔵"
+        },
+        {
+          "id": "option-3",
+          "label": "🌙"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-060",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "13"
+        },
+        {
+          "id": "option-2",
+          "label": "12"
+        },
+        {
+          "id": "option-3",
+          "label": "11"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-061",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🔴",
+        "🌙",
+        "🔴",
+        "🌙",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🔴"
+        },
+        {
+          "id": "option-2",
+          "label": "🌙"
+        },
+        {
+          "id": "option-3",
+          "label": "🟦"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-062",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🔵",
+        "⭐",
+        "🟦",
+        "🔵",
+        "⭐",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🔵"
+        },
+        {
+          "id": "option-2",
+          "label": "⭐"
+        },
+        {
+          "id": "option-3",
+          "label": "🟦"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-063",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "3",
+        "6",
+        "9",
+        "12",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "16"
+        },
+        {
+          "id": "option-2",
+          "label": "15"
+        },
+        {
+          "id": "option-3",
+          "label": "14"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-064",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🟢",
+        "🟦",
+        "🟢",
+        "🟦",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🟢"
+        },
+        {
+          "id": "option-2",
+          "label": "🟦"
+        },
+        {
+          "id": "option-3",
+          "label": "🐱"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-065",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "⭐",
+        "🍌",
+        "🐱",
+        "⭐",
+        "🍌",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "⭐"
+        },
+        {
+          "id": "option-2",
+          "label": "🍌"
+        },
+        {
+          "id": "option-3",
+          "label": "🐱"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-066",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "2",
+        "5",
+        "8",
+        "11",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "15"
+        },
+        {
+          "id": "option-2",
+          "label": "14"
+        },
+        {
+          "id": "option-3",
+          "label": "13"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-067",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🍎",
+        "🐱",
+        "🍎",
+        "🐱",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🍎"
+        },
+        {
+          "id": "option-2",
+          "label": "🐱"
+        },
+        {
+          "id": "option-3",
+          "label": "🟡"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-068",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🍌",
+        "🐶",
+        "🟡",
+        "🍌",
+        "🐶",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🍌"
+        },
+        {
+          "id": "option-2",
+          "label": "🐶"
+        },
+        {
+          "id": "option-3",
+          "label": "🟡"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-069",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "1",
+        "4",
+        "7",
+        "10",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "14"
+        },
+        {
+          "id": "option-2",
+          "label": "13"
+        },
+        {
+          "id": "option-3",
+          "label": "12"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-070",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🔺",
+        "🟡",
+        "🔺",
+        "🟡",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🔺"
+        },
+        {
+          "id": "option-2",
+          "label": "🟡"
+        },
+        {
+          "id": "option-3",
+          "label": "🌙"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-071",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🐶",
+        "🔵",
+        "🌙",
+        "🐶",
+        "🔵",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🐶"
+        },
+        {
+          "id": "option-2",
+          "label": "🔵"
+        },
+        {
+          "id": "option-3",
+          "label": "🌙"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-072",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "4",
+        "7",
+        "10",
+        "13",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "17"
+        },
+        {
+          "id": "option-2",
+          "label": "16"
+        },
+        {
+          "id": "option-3",
+          "label": "15"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-073",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🔴",
+        "🌙",
+        "🔴",
+        "🌙",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🔴"
+        },
+        {
+          "id": "option-2",
+          "label": "🌙"
+        },
+        {
+          "id": "option-3",
+          "label": "🟦"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-074",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🔵",
+        "⭐",
+        "🟦",
+        "🔵",
+        "⭐",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🔵"
+        },
+        {
+          "id": "option-2",
+          "label": "⭐"
+        },
+        {
+          "id": "option-3",
+          "label": "🟦"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-075",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "3",
+        "6",
+        "9",
+        "12",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "16"
+        },
+        {
+          "id": "option-2",
+          "label": "15"
+        },
+        {
+          "id": "option-3",
+          "label": "14"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-076",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🟢",
+        "🟦",
+        "🟢",
+        "🟦",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🟢"
+        },
+        {
+          "id": "option-2",
+          "label": "🟦"
+        },
+        {
+          "id": "option-3",
+          "label": "🐱"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-077",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "⭐",
+        "🍌",
+        "🐱",
+        "⭐",
+        "🍌",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "⭐"
+        },
+        {
+          "id": "option-2",
+          "label": "🍌"
+        },
+        {
+          "id": "option-3",
+          "label": "🐱"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-078",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "2",
+        "5",
+        "8",
+        "11",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "15"
+        },
+        {
+          "id": "option-2",
+          "label": "14"
+        },
+        {
+          "id": "option-3",
+          "label": "13"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-079",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🍎",
+        "🐱",
+        "🍎",
+        "🐱",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🍎"
+        },
+        {
+          "id": "option-2",
+          "label": "🐱"
+        },
+        {
+          "id": "option-3",
+          "label": "🟡"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-080",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🍌",
+        "🐶",
+        "🟡",
+        "🍌",
+        "🐶",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🍌"
+        },
+        {
+          "id": "option-2",
+          "label": "🐶"
+        },
+        {
+          "id": "option-3",
+          "label": "🟡"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-081",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "1",
+        "4",
+        "7",
+        "10",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "14"
+        },
+        {
+          "id": "option-2",
+          "label": "13"
+        },
+        {
+          "id": "option-3",
+          "label": "12"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-082",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🔺",
+        "🟡",
+        "🔺",
+        "🟡",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🔺"
+        },
+        {
+          "id": "option-2",
+          "label": "🟡"
+        },
+        {
+          "id": "option-3",
+          "label": "🌙"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-083",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🐶",
+        "🔵",
+        "🌙",
+        "🐶",
+        "🔵",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🐶"
+        },
+        {
+          "id": "option-2",
+          "label": "🔵"
+        },
+        {
+          "id": "option-3",
+          "label": "🌙"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-084",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "4",
+        "7",
+        "10",
+        "13",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "17"
+        },
+        {
+          "id": "option-2",
+          "label": "16"
+        },
+        {
+          "id": "option-3",
+          "label": "15"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-085",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🔴",
+        "🌙",
+        "🔴",
+        "🌙",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🔴"
+        },
+        {
+          "id": "option-2",
+          "label": "🌙"
+        },
+        {
+          "id": "option-3",
+          "label": "🟦"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-086",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🔵",
+        "⭐",
+        "🟦",
+        "🔵",
+        "⭐",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🔵"
+        },
+        {
+          "id": "option-2",
+          "label": "⭐"
+        },
+        {
+          "id": "option-3",
+          "label": "🟦"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-087",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "3",
+        "6",
+        "9",
+        "12",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "16"
+        },
+        {
+          "id": "option-2",
+          "label": "15"
+        },
+        {
+          "id": "option-3",
+          "label": "14"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-088",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🟢",
+        "🟦",
+        "🟢",
+        "🟦",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🟢"
+        },
+        {
+          "id": "option-2",
+          "label": "🟦"
+        },
+        {
+          "id": "option-3",
+          "label": "🐱"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-089",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "⭐",
+        "🍌",
+        "🐱",
+        "⭐",
+        "🍌",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "⭐"
+        },
+        {
+          "id": "option-2",
+          "label": "🍌"
+        },
+        {
+          "id": "option-3",
+          "label": "🐱"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-090",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "2",
+        "5",
+        "8",
+        "11",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "15"
+        },
+        {
+          "id": "option-2",
+          "label": "14"
+        },
+        {
+          "id": "option-3",
+          "label": "13"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-091",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🍎",
+        "🐱",
+        "🍎",
+        "🐱",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🍎"
+        },
+        {
+          "id": "option-2",
+          "label": "🐱"
+        },
+        {
+          "id": "option-3",
+          "label": "🟡"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-092",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🍌",
+        "🐶",
+        "🟡",
+        "🍌",
+        "🐶",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🍌"
+        },
+        {
+          "id": "option-2",
+          "label": "🐶"
+        },
+        {
+          "id": "option-3",
+          "label": "🟡"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-093",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "1",
+        "4",
+        "7",
+        "10",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "14"
+        },
+        {
+          "id": "option-2",
+          "label": "13"
+        },
+        {
+          "id": "option-3",
+          "label": "12"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-094",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🔺",
+        "🟡",
+        "🔺",
+        "🟡",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🔺"
+        },
+        {
+          "id": "option-2",
+          "label": "🟡"
+        },
+        {
+          "id": "option-3",
+          "label": "🌙"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-095",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🐶",
+        "🔵",
+        "🌙",
+        "🐶",
+        "🔵",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🐶"
+        },
+        {
+          "id": "option-2",
+          "label": "🔵"
+        },
+        {
+          "id": "option-3",
+          "label": "🌙"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-096",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "4",
+        "7",
+        "10",
+        "13",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "17"
+        },
+        {
+          "id": "option-2",
+          "label": "16"
+        },
+        {
+          "id": "option-3",
+          "label": "15"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-097",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🔴",
+        "🌙",
+        "🔴",
+        "🌙",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🔴"
+        },
+        {
+          "id": "option-2",
+          "label": "🌙"
+        },
+        {
+          "id": "option-3",
+          "label": "🟦"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-098",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🔵",
+        "⭐",
+        "🟦",
+        "🔵",
+        "⭐",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🔵"
+        },
+        {
+          "id": "option-2",
+          "label": "⭐"
+        },
+        {
+          "id": "option-3",
+          "label": "🟦"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-099",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "3",
+        "6",
+        "9",
+        "12",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "16"
+        },
+        {
+          "id": "option-2",
+          "label": "15"
+        },
+        {
+          "id": "option-3",
+          "label": "14"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-100",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🟢",
+        "🟦",
+        "🟢",
+        "🟦",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🟢"
+        },
+        {
+          "id": "option-2",
+          "label": "🟦"
+        },
+        {
+          "id": "option-3",
+          "label": "🐱"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-101",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "⭐",
+        "🍌",
+        "🐱",
+        "⭐",
+        "🍌",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "⭐"
+        },
+        {
+          "id": "option-2",
+          "label": "🍌"
+        },
+        {
+          "id": "option-3",
+          "label": "🐱"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-102",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "2",
+        "5",
+        "8",
+        "11",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "15"
+        },
+        {
+          "id": "option-2",
+          "label": "14"
+        },
+        {
+          "id": "option-3",
+          "label": "13"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-103",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🍎",
+        "🐱",
+        "🍎",
+        "🐱",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🍎"
+        },
+        {
+          "id": "option-2",
+          "label": "🐱"
+        },
+        {
+          "id": "option-3",
+          "label": "🟡"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-104",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🍌",
+        "🐶",
+        "🟡",
+        "🍌",
+        "🐶",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🍌"
+        },
+        {
+          "id": "option-2",
+          "label": "🐶"
+        },
+        {
+          "id": "option-3",
+          "label": "🟡"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-105",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "1",
+        "4",
+        "7",
+        "10",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "14"
+        },
+        {
+          "id": "option-2",
+          "label": "13"
+        },
+        {
+          "id": "option-3",
+          "label": "12"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-106",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🔺",
+        "🟡",
+        "🔺",
+        "🟡",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🔺"
+        },
+        {
+          "id": "option-2",
+          "label": "🟡"
+        },
+        {
+          "id": "option-3",
+          "label": "🌙"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-107",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🐶",
+        "🔵",
+        "🌙",
+        "🐶",
+        "🔵",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🐶"
+        },
+        {
+          "id": "option-2",
+          "label": "🔵"
+        },
+        {
+          "id": "option-3",
+          "label": "🌙"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "patterns-108",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "number-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "4",
+        "7",
+        "10",
+        "13",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "17"
+        },
+        {
+          "id": "option-2",
+          "label": "16"
+        },
+        {
+          "id": "option-3",
+          "label": "15"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "patterns-109",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "ab-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🔴",
+        "🌙",
+        "🔴",
+        "🌙",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🔴"
+        },
+        {
+          "id": "option-2",
+          "label": "🌙"
+        },
+        {
+          "id": "option-3",
+          "label": "🟦"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "patterns-110",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "abc-pattern",
+      "prompt": "מה משלים את הרצף?",
+      "sequence": [
+        "🔵",
+        "⭐",
+        "🟦",
+        "🔵",
+        "⭐",
+        "?"
+      ],
+      "audioText": "מה משלים את הרצף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "🔵"
+        },
+        {
+          "id": "option-2",
+          "label": "⭐"
+        },
+        {
+          "id": "option-3",
+          "label": "🟦"
+        }
+      ],
+      "correctOptionId": "option-3"
+    }
+  ]
+}

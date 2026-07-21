@@ -2,7 +2,7 @@ import { gameDefinitions } from '../data/games';
 import { GameId, LearnerSettings } from '../types';
 import { GameCard } from '../components/games/GameCard';
 import { ageOptions, difficultyOptions, getDefaultDifficultyByAge } from '../data/levels';
-import { useSpeech } from '../hooks/useSpeech';
+import { SelectField } from '../components/common/SelectField';
 
 interface HomePageProps {
   settings: LearnerSettings;
@@ -10,91 +10,48 @@ interface HomePageProps {
   onSelectGame: (gameId: GameId) => void;
 }
 
-const learningPathByAge: Record<LearnerSettings['age'], GameId[]> = {
-  3: ['colors', 'shapes', 'memory'],
-  4: ['letters', 'numbers', 'matching'],
-  5: ['letters', 'patterns', 'sorting'],
-  6: ['numbers', 'patterns', 'sorting']
-};
-
 export function HomePage({ settings, onSettingsChange, onSelectGame }: HomePageProps) {
-  const { getSpeakProps } = useSpeech(settings.voiceEnabled);
-  const recommendedPath = learningPathByAge[settings.age]
-    .map((gameId) => gameDefinitions.find((game) => game.id === gameId))
-    .filter((game): game is (typeof gameDefinitions)[number] => Boolean(game));
-
   function handleAgeChange(age: LearnerSettings['age']) {
-    onSettingsChange({
-      ...settings,
-      age,
-      difficulty: getDefaultDifficultyByAge(age)
-    });
+    onSettingsChange({ ...settings, age, difficulty: getDefaultDifficultyByAge(age) });
   }
 
   return (
     <section className="home-page">
-      <div className="settings-card settings-card--premium" aria-label="הגדרות משחק" {...getSpeakProps<HTMLDivElement>('כאן בוחרים גיל, רמת קושי והאם להפעיל קול הדרכה')}>
+      <section className="game-menu-heading" aria-labelledby="game-menu-title">
         <div>
-          <h2>לפני שמתחילים</h2>
-          <p>בחרו גיל, רמת קושי והאם להשמיע הוראות קוליות בכל האפליקציה.</p>
+          <span>8 עולמות למידה</span>
+          <h2 id="game-menu-title">בוחרים משחק ומתחילים</h2>
         </div>
 
-        <div className="settings-grid">
-          <label {...getSpeakProps<HTMLLabelElement>('בחירת גיל הילד או הילדה')}>
-            גיל הילד/ה
-            <select
-              value={settings.age}
-              onChange={(event) => handleAgeChange(Number(event.target.value) as LearnerSettings['age'])}
-            >
-              {ageOptions.map((age) => <option key={age} value={age}>{age}</option>)}
-            </select>
-          </label>
+        <div className="quick-settings" aria-label="הגדרות משחק">
+          <SelectField
+            id="learner-age"
+            label="גיל"
+            value={settings.age}
+            onChange={(event) => handleAgeChange(Number(event.target.value) as LearnerSettings['age'])}
+          >
+            {ageOptions.map((age) => <option key={age} value={age}>{age}</option>)}
+          </SelectField>
 
-          <label {...getSpeakProps<HTMLLabelElement>('בחירת רמת קושי')}>
-            רמת קושי
-            <select
-              value={settings.difficulty}
-              onChange={(event) => onSettingsChange({ ...settings, difficulty: event.target.value as LearnerSettings['difficulty'] })}
-            >
-              {difficultyOptions.map((difficulty) => <option key={difficulty.id} value={difficulty.id}>{difficulty.label}</option>)}
-            </select>
-          </label>
+          <SelectField
+            id="learner-difficulty"
+            label="רמה"
+            value={settings.difficulty}
+            onChange={(event) => onSettingsChange({ ...settings, difficulty: event.target.value as LearnerSettings['difficulty'] })}
+          >
+            {difficultyOptions.map((difficulty) => <option key={difficulty.id} value={difficulty.id}>{difficulty.label}</option>)}
+          </SelectField>
 
-          <label className="toggle-row" {...getSpeakProps<HTMLLabelElement>('הפעלת הוראות קוליות')}>
+          <label className="voice-toggle" htmlFor="learner-voice">
             <input
+              id="learner-voice"
               type="checkbox"
               checked={settings.voiceEnabled}
               onChange={(event) => onSettingsChange({ ...settings, voiceEnabled: event.target.checked })}
             />
-            הוראות קוליות
+            <span aria-hidden="true">🔊</span>
+            קול
           </label>
-        </div>
-      </div>
-
-      <section className="learning-path" aria-label="מסלול למידה מומלץ" {...getSpeakProps<HTMLElement>(`מסלול מומלץ לגיל ${settings.age}. שלוש תחנות קצרות לבניית ביטחון לפני קריאה`)}>
-        <div className="learning-path__intro">
-          <span className="learning-path__eyebrow">מסלול מומלץ</span>
-          <h2>שלוש תחנות קצרות לבניית ביטחון</h2>
-          <p>המסלול מתאים לגיל שבחרתם ומשלב זיהוי, חשיבה ומשחק עצמאי עם קול מנחה.</p>
-        </div>
-
-        <div className="learning-path__steps">
-          {recommendedPath.map((game, index) => (
-            <button
-              className={`learning-path__step learning-path__step--${game.accent}`}
-              key={game.id}
-              type="button"
-              onClick={() => onSelectGame(game.id)}
-              {...getSpeakProps<HTMLButtonElement>(`תחנה ${index + 1}: ${game.title}. ${game.description}`)}
-            >
-              <span className="learning-path__number">{index + 1}</span>
-              <span className="learning-path__icon" aria-hidden="true">{game.emoji}</span>
-              <span>
-                <strong>{game.title}</strong>
-                <small>{game.description}</small>
-              </span>
-            </button>
-          ))}
         </div>
       </section>
 

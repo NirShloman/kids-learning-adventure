@@ -13,18 +13,17 @@ export function AppShell({ title, subtitle, rightSlot, compact = false, children
   return (
     <div className={`app-shell ${compact ? 'app-shell--compact' : ''}`}>
       <header className="hero-card">
-        <div className="hero-card__content">
-          <div className="hero-card__brand-row">
-            <BrandLogo variant="mark" className="hero-card__logo-mark" decorative />
-            <span className="hero-card__eyebrow">אפליקציית למידה לילדים</span>
+        <div className="hero-card__identity">
+          <BrandLogo variant="mark" className="hero-card__logo-mark" decorative />
+          <div className="hero-card__content">
+            <span className="hero-card__eyebrow">לומדים בכיף</span>
+            <h1>{title}</h1>
+            <p>{subtitle}</p>
           </div>
-          <h1>{title}</h1>
-          <p>{subtitle}</p>
-          <AppVersion />
         </div>
         <div className="hero-card__side">
           {rightSlot}
-          <BrandLogo className="hero-card__side-logo" tagline="משחקי למידה בעברית" decorative />
+          <AppVersion />
         </div>
       </header>
       <main>{children}</main>
