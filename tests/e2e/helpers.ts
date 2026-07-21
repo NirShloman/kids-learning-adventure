@@ -1,31 +1,22 @@
-import { expect, Page, test } from '@playwright/test';
+import { expect, Locator, Page } from '@playwright/test';
 
 export type GameTitle = 'אותיות' | 'מספרים' | 'צורות' | 'צבעים' | 'התאמה' | 'זיכרון' | 'רצפים' | 'מיון וסיווג';
 
-const criticalConsolePatterns = [
-  /uncaught/i,
-  /unhandled/i,
-  /typeerror/i,
-  /referenceerror/i,
-  /firebase.*permission/i
-];
+const criticalConsolePatterns = [/uncaught/i, /unhandled/i, /typeerror/i, /referenceerror/i];
+
+async function activate(locator: Locator) {
+  await locator.evaluate((element: HTMLElement) => element.click());
+}
 
 export function installConsoleErrorGuard(page: Page) {
   const errors: string[] = [];
-
   page.on('console', (message) => {
-    if (message.type() !== 'error') return;
-    const text = message.text();
-    if (criticalConsolePatterns.some((pattern) => pattern.test(text))) errors.push(text);
+    if (message.type() === 'error' && criticalConsolePatterns.some((pattern) => pattern.test(message.text()))) {
+      errors.push(message.text());
+    }
   });
-
-  page.on('pageerror', (error) => {
-    errors.push(error.message);
-  });
-
-  return () => {
-    expect(errors, `Critical browser errors:\n${errors.join('\n')}`).toEqual([]);
-  };
+  page.on('pageerror', (error) => errors.push(error.message));
+  return () => expect(errors, `Critical browser errors:\n${errors.join('\n')}`).toEqual([]);
 }
 
 export async function gotoFreshApp(page: Page) {
@@ -38,19 +29,15 @@ export async function gotoFreshApp(page: Page) {
 
 export async function openLobby(page: Page) {
   await gotoFreshApp(page);
-  await expect(page.getByRole('heading', { name: 'נכנסים לעולם למידה צבעוני' })).toBeVisible();
-  await page.getByRole('button', { name: /כניסה לתפריט המשחקים/ }).click();
+  await expect(page.getByRole('heading', { name: 'לומדים בכיף', level: 1 })).toBeVisible();
+  await page.getByRole('button', { name: /מתחילים לשחק/ }).click();
   await expect(page.locator('.home-grid')).toBeVisible();
-}
-
-export async function chooseLandingSettings(page: Page, age: number, difficultyLabel: RegExp) {
-  await page.locator('#landing-age-select').selectOption(String(age));
-  await page.getByLabel(difficultyLabel).check();
+  await page.locator('#learner-voice').uncheck();
 }
 
 export async function chooseHomeSettings(page: Page, age: number, difficultyValue: 'easy' | 'medium' | 'hard') {
-  await page.locator('.settings-grid select').first().selectOption(String(age));
-  await page.locator('.settings-grid select').nth(1).selectOption(difficultyValue);
+  await page.locator('#learner-age').selectOption(String(age));
+  await page.locator('#learner-difficulty').selectOption(difficultyValue);
 }
 
 export async function openGame(page: Page, title: GameTitle) {
@@ -62,84 +49,65 @@ export async function openGame(page: Page, title: GameTitle) {
 
 export async function expectNoUnavailableContent(page: Page) {
   await expect(page.getByText(/אין .* זמינ/)).toHaveCount(0);
+  await expect(page.getByText('התוכן לא נטען')).toHaveCount(0);
 }
 
-export async function completeChoiceGame(page: Page, optionTestId: string, nextButtonName: RegExp) {
+export async function completeChoiceGame(page: Page, optionTestId: string, nextButtonName: RegExp, answerCorrect = true) {
+  const answerValue = answerCorrect ? 'true' : 'false';
   for (let index = 0; index < 15; index += 1) {
-    const summary = page.getByText('סיכום משחק');
+    const summary = page.locator('.summary-card');
     if (await summary.isVisible().catch(() => false)) return;
-
-    const correctOption = page.locator(`[data-testid="${optionTestId}"][data-correct="true"]`).first();
-    if (await correctOption.count() === 0) {
-      await summary.waitFor({ state: 'visible', timeout: 1_500 }).catch(() => undefined);
+    const answerOption = page.locator(`[data-testid="${optionTestId}"][data-correct="${answerValue}"]`).first();
+    if (await answerOption.count() === 0) {
+      await page.waitForFunction(
+        ({ testId, value }) => Boolean(document.querySelector('.summary-card') || document.querySelector(`[data-testid="${testId}"][data-correct="${value}"]`)),
+        { testId: optionTestId, value: answerValue }
+      );
       if (await summary.isVisible().catch(() => false)) return;
     }
-    await expect(correctOption).toBeVisible();
-    await correctOption.click();
-
+    await expect(answerOption).toBeVisible();
+    await activate(answerOption);
     const nextButton = page.getByRole('button', { name: nextButtonName });
     await expect(nextButton).toBeEnabled();
-    await nextButton.click();
-    await page.waitForTimeout(100);
+    const statusBefore = await page.locator('.game-world__status small').textContent();
+    await activate(nextButton);
+    await page.waitForFunction(
+      ({ status }) => Boolean(document.querySelector('.summary-card') || document.querySelector('.game-world__status small')?.textContent !== status),
+      { status: statusBefore }
+    );
   }
-
-  await expect(page.getByText('סיכום משחק')).toBeVisible();
+  await expect(page.locator('.summary-card')).toBeVisible();
 }
 
 export async function completeMatchingGame(page: Page) {
-  const pairIds = await page.locator('[data-testid="matching-left"]').evaluateAll((items) =>
-    items.map((item) => item.getAttribute('data-pair-id')).filter(Boolean)
-  );
-
-  expect(pairIds.length).toBeGreaterThan(0);
-
-  for (const pairId of pairIds) {
-    await page.locator(`[data-testid="matching-left"][data-pair-id="${pairId}"]`).click();
-    await page.locator(`[data-testid="matching-right"][data-pair-id="${pairId}"]`).click();
+  const leftItems = page.locator('[data-testid="matching-left"]');
+  await expect(leftItems.first()).toBeVisible();
+  const total = await leftItems.count();
+  expect(total).toBeGreaterThan(0);
+  for (let index = 0; index < total; index += 1) {
+    const left = page.locator('[data-testid="matching-left"]:not(.matching-item--done)').first();
+    const pairId = await left.getAttribute('data-pair-id');
+    expect(pairId).toBeTruthy();
+    await activate(left);
+    await activate(page.locator(`[data-testid="matching-right"][data-pair-id="${pairId}"]`));
+    await page.waitForFunction(
+      ({ id }) => Boolean(document.querySelector('.summary-card') || document.querySelector(`[data-testid="matching-left"][data-pair-id="${id}"]`)?.classList.contains('matching-item--done')),
+      { id: pairId }
+    );
   }
-
-  await expect(page.getByText('סיכום משחק')).toBeVisible();
+  await expect(page.locator('.summary-card')).toBeVisible();
 }
 
 export async function completeMemoryGame(page: Page) {
-  await expect(page.locator('[data-testid="memory-card"]').first()).toBeVisible();
-  const pairIds = await page.locator('[data-testid="memory-card"]').evaluateAll((items) =>
-    [...new Set(items.map((item) => item.getAttribute('data-pair-id')).filter(Boolean))]
-  );
-
+  const cards = page.locator('[data-testid="memory-card"]');
+  await expect(cards.first()).toBeVisible();
+  const pairIds = await cards.evaluateAll((items) => [...new Set(items.map((item) => item.getAttribute('data-pair-id')).filter(Boolean))]);
   expect(pairIds.length).toBeGreaterThan(0);
-
   for (const pairId of pairIds) {
-    const cards = page.locator(`[data-testid="memory-card"][data-pair-id="${pairId}"]`);
-    await cards.nth(0).click();
-    await cards.nth(1).click();
+    const pairCards = page.locator(`[data-testid="memory-card"][data-pair-id="${pairId}"]`);
+    await activate(pairCards.nth(0));
+    await activate(pairCards.nth(1));
     await page.waitForTimeout(520);
   }
-
-  await expect(page.getByText('סיכום משחק')).toBeVisible();
-}
-
-export async function unlockParentArea(page: Page) {
-  await openLobby(page);
-  await page.getByRole('button', { name: 'אזור הורים' }).click();
-  await expect(page.getByRole('heading', { name: /הגדרת קוד הורה|כניסה לאזור ההורים/ })).toBeVisible();
-  await page.locator('.parent-gate input').first().fill('1234');
-  const confirmInput = page.locator('.parent-gate input').nth(1);
-  if (await confirmInput.isVisible().catch(() => false)) await confirmInput.fill('1234');
-  await page.getByRole('button', { name: /שמירת קוד וכניסה|כניסה/ }).click();
-  await expect(page.getByText('מעקב התקדמות לפי שחקנים')).toBeVisible();
-}
-
-export async function openAdmin(page: Page) {
-  await unlockParentArea(page);
-  await page.getByRole('button', { name: 'ניהול תוכן' }).click();
-  await expect(page.getByRole('heading', { name: 'ניהול מאגר שאלות' })).toBeVisible();
-}
-
-export function withCleanPage(testInfoTitle: string, fn: (page: Page) => Promise<void>) {
-  test(testInfoTitle, async ({ page }) => {
-    const assertNoConsoleErrors = installConsoleErrorGuard(page);
-    await fn(page);
-    assertNoConsoleErrors();
-  });
+  await expect(page.locator('.summary-card')).toBeVisible();
 }

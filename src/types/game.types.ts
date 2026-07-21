@@ -26,19 +26,14 @@ export interface LearnerSettings {
   voiceEnabled: boolean;
 }
 
-export interface PlayerProfile {
-  id: string;
-  ownerId?: string;
-  name: string;
-  age: Age;
-  difficulty: Difficulty;
-  createdAt: string;
+export interface LocalLearnerState extends LearnerSettings {
+  schemaVersion: 1;
+  migratedFromLegacy: boolean;
+  updatedAt: string;
 }
 
-export interface GameSession {
+export interface LocalGameSession {
   id: string;
-  ownerId?: string;
-  playerId: string;
   gameId: GameId;
   gameTitle: string;
   age: Age;
@@ -47,5 +42,4 @@ export interface GameSession {
   total: number;
   stars: number;
   completedAt: string;
-  syncStatus?: 'local' | 'pending' | 'synced';
 }

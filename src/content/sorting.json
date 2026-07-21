@@ -1,0 +1,3417 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": "2026.07.1",
+  "gameId": "sorting",
+  "items": [
+    {
+      "id": "sorting-001",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך תפוח?",
+      "item": "🍎",
+      "itemName": "תפוח",
+      "audioText": "לאיזו קבוצה שייך תפוח?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "פירות",
+          "emoji": "🍎"
+        },
+        {
+          "id": "option-2",
+          "label": "בגדים",
+          "emoji": "👕"
+        },
+        {
+          "id": "option-3",
+          "label": "מזג אוויר",
+          "emoji": "☀️"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-002",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך בננה?",
+      "item": "🍌",
+      "itemName": "בננה",
+      "audioText": "לאיזו קבוצה שייך בננה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בגדים",
+          "emoji": "👕"
+        },
+        {
+          "id": "option-2",
+          "label": "מזג אוויר",
+          "emoji": "☀️"
+        },
+        {
+          "id": "option-3",
+          "label": "פירות",
+          "emoji": "🍎"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-003",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך ענבים?",
+      "item": "🍇",
+      "itemName": "ענבים",
+      "audioText": "לאיזו קבוצה שייך ענבים?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "מזג אוויר",
+          "emoji": "☀️"
+        },
+        {
+          "id": "option-2",
+          "label": "פירות",
+          "emoji": "🍎"
+        },
+        {
+          "id": "option-3",
+          "label": "בגדים",
+          "emoji": "👕"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-004",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך תות?",
+      "item": "🍓",
+      "itemName": "תות",
+      "audioText": "לאיזו קבוצה שייך תות?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "פירות",
+          "emoji": "🍎"
+        },
+        {
+          "id": "option-2",
+          "label": "בגדים",
+          "emoji": "👕"
+        },
+        {
+          "id": "option-3",
+          "label": "מזג אוויר",
+          "emoji": "☀️"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-005",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך אבטיח?",
+      "item": "🍉",
+      "itemName": "אבטיח",
+      "audioText": "לאיזו קבוצה שייך אבטיח?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בגדים",
+          "emoji": "👕"
+        },
+        {
+          "id": "option-2",
+          "label": "מזג אוויר",
+          "emoji": "☀️"
+        },
+        {
+          "id": "option-3",
+          "label": "פירות",
+          "emoji": "🍎"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-006",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך אגס?",
+      "item": "🍐",
+      "itemName": "אגס",
+      "audioText": "לאיזו קבוצה שייך אגס?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "מזג אוויר",
+          "emoji": "☀️"
+        },
+        {
+          "id": "option-2",
+          "label": "פירות",
+          "emoji": "🍎"
+        },
+        {
+          "id": "option-3",
+          "label": "בגדים",
+          "emoji": "👕"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-007",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך אפרסק?",
+      "item": "🍑",
+      "itemName": "אפרסק",
+      "audioText": "לאיזו קבוצה שייך אפרסק?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "פירות",
+          "emoji": "🍎"
+        },
+        {
+          "id": "option-2",
+          "label": "בגדים",
+          "emoji": "👕"
+        },
+        {
+          "id": "option-3",
+          "label": "מזג אוויר",
+          "emoji": "☀️"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-008",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך דובדבנים?",
+      "item": "🍒",
+      "itemName": "דובדבנים",
+      "audioText": "לאיזו קבוצה שייך דובדבנים?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בגדים",
+          "emoji": "👕"
+        },
+        {
+          "id": "option-2",
+          "label": "מזג אוויר",
+          "emoji": "☀️"
+        },
+        {
+          "id": "option-3",
+          "label": "פירות",
+          "emoji": "🍎"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-009",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך אננס?",
+      "item": "🍍",
+      "itemName": "אננס",
+      "audioText": "לאיזו קבוצה שייך אננס?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "מזג אוויר",
+          "emoji": "☀️"
+        },
+        {
+          "id": "option-2",
+          "label": "פירות",
+          "emoji": "🍎"
+        },
+        {
+          "id": "option-3",
+          "label": "בגדים",
+          "emoji": "👕"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-010",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך תפוז?",
+      "item": "🍊",
+      "itemName": "תפוז",
+      "audioText": "לאיזו קבוצה שייך תפוז?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "פירות",
+          "emoji": "🍎"
+        },
+        {
+          "id": "option-2",
+          "label": "בגדים",
+          "emoji": "👕"
+        },
+        {
+          "id": "option-3",
+          "label": "מזג אוויר",
+          "emoji": "☀️"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-011",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך גזר?",
+      "item": "🥕",
+      "itemName": "גזר",
+      "audioText": "לאיזו קבוצה שייך גזר?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "רהיטים",
+          "emoji": "🪑"
+        },
+        {
+          "id": "option-2",
+          "label": "צמחים",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-3",
+          "label": "ירקות",
+          "emoji": "🥕"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-012",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך עגבנייה?",
+      "item": "🍅",
+      "itemName": "עגבנייה",
+      "audioText": "לאיזו קבוצה שייך עגבנייה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צמחים",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-2",
+          "label": "ירקות",
+          "emoji": "🥕"
+        },
+        {
+          "id": "option-3",
+          "label": "רהיטים",
+          "emoji": "🪑"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-013",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך מלפפון?",
+      "item": "🥒",
+      "itemName": "מלפפון",
+      "audioText": "לאיזו קבוצה שייך מלפפון?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ירקות",
+          "emoji": "🥕"
+        },
+        {
+          "id": "option-2",
+          "label": "רהיטים",
+          "emoji": "🪑"
+        },
+        {
+          "id": "option-3",
+          "label": "צמחים",
+          "emoji": "🌸"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-014",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך תירס?",
+      "item": "🌽",
+      "itemName": "תירס",
+      "audioText": "לאיזו קבוצה שייך תירס?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "רהיטים",
+          "emoji": "🪑"
+        },
+        {
+          "id": "option-2",
+          "label": "צמחים",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-3",
+          "label": "ירקות",
+          "emoji": "🥕"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-015",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך פלפל?",
+      "item": "🫑",
+      "itemName": "פלפל",
+      "audioText": "לאיזו קבוצה שייך פלפל?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צמחים",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-2",
+          "label": "ירקות",
+          "emoji": "🥕"
+        },
+        {
+          "id": "option-3",
+          "label": "רהיטים",
+          "emoji": "🪑"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-016",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך ברוקולי?",
+      "item": "🥦",
+      "itemName": "ברוקולי",
+      "audioText": "לאיזו קבוצה שייך ברוקולי?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ירקות",
+          "emoji": "🥕"
+        },
+        {
+          "id": "option-2",
+          "label": "רהיטים",
+          "emoji": "🪑"
+        },
+        {
+          "id": "option-3",
+          "label": "צמחים",
+          "emoji": "🌸"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-017",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך בצל?",
+      "item": "🧅",
+      "itemName": "בצל",
+      "audioText": "לאיזו קבוצה שייך בצל?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "רהיטים",
+          "emoji": "🪑"
+        },
+        {
+          "id": "option-2",
+          "label": "צמחים",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-3",
+          "label": "ירקות",
+          "emoji": "🥕"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-018",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך תפוח אדמה?",
+      "item": "🥔",
+      "itemName": "תפוח אדמה",
+      "audioText": "לאיזו קבוצה שייך תפוח אדמה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צמחים",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-2",
+          "label": "ירקות",
+          "emoji": "🥕"
+        },
+        {
+          "id": "option-3",
+          "label": "רהיטים",
+          "emoji": "🪑"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-019",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך חציל?",
+      "item": "🍆",
+      "itemName": "חציל",
+      "audioText": "לאיזו קבוצה שייך חציל?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ירקות",
+          "emoji": "🥕"
+        },
+        {
+          "id": "option-2",
+          "label": "רהיטים",
+          "emoji": "🪑"
+        },
+        {
+          "id": "option-3",
+          "label": "צמחים",
+          "emoji": "🌸"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-020",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך חסה?",
+      "item": "🥬",
+      "itemName": "חסה",
+      "audioText": "לאיזו קבוצה שייך חסה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "רהיטים",
+          "emoji": "🪑"
+        },
+        {
+          "id": "option-2",
+          "label": "צמחים",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-3",
+          "label": "ירקות",
+          "emoji": "🥕"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-021",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך כלב?",
+      "item": "🐶",
+      "itemName": "כלב",
+      "audioText": "לאיזו קבוצה שייך כלב?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צעצועים",
+          "emoji": "⚽"
+        },
+        {
+          "id": "option-2",
+          "label": "חיות",
+          "emoji": "🐶"
+        },
+        {
+          "id": "option-3",
+          "label": "דברי לימוד",
+          "emoji": "📘"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-022",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך חתול?",
+      "item": "🐱",
+      "itemName": "חתול",
+      "audioText": "לאיזו קבוצה שייך חתול?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "חיות",
+          "emoji": "🐶"
+        },
+        {
+          "id": "option-2",
+          "label": "דברי לימוד",
+          "emoji": "📘"
+        },
+        {
+          "id": "option-3",
+          "label": "צעצועים",
+          "emoji": "⚽"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-023",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך אריה?",
+      "item": "🦁",
+      "itemName": "אריה",
+      "audioText": "לאיזו קבוצה שייך אריה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "דברי לימוד",
+          "emoji": "📘"
+        },
+        {
+          "id": "option-2",
+          "label": "צעצועים",
+          "emoji": "⚽"
+        },
+        {
+          "id": "option-3",
+          "label": "חיות",
+          "emoji": "🐶"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-024",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך פיל?",
+      "item": "🐘",
+      "itemName": "פיל",
+      "audioText": "לאיזו קבוצה שייך פיל?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צעצועים",
+          "emoji": "⚽"
+        },
+        {
+          "id": "option-2",
+          "label": "חיות",
+          "emoji": "🐶"
+        },
+        {
+          "id": "option-3",
+          "label": "דברי לימוד",
+          "emoji": "📘"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-025",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך קוף?",
+      "item": "🐒",
+      "itemName": "קוף",
+      "audioText": "לאיזו קבוצה שייך קוף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "חיות",
+          "emoji": "🐶"
+        },
+        {
+          "id": "option-2",
+          "label": "דברי לימוד",
+          "emoji": "📘"
+        },
+        {
+          "id": "option-3",
+          "label": "צעצועים",
+          "emoji": "⚽"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-026",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך דג?",
+      "item": "🐟",
+      "itemName": "דג",
+      "audioText": "לאיזו קבוצה שייך דג?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "דברי לימוד",
+          "emoji": "📘"
+        },
+        {
+          "id": "option-2",
+          "label": "צעצועים",
+          "emoji": "⚽"
+        },
+        {
+          "id": "option-3",
+          "label": "חיות",
+          "emoji": "🐶"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-027",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך ציפור?",
+      "item": "🐦",
+      "itemName": "ציפור",
+      "audioText": "לאיזו קבוצה שייך ציפור?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צעצועים",
+          "emoji": "⚽"
+        },
+        {
+          "id": "option-2",
+          "label": "חיות",
+          "emoji": "🐶"
+        },
+        {
+          "id": "option-3",
+          "label": "דברי לימוד",
+          "emoji": "📘"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-028",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך צב?",
+      "item": "🐢",
+      "itemName": "צב",
+      "audioText": "לאיזו קבוצה שייך צב?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "חיות",
+          "emoji": "🐶"
+        },
+        {
+          "id": "option-2",
+          "label": "דברי לימוד",
+          "emoji": "📘"
+        },
+        {
+          "id": "option-3",
+          "label": "צעצועים",
+          "emoji": "⚽"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-029",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך ארנב?",
+      "item": "🐰",
+      "itemName": "ארנב",
+      "audioText": "לאיזו קבוצה שייך ארנב?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "דברי לימוד",
+          "emoji": "📘"
+        },
+        {
+          "id": "option-2",
+          "label": "צעצועים",
+          "emoji": "⚽"
+        },
+        {
+          "id": "option-3",
+          "label": "חיות",
+          "emoji": "🐶"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-030",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך פרפר?",
+      "item": "🦋",
+      "itemName": "פרפר",
+      "audioText": "לאיזו קבוצה שייך פרפר?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צעצועים",
+          "emoji": "⚽"
+        },
+        {
+          "id": "option-2",
+          "label": "חיות",
+          "emoji": "🐶"
+        },
+        {
+          "id": "option-3",
+          "label": "דברי לימוד",
+          "emoji": "📘"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-031",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך מכונית?",
+      "item": "🚗",
+      "itemName": "מכונית",
+      "audioText": "לאיזו קבוצה שייך מכונית?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כלי תחבורה",
+          "emoji": "🚗"
+        },
+        {
+          "id": "option-2",
+          "label": "כלי נגינה",
+          "emoji": "🎸"
+        },
+        {
+          "id": "option-3",
+          "label": "כלי מטבח",
+          "emoji": "🥤"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-032",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך אוטובוס?",
+      "item": "🚌",
+      "itemName": "אוטובוס",
+      "audioText": "לאיזו קבוצה שייך אוטובוס?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כלי נגינה",
+          "emoji": "🎸"
+        },
+        {
+          "id": "option-2",
+          "label": "כלי מטבח",
+          "emoji": "🥤"
+        },
+        {
+          "id": "option-3",
+          "label": "כלי תחבורה",
+          "emoji": "🚗"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-033",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך רכבת?",
+      "item": "🚂",
+      "itemName": "רכבת",
+      "audioText": "לאיזו קבוצה שייך רכבת?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כלי מטבח",
+          "emoji": "🥤"
+        },
+        {
+          "id": "option-2",
+          "label": "כלי תחבורה",
+          "emoji": "🚗"
+        },
+        {
+          "id": "option-3",
+          "label": "כלי נגינה",
+          "emoji": "🎸"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-034",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך אופניים?",
+      "item": "🚲",
+      "itemName": "אופניים",
+      "audioText": "לאיזו קבוצה שייך אופניים?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כלי תחבורה",
+          "emoji": "🚗"
+        },
+        {
+          "id": "option-2",
+          "label": "כלי נגינה",
+          "emoji": "🎸"
+        },
+        {
+          "id": "option-3",
+          "label": "כלי מטבח",
+          "emoji": "🥤"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-035",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך מטוס?",
+      "item": "✈️",
+      "itemName": "מטוס",
+      "audioText": "לאיזו קבוצה שייך מטוס?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כלי נגינה",
+          "emoji": "🎸"
+        },
+        {
+          "id": "option-2",
+          "label": "כלי מטבח",
+          "emoji": "🥤"
+        },
+        {
+          "id": "option-3",
+          "label": "כלי תחבורה",
+          "emoji": "🚗"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-036",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך סירה?",
+      "item": "⛵",
+      "itemName": "סירה",
+      "audioText": "לאיזו קבוצה שייך סירה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כלי מטבח",
+          "emoji": "🥤"
+        },
+        {
+          "id": "option-2",
+          "label": "כלי תחבורה",
+          "emoji": "🚗"
+        },
+        {
+          "id": "option-3",
+          "label": "כלי נגינה",
+          "emoji": "🎸"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-037",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך משאית?",
+      "item": "🚚",
+      "itemName": "משאית",
+      "audioText": "לאיזו קבוצה שייך משאית?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כלי תחבורה",
+          "emoji": "🚗"
+        },
+        {
+          "id": "option-2",
+          "label": "כלי נגינה",
+          "emoji": "🎸"
+        },
+        {
+          "id": "option-3",
+          "label": "כלי מטבח",
+          "emoji": "🥤"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-038",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך מונית?",
+      "item": "🚕",
+      "itemName": "מונית",
+      "audioText": "לאיזו קבוצה שייך מונית?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כלי נגינה",
+          "emoji": "🎸"
+        },
+        {
+          "id": "option-2",
+          "label": "כלי מטבח",
+          "emoji": "🥤"
+        },
+        {
+          "id": "option-3",
+          "label": "כלי תחבורה",
+          "emoji": "🚗"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-039",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך טרקטור?",
+      "item": "🚜",
+      "itemName": "טרקטור",
+      "audioText": "לאיזו קבוצה שייך טרקטור?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כלי מטבח",
+          "emoji": "🥤"
+        },
+        {
+          "id": "option-2",
+          "label": "כלי תחבורה",
+          "emoji": "🚗"
+        },
+        {
+          "id": "option-3",
+          "label": "כלי נגינה",
+          "emoji": "🎸"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-040",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך קורקינט?",
+      "item": "🛴",
+      "itemName": "קורקינט",
+      "audioText": "לאיזו קבוצה שייך קורקינט?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כלי תחבורה",
+          "emoji": "🚗"
+        },
+        {
+          "id": "option-2",
+          "label": "כלי נגינה",
+          "emoji": "🎸"
+        },
+        {
+          "id": "option-3",
+          "label": "כלי מטבח",
+          "emoji": "🥤"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-041",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך חולצה?",
+      "item": "👕",
+      "itemName": "חולצה",
+      "audioText": "לאיזו קבוצה שייך חולצה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "מזג אוויר",
+          "emoji": "☀️"
+        },
+        {
+          "id": "option-2",
+          "label": "פירות",
+          "emoji": "🍎"
+        },
+        {
+          "id": "option-3",
+          "label": "בגדים",
+          "emoji": "👕"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-042",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך מכנסיים?",
+      "item": "👖",
+      "itemName": "מכנסיים",
+      "audioText": "לאיזו קבוצה שייך מכנסיים?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "פירות",
+          "emoji": "🍎"
+        },
+        {
+          "id": "option-2",
+          "label": "בגדים",
+          "emoji": "👕"
+        },
+        {
+          "id": "option-3",
+          "label": "מזג אוויר",
+          "emoji": "☀️"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-043",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך שמלה?",
+      "item": "👗",
+      "itemName": "שמלה",
+      "audioText": "לאיזו קבוצה שייך שמלה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בגדים",
+          "emoji": "👕"
+        },
+        {
+          "id": "option-2",
+          "label": "מזג אוויר",
+          "emoji": "☀️"
+        },
+        {
+          "id": "option-3",
+          "label": "פירות",
+          "emoji": "🍎"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-044",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך גרב?",
+      "item": "🧦",
+      "itemName": "גרב",
+      "audioText": "לאיזו קבוצה שייך גרב?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "מזג אוויר",
+          "emoji": "☀️"
+        },
+        {
+          "id": "option-2",
+          "label": "פירות",
+          "emoji": "🍎"
+        },
+        {
+          "id": "option-3",
+          "label": "בגדים",
+          "emoji": "👕"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-045",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך נעל?",
+      "item": "👟",
+      "itemName": "נעל",
+      "audioText": "לאיזו קבוצה שייך נעל?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "פירות",
+          "emoji": "🍎"
+        },
+        {
+          "id": "option-2",
+          "label": "בגדים",
+          "emoji": "👕"
+        },
+        {
+          "id": "option-3",
+          "label": "מזג אוויר",
+          "emoji": "☀️"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-046",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך כובע?",
+      "item": "🧢",
+      "itemName": "כובע",
+      "audioText": "לאיזו קבוצה שייך כובע?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בגדים",
+          "emoji": "👕"
+        },
+        {
+          "id": "option-2",
+          "label": "מזג אוויר",
+          "emoji": "☀️"
+        },
+        {
+          "id": "option-3",
+          "label": "פירות",
+          "emoji": "🍎"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-047",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך מעיל?",
+      "item": "🧥",
+      "itemName": "מעיל",
+      "audioText": "לאיזו קבוצה שייך מעיל?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "מזג אוויר",
+          "emoji": "☀️"
+        },
+        {
+          "id": "option-2",
+          "label": "פירות",
+          "emoji": "🍎"
+        },
+        {
+          "id": "option-3",
+          "label": "בגדים",
+          "emoji": "👕"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-048",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך כפפה?",
+      "item": "🧤",
+      "itemName": "כפפה",
+      "audioText": "לאיזו קבוצה שייך כפפה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "פירות",
+          "emoji": "🍎"
+        },
+        {
+          "id": "option-2",
+          "label": "בגדים",
+          "emoji": "👕"
+        },
+        {
+          "id": "option-3",
+          "label": "מזג אוויר",
+          "emoji": "☀️"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-049",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך צעיף?",
+      "item": "🧣",
+      "itemName": "צעיף",
+      "audioText": "לאיזו קבוצה שייך צעיף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בגדים",
+          "emoji": "👕"
+        },
+        {
+          "id": "option-2",
+          "label": "מזג אוויר",
+          "emoji": "☀️"
+        },
+        {
+          "id": "option-3",
+          "label": "פירות",
+          "emoji": "🍎"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-050",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך סנדל?",
+      "item": "🩴",
+      "itemName": "סנדל",
+      "audioText": "לאיזו קבוצה שייך סנדל?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "מזג אוויר",
+          "emoji": "☀️"
+        },
+        {
+          "id": "option-2",
+          "label": "פירות",
+          "emoji": "🍎"
+        },
+        {
+          "id": "option-3",
+          "label": "בגדים",
+          "emoji": "👕"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-051",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך כיסא?",
+      "item": "🪑",
+      "itemName": "כיסא",
+      "audioText": "לאיזו קבוצה שייך כיסא?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ירקות",
+          "emoji": "🥕"
+        },
+        {
+          "id": "option-2",
+          "label": "רהיטים",
+          "emoji": "🪑"
+        },
+        {
+          "id": "option-3",
+          "label": "צמחים",
+          "emoji": "🌸"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-052",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך מיטה?",
+      "item": "🛏️",
+      "itemName": "מיטה",
+      "audioText": "לאיזו קבוצה שייך מיטה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "רהיטים",
+          "emoji": "🪑"
+        },
+        {
+          "id": "option-2",
+          "label": "צמחים",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-3",
+          "label": "ירקות",
+          "emoji": "🥕"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-053",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך ספה?",
+      "item": "🛋️",
+      "itemName": "ספה",
+      "audioText": "לאיזו קבוצה שייך ספה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צמחים",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-2",
+          "label": "ירקות",
+          "emoji": "🥕"
+        },
+        {
+          "id": "option-3",
+          "label": "רהיטים",
+          "emoji": "🪑"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-054",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך שולחן?",
+      "item": "▰",
+      "itemName": "שולחן",
+      "audioText": "לאיזו קבוצה שייך שולחן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ירקות",
+          "emoji": "🥕"
+        },
+        {
+          "id": "option-2",
+          "label": "רהיטים",
+          "emoji": "🪑"
+        },
+        {
+          "id": "option-3",
+          "label": "צמחים",
+          "emoji": "🌸"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-055",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך ארון?",
+      "item": "🚪",
+      "itemName": "ארון",
+      "audioText": "לאיזו קבוצה שייך ארון?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "רהיטים",
+          "emoji": "🪑"
+        },
+        {
+          "id": "option-2",
+          "label": "צמחים",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-3",
+          "label": "ירקות",
+          "emoji": "🥕"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-056",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך מדף?",
+      "item": "📚",
+      "itemName": "מדף",
+      "audioText": "לאיזו קבוצה שייך מדף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צמחים",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-2",
+          "label": "ירקות",
+          "emoji": "🥕"
+        },
+        {
+          "id": "option-3",
+          "label": "רהיטים",
+          "emoji": "🪑"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-057",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך מנורה?",
+      "item": "🛋",
+      "itemName": "מנורה",
+      "audioText": "לאיזו קבוצה שייך מנורה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ירקות",
+          "emoji": "🥕"
+        },
+        {
+          "id": "option-2",
+          "label": "רהיטים",
+          "emoji": "🪑"
+        },
+        {
+          "id": "option-3",
+          "label": "צמחים",
+          "emoji": "🌸"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-058",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך שרפרף?",
+      "item": "🪑",
+      "itemName": "שרפרף",
+      "audioText": "לאיזו קבוצה שייך שרפרף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "רהיטים",
+          "emoji": "🪑"
+        },
+        {
+          "id": "option-2",
+          "label": "צמחים",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-3",
+          "label": "ירקות",
+          "emoji": "🥕"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-059",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך שידה?",
+      "item": "🗄️",
+      "itemName": "שידה",
+      "audioText": "לאיזו קבוצה שייך שידה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צמחים",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-2",
+          "label": "ירקות",
+          "emoji": "🥕"
+        },
+        {
+          "id": "option-3",
+          "label": "רהיטים",
+          "emoji": "🪑"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-060",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך ערסל?",
+      "item": "🛏",
+      "itemName": "ערסל",
+      "audioText": "לאיזו קבוצה שייך ערסל?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ירקות",
+          "emoji": "🥕"
+        },
+        {
+          "id": "option-2",
+          "label": "רהיטים",
+          "emoji": "🪑"
+        },
+        {
+          "id": "option-3",
+          "label": "צמחים",
+          "emoji": "🌸"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-061",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך ספר?",
+      "item": "📘",
+      "itemName": "ספר",
+      "audioText": "לאיזו קבוצה שייך ספר?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "דברי לימוד",
+          "emoji": "📘"
+        },
+        {
+          "id": "option-2",
+          "label": "צעצועים",
+          "emoji": "⚽"
+        },
+        {
+          "id": "option-3",
+          "label": "חיות",
+          "emoji": "🐶"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-062",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך עיפרון?",
+      "item": "✏️",
+      "itemName": "עיפרון",
+      "audioText": "לאיזו קבוצה שייך עיפרון?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צעצועים",
+          "emoji": "⚽"
+        },
+        {
+          "id": "option-2",
+          "label": "חיות",
+          "emoji": "🐶"
+        },
+        {
+          "id": "option-3",
+          "label": "דברי לימוד",
+          "emoji": "📘"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-063",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך מחברת?",
+      "item": "📓",
+      "itemName": "מחברת",
+      "audioText": "לאיזו קבוצה שייך מחברת?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "חיות",
+          "emoji": "🐶"
+        },
+        {
+          "id": "option-2",
+          "label": "דברי לימוד",
+          "emoji": "📘"
+        },
+        {
+          "id": "option-3",
+          "label": "צעצועים",
+          "emoji": "⚽"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-064",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך סרגל?",
+      "item": "📏",
+      "itemName": "סרגל",
+      "audioText": "לאיזו קבוצה שייך סרגל?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "דברי לימוד",
+          "emoji": "📘"
+        },
+        {
+          "id": "option-2",
+          "label": "צעצועים",
+          "emoji": "⚽"
+        },
+        {
+          "id": "option-3",
+          "label": "חיות",
+          "emoji": "🐶"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-065",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך מספריים?",
+      "item": "✂️",
+      "itemName": "מספריים",
+      "audioText": "לאיזו קבוצה שייך מספריים?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צעצועים",
+          "emoji": "⚽"
+        },
+        {
+          "id": "option-2",
+          "label": "חיות",
+          "emoji": "🐶"
+        },
+        {
+          "id": "option-3",
+          "label": "דברי לימוד",
+          "emoji": "📘"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-066",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך ילקוט?",
+      "item": "🎒",
+      "itemName": "ילקוט",
+      "audioText": "לאיזו קבוצה שייך ילקוט?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "חיות",
+          "emoji": "🐶"
+        },
+        {
+          "id": "option-2",
+          "label": "דברי לימוד",
+          "emoji": "📘"
+        },
+        {
+          "id": "option-3",
+          "label": "צעצועים",
+          "emoji": "⚽"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-067",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך מחק?",
+      "item": "⬜",
+      "itemName": "מחק",
+      "audioText": "לאיזו קבוצה שייך מחק?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "דברי לימוד",
+          "emoji": "📘"
+        },
+        {
+          "id": "option-2",
+          "label": "צעצועים",
+          "emoji": "⚽"
+        },
+        {
+          "id": "option-3",
+          "label": "חיות",
+          "emoji": "🐶"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-068",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך צבע?",
+      "item": "🖍️",
+      "itemName": "צבע",
+      "audioText": "לאיזו קבוצה שייך צבע?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צעצועים",
+          "emoji": "⚽"
+        },
+        {
+          "id": "option-2",
+          "label": "חיות",
+          "emoji": "🐶"
+        },
+        {
+          "id": "option-3",
+          "label": "דברי לימוד",
+          "emoji": "📘"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-069",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך דבק?",
+      "item": "🧴",
+      "itemName": "דבק",
+      "audioText": "לאיזו קבוצה שייך דבק?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "חיות",
+          "emoji": "🐶"
+        },
+        {
+          "id": "option-2",
+          "label": "דברי לימוד",
+          "emoji": "📘"
+        },
+        {
+          "id": "option-3",
+          "label": "צעצועים",
+          "emoji": "⚽"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-070",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך לוח?",
+      "item": "🟩",
+      "itemName": "לוח",
+      "audioText": "לאיזו קבוצה שייך לוח?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "דברי לימוד",
+          "emoji": "📘"
+        },
+        {
+          "id": "option-2",
+          "label": "צעצועים",
+          "emoji": "⚽"
+        },
+        {
+          "id": "option-3",
+          "label": "חיות",
+          "emoji": "🐶"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-071",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך גיטרה?",
+      "item": "🎸",
+      "itemName": "גיטרה",
+      "audioText": "לאיזו קבוצה שייך גיטרה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כלי מטבח",
+          "emoji": "🥤"
+        },
+        {
+          "id": "option-2",
+          "label": "כלי תחבורה",
+          "emoji": "🚗"
+        },
+        {
+          "id": "option-3",
+          "label": "כלי נגינה",
+          "emoji": "🎸"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-072",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך כינור?",
+      "item": "🎻",
+      "itemName": "כינור",
+      "audioText": "לאיזו קבוצה שייך כינור?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כלי תחבורה",
+          "emoji": "🚗"
+        },
+        {
+          "id": "option-2",
+          "label": "כלי נגינה",
+          "emoji": "🎸"
+        },
+        {
+          "id": "option-3",
+          "label": "כלי מטבח",
+          "emoji": "🥤"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-073",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך תוף?",
+      "item": "🥁",
+      "itemName": "תוף",
+      "audioText": "לאיזו קבוצה שייך תוף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כלי נגינה",
+          "emoji": "🎸"
+        },
+        {
+          "id": "option-2",
+          "label": "כלי מטבח",
+          "emoji": "🥤"
+        },
+        {
+          "id": "option-3",
+          "label": "כלי תחבורה",
+          "emoji": "🚗"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-074",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך פסנתר?",
+      "item": "🎹",
+      "itemName": "פסנתר",
+      "audioText": "לאיזו קבוצה שייך פסנתר?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כלי מטבח",
+          "emoji": "🥤"
+        },
+        {
+          "id": "option-2",
+          "label": "כלי תחבורה",
+          "emoji": "🚗"
+        },
+        {
+          "id": "option-3",
+          "label": "כלי נגינה",
+          "emoji": "🎸"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-075",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך חצוצרה?",
+      "item": "🎺",
+      "itemName": "חצוצרה",
+      "audioText": "לאיזו קבוצה שייך חצוצרה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כלי תחבורה",
+          "emoji": "🚗"
+        },
+        {
+          "id": "option-2",
+          "label": "כלי נגינה",
+          "emoji": "🎸"
+        },
+        {
+          "id": "option-3",
+          "label": "כלי מטבח",
+          "emoji": "🥤"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-076",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך חליל?",
+      "item": "🪈",
+      "itemName": "חליל",
+      "audioText": "לאיזו קבוצה שייך חליל?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כלי נגינה",
+          "emoji": "🎸"
+        },
+        {
+          "id": "option-2",
+          "label": "כלי מטבח",
+          "emoji": "🥤"
+        },
+        {
+          "id": "option-3",
+          "label": "כלי תחבורה",
+          "emoji": "🚗"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-077",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך מיקרופון?",
+      "item": "🎤",
+      "itemName": "מיקרופון",
+      "audioText": "לאיזו קבוצה שייך מיקרופון?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כלי מטבח",
+          "emoji": "🥤"
+        },
+        {
+          "id": "option-2",
+          "label": "כלי תחבורה",
+          "emoji": "🚗"
+        },
+        {
+          "id": "option-3",
+          "label": "כלי נגינה",
+          "emoji": "🎸"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-078",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך פעמון?",
+      "item": "🔔",
+      "itemName": "פעמון",
+      "audioText": "לאיזו קבוצה שייך פעמון?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כלי תחבורה",
+          "emoji": "🚗"
+        },
+        {
+          "id": "option-2",
+          "label": "כלי נגינה",
+          "emoji": "🎸"
+        },
+        {
+          "id": "option-3",
+          "label": "כלי מטבח",
+          "emoji": "🥤"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-079",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך אקורדיון?",
+      "item": "🪗",
+      "itemName": "אקורדיון",
+      "audioText": "לאיזו קבוצה שייך אקורדיון?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כלי נגינה",
+          "emoji": "🎸"
+        },
+        {
+          "id": "option-2",
+          "label": "כלי מטבח",
+          "emoji": "🥤"
+        },
+        {
+          "id": "option-3",
+          "label": "כלי תחבורה",
+          "emoji": "🚗"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-080",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך סקסופון?",
+      "item": "🎷",
+      "itemName": "סקסופון",
+      "audioText": "לאיזו קבוצה שייך סקסופון?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כלי מטבח",
+          "emoji": "🥤"
+        },
+        {
+          "id": "option-2",
+          "label": "כלי תחבורה",
+          "emoji": "🚗"
+        },
+        {
+          "id": "option-3",
+          "label": "כלי נגינה",
+          "emoji": "🎸"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-081",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך שמש?",
+      "item": "☀️",
+      "itemName": "שמש",
+      "audioText": "לאיזו קבוצה שייך שמש?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בגדים",
+          "emoji": "👕"
+        },
+        {
+          "id": "option-2",
+          "label": "מזג אוויר",
+          "emoji": "☀️"
+        },
+        {
+          "id": "option-3",
+          "label": "פירות",
+          "emoji": "🍎"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-082",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך ענן?",
+      "item": "☁️",
+      "itemName": "ענן",
+      "audioText": "לאיזו קבוצה שייך ענן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "מזג אוויר",
+          "emoji": "☀️"
+        },
+        {
+          "id": "option-2",
+          "label": "פירות",
+          "emoji": "🍎"
+        },
+        {
+          "id": "option-3",
+          "label": "בגדים",
+          "emoji": "👕"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-083",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך גשם?",
+      "item": "🌧️",
+      "itemName": "גשם",
+      "audioText": "לאיזו קבוצה שייך גשם?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "פירות",
+          "emoji": "🍎"
+        },
+        {
+          "id": "option-2",
+          "label": "בגדים",
+          "emoji": "👕"
+        },
+        {
+          "id": "option-3",
+          "label": "מזג אוויר",
+          "emoji": "☀️"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-084",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך שלג?",
+      "item": "❄️",
+      "itemName": "שלג",
+      "audioText": "לאיזו קבוצה שייך שלג?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בגדים",
+          "emoji": "👕"
+        },
+        {
+          "id": "option-2",
+          "label": "מזג אוויר",
+          "emoji": "☀️"
+        },
+        {
+          "id": "option-3",
+          "label": "פירות",
+          "emoji": "🍎"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-085",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך רוח?",
+      "item": "💨",
+      "itemName": "רוח",
+      "audioText": "לאיזו קבוצה שייך רוח?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "מזג אוויר",
+          "emoji": "☀️"
+        },
+        {
+          "id": "option-2",
+          "label": "פירות",
+          "emoji": "🍎"
+        },
+        {
+          "id": "option-3",
+          "label": "בגדים",
+          "emoji": "👕"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-086",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך ברק?",
+      "item": "⚡",
+      "itemName": "ברק",
+      "audioText": "לאיזו קבוצה שייך ברק?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "פירות",
+          "emoji": "🍎"
+        },
+        {
+          "id": "option-2",
+          "label": "בגדים",
+          "emoji": "👕"
+        },
+        {
+          "id": "option-3",
+          "label": "מזג אוויר",
+          "emoji": "☀️"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-087",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך קשת?",
+      "item": "🌈",
+      "itemName": "קשת",
+      "audioText": "לאיזו קבוצה שייך קשת?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בגדים",
+          "emoji": "👕"
+        },
+        {
+          "id": "option-2",
+          "label": "מזג אוויר",
+          "emoji": "☀️"
+        },
+        {
+          "id": "option-3",
+          "label": "פירות",
+          "emoji": "🍎"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-088",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך ערפל?",
+      "item": "🌫️",
+      "itemName": "ערפל",
+      "audioText": "לאיזו קבוצה שייך ערפל?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "מזג אוויר",
+          "emoji": "☀️"
+        },
+        {
+          "id": "option-2",
+          "label": "פירות",
+          "emoji": "🍎"
+        },
+        {
+          "id": "option-3",
+          "label": "בגדים",
+          "emoji": "👕"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-089",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך סערה?",
+      "item": "⛈️",
+      "itemName": "סערה",
+      "audioText": "לאיזו קבוצה שייך סערה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "פירות",
+          "emoji": "🍎"
+        },
+        {
+          "id": "option-2",
+          "label": "בגדים",
+          "emoji": "👕"
+        },
+        {
+          "id": "option-3",
+          "label": "מזג אוויר",
+          "emoji": "☀️"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-090",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך טיפה?",
+      "item": "💧",
+      "itemName": "טיפה",
+      "audioText": "לאיזו קבוצה שייך טיפה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בגדים",
+          "emoji": "👕"
+        },
+        {
+          "id": "option-2",
+          "label": "מזג אוויר",
+          "emoji": "☀️"
+        },
+        {
+          "id": "option-3",
+          "label": "פירות",
+          "emoji": "🍎"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-091",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך פרח?",
+      "item": "🌸",
+      "itemName": "פרח",
+      "audioText": "לאיזו קבוצה שייך פרח?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צמחים",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-2",
+          "label": "ירקות",
+          "emoji": "🥕"
+        },
+        {
+          "id": "option-3",
+          "label": "רהיטים",
+          "emoji": "🪑"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-092",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך עץ?",
+      "item": "🌳",
+      "itemName": "עץ",
+      "audioText": "לאיזו קבוצה שייך עץ?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ירקות",
+          "emoji": "🥕"
+        },
+        {
+          "id": "option-2",
+          "label": "רהיטים",
+          "emoji": "🪑"
+        },
+        {
+          "id": "option-3",
+          "label": "צמחים",
+          "emoji": "🌸"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-093",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך עלה?",
+      "item": "🍃",
+      "itemName": "עלה",
+      "audioText": "לאיזו קבוצה שייך עלה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "רהיטים",
+          "emoji": "🪑"
+        },
+        {
+          "id": "option-2",
+          "label": "צמחים",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-3",
+          "label": "ירקות",
+          "emoji": "🥕"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-094",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך קקטוס?",
+      "item": "🌵",
+      "itemName": "קקטוס",
+      "audioText": "לאיזו קבוצה שייך קקטוס?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צמחים",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-2",
+          "label": "ירקות",
+          "emoji": "🥕"
+        },
+        {
+          "id": "option-3",
+          "label": "רהיטים",
+          "emoji": "🪑"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-095",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך שתיל?",
+      "item": "🌱",
+      "itemName": "שתיל",
+      "audioText": "לאיזו קבוצה שייך שתיל?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ירקות",
+          "emoji": "🥕"
+        },
+        {
+          "id": "option-2",
+          "label": "רהיטים",
+          "emoji": "🪑"
+        },
+        {
+          "id": "option-3",
+          "label": "צמחים",
+          "emoji": "🌸"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-096",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך חמנייה?",
+      "item": "🌻",
+      "itemName": "חמנייה",
+      "audioText": "לאיזו קבוצה שייך חמנייה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "רהיטים",
+          "emoji": "🪑"
+        },
+        {
+          "id": "option-2",
+          "label": "צמחים",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-3",
+          "label": "ירקות",
+          "emoji": "🥕"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-097",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך ורד?",
+      "item": "🌹",
+      "itemName": "ורד",
+      "audioText": "לאיזו קבוצה שייך ורד?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צמחים",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-2",
+          "label": "ירקות",
+          "emoji": "🥕"
+        },
+        {
+          "id": "option-3",
+          "label": "רהיטים",
+          "emoji": "🪑"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-098",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך עשב?",
+      "item": "🌿",
+      "itemName": "עשב",
+      "audioText": "לאיזו קבוצה שייך עשב?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ירקות",
+          "emoji": "🥕"
+        },
+        {
+          "id": "option-2",
+          "label": "רהיטים",
+          "emoji": "🪑"
+        },
+        {
+          "id": "option-3",
+          "label": "צמחים",
+          "emoji": "🌸"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-099",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך תלתן?",
+      "item": "☘️",
+      "itemName": "תלתן",
+      "audioText": "לאיזו קבוצה שייך תלתן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "רהיטים",
+          "emoji": "🪑"
+        },
+        {
+          "id": "option-2",
+          "label": "צמחים",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-3",
+          "label": "ירקות",
+          "emoji": "🥕"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-100",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך דקל?",
+      "item": "🌴",
+      "itemName": "דקל",
+      "audioText": "לאיזו קבוצה שייך דקל?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צמחים",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-2",
+          "label": "ירקות",
+          "emoji": "🥕"
+        },
+        {
+          "id": "option-3",
+          "label": "רהיטים",
+          "emoji": "🪑"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-101",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך כדור?",
+      "item": "⚽",
+      "itemName": "כדור",
+      "audioText": "לאיזו קבוצה שייך כדור?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "חיות",
+          "emoji": "🐶"
+        },
+        {
+          "id": "option-2",
+          "label": "דברי לימוד",
+          "emoji": "📘"
+        },
+        {
+          "id": "option-3",
+          "label": "צעצועים",
+          "emoji": "⚽"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-102",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך בובה?",
+      "item": "🪆",
+      "itemName": "בובה",
+      "audioText": "לאיזו קבוצה שייך בובה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "דברי לימוד",
+          "emoji": "📘"
+        },
+        {
+          "id": "option-2",
+          "label": "צעצועים",
+          "emoji": "⚽"
+        },
+        {
+          "id": "option-3",
+          "label": "חיות",
+          "emoji": "🐶"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-103",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך דובי?",
+      "item": "🧸",
+      "itemName": "דובי",
+      "audioText": "לאיזו קבוצה שייך דובי?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צעצועים",
+          "emoji": "⚽"
+        },
+        {
+          "id": "option-2",
+          "label": "חיות",
+          "emoji": "🐶"
+        },
+        {
+          "id": "option-3",
+          "label": "דברי לימוד",
+          "emoji": "📘"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-104",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך קוביות?",
+      "item": "🧱",
+      "itemName": "קוביות",
+      "audioText": "לאיזו קבוצה שייך קוביות?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "חיות",
+          "emoji": "🐶"
+        },
+        {
+          "id": "option-2",
+          "label": "דברי לימוד",
+          "emoji": "📘"
+        },
+        {
+          "id": "option-3",
+          "label": "צעצועים",
+          "emoji": "⚽"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-105",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך עפיפון?",
+      "item": "🪁",
+      "itemName": "עפיפון",
+      "audioText": "לאיזו קבוצה שייך עפיפון?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "דברי לימוד",
+          "emoji": "📘"
+        },
+        {
+          "id": "option-2",
+          "label": "צעצועים",
+          "emoji": "⚽"
+        },
+        {
+          "id": "option-3",
+          "label": "חיות",
+          "emoji": "🐶"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-106",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך יו-יו?",
+      "item": "🪀",
+      "itemName": "יו-יו",
+      "audioText": "לאיזו קבוצה שייך יו-יו?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צעצועים",
+          "emoji": "⚽"
+        },
+        {
+          "id": "option-2",
+          "label": "חיות",
+          "emoji": "🐶"
+        },
+        {
+          "id": "option-3",
+          "label": "דברי לימוד",
+          "emoji": "📘"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-107",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך פאזל?",
+      "item": "🧩",
+      "itemName": "פאזל",
+      "audioText": "לאיזו קבוצה שייך פאזל?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "חיות",
+          "emoji": "🐶"
+        },
+        {
+          "id": "option-2",
+          "label": "דברי לימוד",
+          "emoji": "📘"
+        },
+        {
+          "id": "option-3",
+          "label": "צעצועים",
+          "emoji": "⚽"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "sorting-108",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך בלון?",
+      "item": "🎈",
+      "itemName": "בלון",
+      "audioText": "לאיזו קבוצה שייך בלון?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "דברי לימוד",
+          "emoji": "📘"
+        },
+        {
+          "id": "option-2",
+          "label": "צעצועים",
+          "emoji": "⚽"
+        },
+        {
+          "id": "option-3",
+          "label": "חיות",
+          "emoji": "🐶"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "sorting-109",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך רובוט?",
+      "item": "🤖",
+      "itemName": "רובוט",
+      "audioText": "לאיזו קבוצה שייך רובוט?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צעצועים",
+          "emoji": "⚽"
+        },
+        {
+          "id": "option-2",
+          "label": "חיות",
+          "emoji": "🐶"
+        },
+        {
+          "id": "option-3",
+          "label": "דברי לימוד",
+          "emoji": "📘"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "sorting-110",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "categories",
+      "prompt": "לאיזו קבוצה שייך רכבת צעצוע?",
+      "item": "🚂",
+      "itemName": "רכבת צעצוע",
+      "audioText": "לאיזו קבוצה שייך רכבת צעצוע?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "חיות",
+          "emoji": "🐶"
+        },
+        {
+          "id": "option-2",
+          "label": "דברי לימוד",
+          "emoji": "📘"
+        },
+        {
+          "id": "option-3",
+          "label": "צעצועים",
+          "emoji": "⚽"
+        }
+      ],
+      "correctOptionId": "option-3"
+    }
+  ]
+}

@@ -7,7 +7,7 @@ interface BrandLogoProps {
   variant?: 'full' | 'mark';
 }
 
-export function BrandLogo({ className = '', decorative = false, tagline = 'הרפתקת משחקים בעברית', variant = 'full' }: BrandLogoProps) {
+export function BrandLogo({ className = '', decorative = false, tagline = 'משחקי למידה בעברית', variant = 'full' }: BrandLogoProps) {
   const classNames = ['brand-logo', `brand-logo--${variant}`, className].filter(Boolean).join(' ');
   const logoId = useId().replace(/:/g, '');
   const skyId = `${logoId}-sky`;
@@ -24,9 +24,8 @@ export function BrandLogo({ className = '', decorative = false, tagline = 'הר�
         <defs>
           <linearGradient id={skyId} x1="16" y1="10" x2="112" y2="118" gradientUnits="userSpaceOnUse">
             <stop offset="0" stopColor="#fff6c9" />
-            <stop offset=".38" stopColor="#a7dcff" />
-            <stop offset=".7" stopColor="#f6abc9" />
-            <stop offset="1" stopColor="#8edbd1" />
+            <stop offset=".45" stopColor="#7bd7e8" />
+            <stop offset="1" stopColor="#ff9f80" />
           </linearGradient>
           <linearGradient id={bookId} x1="28" y1="64" x2="101" y2="98" gradientUnits="userSpaceOnUse">
             <stop offset="0" stopColor="#ffffff" />

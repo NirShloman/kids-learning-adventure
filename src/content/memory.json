@@ -1,0 +1,1007 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": "2026.07.1",
+  "gameId": "memory",
+  "items": [
+    {
+      "id": "memory-001",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "visual-memory",
+      "value": "🍎 תפוח"
+    },
+    {
+      "id": "memory-002",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "symbol-memory",
+      "value": "🍌 בננה"
+    },
+    {
+      "id": "memory-003",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "word-memory",
+      "value": "🍇 ענבים"
+    },
+    {
+      "id": "memory-004",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "visual-memory",
+      "value": "🍓 תות"
+    },
+    {
+      "id": "memory-005",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "symbol-memory",
+      "value": "🍉 אבטיח"
+    },
+    {
+      "id": "memory-006",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "word-memory",
+      "value": "🍐 אגס"
+    },
+    {
+      "id": "memory-007",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "visual-memory",
+      "value": "🍑 אפרסק"
+    },
+    {
+      "id": "memory-008",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "symbol-memory",
+      "value": "🍒 דובדבנים"
+    },
+    {
+      "id": "memory-009",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "word-memory",
+      "value": "🍍 אננס"
+    },
+    {
+      "id": "memory-010",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "visual-memory",
+      "value": "🍊 תפוז"
+    },
+    {
+      "id": "memory-011",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "symbol-memory",
+      "value": "🥕 גזר"
+    },
+    {
+      "id": "memory-012",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "word-memory",
+      "value": "🍅 עגבנייה"
+    },
+    {
+      "id": "memory-013",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "visual-memory",
+      "value": "🥒 מלפפון"
+    },
+    {
+      "id": "memory-014",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "symbol-memory",
+      "value": "🌽 תירס"
+    },
+    {
+      "id": "memory-015",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "word-memory",
+      "value": "🫑 פלפל"
+    },
+    {
+      "id": "memory-016",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "visual-memory",
+      "value": "🥦 ברוקולי"
+    },
+    {
+      "id": "memory-017",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "symbol-memory",
+      "value": "🧅 בצל"
+    },
+    {
+      "id": "memory-018",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "word-memory",
+      "value": "🥔 תפוח אדמה"
+    },
+    {
+      "id": "memory-019",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "visual-memory",
+      "value": "🍆 חציל"
+    },
+    {
+      "id": "memory-020",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "symbol-memory",
+      "value": "🥬 חסה"
+    },
+    {
+      "id": "memory-021",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "word-memory",
+      "value": "🐶 כלב"
+    },
+    {
+      "id": "memory-022",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "visual-memory",
+      "value": "🐱 חתול"
+    },
+    {
+      "id": "memory-023",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "symbol-memory",
+      "value": "🦁 אריה"
+    },
+    {
+      "id": "memory-024",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "word-memory",
+      "value": "🐘 פיל"
+    },
+    {
+      "id": "memory-025",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "visual-memory",
+      "value": "🐒 קוף"
+    },
+    {
+      "id": "memory-026",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "symbol-memory",
+      "value": "🐟 דג"
+    },
+    {
+      "id": "memory-027",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "word-memory",
+      "value": "🐦 ציפור"
+    },
+    {
+      "id": "memory-028",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "visual-memory",
+      "value": "🐢 צב"
+    },
+    {
+      "id": "memory-029",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "symbol-memory",
+      "value": "🐰 ארנב"
+    },
+    {
+      "id": "memory-030",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "word-memory",
+      "value": "🦋 פרפר"
+    },
+    {
+      "id": "memory-031",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "visual-memory",
+      "value": "🚗 מכונית"
+    },
+    {
+      "id": "memory-032",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "symbol-memory",
+      "value": "🚌 אוטובוס"
+    },
+    {
+      "id": "memory-033",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "word-memory",
+      "value": "🚂 רכבת"
+    },
+    {
+      "id": "memory-034",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "visual-memory",
+      "value": "🚲 אופניים"
+    },
+    {
+      "id": "memory-035",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "symbol-memory",
+      "value": "✈️ מטוס"
+    },
+    {
+      "id": "memory-036",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "word-memory",
+      "value": "⛵ סירה"
+    },
+    {
+      "id": "memory-037",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "visual-memory",
+      "value": "🚚 משאית"
+    },
+    {
+      "id": "memory-038",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "symbol-memory",
+      "value": "🚕 מונית"
+    },
+    {
+      "id": "memory-039",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "word-memory",
+      "value": "🚜 טרקטור"
+    },
+    {
+      "id": "memory-040",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "visual-memory",
+      "value": "🛴 קורקינט"
+    },
+    {
+      "id": "memory-041",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "symbol-memory",
+      "value": "👕 חולצה"
+    },
+    {
+      "id": "memory-042",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "word-memory",
+      "value": "👖 מכנסיים"
+    },
+    {
+      "id": "memory-043",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "visual-memory",
+      "value": "👗 שמלה"
+    },
+    {
+      "id": "memory-044",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "symbol-memory",
+      "value": "🧦 גרב"
+    },
+    {
+      "id": "memory-045",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "word-memory",
+      "value": "👟 נעל"
+    },
+    {
+      "id": "memory-046",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "visual-memory",
+      "value": "🧢 כובע"
+    },
+    {
+      "id": "memory-047",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "symbol-memory",
+      "value": "🧥 מעיל"
+    },
+    {
+      "id": "memory-048",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "word-memory",
+      "value": "🧤 כפפה"
+    },
+    {
+      "id": "memory-049",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "visual-memory",
+      "value": "🧣 צעיף"
+    },
+    {
+      "id": "memory-050",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "symbol-memory",
+      "value": "🩴 סנדל"
+    },
+    {
+      "id": "memory-051",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "word-memory",
+      "value": "🪑 כיסא"
+    },
+    {
+      "id": "memory-052",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "visual-memory",
+      "value": "🛏️ מיטה"
+    },
+    {
+      "id": "memory-053",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "symbol-memory",
+      "value": "🛋️ ספה"
+    },
+    {
+      "id": "memory-054",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "word-memory",
+      "value": "▰ שולחן"
+    },
+    {
+      "id": "memory-055",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "visual-memory",
+      "value": "🚪 ארון"
+    },
+    {
+      "id": "memory-056",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "symbol-memory",
+      "value": "📚 מדף"
+    },
+    {
+      "id": "memory-057",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "word-memory",
+      "value": "🛋 מנורה"
+    },
+    {
+      "id": "memory-058",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "visual-memory",
+      "value": "🪑 שרפרף"
+    },
+    {
+      "id": "memory-059",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "symbol-memory",
+      "value": "🗄️ שידה"
+    },
+    {
+      "id": "memory-060",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "word-memory",
+      "value": "🛏 ערסל"
+    },
+    {
+      "id": "memory-061",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "visual-memory",
+      "value": "📘 ספר"
+    },
+    {
+      "id": "memory-062",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "symbol-memory",
+      "value": "✏️ עיפרון"
+    },
+    {
+      "id": "memory-063",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "word-memory",
+      "value": "📓 מחברת"
+    },
+    {
+      "id": "memory-064",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "visual-memory",
+      "value": "📏 סרגל"
+    },
+    {
+      "id": "memory-065",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "symbol-memory",
+      "value": "✂️ מספריים"
+    },
+    {
+      "id": "memory-066",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "word-memory",
+      "value": "🎒 ילקוט"
+    },
+    {
+      "id": "memory-067",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "visual-memory",
+      "value": "⬜ מחק"
+    },
+    {
+      "id": "memory-068",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "symbol-memory",
+      "value": "🖍️ צבע"
+    },
+    {
+      "id": "memory-069",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "word-memory",
+      "value": "🧴 דבק"
+    },
+    {
+      "id": "memory-070",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "visual-memory",
+      "value": "🟩 לוח"
+    },
+    {
+      "id": "memory-071",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "symbol-memory",
+      "value": "🎸 גיטרה"
+    },
+    {
+      "id": "memory-072",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "word-memory",
+      "value": "🎻 כינור"
+    },
+    {
+      "id": "memory-073",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "visual-memory",
+      "value": "🥁 תוף"
+    },
+    {
+      "id": "memory-074",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "symbol-memory",
+      "value": "🎹 פסנתר"
+    },
+    {
+      "id": "memory-075",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "word-memory",
+      "value": "🎺 חצוצרה"
+    },
+    {
+      "id": "memory-076",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "visual-memory",
+      "value": "🪈 חליל"
+    },
+    {
+      "id": "memory-077",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "symbol-memory",
+      "value": "🎤 מיקרופון"
+    },
+    {
+      "id": "memory-078",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "word-memory",
+      "value": "🔔 פעמון"
+    },
+    {
+      "id": "memory-079",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "visual-memory",
+      "value": "🪗 אקורדיון"
+    },
+    {
+      "id": "memory-080",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "symbol-memory",
+      "value": "🎷 סקסופון"
+    },
+    {
+      "id": "memory-081",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "word-memory",
+      "value": "☀️ שמש"
+    },
+    {
+      "id": "memory-082",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "visual-memory",
+      "value": "☁️ ענן"
+    },
+    {
+      "id": "memory-083",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "symbol-memory",
+      "value": "🌧️ גשם"
+    },
+    {
+      "id": "memory-084",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "word-memory",
+      "value": "❄️ שלג"
+    },
+    {
+      "id": "memory-085",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "visual-memory",
+      "value": "💨 רוח"
+    },
+    {
+      "id": "memory-086",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "symbol-memory",
+      "value": "⚡ ברק"
+    },
+    {
+      "id": "memory-087",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "word-memory",
+      "value": "🌈 קשת"
+    },
+    {
+      "id": "memory-088",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "visual-memory",
+      "value": "🌫️ ערפל"
+    },
+    {
+      "id": "memory-089",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "symbol-memory",
+      "value": "⛈️ סערה"
+    },
+    {
+      "id": "memory-090",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "word-memory",
+      "value": "💧 טיפה"
+    },
+    {
+      "id": "memory-091",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "visual-memory",
+      "value": "🌸 פרח"
+    },
+    {
+      "id": "memory-092",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "symbol-memory",
+      "value": "🌳 עץ"
+    },
+    {
+      "id": "memory-093",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "word-memory",
+      "value": "🍃 עלה"
+    },
+    {
+      "id": "memory-094",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "visual-memory",
+      "value": "🌵 קקטוס"
+    },
+    {
+      "id": "memory-095",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "symbol-memory",
+      "value": "🌱 שתיל"
+    },
+    {
+      "id": "memory-096",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "word-memory",
+      "value": "🌻 חמנייה"
+    },
+    {
+      "id": "memory-097",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "visual-memory",
+      "value": "🌹 ורד"
+    },
+    {
+      "id": "memory-098",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "symbol-memory",
+      "value": "🌿 עשב"
+    },
+    {
+      "id": "memory-099",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "word-memory",
+      "value": "☘️ תלתן"
+    },
+    {
+      "id": "memory-100",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "visual-memory",
+      "value": "🌴 דקל"
+    }
+  ]
+}

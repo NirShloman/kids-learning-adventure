@@ -6,41 +6,35 @@
   "description": "אפליקציית Web/PWA משודרגת ללימוד חוויתי בעברית לילדים בגילאי 3-6, עם קול הדרכה, לובי עשיר, אנימציות, משחקים נוספים ומאגר שאלות מורחב.",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "npm run validate:content && tsc -b && vite build",
     "preview": "vite preview --host 0.0.0.0",
     "typecheck": "tsc -b",
-    "validate:questions": "tsx scripts/validateQuestionBank.ts",
-    "validate:content": "node scripts/validate-content.mjs",
-    "review:content": "node scripts/review-seed-content.mjs",
-    "check:duplicates": "node scripts/check-duplicates.mjs",
-    "firebase:import": "node scripts/import-firebase-questions.mjs",
-    "firebase:export": "node scripts/export-firebase-questions.mjs",
-    "seed:content": "tsx scripts/createSeedFromBundledBank.ts",
-    "seed": "tsx scripts/seedFirestore.ts",
+    "generate:content": "node scripts/generate-static-content.mjs",
+    "validate:questions": "node scripts/validate-static-content.mjs",
+    "validate:content": "node scripts/validate-static-content.mjs",
+    "test:unit": "vitest run tests/unit",
+    "test:offline": "node scripts/offline-smoke.mjs",
     "test:e2e": "playwright test --project=local-chromium --project=local-firefox --project=local-webkit --project=mobile-chrome --project=mobile-safari",
     "test:e2e:ui": "playwright test --ui",
     "test:e2e:local": "playwright test --project=local-chromium --project=local-firefox --project=local-webkit --project=mobile-chrome --project=mobile-safari",
-    "test:e2e:firebase": "node scripts/run-playwright-firebase.mjs",
-    "test:e2e:debug": "playwright test --project=local-chromium --debug",
-    "test:rules": "firebase emulators:exec --only firestore \"vitest run firestore.rules.test.ts\""
+    "test:e2e:debug": "playwright test --project=local-chromium --debug"
   },
   "dependencies": {
+    "@fontsource/rubik": "^5.3.0",
+    "@rive-app/react-webgl2": "^4.29.5",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "5.2.0",
-    "firebase": "^12.13.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "typescript": "^5.6.2",
-    "vite": "8.0.10"
+    "vite": "^8.1.5"
   },
   "devDependencies": {
-    "@firebase/rules-unit-testing": "^5.0.1",
     "@playwright/test": "^1.60.0",
     "@types/node": "^25.9.1",
-    "dotenv": "^17.2.3",
-    "firebase-admin": "^13.6.0",
-    "firebase-tools": "^14.27.0",
+    "ajv": "^8.20.0",
+    "jsdom": "^29.1.1",
     "tsx": "^4.20.6",
     "vitest": "^4.0.14"
   }

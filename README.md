@@ -1,190 +1,55 @@
-# לומדים בכיף - Kids Learning Adventure Web
+# לומדים בכיף
 
-גרסת Web/PWA של אפליקציית משחקי למידה בעברית לילדים בגילאי 3 עד 6.
+משחקי למידה בעברית לילדים בגילאי 3–6. האפליקציה היא React/Vite סטטית ו־local-first: אין Firebase, מסד נתונים, התחברות או שירות ענן בזמן ריצה.
 
-## גרסה נוכחית
+## תוכן
 
-**1.2.0 - Web PWA Premium Learning**
+המאגר כולל 1,010 יחידות תוכן בשמונה קובצי JSON תחת `src/content`:
 
-הגרסה הזו כוללת שדרוג עומק ללובי, להקראה הקולית, לגרפיקה, למאגר השאלות ולמגוון המשחקים.
+| משחק | פריטים |
+| --- | ---: |
+| אותיות | 180 |
+| מספרים | 170 |
+| צורות | 110 |
+| צבעים | 110 |
+| התאמה | 120 |
+| זיכרון | 100 זוגות |
+| רצפים | 110 |
+| מיון וסיווג | 110 |
 
-## מה שודרג בגרסה 1.2.0
+כל משחק נטען ב־`import()` רק בעת הכניסה אליו. הבחירה מדויקת לפי גיל ורמה, מאוזנת לפי מיומנות ונמנעת מחזרה על תוכן המשחק הקודם.
 
-- הקראה קולית רחבה יותר בכל האפליקציה:
-  - הקראת שם ותיאור משחק בעת מעבר עכבר או פוקוס מקלדת.
-  - הקראת הוראות בכניסה לכל משחק.
-  - הקראת אפשרויות תשובה, פריטי התאמה, קלפי זיכרון, רצפים וסלי מיון.
-  - מנגנון מניעת הקראה כפולה מהירה כדי לא להציף את הילד.
-- לובי משודרג:
-  - מסך פתיחה יותר ברור, מזמין ופרודוקטיבי.
-  - תצוגת משחקים מקדימה.
-  - בחירת גיל, רמת קושי וקול הדרכה לפני כניסה לתפריט.
-- גרפיקה ואנימציות:
-  - שדרוג אנימציות CSS בכל מסכי הליבה.
-  - קלפי משחק עשירים יותר, Mascot בלובי, תנועות עדינות, Glow, Sparkles ותגובות Hover/Focus.
-  - תמיכה ב-prefers-reduced-motion לנגישות.
-- מאגר שאלות מורחב:
-  - אותיות, מספרים, צורות וצבעים הורחבו משמעותית.
-  - שאלות מחולקות לפי גיל ורמת קושי.
-  - הטקסטים בעברית ומותאמים לילדים בגילאי 3–6.
-- סוכן התאמת תוכן בסגנון קלינאית תקשורת:
-  - נוסף שירות `speechTherapistAgent.ts` שבודק שאלות לפי אורך, בהירות, התאמה לגיל, כפילויות ותשובה נכונה קיימת.
-  - `questionService.ts` משתמש בשכבת אישור כדי להחזיר שאלות תקינות בלבד.
-- משחקים חדשים:
-  - `רצפים` - השלמת תבניות של צבעים, צורות ומספרים.
-  - `מיון וסיווג` - שיוך פריטים לקבוצות כמו חיות, פירות, כלי תחבורה, בגדים ועוד.
-- שדרוגי אבטחה ואיכות:
-  - אין קריאות OpenAI/GPT ישירות מה-Frontend כדי לא לחשוף API Key בדפדפן.
-  - טקסטים שמוקראים עוברים ניקוי בסיסי לפני SpeechSynthesis.
-  - שמירה על TypeScript strict וקומפוננטות קטנות יחסית.
-  - עדכון גרסה ב-`package.json` וב-`src/services/versionService.ts`.
-
-## הערה חשובה לגבי GPT Image
-
-לא הוכנסה קריאת API ישירה למודל תמונות מתוך צד לקוח, כי זה יחשוף מפתח API בדפדפן. במקום זאת נוספו גרפיקה, SVG/CSS ואנימציות סטטיות בתוך הפרויקט. אם בעתיד רוצים יצירת נכסים אוטומטית בעזרת GPT Image, נכון לעשות זאת דרך Backend מאובטח שמחזיר קבצי תמונה מוכנים ל-Frontend.
-
-## דרישות
-
-- Node.js 20 ומעלה
-- npm
-
-## התקנה והרצה מקומית
+## פיתוח
 
 ```bash
 npm install
 npm run dev
 ```
 
-האפליקציה תרוץ בכתובת:
+בדיקות ושערי איכות:
 
 ```bash
-http://localhost:5173
+npm run validate:content
+npm run test:unit
+npm run typecheck
+npm run test:e2e:local
+npm run build
 ```
 
-## Build לפרודקשן
+`npm run generate:content` מייצר מחדש את קובצי התוכן ואת `review-status.json`. כל שינוי בתוכן חייב לעבור את הסכמה, הבדיקות הסמנטיות ושלושת אישורי הביקורת.
+
+## שמירה מקומית
+
+הגיל, הרמה, הקול, היסטוריית התוצאות והתוכן האחרון נשמרים ב־`localStorage`. בהפעלה הראשונה מתבצעת מיגרציה מהפרופיל הישן הראשון, אם קיים, בלי למחוק את מפתחות ה־legacy.
+
+## אנימציה
+
+האפליקציה כוללת שכבת אינטגרציה עצלה ל־Rive ו־fallback מקומי. מפרט קובצי המקור נמצא ב־`src/assets/animations/README.md`. קובצי Marketplace או rigs של צד שלישי אינם מותרים.
+
+## פריסה
 
 ```bash
 npm run build
 ```
 
-הפלט ייווצר בתיקייה:
-
-```bash
-dist/
-```
-
-## בדיקת build מקומית
-
-```bash
-npm run preview
-```
-
-## Firebase ותוכן מנוהל
-
-הגדרות Firebase מגיעות מקובצי env מקומיים לפי `.env.example`. אין לשמור secrets או service account בתוך הקוד.
-
-```bash
-VITE_FIREBASE_API_KEY=
-VITE_FIREBASE_AUTH_DOMAIN=
-VITE_FIREBASE_PROJECT_ID=
-VITE_FIREBASE_STORAGE_BUCKET=
-VITE_FIREBASE_MESSAGING_SENDER_ID=
-VITE_FIREBASE_APP_ID=
-```
-
-Firestore rules הקנוניים נמצאים ב-`firebase/firestore.rules`, ו-`firebase.json` מצביע אליהם.
-
-## בדיקות תוכן
-
-```bash
-npm run validate:content
-npm run review:content
-npm run check:duplicates
-```
-
-ה-seed הראשוני נמצא ב-`shared-content/seed/questions.seed.json` וכולל 120 שאלות במבנה `GameQuestion`.
-
-## ייבוא וייצוא שאלות
-
-ייבוא/ייצוא מתבצעים ממחשב פיתוח מהימן עם Admin SDK:
-
-```bash
-npm run firebase:import
-npm run firebase:export
-```
-
-יש להגדיר `FIREBASE_PROJECT_ID` וגם `GOOGLE_APPLICATION_CREDENTIALS` או `FIREBASE_SERVICE_ACCOUNT_PATH`.
-
-## Admin לאישור שאלות
-
-אחרי פתיחת אזור ההורים מופיע כפתור `ניהול תוכן`. שם אפשר להוסיף שאלה, להריץ בדיקת כפילות ו-Agent, לצפות בדוח איכות, לאשר/לדחות/לבקש תיקון, לבצע Preview, לייבא seed ולייצא JSON לגיבוי.
-
-שאלות משתמש נשמרות תמיד במסלול `pendingQuestionSubmissions` ולא נכנסות ישירות למאגר המאושר.
-
-## בדיקות E2E עם Playwright
-
-התוסף של Playwright ב-VS Code קורא את `playwright.config.ts`, ולכן כל הבדיקות מופיעות גם ב-Test Explorer.
-
-```bash
-npm run test:e2e
-npm run test:e2e:ui
-npm run test:e2e:debug
-```
-
-בדיקות ברירת המחדל מריצות את האפליקציה במצב local/fallback בלי Firebase, גם אם קיים `.env.local`.
-
-לבדיקות Firebase יש להריץ Auth + Firestore Emulator בנפרד, ואז:
-
-```bash
-npm run test:e2e:firebase
-```
-
-ה-Firebase suite מדלג אוטומטית אם ה-emulators לא זמינים, ואינו כותב ל-production.
-
-## מבנה תיקיות מרכזי
-
-```text
-public/
-  icons/
-  manifest.webmanifest
-  sw.js
-
-src/
-  components/
-    common/
-    games/
-      matching/
-      memory/
-      patterns/
-      quiz/
-      sorting/
-    layout/
-  data/
-    questions/
-    activityData.ts
-    gameInstructions.ts
-    games.ts
-    levels.ts
-  hooks/
-  pages/
-  services/
-    questionService.ts
-    questions/questionProvider.ts
-    firebase/questionRepository.ts
-    contentReview/contentReviewAgent.ts
-    contentReview/duplicateQuestionDetector.ts
-    speechService.ts
-    speechTherapistAgent.ts
-    versionService.ts
-  types/
-  utils/
-  App.tsx
-  main.tsx
-  styles.css
-```
-
-## הערות תפעול
-
-- איכות הדיבור בעברית תלויה בדפדפן ובמערכת ההפעלה.
-- בדפדפנים מסוימים SpeechSynthesis מתחיל לעבוד טוב יותר אחרי אינטראקציה ראשונה של המשתמש.
-- `node_modules` לא נדרש להיות בתוך קובץ ההפצה; יש להריץ `npm install` אחרי חילוץ הפרויקט.
+את תיקיית `dist` אפשר לפרוס ל־Cloudflare Workers & Pages ללא bindings וללא משתני סביבה. ה־Service Worker שומר נכסים מקומיים במטמון לאחר הבקשה הראשונה.

@@ -1,0 +1,3309 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": "2026.07.1",
+  "gameId": "colors",
+  "items": [
+    {
+      "id": "colors-001",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "🔴",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "אדום",
+          "emoji": "🔴"
+        },
+        {
+          "id": "option-2",
+          "label": "צהוב",
+          "emoji": "🟡"
+        },
+        {
+          "id": "option-3",
+          "label": "ורוד",
+          "emoji": "🌸"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-002",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של ים?",
+      "visual": "🔵",
+      "audioText": "מה הצבע של ים?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כתום",
+          "emoji": "🟠"
+        },
+        {
+          "id": "option-2",
+          "label": "לבן",
+          "emoji": "⚪"
+        },
+        {
+          "id": "option-3",
+          "label": "כחול",
+          "emoji": "🔵"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-003",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך ירוק?",
+      "visual": "🟢",
+      "audioText": "לאיזו קבוצת צבעים שייך ירוק?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בהיר"
+        },
+        {
+          "id": "option-2",
+          "label": "קר"
+        },
+        {
+          "id": "option-3",
+          "label": "חם"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-004",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "🟡",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צהוב",
+          "emoji": "🟡"
+        },
+        {
+          "id": "option-2",
+          "label": "ורוד",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-3",
+          "label": "חום",
+          "emoji": "🟤"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-005",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של תפוז?",
+      "visual": "🟠",
+      "audioText": "מה הצבע של תפוז?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "לבן",
+          "emoji": "⚪"
+        },
+        {
+          "id": "option-2",
+          "label": "אדום",
+          "emoji": "🔴"
+        },
+        {
+          "id": "option-3",
+          "label": "כתום",
+          "emoji": "🟠"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-006",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך סגול?",
+      "visual": "🟣",
+      "audioText": "לאיזו קבוצת צבעים שייך סגול?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בהיר"
+        },
+        {
+          "id": "option-2",
+          "label": "קר"
+        },
+        {
+          "id": "option-3",
+          "label": "חם"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-007",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "🌸",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ורוד",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-2",
+          "label": "חום",
+          "emoji": "🟤"
+        },
+        {
+          "id": "option-3",
+          "label": "ירוק",
+          "emoji": "🟢"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-008",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של ענן?",
+      "visual": "⚪",
+      "audioText": "מה הצבע של ענן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "אדום",
+          "emoji": "🔴"
+        },
+        {
+          "id": "option-2",
+          "label": "צהוב",
+          "emoji": "🟡"
+        },
+        {
+          "id": "option-3",
+          "label": "לבן",
+          "emoji": "⚪"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-009",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך שחור?",
+      "visual": "⚫",
+      "audioText": "לאיזו קבוצת צבעים שייך שחור?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "קר"
+        },
+        {
+          "id": "option-2",
+          "label": "כהה"
+        },
+        {
+          "id": "option-3",
+          "label": "חם"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-010",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "🟤",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "חום",
+          "emoji": "🟤"
+        },
+        {
+          "id": "option-2",
+          "label": "ירוק",
+          "emoji": "🟢"
+        },
+        {
+          "id": "option-3",
+          "label": "סגול",
+          "emoji": "🟣"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-011",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של תות?",
+      "visual": "🔴",
+      "audioText": "מה הצבע של תות?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צהוב",
+          "emoji": "🟡"
+        },
+        {
+          "id": "option-2",
+          "label": "ורוד",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-3",
+          "label": "אדום",
+          "emoji": "🔴"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-012",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך כחול?",
+      "visual": "🔵",
+      "audioText": "לאיזו קבוצת צבעים שייך כחול?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בהיר"
+        },
+        {
+          "id": "option-2",
+          "label": "קר"
+        },
+        {
+          "id": "option-3",
+          "label": "חם"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-013",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "🟢",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ירוק",
+          "emoji": "🟢"
+        },
+        {
+          "id": "option-2",
+          "label": "סגול",
+          "emoji": "🟣"
+        },
+        {
+          "id": "option-3",
+          "label": "שחור",
+          "emoji": "⚫"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-014",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של שמש?",
+      "visual": "🟡",
+      "audioText": "מה הצבע של שמש?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ורוד",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-2",
+          "label": "חום",
+          "emoji": "🟤"
+        },
+        {
+          "id": "option-3",
+          "label": "צהוב",
+          "emoji": "🟡"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-015",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך כתום?",
+      "visual": "🟠",
+      "audioText": "לאיזו קבוצת צבעים שייך כתום?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בהיר"
+        },
+        {
+          "id": "option-2",
+          "label": "חם"
+        },
+        {
+          "id": "option-3",
+          "label": "קר"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-016",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "🟣",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "סגול",
+          "emoji": "🟣"
+        },
+        {
+          "id": "option-2",
+          "label": "שחור",
+          "emoji": "⚫"
+        },
+        {
+          "id": "option-3",
+          "label": "כחול",
+          "emoji": "🔵"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-017",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של פרח ורוד?",
+      "visual": "🌸",
+      "audioText": "מה הצבע של פרח ורוד?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "חום",
+          "emoji": "🟤"
+        },
+        {
+          "id": "option-2",
+          "label": "ירוק",
+          "emoji": "🟢"
+        },
+        {
+          "id": "option-3",
+          "label": "ורוד",
+          "emoji": "🌸"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-018",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך לבן?",
+      "visual": "⚪",
+      "audioText": "לאיזו קבוצת צבעים שייך לבן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "קר"
+        },
+        {
+          "id": "option-2",
+          "label": "בהיר"
+        },
+        {
+          "id": "option-3",
+          "label": "חם"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-019",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "⚫",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "שחור",
+          "emoji": "⚫"
+        },
+        {
+          "id": "option-2",
+          "label": "כחול",
+          "emoji": "🔵"
+        },
+        {
+          "id": "option-3",
+          "label": "כתום",
+          "emoji": "🟠"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-020",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של שוקולד?",
+      "visual": "🟤",
+      "audioText": "מה הצבע של שוקולד?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ירוק",
+          "emoji": "🟢"
+        },
+        {
+          "id": "option-2",
+          "label": "סגול",
+          "emoji": "🟣"
+        },
+        {
+          "id": "option-3",
+          "label": "חום",
+          "emoji": "🟤"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-021",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך אדום?",
+      "visual": "🔴",
+      "audioText": "לאיזו קבוצת צבעים שייך אדום?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בהיר"
+        },
+        {
+          "id": "option-2",
+          "label": "חם"
+        },
+        {
+          "id": "option-3",
+          "label": "קר"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-022",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "🔵",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כחול",
+          "emoji": "🔵"
+        },
+        {
+          "id": "option-2",
+          "label": "כתום",
+          "emoji": "🟠"
+        },
+        {
+          "id": "option-3",
+          "label": "לבן",
+          "emoji": "⚪"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-023",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של עלה?",
+      "visual": "🟢",
+      "audioText": "מה הצבע של עלה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "סגול",
+          "emoji": "🟣"
+        },
+        {
+          "id": "option-2",
+          "label": "שחור",
+          "emoji": "⚫"
+        },
+        {
+          "id": "option-3",
+          "label": "ירוק",
+          "emoji": "🟢"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-024",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך צהוב?",
+      "visual": "🟡",
+      "audioText": "לאיזו קבוצת צבעים שייך צהוב?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בהיר"
+        },
+        {
+          "id": "option-2",
+          "label": "חם"
+        },
+        {
+          "id": "option-3",
+          "label": "קר"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-025",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "🟠",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כתום",
+          "emoji": "🟠"
+        },
+        {
+          "id": "option-2",
+          "label": "לבן",
+          "emoji": "⚪"
+        },
+        {
+          "id": "option-3",
+          "label": "אדום",
+          "emoji": "🔴"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-026",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של חציל?",
+      "visual": "🟣",
+      "audioText": "מה הצבע של חציל?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "שחור",
+          "emoji": "⚫"
+        },
+        {
+          "id": "option-2",
+          "label": "כחול",
+          "emoji": "🔵"
+        },
+        {
+          "id": "option-3",
+          "label": "סגול",
+          "emoji": "🟣"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-027",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך ורוד?",
+      "visual": "🌸",
+      "audioText": "לאיזו קבוצת צבעים שייך ורוד?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בהיר"
+        },
+        {
+          "id": "option-2",
+          "label": "חם"
+        },
+        {
+          "id": "option-3",
+          "label": "קר"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-028",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "⚪",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "לבן",
+          "emoji": "⚪"
+        },
+        {
+          "id": "option-2",
+          "label": "אדום",
+          "emoji": "🔴"
+        },
+        {
+          "id": "option-3",
+          "label": "צהוב",
+          "emoji": "🟡"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-029",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של לילה?",
+      "visual": "⚫",
+      "audioText": "מה הצבע של לילה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כחול",
+          "emoji": "🔵"
+        },
+        {
+          "id": "option-2",
+          "label": "כתום",
+          "emoji": "🟠"
+        },
+        {
+          "id": "option-3",
+          "label": "שחור",
+          "emoji": "⚫"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-030",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך חום?",
+      "visual": "🟤",
+      "audioText": "לאיזו קבוצת צבעים שייך חום?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בהיר"
+        },
+        {
+          "id": "option-2",
+          "label": "חם"
+        },
+        {
+          "id": "option-3",
+          "label": "קר"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-031",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "🔴",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "אדום",
+          "emoji": "🔴"
+        },
+        {
+          "id": "option-2",
+          "label": "צהוב",
+          "emoji": "🟡"
+        },
+        {
+          "id": "option-3",
+          "label": "ורוד",
+          "emoji": "🌸"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-032",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של ים?",
+      "visual": "🔵",
+      "audioText": "מה הצבע של ים?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כתום",
+          "emoji": "🟠"
+        },
+        {
+          "id": "option-2",
+          "label": "לבן",
+          "emoji": "⚪"
+        },
+        {
+          "id": "option-3",
+          "label": "כחול",
+          "emoji": "🔵"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-033",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך ירוק?",
+      "visual": "🟢",
+      "audioText": "לאיזו קבוצת צבעים שייך ירוק?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בהיר"
+        },
+        {
+          "id": "option-2",
+          "label": "קר"
+        },
+        {
+          "id": "option-3",
+          "label": "חם"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-034",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "🟡",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צהוב",
+          "emoji": "🟡"
+        },
+        {
+          "id": "option-2",
+          "label": "ורוד",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-3",
+          "label": "חום",
+          "emoji": "🟤"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-035",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של תפוז?",
+      "visual": "🟠",
+      "audioText": "מה הצבע של תפוז?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "לבן",
+          "emoji": "⚪"
+        },
+        {
+          "id": "option-2",
+          "label": "אדום",
+          "emoji": "🔴"
+        },
+        {
+          "id": "option-3",
+          "label": "כתום",
+          "emoji": "🟠"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-036",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך סגול?",
+      "visual": "🟣",
+      "audioText": "לאיזו קבוצת צבעים שייך סגול?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בהיר"
+        },
+        {
+          "id": "option-2",
+          "label": "קר"
+        },
+        {
+          "id": "option-3",
+          "label": "חם"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-037",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "🌸",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ורוד",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-2",
+          "label": "חום",
+          "emoji": "🟤"
+        },
+        {
+          "id": "option-3",
+          "label": "ירוק",
+          "emoji": "🟢"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-038",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של ענן?",
+      "visual": "⚪",
+      "audioText": "מה הצבע של ענן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "אדום",
+          "emoji": "🔴"
+        },
+        {
+          "id": "option-2",
+          "label": "צהוב",
+          "emoji": "🟡"
+        },
+        {
+          "id": "option-3",
+          "label": "לבן",
+          "emoji": "⚪"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-039",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך שחור?",
+      "visual": "⚫",
+      "audioText": "לאיזו קבוצת צבעים שייך שחור?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "קר"
+        },
+        {
+          "id": "option-2",
+          "label": "כהה"
+        },
+        {
+          "id": "option-3",
+          "label": "חם"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-040",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "🟤",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "חום",
+          "emoji": "🟤"
+        },
+        {
+          "id": "option-2",
+          "label": "ירוק",
+          "emoji": "🟢"
+        },
+        {
+          "id": "option-3",
+          "label": "סגול",
+          "emoji": "🟣"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-041",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של תות?",
+      "visual": "🔴",
+      "audioText": "מה הצבע של תות?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צהוב",
+          "emoji": "🟡"
+        },
+        {
+          "id": "option-2",
+          "label": "ורוד",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-3",
+          "label": "אדום",
+          "emoji": "🔴"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-042",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך כחול?",
+      "visual": "🔵",
+      "audioText": "לאיזו קבוצת צבעים שייך כחול?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בהיר"
+        },
+        {
+          "id": "option-2",
+          "label": "קר"
+        },
+        {
+          "id": "option-3",
+          "label": "חם"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-043",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "🟢",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ירוק",
+          "emoji": "🟢"
+        },
+        {
+          "id": "option-2",
+          "label": "סגול",
+          "emoji": "🟣"
+        },
+        {
+          "id": "option-3",
+          "label": "שחור",
+          "emoji": "⚫"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-044",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של שמש?",
+      "visual": "🟡",
+      "audioText": "מה הצבע של שמש?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ורוד",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-2",
+          "label": "חום",
+          "emoji": "🟤"
+        },
+        {
+          "id": "option-3",
+          "label": "צהוב",
+          "emoji": "🟡"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-045",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך כתום?",
+      "visual": "🟠",
+      "audioText": "לאיזו קבוצת צבעים שייך כתום?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בהיר"
+        },
+        {
+          "id": "option-2",
+          "label": "חם"
+        },
+        {
+          "id": "option-3",
+          "label": "קר"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-046",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "🟣",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "סגול",
+          "emoji": "🟣"
+        },
+        {
+          "id": "option-2",
+          "label": "שחור",
+          "emoji": "⚫"
+        },
+        {
+          "id": "option-3",
+          "label": "כחול",
+          "emoji": "🔵"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-047",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של פרח ורוד?",
+      "visual": "🌸",
+      "audioText": "מה הצבע של פרח ורוד?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "חום",
+          "emoji": "🟤"
+        },
+        {
+          "id": "option-2",
+          "label": "ירוק",
+          "emoji": "🟢"
+        },
+        {
+          "id": "option-3",
+          "label": "ורוד",
+          "emoji": "🌸"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-048",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך לבן?",
+      "visual": "⚪",
+      "audioText": "לאיזו קבוצת צבעים שייך לבן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "קר"
+        },
+        {
+          "id": "option-2",
+          "label": "בהיר"
+        },
+        {
+          "id": "option-3",
+          "label": "חם"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-049",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "⚫",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "שחור",
+          "emoji": "⚫"
+        },
+        {
+          "id": "option-2",
+          "label": "כחול",
+          "emoji": "🔵"
+        },
+        {
+          "id": "option-3",
+          "label": "כתום",
+          "emoji": "🟠"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-050",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של שוקולד?",
+      "visual": "🟤",
+      "audioText": "מה הצבע של שוקולד?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ירוק",
+          "emoji": "🟢"
+        },
+        {
+          "id": "option-2",
+          "label": "סגול",
+          "emoji": "🟣"
+        },
+        {
+          "id": "option-3",
+          "label": "חום",
+          "emoji": "🟤"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-051",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך אדום?",
+      "visual": "🔴",
+      "audioText": "לאיזו קבוצת צבעים שייך אדום?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בהיר"
+        },
+        {
+          "id": "option-2",
+          "label": "חם"
+        },
+        {
+          "id": "option-3",
+          "label": "קר"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-052",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "🔵",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כחול",
+          "emoji": "🔵"
+        },
+        {
+          "id": "option-2",
+          "label": "כתום",
+          "emoji": "🟠"
+        },
+        {
+          "id": "option-3",
+          "label": "לבן",
+          "emoji": "⚪"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-053",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של עלה?",
+      "visual": "🟢",
+      "audioText": "מה הצבע של עלה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "סגול",
+          "emoji": "🟣"
+        },
+        {
+          "id": "option-2",
+          "label": "שחור",
+          "emoji": "⚫"
+        },
+        {
+          "id": "option-3",
+          "label": "ירוק",
+          "emoji": "🟢"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-054",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך צהוב?",
+      "visual": "🟡",
+      "audioText": "לאיזו קבוצת צבעים שייך צהוב?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בהיר"
+        },
+        {
+          "id": "option-2",
+          "label": "חם"
+        },
+        {
+          "id": "option-3",
+          "label": "קר"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-055",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "🟠",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כתום",
+          "emoji": "🟠"
+        },
+        {
+          "id": "option-2",
+          "label": "לבן",
+          "emoji": "⚪"
+        },
+        {
+          "id": "option-3",
+          "label": "אדום",
+          "emoji": "🔴"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-056",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של חציל?",
+      "visual": "🟣",
+      "audioText": "מה הצבע של חציל?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "שחור",
+          "emoji": "⚫"
+        },
+        {
+          "id": "option-2",
+          "label": "כחול",
+          "emoji": "🔵"
+        },
+        {
+          "id": "option-3",
+          "label": "סגול",
+          "emoji": "🟣"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-057",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך ורוד?",
+      "visual": "🌸",
+      "audioText": "לאיזו קבוצת צבעים שייך ורוד?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בהיר"
+        },
+        {
+          "id": "option-2",
+          "label": "חם"
+        },
+        {
+          "id": "option-3",
+          "label": "קר"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-058",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "⚪",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "לבן",
+          "emoji": "⚪"
+        },
+        {
+          "id": "option-2",
+          "label": "אדום",
+          "emoji": "🔴"
+        },
+        {
+          "id": "option-3",
+          "label": "צהוב",
+          "emoji": "🟡"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-059",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של לילה?",
+      "visual": "⚫",
+      "audioText": "מה הצבע של לילה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כחול",
+          "emoji": "🔵"
+        },
+        {
+          "id": "option-2",
+          "label": "כתום",
+          "emoji": "🟠"
+        },
+        {
+          "id": "option-3",
+          "label": "שחור",
+          "emoji": "⚫"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-060",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך חום?",
+      "visual": "🟤",
+      "audioText": "לאיזו קבוצת צבעים שייך חום?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בהיר"
+        },
+        {
+          "id": "option-2",
+          "label": "חם"
+        },
+        {
+          "id": "option-3",
+          "label": "קר"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-061",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "🔴",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "אדום",
+          "emoji": "🔴"
+        },
+        {
+          "id": "option-2",
+          "label": "צהוב",
+          "emoji": "🟡"
+        },
+        {
+          "id": "option-3",
+          "label": "ורוד",
+          "emoji": "🌸"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-062",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של ים?",
+      "visual": "🔵",
+      "audioText": "מה הצבע של ים?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כתום",
+          "emoji": "🟠"
+        },
+        {
+          "id": "option-2",
+          "label": "לבן",
+          "emoji": "⚪"
+        },
+        {
+          "id": "option-3",
+          "label": "כחול",
+          "emoji": "🔵"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-063",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך ירוק?",
+      "visual": "🟢",
+      "audioText": "לאיזו קבוצת צבעים שייך ירוק?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בהיר"
+        },
+        {
+          "id": "option-2",
+          "label": "קר"
+        },
+        {
+          "id": "option-3",
+          "label": "חם"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-064",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "🟡",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צהוב",
+          "emoji": "🟡"
+        },
+        {
+          "id": "option-2",
+          "label": "ורוד",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-3",
+          "label": "חום",
+          "emoji": "🟤"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-065",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של תפוז?",
+      "visual": "🟠",
+      "audioText": "מה הצבע של תפוז?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "לבן",
+          "emoji": "⚪"
+        },
+        {
+          "id": "option-2",
+          "label": "אדום",
+          "emoji": "🔴"
+        },
+        {
+          "id": "option-3",
+          "label": "כתום",
+          "emoji": "🟠"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-066",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך סגול?",
+      "visual": "🟣",
+      "audioText": "לאיזו קבוצת צבעים שייך סגול?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בהיר"
+        },
+        {
+          "id": "option-2",
+          "label": "קר"
+        },
+        {
+          "id": "option-3",
+          "label": "חם"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-067",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "🌸",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ורוד",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-2",
+          "label": "חום",
+          "emoji": "🟤"
+        },
+        {
+          "id": "option-3",
+          "label": "ירוק",
+          "emoji": "🟢"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-068",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של ענן?",
+      "visual": "⚪",
+      "audioText": "מה הצבע של ענן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "אדום",
+          "emoji": "🔴"
+        },
+        {
+          "id": "option-2",
+          "label": "צהוב",
+          "emoji": "🟡"
+        },
+        {
+          "id": "option-3",
+          "label": "לבן",
+          "emoji": "⚪"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-069",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך שחור?",
+      "visual": "⚫",
+      "audioText": "לאיזו קבוצת צבעים שייך שחור?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "קר"
+        },
+        {
+          "id": "option-2",
+          "label": "כהה"
+        },
+        {
+          "id": "option-3",
+          "label": "חם"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-070",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "🟤",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "חום",
+          "emoji": "🟤"
+        },
+        {
+          "id": "option-2",
+          "label": "ירוק",
+          "emoji": "🟢"
+        },
+        {
+          "id": "option-3",
+          "label": "סגול",
+          "emoji": "🟣"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-071",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של תות?",
+      "visual": "🔴",
+      "audioText": "מה הצבע של תות?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צהוב",
+          "emoji": "🟡"
+        },
+        {
+          "id": "option-2",
+          "label": "ורוד",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-3",
+          "label": "אדום",
+          "emoji": "🔴"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-072",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך כחול?",
+      "visual": "🔵",
+      "audioText": "לאיזו קבוצת צבעים שייך כחול?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בהיר"
+        },
+        {
+          "id": "option-2",
+          "label": "קר"
+        },
+        {
+          "id": "option-3",
+          "label": "חם"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-073",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "🟢",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ירוק",
+          "emoji": "🟢"
+        },
+        {
+          "id": "option-2",
+          "label": "סגול",
+          "emoji": "🟣"
+        },
+        {
+          "id": "option-3",
+          "label": "שחור",
+          "emoji": "⚫"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-074",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של שמש?",
+      "visual": "🟡",
+      "audioText": "מה הצבע של שמש?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ורוד",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-2",
+          "label": "חום",
+          "emoji": "🟤"
+        },
+        {
+          "id": "option-3",
+          "label": "צהוב",
+          "emoji": "🟡"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-075",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך כתום?",
+      "visual": "🟠",
+      "audioText": "לאיזו קבוצת צבעים שייך כתום?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בהיר"
+        },
+        {
+          "id": "option-2",
+          "label": "חם"
+        },
+        {
+          "id": "option-3",
+          "label": "קר"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-076",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "🟣",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "סגול",
+          "emoji": "🟣"
+        },
+        {
+          "id": "option-2",
+          "label": "שחור",
+          "emoji": "⚫"
+        },
+        {
+          "id": "option-3",
+          "label": "כחול",
+          "emoji": "🔵"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-077",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של פרח ורוד?",
+      "visual": "🌸",
+      "audioText": "מה הצבע של פרח ורוד?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "חום",
+          "emoji": "🟤"
+        },
+        {
+          "id": "option-2",
+          "label": "ירוק",
+          "emoji": "🟢"
+        },
+        {
+          "id": "option-3",
+          "label": "ורוד",
+          "emoji": "🌸"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-078",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך לבן?",
+      "visual": "⚪",
+      "audioText": "לאיזו קבוצת צבעים שייך לבן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "קר"
+        },
+        {
+          "id": "option-2",
+          "label": "בהיר"
+        },
+        {
+          "id": "option-3",
+          "label": "חם"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-079",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "⚫",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "שחור",
+          "emoji": "⚫"
+        },
+        {
+          "id": "option-2",
+          "label": "כחול",
+          "emoji": "🔵"
+        },
+        {
+          "id": "option-3",
+          "label": "כתום",
+          "emoji": "🟠"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-080",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של שוקולד?",
+      "visual": "🟤",
+      "audioText": "מה הצבע של שוקולד?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ירוק",
+          "emoji": "🟢"
+        },
+        {
+          "id": "option-2",
+          "label": "סגול",
+          "emoji": "🟣"
+        },
+        {
+          "id": "option-3",
+          "label": "חום",
+          "emoji": "🟤"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-081",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך אדום?",
+      "visual": "🔴",
+      "audioText": "לאיזו קבוצת צבעים שייך אדום?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בהיר"
+        },
+        {
+          "id": "option-2",
+          "label": "חם"
+        },
+        {
+          "id": "option-3",
+          "label": "קר"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-082",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "🔵",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כחול",
+          "emoji": "🔵"
+        },
+        {
+          "id": "option-2",
+          "label": "כתום",
+          "emoji": "🟠"
+        },
+        {
+          "id": "option-3",
+          "label": "לבן",
+          "emoji": "⚪"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-083",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של עלה?",
+      "visual": "🟢",
+      "audioText": "מה הצבע של עלה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "סגול",
+          "emoji": "🟣"
+        },
+        {
+          "id": "option-2",
+          "label": "שחור",
+          "emoji": "⚫"
+        },
+        {
+          "id": "option-3",
+          "label": "ירוק",
+          "emoji": "🟢"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-084",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך צהוב?",
+      "visual": "🟡",
+      "audioText": "לאיזו קבוצת צבעים שייך צהוב?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בהיר"
+        },
+        {
+          "id": "option-2",
+          "label": "חם"
+        },
+        {
+          "id": "option-3",
+          "label": "קר"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-085",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "🟠",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כתום",
+          "emoji": "🟠"
+        },
+        {
+          "id": "option-2",
+          "label": "לבן",
+          "emoji": "⚪"
+        },
+        {
+          "id": "option-3",
+          "label": "אדום",
+          "emoji": "🔴"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-086",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של חציל?",
+      "visual": "🟣",
+      "audioText": "מה הצבע של חציל?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "שחור",
+          "emoji": "⚫"
+        },
+        {
+          "id": "option-2",
+          "label": "כחול",
+          "emoji": "🔵"
+        },
+        {
+          "id": "option-3",
+          "label": "סגול",
+          "emoji": "🟣"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-087",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך ורוד?",
+      "visual": "🌸",
+      "audioText": "לאיזו קבוצת צבעים שייך ורוד?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בהיר"
+        },
+        {
+          "id": "option-2",
+          "label": "חם"
+        },
+        {
+          "id": "option-3",
+          "label": "קר"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-088",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "⚪",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "לבן",
+          "emoji": "⚪"
+        },
+        {
+          "id": "option-2",
+          "label": "אדום",
+          "emoji": "🔴"
+        },
+        {
+          "id": "option-3",
+          "label": "צהוב",
+          "emoji": "🟡"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-089",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של לילה?",
+      "visual": "⚫",
+      "audioText": "מה הצבע של לילה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כחול",
+          "emoji": "🔵"
+        },
+        {
+          "id": "option-2",
+          "label": "כתום",
+          "emoji": "🟠"
+        },
+        {
+          "id": "option-3",
+          "label": "שחור",
+          "emoji": "⚫"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-090",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך חום?",
+      "visual": "🟤",
+      "audioText": "לאיזו קבוצת צבעים שייך חום?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בהיר"
+        },
+        {
+          "id": "option-2",
+          "label": "חם"
+        },
+        {
+          "id": "option-3",
+          "label": "קר"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-091",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "🔴",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "אדום",
+          "emoji": "🔴"
+        },
+        {
+          "id": "option-2",
+          "label": "צהוב",
+          "emoji": "🟡"
+        },
+        {
+          "id": "option-3",
+          "label": "ורוד",
+          "emoji": "🌸"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-092",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של ים?",
+      "visual": "🔵",
+      "audioText": "מה הצבע של ים?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כתום",
+          "emoji": "🟠"
+        },
+        {
+          "id": "option-2",
+          "label": "לבן",
+          "emoji": "⚪"
+        },
+        {
+          "id": "option-3",
+          "label": "כחול",
+          "emoji": "🔵"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-093",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך ירוק?",
+      "visual": "🟢",
+      "audioText": "לאיזו קבוצת צבעים שייך ירוק?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בהיר"
+        },
+        {
+          "id": "option-2",
+          "label": "קר"
+        },
+        {
+          "id": "option-3",
+          "label": "חם"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-094",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "🟡",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צהוב",
+          "emoji": "🟡"
+        },
+        {
+          "id": "option-2",
+          "label": "ורוד",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-3",
+          "label": "חום",
+          "emoji": "🟤"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-095",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של תפוז?",
+      "visual": "🟠",
+      "audioText": "מה הצבע של תפוז?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "לבן",
+          "emoji": "⚪"
+        },
+        {
+          "id": "option-2",
+          "label": "אדום",
+          "emoji": "🔴"
+        },
+        {
+          "id": "option-3",
+          "label": "כתום",
+          "emoji": "🟠"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-096",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך סגול?",
+      "visual": "🟣",
+      "audioText": "לאיזו קבוצת צבעים שייך סגול?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בהיר"
+        },
+        {
+          "id": "option-2",
+          "label": "קר"
+        },
+        {
+          "id": "option-3",
+          "label": "חם"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-097",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "🌸",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ורוד",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-2",
+          "label": "חום",
+          "emoji": "🟤"
+        },
+        {
+          "id": "option-3",
+          "label": "ירוק",
+          "emoji": "🟢"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-098",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של ענן?",
+      "visual": "⚪",
+      "audioText": "מה הצבע של ענן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "אדום",
+          "emoji": "🔴"
+        },
+        {
+          "id": "option-2",
+          "label": "צהוב",
+          "emoji": "🟡"
+        },
+        {
+          "id": "option-3",
+          "label": "לבן",
+          "emoji": "⚪"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-099",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך שחור?",
+      "visual": "⚫",
+      "audioText": "לאיזו קבוצת צבעים שייך שחור?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "קר"
+        },
+        {
+          "id": "option-2",
+          "label": "כהה"
+        },
+        {
+          "id": "option-3",
+          "label": "חם"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-100",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "🟤",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "חום",
+          "emoji": "🟤"
+        },
+        {
+          "id": "option-2",
+          "label": "ירוק",
+          "emoji": "🟢"
+        },
+        {
+          "id": "option-3",
+          "label": "סגול",
+          "emoji": "🟣"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-101",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של תות?",
+      "visual": "🔴",
+      "audioText": "מה הצבע של תות?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צהוב",
+          "emoji": "🟡"
+        },
+        {
+          "id": "option-2",
+          "label": "ורוד",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-3",
+          "label": "אדום",
+          "emoji": "🔴"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-102",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך כחול?",
+      "visual": "🔵",
+      "audioText": "לאיזו קבוצת צבעים שייך כחול?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בהיר"
+        },
+        {
+          "id": "option-2",
+          "label": "קר"
+        },
+        {
+          "id": "option-3",
+          "label": "חם"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-103",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "🟢",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ירוק",
+          "emoji": "🟢"
+        },
+        {
+          "id": "option-2",
+          "label": "סגול",
+          "emoji": "🟣"
+        },
+        {
+          "id": "option-3",
+          "label": "שחור",
+          "emoji": "⚫"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-104",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של שמש?",
+      "visual": "🟡",
+      "audioText": "מה הצבע של שמש?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ורוד",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-2",
+          "label": "חום",
+          "emoji": "🟤"
+        },
+        {
+          "id": "option-3",
+          "label": "צהוב",
+          "emoji": "🟡"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-105",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך כתום?",
+      "visual": "🟠",
+      "audioText": "לאיזו קבוצת צבעים שייך כתום?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בהיר"
+        },
+        {
+          "id": "option-2",
+          "label": "חם"
+        },
+        {
+          "id": "option-3",
+          "label": "קר"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-106",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "🟣",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "סגול",
+          "emoji": "🟣"
+        },
+        {
+          "id": "option-2",
+          "label": "שחור",
+          "emoji": "⚫"
+        },
+        {
+          "id": "option-3",
+          "label": "כחול",
+          "emoji": "🔵"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-107",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של פרח ורוד?",
+      "visual": "🌸",
+      "audioText": "מה הצבע של פרח ורוד?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "חום",
+          "emoji": "🟤"
+        },
+        {
+          "id": "option-2",
+          "label": "ירוק",
+          "emoji": "🟢"
+        },
+        {
+          "id": "option-3",
+          "label": "ורוד",
+          "emoji": "🌸"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "colors-108",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "color-groups",
+      "category": "colors",
+      "prompt": "לאיזו קבוצת צבעים שייך לבן?",
+      "visual": "⚪",
+      "audioText": "לאיזו קבוצת צבעים שייך לבן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "קר"
+        },
+        {
+          "id": "option-2",
+          "label": "בהיר"
+        },
+        {
+          "id": "option-3",
+          "label": "חם"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "colors-109",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "איזה צבע מופיע כאן?",
+      "visual": "⚫",
+      "audioText": "איזה צבע מופיע כאן?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "שחור",
+          "emoji": "⚫"
+        },
+        {
+          "id": "option-2",
+          "label": "כחול",
+          "emoji": "🔵"
+        },
+        {
+          "id": "option-3",
+          "label": "כתום",
+          "emoji": "🟠"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "colors-110",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "color-recognition",
+      "category": "colors",
+      "prompt": "מה הצבע של שוקולד?",
+      "visual": "🟤",
+      "audioText": "מה הצבע של שוקולד?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ירוק",
+          "emoji": "🟢"
+        },
+        {
+          "id": "option-2",
+          "label": "סגול",
+          "emoji": "🟣"
+        },
+        {
+          "id": "option-3",
+          "label": "חום",
+          "emoji": "🟤"
+        }
+      ],
+      "correctOptionId": "option-3"
+    }
+  ]
+}

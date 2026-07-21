@@ -1,0 +1,4767 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": "2026.07.1",
+  "gameId": "numbers",
+  "items": [
+    {
+      "id": "numbers-001",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 1",
+      "visual": "1",
+      "audioText": "בחרו את המספר 1",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "1"
+        },
+        {
+          "id": "option-2",
+          "label": "2"
+        },
+        {
+          "id": "option-3",
+          "label": "0"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-002",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "⭐⭐",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "3"
+        },
+        {
+          "id": "option-2",
+          "label": "1"
+        },
+        {
+          "id": "option-3",
+          "label": "2"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-003",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 3?",
+      "visual": "3, ?",
+      "audioText": "איזה מספר בא אחרי 3?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "5"
+        },
+        {
+          "id": "option-2",
+          "label": "4"
+        },
+        {
+          "id": "option-3",
+          "label": "3"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-004",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 1 ועוד 1?",
+      "visual": "1 + 1",
+      "audioText": "כמה הם 1 ועוד 1?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "2"
+        },
+        {
+          "id": "option-2",
+          "label": "1"
+        },
+        {
+          "id": "option-3",
+          "label": "3"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-005",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 2",
+      "visual": "2",
+      "audioText": "בחרו את המספר 2",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "3"
+        },
+        {
+          "id": "option-2",
+          "label": "1"
+        },
+        {
+          "id": "option-3",
+          "label": "2"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-006",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "🟦🟦🟦",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "2"
+        },
+        {
+          "id": "option-2",
+          "label": "3"
+        },
+        {
+          "id": "option-3",
+          "label": "4"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-007",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 1?",
+      "visual": "1, ?",
+      "audioText": "איזה מספר בא אחרי 1?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "2"
+        },
+        {
+          "id": "option-2",
+          "label": "1"
+        },
+        {
+          "id": "option-3",
+          "label": "3"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-008",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 2 ועוד 1?",
+      "visual": "2 + 1",
+      "audioText": "כמה הם 2 ועוד 1?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "2"
+        },
+        {
+          "id": "option-2",
+          "label": "4"
+        },
+        {
+          "id": "option-3",
+          "label": "3"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-009",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 3",
+      "visual": "3",
+      "audioText": "בחרו את המספר 3",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "2"
+        },
+        {
+          "id": "option-2",
+          "label": "3"
+        },
+        {
+          "id": "option-3",
+          "label": "4"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-010",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "🌸",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "1"
+        },
+        {
+          "id": "option-2",
+          "label": "2"
+        },
+        {
+          "id": "option-3",
+          "label": "3"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-011",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 2?",
+      "visual": "2, ?",
+      "audioText": "איזה מספר בא אחרי 2?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "2"
+        },
+        {
+          "id": "option-2",
+          "label": "4"
+        },
+        {
+          "id": "option-3",
+          "label": "3"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-012",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 3 ועוד 1?",
+      "visual": "3 + 1",
+      "audioText": "כמה הם 3 ועוד 1?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "5"
+        },
+        {
+          "id": "option-2",
+          "label": "4"
+        },
+        {
+          "id": "option-3",
+          "label": "3"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-013",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 1",
+      "visual": "1",
+      "audioText": "בחרו את המספר 1",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "1"
+        },
+        {
+          "id": "option-2",
+          "label": "2"
+        },
+        {
+          "id": "option-3",
+          "label": "0"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-014",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "⭐⭐",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "3"
+        },
+        {
+          "id": "option-2",
+          "label": "1"
+        },
+        {
+          "id": "option-3",
+          "label": "2"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-015",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 3?",
+      "visual": "3, ?",
+      "audioText": "איזה מספר בא אחרי 3?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "5"
+        },
+        {
+          "id": "option-2",
+          "label": "4"
+        },
+        {
+          "id": "option-3",
+          "label": "3"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-016",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 3 ועוד 2?",
+      "visual": "3 + 2",
+      "audioText": "כמה הם 3 ועוד 2?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "5"
+        },
+        {
+          "id": "option-2",
+          "label": "4"
+        },
+        {
+          "id": "option-3",
+          "label": "6"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-017",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 4",
+      "visual": "4",
+      "audioText": "בחרו את המספר 4",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "5"
+        },
+        {
+          "id": "option-2",
+          "label": "3"
+        },
+        {
+          "id": "option-3",
+          "label": "4"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-018",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "🟦🟦🟦🟦🟦",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "4"
+        },
+        {
+          "id": "option-2",
+          "label": "5"
+        },
+        {
+          "id": "option-3",
+          "label": "6"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-019",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 6?",
+      "visual": "6, ?",
+      "audioText": "איזה מספר בא אחרי 6?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "7"
+        },
+        {
+          "id": "option-2",
+          "label": "6"
+        },
+        {
+          "id": "option-3",
+          "label": "8"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-020",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 7 ועוד 3?",
+      "visual": "7 + 3",
+      "audioText": "כמה הם 7 ועוד 3?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "9"
+        },
+        {
+          "id": "option-2",
+          "label": "11"
+        },
+        {
+          "id": "option-3",
+          "label": "10"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-021",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 8",
+      "visual": "8",
+      "audioText": "בחרו את המספר 8",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "7"
+        },
+        {
+          "id": "option-2",
+          "label": "8"
+        },
+        {
+          "id": "option-3",
+          "label": "9"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-022",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "🌸🌸🌸🌸🌸🌸🌸🌸🌸",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "9"
+        },
+        {
+          "id": "option-2",
+          "label": "10"
+        },
+        {
+          "id": "option-3",
+          "label": "8"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-023",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 10?",
+      "visual": "10, ?",
+      "audioText": "איזה מספר בא אחרי 10?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "10"
+        },
+        {
+          "id": "option-2",
+          "label": "12"
+        },
+        {
+          "id": "option-3",
+          "label": "11"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-024",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 11 ועוד 4?",
+      "visual": "11 + 4",
+      "audioText": "כמה הם 11 ועוד 4?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "16"
+        },
+        {
+          "id": "option-2",
+          "label": "15"
+        },
+        {
+          "id": "option-3",
+          "label": "14"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-025",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 12",
+      "visual": "12",
+      "audioText": "בחרו את המספר 12",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "12"
+        },
+        {
+          "id": "option-2",
+          "label": "13"
+        },
+        {
+          "id": "option-3",
+          "label": "11"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-026",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "14"
+        },
+        {
+          "id": "option-2",
+          "label": "12"
+        },
+        {
+          "id": "option-3",
+          "label": "13"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-027",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 1?",
+      "visual": "1, ?",
+      "audioText": "איזה מספר בא אחרי 1?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "3"
+        },
+        {
+          "id": "option-2",
+          "label": "2"
+        },
+        {
+          "id": "option-3",
+          "label": "1"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-028",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 2 ועוד 2?",
+      "visual": "2 + 2",
+      "audioText": "כמה הם 2 ועוד 2?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "4"
+        },
+        {
+          "id": "option-2",
+          "label": "3"
+        },
+        {
+          "id": "option-3",
+          "label": "5"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-029",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 3",
+      "visual": "3",
+      "audioText": "בחרו את המספר 3",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "4"
+        },
+        {
+          "id": "option-2",
+          "label": "2"
+        },
+        {
+          "id": "option-3",
+          "label": "3"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-030",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "🟦🟦🟦🟦",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "3"
+        },
+        {
+          "id": "option-2",
+          "label": "4"
+        },
+        {
+          "id": "option-3",
+          "label": "5"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-031",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 7?",
+      "visual": "7, ?",
+      "audioText": "איזה מספר בא אחרי 7?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "8"
+        },
+        {
+          "id": "option-2",
+          "label": "7"
+        },
+        {
+          "id": "option-3",
+          "label": "9"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-032",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 8 ועוד 1?",
+      "visual": "8 + 1",
+      "audioText": "כמה הם 8 ועוד 1?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "8"
+        },
+        {
+          "id": "option-2",
+          "label": "10"
+        },
+        {
+          "id": "option-3",
+          "label": "9"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-033",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 1",
+      "visual": "1",
+      "audioText": "בחרו את המספר 1",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "0"
+        },
+        {
+          "id": "option-2",
+          "label": "1"
+        },
+        {
+          "id": "option-3",
+          "label": "2"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-034",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "🌸🌸",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "2"
+        },
+        {
+          "id": "option-2",
+          "label": "3"
+        },
+        {
+          "id": "option-3",
+          "label": "1"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-035",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 3?",
+      "visual": "3, ?",
+      "audioText": "איזה מספר בא אחרי 3?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "3"
+        },
+        {
+          "id": "option-2",
+          "label": "5"
+        },
+        {
+          "id": "option-3",
+          "label": "4"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-036",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 4 ועוד 1?",
+      "visual": "4 + 1",
+      "audioText": "כמה הם 4 ועוד 1?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "6"
+        },
+        {
+          "id": "option-2",
+          "label": "5"
+        },
+        {
+          "id": "option-3",
+          "label": "4"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-037",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 5",
+      "visual": "5",
+      "audioText": "בחרו את המספר 5",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "5"
+        },
+        {
+          "id": "option-2",
+          "label": "6"
+        },
+        {
+          "id": "option-3",
+          "label": "4"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-038",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "⭐⭐⭐⭐⭐⭐",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "7"
+        },
+        {
+          "id": "option-2",
+          "label": "5"
+        },
+        {
+          "id": "option-3",
+          "label": "6"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-039",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 7?",
+      "visual": "7, ?",
+      "audioText": "איזה מספר בא אחרי 7?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "9"
+        },
+        {
+          "id": "option-2",
+          "label": "8"
+        },
+        {
+          "id": "option-3",
+          "label": "7"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-040",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 8 ועוד 1?",
+      "visual": "8 + 1",
+      "audioText": "כמה הם 8 ועוד 1?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "9"
+        },
+        {
+          "id": "option-2",
+          "label": "8"
+        },
+        {
+          "id": "option-3",
+          "label": "10"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-041",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 1",
+      "visual": "1",
+      "audioText": "בחרו את המספר 1",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "2"
+        },
+        {
+          "id": "option-2",
+          "label": "0"
+        },
+        {
+          "id": "option-3",
+          "label": "1"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-042",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "🟦🟦",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "1"
+        },
+        {
+          "id": "option-2",
+          "label": "2"
+        },
+        {
+          "id": "option-3",
+          "label": "3"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-043",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 3?",
+      "visual": "3, ?",
+      "audioText": "איזה מספר בא אחרי 3?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "4"
+        },
+        {
+          "id": "option-2",
+          "label": "3"
+        },
+        {
+          "id": "option-3",
+          "label": "5"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-044",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 4 ועוד 1?",
+      "visual": "4 + 1",
+      "audioText": "כמה הם 4 ועוד 1?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "4"
+        },
+        {
+          "id": "option-2",
+          "label": "6"
+        },
+        {
+          "id": "option-3",
+          "label": "5"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-045",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 5",
+      "visual": "5",
+      "audioText": "בחרו את המספר 5",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "4"
+        },
+        {
+          "id": "option-2",
+          "label": "5"
+        },
+        {
+          "id": "option-3",
+          "label": "6"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-046",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "🌸🌸🌸🌸🌸🌸🌸",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "7"
+        },
+        {
+          "id": "option-2",
+          "label": "8"
+        },
+        {
+          "id": "option-3",
+          "label": "6"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-047",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 8?",
+      "visual": "8, ?",
+      "audioText": "איזה מספר בא אחרי 8?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "8"
+        },
+        {
+          "id": "option-2",
+          "label": "10"
+        },
+        {
+          "id": "option-3",
+          "label": "9"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-048",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 9 ועוד 4?",
+      "visual": "9 + 4",
+      "audioText": "כמה הם 9 ועוד 4?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "14"
+        },
+        {
+          "id": "option-2",
+          "label": "13"
+        },
+        {
+          "id": "option-3",
+          "label": "12"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-049",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 10",
+      "visual": "10",
+      "audioText": "בחרו את המספר 10",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "10"
+        },
+        {
+          "id": "option-2",
+          "label": "11"
+        },
+        {
+          "id": "option-3",
+          "label": "9"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-050",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "12"
+        },
+        {
+          "id": "option-2",
+          "label": "10"
+        },
+        {
+          "id": "option-3",
+          "label": "11"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-051",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 12?",
+      "visual": "12, ?",
+      "audioText": "איזה מספר בא אחרי 12?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "14"
+        },
+        {
+          "id": "option-2",
+          "label": "13"
+        },
+        {
+          "id": "option-3",
+          "label": "12"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-052",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 13 ועוד 2?",
+      "visual": "13 + 2",
+      "audioText": "כמה הם 13 ועוד 2?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "15"
+        },
+        {
+          "id": "option-2",
+          "label": "14"
+        },
+        {
+          "id": "option-3",
+          "label": "16"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-053",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 1",
+      "visual": "1",
+      "audioText": "בחרו את המספר 1",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "2"
+        },
+        {
+          "id": "option-2",
+          "label": "0"
+        },
+        {
+          "id": "option-3",
+          "label": "1"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-054",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "🟦🟦",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "1"
+        },
+        {
+          "id": "option-2",
+          "label": "2"
+        },
+        {
+          "id": "option-3",
+          "label": "3"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-055",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 3?",
+      "visual": "3, ?",
+      "audioText": "איזה מספר בא אחרי 3?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "4"
+        },
+        {
+          "id": "option-2",
+          "label": "3"
+        },
+        {
+          "id": "option-3",
+          "label": "5"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-056",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 4 ועוד 3?",
+      "visual": "4 + 3",
+      "audioText": "כמה הם 4 ועוד 3?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "6"
+        },
+        {
+          "id": "option-2",
+          "label": "8"
+        },
+        {
+          "id": "option-3",
+          "label": "7"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-057",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 5",
+      "visual": "5",
+      "audioText": "בחרו את המספר 5",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "4"
+        },
+        {
+          "id": "option-2",
+          "label": "5"
+        },
+        {
+          "id": "option-3",
+          "label": "6"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-058",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "🌸🌸🌸🌸🌸🌸",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "6"
+        },
+        {
+          "id": "option-2",
+          "label": "7"
+        },
+        {
+          "id": "option-3",
+          "label": "5"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-059",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 7?",
+      "visual": "7, ?",
+      "audioText": "איזה מספר בא אחרי 7?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "7"
+        },
+        {
+          "id": "option-2",
+          "label": "9"
+        },
+        {
+          "id": "option-3",
+          "label": "8"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-060",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 8 ועוד 4?",
+      "visual": "8 + 4",
+      "audioText": "כמה הם 8 ועוד 4?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "13"
+        },
+        {
+          "id": "option-2",
+          "label": "12"
+        },
+        {
+          "id": "option-3",
+          "label": "11"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-061",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 5",
+      "visual": "5",
+      "audioText": "בחרו את המספר 5",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "5"
+        },
+        {
+          "id": "option-2",
+          "label": "6"
+        },
+        {
+          "id": "option-3",
+          "label": "4"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-062",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "⭐⭐⭐⭐⭐⭐",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "7"
+        },
+        {
+          "id": "option-2",
+          "label": "5"
+        },
+        {
+          "id": "option-3",
+          "label": "6"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-063",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 7?",
+      "visual": "7, ?",
+      "audioText": "איזה מספר בא אחרי 7?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "9"
+        },
+        {
+          "id": "option-2",
+          "label": "8"
+        },
+        {
+          "id": "option-3",
+          "label": "7"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-064",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 8 ועוד 1?",
+      "visual": "8 + 1",
+      "audioText": "כמה הם 8 ועוד 1?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "9"
+        },
+        {
+          "id": "option-2",
+          "label": "8"
+        },
+        {
+          "id": "option-3",
+          "label": "10"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-065",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 1",
+      "visual": "1",
+      "audioText": "בחרו את המספר 1",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "2"
+        },
+        {
+          "id": "option-2",
+          "label": "0"
+        },
+        {
+          "id": "option-3",
+          "label": "1"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-066",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "🟦🟦",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "1"
+        },
+        {
+          "id": "option-2",
+          "label": "2"
+        },
+        {
+          "id": "option-3",
+          "label": "3"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-067",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 3?",
+      "visual": "3, ?",
+      "audioText": "איזה מספר בא אחרי 3?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "4"
+        },
+        {
+          "id": "option-2",
+          "label": "3"
+        },
+        {
+          "id": "option-3",
+          "label": "5"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-068",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 4 ועוד 1?",
+      "visual": "4 + 1",
+      "audioText": "כמה הם 4 ועוד 1?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "4"
+        },
+        {
+          "id": "option-2",
+          "label": "6"
+        },
+        {
+          "id": "option-3",
+          "label": "5"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-069",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 5",
+      "visual": "5",
+      "audioText": "בחרו את המספר 5",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "4"
+        },
+        {
+          "id": "option-2",
+          "label": "5"
+        },
+        {
+          "id": "option-3",
+          "label": "6"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-070",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "🌸🌸🌸🌸🌸🌸",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "6"
+        },
+        {
+          "id": "option-2",
+          "label": "7"
+        },
+        {
+          "id": "option-3",
+          "label": "5"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-071",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 7?",
+      "visual": "7, ?",
+      "audioText": "איזה מספר בא אחרי 7?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "7"
+        },
+        {
+          "id": "option-2",
+          "label": "9"
+        },
+        {
+          "id": "option-3",
+          "label": "8"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-072",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 8 ועוד 1?",
+      "visual": "8 + 1",
+      "audioText": "כמה הם 8 ועוד 1?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "10"
+        },
+        {
+          "id": "option-2",
+          "label": "9"
+        },
+        {
+          "id": "option-3",
+          "label": "8"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-073",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 1",
+      "visual": "1",
+      "audioText": "בחרו את המספר 1",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "1"
+        },
+        {
+          "id": "option-2",
+          "label": "2"
+        },
+        {
+          "id": "option-3",
+          "label": "0"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-074",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "⭐⭐",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "3"
+        },
+        {
+          "id": "option-2",
+          "label": "1"
+        },
+        {
+          "id": "option-3",
+          "label": "2"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-075",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 3?",
+      "visual": "3, ?",
+      "audioText": "איזה מספר בא אחרי 3?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "5"
+        },
+        {
+          "id": "option-2",
+          "label": "4"
+        },
+        {
+          "id": "option-3",
+          "label": "3"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-076",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 4 ועוד 2?",
+      "visual": "4 + 2",
+      "audioText": "כמה הם 4 ועוד 2?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "6"
+        },
+        {
+          "id": "option-2",
+          "label": "5"
+        },
+        {
+          "id": "option-3",
+          "label": "7"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-077",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 5",
+      "visual": "5",
+      "audioText": "בחרו את המספר 5",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "6"
+        },
+        {
+          "id": "option-2",
+          "label": "4"
+        },
+        {
+          "id": "option-3",
+          "label": "5"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-078",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "🟦🟦🟦🟦🟦🟦",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "5"
+        },
+        {
+          "id": "option-2",
+          "label": "6"
+        },
+        {
+          "id": "option-3",
+          "label": "7"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-079",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 7?",
+      "visual": "7, ?",
+      "audioText": "איזה מספר בא אחרי 7?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "8"
+        },
+        {
+          "id": "option-2",
+          "label": "7"
+        },
+        {
+          "id": "option-3",
+          "label": "9"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-080",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 8 ועוד 3?",
+      "visual": "8 + 3",
+      "audioText": "כמה הם 8 ועוד 3?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "10"
+        },
+        {
+          "id": "option-2",
+          "label": "12"
+        },
+        {
+          "id": "option-3",
+          "label": "11"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-081",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 9",
+      "visual": "9",
+      "audioText": "בחרו את המספר 9",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "8"
+        },
+        {
+          "id": "option-2",
+          "label": "9"
+        },
+        {
+          "id": "option-3",
+          "label": "10"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-082",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "10"
+        },
+        {
+          "id": "option-2",
+          "label": "11"
+        },
+        {
+          "id": "option-3",
+          "label": "9"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-083",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 11?",
+      "visual": "11, ?",
+      "audioText": "איזה מספר בא אחרי 11?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "11"
+        },
+        {
+          "id": "option-2",
+          "label": "13"
+        },
+        {
+          "id": "option-3",
+          "label": "12"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-084",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 12 ועוד 4?",
+      "visual": "12 + 4",
+      "audioText": "כמה הם 12 ועוד 4?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "17"
+        },
+        {
+          "id": "option-2",
+          "label": "16"
+        },
+        {
+          "id": "option-3",
+          "label": "15"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-085",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 13",
+      "visual": "13",
+      "audioText": "בחרו את המספר 13",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "13"
+        },
+        {
+          "id": "option-2",
+          "label": "14"
+        },
+        {
+          "id": "option-3",
+          "label": "12"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-086",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "15"
+        },
+        {
+          "id": "option-2",
+          "label": "13"
+        },
+        {
+          "id": "option-3",
+          "label": "14"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-087",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 15?",
+      "visual": "15, ?",
+      "audioText": "איזה מספר בא אחרי 15?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "17"
+        },
+        {
+          "id": "option-2",
+          "label": "16"
+        },
+        {
+          "id": "option-3",
+          "label": "15"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-088",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 16 ועוד 2?",
+      "visual": "16 + 2",
+      "audioText": "כמה הם 16 ועוד 2?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "18"
+        },
+        {
+          "id": "option-2",
+          "label": "17"
+        },
+        {
+          "id": "option-3",
+          "label": "19"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-089",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 17",
+      "visual": "17",
+      "audioText": "בחרו את המספר 17",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "18"
+        },
+        {
+          "id": "option-2",
+          "label": "16"
+        },
+        {
+          "id": "option-3",
+          "label": "17"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-090",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "17"
+        },
+        {
+          "id": "option-2",
+          "label": "18"
+        },
+        {
+          "id": "option-3",
+          "label": "19"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-091",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 1?",
+      "visual": "1, ?",
+      "audioText": "איזה מספר בא אחרי 1?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "2"
+        },
+        {
+          "id": "option-2",
+          "label": "1"
+        },
+        {
+          "id": "option-3",
+          "label": "3"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-092",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 1 ועוד 3?",
+      "visual": "1 + 3",
+      "audioText": "כמה הם 1 ועוד 3?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "3"
+        },
+        {
+          "id": "option-2",
+          "label": "5"
+        },
+        {
+          "id": "option-3",
+          "label": "4"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-093",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 5",
+      "visual": "5",
+      "audioText": "בחרו את המספר 5",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "4"
+        },
+        {
+          "id": "option-2",
+          "label": "5"
+        },
+        {
+          "id": "option-3",
+          "label": "6"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-094",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "🌸🌸🌸",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "3"
+        },
+        {
+          "id": "option-2",
+          "label": "4"
+        },
+        {
+          "id": "option-3",
+          "label": "2"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-095",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 7?",
+      "visual": "7, ?",
+      "audioText": "איזה מספר בא אחרי 7?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "7"
+        },
+        {
+          "id": "option-2",
+          "label": "9"
+        },
+        {
+          "id": "option-3",
+          "label": "8"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-096",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 6 ועוד 4?",
+      "visual": "6 + 4",
+      "audioText": "כמה הם 6 ועוד 4?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "11"
+        },
+        {
+          "id": "option-2",
+          "label": "10"
+        },
+        {
+          "id": "option-3",
+          "label": "9"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-097",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 1",
+      "visual": "1",
+      "audioText": "בחרו את המספר 1",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "1"
+        },
+        {
+          "id": "option-2",
+          "label": "2"
+        },
+        {
+          "id": "option-3",
+          "label": "0"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-098",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "⭐⭐⭐⭐⭐⭐⭐",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "8"
+        },
+        {
+          "id": "option-2",
+          "label": "6"
+        },
+        {
+          "id": "option-3",
+          "label": "7"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-099",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 3?",
+      "visual": "3, ?",
+      "audioText": "איזה מספר בא אחרי 3?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "5"
+        },
+        {
+          "id": "option-2",
+          "label": "4"
+        },
+        {
+          "id": "option-3",
+          "label": "3"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-100",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 9 ועוד 2?",
+      "visual": "9 + 2",
+      "audioText": "כמה הם 9 ועוד 2?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "11"
+        },
+        {
+          "id": "option-2",
+          "label": "10"
+        },
+        {
+          "id": "option-3",
+          "label": "12"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-101",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 5",
+      "visual": "5",
+      "audioText": "בחרו את המספר 5",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "6"
+        },
+        {
+          "id": "option-2",
+          "label": "4"
+        },
+        {
+          "id": "option-3",
+          "label": "5"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-102",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "11"
+        },
+        {
+          "id": "option-2",
+          "label": "12"
+        },
+        {
+          "id": "option-3",
+          "label": "13"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-103",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 1?",
+      "visual": "1, ?",
+      "audioText": "איזה מספר בא אחרי 1?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "2"
+        },
+        {
+          "id": "option-2",
+          "label": "1"
+        },
+        {
+          "id": "option-3",
+          "label": "3"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-104",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 13 ועוד 3?",
+      "visual": "13 + 3",
+      "audioText": "כמה הם 13 ועוד 3?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "15"
+        },
+        {
+          "id": "option-2",
+          "label": "17"
+        },
+        {
+          "id": "option-3",
+          "label": "16"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-105",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 1",
+      "visual": "1",
+      "audioText": "בחרו את המספר 1",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "0"
+        },
+        {
+          "id": "option-2",
+          "label": "1"
+        },
+        {
+          "id": "option-3",
+          "label": "2"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-106",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "🌸🌸",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "2"
+        },
+        {
+          "id": "option-2",
+          "label": "3"
+        },
+        {
+          "id": "option-3",
+          "label": "1"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-107",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 3?",
+      "visual": "3, ?",
+      "audioText": "איזה מספר בא אחרי 3?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "3"
+        },
+        {
+          "id": "option-2",
+          "label": "5"
+        },
+        {
+          "id": "option-3",
+          "label": "4"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-108",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 18 ועוד 4?",
+      "visual": "18 + 4",
+      "audioText": "כמה הם 18 ועוד 4?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "23"
+        },
+        {
+          "id": "option-2",
+          "label": "22"
+        },
+        {
+          "id": "option-3",
+          "label": "21"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-109",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 1",
+      "visual": "1",
+      "audioText": "בחרו את המספר 1",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "1"
+        },
+        {
+          "id": "option-2",
+          "label": "2"
+        },
+        {
+          "id": "option-3",
+          "label": "0"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-110",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "⭐⭐⭐⭐⭐⭐",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "7"
+        },
+        {
+          "id": "option-2",
+          "label": "5"
+        },
+        {
+          "id": "option-3",
+          "label": "6"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-111",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 7?",
+      "visual": "7, ?",
+      "audioText": "איזה מספר בא אחרי 7?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "9"
+        },
+        {
+          "id": "option-2",
+          "label": "8"
+        },
+        {
+          "id": "option-3",
+          "label": "7"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-112",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 8 ועוד 2?",
+      "visual": "8 + 2",
+      "audioText": "כמה הם 8 ועוד 2?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "10"
+        },
+        {
+          "id": "option-2",
+          "label": "9"
+        },
+        {
+          "id": "option-3",
+          "label": "11"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-113",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 1",
+      "visual": "1",
+      "audioText": "בחרו את המספר 1",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "2"
+        },
+        {
+          "id": "option-2",
+          "label": "0"
+        },
+        {
+          "id": "option-3",
+          "label": "1"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-114",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "🟦🟦🟦🟦🟦🟦",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "5"
+        },
+        {
+          "id": "option-2",
+          "label": "6"
+        },
+        {
+          "id": "option-3",
+          "label": "7"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-115",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 1?",
+      "visual": "1, ?",
+      "audioText": "איזה מספר בא אחרי 1?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "2"
+        },
+        {
+          "id": "option-2",
+          "label": "1"
+        },
+        {
+          "id": "option-3",
+          "label": "3"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-116",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 12 ועוד 3?",
+      "visual": "12 + 3",
+      "audioText": "כמה הם 12 ועוד 3?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "14"
+        },
+        {
+          "id": "option-2",
+          "label": "16"
+        },
+        {
+          "id": "option-3",
+          "label": "15"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-117",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 5",
+      "visual": "5",
+      "audioText": "בחרו את המספר 5",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "4"
+        },
+        {
+          "id": "option-2",
+          "label": "5"
+        },
+        {
+          "id": "option-3",
+          "label": "6"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-118",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "🌸",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "1"
+        },
+        {
+          "id": "option-2",
+          "label": "2"
+        },
+        {
+          "id": "option-3",
+          "label": "3"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-119",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 7?",
+      "visual": "7, ?",
+      "audioText": "איזה מספר בא אחרי 7?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "7"
+        },
+        {
+          "id": "option-2",
+          "label": "9"
+        },
+        {
+          "id": "option-3",
+          "label": "8"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-120",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 12 ועוד 4?",
+      "visual": "12 + 4",
+      "audioText": "כמה הם 12 ועוד 4?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "17"
+        },
+        {
+          "id": "option-2",
+          "label": "16"
+        },
+        {
+          "id": "option-3",
+          "label": "15"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-121",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 1",
+      "visual": "1",
+      "audioText": "בחרו את המספר 1",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "1"
+        },
+        {
+          "id": "option-2",
+          "label": "2"
+        },
+        {
+          "id": "option-3",
+          "label": "0"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-122",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "⭐⭐⭐⭐⭐",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "6"
+        },
+        {
+          "id": "option-2",
+          "label": "4"
+        },
+        {
+          "id": "option-3",
+          "label": "5"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-123",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 3?",
+      "visual": "3, ?",
+      "audioText": "איזה מספר בא אחרי 3?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "5"
+        },
+        {
+          "id": "option-2",
+          "label": "4"
+        },
+        {
+          "id": "option-3",
+          "label": "3"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-124",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 7 ועוד 2?",
+      "visual": "7 + 2",
+      "audioText": "כמה הם 7 ועוד 2?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "9"
+        },
+        {
+          "id": "option-2",
+          "label": "8"
+        },
+        {
+          "id": "option-3",
+          "label": "10"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-125",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 5",
+      "visual": "5",
+      "audioText": "בחרו את המספר 5",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "6"
+        },
+        {
+          "id": "option-2",
+          "label": "4"
+        },
+        {
+          "id": "option-3",
+          "label": "5"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-126",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "17"
+        },
+        {
+          "id": "option-2",
+          "label": "18"
+        },
+        {
+          "id": "option-3",
+          "label": "19"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-127",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 1?",
+      "visual": "1, ?",
+      "audioText": "איזה מספר בא אחרי 1?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "2"
+        },
+        {
+          "id": "option-2",
+          "label": "1"
+        },
+        {
+          "id": "option-3",
+          "label": "3"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-128",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 11 ועוד 3?",
+      "visual": "11 + 3",
+      "audioText": "כמה הם 11 ועוד 3?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "13"
+        },
+        {
+          "id": "option-2",
+          "label": "15"
+        },
+        {
+          "id": "option-3",
+          "label": "14"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-129",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 1",
+      "visual": "1",
+      "audioText": "בחרו את המספר 1",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "0"
+        },
+        {
+          "id": "option-2",
+          "label": "1"
+        },
+        {
+          "id": "option-3",
+          "label": "2"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-130",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "13"
+        },
+        {
+          "id": "option-2",
+          "label": "14"
+        },
+        {
+          "id": "option-3",
+          "label": "12"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-131",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 3?",
+      "visual": "3, ?",
+      "audioText": "איזה מספר בא אחרי 3?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "3"
+        },
+        {
+          "id": "option-2",
+          "label": "5"
+        },
+        {
+          "id": "option-3",
+          "label": "4"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-132",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 6 ועוד 4?",
+      "visual": "6 + 4",
+      "audioText": "כמה הם 6 ועוד 4?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "11"
+        },
+        {
+          "id": "option-2",
+          "label": "10"
+        },
+        {
+          "id": "option-3",
+          "label": "9"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-133",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 1",
+      "visual": "1",
+      "audioText": "בחרו את המספר 1",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "1"
+        },
+        {
+          "id": "option-2",
+          "label": "2"
+        },
+        {
+          "id": "option-3",
+          "label": "0"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-134",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "⭐⭐⭐⭐",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "5"
+        },
+        {
+          "id": "option-2",
+          "label": "3"
+        },
+        {
+          "id": "option-3",
+          "label": "4"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-135",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 7?",
+      "visual": "7, ?",
+      "audioText": "איזה מספר בא אחרי 7?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "9"
+        },
+        {
+          "id": "option-2",
+          "label": "8"
+        },
+        {
+          "id": "option-3",
+          "label": "7"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-136",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 6 ועוד 2?",
+      "visual": "6 + 2",
+      "audioText": "כמה הם 6 ועוד 2?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "8"
+        },
+        {
+          "id": "option-2",
+          "label": "7"
+        },
+        {
+          "id": "option-3",
+          "label": "9"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-137",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 1",
+      "visual": "1",
+      "audioText": "בחרו את המספר 1",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "2"
+        },
+        {
+          "id": "option-2",
+          "label": "0"
+        },
+        {
+          "id": "option-3",
+          "label": "1"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-138",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "11"
+        },
+        {
+          "id": "option-2",
+          "label": "12"
+        },
+        {
+          "id": "option-3",
+          "label": "13"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-139",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 1?",
+      "visual": "1, ?",
+      "audioText": "איזה מספר בא אחרי 1?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "2"
+        },
+        {
+          "id": "option-2",
+          "label": "1"
+        },
+        {
+          "id": "option-3",
+          "label": "3"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-140",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 10 ועוד 3?",
+      "visual": "10 + 3",
+      "audioText": "כמה הם 10 ועוד 3?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "12"
+        },
+        {
+          "id": "option-2",
+          "label": "14"
+        },
+        {
+          "id": "option-3",
+          "label": "13"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-141",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 5",
+      "visual": "5",
+      "audioText": "בחרו את המספר 5",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "4"
+        },
+        {
+          "id": "option-2",
+          "label": "5"
+        },
+        {
+          "id": "option-3",
+          "label": "6"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-142",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "12"
+        },
+        {
+          "id": "option-2",
+          "label": "13"
+        },
+        {
+          "id": "option-3",
+          "label": "11"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-143",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 7?",
+      "visual": "7, ?",
+      "audioText": "איזה מספר בא אחרי 7?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "7"
+        },
+        {
+          "id": "option-2",
+          "label": "9"
+        },
+        {
+          "id": "option-3",
+          "label": "8"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-144",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 18 ועוד 4?",
+      "visual": "18 + 4",
+      "audioText": "כמה הם 18 ועוד 4?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "23"
+        },
+        {
+          "id": "option-2",
+          "label": "22"
+        },
+        {
+          "id": "option-3",
+          "label": "21"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-145",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 1",
+      "visual": "1",
+      "audioText": "בחרו את המספר 1",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "1"
+        },
+        {
+          "id": "option-2",
+          "label": "2"
+        },
+        {
+          "id": "option-3",
+          "label": "0"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-146",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "⭐⭐⭐",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "4"
+        },
+        {
+          "id": "option-2",
+          "label": "2"
+        },
+        {
+          "id": "option-3",
+          "label": "3"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-147",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 3?",
+      "visual": "3, ?",
+      "audioText": "איזה מספר בא אחרי 3?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "5"
+        },
+        {
+          "id": "option-2",
+          "label": "4"
+        },
+        {
+          "id": "option-3",
+          "label": "3"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-148",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 5 ועוד 2?",
+      "visual": "5 + 2",
+      "audioText": "כמה הם 5 ועוד 2?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "7"
+        },
+        {
+          "id": "option-2",
+          "label": "6"
+        },
+        {
+          "id": "option-3",
+          "label": "8"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-149",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 5",
+      "visual": "5",
+      "audioText": "בחרו את המספר 5",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "6"
+        },
+        {
+          "id": "option-2",
+          "label": "4"
+        },
+        {
+          "id": "option-3",
+          "label": "5"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-150",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "🟦🟦🟦🟦🟦🟦",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "5"
+        },
+        {
+          "id": "option-2",
+          "label": "6"
+        },
+        {
+          "id": "option-3",
+          "label": "7"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-151",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 1?",
+      "visual": "1, ?",
+      "audioText": "איזה מספר בא אחרי 1?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "2"
+        },
+        {
+          "id": "option-2",
+          "label": "1"
+        },
+        {
+          "id": "option-3",
+          "label": "3"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-152",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 9 ועוד 3?",
+      "visual": "9 + 3",
+      "audioText": "כמה הם 9 ועוד 3?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "11"
+        },
+        {
+          "id": "option-2",
+          "label": "13"
+        },
+        {
+          "id": "option-3",
+          "label": "12"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-153",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 1",
+      "visual": "1",
+      "audioText": "בחרו את המספר 1",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "0"
+        },
+        {
+          "id": "option-2",
+          "label": "1"
+        },
+        {
+          "id": "option-3",
+          "label": "2"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-154",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "11"
+        },
+        {
+          "id": "option-2",
+          "label": "12"
+        },
+        {
+          "id": "option-3",
+          "label": "10"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-155",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 3?",
+      "visual": "3, ?",
+      "audioText": "איזה מספר בא אחרי 3?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "3"
+        },
+        {
+          "id": "option-2",
+          "label": "5"
+        },
+        {
+          "id": "option-3",
+          "label": "4"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-156",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 12 ועוד 4?",
+      "visual": "12 + 4",
+      "audioText": "כמה הם 12 ועוד 4?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "17"
+        },
+        {
+          "id": "option-2",
+          "label": "16"
+        },
+        {
+          "id": "option-3",
+          "label": "15"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-157",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 1",
+      "visual": "1",
+      "audioText": "בחרו את המספר 1",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "1"
+        },
+        {
+          "id": "option-2",
+          "label": "2"
+        },
+        {
+          "id": "option-3",
+          "label": "0"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-158",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "⭐⭐",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "3"
+        },
+        {
+          "id": "option-2",
+          "label": "1"
+        },
+        {
+          "id": "option-3",
+          "label": "2"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-159",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 7?",
+      "visual": "7, ?",
+      "audioText": "איזה מספר בא אחרי 7?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "9"
+        },
+        {
+          "id": "option-2",
+          "label": "8"
+        },
+        {
+          "id": "option-3",
+          "label": "7"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-160",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 4 ועוד 2?",
+      "visual": "4 + 2",
+      "audioText": "כמה הם 4 ועוד 2?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "6"
+        },
+        {
+          "id": "option-2",
+          "label": "5"
+        },
+        {
+          "id": "option-3",
+          "label": "7"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-161",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 1",
+      "visual": "1",
+      "audioText": "בחרו את המספר 1",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "2"
+        },
+        {
+          "id": "option-2",
+          "label": "0"
+        },
+        {
+          "id": "option-3",
+          "label": "1"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-162",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "17"
+        },
+        {
+          "id": "option-2",
+          "label": "18"
+        },
+        {
+          "id": "option-3",
+          "label": "19"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-163",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 1?",
+      "visual": "1, ?",
+      "audioText": "איזה מספר בא אחרי 1?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "2"
+        },
+        {
+          "id": "option-2",
+          "label": "1"
+        },
+        {
+          "id": "option-3",
+          "label": "3"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-164",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 8 ועוד 3?",
+      "visual": "8 + 3",
+      "audioText": "כמה הם 8 ועוד 3?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "10"
+        },
+        {
+          "id": "option-2",
+          "label": "12"
+        },
+        {
+          "id": "option-3",
+          "label": "11"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-165",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 5",
+      "visual": "5",
+      "audioText": "בחרו את המספר 5",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "4"
+        },
+        {
+          "id": "option-2",
+          "label": "5"
+        },
+        {
+          "id": "option-3",
+          "label": "6"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-166",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "10"
+        },
+        {
+          "id": "option-2",
+          "label": "11"
+        },
+        {
+          "id": "option-3",
+          "label": "9"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-167",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "number-sequence",
+      "category": "numbers",
+      "prompt": "איזה מספר בא אחרי 7?",
+      "visual": "7, ?",
+      "audioText": "איזה מספר בא אחרי 7?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "7"
+        },
+        {
+          "id": "option-2",
+          "label": "9"
+        },
+        {
+          "id": "option-3",
+          "label": "8"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "numbers-168",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "early-addition",
+      "category": "numbers",
+      "prompt": "כמה הם 6 ועוד 4?",
+      "visual": "6 + 4",
+      "audioText": "כמה הם 6 ועוד 4?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "11"
+        },
+        {
+          "id": "option-2",
+          "label": "10"
+        },
+        {
+          "id": "option-3",
+          "label": "9"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "numbers-169",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "number-recognition",
+      "category": "numbers",
+      "prompt": "בחרו את המספר 1",
+      "visual": "1",
+      "audioText": "בחרו את המספר 1",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "1"
+        },
+        {
+          "id": "option-2",
+          "label": "2"
+        },
+        {
+          "id": "option-3",
+          "label": "0"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "numbers-170",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "counting",
+      "category": "numbers",
+      "prompt": "כמה פריטים יש בתמונה?",
+      "visual": "⭐",
+      "audioText": "כמה פריטים יש בתמונה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "2"
+        },
+        {
+          "id": "option-2",
+          "label": "3"
+        },
+        {
+          "id": "option-3",
+          "label": "1"
+        }
+      ],
+      "correctOptionId": "option-3"
+    }
+  ]
+}

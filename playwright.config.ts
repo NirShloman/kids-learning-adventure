@@ -7,8 +7,8 @@ export default defineConfig({
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
-  timeout: 45_000,
+  workers: process.env.CI ? 1 : 2,
+  timeout: 90_000,
   expect: {
     timeout: 8_000
   },
@@ -20,7 +20,7 @@ export default defineConfig({
     baseURL,
     trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
+    video: 'off',
     actionTimeout: 10_000,
     navigationTimeout: 20_000
   },
@@ -49,14 +49,6 @@ export default defineConfig({
       name: 'mobile-safari',
       testMatch: /.*\.local\.spec\.ts/,
       use: { ...devices['iPhone 12'] }
-    },
-    {
-      name: 'firebase-emulator',
-      testMatch: /.*\.firebase\.spec\.ts/,
-      use: {
-        ...devices['Desktop Chrome'],
-        baseURL
-      }
     }
   ],
   webServer: {

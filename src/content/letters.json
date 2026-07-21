@@ -1,0 +1,5227 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": "2026.07.1",
+  "gameId": "letters",
+  "items": [
+    {
+      "id": "letters-001",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות א",
+      "visual": "א",
+      "audioText": "בחרו את האות א",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "א"
+        },
+        {
+          "id": "option-2",
+          "label": "ח"
+        },
+        {
+          "id": "option-3",
+          "label": "נ"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-002",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה בית?",
+      "visual": "🏠",
+      "audioText": "באיזו אות מתחילה המילה בית?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ט"
+        },
+        {
+          "id": "option-2",
+          "label": "ס"
+        },
+        {
+          "id": "option-3",
+          "label": "ב"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-003",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ג?",
+      "visual": "🐫",
+      "audioText": "איזו מילה מתחילה באות ג?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "עץ",
+          "emoji": "🌳"
+        },
+        {
+          "id": "option-2",
+          "label": "גמל",
+          "emoji": "🐫"
+        },
+        {
+          "id": "option-3",
+          "label": "ירח",
+          "emoji": "🌙"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-004",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ד",
+      "visual": "ד",
+      "audioText": "בחרו את האות ד",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ד"
+        },
+        {
+          "id": "option-2",
+          "label": "כ"
+        },
+        {
+          "id": "option-3",
+          "label": "פ"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-005",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה הר?",
+      "visual": "⛰️",
+      "audioText": "באיזו אות מתחילה המילה הר?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ל"
+        },
+        {
+          "id": "option-2",
+          "label": "צ"
+        },
+        {
+          "id": "option-3",
+          "label": "ה"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-006",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ו?",
+      "visual": "🌹",
+      "audioText": "איזו מילה מתחילה באות ו?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "קוף",
+          "emoji": "🐒"
+        },
+        {
+          "id": "option-2",
+          "label": "ורד",
+          "emoji": "🌹"
+        },
+        {
+          "id": "option-3",
+          "label": "מטרייה",
+          "emoji": "☂️"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-007",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ז",
+      "visual": "ז",
+      "audioText": "בחרו את האות ז",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ז"
+        },
+        {
+          "id": "option-2",
+          "label": "נ"
+        },
+        {
+          "id": "option-3",
+          "label": "ר"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-008",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה חתול?",
+      "visual": "🐱",
+      "audioText": "באיזו אות מתחילה המילה חתול?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ס"
+        },
+        {
+          "id": "option-2",
+          "label": "ש"
+        },
+        {
+          "id": "option-3",
+          "label": "ח"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-009",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ט?",
+      "visual": "🦚",
+      "audioText": "איזו מילה מתחילה באות ט?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "תפוח",
+          "emoji": "🍎"
+        },
+        {
+          "id": "option-2",
+          "label": "טווס",
+          "emoji": "🦚"
+        },
+        {
+          "id": "option-3",
+          "label": "עץ",
+          "emoji": "🌳"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-010",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות י",
+      "visual": "י",
+      "audioText": "בחרו את האות י",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "י"
+        },
+        {
+          "id": "option-2",
+          "label": "פ"
+        },
+        {
+          "id": "option-3",
+          "label": "א"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-011",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה כדור?",
+      "visual": "⚽",
+      "audioText": "באיזו אות מתחילה המילה כדור?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צ"
+        },
+        {
+          "id": "option-2",
+          "label": "ב"
+        },
+        {
+          "id": "option-3",
+          "label": "כ"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-012",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ל?",
+      "visual": "🍋",
+      "audioText": "איזו מילה מתחילה באות ל?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "גזר",
+          "emoji": "🥕"
+        },
+        {
+          "id": "option-2",
+          "label": "לימון",
+          "emoji": "🍋"
+        },
+        {
+          "id": "option-3",
+          "label": "קוף",
+          "emoji": "🐒"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-013",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות מ",
+      "visual": "מ",
+      "audioText": "בחרו את האות מ",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "מ"
+        },
+        {
+          "id": "option-2",
+          "label": "ר"
+        },
+        {
+          "id": "option-3",
+          "label": "ד"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-014",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה נר?",
+      "visual": "🕯️",
+      "audioText": "באיזו אות מתחילה המילה נר?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ש"
+        },
+        {
+          "id": "option-2",
+          "label": "ח"
+        },
+        {
+          "id": "option-3",
+          "label": "נ"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-015",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ס?",
+      "visual": "📘",
+      "audioText": "איזו מילה מתחילה באות ס?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ילקוט",
+          "emoji": "🎒"
+        },
+        {
+          "id": "option-2",
+          "label": "ספר",
+          "emoji": "📘"
+        },
+        {
+          "id": "option-3",
+          "label": "תפוח",
+          "emoji": "🍎"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-016",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ע",
+      "visual": "ע",
+      "audioText": "בחרו את האות ע",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ע"
+        },
+        {
+          "id": "option-2",
+          "label": "א"
+        },
+        {
+          "id": "option-3",
+          "label": "כ"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-017",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה פרח?",
+      "visual": "🌸",
+      "audioText": "באיזו אות מתחילה המילה פרח?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ב"
+        },
+        {
+          "id": "option-2",
+          "label": "ל"
+        },
+        {
+          "id": "option-3",
+          "label": "פ"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-018",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות צ?",
+      "visual": "🐢",
+      "audioText": "איזו מילה מתחילה באות צ?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "מכונית",
+          "emoji": "🚗"
+        },
+        {
+          "id": "option-2",
+          "label": "צב",
+          "emoji": "🐢"
+        },
+        {
+          "id": "option-3",
+          "label": "גזר",
+          "emoji": "🥕"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-019",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ק",
+      "visual": "ק",
+      "audioText": "בחרו את האות ק",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ק"
+        },
+        {
+          "id": "option-2",
+          "label": "ד"
+        },
+        {
+          "id": "option-3",
+          "label": "נ"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-020",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה רכבת?",
+      "visual": "🚂",
+      "audioText": "באיזו אות מתחילה המילה רכבת?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ח"
+        },
+        {
+          "id": "option-2",
+          "label": "ס"
+        },
+        {
+          "id": "option-3",
+          "label": "ר"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-021",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ש?",
+      "visual": "☀️",
+      "audioText": "איזו מילה מתחילה באות ש?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "עיפרון",
+          "emoji": "✏️"
+        },
+        {
+          "id": "option-2",
+          "label": "שמש",
+          "emoji": "☀️"
+        },
+        {
+          "id": "option-3",
+          "label": "ילקוט",
+          "emoji": "🎒"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-022",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ת",
+      "visual": "ת",
+      "audioText": "בחרו את האות ת",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ת"
+        },
+        {
+          "id": "option-2",
+          "label": "כ"
+        },
+        {
+          "id": "option-3",
+          "label": "פ"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-023",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה אבטיח?",
+      "visual": "🍉",
+      "audioText": "באיזו אות מתחילה המילה אבטיח?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ל"
+        },
+        {
+          "id": "option-2",
+          "label": "צ"
+        },
+        {
+          "id": "option-3",
+          "label": "א"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-024",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ב?",
+      "visual": "🍌",
+      "audioText": "איזו מילה מתחילה באות ב?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "קשת",
+          "emoji": "🌈"
+        },
+        {
+          "id": "option-2",
+          "label": "בננה",
+          "emoji": "🍌"
+        },
+        {
+          "id": "option-3",
+          "label": "מכונית",
+          "emoji": "🚗"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-025",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ג",
+      "visual": "ג",
+      "audioText": "בחרו את האות ג",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ג"
+        },
+        {
+          "id": "option-2",
+          "label": "נ"
+        },
+        {
+          "id": "option-3",
+          "label": "ר"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-026",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה דלת?",
+      "visual": "🚪",
+      "audioText": "באיזו אות מתחילה המילה דלת?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ס"
+        },
+        {
+          "id": "option-2",
+          "label": "ש"
+        },
+        {
+          "id": "option-3",
+          "label": "ד"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-027",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ח?",
+      "visual": "🐞",
+      "audioText": "איזו מילה מתחילה באות ח?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "תות",
+          "emoji": "🍓"
+        },
+        {
+          "id": "option-2",
+          "label": "חיפושית",
+          "emoji": "🐞"
+        },
+        {
+          "id": "option-3",
+          "label": "עיפרון",
+          "emoji": "✏️"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-028",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות י",
+      "visual": "י",
+      "audioText": "בחרו את האות י",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "י"
+        },
+        {
+          "id": "option-2",
+          "label": "פ"
+        },
+        {
+          "id": "option-3",
+          "label": "א"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-029",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה כוכב?",
+      "visual": "⭐",
+      "audioText": "באיזו אות מתחילה המילה כוכב?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צ"
+        },
+        {
+          "id": "option-2",
+          "label": "ב"
+        },
+        {
+          "id": "option-3",
+          "label": "כ"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-030",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ל?",
+      "visual": "🍞",
+      "audioText": "איזו מילה מתחילה באות ל?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "גמל",
+          "emoji": "🐫"
+        },
+        {
+          "id": "option-2",
+          "label": "לחם",
+          "emoji": "🍞"
+        },
+        {
+          "id": "option-3",
+          "label": "קשת",
+          "emoji": "🌈"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-031",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות מ",
+      "visual": "מ",
+      "audioText": "בחרו את האות מ",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "מ"
+        },
+        {
+          "id": "option-2",
+          "label": "ר"
+        },
+        {
+          "id": "option-3",
+          "label": "ד"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-032",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה נעל?",
+      "visual": "👟",
+      "audioText": "באיזו אות מתחילה המילה נעל?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ש"
+        },
+        {
+          "id": "option-2",
+          "label": "ה"
+        },
+        {
+          "id": "option-3",
+          "label": "נ"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-033",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ס?",
+      "visual": "⛵",
+      "audioText": "איזו מילה מתחילה באות ס?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ורד",
+          "emoji": "🌹"
+        },
+        {
+          "id": "option-2",
+          "label": "סירה",
+          "emoji": "⛵"
+        },
+        {
+          "id": "option-3",
+          "label": "תות",
+          "emoji": "🍓"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-034",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ע",
+      "visual": "ע",
+      "audioText": "בחרו את האות ע",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ע"
+        },
+        {
+          "id": "option-2",
+          "label": "א"
+        },
+        {
+          "id": "option-3",
+          "label": "ז"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-035",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה פיל?",
+      "visual": "🐘",
+      "audioText": "באיזו אות מתחילה המילה פיל?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ב"
+        },
+        {
+          "id": "option-2",
+          "label": "ח"
+        },
+        {
+          "id": "option-3",
+          "label": "פ"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-036",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות צ?",
+      "visual": "🐦",
+      "audioText": "איזו מילה מתחילה באות צ?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "טווס",
+          "emoji": "🦚"
+        },
+        {
+          "id": "option-2",
+          "label": "ציפור",
+          "emoji": "🐦"
+        },
+        {
+          "id": "option-3",
+          "label": "גמל",
+          "emoji": "🐫"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-037",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ק",
+      "visual": "ק",
+      "audioText": "בחרו את האות ק",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ק"
+        },
+        {
+          "id": "option-2",
+          "label": "ד"
+        },
+        {
+          "id": "option-3",
+          "label": "י"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-038",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה רימון?",
+      "visual": "🍎",
+      "audioText": "באיזו אות מתחילה המילה רימון?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ה"
+        },
+        {
+          "id": "option-2",
+          "label": "כ"
+        },
+        {
+          "id": "option-3",
+          "label": "ר"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-039",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ש?",
+      "visual": "🕐",
+      "audioText": "איזו מילה מתחילה באות ש?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "לימון",
+          "emoji": "🍋"
+        },
+        {
+          "id": "option-2",
+          "label": "שעון",
+          "emoji": "🕐"
+        },
+        {
+          "id": "option-3",
+          "label": "ורד",
+          "emoji": "🌹"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-040",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ת",
+      "visual": "ת",
+      "audioText": "בחרו את האות ת",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ת"
+        },
+        {
+          "id": "option-2",
+          "label": "ז"
+        },
+        {
+          "id": "option-3",
+          "label": "מ"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-041",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה אריה?",
+      "visual": "🦁",
+      "audioText": "באיזו אות מתחילה המילה אריה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ח"
+        },
+        {
+          "id": "option-2",
+          "label": "נ"
+        },
+        {
+          "id": "option-3",
+          "label": "א"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-042",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ב?",
+      "visual": "🏠",
+      "audioText": "איזו מילה מתחילה באות ב?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ספר",
+          "emoji": "📘"
+        },
+        {
+          "id": "option-2",
+          "label": "בית",
+          "emoji": "🏠"
+        },
+        {
+          "id": "option-3",
+          "label": "טווס",
+          "emoji": "🦚"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-043",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ג",
+      "visual": "ג",
+      "audioText": "בחרו את האות ג",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ג"
+        },
+        {
+          "id": "option-2",
+          "label": "י"
+        },
+        {
+          "id": "option-3",
+          "label": "ע"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-044",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה דג?",
+      "visual": "🐟",
+      "audioText": "באיזו אות מתחילה המילה דג?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כ"
+        },
+        {
+          "id": "option-2",
+          "label": "פ"
+        },
+        {
+          "id": "option-3",
+          "label": "ד"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-045",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ה?",
+      "visual": "⛰️",
+      "audioText": "איזו מילה מתחילה באות ה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צב",
+          "emoji": "🐢"
+        },
+        {
+          "id": "option-2",
+          "label": "הר",
+          "emoji": "⛰️"
+        },
+        {
+          "id": "option-3",
+          "label": "לימון",
+          "emoji": "🍋"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-046",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ו",
+      "visual": "ו",
+      "audioText": "בחרו את האות ו",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ו"
+        },
+        {
+          "id": "option-2",
+          "label": "מ"
+        },
+        {
+          "id": "option-3",
+          "label": "ק"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-047",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה זברה?",
+      "visual": "🦓",
+      "audioText": "באיזו אות מתחילה המילה זברה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "נ"
+        },
+        {
+          "id": "option-2",
+          "label": "ר"
+        },
+        {
+          "id": "option-3",
+          "label": "ז"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-048",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ח?",
+      "visual": "🐱",
+      "audioText": "איזו מילה מתחילה באות ח?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "שמש",
+          "emoji": "☀️"
+        },
+        {
+          "id": "option-2",
+          "label": "חתול",
+          "emoji": "🐱"
+        },
+        {
+          "id": "option-3",
+          "label": "ספר",
+          "emoji": "📘"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-049",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ט",
+      "visual": "ט",
+      "audioText": "בחרו את האות ט",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ט"
+        },
+        {
+          "id": "option-2",
+          "label": "ע"
+        },
+        {
+          "id": "option-3",
+          "label": "ת"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-050",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה ירח?",
+      "visual": "🌙",
+      "audioText": "באיזו אות מתחילה המילה ירח?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "פ"
+        },
+        {
+          "id": "option-2",
+          "label": "א"
+        },
+        {
+          "id": "option-3",
+          "label": "י"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-051",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות כ?",
+      "visual": "⚽",
+      "audioText": "איזו מילה מתחילה באות כ?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בננה",
+          "emoji": "🍌"
+        },
+        {
+          "id": "option-2",
+          "label": "כדור",
+          "emoji": "⚽"
+        },
+        {
+          "id": "option-3",
+          "label": "צב",
+          "emoji": "🐢"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-052",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ל",
+      "visual": "ל",
+      "audioText": "בחרו את האות ל",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ל"
+        },
+        {
+          "id": "option-2",
+          "label": "ק"
+        },
+        {
+          "id": "option-3",
+          "label": "ג"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-053",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה מטרייה?",
+      "visual": "☂️",
+      "audioText": "באיזו אות מתחילה המילה מטרייה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ר"
+        },
+        {
+          "id": "option-2",
+          "label": "ד"
+        },
+        {
+          "id": "option-3",
+          "label": "מ"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-054",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות נ?",
+      "visual": "🕯️",
+      "audioText": "איזו מילה מתחילה באות נ?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "חיפושית",
+          "emoji": "🐞"
+        },
+        {
+          "id": "option-2",
+          "label": "נר",
+          "emoji": "🕯️"
+        },
+        {
+          "id": "option-3",
+          "label": "שמש",
+          "emoji": "☀️"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-055",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ס",
+      "visual": "ס",
+      "audioText": "בחרו את האות ס",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ס"
+        },
+        {
+          "id": "option-2",
+          "label": "ת"
+        },
+        {
+          "id": "option-3",
+          "label": "י"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-056",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה עץ?",
+      "visual": "🌳",
+      "audioText": "באיזו אות מתחילה המילה עץ?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "א"
+        },
+        {
+          "id": "option-2",
+          "label": "כ"
+        },
+        {
+          "id": "option-3",
+          "label": "ע"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-057",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות פ?",
+      "visual": "🌸",
+      "audioText": "איזו מילה מתחילה באות פ?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "לחם",
+          "emoji": "🍞"
+        },
+        {
+          "id": "option-2",
+          "label": "פרח",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-3",
+          "label": "בננה",
+          "emoji": "🍌"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-058",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות צ",
+      "visual": "צ",
+      "audioText": "בחרו את האות צ",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צ"
+        },
+        {
+          "id": "option-2",
+          "label": "ג"
+        },
+        {
+          "id": "option-3",
+          "label": "מ"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-059",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה קוף?",
+      "visual": "🐒",
+      "audioText": "באיזו אות מתחילה המילה קוף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ד"
+        },
+        {
+          "id": "option-2",
+          "label": "נ"
+        },
+        {
+          "id": "option-3",
+          "label": "ק"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-060",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ר?",
+      "visual": "🚂",
+      "audioText": "איזו מילה מתחילה באות ר?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "סירה",
+          "emoji": "⛵"
+        },
+        {
+          "id": "option-2",
+          "label": "רכבת",
+          "emoji": "🚂"
+        },
+        {
+          "id": "option-3",
+          "label": "חיפושית",
+          "emoji": "🐞"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-061",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ש",
+      "visual": "ש",
+      "audioText": "בחרו את האות ש",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ש"
+        },
+        {
+          "id": "option-2",
+          "label": "י"
+        },
+        {
+          "id": "option-3",
+          "label": "ע"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-062",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה תפוח?",
+      "visual": "🍎",
+      "audioText": "באיזו אות מתחילה המילה תפוח?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כ"
+        },
+        {
+          "id": "option-2",
+          "label": "פ"
+        },
+        {
+          "id": "option-3",
+          "label": "ת"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-063",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות א?",
+      "visual": "🍉",
+      "audioText": "איזו מילה מתחילה באות א?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ציפור",
+          "emoji": "🐦"
+        },
+        {
+          "id": "option-2",
+          "label": "אבטיח",
+          "emoji": "🍉"
+        },
+        {
+          "id": "option-3",
+          "label": "לחם",
+          "emoji": "🍞"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-064",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ב",
+      "visual": "ב",
+      "audioText": "בחרו את האות ב",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ב"
+        },
+        {
+          "id": "option-2",
+          "label": "מ"
+        },
+        {
+          "id": "option-3",
+          "label": "ק"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-065",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה גזר?",
+      "visual": "🥕",
+      "audioText": "באיזו אות מתחילה המילה גזר?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "נ"
+        },
+        {
+          "id": "option-2",
+          "label": "ר"
+        },
+        {
+          "id": "option-3",
+          "label": "ג"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-066",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ד?",
+      "visual": "🚪",
+      "audioText": "איזו מילה מתחילה באות ד?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "שעון",
+          "emoji": "🕐"
+        },
+        {
+          "id": "option-2",
+          "label": "דלת",
+          "emoji": "🚪"
+        },
+        {
+          "id": "option-3",
+          "label": "סירה",
+          "emoji": "⛵"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-067",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ח",
+      "visual": "ח",
+      "audioText": "בחרו את האות ח",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ח"
+        },
+        {
+          "id": "option-2",
+          "label": "ע"
+        },
+        {
+          "id": "option-3",
+          "label": "ת"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-068",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה ילקוט?",
+      "visual": "🎒",
+      "audioText": "באיזו אות מתחילה המילה ילקוט?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "פ"
+        },
+        {
+          "id": "option-2",
+          "label": "א"
+        },
+        {
+          "id": "option-3",
+          "label": "י"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-069",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות כ?",
+      "visual": "⭐",
+      "audioText": "איזו מילה מתחילה באות כ?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בית",
+          "emoji": "🏠"
+        },
+        {
+          "id": "option-2",
+          "label": "כוכב",
+          "emoji": "⭐"
+        },
+        {
+          "id": "option-3",
+          "label": "ציפור",
+          "emoji": "🐦"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-070",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ל",
+      "visual": "ל",
+      "audioText": "בחרו את האות ל",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ל"
+        },
+        {
+          "id": "option-2",
+          "label": "ק"
+        },
+        {
+          "id": "option-3",
+          "label": "ג"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-071",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה מכונית?",
+      "visual": "🚗",
+      "audioText": "באיזו אות מתחילה המילה מכונית?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ר"
+        },
+        {
+          "id": "option-2",
+          "label": "ד"
+        },
+        {
+          "id": "option-3",
+          "label": "מ"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-072",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות נ?",
+      "visual": "👟",
+      "audioText": "איזו מילה מתחילה באות נ?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "הר",
+          "emoji": "⛰️"
+        },
+        {
+          "id": "option-2",
+          "label": "נעל",
+          "emoji": "👟"
+        },
+        {
+          "id": "option-3",
+          "label": "שעון",
+          "emoji": "🕐"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-073",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ס",
+      "visual": "ס",
+      "audioText": "בחרו את האות ס",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ס"
+        },
+        {
+          "id": "option-2",
+          "label": "ת"
+        },
+        {
+          "id": "option-3",
+          "label": "ו"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-074",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה עיפרון?",
+      "visual": "✏️",
+      "audioText": "באיזו אות מתחילה המילה עיפרון?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "א"
+        },
+        {
+          "id": "option-2",
+          "label": "ז"
+        },
+        {
+          "id": "option-3",
+          "label": "ע"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-075",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות פ?",
+      "visual": "🐘",
+      "audioText": "איזו מילה מתחילה באות פ?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "חתול",
+          "emoji": "🐱"
+        },
+        {
+          "id": "option-2",
+          "label": "פיל",
+          "emoji": "🐘"
+        },
+        {
+          "id": "option-3",
+          "label": "בית",
+          "emoji": "🏠"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-076",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות צ",
+      "visual": "צ",
+      "audioText": "בחרו את האות צ",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צ"
+        },
+        {
+          "id": "option-2",
+          "label": "ג"
+        },
+        {
+          "id": "option-3",
+          "label": "ט"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-077",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה קשת?",
+      "visual": "🌈",
+      "audioText": "באיזו אות מתחילה המילה קשת?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ד"
+        },
+        {
+          "id": "option-2",
+          "label": "י"
+        },
+        {
+          "id": "option-3",
+          "label": "ק"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-078",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ר?",
+      "visual": "🍎",
+      "audioText": "איזו מילה מתחילה באות ר?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כדור",
+          "emoji": "⚽"
+        },
+        {
+          "id": "option-2",
+          "label": "רימון",
+          "emoji": "🍎"
+        },
+        {
+          "id": "option-3",
+          "label": "הר",
+          "emoji": "⛰️"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-079",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ש",
+      "visual": "ש",
+      "audioText": "בחרו את האות ש",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ש"
+        },
+        {
+          "id": "option-2",
+          "label": "ו"
+        },
+        {
+          "id": "option-3",
+          "label": "ל"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-080",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה תות?",
+      "visual": "🍓",
+      "audioText": "באיזו אות מתחילה המילה תות?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ז"
+        },
+        {
+          "id": "option-2",
+          "label": "מ"
+        },
+        {
+          "id": "option-3",
+          "label": "ת"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-081",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות א?",
+      "visual": "🦁",
+      "audioText": "איזו מילה מתחילה באות א?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "נר",
+          "emoji": "🕯️"
+        },
+        {
+          "id": "option-2",
+          "label": "אריה",
+          "emoji": "🦁"
+        },
+        {
+          "id": "option-3",
+          "label": "חתול",
+          "emoji": "🐱"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-082",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ב",
+      "visual": "ב",
+      "audioText": "בחרו את האות ב",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ב"
+        },
+        {
+          "id": "option-2",
+          "label": "ט"
+        },
+        {
+          "id": "option-3",
+          "label": "ס"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-083",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה גמל?",
+      "visual": "🐫",
+      "audioText": "באיזו אות מתחילה המילה גמל?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "י"
+        },
+        {
+          "id": "option-2",
+          "label": "ע"
+        },
+        {
+          "id": "option-3",
+          "label": "ג"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-084",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ד?",
+      "visual": "🐟",
+      "audioText": "איזו מילה מתחילה באות ד?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "פרח",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-2",
+          "label": "דג",
+          "emoji": "🐟"
+        },
+        {
+          "id": "option-3",
+          "label": "כדור",
+          "emoji": "⚽"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-085",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ה",
+      "visual": "ה",
+      "audioText": "בחרו את האות ה",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ה"
+        },
+        {
+          "id": "option-2",
+          "label": "ל"
+        },
+        {
+          "id": "option-3",
+          "label": "צ"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-086",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה ורד?",
+      "visual": "🌹",
+      "audioText": "באיזו אות מתחילה המילה ורד?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "מ"
+        },
+        {
+          "id": "option-2",
+          "label": "ק"
+        },
+        {
+          "id": "option-3",
+          "label": "ו"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-087",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ז?",
+      "visual": "🦓",
+      "audioText": "איזו מילה מתחילה באות ז?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "רכבת",
+          "emoji": "🚂"
+        },
+        {
+          "id": "option-2",
+          "label": "זברה",
+          "emoji": "🦓"
+        },
+        {
+          "id": "option-3",
+          "label": "נר",
+          "emoji": "🕯️"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-088",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ח",
+      "visual": "ח",
+      "audioText": "בחרו את האות ח",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ח"
+        },
+        {
+          "id": "option-2",
+          "label": "ס"
+        },
+        {
+          "id": "option-3",
+          "label": "ש"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-089",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה טווס?",
+      "visual": "🦚",
+      "audioText": "באיזו אות מתחילה המילה טווס?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ע"
+        },
+        {
+          "id": "option-2",
+          "label": "ת"
+        },
+        {
+          "id": "option-3",
+          "label": "ט"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-090",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות י?",
+      "visual": "🌙",
+      "audioText": "איזו מילה מתחילה באות י?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "אבטיח",
+          "emoji": "🍉"
+        },
+        {
+          "id": "option-2",
+          "label": "ירח",
+          "emoji": "🌙"
+        },
+        {
+          "id": "option-3",
+          "label": "פרח",
+          "emoji": "🌸"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-091",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות כ",
+      "visual": "כ",
+      "audioText": "בחרו את האות כ",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כ"
+        },
+        {
+          "id": "option-2",
+          "label": "צ"
+        },
+        {
+          "id": "option-3",
+          "label": "ב"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-092",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה לימון?",
+      "visual": "🍋",
+      "audioText": "באיזו אות מתחילה המילה לימון?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ק"
+        },
+        {
+          "id": "option-2",
+          "label": "ג"
+        },
+        {
+          "id": "option-3",
+          "label": "ל"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-093",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות מ?",
+      "visual": "☂️",
+      "audioText": "איזו מילה מתחילה באות מ?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "דלת",
+          "emoji": "🚪"
+        },
+        {
+          "id": "option-2",
+          "label": "מטרייה",
+          "emoji": "☂️"
+        },
+        {
+          "id": "option-3",
+          "label": "רכבת",
+          "emoji": "🚂"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-094",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות נ",
+      "visual": "נ",
+      "audioText": "בחרו את האות נ",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "נ"
+        },
+        {
+          "id": "option-2",
+          "label": "ש"
+        },
+        {
+          "id": "option-3",
+          "label": "ח"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-095",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה ספר?",
+      "visual": "📘",
+      "audioText": "באיזו אות מתחילה המילה ספר?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ת"
+        },
+        {
+          "id": "option-2",
+          "label": "י"
+        },
+        {
+          "id": "option-3",
+          "label": "ס"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-096",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ע?",
+      "visual": "🌳",
+      "audioText": "איזו מילה מתחילה באות ע?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כוכב",
+          "emoji": "⭐"
+        },
+        {
+          "id": "option-2",
+          "label": "עץ",
+          "emoji": "🌳"
+        },
+        {
+          "id": "option-3",
+          "label": "אבטיח",
+          "emoji": "🍉"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-097",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות פ",
+      "visual": "פ",
+      "audioText": "בחרו את האות פ",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "פ"
+        },
+        {
+          "id": "option-2",
+          "label": "ב"
+        },
+        {
+          "id": "option-3",
+          "label": "ל"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-098",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה צב?",
+      "visual": "🐢",
+      "audioText": "באיזו אות מתחילה המילה צב?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ג"
+        },
+        {
+          "id": "option-2",
+          "label": "מ"
+        },
+        {
+          "id": "option-3",
+          "label": "צ"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-099",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ק?",
+      "visual": "🐒",
+      "audioText": "איזו מילה מתחילה באות ק?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "נעל",
+          "emoji": "👟"
+        },
+        {
+          "id": "option-2",
+          "label": "קוף",
+          "emoji": "🐒"
+        },
+        {
+          "id": "option-3",
+          "label": "דלת",
+          "emoji": "🚪"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-100",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ר",
+      "visual": "ר",
+      "audioText": "בחרו את האות ר",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ר"
+        },
+        {
+          "id": "option-2",
+          "label": "ח"
+        },
+        {
+          "id": "option-3",
+          "label": "ס"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-101",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה שמש?",
+      "visual": "☀️",
+      "audioText": "באיזו אות מתחילה המילה שמש?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "י"
+        },
+        {
+          "id": "option-2",
+          "label": "ע"
+        },
+        {
+          "id": "option-3",
+          "label": "ש"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-102",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ת?",
+      "visual": "🍎",
+      "audioText": "איזו מילה מתחילה באות ת?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "פיל",
+          "emoji": "🐘"
+        },
+        {
+          "id": "option-2",
+          "label": "תפוח",
+          "emoji": "🍎"
+        },
+        {
+          "id": "option-3",
+          "label": "כוכב",
+          "emoji": "⭐"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-103",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות א",
+      "visual": "א",
+      "audioText": "בחרו את האות א",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "א"
+        },
+        {
+          "id": "option-2",
+          "label": "ל"
+        },
+        {
+          "id": "option-3",
+          "label": "צ"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-104",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה בננה?",
+      "visual": "🍌",
+      "audioText": "באיזו אות מתחילה המילה בננה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "מ"
+        },
+        {
+          "id": "option-2",
+          "label": "ק"
+        },
+        {
+          "id": "option-3",
+          "label": "ב"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-105",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ג?",
+      "visual": "🥕",
+      "audioText": "איזו מילה מתחילה באות ג?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "רימון",
+          "emoji": "🍎"
+        },
+        {
+          "id": "option-2",
+          "label": "גזר",
+          "emoji": "🥕"
+        },
+        {
+          "id": "option-3",
+          "label": "נעל",
+          "emoji": "👟"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-106",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ד",
+      "visual": "ד",
+      "audioText": "בחרו את האות ד",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ד"
+        },
+        {
+          "id": "option-2",
+          "label": "ס"
+        },
+        {
+          "id": "option-3",
+          "label": "ש"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-107",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה חיפושית?",
+      "visual": "🐞",
+      "audioText": "באיזו אות מתחילה המילה חיפושית?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ע"
+        },
+        {
+          "id": "option-2",
+          "label": "ת"
+        },
+        {
+          "id": "option-3",
+          "label": "ח"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-108",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות י?",
+      "visual": "🎒",
+      "audioText": "איזו מילה מתחילה באות י?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "אריה",
+          "emoji": "🦁"
+        },
+        {
+          "id": "option-2",
+          "label": "ילקוט",
+          "emoji": "🎒"
+        },
+        {
+          "id": "option-3",
+          "label": "פיל",
+          "emoji": "🐘"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-109",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות כ",
+      "visual": "כ",
+      "audioText": "בחרו את האות כ",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כ"
+        },
+        {
+          "id": "option-2",
+          "label": "צ"
+        },
+        {
+          "id": "option-3",
+          "label": "ב"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-110",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה לחם?",
+      "visual": "🍞",
+      "audioText": "באיזו אות מתחילה המילה לחם?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ק"
+        },
+        {
+          "id": "option-2",
+          "label": "ג"
+        },
+        {
+          "id": "option-3",
+          "label": "ל"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-111",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות מ?",
+      "visual": "🚗",
+      "audioText": "איזו מילה מתחילה באות מ?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "דג",
+          "emoji": "🐟"
+        },
+        {
+          "id": "option-2",
+          "label": "מכונית",
+          "emoji": "🚗"
+        },
+        {
+          "id": "option-3",
+          "label": "רימון",
+          "emoji": "🍎"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-112",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות נ",
+      "visual": "נ",
+      "audioText": "בחרו את האות נ",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "נ"
+        },
+        {
+          "id": "option-2",
+          "label": "ש"
+        },
+        {
+          "id": "option-3",
+          "label": "ה"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-113",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה סירה?",
+      "visual": "⛵",
+      "audioText": "באיזו אות מתחילה המילה סירה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ת"
+        },
+        {
+          "id": "option-2",
+          "label": "ו"
+        },
+        {
+          "id": "option-3",
+          "label": "ס"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-114",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ע?",
+      "visual": "✏️",
+      "audioText": "איזו מילה מתחילה באות ע?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "זברה",
+          "emoji": "🦓"
+        },
+        {
+          "id": "option-2",
+          "label": "עיפרון",
+          "emoji": "✏️"
+        },
+        {
+          "id": "option-3",
+          "label": "אריה",
+          "emoji": "🦁"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-115",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות פ",
+      "visual": "פ",
+      "audioText": "בחרו את האות פ",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "פ"
+        },
+        {
+          "id": "option-2",
+          "label": "ב"
+        },
+        {
+          "id": "option-3",
+          "label": "ח"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-116",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה ציפור?",
+      "visual": "🐦",
+      "audioText": "באיזו אות מתחילה המילה ציפור?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ג"
+        },
+        {
+          "id": "option-2",
+          "label": "ט"
+        },
+        {
+          "id": "option-3",
+          "label": "צ"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-117",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ק?",
+      "visual": "🌈",
+      "audioText": "איזו מילה מתחילה באות ק?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ירח",
+          "emoji": "🌙"
+        },
+        {
+          "id": "option-2",
+          "label": "קשת",
+          "emoji": "🌈"
+        },
+        {
+          "id": "option-3",
+          "label": "דג",
+          "emoji": "🐟"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-118",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ר",
+      "visual": "ר",
+      "audioText": "בחרו את האות ר",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ר"
+        },
+        {
+          "id": "option-2",
+          "label": "ה"
+        },
+        {
+          "id": "option-3",
+          "label": "כ"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-119",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה שעון?",
+      "visual": "🕐",
+      "audioText": "באיזו אות מתחילה המילה שעון?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ו"
+        },
+        {
+          "id": "option-2",
+          "label": "ל"
+        },
+        {
+          "id": "option-3",
+          "label": "ש"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-120",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ת?",
+      "visual": "🍓",
+      "audioText": "איזו מילה מתחילה באות ת?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "מטרייה",
+          "emoji": "☂️"
+        },
+        {
+          "id": "option-2",
+          "label": "תות",
+          "emoji": "🍓"
+        },
+        {
+          "id": "option-3",
+          "label": "זברה",
+          "emoji": "🦓"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-121",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות א",
+      "visual": "א",
+      "audioText": "בחרו את האות א",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "א"
+        },
+        {
+          "id": "option-2",
+          "label": "ח"
+        },
+        {
+          "id": "option-3",
+          "label": "נ"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-122",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה בית?",
+      "visual": "🏠",
+      "audioText": "באיזו אות מתחילה המילה בית?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ט"
+        },
+        {
+          "id": "option-2",
+          "label": "ס"
+        },
+        {
+          "id": "option-3",
+          "label": "ב"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-123",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ג?",
+      "visual": "🐫",
+      "audioText": "איזו מילה מתחילה באות ג?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "עץ",
+          "emoji": "🌳"
+        },
+        {
+          "id": "option-2",
+          "label": "גמל",
+          "emoji": "🐫"
+        },
+        {
+          "id": "option-3",
+          "label": "ירח",
+          "emoji": "🌙"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-124",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ד",
+      "visual": "ד",
+      "audioText": "בחרו את האות ד",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ד"
+        },
+        {
+          "id": "option-2",
+          "label": "כ"
+        },
+        {
+          "id": "option-3",
+          "label": "פ"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-125",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה הר?",
+      "visual": "⛰️",
+      "audioText": "באיזו אות מתחילה המילה הר?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ל"
+        },
+        {
+          "id": "option-2",
+          "label": "צ"
+        },
+        {
+          "id": "option-3",
+          "label": "ה"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-126",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ו?",
+      "visual": "🌹",
+      "audioText": "איזו מילה מתחילה באות ו?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "קוף",
+          "emoji": "🐒"
+        },
+        {
+          "id": "option-2",
+          "label": "ורד",
+          "emoji": "🌹"
+        },
+        {
+          "id": "option-3",
+          "label": "מטרייה",
+          "emoji": "☂️"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-127",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ז",
+      "visual": "ז",
+      "audioText": "בחרו את האות ז",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ז"
+        },
+        {
+          "id": "option-2",
+          "label": "נ"
+        },
+        {
+          "id": "option-3",
+          "label": "ר"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-128",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה חתול?",
+      "visual": "🐱",
+      "audioText": "באיזו אות מתחילה המילה חתול?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ס"
+        },
+        {
+          "id": "option-2",
+          "label": "ש"
+        },
+        {
+          "id": "option-3",
+          "label": "ח"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-129",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ט?",
+      "visual": "🦚",
+      "audioText": "איזו מילה מתחילה באות ט?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "תפוח",
+          "emoji": "🍎"
+        },
+        {
+          "id": "option-2",
+          "label": "טווס",
+          "emoji": "🦚"
+        },
+        {
+          "id": "option-3",
+          "label": "עץ",
+          "emoji": "🌳"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-130",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות י",
+      "visual": "י",
+      "audioText": "בחרו את האות י",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "י"
+        },
+        {
+          "id": "option-2",
+          "label": "פ"
+        },
+        {
+          "id": "option-3",
+          "label": "א"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-131",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה כדור?",
+      "visual": "⚽",
+      "audioText": "באיזו אות מתחילה המילה כדור?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צ"
+        },
+        {
+          "id": "option-2",
+          "label": "ב"
+        },
+        {
+          "id": "option-3",
+          "label": "כ"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-132",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ל?",
+      "visual": "🍋",
+      "audioText": "איזו מילה מתחילה באות ל?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "גזר",
+          "emoji": "🥕"
+        },
+        {
+          "id": "option-2",
+          "label": "לימון",
+          "emoji": "🍋"
+        },
+        {
+          "id": "option-3",
+          "label": "קוף",
+          "emoji": "🐒"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-133",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות מ",
+      "visual": "מ",
+      "audioText": "בחרו את האות מ",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "מ"
+        },
+        {
+          "id": "option-2",
+          "label": "ר"
+        },
+        {
+          "id": "option-3",
+          "label": "ד"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-134",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה נר?",
+      "visual": "🕯️",
+      "audioText": "באיזו אות מתחילה המילה נר?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ש"
+        },
+        {
+          "id": "option-2",
+          "label": "ח"
+        },
+        {
+          "id": "option-3",
+          "label": "נ"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-135",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ס?",
+      "visual": "📘",
+      "audioText": "איזו מילה מתחילה באות ס?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ילקוט",
+          "emoji": "🎒"
+        },
+        {
+          "id": "option-2",
+          "label": "ספר",
+          "emoji": "📘"
+        },
+        {
+          "id": "option-3",
+          "label": "תפוח",
+          "emoji": "🍎"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-136",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ע",
+      "visual": "ע",
+      "audioText": "בחרו את האות ע",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ע"
+        },
+        {
+          "id": "option-2",
+          "label": "א"
+        },
+        {
+          "id": "option-3",
+          "label": "כ"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-137",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה פרח?",
+      "visual": "🌸",
+      "audioText": "באיזו אות מתחילה המילה פרח?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ב"
+        },
+        {
+          "id": "option-2",
+          "label": "ל"
+        },
+        {
+          "id": "option-3",
+          "label": "פ"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-138",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות צ?",
+      "visual": "🐢",
+      "audioText": "איזו מילה מתחילה באות צ?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "מכונית",
+          "emoji": "🚗"
+        },
+        {
+          "id": "option-2",
+          "label": "צב",
+          "emoji": "🐢"
+        },
+        {
+          "id": "option-3",
+          "label": "גזר",
+          "emoji": "🥕"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-139",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ק",
+      "visual": "ק",
+      "audioText": "בחרו את האות ק",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ק"
+        },
+        {
+          "id": "option-2",
+          "label": "ד"
+        },
+        {
+          "id": "option-3",
+          "label": "נ"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-140",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה רכבת?",
+      "visual": "🚂",
+      "audioText": "באיזו אות מתחילה המילה רכבת?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ח"
+        },
+        {
+          "id": "option-2",
+          "label": "ס"
+        },
+        {
+          "id": "option-3",
+          "label": "ר"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-141",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ש?",
+      "visual": "☀️",
+      "audioText": "איזו מילה מתחילה באות ש?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "עיפרון",
+          "emoji": "✏️"
+        },
+        {
+          "id": "option-2",
+          "label": "שמש",
+          "emoji": "☀️"
+        },
+        {
+          "id": "option-3",
+          "label": "ילקוט",
+          "emoji": "🎒"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-142",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ת",
+      "visual": "ת",
+      "audioText": "בחרו את האות ת",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ת"
+        },
+        {
+          "id": "option-2",
+          "label": "כ"
+        },
+        {
+          "id": "option-3",
+          "label": "פ"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-143",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה אבטיח?",
+      "visual": "🍉",
+      "audioText": "באיזו אות מתחילה המילה אבטיח?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ל"
+        },
+        {
+          "id": "option-2",
+          "label": "צ"
+        },
+        {
+          "id": "option-3",
+          "label": "א"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-144",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ב?",
+      "visual": "🍌",
+      "audioText": "איזו מילה מתחילה באות ב?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "קשת",
+          "emoji": "🌈"
+        },
+        {
+          "id": "option-2",
+          "label": "בננה",
+          "emoji": "🍌"
+        },
+        {
+          "id": "option-3",
+          "label": "מכונית",
+          "emoji": "🚗"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-145",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ג",
+      "visual": "ג",
+      "audioText": "בחרו את האות ג",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ג"
+        },
+        {
+          "id": "option-2",
+          "label": "נ"
+        },
+        {
+          "id": "option-3",
+          "label": "ר"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-146",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה דלת?",
+      "visual": "🚪",
+      "audioText": "באיזו אות מתחילה המילה דלת?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ס"
+        },
+        {
+          "id": "option-2",
+          "label": "ש"
+        },
+        {
+          "id": "option-3",
+          "label": "ד"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-147",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ח?",
+      "visual": "🐞",
+      "audioText": "איזו מילה מתחילה באות ח?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "תות",
+          "emoji": "🍓"
+        },
+        {
+          "id": "option-2",
+          "label": "חיפושית",
+          "emoji": "🐞"
+        },
+        {
+          "id": "option-3",
+          "label": "עיפרון",
+          "emoji": "✏️"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-148",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות י",
+      "visual": "י",
+      "audioText": "בחרו את האות י",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "י"
+        },
+        {
+          "id": "option-2",
+          "label": "פ"
+        },
+        {
+          "id": "option-3",
+          "label": "א"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-149",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה כוכב?",
+      "visual": "⭐",
+      "audioText": "באיזו אות מתחילה המילה כוכב?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צ"
+        },
+        {
+          "id": "option-2",
+          "label": "ב"
+        },
+        {
+          "id": "option-3",
+          "label": "כ"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-150",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ל?",
+      "visual": "🍞",
+      "audioText": "איזו מילה מתחילה באות ל?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "גמל",
+          "emoji": "🐫"
+        },
+        {
+          "id": "option-2",
+          "label": "לחם",
+          "emoji": "🍞"
+        },
+        {
+          "id": "option-3",
+          "label": "קשת",
+          "emoji": "🌈"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-151",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות מ",
+      "visual": "מ",
+      "audioText": "בחרו את האות מ",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "מ"
+        },
+        {
+          "id": "option-2",
+          "label": "ר"
+        },
+        {
+          "id": "option-3",
+          "label": "ד"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-152",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה נעל?",
+      "visual": "👟",
+      "audioText": "באיזו אות מתחילה המילה נעל?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ש"
+        },
+        {
+          "id": "option-2",
+          "label": "ה"
+        },
+        {
+          "id": "option-3",
+          "label": "נ"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-153",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ס?",
+      "visual": "⛵",
+      "audioText": "איזו מילה מתחילה באות ס?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ורד",
+          "emoji": "🌹"
+        },
+        {
+          "id": "option-2",
+          "label": "סירה",
+          "emoji": "⛵"
+        },
+        {
+          "id": "option-3",
+          "label": "תות",
+          "emoji": "🍓"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-154",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ע",
+      "visual": "ע",
+      "audioText": "בחרו את האות ע",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ע"
+        },
+        {
+          "id": "option-2",
+          "label": "א"
+        },
+        {
+          "id": "option-3",
+          "label": "ז"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-155",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה פיל?",
+      "visual": "🐘",
+      "audioText": "באיזו אות מתחילה המילה פיל?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ב"
+        },
+        {
+          "id": "option-2",
+          "label": "ח"
+        },
+        {
+          "id": "option-3",
+          "label": "פ"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-156",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות צ?",
+      "visual": "🐦",
+      "audioText": "איזו מילה מתחילה באות צ?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "טווס",
+          "emoji": "🦚"
+        },
+        {
+          "id": "option-2",
+          "label": "ציפור",
+          "emoji": "🐦"
+        },
+        {
+          "id": "option-3",
+          "label": "גמל",
+          "emoji": "🐫"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-157",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ק",
+      "visual": "ק",
+      "audioText": "בחרו את האות ק",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ק"
+        },
+        {
+          "id": "option-2",
+          "label": "ד"
+        },
+        {
+          "id": "option-3",
+          "label": "י"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-158",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה רימון?",
+      "visual": "🍎",
+      "audioText": "באיזו אות מתחילה המילה רימון?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ה"
+        },
+        {
+          "id": "option-2",
+          "label": "כ"
+        },
+        {
+          "id": "option-3",
+          "label": "ר"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-159",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ש?",
+      "visual": "🕐",
+      "audioText": "איזו מילה מתחילה באות ש?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "לימון",
+          "emoji": "🍋"
+        },
+        {
+          "id": "option-2",
+          "label": "שעון",
+          "emoji": "🕐"
+        },
+        {
+          "id": "option-3",
+          "label": "ורד",
+          "emoji": "🌹"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-160",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ת",
+      "visual": "ת",
+      "audioText": "בחרו את האות ת",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ת"
+        },
+        {
+          "id": "option-2",
+          "label": "ז"
+        },
+        {
+          "id": "option-3",
+          "label": "מ"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-161",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה אריה?",
+      "visual": "🦁",
+      "audioText": "באיזו אות מתחילה המילה אריה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ח"
+        },
+        {
+          "id": "option-2",
+          "label": "נ"
+        },
+        {
+          "id": "option-3",
+          "label": "א"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-162",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ב?",
+      "visual": "🏠",
+      "audioText": "איזו מילה מתחילה באות ב?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ספר",
+          "emoji": "📘"
+        },
+        {
+          "id": "option-2",
+          "label": "בית",
+          "emoji": "🏠"
+        },
+        {
+          "id": "option-3",
+          "label": "טווס",
+          "emoji": "🦚"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-163",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ג",
+      "visual": "ג",
+      "audioText": "בחרו את האות ג",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ג"
+        },
+        {
+          "id": "option-2",
+          "label": "י"
+        },
+        {
+          "id": "option-3",
+          "label": "ע"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-164",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה דג?",
+      "visual": "🐟",
+      "audioText": "באיזו אות מתחילה המילה דג?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "כ"
+        },
+        {
+          "id": "option-2",
+          "label": "פ"
+        },
+        {
+          "id": "option-3",
+          "label": "ד"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-165",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ה?",
+      "visual": "⛰️",
+      "audioText": "איזו מילה מתחילה באות ה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צב",
+          "emoji": "🐢"
+        },
+        {
+          "id": "option-2",
+          "label": "הר",
+          "emoji": "⛰️"
+        },
+        {
+          "id": "option-3",
+          "label": "לימון",
+          "emoji": "🍋"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-166",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ו",
+      "visual": "ו",
+      "audioText": "בחרו את האות ו",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ו"
+        },
+        {
+          "id": "option-2",
+          "label": "מ"
+        },
+        {
+          "id": "option-3",
+          "label": "ק"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-167",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה זברה?",
+      "visual": "🦓",
+      "audioText": "באיזו אות מתחילה המילה זברה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "נ"
+        },
+        {
+          "id": "option-2",
+          "label": "ר"
+        },
+        {
+          "id": "option-3",
+          "label": "ז"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-168",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ח?",
+      "visual": "🐱",
+      "audioText": "איזו מילה מתחילה באות ח?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "שמש",
+          "emoji": "☀️"
+        },
+        {
+          "id": "option-2",
+          "label": "חתול",
+          "emoji": "🐱"
+        },
+        {
+          "id": "option-3",
+          "label": "ספר",
+          "emoji": "📘"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-169",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ט",
+      "visual": "ט",
+      "audioText": "בחרו את האות ט",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ט"
+        },
+        {
+          "id": "option-2",
+          "label": "ע"
+        },
+        {
+          "id": "option-3",
+          "label": "ת"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-170",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה ירח?",
+      "visual": "🌙",
+      "audioText": "באיזו אות מתחילה המילה ירח?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "פ"
+        },
+        {
+          "id": "option-2",
+          "label": "א"
+        },
+        {
+          "id": "option-3",
+          "label": "י"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-171",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות כ?",
+      "visual": "⚽",
+      "audioText": "איזו מילה מתחילה באות כ?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "בננה",
+          "emoji": "🍌"
+        },
+        {
+          "id": "option-2",
+          "label": "כדור",
+          "emoji": "⚽"
+        },
+        {
+          "id": "option-3",
+          "label": "צב",
+          "emoji": "🐢"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-172",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ל",
+      "visual": "ל",
+      "audioText": "בחרו את האות ל",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ל"
+        },
+        {
+          "id": "option-2",
+          "label": "ק"
+        },
+        {
+          "id": "option-3",
+          "label": "ג"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-173",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה מטרייה?",
+      "visual": "☂️",
+      "audioText": "באיזו אות מתחילה המילה מטרייה?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ר"
+        },
+        {
+          "id": "option-2",
+          "label": "ד"
+        },
+        {
+          "id": "option-3",
+          "label": "מ"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-174",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות נ?",
+      "visual": "🕯️",
+      "audioText": "איזו מילה מתחילה באות נ?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "חיפושית",
+          "emoji": "🐞"
+        },
+        {
+          "id": "option-2",
+          "label": "נר",
+          "emoji": "🕯️"
+        },
+        {
+          "id": "option-3",
+          "label": "שמש",
+          "emoji": "☀️"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-175",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות ס",
+      "visual": "ס",
+      "audioText": "בחרו את האות ס",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ס"
+        },
+        {
+          "id": "option-2",
+          "label": "ת"
+        },
+        {
+          "id": "option-3",
+          "label": "י"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-176",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה עץ?",
+      "visual": "🌳",
+      "audioText": "באיזו אות מתחילה המילה עץ?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "א"
+        },
+        {
+          "id": "option-2",
+          "label": "כ"
+        },
+        {
+          "id": "option-3",
+          "label": "ע"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-177",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות פ?",
+      "visual": "🌸",
+      "audioText": "איזו מילה מתחילה באות פ?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "לחם",
+          "emoji": "🍞"
+        },
+        {
+          "id": "option-2",
+          "label": "פרח",
+          "emoji": "🌸"
+        },
+        {
+          "id": "option-3",
+          "label": "בננה",
+          "emoji": "🍌"
+        }
+      ],
+      "correctOptionId": "option-2"
+    },
+    {
+      "id": "letters-178",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "easy",
+      "skill": "letter-recognition",
+      "category": "letters",
+      "prompt": "בחרו את האות צ",
+      "visual": "צ",
+      "audioText": "בחרו את האות צ",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "צ"
+        },
+        {
+          "id": "option-2",
+          "label": "ג"
+        },
+        {
+          "id": "option-3",
+          "label": "מ"
+        }
+      ],
+      "correctOptionId": "option-1"
+    },
+    {
+      "id": "letters-179",
+      "ages": [
+        3,
+        4
+      ],
+      "difficulty": "medium",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "באיזו אות מתחילה המילה קוף?",
+      "visual": "🐒",
+      "audioText": "באיזו אות מתחילה המילה קוף?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "ד"
+        },
+        {
+          "id": "option-2",
+          "label": "נ"
+        },
+        {
+          "id": "option-3",
+          "label": "ק"
+        }
+      ],
+      "correctOptionId": "option-3"
+    },
+    {
+      "id": "letters-180",
+      "ages": [
+        5,
+        6
+      ],
+      "difficulty": "hard",
+      "skill": "initial-sound",
+      "category": "letters",
+      "prompt": "איזו מילה מתחילה באות ר?",
+      "visual": "🚂",
+      "audioText": "איזו מילה מתחילה באות ר?",
+      "options": [
+        {
+          "id": "option-1",
+          "label": "סירה",
+          "emoji": "⛵"
+        },
+        {
+          "id": "option-2",
+          "label": "רכבת",
+          "emoji": "🚂"
+        },
+        {
+          "id": "option-3",
+          "label": "חיפושית",
+          "emoji": "🐞"
+        }
+      ],
+      "correctOptionId": "option-2"
+    }
+  ]
+}
