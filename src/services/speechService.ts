@@ -80,12 +80,13 @@ function getPreferredHebrewVoice(): SpeechSynthesisVoice | null {
 }
 
 function normalizeSpeechText(text: string): string {
-  return text
+  const normalized = text
     .replace(/<[^>]*>/g, ' ')
     .replace(/[{}[\]<>]/g, ' ')
     .replace(/\s+/g, ' ')
     .trim()
     .slice(0, MAX_SPOKEN_TEXT_LENGTH);
+  return /[A-Za-z]/.test(normalized) ? '' : normalized;
 }
 
 function shouldSkipRepeatedSpeech(text: string): boolean {

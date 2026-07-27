@@ -11,6 +11,8 @@ export const imageAssets = {
   bgPatterns: '/assets/images/backgrounds/patterns.jpg',
   bgSorting: '/assets/images/backgrounds/sorting.jpg',
   apple: '/assets/images/objects/apple.png',
+  appleExperience: '/assets/images/objects/apple-experience.png',
+  strawberry: '/assets/images/objects/strawberry.png',
   ball: '/assets/images/objects/ball.png',
   book: '/assets/images/objects/book.png',
   sun: '/assets/images/objects/sun.png',
@@ -19,7 +21,9 @@ export const imageAssets = {
   car: '/assets/images/objects/car.png',
   starReward: '/assets/images/rewards/star.png',
   medal: '/assets/images/rewards/medal.png',
-  trophy: '/assets/images/rewards/trophy.png'
+  trophy: '/assets/images/rewards/trophy.png',
+  experienceSprites: '/assets/images/experience-sprites.png',
+  characterSprites: '/assets/images/character-sprites-v2.png'
 } as const;
 
 export type ImageAssetId = keyof typeof imageAssets;

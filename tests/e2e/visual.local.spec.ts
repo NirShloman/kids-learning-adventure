@@ -1,6 +1,6 @@
 import { mkdir } from 'node:fs/promises';
 import { expect, test } from '@playwright/test';
-import { completeChoiceGame, gotoFreshApp, openGame } from './helpers';
+import { completeChoiceGame, completeProfileSetup, gotoFreshApp, openGame, selectGameMode } from './helpers';
 
 function safeProjectName(name: string) {
   return name.replace(/[^a-z0-9-]/gi, '-');
@@ -23,6 +23,7 @@ test('keeps welcome and menu framed without overflow', async ({ page }, testInfo
   expect(welcomeMetrics.canvases).toBeLessThanOrEqual(2);
 
   await page.getByRole('button', { name: /מתחילים לשחק/ }).click();
+  await completeProfileSetup(page);
   await expect(page.locator('.home-grid')).toBeVisible();
   await page.screenshot({ path: `${outputDir}/menu-${safeProjectName(testInfo.project.name)}.png`, fullPage: true });
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(await page.evaluate(() => window.innerWidth));
@@ -32,7 +33,9 @@ test('renders earned and unearned stars as distinct non-gray rewards', async ({ 
   test.skip(testInfo.project.name !== 'local-chromium', 'One deterministic desktop reward screenshot is sufficient.');
   await gotoFreshApp(page);
   await page.getByRole('button', { name: /מתחילים לשחק/ }).click();
+  await completeProfileSetup(page);
   await openGame(page, 'אותיות');
+  await selectGameMode(page, 'quiz');
   await completeChoiceGame(page, 'quiz-option', /לשאלה הבאה/, false);
   await expect(page.locator('.stars__active')).toHaveCount(1);
   await expect(page.locator('.stars__empty')).toHaveCount(2);

@@ -20,7 +20,7 @@ export default defineConfig({
     baseURL,
     trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
-    video: 'off',
+    video: 'retain-on-failure',
     actionTimeout: 10_000,
     navigationTimeout: 20_000
   },
@@ -43,7 +43,10 @@ export default defineConfig({
     {
       name: 'mobile-chrome',
       testMatch: /.*\.local\.spec\.ts/,
-      use: { ...devices['Pixel 5'] }
+      use: {
+        ...devices['Pixel 5'],
+        viewport: { width: 393, height: 851 }
+      }
     },
     {
       name: 'mobile-safari',

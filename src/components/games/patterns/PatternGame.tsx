@@ -8,6 +8,7 @@ import { calculateStars, getEncouragementMessage } from '../../../utils/helpers'
 import { gameInstructions } from '../../../data/gameInstructions';
 import { GameWorld, GameWorldMessage } from '../GameWorld';
 import { AnimatedFeedback } from '../../common/AnimatedFeedback';
+import { motion } from 'motion/react';
 
 interface PatternGameProps {
   age: Age;
@@ -128,7 +129,7 @@ export function PatternGame({ age, difficulty, voiceEnabled, onBack, onFinish }:
             const isSelected = option.id === selectedOptionId;
             const optionClassName = ['option-card', 'game-answer-token', isAnswered && isCorrectOption ? 'option-card--correct' : '', isAnswered && isSelected && !isCorrectOption ? 'option-card--wrong' : ''].join(' ').trim();
             return (
-              <button
+              <motion.button
                 key={option.id}
                 type="button"
                 className={optionClassName}
@@ -136,11 +137,14 @@ export function PatternGame({ age, difficulty, voiceEnabled, onBack, onFinish }:
                 data-correct={isCorrectOption ? 'true' : 'false'}
                 onClick={() => submitAnswer(option.id)}
                 disabled={isAnswered}
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                whileTap={{ scale: 0.96 }}
                 {...getSpeakProps<HTMLButtonElement>(option.label)}
               >
                 {option.emoji ? <span>{option.emoji}</span> : null}
                 <span>{option.label}</span>
-              </button>
+              </motion.button>
             );
           })}
         </div>

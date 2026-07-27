@@ -17,8 +17,12 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
-    - name: Run Playwright tests
-      run: npx playwright test
+    - name: Typecheck and unit tests
+      run: npm run typecheck && npm run test:unit
+    - name: Desktop and mobile smoke tests
+      run: npm run test:e2e:smoke
+    - name: Run full Playwright matrix
+      run: npm run test:e2e
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:

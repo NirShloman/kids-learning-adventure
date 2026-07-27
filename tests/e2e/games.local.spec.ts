@@ -6,7 +6,8 @@ import {
   expectNoUnavailableContent,
   installConsoleErrorGuard,
   openGame,
-  openLobby
+  openLobby,
+  selectGameMode
 } from './helpers';
 
 const quizGames = ['אותיות', 'מספרים', 'צורות', 'צבעים'] as const;
@@ -16,6 +17,7 @@ for (const title of quizGames) {
     const assertNoConsoleErrors = installConsoleErrorGuard(page);
     await openLobby(page);
     await openGame(page, title);
+    await selectGameMode(page, 'quiz');
     await expectNoUnavailableContent(page);
     await completeChoiceGame(page, 'quiz-option', /לשאלה הבאה/);
     assertNoConsoleErrors();

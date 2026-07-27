@@ -1,4 +1,4 @@
-import { HTMLAttributes, useCallback } from 'react';
+import { FocusEventHandler, MouseEventHandler, useCallback } from 'react';
 import { canSpeak, SpeakOptions, speakHebrew, stopSpeaking } from '../services/speechService';
 
 export function useSpeech(enabled: boolean) {
@@ -11,7 +11,10 @@ export function useSpeech(enabled: boolean) {
   );
 
   const getSpeakProps = useCallback(
-    <TElement extends HTMLElement>(text: string): HTMLAttributes<TElement> => ({
+    <TElement extends HTMLElement>(text: string): {
+      onMouseEnter: MouseEventHandler<TElement>;
+      onFocus: FocusEventHandler<TElement>;
+    } => ({
       onMouseEnter: () => speak(text, { mode: 'hint' }),
       onFocus: () => speak(text, { mode: 'hint' })
     }),

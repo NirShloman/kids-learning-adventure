@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import { chooseHomeSettings, installConsoleErrorGuard, openGame, openLobby } from './helpers';
+import { chooseHomeSettings, completeProfileSetup, installConsoleErrorGuard, openGame, openLobby, selectGameMode } from './helpers';
 
 test.describe('local app smoke', () => {
   test('opens a focused welcome screen and renders all eight games', async ({ page }) => {
@@ -14,6 +14,7 @@ test.describe('local app smoke', () => {
   test('persists age, difficulty, and voice locally', async ({ page }) => {
     await page.goto('/');
     await page.getByRole('button', { name: /מתחילים לשחק/ }).click();
+    await completeProfileSetup(page);
     await chooseHomeSettings(page, 6, 'hard');
     await page.locator('#learner-voice').uncheck();
     await page.reload({ waitUntil: 'domcontentloaded', timeout: 30_000 });
@@ -30,6 +31,7 @@ test.describe('local app smoke', () => {
     });
     await openLobby(page);
     await openGame(page, 'אותיות');
+    await selectGameMode(page, 'quiz');
     await expect(page.locator('[data-testid="quiz-option"]')).toHaveCount(3);
     expect(forbidden).toEqual([]);
   });

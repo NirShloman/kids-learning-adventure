@@ -46,11 +46,22 @@ export function HomePage({ settings, onSettingsChange, onSelectGame }: HomePageP
             <input
               id="learner-voice"
               type="checkbox"
-              checked={settings.voiceEnabled}
-              onChange={(event) => onSettingsChange({ ...settings, voiceEnabled: event.target.checked })}
+              checked={settings.narrationEnabled}
+              onChange={(event) => onSettingsChange({ ...settings, voiceEnabled: event.target.checked, narrationEnabled: event.target.checked })}
             />
             <span aria-hidden="true">🔊</span>
-            קול
+            הקראה
+          </label>
+
+          <label className="voice-toggle" htmlFor="learner-sound-effects">
+            <input
+              id="learner-sound-effects"
+              type="checkbox"
+              checked={settings.soundEffectsEnabled}
+              onChange={(event) => onSettingsChange({ ...settings, soundEffectsEnabled: event.target.checked })}
+            />
+            <span aria-hidden="true">🎵</span>
+            צלילי משחק
           </label>
         </div>
       </section>

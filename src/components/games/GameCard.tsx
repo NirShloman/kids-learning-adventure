@@ -5,6 +5,7 @@ import { useSpeech } from '../../hooks/useSpeech';
 import { Button } from '../common/Button';
 import { GameImage } from '../common/GameImage';
 import { imageAssets } from '../../assets/assetManifest';
+import { motion } from 'motion/react';
 
 interface GameCardProps {
   game: GameDefinition;
@@ -20,7 +21,16 @@ export function GameCard({ game, voiceEnabled, onPlay }: GameCardProps) {
     : undefined;
 
   return (
-    <article className={`game-card game-card--${game.accent} game-card--premium`} style={backgroundStyle} tabIndex={0} {...getSpeakProps<HTMLElement>(speechText)}>
+    <motion.article
+      className={`game-card game-card--${game.accent} game-card--premium`}
+      data-game-id={game.id}
+      style={backgroundStyle}
+      tabIndex={0}
+      whileHover={{ y: -7, scale: 1.015 }}
+      whileTap={{ scale: 0.98 }}
+      transition={{ type: 'spring', stiffness: 360, damping: 25 }}
+      {...getSpeakProps<HTMLElement>(speechText)}
+    >
       <div className="game-card__shine" aria-hidden="true" />
       <div className="game-card__visual" aria-hidden="true">
         <GameImage assetId={game.imageAssetId} alt="" className="game-card__image" decorative />
@@ -30,6 +40,6 @@ export function GameCard({ game, voiceEnabled, onPlay }: GameCardProps) {
       <p>{game.description}</p>
       <small>מתאים לגילאי {game.recommendedAges.join(', ')}</small>
       <Button onClick={() => onPlay(game.id)} fullWidth {...getSpeakProps<HTMLButtonElement>(`מתחילים את ${game.title}`)}>מתחילים</Button>
-    </article>
+    </motion.article>
   );
 }

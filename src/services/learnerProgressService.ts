@@ -18,6 +18,15 @@ interface LegacyPlayer {
   voiceEnabled?: boolean;
 }
 
+interface VersionOneLearner {
+  schemaVersion: 1;
+  age: number;
+  difficulty: Difficulty;
+  voiceEnabled: boolean;
+  migratedFromLegacy: boolean;
+  updatedAt: string;
+}
+
 interface LegacySession extends Omit<LocalGameSession, 'id'> {
   id?: string;
   playerId?: string;
@@ -26,10 +35,15 @@ interface LegacySession extends Omit<LocalGameSession, 'id'> {
 type RecentContentMap = Record<string, string[]>;
 
 const defaultLearner: LocalLearnerState = {
-  schemaVersion: 1,
+  schemaVersion: 2,
+  name: '',
+  gender: null,
+  profileCompleted: false,
   age: 4,
   difficulty: 'medium',
   voiceEnabled: true,
+  narrationEnabled: true,
+  soundEffectsEnabled: true,
   migratedFromLegacy: false,
   updatedAt: new Date(0).toISOString()
 };
@@ -66,6 +80,7 @@ function migrateLegacyState(): LocalLearnerState {
     age: isValidAge(firstPlayer?.age) ? firstPlayer.age : defaultLearner.age,
     difficulty: isValidDifficulty(firstPlayer?.difficulty) ? firstPlayer.difficulty : defaultLearner.difficulty,
     voiceEnabled: typeof firstPlayer?.voiceEnabled === 'boolean' ? firstPlayer.voiceEnabled : defaultLearner.voiceEnabled,
+    narrationEnabled: typeof firstPlayer?.voiceEnabled === 'boolean' ? firstPlayer.voiceEnabled : defaultLearner.narrationEnabled,
     migratedFromLegacy: Boolean(firstPlayer),
     updatedAt: new Date().toISOString()
   };
@@ -87,8 +102,23 @@ function migrateLegacyState(): LocalLearnerState {
 }
 
 export function getLocalLearnerState(): LocalLearnerState {
-  const stored = readStorage<LocalLearnerState | null>(LEARNER_KEY, null);
-  return stored?.schemaVersion === 1 ? stored : migrateLegacyState();
+  const stored = readStorage<LocalLearnerState | VersionOneLearner | null>(LEARNER_KEY, null);
+  if (stored?.schemaVersion === 2) return stored;
+  if (stored?.schemaVersion === 1) {
+    const migrated: LocalLearnerState = {
+      ...defaultLearner,
+      age: isValidAge(stored.age) ? stored.age : defaultLearner.age,
+      difficulty: isValidDifficulty(stored.difficulty) ? stored.difficulty : defaultLearner.difficulty,
+      voiceEnabled: stored.voiceEnabled,
+      narrationEnabled: stored.voiceEnabled,
+      soundEffectsEnabled: true,
+      migratedFromLegacy: stored.migratedFromLegacy,
+      updatedAt: new Date().toISOString()
+    };
+    writeStorage(LEARNER_KEY, migrated);
+    return migrated;
+  }
+  return migrateLegacyState();
 }
 
 export function saveLearnerSettings(settings: LearnerSettings): LocalLearnerState {
@@ -96,6 +126,7 @@ export function saveLearnerSettings(settings: LearnerSettings): LocalLearnerStat
   const next: LocalLearnerState = {
     ...current,
     ...settings,
+    voiceEnabled: settings.narrationEnabled,
     updatedAt: new Date().toISOString()
   };
   writeStorage(LEARNER_KEY, next);

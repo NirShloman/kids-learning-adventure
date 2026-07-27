@@ -9,6 +9,7 @@ import { gameInstructions } from '../../../data/gameInstructions';
 import { GameWorld, GameWorldMessage } from '../GameWorld';
 import { GameImage } from '../../common/GameImage';
 import { AnimatedFeedback } from '../../common/AnimatedFeedback';
+import { motion } from 'motion/react';
 
 interface SortingGameProps {
   age: Age;
@@ -126,7 +127,7 @@ export function SortingGame({ age, difficulty, voiceEnabled, onBack, onFinish }:
             const isSelected = option.id === selectedOptionId;
             const optionClassName = ['sorting-basket', 'game-sorting-basket', isAnswered && isCorrectOption ? 'sorting-basket--correct' : '', isAnswered && isSelected && !isCorrectOption ? 'sorting-basket--wrong' : ''].join(' ').trim();
             return (
-              <button
+              <motion.button
                 key={option.id}
                 type="button"
                 className={optionClassName}
@@ -134,11 +135,15 @@ export function SortingGame({ age, difficulty, voiceEnabled, onBack, onFinish }:
                 data-correct={isCorrectOption ? 'true' : 'false'}
                 onClick={() => submitAnswer(option.id)}
                 disabled={isAnswered}
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -4 }}
+                whileTap={{ scale: 0.95 }}
                 {...getSpeakProps<HTMLButtonElement>(option.label)}
               >
                 <span className="sorting-basket__emoji">{option.emoji}</span>
                 <span>{option.label}</span>
-              </button>
+              </motion.button>
             );
           })}
         </div>

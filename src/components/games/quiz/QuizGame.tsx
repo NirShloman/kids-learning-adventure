@@ -9,6 +9,7 @@ import { gameInstructions } from '../../../data/gameInstructions';
 import { GameImage } from '../../common/GameImage';
 import { AnimatedFeedback } from '../../common/AnimatedFeedback';
 import { GameWorld } from '../GameWorld';
+import { motion } from 'motion/react';
 
 interface QuizGameProps {
   title: string;
@@ -73,7 +74,7 @@ export function QuizGame({ title, gameId, questions, voiceEnabled, onBack, onFin
             const isSelected = option.id === selectedOptionId;
             const optionClassName = ['option-card', 'game-answer-token', isAnswered && isCorrectOption ? 'option-card--correct' : '', isAnswered && isSelected && !isCorrectOption ? 'option-card--wrong' : ''].join(' ').trim();
             return (
-              <button
+              <motion.button
                 key={option.id}
                 type="button"
                 className={optionClassName}
@@ -81,11 +82,15 @@ export function QuizGame({ title, gameId, questions, voiceEnabled, onBack, onFin
                 data-correct={isCorrectOption ? 'true' : 'false'}
                 onClick={() => submitAnswer(option.id)}
                 disabled={isAnswered}
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                whileTap={{ scale: 0.96 }}
+                transition={{ delay: Math.min(0.18, currentQuestion.options.indexOf(option) * 0.055) }}
                 {...getSpeakProps<HTMLButtonElement>(option.label)}
               >
                 {option.emoji ? <span>{option.emoji}</span> : null}
                 <span>{option.label}</span>
-              </button>
+              </motion.button>
             );
           })}
         </div>

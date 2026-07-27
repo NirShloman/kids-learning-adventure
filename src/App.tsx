@@ -5,32 +5,44 @@ import { MemoryGame } from './components/games/memory/MemoryGame';
 import { PatternGame } from './components/games/patterns/PatternGame';
 import { SortingGame } from './components/games/sorting/SortingGame';
 import { QuizGame } from './components/games/quiz/QuizGame';
+import { ExperienceGame } from './components/games/experience/ExperienceGame';
+import { GameModeSelector } from './components/games/experience/GameModeSelector';
 import { GameWorld, GameWorldMessage } from './components/games/GameWorld';
+import { GameEntryTransition } from './components/games/GameEntryTransition';
 import { Button } from './components/common/Button';
 import { gameDefinitions } from './data/games';
 import { getQuizQuestions } from './services/questionService';
 import { HomePage } from './pages/HomePage';
 import { SummaryPage } from './pages/SummaryPage';
 import { LandingPage } from './pages/LandingPage';
-import { GameId, GameResult, LearnerSettings, QuizQuestion } from './types';
+import { ProfileSetupPage } from './pages/ProfileSetupPage';
+import { ExperienceGameId, GameId, GameMode, GameResult, LearnerGender, LearnerSettings, LocalLearnerState, QuizQuestion } from './types';
 import { useSpeech } from './hooks/useSpeech';
 import { getLocalLearnerState, saveGameSession, saveLearnerSettings } from './services/learnerProgressService';
 import { preloadCriticalAssets, preloadImageAssets } from './services/assetPreloadService';
 import type { ImageAssetId } from './assets/assetManifest';
+import { configureSoundEffects, playAudioCue } from './services/audioService';
 
 const quizGameIds: GameId[] = ['letters', 'numbers', 'shapes', 'colors'];
 
 function App() {
-  const [settings, setSettings] = useState<LearnerSettings>(() => {
-    const learner = getLocalLearnerState();
-    return { age: learner.age, difficulty: learner.difficulty, voiceEnabled: learner.voiceEnabled };
-  });
+  const [learner, setLearner] = useState<LocalLearnerState>(() => getLocalLearnerState());
+  const settings: LearnerSettings = {
+    age: learner.age,
+    difficulty: learner.difficulty,
+    voiceEnabled: learner.narrationEnabled,
+    narrationEnabled: learner.narrationEnabled,
+    soundEffectsEnabled: learner.soundEffectsEnabled
+  };
   const [selectedGameId, setSelectedGameId] = useState<GameId | null>(null);
+  const [selectedGameMode, setSelectedGameMode] = useState<GameMode | null>(null);
   const [result, setResult] = useState<GameResult | null>(null);
   const [playSessionKey, setPlaySessionKey] = useState(0);
   const [quizQuestions, setQuizQuestions] = useState<QuizQuestion[]>([]);
   const [isQuizLoading, setIsQuizLoading] = useState(false);
   const [showLanding, setShowLanding] = useState(true);
+  const [showProfileSetup, setShowProfileSetup] = useState(false);
+  const [isEnteringGame, setIsEnteringGame] = useState(false);
   const recordedPlaySessionKeyRef = useRef<number | null>(null);
   const { getSpeakProps } = useSpeech(settings.voiceEnabled);
 
@@ -44,10 +56,14 @@ function App() {
   }, []);
 
   useEffect(() => {
+    configureSoundEffects(settings.soundEffectsEnabled);
+  }, [settings.soundEffectsEnabled]);
+
+  useEffect(() => {
     let isActive = true;
 
     async function loadQuiz() {
-      if (!selectedGameId || !quizGameIds.includes(selectedGameId)) {
+      if (!selectedGameId || !quizGameIds.includes(selectedGameId) || selectedGameMode !== 'quiz') {
         setQuizQuestions([]);
         setIsQuizLoading(false);
         return;
@@ -64,11 +80,23 @@ function App() {
     return () => {
       isActive = false;
     };
-  }, [playSessionKey, selectedGameId, settings.age, settings.difficulty]);
+  }, [playSessionKey, selectedGameId, selectedGameMode, settings.age, settings.difficulty]);
 
   function handleSettingsChange(nextSettings: LearnerSettings) {
-    setSettings(nextSettings);
-    saveLearnerSettings(nextSettings);
+    setLearner(saveLearnerSettings(nextSettings));
+  }
+
+  function handleProfileSave(name: string, gender: LearnerGender) {
+    const next: LocalLearnerState = {
+      ...learner,
+      name,
+      gender,
+      profileCompleted: true,
+      updatedAt: new Date().toISOString()
+    };
+    setLearner(saveLearnerSettings(next));
+    setShowProfileSetup(false);
+    setShowLanding(false);
   }
 
   function handleSelectGame(gameId: GameId) {
@@ -78,6 +106,8 @@ function App() {
     preloadImageAssets(assetsToPreload);
     window.scrollTo({ top: 0, behavior: 'smooth' });
     setSelectedGameId(gameId);
+    setSelectedGameMode(null);
+    setIsEnteringGame(true);
     setResult(null);
     recordedPlaySessionKeyRef.current = null;
     setPlaySessionKey((previous) => previous + 1);
@@ -86,12 +116,14 @@ function App() {
   function handleFinish(score: number, total: number, stars: number) {
     if (recordedPlaySessionKeyRef.current === playSessionKey) return;
     recordedPlaySessionKeyRef.current = playSessionKey;
+    playAudioCue('levelComplete');
     setResult({ score, total, stars });
     if (!selectedGame || !selectedGameId) return;
 
     saveGameSession({
       gameId: selectedGameId,
       gameTitle: selectedGame.title,
+      mode: selectedGameMode ?? undefined,
       age: settings.age,
       difficulty: settings.difficulty,
       score,
@@ -102,12 +134,15 @@ function App() {
 
   function handleBackToGamesMenu() {
     setSelectedGameId(null);
+    setSelectedGameMode(null);
+    setIsEnteringGame(false);
     setResult(null);
     setShowLanding(false);
   }
 
   function handleBackToLanding() {
     setSelectedGameId(null);
+    setSelectedGameMode(null);
     setResult(null);
     setShowLanding(true);
   }
@@ -118,9 +153,28 @@ function App() {
     setPlaySessionKey((previous) => previous + 1);
   }
 
+  function handleSelectMode(mode: GameMode) {
+    if (mode === 'experience' && !learner.gender) {
+      setSelectedGameMode(mode);
+      setShowProfileSetup(true);
+      return;
+    }
+    if (mode === 'experience') {
+      preloadImageAssets(['characterSprites', 'experienceSprites']);
+    }
+    setSelectedGameMode(mode);
+    setResult(null);
+    recordedPlaySessionKeyRef.current = null;
+    setPlaySessionKey((previous) => previous + 1);
+  }
+
   function renderContent() {
     if (!selectedGame || !selectedGameId) {
       return <HomePage settings={settings} onSettingsChange={handleSettingsChange} onSelectGame={handleSelectGame} />;
+    }
+
+    if (isEnteringGame) {
+      return <GameEntryTransition game={selectedGame} voiceEnabled={settings.narrationEnabled} onComplete={() => setIsEnteringGame(false)} />;
     }
 
     if (result) {
@@ -131,6 +185,29 @@ function App() {
           voiceEnabled={settings.voiceEnabled}
           onPlayAgain={handlePlayAgain}
           onBackHome={handleBackToGamesMenu}
+        />
+      );
+    }
+
+    if (quizGameIds.includes(selectedGameId) && !selectedGameMode) {
+      return <GameModeSelector gameId={selectedGameId as ExperienceGameId} title={selectedGame.title} voiceEnabled={settings.voiceEnabled} onSelect={handleSelectMode} onBack={handleBackToGamesMenu} />;
+    }
+
+    if (quizGameIds.includes(selectedGameId) && selectedGameMode === 'experience') {
+      const characterGender = learner.gender;
+      if (!characterGender) return null;
+      return (
+        <ExperienceGame
+          key={playSessionKey}
+          gameId={selectedGameId as ExperienceGameId}
+          title={selectedGame.title}
+          age={settings.age}
+          difficulty={settings.difficulty}
+          gender={characterGender}
+          learnerName={learner.name}
+          voiceEnabled={settings.voiceEnabled}
+          onBack={handleBackToGamesMenu}
+          onFinish={handleFinish}
         />
       );
     }
@@ -183,8 +260,12 @@ function App() {
     return null;
   }
 
+  if (showProfileSetup) {
+    return <ProfileSetupPage learner={learner} onSave={handleProfileSave} />;
+  }
+
   if (showLanding) {
-    return <LandingPage voiceEnabled={settings.voiceEnabled} onStart={() => setShowLanding(false)} />;
+    return <LandingPage voiceEnabled={settings.voiceEnabled} onStart={() => learner.profileCompleted ? setShowLanding(false) : setShowProfileSetup(true)} />;
   }
 
   return (
@@ -193,9 +274,14 @@ function App() {
       subtitle={selectedGame ? 'משחקי למידה בעברית' : 'בוחרים משחק, מתנסים ומתקדמים בקצב שלכם.'}
       compact={Boolean(selectedGame && !result)}
       rightSlot={(
-        <Button variant="ghost" className="app-shell__lobby-button" onClick={handleBackToLanding} {...getSpeakProps<HTMLButtonElement>('חזרה למסך הפתיחה')}>
-          למסך הפתיחה
-        </Button>
+        <>
+          <Button variant="ghost" className="app-shell__profile-button" onClick={() => setShowProfileSetup(true)}>
+            {learner.name ? `הפרופיל של ${learner.name}` : 'עריכת פרופיל'}
+          </Button>
+          <Button variant="ghost" className="app-shell__lobby-button" onClick={handleBackToLanding} {...getSpeakProps<HTMLButtonElement>('חזרה למסך הפתיחה')}>
+            למסך הפתיחה
+          </Button>
+        </>
       )}
     >
       {renderContent()}

@@ -7,6 +7,8 @@ import { gameInstructions } from '../../../data/gameInstructions';
 import { calculateStars } from '../../../utils/helpers';
 import { GameWorld, GameWorldMessage } from '../GameWorld';
 import { GameImage } from '../../common/GameImage';
+import { playAudioCue } from '../../../services/audioService';
+import { motion } from 'motion/react';
 
 interface MemoryGameProps {
   age: Age;
@@ -70,6 +72,7 @@ export function MemoryGame({ age, difficulty, voiceEnabled, onBack, onFinish }: 
     const card = cards.find((item) => item.id === cardId);
     if (!card || matchedPairIds.includes(card.pairId) || flippedIds.length === 2) return;
 
+    playAudioCue('flip');
     speak(card.value);
     const nextFlipped = [...flippedIds, cardId];
     setFlippedIds(nextFlipped);
@@ -82,12 +85,14 @@ export function MemoryGame({ age, difficulty, voiceEnabled, onBack, onFinish }: 
 
       if (firstCard && secondCard && firstCard.pairId === secondCard.pairId) {
         window.setTimeout(() => {
+          playAudioCue('match');
           speak('מצוין, מצאתם זוג!');
           setMatchedPairIds((previous) => [...previous, firstCard.pairId]);
           setFlippedIds([]);
         }, 450);
       } else {
         window.setTimeout(() => {
+          playAudioCue('retry');
           speak('לא זוג, נסו לזכור איפה הקלפים היו.');
           setFlippedIds([]);
         }, 800);
@@ -124,13 +129,16 @@ export function MemoryGame({ age, difficulty, voiceEnabled, onBack, onFinish }: 
           {cards.map((card) => {
             const isVisible = flippedIds.includes(card.id) || matchedPairIds.includes(card.pairId);
             return (
-              <button
+              <motion.button
                 key={card.id}
                 type="button"
                 className={`memory-card game-memory-card ${isVisible ? 'memory-card--visible' : ''}`}
                 data-testid="memory-card"
                 data-pair-id={card.pairId}
                 onClick={() => handleCardClick(card.id)}
+                animate={{ rotateY: isVisible ? 180 : 0, scale: matchedPairIds.includes(card.pairId) ? 0.96 : 1 }}
+                whileTap={{ scale: 0.94 }}
+                transition={{ type: 'spring', stiffness: 320, damping: 26 }}
                 aria-label={isVisible ? `קלף ${card.value}` : 'קלף מוסתר'}
                 {...getSpeakProps<HTMLButtonElement>(isVisible ? `קלף ${card.value}` : 'קלף מוסתר')}
               >
@@ -138,7 +146,7 @@ export function MemoryGame({ age, difficulty, voiceEnabled, onBack, onFinish }: 
                 <span className="game-memory-card__front">
                   {card.imageAssetId ? <GameImage assetId={card.imageAssetId} alt="" decorative className="game-token__image" /> : card.value}
                 </span>
-              </button>
+              </motion.button>
             );
           })}
         </div>

@@ -7,6 +7,8 @@ import { shuffleArray, calculateStars } from '../../../utils/helpers';
 import { gameInstructions } from '../../../data/gameInstructions';
 import { GameWorld, GameWorldMessage } from '../GameWorld';
 import { GameImage } from '../../common/GameImage';
+import { playAudioCue } from '../../../services/audioService';
+import { motion } from 'motion/react';
 
 interface MatchingGameProps {
   age: Age;
@@ -62,6 +64,7 @@ export function MatchingGame({ age, difficulty, voiceEnabled, onBack, onFinish }
     setTries((previous) => previous + 1);
 
     if (leftId === rightId) {
+      playAudioCue('match');
       const updated = [...matchedIds, leftId];
       setMatchedIds(updated);
       setSelectedLeft(null);
@@ -78,6 +81,7 @@ export function MatchingGame({ age, difficulty, voiceEnabled, onBack, onFinish }
       return;
     }
 
+    playAudioCue('retry');
     speak('כמעט, נסו שוב');
     window.setTimeout(() => {
       setSelectedLeft(null);
@@ -87,7 +91,7 @@ export function MatchingGame({ age, difficulty, voiceEnabled, onBack, onFinish }
 
   function handleLeftSelect(pair: MatchingPair) {
     if (matchedIds.includes(pair.id)) return;
-    speak(String(pair.left));
+    speak(pair.right);
     setSelectedLeft(pair.id);
     checkMatch(pair.id, selectedRight);
   }
@@ -127,18 +131,20 @@ export function MatchingGame({ age, difficulty, voiceEnabled, onBack, onFinish }
         <div className="matching-board game-matching-board">
           <div className="matching-column">
             {pairs.map((pair) => (
-              <button
+              <motion.button
                 key={pair.id}
                 type="button"
                 className={`matching-item game-answer-token ${selectedLeft === pair.id ? 'matching-item--active' : ''} ${matchedIds.includes(pair.id) ? 'matching-item--done' : ''}`}
                 data-testid="matching-left"
                 data-pair-id={pair.id}
                 onClick={() => handleLeftSelect(pair)}
+                animate={{ scale: matchedIds.includes(pair.id) ? 0.96 : 1 }}
+                whileTap={{ scale: 0.94 }}
                 {...getSpeakProps<HTMLButtonElement>(String(pair.left))}
               >
                 {pair.leftImageAssetId ? <GameImage assetId={pair.leftImageAssetId} alt="" decorative className="game-token__image" /> : null}
                 <span>{pair.left}</span>
-              </button>
+              </motion.button>
             ))}
           </div>
           <div className="game-match-lines" aria-hidden="true">
@@ -146,18 +152,20 @@ export function MatchingGame({ age, difficulty, voiceEnabled, onBack, onFinish }
           </div>
           <div className="matching-column">
             {shuffledRight.map((pair) => (
-              <button
+              <motion.button
                 key={pair.id}
                 type="button"
                 className={`matching-item game-answer-token ${selectedRight === pair.id ? 'matching-item--active' : ''} ${matchedIds.includes(pair.id) ? 'matching-item--done' : ''}`}
                 data-testid="matching-right"
                 data-pair-id={pair.id}
                 onClick={() => handleRightSelect(pair)}
+                animate={{ scale: matchedIds.includes(pair.id) ? 0.96 : 1 }}
+                whileTap={{ scale: 0.94 }}
                 {...getSpeakProps<HTMLButtonElement>(pair.right)}
               >
                 {pair.rightImageAssetId ? <GameImage assetId={pair.rightImageAssetId} alt="" decorative className="game-token__image" /> : null}
                 <span>{pair.right}</span>
-              </button>
+              </motion.button>
             ))}
           </div>
         </div>
@@ -165,3 +173,5 @@ export function MatchingGame({ age, difficulty, voiceEnabled, onBack, onFinish }
     </GameWorld>
   );
 }
+    playAudioCue('select');
+    playAudioCue('select');
