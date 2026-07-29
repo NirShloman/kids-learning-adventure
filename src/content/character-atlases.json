@@ -1,0 +1,2821 @@
+{
+  "version": 1,
+  "defaultBoySkin": "nir-kippah",
+  "defaultGirlSkin": "shir",
+  "atlases": {
+    "nir-kippah": {
+      "skin": "nir-kippah",
+      "png": "/assets/experience/characters/nir-kippah-v1.png",
+      "webp": "/assets/experience/characters/nir-kippah-v1.webp",
+      "grid": {
+        "columns": 8,
+        "rows": 7
+      },
+      "frameSize": {
+        "w": 256,
+        "h": 320
+      },
+      "atlasSize": {
+        "w": 2048,
+        "h": 2240
+      },
+      "frames": [
+        {
+          "name": "nir-kippah_idle_front_01",
+          "index": 0,
+          "x": 0,
+          "y": 0,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_idle_back_01",
+          "index": 1,
+          "x": 256,
+          "y": 0,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_idle_side_01",
+          "index": 2,
+          "x": 512,
+          "y": 0,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_walk_front_01",
+          "index": 3,
+          "x": 768,
+          "y": 0,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_walk_front_02",
+          "index": 4,
+          "x": 1024,
+          "y": 0,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_walk_front_03",
+          "index": 5,
+          "x": 1280,
+          "y": 0,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_walk_front_04",
+          "index": 6,
+          "x": 1536,
+          "y": 0,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_walk_front_05",
+          "index": 7,
+          "x": 1792,
+          "y": 0,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_walk_front_06",
+          "index": 8,
+          "x": 0,
+          "y": 320,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_walk_back_01",
+          "index": 9,
+          "x": 256,
+          "y": 320,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_walk_back_02",
+          "index": 10,
+          "x": 512,
+          "y": 320,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_walk_back_03",
+          "index": 11,
+          "x": 768,
+          "y": 320,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_walk_back_04",
+          "index": 12,
+          "x": 1024,
+          "y": 320,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_walk_back_05",
+          "index": 13,
+          "x": 1280,
+          "y": 320,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_walk_back_06",
+          "index": 14,
+          "x": 1536,
+          "y": 320,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_walk_side_01",
+          "index": 15,
+          "x": 1792,
+          "y": 320,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_walk_side_02",
+          "index": 16,
+          "x": 0,
+          "y": 640,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_walk_side_03",
+          "index": 17,
+          "x": 256,
+          "y": 640,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_walk_side_04",
+          "index": 18,
+          "x": 512,
+          "y": 640,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_walk_side_05",
+          "index": 19,
+          "x": 768,
+          "y": 640,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_walk_side_06",
+          "index": 20,
+          "x": 1024,
+          "y": 640,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_carry_front_01",
+          "index": 21,
+          "x": 1280,
+          "y": 640,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_carry_front_02",
+          "index": 22,
+          "x": 1536,
+          "y": 640,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_carry_front_03",
+          "index": 23,
+          "x": 1792,
+          "y": 640,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_carry_front_04",
+          "index": 24,
+          "x": 0,
+          "y": 960,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_carry_front_05",
+          "index": 25,
+          "x": 256,
+          "y": 960,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_carry_front_06",
+          "index": 26,
+          "x": 512,
+          "y": 960,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_carry_back_01",
+          "index": 27,
+          "x": 768,
+          "y": 960,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_carry_back_02",
+          "index": 28,
+          "x": 1024,
+          "y": 960,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_carry_back_03",
+          "index": 29,
+          "x": 1280,
+          "y": 960,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_carry_back_04",
+          "index": 30,
+          "x": 1536,
+          "y": 960,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_carry_back_05",
+          "index": 31,
+          "x": 1792,
+          "y": 960,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_carry_back_06",
+          "index": 32,
+          "x": 0,
+          "y": 1280,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_carry_side_01",
+          "index": 33,
+          "x": 256,
+          "y": 1280,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.66,
+            "y": 0.49
+          }
+        },
+        {
+          "name": "nir-kippah_carry_side_02",
+          "index": 34,
+          "x": 512,
+          "y": 1280,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.66,
+            "y": 0.49
+          }
+        },
+        {
+          "name": "nir-kippah_carry_side_03",
+          "index": 35,
+          "x": 768,
+          "y": 1280,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.66,
+            "y": 0.49
+          }
+        },
+        {
+          "name": "nir-kippah_carry_side_04",
+          "index": 36,
+          "x": 1024,
+          "y": 1280,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.66,
+            "y": 0.49
+          }
+        },
+        {
+          "name": "nir-kippah_carry_side_05",
+          "index": 37,
+          "x": 1280,
+          "y": 1280,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.66,
+            "y": 0.49
+          }
+        },
+        {
+          "name": "nir-kippah_carry_side_06",
+          "index": 38,
+          "x": 1536,
+          "y": 1280,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.66,
+            "y": 0.49
+          }
+        },
+        {
+          "name": "nir-kippah_pickup_01",
+          "index": 39,
+          "x": 1792,
+          "y": 1280,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.56,
+            "y": 0.73
+          }
+        },
+        {
+          "name": "nir-kippah_pickup_02",
+          "index": 40,
+          "x": 0,
+          "y": 1600,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.56,
+            "y": 0.73
+          }
+        },
+        {
+          "name": "nir-kippah_pickup_03",
+          "index": 41,
+          "x": 256,
+          "y": 1600,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.56,
+            "y": 0.73
+          }
+        },
+        {
+          "name": "nir-kippah_drop_01",
+          "index": 42,
+          "x": 512,
+          "y": 1600,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.56,
+            "y": 0.73
+          }
+        },
+        {
+          "name": "nir-kippah_drop_02",
+          "index": 43,
+          "x": 768,
+          "y": 1600,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.56,
+            "y": 0.73
+          }
+        },
+        {
+          "name": "nir-kippah_drop_03",
+          "index": 44,
+          "x": 1024,
+          "y": 1600,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.56,
+            "y": 0.73
+          }
+        },
+        {
+          "name": "nir-kippah_celebrate_01",
+          "index": 45,
+          "x": 1280,
+          "y": 1600,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_celebrate_02",
+          "index": 46,
+          "x": 1536,
+          "y": 1600,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_celebrate_03",
+          "index": 47,
+          "x": 1792,
+          "y": 1600,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-kippah_celebrate_04",
+          "index": 48,
+          "x": 0,
+          "y": 1920,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ],
+      "animations": [
+        {
+          "key": "idle_front",
+          "frames": [
+            "nir-kippah_idle_front_01"
+          ],
+          "frameRate": 6,
+          "repeat": -1
+        },
+        {
+          "key": "idle_back",
+          "frames": [
+            "nir-kippah_idle_back_01"
+          ],
+          "frameRate": 6,
+          "repeat": -1
+        },
+        {
+          "key": "idle_side",
+          "frames": [
+            "nir-kippah_idle_side_01"
+          ],
+          "frameRate": 6,
+          "repeat": -1
+        },
+        {
+          "key": "walk_front",
+          "frames": [
+            "nir-kippah_walk_front_01",
+            "nir-kippah_walk_front_02",
+            "nir-kippah_walk_front_03",
+            "nir-kippah_walk_front_04",
+            "nir-kippah_walk_front_05",
+            "nir-kippah_walk_front_06"
+          ],
+          "frameRate": 12,
+          "repeat": -1
+        },
+        {
+          "key": "walk_back",
+          "frames": [
+            "nir-kippah_walk_back_01",
+            "nir-kippah_walk_back_02",
+            "nir-kippah_walk_back_03",
+            "nir-kippah_walk_back_04",
+            "nir-kippah_walk_back_05",
+            "nir-kippah_walk_back_06"
+          ],
+          "frameRate": 12,
+          "repeat": -1
+        },
+        {
+          "key": "walk_side",
+          "frames": [
+            "nir-kippah_walk_side_01",
+            "nir-kippah_walk_side_02",
+            "nir-kippah_walk_side_03",
+            "nir-kippah_walk_side_04",
+            "nir-kippah_walk_side_05",
+            "nir-kippah_walk_side_06"
+          ],
+          "frameRate": 12,
+          "repeat": -1
+        },
+        {
+          "key": "carry_front",
+          "frames": [
+            "nir-kippah_carry_front_01",
+            "nir-kippah_carry_front_02",
+            "nir-kippah_carry_front_03",
+            "nir-kippah_carry_front_04",
+            "nir-kippah_carry_front_05",
+            "nir-kippah_carry_front_06"
+          ],
+          "frameRate": 12,
+          "repeat": -1
+        },
+        {
+          "key": "carry_back",
+          "frames": [
+            "nir-kippah_carry_back_01",
+            "nir-kippah_carry_back_02",
+            "nir-kippah_carry_back_03",
+            "nir-kippah_carry_back_04",
+            "nir-kippah_carry_back_05",
+            "nir-kippah_carry_back_06"
+          ],
+          "frameRate": 12,
+          "repeat": -1
+        },
+        {
+          "key": "carry_side",
+          "frames": [
+            "nir-kippah_carry_side_01",
+            "nir-kippah_carry_side_02",
+            "nir-kippah_carry_side_03",
+            "nir-kippah_carry_side_04",
+            "nir-kippah_carry_side_05",
+            "nir-kippah_carry_side_06"
+          ],
+          "frameRate": 12,
+          "repeat": -1
+        },
+        {
+          "key": "pickup",
+          "frames": [
+            "nir-kippah_pickup_01",
+            "nir-kippah_pickup_02",
+            "nir-kippah_pickup_03"
+          ],
+          "frameRate": 10,
+          "repeat": 0
+        },
+        {
+          "key": "drop",
+          "frames": [
+            "nir-kippah_drop_01",
+            "nir-kippah_drop_02",
+            "nir-kippah_drop_03"
+          ],
+          "frameRate": 10,
+          "repeat": 0
+        },
+        {
+          "key": "celebrate",
+          "frames": [
+            "nir-kippah_celebrate_01",
+            "nir-kippah_celebrate_02",
+            "nir-kippah_celebrate_03",
+            "nir-kippah_celebrate_04"
+          ],
+          "frameRate": 12,
+          "repeat": 0
+        }
+      ]
+    },
+    "nir-plain": {
+      "skin": "nir-plain",
+      "png": "/assets/experience/characters/nir-plain-v1.png",
+      "webp": "/assets/experience/characters/nir-plain-v1.webp",
+      "grid": {
+        "columns": 8,
+        "rows": 7
+      },
+      "frameSize": {
+        "w": 256,
+        "h": 320
+      },
+      "atlasSize": {
+        "w": 2048,
+        "h": 2240
+      },
+      "frames": [
+        {
+          "name": "nir-plain_idle_front_01",
+          "index": 0,
+          "x": 0,
+          "y": 0,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_idle_back_01",
+          "index": 1,
+          "x": 256,
+          "y": 0,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_idle_side_01",
+          "index": 2,
+          "x": 512,
+          "y": 0,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_walk_front_01",
+          "index": 3,
+          "x": 768,
+          "y": 0,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_walk_front_02",
+          "index": 4,
+          "x": 1024,
+          "y": 0,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_walk_front_03",
+          "index": 5,
+          "x": 1280,
+          "y": 0,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_walk_front_04",
+          "index": 6,
+          "x": 1536,
+          "y": 0,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_walk_front_05",
+          "index": 7,
+          "x": 1792,
+          "y": 0,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_walk_front_06",
+          "index": 8,
+          "x": 0,
+          "y": 320,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_walk_back_01",
+          "index": 9,
+          "x": 256,
+          "y": 320,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_walk_back_02",
+          "index": 10,
+          "x": 512,
+          "y": 320,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_walk_back_03",
+          "index": 11,
+          "x": 768,
+          "y": 320,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_walk_back_04",
+          "index": 12,
+          "x": 1024,
+          "y": 320,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_walk_back_05",
+          "index": 13,
+          "x": 1280,
+          "y": 320,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_walk_back_06",
+          "index": 14,
+          "x": 1536,
+          "y": 320,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_walk_side_01",
+          "index": 15,
+          "x": 1792,
+          "y": 320,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_walk_side_02",
+          "index": 16,
+          "x": 0,
+          "y": 640,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_walk_side_03",
+          "index": 17,
+          "x": 256,
+          "y": 640,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_walk_side_04",
+          "index": 18,
+          "x": 512,
+          "y": 640,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_walk_side_05",
+          "index": 19,
+          "x": 768,
+          "y": 640,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_walk_side_06",
+          "index": 20,
+          "x": 1024,
+          "y": 640,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_carry_front_01",
+          "index": 21,
+          "x": 1280,
+          "y": 640,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_carry_front_02",
+          "index": 22,
+          "x": 1536,
+          "y": 640,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_carry_front_03",
+          "index": 23,
+          "x": 1792,
+          "y": 640,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_carry_front_04",
+          "index": 24,
+          "x": 0,
+          "y": 960,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_carry_front_05",
+          "index": 25,
+          "x": 256,
+          "y": 960,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_carry_front_06",
+          "index": 26,
+          "x": 512,
+          "y": 960,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_carry_back_01",
+          "index": 27,
+          "x": 768,
+          "y": 960,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_carry_back_02",
+          "index": 28,
+          "x": 1024,
+          "y": 960,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_carry_back_03",
+          "index": 29,
+          "x": 1280,
+          "y": 960,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_carry_back_04",
+          "index": 30,
+          "x": 1536,
+          "y": 960,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_carry_back_05",
+          "index": 31,
+          "x": 1792,
+          "y": 960,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_carry_back_06",
+          "index": 32,
+          "x": 0,
+          "y": 1280,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_carry_side_01",
+          "index": 33,
+          "x": 256,
+          "y": 1280,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.66,
+            "y": 0.49
+          }
+        },
+        {
+          "name": "nir-plain_carry_side_02",
+          "index": 34,
+          "x": 512,
+          "y": 1280,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.66,
+            "y": 0.49
+          }
+        },
+        {
+          "name": "nir-plain_carry_side_03",
+          "index": 35,
+          "x": 768,
+          "y": 1280,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.66,
+            "y": 0.49
+          }
+        },
+        {
+          "name": "nir-plain_carry_side_04",
+          "index": 36,
+          "x": 1024,
+          "y": 1280,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.66,
+            "y": 0.49
+          }
+        },
+        {
+          "name": "nir-plain_carry_side_05",
+          "index": 37,
+          "x": 1280,
+          "y": 1280,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.66,
+            "y": 0.49
+          }
+        },
+        {
+          "name": "nir-plain_carry_side_06",
+          "index": 38,
+          "x": 1536,
+          "y": 1280,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.66,
+            "y": 0.49
+          }
+        },
+        {
+          "name": "nir-plain_pickup_01",
+          "index": 39,
+          "x": 1792,
+          "y": 1280,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.56,
+            "y": 0.73
+          }
+        },
+        {
+          "name": "nir-plain_pickup_02",
+          "index": 40,
+          "x": 0,
+          "y": 1600,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.56,
+            "y": 0.73
+          }
+        },
+        {
+          "name": "nir-plain_pickup_03",
+          "index": 41,
+          "x": 256,
+          "y": 1600,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.56,
+            "y": 0.73
+          }
+        },
+        {
+          "name": "nir-plain_drop_01",
+          "index": 42,
+          "x": 512,
+          "y": 1600,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.56,
+            "y": 0.73
+          }
+        },
+        {
+          "name": "nir-plain_drop_02",
+          "index": 43,
+          "x": 768,
+          "y": 1600,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.56,
+            "y": 0.73
+          }
+        },
+        {
+          "name": "nir-plain_drop_03",
+          "index": 44,
+          "x": 1024,
+          "y": 1600,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.56,
+            "y": 0.73
+          }
+        },
+        {
+          "name": "nir-plain_celebrate_01",
+          "index": 45,
+          "x": 1280,
+          "y": 1600,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_celebrate_02",
+          "index": 46,
+          "x": 1536,
+          "y": 1600,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_celebrate_03",
+          "index": 47,
+          "x": 1792,
+          "y": 1600,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "nir-plain_celebrate_04",
+          "index": 48,
+          "x": 0,
+          "y": 1920,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ],
+      "animations": [
+        {
+          "key": "idle_front",
+          "frames": [
+            "nir-plain_idle_front_01"
+          ],
+          "frameRate": 6,
+          "repeat": -1
+        },
+        {
+          "key": "idle_back",
+          "frames": [
+            "nir-plain_idle_back_01"
+          ],
+          "frameRate": 6,
+          "repeat": -1
+        },
+        {
+          "key": "idle_side",
+          "frames": [
+            "nir-plain_idle_side_01"
+          ],
+          "frameRate": 6,
+          "repeat": -1
+        },
+        {
+          "key": "walk_front",
+          "frames": [
+            "nir-plain_walk_front_01",
+            "nir-plain_walk_front_02",
+            "nir-plain_walk_front_03",
+            "nir-plain_walk_front_04",
+            "nir-plain_walk_front_05",
+            "nir-plain_walk_front_06"
+          ],
+          "frameRate": 12,
+          "repeat": -1
+        },
+        {
+          "key": "walk_back",
+          "frames": [
+            "nir-plain_walk_back_01",
+            "nir-plain_walk_back_02",
+            "nir-plain_walk_back_03",
+            "nir-plain_walk_back_04",
+            "nir-plain_walk_back_05",
+            "nir-plain_walk_back_06"
+          ],
+          "frameRate": 12,
+          "repeat": -1
+        },
+        {
+          "key": "walk_side",
+          "frames": [
+            "nir-plain_walk_side_01",
+            "nir-plain_walk_side_02",
+            "nir-plain_walk_side_03",
+            "nir-plain_walk_side_04",
+            "nir-plain_walk_side_05",
+            "nir-plain_walk_side_06"
+          ],
+          "frameRate": 12,
+          "repeat": -1
+        },
+        {
+          "key": "carry_front",
+          "frames": [
+            "nir-plain_carry_front_01",
+            "nir-plain_carry_front_02",
+            "nir-plain_carry_front_03",
+            "nir-plain_carry_front_04",
+            "nir-plain_carry_front_05",
+            "nir-plain_carry_front_06"
+          ],
+          "frameRate": 12,
+          "repeat": -1
+        },
+        {
+          "key": "carry_back",
+          "frames": [
+            "nir-plain_carry_back_01",
+            "nir-plain_carry_back_02",
+            "nir-plain_carry_back_03",
+            "nir-plain_carry_back_04",
+            "nir-plain_carry_back_05",
+            "nir-plain_carry_back_06"
+          ],
+          "frameRate": 12,
+          "repeat": -1
+        },
+        {
+          "key": "carry_side",
+          "frames": [
+            "nir-plain_carry_side_01",
+            "nir-plain_carry_side_02",
+            "nir-plain_carry_side_03",
+            "nir-plain_carry_side_04",
+            "nir-plain_carry_side_05",
+            "nir-plain_carry_side_06"
+          ],
+          "frameRate": 12,
+          "repeat": -1
+        },
+        {
+          "key": "pickup",
+          "frames": [
+            "nir-plain_pickup_01",
+            "nir-plain_pickup_02",
+            "nir-plain_pickup_03"
+          ],
+          "frameRate": 10,
+          "repeat": 0
+        },
+        {
+          "key": "drop",
+          "frames": [
+            "nir-plain_drop_01",
+            "nir-plain_drop_02",
+            "nir-plain_drop_03"
+          ],
+          "frameRate": 10,
+          "repeat": 0
+        },
+        {
+          "key": "celebrate",
+          "frames": [
+            "nir-plain_celebrate_01",
+            "nir-plain_celebrate_02",
+            "nir-plain_celebrate_03",
+            "nir-plain_celebrate_04"
+          ],
+          "frameRate": 12,
+          "repeat": 0
+        }
+      ]
+    },
+    "shir": {
+      "skin": "shir",
+      "png": "/assets/experience/characters/shir-v1.png",
+      "webp": "/assets/experience/characters/shir-v1.webp",
+      "grid": {
+        "columns": 8,
+        "rows": 7
+      },
+      "frameSize": {
+        "w": 256,
+        "h": 320
+      },
+      "atlasSize": {
+        "w": 2048,
+        "h": 2240
+      },
+      "frames": [
+        {
+          "name": "shir_idle_front_01",
+          "index": 0,
+          "x": 0,
+          "y": 0,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_idle_back_01",
+          "index": 1,
+          "x": 256,
+          "y": 0,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_idle_side_01",
+          "index": 2,
+          "x": 512,
+          "y": 0,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_walk_front_01",
+          "index": 3,
+          "x": 768,
+          "y": 0,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_walk_front_02",
+          "index": 4,
+          "x": 1024,
+          "y": 0,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_walk_front_03",
+          "index": 5,
+          "x": 1280,
+          "y": 0,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_walk_front_04",
+          "index": 6,
+          "x": 1536,
+          "y": 0,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_walk_front_05",
+          "index": 7,
+          "x": 1792,
+          "y": 0,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_walk_front_06",
+          "index": 8,
+          "x": 0,
+          "y": 320,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_walk_back_01",
+          "index": 9,
+          "x": 256,
+          "y": 320,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_walk_back_02",
+          "index": 10,
+          "x": 512,
+          "y": 320,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_walk_back_03",
+          "index": 11,
+          "x": 768,
+          "y": 320,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_walk_back_04",
+          "index": 12,
+          "x": 1024,
+          "y": 320,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_walk_back_05",
+          "index": 13,
+          "x": 1280,
+          "y": 320,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_walk_back_06",
+          "index": 14,
+          "x": 1536,
+          "y": 320,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_walk_side_01",
+          "index": 15,
+          "x": 1792,
+          "y": 320,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_walk_side_02",
+          "index": 16,
+          "x": 0,
+          "y": 640,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_walk_side_03",
+          "index": 17,
+          "x": 256,
+          "y": 640,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_walk_side_04",
+          "index": 18,
+          "x": 512,
+          "y": 640,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_walk_side_05",
+          "index": 19,
+          "x": 768,
+          "y": 640,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_walk_side_06",
+          "index": 20,
+          "x": 1024,
+          "y": 640,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_carry_front_01",
+          "index": 21,
+          "x": 1280,
+          "y": 640,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_carry_front_02",
+          "index": 22,
+          "x": 1536,
+          "y": 640,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_carry_front_03",
+          "index": 23,
+          "x": 1792,
+          "y": 640,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_carry_front_04",
+          "index": 24,
+          "x": 0,
+          "y": 960,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_carry_front_05",
+          "index": 25,
+          "x": 256,
+          "y": 960,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_carry_front_06",
+          "index": 26,
+          "x": 512,
+          "y": 960,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_carry_back_01",
+          "index": 27,
+          "x": 768,
+          "y": 960,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_carry_back_02",
+          "index": 28,
+          "x": 1024,
+          "y": 960,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_carry_back_03",
+          "index": 29,
+          "x": 1280,
+          "y": 960,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_carry_back_04",
+          "index": 30,
+          "x": 1536,
+          "y": 960,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_carry_back_05",
+          "index": 31,
+          "x": 1792,
+          "y": 960,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_carry_back_06",
+          "index": 32,
+          "x": 0,
+          "y": 1280,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_carry_side_01",
+          "index": 33,
+          "x": 256,
+          "y": 1280,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.66,
+            "y": 0.49
+          }
+        },
+        {
+          "name": "shir_carry_side_02",
+          "index": 34,
+          "x": 512,
+          "y": 1280,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.66,
+            "y": 0.49
+          }
+        },
+        {
+          "name": "shir_carry_side_03",
+          "index": 35,
+          "x": 768,
+          "y": 1280,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.66,
+            "y": 0.49
+          }
+        },
+        {
+          "name": "shir_carry_side_04",
+          "index": 36,
+          "x": 1024,
+          "y": 1280,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.66,
+            "y": 0.49
+          }
+        },
+        {
+          "name": "shir_carry_side_05",
+          "index": 37,
+          "x": 1280,
+          "y": 1280,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.66,
+            "y": 0.49
+          }
+        },
+        {
+          "name": "shir_carry_side_06",
+          "index": 38,
+          "x": 1536,
+          "y": 1280,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.66,
+            "y": 0.49
+          }
+        },
+        {
+          "name": "shir_pickup_01",
+          "index": 39,
+          "x": 1792,
+          "y": 1280,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.56,
+            "y": 0.73
+          }
+        },
+        {
+          "name": "shir_pickup_02",
+          "index": 40,
+          "x": 0,
+          "y": 1600,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.56,
+            "y": 0.73
+          }
+        },
+        {
+          "name": "shir_pickup_03",
+          "index": 41,
+          "x": 256,
+          "y": 1600,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.56,
+            "y": 0.73
+          }
+        },
+        {
+          "name": "shir_drop_01",
+          "index": 42,
+          "x": 512,
+          "y": 1600,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.56,
+            "y": 0.73
+          }
+        },
+        {
+          "name": "shir_drop_02",
+          "index": 43,
+          "x": 768,
+          "y": 1600,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.56,
+            "y": 0.73
+          }
+        },
+        {
+          "name": "shir_drop_03",
+          "index": 44,
+          "x": 1024,
+          "y": 1600,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.56,
+            "y": 0.73
+          }
+        },
+        {
+          "name": "shir_celebrate_01",
+          "index": 45,
+          "x": 1280,
+          "y": 1600,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_celebrate_02",
+          "index": 46,
+          "x": 1536,
+          "y": 1600,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_celebrate_03",
+          "index": 47,
+          "x": 1792,
+          "y": 1600,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "name": "shir_celebrate_04",
+          "index": 48,
+          "x": 0,
+          "y": 1920,
+          "w": 256,
+          "h": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          },
+          "attachment": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ],
+      "animations": [
+        {
+          "key": "idle_front",
+          "frames": [
+            "shir_idle_front_01"
+          ],
+          "frameRate": 6,
+          "repeat": -1
+        },
+        {
+          "key": "idle_back",
+          "frames": [
+            "shir_idle_back_01"
+          ],
+          "frameRate": 6,
+          "repeat": -1
+        },
+        {
+          "key": "idle_side",
+          "frames": [
+            "shir_idle_side_01"
+          ],
+          "frameRate": 6,
+          "repeat": -1
+        },
+        {
+          "key": "walk_front",
+          "frames": [
+            "shir_walk_front_01",
+            "shir_walk_front_02",
+            "shir_walk_front_03",
+            "shir_walk_front_04",
+            "shir_walk_front_05",
+            "shir_walk_front_06"
+          ],
+          "frameRate": 12,
+          "repeat": -1
+        },
+        {
+          "key": "walk_back",
+          "frames": [
+            "shir_walk_back_01",
+            "shir_walk_back_02",
+            "shir_walk_back_03",
+            "shir_walk_back_04",
+            "shir_walk_back_05",
+            "shir_walk_back_06"
+          ],
+          "frameRate": 12,
+          "repeat": -1
+        },
+        {
+          "key": "walk_side",
+          "frames": [
+            "shir_walk_side_01",
+            "shir_walk_side_02",
+            "shir_walk_side_03",
+            "shir_walk_side_04",
+            "shir_walk_side_05",
+            "shir_walk_side_06"
+          ],
+          "frameRate": 12,
+          "repeat": -1
+        },
+        {
+          "key": "carry_front",
+          "frames": [
+            "shir_carry_front_01",
+            "shir_carry_front_02",
+            "shir_carry_front_03",
+            "shir_carry_front_04",
+            "shir_carry_front_05",
+            "shir_carry_front_06"
+          ],
+          "frameRate": 12,
+          "repeat": -1
+        },
+        {
+          "key": "carry_back",
+          "frames": [
+            "shir_carry_back_01",
+            "shir_carry_back_02",
+            "shir_carry_back_03",
+            "shir_carry_back_04",
+            "shir_carry_back_05",
+            "shir_carry_back_06"
+          ],
+          "frameRate": 12,
+          "repeat": -1
+        },
+        {
+          "key": "carry_side",
+          "frames": [
+            "shir_carry_side_01",
+            "shir_carry_side_02",
+            "shir_carry_side_03",
+            "shir_carry_side_04",
+            "shir_carry_side_05",
+            "shir_carry_side_06"
+          ],
+          "frameRate": 12,
+          "repeat": -1
+        },
+        {
+          "key": "pickup",
+          "frames": [
+            "shir_pickup_01",
+            "shir_pickup_02",
+            "shir_pickup_03"
+          ],
+          "frameRate": 10,
+          "repeat": 0
+        },
+        {
+          "key": "drop",
+          "frames": [
+            "shir_drop_01",
+            "shir_drop_02",
+            "shir_drop_03"
+          ],
+          "frameRate": 10,
+          "repeat": 0
+        },
+        {
+          "key": "celebrate",
+          "frames": [
+            "shir_celebrate_01",
+            "shir_celebrate_02",
+            "shir_celebrate_03",
+            "shir_celebrate_04"
+          ],
+          "frameRate": 12,
+          "repeat": 0
+        }
+      ]
+    }
+  }
+}

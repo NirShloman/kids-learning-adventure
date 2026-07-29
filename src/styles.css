@@ -1441,14 +1441,6 @@ button { touch-action: manipulation; -webkit-tap-highlight-color: transparent; u
   transition: grid-column .13s ease, grid-row .13s ease;
   pointer-events: none;
 }
-.experience-sprite {
-  display: block;
-  width: min(100%, 72px);
-  aspect-ratio: 1;
-  background-repeat: no-repeat;
-  background-color: transparent;
-}
-.experience-entity .experience-sprite { width: min(70%, 48px); }
 .experience-entity__image {
   display: block;
   width: min(70%, 48px);
@@ -1457,8 +1449,6 @@ button { touch-action: manipulation; -webkit-tap-highlight-color: transparent; u
   filter: drop-shadow(0 5px 6px rgb(49 65 92 / .16));
 }
 .experience-game__carry .experience-entity__image { width: 46px; height: 46px; }
-.experience-player .experience-sprite { width: 50px; }
-.experience-game__carry .experience-sprite { width: 48px; }
 .experience-entity small { direction: rtl; }
 .experience-game__help {
   display: flex;
@@ -1548,6 +1538,7 @@ button { touch-action: manipulation; -webkit-tap-highlight-color: transparent; u
 
 .experience-character {
   display: block;
+  position: relative;
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
@@ -1560,32 +1551,13 @@ button { touch-action: manipulation; -webkit-tap-highlight-color: transparent; u
   transform: scaleX(-1);
 }
 
-.experience-character--walk,
-.experience-character--carry-walk {
-  animation: experienceWalkBob .28s ease-in-out infinite alternate;
-}
-
-.experience-character--walk.experience-character--facing-left,
-.experience-character--carry-walk.experience-character--facing-left {
-  animation-name: experienceWalkBobLeft;
-}
-
-.experience-character--pickup,
-.experience-character--drop {
-  animation: experienceAction .42s ease both;
-}
-
-.experience-character--celebrate {
-  animation: experienceCelebrate .55s ease-in-out infinite alternate;
-}
-
 .experience-player__carried {
   position: absolute;
   z-index: 5;
-  inset-inline-start: 50%;
-  inset-block-start: 42%;
-  width: 34px;
-  height: 34px;
+  left: var(--experience-carry-x, 50%);
+  top: var(--experience-carry-y, 50%);
+  width: 40px;
+  height: 40px;
   display: grid;
   place-items: center;
   transform: translate(-50%, -50%);
@@ -1595,10 +1567,13 @@ button { touch-action: manipulation; -webkit-tap-highlight-color: transparent; u
   pointer-events: none;
 }
 
-.experience-player__carried .experience-sprite,
+.experience-character--facing-left .experience-player__carried {
+  transform: translate(-50%, -50%) scaleX(-1);
+}
+
 .experience-player__carried .experience-entity__image {
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
 }
 
 .experience-obstacle {
@@ -1620,25 +1595,50 @@ button { touch-action: manipulation; -webkit-tap-highlight-color: transparent; u
   background: radial-gradient(circle at 35% 30%, #fff6c9, #f5a8c6 62%, #8a67f0);
 }
 
-@keyframes experienceWalkBob {
-  from { transform: translateY(0) rotate(-1deg); }
-  to { transform: translateY(-3px) rotate(1deg); }
+.experience-obstacle[data-visual-asset-id] {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
-@keyframes experienceWalkBobLeft {
-  from { transform: scaleX(-1) translateY(0) rotate(-1deg); }
-  to { transform: scaleX(-1) translateY(-3px) rotate(1deg); }
+.experience-obstacle__image__picture {
+  display: contents;
 }
 
-@keyframes experienceAction {
-  0% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(4px) scale(.96); }
-  100% { transform: translateY(0) scale(1); }
+.experience-obstacle__image {
+  width: 130%;
+  height: 180%;
+  object-fit: contain;
+  filter: drop-shadow(0 7px 8px rgb(49 65 92 / .18));
 }
 
-@keyframes experienceCelebrate {
-  from { transform: translateY(0) rotate(-2deg) scale(1); }
-  to { transform: translateY(-7px) rotate(2deg) scale(1.04); }
+.experience-entity__image__picture {
+  display: contents;
+}
+
+.experience-game--letters .experience-arena {
+  background:
+    linear-gradient(rgb(240 234 255 / .78), rgb(248 253 255 / .9)),
+    repeating-linear-gradient(90deg, transparent 0 74px, rgb(65 50 104 / .07) 75px 77px),
+    linear-gradient(150deg, #dcd1ff, #effcff);
+}
+
+.experience-game--numbers .experience-arena {
+  background:
+    radial-gradient(circle at 14% 18%, rgb(255 255 255 / .9) 0 24px, transparent 25px),
+    linear-gradient(155deg, #d9f5ec, #fff5cc);
+}
+
+.experience-game--shapes .experience-arena {
+  background:
+    linear-gradient(rgb(255 255 255 / .58), rgb(255 255 255 / .58)),
+    repeating-linear-gradient(0deg, #e9dcc8 0 52px, #d9c7af 53px 56px);
+}
+
+.experience-game--colors .experience-arena {
+  background:
+    radial-gradient(circle at 20% 16%, #fff9bd 0 30px, transparent 31px),
+    linear-gradient(180deg, #ccefff 0 45%, #dff4ca 46% 100%);
 }
 
 @keyframes experienceGuidePulse {
@@ -1663,7 +1663,6 @@ button { touch-action: manipulation; -webkit-tap-highlight-color: transparent; u
   .experience-arena--physics .experience-player { width: 54px; height: 70px; }
   .experience-arena--guided .experience-player { width: 58px; height: 72px; }
   .experience-arena--physics .experience-entity { width: 52px; height: 54px; }
-  .experience-player .experience-sprite { width: 42px; }
   .experience-entity { width: 96%; height: 92%; }
   .experience-entity small { display: none; }
   .experience-game__help { display: none; }

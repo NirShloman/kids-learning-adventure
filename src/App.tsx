@@ -19,7 +19,11 @@ import { ProfileSetupPage } from './pages/ProfileSetupPage';
 import { ExperienceGameId, GameId, GameMode, GameResult, LearnerGender, LearnerSettings, LocalLearnerState, QuizQuestion } from './types';
 import { useSpeech } from './hooks/useSpeech';
 import { getLocalLearnerState, saveGameSession, saveLearnerSettings } from './services/learnerProgressService';
-import { preloadCriticalAssets, preloadImageAssets } from './services/assetPreloadService';
+import { preloadCriticalAssets, preloadImageAssets, preloadImageUrls } from './services/assetPreloadService';
+import {
+  getCharacterAtlas,
+  resolveCharacterSkin
+} from './components/games/experience/experienceAssetManifest';
 import type { ImageAssetId } from './assets/assetManifest';
 import { configureSoundEffects, playAudioCue } from './services/audioService';
 
@@ -159,8 +163,9 @@ function App() {
       setShowProfileSetup(true);
       return;
     }
-    if (mode === 'experience') {
-      preloadImageAssets(['characterSprites', 'experienceSprites']);
+    if (mode === 'experience' && learner.gender) {
+      const atlas = getCharacterAtlas(resolveCharacterSkin(learner.gender));
+      preloadImageUrls([atlas.webp]);
     }
     setSelectedGameMode(mode);
     setResult(null);

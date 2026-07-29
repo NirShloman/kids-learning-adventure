@@ -22,8 +22,7 @@ describe('experiential game content', () => {
         expect(entity.x).toBeLessThan(level.gridSize);
         expect(entity.y).toBeLessThan(level.gridSize);
         expect('emoji' in entity).toBe(false);
-        expect(Boolean(entity.imageAssetId || entity.sprite || entity.fallbackGlyph)).toBe(true);
-        if (entity.sprite) expect(entity.imageAssetId).toBe('experienceSprites');
+        expect(Boolean(entity.visual?.assetId || entity.fallbackGlyph)).toBe(true);
       }
     }
   });

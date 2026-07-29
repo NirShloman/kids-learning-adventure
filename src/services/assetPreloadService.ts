@@ -15,6 +15,15 @@ export function preloadImageAssets(assetIds: ImageAssetId[]): void {
   });
 }
 
+export function preloadImageUrls(urls: string[]): void {
+  if (typeof Image === 'undefined') return;
+  for (const url of urls) {
+    const image = new Image();
+    image.decoding = 'async';
+    image.src = url;
+  }
+}
+
 export function preloadCriticalAssets(): void {
   preloadImageAssets(['bgLanding', 'guideHappy', 'starReward']);
 }

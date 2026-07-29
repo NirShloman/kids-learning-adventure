@@ -1,0 +1,2274 @@
+{
+  "version": 1,
+  "generatedAt": "2026-07-29T06:52:13.914Z",
+  "entries": {
+    "letter-aleph-piece-1": {
+      "id": "letter-aleph-piece-1",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-aleph-piece-1.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-aleph-piece-1.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-aleph-piece-2": {
+      "id": "letter-aleph-piece-2",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-aleph-piece-2.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-aleph-piece-2.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-aleph-piece-3": {
+      "id": "letter-aleph-piece-3",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-aleph-piece-3.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-aleph-piece-3.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-aleph-target-empty": {
+      "id": "letter-aleph-target-empty",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-aleph-target-empty.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-aleph-target-empty.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-aleph-target-partial": {
+      "id": "letter-aleph-target-partial",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-aleph-target-partial.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-aleph-target-partial.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-aleph-target-filled-glow": {
+      "id": "letter-aleph-target-filled-glow",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-aleph-target-filled-glow.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-aleph-target-filled-glow.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-bet-piece-1": {
+      "id": "letter-bet-piece-1",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-bet-piece-1.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-bet-piece-1.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-bet-piece-2": {
+      "id": "letter-bet-piece-2",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-bet-piece-2.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-bet-piece-2.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-bet-piece-3": {
+      "id": "letter-bet-piece-3",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-bet-piece-3.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-bet-piece-3.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-bet-target-empty": {
+      "id": "letter-bet-target-empty",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-bet-target-empty.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-bet-target-empty.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-bet-target-partial": {
+      "id": "letter-bet-target-partial",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-bet-target-partial.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-bet-target-partial.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-bet-target-filled-glow": {
+      "id": "letter-bet-target-filled-glow",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-bet-target-filled-glow.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-bet-target-filled-glow.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-gimel-piece-1": {
+      "id": "letter-gimel-piece-1",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-gimel-piece-1.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-gimel-piece-1.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-gimel-piece-2": {
+      "id": "letter-gimel-piece-2",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-gimel-piece-2.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-gimel-piece-2.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-gimel-piece-3": {
+      "id": "letter-gimel-piece-3",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-gimel-piece-3.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-gimel-piece-3.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-gimel-target-empty": {
+      "id": "letter-gimel-target-empty",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-gimel-target-empty.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-gimel-target-empty.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-gimel-target-partial": {
+      "id": "letter-gimel-target-partial",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-gimel-target-partial.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-gimel-target-partial.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-gimel-target-filled-glow": {
+      "id": "letter-gimel-target-filled-glow",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-gimel-target-filled-glow.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-gimel-target-filled-glow.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-dalet-piece-1": {
+      "id": "letter-dalet-piece-1",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-dalet-piece-1.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-dalet-piece-1.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-dalet-piece-2": {
+      "id": "letter-dalet-piece-2",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-dalet-piece-2.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-dalet-piece-2.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-dalet-piece-3": {
+      "id": "letter-dalet-piece-3",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-dalet-piece-3.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-dalet-piece-3.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-dalet-target-empty": {
+      "id": "letter-dalet-target-empty",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-dalet-target-empty.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-dalet-target-empty.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-dalet-target-partial": {
+      "id": "letter-dalet-target-partial",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-dalet-target-partial.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-dalet-target-partial.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-dalet-target-filled-glow": {
+      "id": "letter-dalet-target-filled-glow",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-dalet-target-filled-glow.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-dalet-target-filled-glow.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-he-piece-1": {
+      "id": "letter-he-piece-1",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-he-piece-1.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-he-piece-1.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-he-piece-2": {
+      "id": "letter-he-piece-2",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-he-piece-2.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-he-piece-2.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-he-piece-3": {
+      "id": "letter-he-piece-3",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-he-piece-3.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-he-piece-3.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-he-target-empty": {
+      "id": "letter-he-target-empty",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-he-target-empty.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-he-target-empty.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-he-target-partial": {
+      "id": "letter-he-target-partial",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-he-target-partial.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-he-target-partial.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-he-target-filled-glow": {
+      "id": "letter-he-target-filled-glow",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-he-target-filled-glow.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-he-target-filled-glow.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-vav-piece-1": {
+      "id": "letter-vav-piece-1",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-vav-piece-1.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-vav-piece-1.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-vav-piece-2": {
+      "id": "letter-vav-piece-2",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-vav-piece-2.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-vav-piece-2.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-vav-piece-3": {
+      "id": "letter-vav-piece-3",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-vav-piece-3.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-vav-piece-3.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-vav-target-empty": {
+      "id": "letter-vav-target-empty",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-vav-target-empty.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-vav-target-empty.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-vav-target-partial": {
+      "id": "letter-vav-target-partial",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-vav-target-partial.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-vav-target-partial.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-vav-target-filled-glow": {
+      "id": "letter-vav-target-filled-glow",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-vav-target-filled-glow.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-vav-target-filled-glow.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-zayin-piece-1": {
+      "id": "letter-zayin-piece-1",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-zayin-piece-1.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-zayin-piece-1.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-zayin-piece-2": {
+      "id": "letter-zayin-piece-2",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-zayin-piece-2.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-zayin-piece-2.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-zayin-piece-3": {
+      "id": "letter-zayin-piece-3",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-zayin-piece-3.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-zayin-piece-3.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-zayin-target-empty": {
+      "id": "letter-zayin-target-empty",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-zayin-target-empty.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-zayin-target-empty.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-zayin-target-partial": {
+      "id": "letter-zayin-target-partial",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-zayin-target-partial.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-zayin-target-partial.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-zayin-target-filled-glow": {
+      "id": "letter-zayin-target-filled-glow",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-zayin-target-filled-glow.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-zayin-target-filled-glow.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-het-piece-1": {
+      "id": "letter-het-piece-1",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-het-piece-1.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-het-piece-1.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-het-piece-2": {
+      "id": "letter-het-piece-2",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-het-piece-2.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-het-piece-2.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-het-piece-3": {
+      "id": "letter-het-piece-3",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-het-piece-3.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-het-piece-3.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-het-target-empty": {
+      "id": "letter-het-target-empty",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-het-target-empty.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-het-target-empty.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-het-target-partial": {
+      "id": "letter-het-target-partial",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-het-target-partial.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-het-target-partial.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-het-target-filled-glow": {
+      "id": "letter-het-target-filled-glow",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-het-target-filled-glow.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-het-target-filled-glow.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-tet-piece-1": {
+      "id": "letter-tet-piece-1",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-tet-piece-1.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-tet-piece-1.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-tet-piece-2": {
+      "id": "letter-tet-piece-2",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-tet-piece-2.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-tet-piece-2.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-tet-piece-3": {
+      "id": "letter-tet-piece-3",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-tet-piece-3.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-tet-piece-3.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-tet-target-empty": {
+      "id": "letter-tet-target-empty",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-tet-target-empty.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-tet-target-empty.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-tet-target-partial": {
+      "id": "letter-tet-target-partial",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-tet-target-partial.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-tet-target-partial.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-tet-target-filled-glow": {
+      "id": "letter-tet-target-filled-glow",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-tet-target-filled-glow.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-tet-target-filled-glow.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-yod-piece-1": {
+      "id": "letter-yod-piece-1",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-yod-piece-1.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-yod-piece-1.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-yod-piece-2": {
+      "id": "letter-yod-piece-2",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-yod-piece-2.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-yod-piece-2.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-yod-piece-3": {
+      "id": "letter-yod-piece-3",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-yod-piece-3.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-yod-piece-3.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-yod-target-empty": {
+      "id": "letter-yod-target-empty",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-yod-target-empty.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-yod-target-empty.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-yod-target-partial": {
+      "id": "letter-yod-target-partial",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-yod-target-partial.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-yod-target-partial.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-yod-target-filled-glow": {
+      "id": "letter-yod-target-filled-glow",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-yod-target-filled-glow.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-yod-target-filled-glow.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-kaf-piece-1": {
+      "id": "letter-kaf-piece-1",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-kaf-piece-1.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-kaf-piece-1.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-kaf-piece-2": {
+      "id": "letter-kaf-piece-2",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-kaf-piece-2.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-kaf-piece-2.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-kaf-piece-3": {
+      "id": "letter-kaf-piece-3",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-kaf-piece-3.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-kaf-piece-3.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-kaf-target-empty": {
+      "id": "letter-kaf-target-empty",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-kaf-target-empty.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-kaf-target-empty.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-kaf-target-partial": {
+      "id": "letter-kaf-target-partial",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-kaf-target-partial.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-kaf-target-partial.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-kaf-target-filled-glow": {
+      "id": "letter-kaf-target-filled-glow",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-kaf-target-filled-glow.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-kaf-target-filled-glow.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-lamed-piece-1": {
+      "id": "letter-lamed-piece-1",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-lamed-piece-1.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-lamed-piece-1.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-lamed-piece-2": {
+      "id": "letter-lamed-piece-2",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-lamed-piece-2.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-lamed-piece-2.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-lamed-piece-3": {
+      "id": "letter-lamed-piece-3",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-lamed-piece-3.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-lamed-piece-3.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-lamed-target-empty": {
+      "id": "letter-lamed-target-empty",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-lamed-target-empty.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-lamed-target-empty.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-lamed-target-partial": {
+      "id": "letter-lamed-target-partial",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-lamed-target-partial.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-lamed-target-partial.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-lamed-target-filled-glow": {
+      "id": "letter-lamed-target-filled-glow",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-lamed-target-filled-glow.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-lamed-target-filled-glow.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-mem-piece-1": {
+      "id": "letter-mem-piece-1",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-mem-piece-1.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-mem-piece-1.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-mem-piece-2": {
+      "id": "letter-mem-piece-2",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-mem-piece-2.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-mem-piece-2.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-mem-piece-3": {
+      "id": "letter-mem-piece-3",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-mem-piece-3.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-mem-piece-3.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-mem-target-empty": {
+      "id": "letter-mem-target-empty",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-mem-target-empty.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-mem-target-empty.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-mem-target-partial": {
+      "id": "letter-mem-target-partial",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-mem-target-partial.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-mem-target-partial.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-mem-target-filled-glow": {
+      "id": "letter-mem-target-filled-glow",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-mem-target-filled-glow.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-mem-target-filled-glow.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-nun-piece-1": {
+      "id": "letter-nun-piece-1",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-nun-piece-1.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-nun-piece-1.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-nun-piece-2": {
+      "id": "letter-nun-piece-2",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-nun-piece-2.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-nun-piece-2.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-nun-piece-3": {
+      "id": "letter-nun-piece-3",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-nun-piece-3.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-nun-piece-3.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-nun-target-empty": {
+      "id": "letter-nun-target-empty",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-nun-target-empty.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-nun-target-empty.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-nun-target-partial": {
+      "id": "letter-nun-target-partial",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-nun-target-partial.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-nun-target-partial.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-nun-target-filled-glow": {
+      "id": "letter-nun-target-filled-glow",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-nun-target-filled-glow.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-nun-target-filled-glow.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-samekh-piece-1": {
+      "id": "letter-samekh-piece-1",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-samekh-piece-1.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-samekh-piece-1.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-samekh-piece-2": {
+      "id": "letter-samekh-piece-2",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-samekh-piece-2.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-samekh-piece-2.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-samekh-piece-3": {
+      "id": "letter-samekh-piece-3",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-samekh-piece-3.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-samekh-piece-3.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-samekh-target-empty": {
+      "id": "letter-samekh-target-empty",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-samekh-target-empty.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-samekh-target-empty.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-samekh-target-partial": {
+      "id": "letter-samekh-target-partial",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-samekh-target-partial.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-samekh-target-partial.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-samekh-target-filled-glow": {
+      "id": "letter-samekh-target-filled-glow",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-samekh-target-filled-glow.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-samekh-target-filled-glow.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-ayin-piece-1": {
+      "id": "letter-ayin-piece-1",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-ayin-piece-1.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-ayin-piece-1.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-ayin-piece-2": {
+      "id": "letter-ayin-piece-2",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-ayin-piece-2.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-ayin-piece-2.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-ayin-piece-3": {
+      "id": "letter-ayin-piece-3",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-ayin-piece-3.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-ayin-piece-3.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-ayin-target-empty": {
+      "id": "letter-ayin-target-empty",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-ayin-target-empty.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-ayin-target-empty.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-ayin-target-partial": {
+      "id": "letter-ayin-target-partial",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-ayin-target-partial.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-ayin-target-partial.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-ayin-target-filled-glow": {
+      "id": "letter-ayin-target-filled-glow",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-ayin-target-filled-glow.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-ayin-target-filled-glow.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-pe-piece-1": {
+      "id": "letter-pe-piece-1",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-pe-piece-1.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-pe-piece-1.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-pe-piece-2": {
+      "id": "letter-pe-piece-2",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-pe-piece-2.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-pe-piece-2.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-pe-piece-3": {
+      "id": "letter-pe-piece-3",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-pe-piece-3.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-pe-piece-3.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-pe-target-empty": {
+      "id": "letter-pe-target-empty",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-pe-target-empty.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-pe-target-empty.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-pe-target-partial": {
+      "id": "letter-pe-target-partial",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-pe-target-partial.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-pe-target-partial.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-pe-target-filled-glow": {
+      "id": "letter-pe-target-filled-glow",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-pe-target-filled-glow.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-pe-target-filled-glow.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-tsadi-piece-1": {
+      "id": "letter-tsadi-piece-1",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-tsadi-piece-1.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-tsadi-piece-1.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-tsadi-piece-2": {
+      "id": "letter-tsadi-piece-2",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-tsadi-piece-2.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-tsadi-piece-2.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-tsadi-piece-3": {
+      "id": "letter-tsadi-piece-3",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-tsadi-piece-3.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-tsadi-piece-3.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-tsadi-target-empty": {
+      "id": "letter-tsadi-target-empty",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-tsadi-target-empty.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-tsadi-target-empty.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-tsadi-target-partial": {
+      "id": "letter-tsadi-target-partial",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-tsadi-target-partial.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-tsadi-target-partial.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-tsadi-target-filled-glow": {
+      "id": "letter-tsadi-target-filled-glow",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-tsadi-target-filled-glow.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-tsadi-target-filled-glow.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-qof-piece-1": {
+      "id": "letter-qof-piece-1",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-qof-piece-1.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-qof-piece-1.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-qof-piece-2": {
+      "id": "letter-qof-piece-2",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-qof-piece-2.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-qof-piece-2.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-qof-piece-3": {
+      "id": "letter-qof-piece-3",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-qof-piece-3.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-qof-piece-3.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-qof-target-empty": {
+      "id": "letter-qof-target-empty",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-qof-target-empty.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-qof-target-empty.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-qof-target-partial": {
+      "id": "letter-qof-target-partial",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-qof-target-partial.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-qof-target-partial.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-qof-target-filled-glow": {
+      "id": "letter-qof-target-filled-glow",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-qof-target-filled-glow.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-qof-target-filled-glow.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-resh-piece-1": {
+      "id": "letter-resh-piece-1",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-resh-piece-1.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-resh-piece-1.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-resh-piece-2": {
+      "id": "letter-resh-piece-2",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-resh-piece-2.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-resh-piece-2.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-resh-piece-3": {
+      "id": "letter-resh-piece-3",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-resh-piece-3.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-resh-piece-3.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-resh-target-empty": {
+      "id": "letter-resh-target-empty",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-resh-target-empty.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-resh-target-empty.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-resh-target-partial": {
+      "id": "letter-resh-target-partial",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-resh-target-partial.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-resh-target-partial.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-resh-target-filled-glow": {
+      "id": "letter-resh-target-filled-glow",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-resh-target-filled-glow.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-resh-target-filled-glow.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-shin-piece-1": {
+      "id": "letter-shin-piece-1",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-shin-piece-1.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-shin-piece-1.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-shin-piece-2": {
+      "id": "letter-shin-piece-2",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-shin-piece-2.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-shin-piece-2.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-shin-piece-3": {
+      "id": "letter-shin-piece-3",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-shin-piece-3.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-shin-piece-3.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-shin-target-empty": {
+      "id": "letter-shin-target-empty",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-shin-target-empty.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-shin-target-empty.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-shin-target-partial": {
+      "id": "letter-shin-target-partial",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-shin-target-partial.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-shin-target-partial.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-shin-target-filled-glow": {
+      "id": "letter-shin-target-filled-glow",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-shin-target-filled-glow.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-shin-target-filled-glow.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-tav-piece-1": {
+      "id": "letter-tav-piece-1",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-tav-piece-1.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-tav-piece-1.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-tav-piece-2": {
+      "id": "letter-tav-piece-2",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-tav-piece-2.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-tav-piece-2.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-tav-piece-3": {
+      "id": "letter-tav-piece-3",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-tav-piece-3.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-tav-piece-3.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-tav-target-empty": {
+      "id": "letter-tav-target-empty",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-tav-target-empty.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-tav-target-empty.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-tav-target-partial": {
+      "id": "letter-tav-target-partial",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-tav-target-partial.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-tav-target-partial.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-tav-target-filled-glow": {
+      "id": "letter-tav-target-filled-glow",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-tav-target-filled-glow.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-tav-target-filled-glow.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-crate-closed": {
+      "id": "letter-crate-closed",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-crate-closed.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-crate-closed.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-crate-open": {
+      "id": "letter-crate-open",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-crate-open.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-crate-open.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-conveyor-straight": {
+      "id": "letter-conveyor-straight",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-conveyor-straight.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-conveyor-straight.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "letter-conveyor-corner": {
+      "id": "letter-conveyor-corner",
+      "world": "letter-factory",
+      "png": "/assets/experience/generated/letter-factory/letter-conveyor-corner.png",
+      "webp": "/assets/experience/generated/letter-factory/letter-conveyor-corner.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "reward-star": {
+      "id": "reward-star",
+      "world": "shared",
+      "png": "/assets/experience/generated/shared/reward-star.png",
+      "webp": "/assets/experience/generated/shared/reward-star.webp",
+      "width": 512,
+      "height": 512,
+      "source": "claude-design"
+    },
+    "monster-idle-base": {
+      "id": "monster-idle-base",
+      "world": "feed-the-monster",
+      "png": "/assets/experience/generated/feed-the-monster/monster-idle-base.png",
+      "webp": "/assets/experience/generated/feed-the-monster/monster-idle-base.webp",
+      "width": 512,
+      "height": 512,
+      "source": "claude-design"
+    },
+    "monster-idle-1": {
+      "id": "monster-idle-1",
+      "world": "feed-the-monster",
+      "png": "/assets/experience/generated/feed-the-monster/monster-idle-1.png",
+      "webp": "/assets/experience/generated/feed-the-monster/monster-idle-1.webp",
+      "width": 512,
+      "height": 512,
+      "source": "claude-derived"
+    },
+    "monster-idle-2": {
+      "id": "monster-idle-2",
+      "world": "feed-the-monster",
+      "png": "/assets/experience/generated/feed-the-monster/monster-idle-2.png",
+      "webp": "/assets/experience/generated/feed-the-monster/monster-idle-2.webp",
+      "width": 512,
+      "height": 512,
+      "source": "claude-derived"
+    },
+    "monster-idle-3": {
+      "id": "monster-idle-3",
+      "world": "feed-the-monster",
+      "png": "/assets/experience/generated/feed-the-monster/monster-idle-3.png",
+      "webp": "/assets/experience/generated/feed-the-monster/monster-idle-3.webp",
+      "width": 512,
+      "height": 512,
+      "source": "claude-derived"
+    },
+    "monster-idle-4": {
+      "id": "monster-idle-4",
+      "world": "feed-the-monster",
+      "png": "/assets/experience/generated/feed-the-monster/monster-idle-4.png",
+      "webp": "/assets/experience/generated/feed-the-monster/monster-idle-4.webp",
+      "width": 512,
+      "height": 512,
+      "source": "claude-derived"
+    },
+    "monster-chew-1": {
+      "id": "monster-chew-1",
+      "world": "feed-the-monster",
+      "png": "/assets/experience/generated/feed-the-monster/monster-chew-1.png",
+      "webp": "/assets/experience/generated/feed-the-monster/monster-chew-1.webp",
+      "width": 512,
+      "height": 512,
+      "source": "claude-derived"
+    },
+    "monster-chew-2": {
+      "id": "monster-chew-2",
+      "world": "feed-the-monster",
+      "png": "/assets/experience/generated/feed-the-monster/monster-chew-2.png",
+      "webp": "/assets/experience/generated/feed-the-monster/monster-chew-2.webp",
+      "width": 512,
+      "height": 512,
+      "source": "claude-derived"
+    },
+    "monster-chew-3": {
+      "id": "monster-chew-3",
+      "world": "feed-the-monster",
+      "png": "/assets/experience/generated/feed-the-monster/monster-chew-3.png",
+      "webp": "/assets/experience/generated/feed-the-monster/monster-chew-3.webp",
+      "width": 512,
+      "height": 512,
+      "source": "claude-derived"
+    },
+    "monster-chew-4": {
+      "id": "monster-chew-4",
+      "world": "feed-the-monster",
+      "png": "/assets/experience/generated/feed-the-monster/monster-chew-4.png",
+      "webp": "/assets/experience/generated/feed-the-monster/monster-chew-4.webp",
+      "width": 512,
+      "height": 512,
+      "source": "claude-derived"
+    },
+    "monster-cheer-1": {
+      "id": "monster-cheer-1",
+      "world": "feed-the-monster",
+      "png": "/assets/experience/generated/feed-the-monster/monster-cheer-1.png",
+      "webp": "/assets/experience/generated/feed-the-monster/monster-cheer-1.webp",
+      "width": 512,
+      "height": 512,
+      "source": "claude-derived"
+    },
+    "monster-cheer-2": {
+      "id": "monster-cheer-2",
+      "world": "feed-the-monster",
+      "png": "/assets/experience/generated/feed-the-monster/monster-cheer-2.png",
+      "webp": "/assets/experience/generated/feed-the-monster/monster-cheer-2.webp",
+      "width": 512,
+      "height": 512,
+      "source": "claude-derived"
+    },
+    "monster-cheer-3": {
+      "id": "monster-cheer-3",
+      "world": "feed-the-monster",
+      "png": "/assets/experience/generated/feed-the-monster/monster-cheer-3.png",
+      "webp": "/assets/experience/generated/feed-the-monster/monster-cheer-3.webp",
+      "width": 512,
+      "height": 512,
+      "source": "claude-derived"
+    },
+    "monster-cheer-4": {
+      "id": "monster-cheer-4",
+      "world": "feed-the-monster",
+      "png": "/assets/experience/generated/feed-the-monster/monster-cheer-4.png",
+      "webp": "/assets/experience/generated/feed-the-monster/monster-cheer-4.webp",
+      "width": 512,
+      "height": 512,
+      "source": "claude-derived"
+    },
+    "food-apple": {
+      "id": "food-apple",
+      "world": "feed-the-monster",
+      "png": "/assets/experience/generated/feed-the-monster/food-apple.png",
+      "webp": "/assets/experience/generated/feed-the-monster/food-apple.webp",
+      "width": 512,
+      "height": 512,
+      "source": "claude-design"
+    },
+    "food-strawberry": {
+      "id": "food-strawberry",
+      "world": "feed-the-monster",
+      "png": "/assets/experience/generated/feed-the-monster/food-strawberry.png",
+      "webp": "/assets/experience/generated/feed-the-monster/food-strawberry.webp",
+      "width": 512,
+      "height": 512,
+      "source": "claude-design"
+    },
+    "food-banana": {
+      "id": "food-banana",
+      "world": "feed-the-monster",
+      "png": "/assets/experience/generated/feed-the-monster/food-banana.png",
+      "webp": "/assets/experience/generated/feed-the-monster/food-banana.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "food-grapes": {
+      "id": "food-grapes",
+      "world": "feed-the-monster",
+      "png": "/assets/experience/generated/feed-the-monster/food-grapes.png",
+      "webp": "/assets/experience/generated/feed-the-monster/food-grapes.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "food-carrot": {
+      "id": "food-carrot",
+      "world": "feed-the-monster",
+      "png": "/assets/experience/generated/feed-the-monster/food-carrot.png",
+      "webp": "/assets/experience/generated/feed-the-monster/food-carrot.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "food-cookie": {
+      "id": "food-cookie",
+      "world": "feed-the-monster",
+      "png": "/assets/experience/generated/feed-the-monster/food-cookie.png",
+      "webp": "/assets/experience/generated/feed-the-monster/food-cookie.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "food-cheese": {
+      "id": "food-cheese",
+      "world": "feed-the-monster",
+      "png": "/assets/experience/generated/feed-the-monster/food-cheese.png",
+      "webp": "/assets/experience/generated/feed-the-monster/food-cheese.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "food-pear": {
+      "id": "food-pear",
+      "world": "feed-the-monster",
+      "png": "/assets/experience/generated/feed-the-monster/food-pear.png",
+      "webp": "/assets/experience/generated/feed-the-monster/food-pear.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "food-tomato": {
+      "id": "food-tomato",
+      "world": "feed-the-monster",
+      "png": "/assets/experience/generated/feed-the-monster/food-tomato.png",
+      "webp": "/assets/experience/generated/feed-the-monster/food-tomato.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "basket-empty": {
+      "id": "basket-empty",
+      "world": "feed-the-monster",
+      "png": "/assets/experience/generated/feed-the-monster/basket-empty.png",
+      "webp": "/assets/experience/generated/feed-the-monster/basket-empty.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "basket-full": {
+      "id": "basket-full",
+      "world": "feed-the-monster",
+      "png": "/assets/experience/generated/feed-the-monster/basket-full.png",
+      "webp": "/assets/experience/generated/feed-the-monster/basket-full.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "delivery-idle": {
+      "id": "delivery-idle",
+      "world": "feed-the-monster",
+      "png": "/assets/experience/generated/feed-the-monster/delivery-idle.png",
+      "webp": "/assets/experience/generated/feed-the-monster/delivery-idle.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "delivery-highlight": {
+      "id": "delivery-highlight",
+      "world": "feed-the-monster",
+      "png": "/assets/experience/generated/feed-the-monster/delivery-highlight.png",
+      "webp": "/assets/experience/generated/feed-the-monster/delivery-highlight.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "shape-circle": {
+      "id": "shape-circle",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/shape-circle.png",
+      "webp": "/assets/experience/generated/building-workshop/shape-circle.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "socket-circle-empty": {
+      "id": "socket-circle-empty",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/socket-circle-empty.png",
+      "webp": "/assets/experience/generated/building-workshop/socket-circle-empty.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "socket-circle-hover": {
+      "id": "socket-circle-hover",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/socket-circle-hover.png",
+      "webp": "/assets/experience/generated/building-workshop/socket-circle-hover.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "socket-circle-locked": {
+      "id": "socket-circle-locked",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/socket-circle-locked.png",
+      "webp": "/assets/experience/generated/building-workshop/socket-circle-locked.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "shape-square": {
+      "id": "shape-square",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/shape-square.png",
+      "webp": "/assets/experience/generated/building-workshop/shape-square.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "socket-square-empty": {
+      "id": "socket-square-empty",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/socket-square-empty.png",
+      "webp": "/assets/experience/generated/building-workshop/socket-square-empty.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "socket-square-hover": {
+      "id": "socket-square-hover",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/socket-square-hover.png",
+      "webp": "/assets/experience/generated/building-workshop/socket-square-hover.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "socket-square-locked": {
+      "id": "socket-square-locked",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/socket-square-locked.png",
+      "webp": "/assets/experience/generated/building-workshop/socket-square-locked.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "shape-triangle": {
+      "id": "shape-triangle",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/shape-triangle.png",
+      "webp": "/assets/experience/generated/building-workshop/shape-triangle.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "socket-triangle-empty": {
+      "id": "socket-triangle-empty",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/socket-triangle-empty.png",
+      "webp": "/assets/experience/generated/building-workshop/socket-triangle-empty.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "socket-triangle-hover": {
+      "id": "socket-triangle-hover",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/socket-triangle-hover.png",
+      "webp": "/assets/experience/generated/building-workshop/socket-triangle-hover.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "socket-triangle-locked": {
+      "id": "socket-triangle-locked",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/socket-triangle-locked.png",
+      "webp": "/assets/experience/generated/building-workshop/socket-triangle-locked.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "shape-rectangle": {
+      "id": "shape-rectangle",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/shape-rectangle.png",
+      "webp": "/assets/experience/generated/building-workshop/shape-rectangle.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "socket-rectangle-empty": {
+      "id": "socket-rectangle-empty",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/socket-rectangle-empty.png",
+      "webp": "/assets/experience/generated/building-workshop/socket-rectangle-empty.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "socket-rectangle-hover": {
+      "id": "socket-rectangle-hover",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/socket-rectangle-hover.png",
+      "webp": "/assets/experience/generated/building-workshop/socket-rectangle-hover.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "socket-rectangle-locked": {
+      "id": "socket-rectangle-locked",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/socket-rectangle-locked.png",
+      "webp": "/assets/experience/generated/building-workshop/socket-rectangle-locked.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "shape-star": {
+      "id": "shape-star",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/shape-star.png",
+      "webp": "/assets/experience/generated/building-workshop/shape-star.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "socket-star-empty": {
+      "id": "socket-star-empty",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/socket-star-empty.png",
+      "webp": "/assets/experience/generated/building-workshop/socket-star-empty.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "socket-star-hover": {
+      "id": "socket-star-hover",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/socket-star-hover.png",
+      "webp": "/assets/experience/generated/building-workshop/socket-star-hover.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "socket-star-locked": {
+      "id": "socket-star-locked",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/socket-star-locked.png",
+      "webp": "/assets/experience/generated/building-workshop/socket-star-locked.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "shape-hexagon": {
+      "id": "shape-hexagon",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/shape-hexagon.png",
+      "webp": "/assets/experience/generated/building-workshop/shape-hexagon.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "socket-hexagon-empty": {
+      "id": "socket-hexagon-empty",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/socket-hexagon-empty.png",
+      "webp": "/assets/experience/generated/building-workshop/socket-hexagon-empty.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "socket-hexagon-hover": {
+      "id": "socket-hexagon-hover",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/socket-hexagon-hover.png",
+      "webp": "/assets/experience/generated/building-workshop/socket-hexagon-hover.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "socket-hexagon-locked": {
+      "id": "socket-hexagon-locked",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/socket-hexagon-locked.png",
+      "webp": "/assets/experience/generated/building-workshop/socket-hexagon-locked.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "shape-semicircle": {
+      "id": "shape-semicircle",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/shape-semicircle.png",
+      "webp": "/assets/experience/generated/building-workshop/shape-semicircle.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "socket-semicircle-empty": {
+      "id": "socket-semicircle-empty",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/socket-semicircle-empty.png",
+      "webp": "/assets/experience/generated/building-workshop/socket-semicircle-empty.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "socket-semicircle-hover": {
+      "id": "socket-semicircle-hover",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/socket-semicircle-hover.png",
+      "webp": "/assets/experience/generated/building-workshop/socket-semicircle-hover.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "socket-semicircle-locked": {
+      "id": "socket-semicircle-locked",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/socket-semicircle-locked.png",
+      "webp": "/assets/experience/generated/building-workshop/socket-semicircle-locked.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "shape-arch": {
+      "id": "shape-arch",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/shape-arch.png",
+      "webp": "/assets/experience/generated/building-workshop/shape-arch.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "socket-arch-empty": {
+      "id": "socket-arch-empty",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/socket-arch-empty.png",
+      "webp": "/assets/experience/generated/building-workshop/socket-arch-empty.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "socket-arch-hover": {
+      "id": "socket-arch-hover",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/socket-arch-hover.png",
+      "webp": "/assets/experience/generated/building-workshop/socket-arch-hover.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "socket-arch-locked": {
+      "id": "socket-arch-locked",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/socket-arch-locked.png",
+      "webp": "/assets/experience/generated/building-workshop/socket-arch-locked.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "house-wall": {
+      "id": "house-wall",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/house-wall.png",
+      "webp": "/assets/experience/generated/building-workshop/house-wall.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "house-roof": {
+      "id": "house-roof",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/house-roof.png",
+      "webp": "/assets/experience/generated/building-workshop/house-roof.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "house-door": {
+      "id": "house-door",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/house-door.png",
+      "webp": "/assets/experience/generated/building-workshop/house-door.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "house-window": {
+      "id": "house-window",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/house-window.png",
+      "webp": "/assets/experience/generated/building-workshop/house-window.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "house-chimney": {
+      "id": "house-chimney",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/house-chimney.png",
+      "webp": "/assets/experience/generated/building-workshop/house-chimney.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "robot-head": {
+      "id": "robot-head",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/robot-head.png",
+      "webp": "/assets/experience/generated/building-workshop/robot-head.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "robot-torso": {
+      "id": "robot-torso",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/robot-torso.png",
+      "webp": "/assets/experience/generated/building-workshop/robot-torso.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "robot-arm": {
+      "id": "robot-arm",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/robot-arm.png",
+      "webp": "/assets/experience/generated/building-workshop/robot-arm.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "robot-leg": {
+      "id": "robot-leg",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/robot-leg.png",
+      "webp": "/assets/experience/generated/building-workshop/robot-leg.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "robot-antenna": {
+      "id": "robot-antenna",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/robot-antenna.png",
+      "webp": "/assets/experience/generated/building-workshop/robot-antenna.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "vehicle-body": {
+      "id": "vehicle-body",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/vehicle-body.png",
+      "webp": "/assets/experience/generated/building-workshop/vehicle-body.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "vehicle-wheel": {
+      "id": "vehicle-wheel",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/vehicle-wheel.png",
+      "webp": "/assets/experience/generated/building-workshop/vehicle-wheel.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "vehicle-cabin": {
+      "id": "vehicle-cabin",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/vehicle-cabin.png",
+      "webp": "/assets/experience/generated/building-workshop/vehicle-cabin.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "vehicle-light": {
+      "id": "vehicle-light",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/vehicle-light.png",
+      "webp": "/assets/experience/generated/building-workshop/vehicle-light.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "workbench": {
+      "id": "workbench",
+      "world": "building-workshop",
+      "png": "/assets/experience/generated/building-workshop/workbench.png",
+      "webp": "/assets/experience/generated/building-workshop/workbench.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "brush-clean": {
+      "id": "brush-clean",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/brush-clean.png",
+      "webp": "/assets/experience/generated/magic-garden/brush-clean.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "brush-loaded-red": {
+      "id": "brush-loaded-red",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/brush-loaded-red.png",
+      "webp": "/assets/experience/generated/magic-garden/brush-loaded-red.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "paint-pot-red-full": {
+      "id": "paint-pot-red-full",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/paint-pot-red-full.png",
+      "webp": "/assets/experience/generated/magic-garden/paint-pot-red-full.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "paint-pot-red-used": {
+      "id": "paint-pot-red-used",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/paint-pot-red-used.png",
+      "webp": "/assets/experience/generated/magic-garden/paint-pot-red-used.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "balloon-red": {
+      "id": "balloon-red",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/balloon-red.png",
+      "webp": "/assets/experience/generated/magic-garden/balloon-red.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "brush-loaded-blue": {
+      "id": "brush-loaded-blue",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/brush-loaded-blue.png",
+      "webp": "/assets/experience/generated/magic-garden/brush-loaded-blue.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "paint-pot-blue-full": {
+      "id": "paint-pot-blue-full",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/paint-pot-blue-full.png",
+      "webp": "/assets/experience/generated/magic-garden/paint-pot-blue-full.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "paint-pot-blue-used": {
+      "id": "paint-pot-blue-used",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/paint-pot-blue-used.png",
+      "webp": "/assets/experience/generated/magic-garden/paint-pot-blue-used.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "balloon-blue": {
+      "id": "balloon-blue",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/balloon-blue.png",
+      "webp": "/assets/experience/generated/magic-garden/balloon-blue.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "brush-loaded-yellow": {
+      "id": "brush-loaded-yellow",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/brush-loaded-yellow.png",
+      "webp": "/assets/experience/generated/magic-garden/brush-loaded-yellow.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "paint-pot-yellow-full": {
+      "id": "paint-pot-yellow-full",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/paint-pot-yellow-full.png",
+      "webp": "/assets/experience/generated/magic-garden/paint-pot-yellow-full.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "paint-pot-yellow-used": {
+      "id": "paint-pot-yellow-used",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/paint-pot-yellow-used.png",
+      "webp": "/assets/experience/generated/magic-garden/paint-pot-yellow-used.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "balloon-yellow": {
+      "id": "balloon-yellow",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/balloon-yellow.png",
+      "webp": "/assets/experience/generated/magic-garden/balloon-yellow.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "brush-loaded-green": {
+      "id": "brush-loaded-green",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/brush-loaded-green.png",
+      "webp": "/assets/experience/generated/magic-garden/brush-loaded-green.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "paint-pot-green-full": {
+      "id": "paint-pot-green-full",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/paint-pot-green-full.png",
+      "webp": "/assets/experience/generated/magic-garden/paint-pot-green-full.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "paint-pot-green-used": {
+      "id": "paint-pot-green-used",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/paint-pot-green-used.png",
+      "webp": "/assets/experience/generated/magic-garden/paint-pot-green-used.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "balloon-green": {
+      "id": "balloon-green",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/balloon-green.png",
+      "webp": "/assets/experience/generated/magic-garden/balloon-green.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "brush-loaded-orange": {
+      "id": "brush-loaded-orange",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/brush-loaded-orange.png",
+      "webp": "/assets/experience/generated/magic-garden/brush-loaded-orange.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "paint-pot-orange-full": {
+      "id": "paint-pot-orange-full",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/paint-pot-orange-full.png",
+      "webp": "/assets/experience/generated/magic-garden/paint-pot-orange-full.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "paint-pot-orange-used": {
+      "id": "paint-pot-orange-used",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/paint-pot-orange-used.png",
+      "webp": "/assets/experience/generated/magic-garden/paint-pot-orange-used.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "balloon-orange": {
+      "id": "balloon-orange",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/balloon-orange.png",
+      "webp": "/assets/experience/generated/magic-garden/balloon-orange.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "brush-loaded-purple": {
+      "id": "brush-loaded-purple",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/brush-loaded-purple.png",
+      "webp": "/assets/experience/generated/magic-garden/brush-loaded-purple.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "paint-pot-purple-full": {
+      "id": "paint-pot-purple-full",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/paint-pot-purple-full.png",
+      "webp": "/assets/experience/generated/magic-garden/paint-pot-purple-full.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "paint-pot-purple-used": {
+      "id": "paint-pot-purple-used",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/paint-pot-purple-used.png",
+      "webp": "/assets/experience/generated/magic-garden/paint-pot-purple-used.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "balloon-purple": {
+      "id": "balloon-purple",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/balloon-purple.png",
+      "webp": "/assets/experience/generated/magic-garden/balloon-purple.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "balloon-uncoloured": {
+      "id": "balloon-uncoloured",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/balloon-uncoloured.png",
+      "webp": "/assets/experience/generated/magic-garden/balloon-uncoloured.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "flower-1-uncoloured": {
+      "id": "flower-1-uncoloured",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/flower-1-uncoloured.png",
+      "webp": "/assets/experience/generated/magic-garden/flower-1-uncoloured.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "flower-1-coloured": {
+      "id": "flower-1-coloured",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/flower-1-coloured.png",
+      "webp": "/assets/experience/generated/magic-garden/flower-1-coloured.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "flower-2-uncoloured": {
+      "id": "flower-2-uncoloured",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/flower-2-uncoloured.png",
+      "webp": "/assets/experience/generated/magic-garden/flower-2-uncoloured.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "flower-2-coloured": {
+      "id": "flower-2-coloured",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/flower-2-coloured.png",
+      "webp": "/assets/experience/generated/magic-garden/flower-2-coloured.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "flower-3-uncoloured": {
+      "id": "flower-3-uncoloured",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/flower-3-uncoloured.png",
+      "webp": "/assets/experience/generated/magic-garden/flower-3-uncoloured.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "flower-3-coloured": {
+      "id": "flower-3-coloured",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/flower-3-coloured.png",
+      "webp": "/assets/experience/generated/magic-garden/flower-3-coloured.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "flower-4-uncoloured": {
+      "id": "flower-4-uncoloured",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/flower-4-uncoloured.png",
+      "webp": "/assets/experience/generated/magic-garden/flower-4-uncoloured.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "flower-4-coloured": {
+      "id": "flower-4-coloured",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/flower-4-coloured.png",
+      "webp": "/assets/experience/generated/magic-garden/flower-4-coloured.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "flower-5-uncoloured": {
+      "id": "flower-5-uncoloured",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/flower-5-uncoloured.png",
+      "webp": "/assets/experience/generated/magic-garden/flower-5-uncoloured.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "flower-5-coloured": {
+      "id": "flower-5-coloured",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/flower-5-coloured.png",
+      "webp": "/assets/experience/generated/magic-garden/flower-5-coloured.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "sun-uncoloured": {
+      "id": "sun-uncoloured",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/sun-uncoloured.png",
+      "webp": "/assets/experience/generated/magic-garden/sun-uncoloured.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "sun-coloured": {
+      "id": "sun-coloured",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/sun-coloured.png",
+      "webp": "/assets/experience/generated/magic-garden/sun-coloured.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "sun-happy": {
+      "id": "sun-happy",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/sun-happy.png",
+      "webp": "/assets/experience/generated/magic-garden/sun-happy.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "bush-small": {
+      "id": "bush-small",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/bush-small.png",
+      "webp": "/assets/experience/generated/magic-garden/bush-small.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "bush-large": {
+      "id": "bush-large",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/bush-large.png",
+      "webp": "/assets/experience/generated/magic-garden/bush-large.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    },
+    "rainbow-arc": {
+      "id": "rainbow-arc",
+      "world": "magic-garden",
+      "png": "/assets/experience/generated/magic-garden/rainbow-arc.png",
+      "webp": "/assets/experience/generated/magic-garden/rainbow-arc.webp",
+      "width": 512,
+      "height": 512,
+      "source": "generated"
+    }
+  }
+}

@@ -1,83 +1,771 @@
 [
   {
-    "id": "letters-aleph", "gameId": "letters", "ages": [3,4,5,6], "difficulty": ["easy","medium","hard"],
-    "title": "בונים את האות א", "instruction": "אספו את שלושת חלקי האות והביאו אותם אל תבנית האות א.", "successText": "בנינו א! א כמו אריה.", "gridSize": 5,
-    "playerStart": {"x": 2, "y": 4}, "required": 3,
+    "id": "letters-aleph",
+    "gameId": "letters",
+    "ages": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "difficulty": [
+      "easy",
+      "medium",
+      "hard"
+    ],
+    "title": "בונים את האות א",
+    "instruction": "אספו את שלושת חלקי האות והביאו אותם אל תבנית האות א.",
+    "successText": "בנינו א! א כמו אריה.",
+    "gridSize": 5,
+    "playerStart": {
+      "x": 2,
+      "y": 4
+    },
+    "required": 3,
     "entities": [
-      {"id":"a1","label":"חלק של א","imageAssetId":"experienceSprites","sprite":"letter-block","kind":"collectible","x":0,"y":3},
-      {"id":"a2","label":"חלק של א","imageAssetId":"experienceSprites","sprite":"letter-block","kind":"collectible","x":4,"y":3},
-      {"id":"a3","label":"חלק של א","imageAssetId":"experienceSprites","sprite":"letter-block","kind":"collectible","x":2,"y":2},
-      {"id":"template-a","label":"תבנית האות א","fallbackGlyph":"א","kind":"target","x":2,"y":0,"accepts":"letter"}
+      {
+        "id": "a1",
+        "label": "חלק של א",
+        "kind": "collectible",
+        "x": 0,
+        "y": 3,
+        "visual": {
+          "assetId": "letter-aleph-piece-1"
+        }
+      },
+      {
+        "id": "a2",
+        "label": "חלק של א",
+        "kind": "collectible",
+        "x": 4,
+        "y": 3,
+        "visual": {
+          "assetId": "letter-aleph-piece-2"
+        }
+      },
+      {
+        "id": "a3",
+        "label": "חלק של א",
+        "kind": "collectible",
+        "x": 2,
+        "y": 2,
+        "visual": {
+          "assetId": "letter-aleph-piece-3"
+        }
+      },
+      {
+        "id": "template-a",
+        "label": "תבנית האות א",
+        "fallbackGlyph": "א",
+        "kind": "target",
+        "x": 2,
+        "y": 0,
+        "accepts": "letter",
+        "visual": {
+          "assetId": "letter-aleph-target-empty"
+        }
+      }
     ]
   },
   {
-    "id": "letters-bet", "gameId": "letters", "ages": [4,5,6], "difficulty": ["medium","hard"],
-    "title": "בונים את האות ב", "instruction": "מצאו חמישה חלקים והרכיבו מהם את האות ב.", "successText": "בנינו ב! ב כמו בית.", "gridSize": 6,
-    "playerStart": {"x":3,"y":5}, "required":5,
+    "id": "letters-bet",
+    "gameId": "letters",
+    "ages": [
+      4,
+      5,
+      6
+    ],
+    "difficulty": [
+      "medium",
+      "hard"
+    ],
+    "title": "בונים את האות ב",
+    "instruction": "מצאו חמישה חלקים והרכיבו מהם את האות ב.",
+    "successText": "בנינו ב! ב כמו בית.",
+    "gridSize": 6,
+    "playerStart": {
+      "x": 3,
+      "y": 5
+    },
+    "required": 5,
     "entities": [
-      {"id":"b1","label":"חלק של ב","imageAssetId":"experienceSprites","sprite":"letter-block","kind":"collectible","x":0,"y":4},{"id":"b2","label":"חלק של ב","imageAssetId":"experienceSprites","sprite":"letter-block","kind":"collectible","x":5,"y":4},
-      {"id":"b3","label":"חלק של ב","imageAssetId":"experienceSprites","sprite":"letter-block","kind":"collectible","x":1,"y":1},{"id":"b4","label":"חלק של ב","imageAssetId":"experienceSprites","sprite":"letter-block","kind":"collectible","x":4,"y":2},{"id":"b5","label":"חלק של ב","imageAssetId":"experienceSprites","sprite":"letter-block","kind":"collectible","x":3,"y":3},
-      {"id":"template-b","label":"תבנית האות ב","fallbackGlyph":"ב","kind":"target","x":3,"y":0,"accepts":"letter"}
+      {
+        "id": "b1",
+        "label": "חלק של ב",
+        "kind": "collectible",
+        "x": 0,
+        "y": 4,
+        "visual": {
+          "assetId": "letter-bet-piece-1"
+        }
+      },
+      {
+        "id": "b2",
+        "label": "חלק של ב",
+        "kind": "collectible",
+        "x": 5,
+        "y": 4,
+        "visual": {
+          "assetId": "letter-bet-piece-2"
+        }
+      },
+      {
+        "id": "b3",
+        "label": "חלק של ב",
+        "kind": "collectible",
+        "x": 1,
+        "y": 1,
+        "visual": {
+          "assetId": "letter-bet-piece-3"
+        }
+      },
+      {
+        "id": "b4",
+        "label": "חלק של ב",
+        "kind": "collectible",
+        "x": 4,
+        "y": 2,
+        "visual": {
+          "assetId": "letter-bet-piece-1"
+        }
+      },
+      {
+        "id": "b5",
+        "label": "חלק של ב",
+        "kind": "collectible",
+        "x": 3,
+        "y": 3,
+        "visual": {
+          "assetId": "letter-bet-piece-2"
+        }
+      },
+      {
+        "id": "template-b",
+        "label": "תבנית האות ב",
+        "fallbackGlyph": "ב",
+        "kind": "target",
+        "x": 3,
+        "y": 0,
+        "accepts": "letter",
+        "visual": {
+          "assetId": "letter-bet-target-empty"
+        }
+      }
     ]
   },
   {
-    "id": "numbers-three", "gameId": "numbers", "ages": [3,4,5,6], "difficulty": ["easy","medium","hard"],
-    "title": "המפלצת רעבה ל־3 תפוחים", "instruction": "אספו תפוח אחד בכל פעם והביאו אותו למפלצת. נספור יחד עד שלוש.", "successText": "אחת, שתיים, שלוש! המפלצת שבעה.", "gridSize": 5,
-    "playerStart":{"x":2,"y":4},"required":3,
-    "entities":[
-      {"id":"n3-1","label":"תפוח","imageAssetId":"appleExperience","kind":"collectible","x":0,"y":3},{"id":"n3-2","label":"תפוח","imageAssetId":"appleExperience","kind":"collectible","x":4,"y":3},
-      {"id":"n3-3","label":"תפוח","imageAssetId":"appleExperience","kind":"collectible","x":2,"y":2},{"id":"monster3","label":"מפלצת שאוכלת שלושה","imageAssetId":"experienceSprites","sprite":"monster","kind":"target","x":2,"y":0,"accepts":"food"}
+    "id": "numbers-three",
+    "gameId": "numbers",
+    "ages": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "difficulty": [
+      "easy",
+      "medium",
+      "hard"
+    ],
+    "title": "המפלצת רעבה ל־3 תפוחים",
+    "instruction": "אספו תפוח אחד בכל פעם והביאו אותו למפלצת. נספור יחד עד שלוש.",
+    "successText": "אחת, שתיים, שלוש! המפלצת שבעה.",
+    "gridSize": 5,
+    "playerStart": {
+      "x": 2,
+      "y": 4
+    },
+    "required": 3,
+    "entities": [
+      {
+        "id": "n3-1",
+        "label": "תפוח",
+        "kind": "collectible",
+        "x": 0,
+        "y": 3,
+        "visual": {
+          "assetId": "food-apple"
+        }
+      },
+      {
+        "id": "n3-2",
+        "label": "תפוח",
+        "kind": "collectible",
+        "x": 4,
+        "y": 3,
+        "visual": {
+          "assetId": "food-apple"
+        }
+      },
+      {
+        "id": "n3-3",
+        "label": "תפוח",
+        "kind": "collectible",
+        "x": 2,
+        "y": 2,
+        "visual": {
+          "assetId": "food-apple"
+        }
+      },
+      {
+        "id": "monster3",
+        "label": "מפלצת שאוכלת שלושה",
+        "kind": "target",
+        "x": 2,
+        "y": 0,
+        "accepts": "food",
+        "visual": {
+          "assetId": "monster-idle-1"
+        }
+      }
     ]
   },
   {
-    "id": "numbers-five", "gameId": "numbers", "ages": [4,5,6], "difficulty": ["medium","hard"],
-    "title": "המפלצת רעבה ל־5 תותים", "instruction": "אספו חמישה תותים והאכילו את המפלצת.", "successText": "ספרנו עד חמש! איזו ארוחה נהדרת.", "gridSize": 6,
-    "playerStart":{"x":3,"y":5},"required":5,
-    "entities":[
-      {"id":"n5-1","label":"תות","imageAssetId":"strawberry","kind":"collectible","x":0,"y":4},{"id":"n5-2","label":"תות","imageAssetId":"strawberry","kind":"collectible","x":5,"y":4},
-      {"id":"n5-3","label":"תות","imageAssetId":"strawberry","kind":"collectible","x":0,"y":1},{"id":"n5-4","label":"תות","imageAssetId":"strawberry","kind":"collectible","x":5,"y":1},
-      {"id":"n5-5","label":"תות","imageAssetId":"strawberry","kind":"collectible","x":3,"y":2},{"id":"monster5","label":"מפלצת שאוכלת חמישה","imageAssetId":"experienceSprites","sprite":"monster","kind":"target","x":3,"y":0,"accepts":"food"}
+    "id": "numbers-five",
+    "gameId": "numbers",
+    "ages": [
+      4,
+      5,
+      6
+    ],
+    "difficulty": [
+      "medium",
+      "hard"
+    ],
+    "title": "המפלצת רעבה ל־5 תותים",
+    "instruction": "אספו חמישה תותים והאכילו את המפלצת.",
+    "successText": "ספרנו עד חמש! איזו ארוחה נהדרת.",
+    "gridSize": 6,
+    "playerStart": {
+      "x": 3,
+      "y": 5
+    },
+    "required": 5,
+    "entities": [
+      {
+        "id": "n5-1",
+        "label": "תות",
+        "kind": "collectible",
+        "x": 0,
+        "y": 4,
+        "visual": {
+          "assetId": "food-strawberry"
+        }
+      },
+      {
+        "id": "n5-2",
+        "label": "תות",
+        "kind": "collectible",
+        "x": 5,
+        "y": 4,
+        "visual": {
+          "assetId": "food-strawberry"
+        }
+      },
+      {
+        "id": "n5-3",
+        "label": "תות",
+        "kind": "collectible",
+        "x": 0,
+        "y": 1,
+        "visual": {
+          "assetId": "food-strawberry"
+        }
+      },
+      {
+        "id": "n5-4",
+        "label": "תות",
+        "kind": "collectible",
+        "x": 5,
+        "y": 1,
+        "visual": {
+          "assetId": "food-strawberry"
+        }
+      },
+      {
+        "id": "n5-5",
+        "label": "תות",
+        "kind": "collectible",
+        "x": 3,
+        "y": 2,
+        "visual": {
+          "assetId": "food-strawberry"
+        }
+      },
+      {
+        "id": "monster5",
+        "label": "מפלצת שאוכלת חמישה",
+        "kind": "target",
+        "x": 3,
+        "y": 0,
+        "accepts": "food",
+        "visual": {
+          "assetId": "monster-idle-1"
+        }
+      }
     ]
   },
   {
-    "id":"shapes-house","gameId":"shapes","ages":[3,4,5,6],"difficulty":["easy","medium","hard"],
-    "title":"בונים בית מצורות","instruction":"הרימו צורה והניחו אותה במקום שנושא את אותו הסמל.","successText":"הבית מוכן: ריבוע, משולש ועיגול!","gridSize":5,
-    "playerStart":{"x":2,"y":4},"required":3,
-    "entities":[
-      {"id":"square","label":"ריבוע","imageAssetId":"experienceSprites","sprite":"square","kind":"collectible","x":0,"y":4,"accepts":"square"},{"id":"triangle","label":"משולש","imageAssetId":"experienceSprites","sprite":"triangle","kind":"collectible","x":2,"y":3,"accepts":"triangle"},
-      {"id":"circle","label":"עיגול","imageAssetId":"experienceSprites","sprite":"circle","kind":"collectible","x":4,"y":4,"accepts":"circle"},
-      {"id":"slot-square","label":"מקום לריבוע","fallbackGlyph":"□","kind":"target","x":1,"y":0,"accepts":"square"},{"id":"slot-triangle","label":"מקום למשולש","fallbackGlyph":"△","kind":"target","x":2,"y":0,"accepts":"triangle"},{"id":"slot-circle","label":"מקום לעיגול","fallbackGlyph":"○","kind":"target","x":3,"y":0,"accepts":"circle"}
+    "id": "shapes-house",
+    "gameId": "shapes",
+    "ages": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "difficulty": [
+      "easy",
+      "medium",
+      "hard"
+    ],
+    "title": "בונים בית מצורות",
+    "instruction": "הרימו צורה והניחו אותה במקום שנושא את אותו הסמל.",
+    "successText": "הבית מוכן: ריבוע, משולש ועיגול!",
+    "gridSize": 5,
+    "playerStart": {
+      "x": 2,
+      "y": 4
+    },
+    "required": 3,
+    "entities": [
+      {
+        "id": "square",
+        "label": "ריבוע",
+        "kind": "collectible",
+        "x": 0,
+        "y": 4,
+        "accepts": "square",
+        "visual": {
+          "assetId": "shape-square"
+        }
+      },
+      {
+        "id": "triangle",
+        "label": "משולש",
+        "kind": "collectible",
+        "x": 2,
+        "y": 3,
+        "accepts": "triangle",
+        "visual": {
+          "assetId": "shape-triangle"
+        }
+      },
+      {
+        "id": "circle",
+        "label": "עיגול",
+        "kind": "collectible",
+        "x": 4,
+        "y": 4,
+        "accepts": "circle",
+        "visual": {
+          "assetId": "shape-circle"
+        }
+      },
+      {
+        "id": "slot-square",
+        "label": "מקום לריבוע",
+        "fallbackGlyph": "□",
+        "kind": "target",
+        "x": 1,
+        "y": 0,
+        "accepts": "square",
+        "visual": {
+          "assetId": "socket-square-empty"
+        }
+      },
+      {
+        "id": "slot-triangle",
+        "label": "מקום למשולש",
+        "fallbackGlyph": "△",
+        "kind": "target",
+        "x": 2,
+        "y": 0,
+        "accepts": "triangle",
+        "visual": {
+          "assetId": "socket-triangle-empty"
+        }
+      },
+      {
+        "id": "slot-circle",
+        "label": "מקום לעיגול",
+        "fallbackGlyph": "○",
+        "kind": "target",
+        "x": 3,
+        "y": 0,
+        "accepts": "circle",
+        "visual": {
+          "assetId": "socket-circle-empty"
+        }
+      }
     ]
   },
   {
-    "id":"shapes-robot","gameId":"shapes","ages":[5,6],"difficulty":["hard"],
-    "title":"בונים רובוט מצורות","instruction":"התאימו חמש צורות לחלקי הרובוט.","successText":"הרובוט שלנו קם לחיים!","gridSize":6,
-    "playerStart":{"x":3,"y":5},"required":5,
-    "entities":[
-      {"id":"r-square","label":"ריבוע","imageAssetId":"experienceSprites","sprite":"square","kind":"collectible","x":0,"y":5,"accepts":"square"},{"id":"r-circle","label":"עיגול","imageAssetId":"experienceSprites","sprite":"circle","kind":"collectible","x":5,"y":5,"accepts":"circle"},
-      {"id":"r-triangle","label":"משולש","imageAssetId":"experienceSprites","sprite":"triangle","kind":"collectible","x":0,"y":2,"accepts":"triangle"},{"id":"r-star","label":"כוכב","imageAssetId":"experienceSprites","sprite":"star","kind":"collectible","x":5,"y":2,"accepts":"star"},{"id":"r-square-2","label":"ריבוע נוסף","imageAssetId":"experienceSprites","sprite":"square","kind":"collectible","x":3,"y":3,"accepts":"square"},
-      {"id":"rs-square","label":"מקום לריבוע","fallbackGlyph":"□","kind":"target","x":1,"y":0,"accepts":"square"},{"id":"rs-circle","label":"מקום לעיגול","fallbackGlyph":"○","kind":"target","x":2,"y":0,"accepts":"circle"},
-      {"id":"rs-triangle","label":"מקום למשולש","fallbackGlyph":"△","kind":"target","x":3,"y":0,"accepts":"triangle"},{"id":"rs-star","label":"מקום לכוכב","fallbackGlyph":"☆","kind":"target","x":4,"y":0,"accepts":"star"},{"id":"rs-square-2","label":"מקום לריבוע נוסף","fallbackGlyph":"□","kind":"target","x":5,"y":0,"accepts":"square"}
+    "id": "shapes-robot",
+    "gameId": "shapes",
+    "ages": [
+      5,
+      6
+    ],
+      "difficulty": [
+        "medium",
+        "hard"
+      ],
+    "title": "בונים רובוט מצורות",
+    "instruction": "התאימו חמש צורות לחלקי הרובוט.",
+    "successText": "הרובוט שלנו קם לחיים!",
+    "gridSize": 6,
+    "playerStart": {
+      "x": 3,
+      "y": 5
+    },
+    "required": 5,
+    "entities": [
+      {
+        "id": "r-square",
+        "label": "ריבוע",
+        "kind": "collectible",
+        "x": 0,
+        "y": 5,
+        "accepts": "square",
+        "visual": {
+          "assetId": "shape-square"
+        }
+      },
+      {
+        "id": "r-circle",
+        "label": "עיגול",
+        "kind": "collectible",
+        "x": 5,
+        "y": 5,
+        "accepts": "circle",
+        "visual": {
+          "assetId": "shape-circle"
+        }
+      },
+      {
+        "id": "r-triangle",
+        "label": "משולש",
+        "kind": "collectible",
+        "x": 0,
+        "y": 2,
+        "accepts": "triangle",
+        "visual": {
+          "assetId": "shape-triangle"
+        }
+      },
+      {
+        "id": "r-star",
+        "label": "כוכב",
+        "kind": "collectible",
+        "x": 5,
+        "y": 2,
+        "accepts": "star",
+        "visual": {
+          "assetId": "shape-star"
+        }
+      },
+      {
+        "id": "r-square-2",
+        "label": "ריבוע נוסף",
+        "kind": "collectible",
+        "x": 3,
+        "y": 3,
+        "accepts": "square",
+        "visual": {
+          "assetId": "shape-square"
+        }
+      },
+      {
+        "id": "rs-square",
+        "label": "מקום לריבוע",
+        "fallbackGlyph": "□",
+        "kind": "target",
+        "x": 1,
+        "y": 0,
+        "accepts": "square",
+        "visual": {
+          "assetId": "socket-square-empty"
+        }
+      },
+      {
+        "id": "rs-circle",
+        "label": "מקום לעיגול",
+        "fallbackGlyph": "○",
+        "kind": "target",
+        "x": 2,
+        "y": 0,
+        "accepts": "circle",
+        "visual": {
+          "assetId": "socket-circle-empty"
+        }
+      },
+      {
+        "id": "rs-triangle",
+        "label": "מקום למשולש",
+        "fallbackGlyph": "△",
+        "kind": "target",
+        "x": 3,
+        "y": 0,
+        "accepts": "triangle",
+        "visual": {
+          "assetId": "socket-triangle-empty"
+        }
+      },
+      {
+        "id": "rs-star",
+        "label": "מקום לכוכב",
+        "fallbackGlyph": "☆",
+        "kind": "target",
+        "x": 4,
+        "y": 0,
+        "accepts": "star",
+        "visual": {
+          "assetId": "socket-star-empty"
+        }
+      },
+      {
+        "id": "rs-square-2",
+        "label": "מקום לריבוע נוסף",
+        "fallbackGlyph": "□",
+        "kind": "target",
+        "x": 5,
+        "y": 0,
+        "accepts": "square",
+        "visual": {
+          "assetId": "socket-square-empty"
+        }
+      }
     ]
   },
   {
-    "id":"colors-garden","gameId":"colors","ages":[3,4,5,6],"difficulty":["easy","medium","hard"],
-    "title":"צובעים את הגינה הקסומה","instruction":"טענו את המכחול בכד הנכון וצבעו כל פרח לפי הסמל שלו.","successText":"הגינה פורחת באדום, כחול וצהוב!","gridSize":5,
-    "playerStart":{"x":2,"y":4},"required":3,
-    "entities":[
-      {"id":"red","label":"צבע אדום","imageAssetId":"experienceSprites","sprite":"paint-red","kind":"station","x":0,"y":4,"color":"#ef5350"},{"id":"blue","label":"צבע כחול","imageAssetId":"experienceSprites","sprite":"paint-blue","kind":"station","x":2,"y":4,"color":"#42a5f5"},{"id":"yellow","label":"צבע צהוב","imageAssetId":"experienceSprites","sprite":"paint-yellow","kind":"station","x":4,"y":4,"color":"#fdd835"},
-      {"id":"flower-red","label":"פרח לאדום","imageAssetId":"experienceSprites","sprite":"flower","kind":"target","x":0,"y":0,"accepts":"red"},{"id":"flower-blue","label":"פרח לכחול","imageAssetId":"experienceSprites","sprite":"flower","kind":"target","x":2,"y":0,"accepts":"blue"},{"id":"flower-yellow","label":"פרח לצהוב","imageAssetId":"experienceSprites","sprite":"flower","kind":"target","x":4,"y":0,"accepts":"yellow"}
+    "id": "colors-garden",
+    "gameId": "colors",
+    "ages": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "difficulty": [
+      "easy",
+      "medium",
+      "hard"
+    ],
+    "title": "צובעים את הגינה הקסומה",
+    "instruction": "טענו את המכחול בכד הנכון וצבעו כל פרח לפי הסמל שלו.",
+    "successText": "הגינה פורחת באדום, כחול וצהוב!",
+    "gridSize": 5,
+    "playerStart": {
+      "x": 2,
+      "y": 4
+    },
+    "required": 3,
+    "entities": [
+      {
+        "id": "red",
+        "label": "צבע אדום",
+        "kind": "station",
+        "x": 0,
+        "y": 4,
+        "color": "#ef5350",
+        "visual": {
+          "assetId": "paint-pot-red-full",
+          "heldAssetId": "brush-loaded-red"
+        }
+      },
+      {
+        "id": "blue",
+        "label": "צבע כחול",
+        "kind": "station",
+        "x": 2,
+        "y": 4,
+        "color": "#42a5f5",
+        "visual": {
+          "assetId": "paint-pot-blue-full",
+          "heldAssetId": "brush-loaded-blue"
+        }
+      },
+      {
+        "id": "yellow",
+        "label": "צבע צהוב",
+        "kind": "station",
+        "x": 4,
+        "y": 4,
+        "color": "#fdd835",
+        "visual": {
+          "assetId": "paint-pot-yellow-full",
+          "heldAssetId": "brush-loaded-yellow"
+        }
+      },
+      {
+        "id": "flower-red",
+        "label": "פרח לאדום",
+        "kind": "target",
+        "x": 0,
+        "y": 0,
+        "accepts": "red",
+        "visual": {
+          "assetId": "flower-1-uncoloured",
+          "state": "red"
+        }
+      },
+      {
+        "id": "flower-blue",
+        "label": "פרח לכחול",
+        "kind": "target",
+        "x": 2,
+        "y": 0,
+        "accepts": "blue",
+        "visual": {
+          "assetId": "flower-2-uncoloured",
+          "state": "blue"
+        }
+      },
+      {
+        "id": "flower-yellow",
+        "label": "פרח לצהוב",
+        "kind": "target",
+        "x": 4,
+        "y": 0,
+        "accepts": "yellow",
+        "visual": {
+          "assetId": "flower-3-uncoloured",
+          "state": "yellow"
+        }
+      }
     ]
   },
   {
-    "id":"colors-balloons","gameId":"colors","ages":[4,5,6],"difficulty":["medium","hard"],
-    "title":"צובעים את מסיבת הבלונים","instruction":"בחרו צבע וצבעו חמישה בלונים לפי סימני הצבע.","successText":"המסיבה מלאה בצבעים!","gridSize":6,
-    "playerStart":{"x":3,"y":5},"required":5,
-    "entities":[
-      {"id":"red","label":"צבע אדום","imageAssetId":"experienceSprites","sprite":"paint-red","kind":"station","x":0,"y":5,"color":"#ef5350"},{"id":"blue","label":"צבע כחול","imageAssetId":"experienceSprites","sprite":"paint-blue","kind":"station","x":2,"y":5,"color":"#42a5f5"},
-      {"id":"yellow","label":"צבע צהוב","imageAssetId":"experienceSprites","sprite":"paint-yellow","kind":"station","x":4,"y":5,"color":"#fdd835"},{"id":"green","label":"צבע ירוק","imageAssetId":"experienceSprites","sprite":"paint-green","kind":"station","x":5,"y":5,"color":"#66bb6a"},
-      {"id":"balloon-red","label":"בלון אדום","imageAssetId":"experienceSprites","sprite":"balloon","kind":"target","x":0,"y":0,"accepts":"red"},{"id":"balloon-blue","label":"בלון כחול","imageAssetId":"experienceSprites","sprite":"balloon","kind":"target","x":2,"y":0,"accepts":"blue"},
-      {"id":"balloon-yellow","label":"בלון צהוב","imageAssetId":"experienceSprites","sprite":"balloon","kind":"target","x":4,"y":0,"accepts":"yellow"},{"id":"balloon-green","label":"בלון ירוק","imageAssetId":"experienceSprites","sprite":"balloon","kind":"target","x":5,"y":0,"accepts":"green"},{"id":"balloon-green-2","label":"בלון ירוק נוסף","imageAssetId":"experienceSprites","sprite":"balloon","kind":"target","x":3,"y":1,"accepts":"green"}
+    "id": "colors-balloons",
+    "gameId": "colors",
+    "ages": [
+      4,
+      5,
+      6
+    ],
+    "difficulty": [
+      "medium",
+      "hard"
+    ],
+    "title": "צובעים את מסיבת הבלונים",
+    "instruction": "בחרו צבע וצבעו חמישה בלונים לפי סימני הצבע.",
+    "successText": "המסיבה מלאה בצבעים!",
+    "gridSize": 6,
+    "playerStart": {
+      "x": 3,
+      "y": 5
+    },
+    "required": 5,
+    "entities": [
+      {
+        "id": "red",
+        "label": "צבע אדום",
+        "kind": "station",
+        "x": 0,
+        "y": 5,
+        "color": "#ef5350",
+        "visual": {
+          "assetId": "paint-pot-red-full",
+          "heldAssetId": "brush-loaded-red"
+        }
+      },
+      {
+        "id": "blue",
+        "label": "צבע כחול",
+        "kind": "station",
+        "x": 2,
+        "y": 5,
+        "color": "#42a5f5",
+        "visual": {
+          "assetId": "paint-pot-blue-full",
+          "heldAssetId": "brush-loaded-blue"
+        }
+      },
+      {
+        "id": "yellow",
+        "label": "צבע צהוב",
+        "kind": "station",
+        "x": 4,
+        "y": 5,
+        "color": "#fdd835",
+        "visual": {
+          "assetId": "paint-pot-yellow-full",
+          "heldAssetId": "brush-loaded-yellow"
+        }
+      },
+      {
+        "id": "green",
+        "label": "צבע ירוק",
+        "kind": "station",
+        "x": 5,
+        "y": 5,
+        "color": "#66bb6a",
+        "visual": {
+          "assetId": "paint-pot-green-full",
+          "heldAssetId": "brush-loaded-green"
+        }
+      },
+      {
+        "id": "balloon-red",
+        "label": "בלון אדום",
+        "kind": "target",
+        "x": 0,
+        "y": 0,
+        "accepts": "red",
+        "visual": {
+          "assetId": "balloon-uncoloured",
+          "state": "red"
+        }
+      },
+      {
+        "id": "balloon-blue",
+        "label": "בלון כחול",
+        "kind": "target",
+        "x": 2,
+        "y": 0,
+        "accepts": "blue",
+        "visual": {
+          "assetId": "balloon-uncoloured",
+          "state": "blue"
+        }
+      },
+      {
+        "id": "balloon-yellow",
+        "label": "בלון צהוב",
+        "kind": "target",
+        "x": 4,
+        "y": 0,
+        "accepts": "yellow",
+        "visual": {
+          "assetId": "balloon-uncoloured",
+          "state": "yellow"
+        }
+      },
+      {
+        "id": "balloon-green",
+        "label": "בלון ירוק",
+        "kind": "target",
+        "x": 5,
+        "y": 0,
+        "accepts": "green",
+        "visual": {
+          "assetId": "balloon-uncoloured",
+          "state": "green"
+        }
+      },
+      {
+        "id": "balloon-green-2",
+        "label": "בלון ירוק נוסף",
+        "kind": "target",
+        "x": 3,
+        "y": 1,
+        "accepts": "green",
+        "visual": {
+          "assetId": "balloon-uncoloured",
+          "state": "green"
+        }
+      }
     ]
   }
 ]

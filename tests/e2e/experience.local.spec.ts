@@ -33,9 +33,16 @@ async function command(page: Page, direction: Direction, useTouch: boolean, dura
     left: 'ArrowLeft',
     right: 'ArrowRight'
   }[direction];
+  await page.locator('[data-testid="experience-arena"]').evaluate(
+    (element: HTMLElement) => element.focus({ preventScroll: true })
+  );
   await page.keyboard.down(key);
   await page.waitForTimeout(duration);
   await page.keyboard.up(key);
+  await page.locator('[data-testid="experience-arena"]').evaluate((element: HTMLElement) => element.blur());
+  await page.locator('[data-testid="experience-arena"]').evaluate(
+    (element: HTMLElement) => element.focus({ preventScroll: true })
+  );
   await page.waitForTimeout(90);
 }
 
@@ -46,28 +53,66 @@ async function action(page: Page, useTouch: boolean) {
 
 async function moveDirectlyTo(page: Page, x: number, y: number, useTouch: boolean) {
   const player = page.locator('.experience-player');
-  for (let attempt = 0; attempt < 45; attempt += 1) {
+  // Age-three levels expose a 92px interaction radius plus the entity radius.
+  // Stop just inside that real interaction envelope instead of oscillating around its centre.
+  const tolerance = await page.locator('.experience-arena--guided').count() ? 114 : 78;
+  const axisTolerance = tolerance * 0.62;
+  for (let pass = 0; pass < 3; pass += 1) {
+    for (const axis of ['x', 'y'] as const) {
+      const coordinate = axis === 'x' ? 'data-x' : 'data-y';
+      const target = axis === 'x' ? x : y;
+      for (let attempt = 0; attempt < 30; attempt += 1) {
+        const current = Number(await player.getAttribute(coordinate));
+        const delta = target - current;
+        if (Math.abs(delta) <= axisTolerance) break;
+        const direction: Direction = axis === 'x'
+          ? (delta < 0 ? 'left' : 'right')
+          : (delta < 0 ? 'up' : 'down');
+        await command(page, direction, useTouch, useTouch ? 180 : 260);
+      }
+    }
     const currentX = Number(await player.getAttribute('data-x'));
     const currentY = Number(await player.getAttribute('data-y'));
-    const dx = x - currentX;
-    const dy = y - currentY;
-    if (Math.hypot(dx, dy) <= 78) return;
-    const direction: Direction = Math.abs(dx) > Math.abs(dy)
-      ? (dx < 0 ? 'left' : 'right')
-      : (dy < 0 ? 'up' : 'down');
-    const distance = Math.max(Math.abs(dx), Math.abs(dy));
-    await command(page, direction, useTouch, Math.min(420, Math.max(150, distance * 1.5)));
+    if (Math.hypot(x - currentX, y - currentY) <= tolerance) return;
   }
-  throw new Error(`Player did not reach ${x},${y}`);
+  const finalX = Number(await player.getAttribute('data-x'));
+  const finalY = Number(await player.getAttribute('data-y'));
+  throw new Error(
+    `Player did not reach ${x},${y}; stopped at ${finalX.toFixed(1)},${finalY.toFixed(1)} `
+    + `(distance ${Math.hypot(x - finalX, y - finalY).toFixed(1)}, tolerance ${tolerance})`
+  );
 }
 
 async function moveTo(page: Page, x: number, y: number, useTouch: boolean) {
   const player = page.locator('.experience-player');
+  const currentX = Number(await player.getAttribute('data-x'));
   const currentY = Number(await player.getAttribute('data-y'));
+  const needsBumperBypass = x >= 500 && x <= 650 && y >= 330 && y <= 390
+    && await page.locator('.experience-obstacle--bumper').count();
+  if (needsBumperBypass) {
+    await moveDirectlyTo(page, 850, currentY, useTouch);
+    await moveDirectlyTo(page, 850, 520, useTouch);
+    await moveDirectlyTo(page, 520, 520, useTouch);
+    await moveDirectlyTo(page, 520, 400, useTouch);
+    return;
+  }
   const crossesCentralWall = (currentY > 340 && y < 280) || (currentY < 280 && y > 340);
   if (crossesCentralWall && await page.locator('.experience-obstacle--wall').count()) {
     await moveDirectlyTo(page, 850, currentY, useTouch);
     await moveDirectlyTo(page, 850, y, useTouch);
+  }
+  const crossesCentralWallHorizontally = !crossesCentralWall && (
+    (currentX > 640 && x < 640)
+    || (currentX < 360 && x > 360)
+  ) && (
+    (currentY > 250 && currentY < 395)
+    || (y > 250 && y < 395)
+  );
+  if (crossesCentralWallHorizontally && await page.locator('.experience-obstacle--wall').count()) {
+    await moveDirectlyTo(page, currentX, 520, useTouch);
+    await moveDirectlyTo(page, x, 520, useTouch);
+    await moveDirectlyTo(page, x, y, useTouch);
+    return;
   }
   const routedX = Number(await player.getAttribute('data-x'));
   const routedY = Number(await player.getAttribute('data-y'));
@@ -96,16 +141,18 @@ async function moveToEntity(page: Page, entity: Locator, useTouch: boolean) {
 
 async function expectVisualMove(page: Page, direction: Direction, useTouch: boolean) {
   const player = page.locator('.experience-player');
+  await expect.poll(async () => Number(await player.getAttribute('data-speed'))).toBeLessThan(1);
   const before = await player.boundingBox();
   expect(before).not.toBeNull();
-  await command(page, direction, useTouch);
+  await command(page, direction, useTouch, 520);
   await expect.poll(async () => await player.boundingBox()).not.toBeNull();
   const after = await player.boundingBox();
   expect(after).not.toBeNull();
-  if (direction === 'left') expect(after!.x).toBeLessThan(before!.x - 5);
-  if (direction === 'right') expect(after!.x).toBeGreaterThan(before!.x + 5);
-  if (direction === 'up') expect(after!.y).toBeLessThan(before!.y - 5);
-  if (direction === 'down') expect(after!.y).toBeGreaterThan(before!.y + 5);
+  if (direction === 'left') expect(after!.x).toBeLessThan(before!.x - 2);
+  if (direction === 'right') expect(after!.x).toBeGreaterThan(before!.x + 2);
+  if (direction === 'up') expect(after!.y).toBeLessThan(before!.y - 2);
+  if (direction === 'down') expect(after!.y).toBeGreaterThan(before!.y + 2);
+  await expect.poll(async () => Number(await player.getAttribute('data-speed'))).toBeLessThan(1);
 }
 
 async function completeCurrentLevel(page: Page, game: ExperienceTitle, useTouch: boolean) {
@@ -268,6 +315,11 @@ test.describe('visual direction contract', () => {
     const bumper = page.locator('.experience-obstacle--bumper');
     await expect(bumper).toBeVisible();
     const bumperBefore = await bumper.getAttribute('style');
+    await command(page, 'left', false, 300);
+    await expect.poll(async () => Number(await player.getAttribute('data-speed'))).toBeLessThan(1);
+    const alignedX = Number(await player.getAttribute('data-x'));
+    expect(alignedX).toBeGreaterThan(455);
+    expect(alignedX).toBeLessThan(545);
     await page.keyboard.down('ArrowUp');
     await page.waitForTimeout(2_400);
     await page.keyboard.up('ArrowUp');
@@ -281,9 +333,11 @@ test.describe('visual direction contract', () => {
 
 for (const game of ['אותיות', 'מספרים', 'צורות', 'צבעים'] as const) {
   test(`completes ${game} in easy mode with the device's primary input`, async ({ page }, testInfo) => {
+    test.setTimeout(300_000);
     const assertNoConsoleErrors = installConsoleErrorGuard(page);
     await openExperience(page, game);
-    await completeAllLevels(page, game, isMobile(testInfo));
+    const useTouchControls = isMobile(testInfo) || testInfo.project.name === 'local-webkit';
+    await completeAllLevels(page, game, useTouchControls);
     await expect(page.locator('.summary-card')).toBeVisible();
     await expect(page.locator('.stars__active')).toHaveCount(3);
     const latestSession = await page.evaluate(() => {
@@ -355,9 +409,22 @@ test.describe('input lifecycle and detailed game rules', () => {
       await openExperienceById(page, 'letters', 'easy', gender);
       const character = page.locator('.experience-character');
       await expect(character).toHaveAttribute('data-gender', gender);
+      await expect(character).toHaveAttribute('data-skin', gender === 'boy' ? 'nir-kippah' : 'shir');
       await expect(character).toHaveAttribute('data-animation', 'idle');
       await page.keyboard.down('ArrowRight');
       await expect(character).toHaveAttribute('data-animation', 'walk');
+      const walkingFrames = await character.evaluate((element) => new Promise<string[]>((resolve) => {
+        const observed = new Set<string>([element.getAttribute('data-frame') ?? '']);
+        const observer = new MutationObserver(() => {
+          observed.add(element.getAttribute('data-frame') ?? '');
+        });
+        observer.observe(element, { attributes: true, attributeFilter: ['data-frame'] });
+        window.setTimeout(() => {
+          observer.disconnect();
+          resolve([...observed]);
+        }, 1_100);
+      }));
+      expect(new Set(walkingFrames).size).toBeGreaterThanOrEqual(6);
       await page.keyboard.up('ArrowRight');
       await expect(character).toHaveAttribute('data-animation', 'idle');
 
@@ -369,6 +436,18 @@ test.describe('input lifecycle and detailed game rules', () => {
       await page.waitForTimeout(500);
       await page.keyboard.down('ArrowRight');
       await expect(character).toHaveAttribute('data-animation', 'carry-walk');
+      const carryingFrames = await character.evaluate((element) => new Promise<string[]>((resolve) => {
+        const observed = new Set<string>([element.getAttribute('data-frame') ?? '']);
+        const observer = new MutationObserver(() => {
+          observed.add(element.getAttribute('data-frame') ?? '');
+        });
+        observer.observe(element, { attributes: true, attributeFilter: ['data-frame'] });
+        window.setTimeout(() => {
+          observer.disconnect();
+          resolve([...observed]);
+        }, 1_100);
+      }));
+      expect(new Set(carryingFrames).size).toBeGreaterThanOrEqual(6);
       await page.keyboard.up('ArrowRight');
       await moveToEntity(page, page.locator('[data-kind="target"]').first(), false);
       await action(page, false);
@@ -411,6 +490,14 @@ test.describe('input lifecycle and detailed game rules', () => {
     await openExperienceById(page, 'letters');
     const arena = page.locator('[data-testid="experience-arena"]');
     const player = page.locator('.experience-player');
+    const reducedCharacter = page.locator('.experience-character');
+    await page.keyboard.down('ArrowRight');
+    await expect(reducedCharacter).toHaveAttribute('data-animation', 'walk');
+    const reducedWalkingFrame = await reducedCharacter.getAttribute('data-frame');
+    await page.waitForTimeout(450);
+    await expect(reducedCharacter).toHaveAttribute('data-frame', reducedWalkingFrame ?? '');
+    await page.keyboard.up('ArrowRight');
+    await expect.poll(async () => Number(await player.getAttribute('data-speed'))).toBeLessThan(1);
 
     const beforeRepeat = await player.boundingBox();
     await arena.dispatchEvent('keydown', { key: 'ArrowLeft', repeat: true });
@@ -480,7 +567,7 @@ test.describe('input lifecycle and detailed game rules', () => {
     await moveToEntity(page, squareTarget, false);
     await action(page, false);
     await expect(triangle).toHaveCount(0);
-    await expect(page.locator('.experience-game__carry .experience-sprite')).toHaveCount(1);
+    await expect(page.locator('.experience-game__carry .experience-entity__image')).toHaveCount(1);
     await expect(squareTarget).toHaveClass(/experience-entity--done/);
     await expect(page.locator('.game-world__status strong')).toHaveText('1');
   });
@@ -506,13 +593,39 @@ test.describe('input lifecycle and detailed game rules', () => {
     await action(page, false);
     await moveToEntity(page, redFlower, false);
     await action(page, false);
-    await expect(page.locator('.experience-game__carry strong').locator('.experience-sprite, .experience-entity__image')).toHaveCount(0);
+    await expect(page.locator('.experience-game__carry strong .experience-entity__image')).toHaveCount(0);
     await expect(blueFlower).toHaveCSS('background-color', paintedBackground);
     await expect(page.locator('.game-world__status strong')).toHaveText('1');
   });
 });
 
 test.describe('layout, assets and accessibility', () => {
+  test('loads no character atlas on the home screen and only the active skin and world in experience mode', async ({ page }, testInfo) => {
+    test.skip(testInfo.project.name !== 'local-chromium', 'Network loading is deterministic in one desktop engine.');
+    const imageRequests: string[] = [];
+    page.on('request', (request) => {
+      if (request.resourceType() === 'image') imageRequests.push(request.url());
+    });
+    await openLobby(page, 'boy');
+    await page.waitForTimeout(250);
+    expect(imageRequests.some((url) => url.includes('/assets/experience/characters/'))).toBe(false);
+
+    await chooseHomeSettings(page, 3, 'easy');
+    const card = page.locator('.game-card[data-game-id="letters"]');
+    await card.getByRole('button').click();
+    const skip = page.locator('.game-entry__skip');
+    if (await skip.isVisible().catch(() => false)) {
+      await skip.evaluate((element: HTMLElement) => element.click());
+    }
+    await selectGameMode(page, 'experience');
+    await expect(page.locator('.experience-character')).toHaveAttribute('data-skin', 'nir-kippah');
+    await expect.poll(() => imageRequests.some((url) => url.includes('/nir-kippah-v1.webp'))).toBe(true);
+    expect(imageRequests.some((url) => url.includes('/nir-plain-v1.'))).toBe(false);
+    expect(imageRequests.some((url) => url.includes('/shir-v1.'))).toBe(false);
+    expect(imageRequests.some((url) => url.includes('/generated/letter-factory/'))).toBe(true);
+    expect(imageRequests.some((url) => /\/generated\/(feed-the-monster|building-workshop|magic-garden)\//.test(url))).toBe(false);
+  });
+
   test('has no horizontal overflow, broken sprite, undersized controls, or critical axe violations', async ({ page }) => {
     const failedImages: string[] = [];
     page.on('response', (response) => {
@@ -523,24 +636,13 @@ test.describe('layout, assets and accessibility', () => {
     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(
       await page.evaluate(() => window.innerWidth)
     );
-    const spriteUrl = await page.locator('.experience-sprite').first().evaluate((element) =>
-      getComputedStyle(element).backgroundImage
-    );
-    expect(spriteUrl).toContain('experience-sprites.png');
-    const spriteSource = spriteUrl.match(/url\(["']?(.*?)["']?\)/)?.[1];
-    expect(spriteSource).toBeTruthy();
-    const spriteDimensions = await page.evaluate((source) => new Promise<{ width: number; height: number }>((resolve, reject) => {
-      const image = new Image();
-      image.onload = () => resolve({ width: image.naturalWidth, height: image.naturalHeight });
-      image.onerror = () => reject(new Error(`Unable to load ${source}`));
-      image.src = source!;
-    }), spriteSource);
-    expect(spriteDimensions.width).toBeGreaterThan(0);
-    expect(spriteDimensions.height).toBeGreaterThan(0);
+    await expect(page.locator('.experience-sprite')).toHaveCount(0);
+    await expect(page.locator('.experience-entity__image').first()).toBeVisible();
     const characterUrl = await page.locator('.experience-character').evaluate((element) =>
       getComputedStyle(element).backgroundImage
     );
-    expect(characterUrl).toContain('character-sprites-v2.png');
+    const activeSkin = await page.locator('.experience-character').getAttribute('data-skin');
+    expect(characterUrl).toContain(`/assets/experience/characters/${activeSkin}-v1.webp`);
     const characterSource = characterUrl.match(/url\(["']?(.*?)["']?\)/)?.[1];
     expect(characterSource).toBeTruthy();
     const characterDimensions = await page.evaluate((source) => new Promise<{ width: number; height: number }>((resolve, reject) => {

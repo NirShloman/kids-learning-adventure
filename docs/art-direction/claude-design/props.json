@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "background": "transparent",
+    "shadow": "baked soft contact ellipse, 18% opacity, no cast shadow",
+    "angle": "45° top-down, identical for every prop",
+    "sizes": [
+      128,
+      256,
+      512
+    ],
+    "format": "PNG-32 + WebP q82",
+    "naming": "prop_<world>_<name>[_state].png",
+    "noText": true
+  },
+  "worlds": {
+    "letter_factory": [
+      {
+        "name": "letter_piece",
+        "variants": "22 Hebrew letters × 3 pieces each",
+        "size": 256,
+        "notes": "glossy toy plastic, bevelled edges, teal/cream tint per piece"
+      },
+      {
+        "name": "letter_target",
+        "variants": "22 letters, states: empty / partial / filled_glow",
+        "size": 512,
+        "notes": "recessed mold, dashed inner guide, gold glow on filled"
+      },
+      {
+        "name": "crate",
+        "variants": "closed / open",
+        "size": 256,
+        "notes": "light wood, rounded, clear two-hand grip"
+      },
+      {
+        "name": "conveyor_tile",
+        "variants": "straight / corner",
+        "size": 256,
+        "notes": "seamless rubber belt tile"
+      },
+      {
+        "name": "reward_object",
+        "variants": "star / balloon / sticker_flower",
+        "size": 256,
+        "notes": "shared reward set across all four worlds"
+      }
+    ],
+    "feed_the_monster": [
+      {
+        "name": "monster",
+        "variants": "idle / chew / cheer (4 frames each)",
+        "size": 512,
+        "notes": "plush lilac, big friendly eyes, never toothy or scary"
+      },
+      {
+        "name": "food",
+        "variants": "apple, banana, grapes, carrot, cookie, cheese, pear, tomato",
+        "size": 128,
+        "notes": "glossy, instantly recognisable at 64px"
+      },
+      {
+        "name": "basket",
+        "variants": "full / empty",
+        "size": 256,
+        "notes": "woven, rounded, holds one food type"
+      },
+      {
+        "name": "delivery_target",
+        "variants": "idle / highlight",
+        "size": 512,
+        "notes": "glowing plate zone in front of the monster"
+      }
+    ],
+    "building_workshop": [
+      {
+        "name": "shape_piece",
+        "variants": "circle, square, triangle, rectangle, star, hexagon, semicircle, arch",
+        "size": 256,
+        "notes": "inflated matte vinyl, one saturated colour each"
+      },
+      {
+        "name": "socket",
+        "variants": "per shape, states: empty / hover / locked",
+        "size": 256,
+        "notes": "dashed recess, teal glow on hover, solid on lock"
+      },
+      {
+        "name": "house_part",
+        "variants": "wall, roof, door, window, chimney",
+        "size": 256,
+        "notes": "assembles into one house"
+      },
+      {
+        "name": "robot_part",
+        "variants": "head, torso, arm, leg, antenna",
+        "size": 256,
+        "notes": "friendly rounded robot, no faceplate menace"
+      },
+      {
+        "name": "vehicle_part",
+        "variants": "body, wheel, cabin, light",
+        "size": 256,
+        "notes": "toy car proportions"
+      },
+      {
+        "name": "workbench",
+        "variants": "single",
+        "size": 512,
+        "notes": "low, warm grey, rounded corners"
+      }
+    ],
+    "magic_garden": [
+      {
+        "name": "brush",
+        "variants": "clean / loaded_<colour> (6 colours)",
+        "size": 256,
+        "notes": "oversized handle for clear carry silhouette"
+      },
+      {
+        "name": "paint_pot",
+        "variants": "6 colours, full / used",
+        "size": 256,
+        "notes": "glossy ceramic, glowing paint surface"
+      },
+      {
+        "name": "flower",
+        "variants": "5 types × uncoloured / coloured",
+        "size": 256,
+        "notes": "uncoloured = soft white with faint outline, never grey"
+      },
+      {
+        "name": "sun",
+        "variants": "uncoloured / coloured / happy",
+        "size": 512,
+        "notes": "soft face, closed-eye smile"
+      },
+      {
+        "name": "balloon",
+        "variants": "uncoloured / 6 colours",
+        "size": 256,
+        "notes": "string included, floats ±8px"
+      },
+      {
+        "name": "bush_soft",
+        "variants": "small / large",
+        "size": 256,
+        "notes": "soft obstacle — squashes on contact"
+      },
+      {
+        "name": "rainbow_arc",
+        "variants": "single",
+        "size": 512,
+        "notes": "background dressing, pastel only"
+      }
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "pack": "Lomdim BeKef — 2D game asset pack v2.1",
+  "canvas": {
+    "frame": {
+      "w": 512,
+      "h": 640
+    },
+    "footBaseline": 592,
+    "maxCharacterHeight": 520,
+    "anchor": "0.5, 0.925 (foot baseline)",
+    "rule": "Boy and girl share identical scale, canvas and baseline. Never rescale one alone."
+  },
+  "facing": "Right-facing side art only — mirror horizontally in engine for left movement.",
+  "sheets": [
+    {
+      "file": "nir_kippah.png",
+      "atlas": "atlas/nir_kippah.json",
+      "grid": "8 × 7",
+      "size": "4096 × 4480",
+      "frames": 49
+    },
+    {
+      "file": "nir_plain.png",
+      "atlas": "atlas/nir_plain.json",
+      "grid": "8 × 7",
+      "size": "4096 × 4480",
+      "frames": 49,
+      "notes": "Identical frame geometry to nir_kippah — hot-swappable skin."
+    },
+    {
+      "file": "shir.png",
+      "atlas": "atlas/shir.json",
+      "grid": "8 × 7",
+      "size": "4096 × 4480",
+      "frames": 49
+    }
+  ],
+  "animationSets": "idle_front (1), idle_back (1), idle_side (1), walk_front (6), walk_back (6), walk_side (6), carry_front (6), carry_back (6), carry_side (6), pickup (3), drop (3), celebrate (4)",
+  "frameOrder": {
+    "walk": "01 contact (right foot forward) · 02 down (lowest hip) · 03 passing (right leg straight, left leg swinging past) · 04 contact (left foot forward) · 05 down · 06 passing — 6-frame loop",
+    "carry": "same 6-frame cycle as walk, both hands holding the object at chest height, torso leaning back 4°",
+    "pickup": "01 reach down · 02 grasp at ground · 03 rise holding — no loop",
+    "drop": "01 hold at chest · 02 lower and place · 03 release and stand — no loop",
+    "celebrate": "01 crouch anticipation · 02 launch, arms opening · 03 apex, fists high · 04 land, arms wide — no loop",
+    "idle": "single frame per direction; engine adds a 2% breathing scale over 2.4s"
+  },
+  "export": {
+    "background": "transparent PNG-32",
+    "shadow": "soft contact ellipse baked into every frame, 18% opacity",
+    "text": "no text baked into any asset",
+    "trim": "do NOT trim — uniform frames keep the baseline aligned"
+  },
+  "props": "see props.json"
+}

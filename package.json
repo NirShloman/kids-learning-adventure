@@ -13,7 +13,9 @@
     "generate:content": "node scripts/generate-static-content.mjs",
     "generate:recordings": "node scripts/generate-recording-list.mjs",
     "validate:questions": "node scripts/validate-static-content.mjs",
-    "validate:content": "node scripts/validate-static-content.mjs && node scripts/validate-hebrew-narration.mjs",
+    "validate:content": "node scripts/validate-static-content.mjs && node scripts/validate-hebrew-narration.mjs && node scripts/validate-experience-assets.mjs",
+    "validate:assets": "node scripts/validate-experience-assets.mjs",
+    "build:experience-assets": "python scripts/build_character_atlases.py && node scripts/build-experience-props.mjs",
     "validate:narration": "node scripts/validate-hebrew-narration.mjs",
     "test:unit": "vitest run tests/unit",
     "test:offline": "node scripts/offline-smoke.mjs",
@@ -44,6 +46,7 @@
     "@types/node": "^25.9.1",
     "ajv": "^8.20.0",
     "jsdom": "^29.1.1",
+    "sharp": "^0.34.5",
     "tsx": "^4.20.6",
     "vitest": "^4.0.14",
     "wrangler": "^4.112.0"

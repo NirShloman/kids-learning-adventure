@@ -21,9 +21,7 @@ export const imageAssets = {
   car: '/assets/images/objects/car.png',
   starReward: '/assets/images/rewards/star.png',
   medal: '/assets/images/rewards/medal.png',
-  trophy: '/assets/images/rewards/trophy.png',
-  experienceSprites: '/assets/images/experience-sprites.png',
-  characterSprites: '/assets/images/character-sprites-v2.png'
+  trophy: '/assets/images/rewards/trophy.png'
 } as const;
 
 export type ImageAssetId = keyof typeof imageAssets;

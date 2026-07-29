@@ -5,7 +5,40 @@ export type ExperienceGameId = Extract<GameId, 'letters' | 'numbers' | 'shapes' 
 export type GameCommand = 'up' | 'down' | 'left' | 'right' | 'action';
 export type FacingDirection = 'front' | 'back' | 'left' | 'right';
 export type CharacterAnimationState = 'idle' | 'walk' | 'carry-walk' | 'pickup' | 'drop' | 'celebrate';
+export type CharacterSkin = 'nir-kippah' | 'nir-plain' | 'shir';
 export interface ExperienceVector { x: number; y: number }
+export interface ExperienceVisualRef {
+  assetId: string;
+  state?: string;
+  attachment?: ExperienceVector;
+  heldAssetId?: string;
+}
+export interface CharacterAtlasFrame {
+  name: string;
+  index: number;
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+  pivot: ExperienceVector;
+  attachment: ExperienceVector;
+}
+export interface CharacterAnimationClip {
+  key: string;
+  frames: string[];
+  frameRate: number;
+  repeat: number;
+}
+export interface CharacterAtlasManifest {
+  skin: CharacterSkin;
+  png: string;
+  webp: string;
+  grid: { columns: number; rows: number };
+  frameSize: { w: number; h: number };
+  atlasSize: { w: number; h: number };
+  frames: CharacterAtlasFrame[];
+  animations: CharacterAnimationClip[];
+}
 export interface ExperienceInputState {
   up: boolean;
   down: boolean;
@@ -30,6 +63,7 @@ export interface ExperienceObstacle {
   axis?: 'x' | 'y';
   travel?: number;
   speed?: number;
+  visual?: ExperienceVisualRef;
 }
 export interface ExperienceWorld {
   width: number;
@@ -57,6 +91,7 @@ export interface ExperienceEntity {
   bodyType?: 'static' | 'dynamic' | 'sensor';
   accepts?: string;
   color?: string;
+  visual?: ExperienceVisualRef;
 }
 
 export interface ExperienceLevel {

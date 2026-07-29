@@ -21,10 +21,13 @@ import { useSpeech } from '../../../hooks/useSpeech';
 import { playAudioCue } from '../../../services/audioService';
 import { AnimatedFeedback } from '../../common/AnimatedFeedback';
 import { ProgressBar } from '../../common/ProgressBar';
-import { GameImage } from '../../common/GameImage';
 import { GameWorld } from '../GameWorld';
+import { ExperienceAsset } from './ExperienceAsset';
 import { ExperienceCharacter } from './ExperienceCharacter';
-import { ExperienceSprite } from './ExperienceSprite';
+import {
+  getAnimationDurationMs,
+  resolveCharacterSkin
+} from './experienceAssetManifest';
 import { GameControls } from './GameControls';
 import { useExperiencePhysics } from './useExperiencePhysics';
 
@@ -59,6 +62,43 @@ function distanceBetween(first: { x: number; y: number }, second: { x: number; y
   return Math.hypot(first.x - second.x, first.y - second.y);
 }
 
+function resolvedEntityAssetId(
+  entity: ExperienceEntity,
+  gameId: ExperienceGameId,
+  options: {
+    isDone: boolean;
+    isNear: boolean;
+    isCelebrating: boolean;
+    progress: number;
+    tick: number;
+  }
+) {
+  const base = entity.visual?.assetId;
+  if (!base) return undefined;
+  if (gameId === 'shapes' && entity.kind === 'target') {
+    const state = options.isDone ? 'locked' : options.isNear ? 'hover' : 'empty';
+    return base.replace(/-(?:empty|hover|locked)$/, `-${state}`);
+  }
+  if (gameId === 'colors' && entity.kind === 'target' && options.isDone) {
+    return base.startsWith('balloon-')
+      ? `balloon-${entity.visual?.state ?? entity.accepts ?? 'red'}`
+      : base.replace('-uncoloured', '-coloured');
+  }
+  if (gameId === 'letters' && entity.kind === 'target') {
+    const state = options.isDone
+      ? 'filled-glow'
+      : options.progress > 0
+        ? 'partial'
+        : 'empty';
+    return base.replace(/-(?:empty|partial|filled-glow)$/, `-${state}`);
+  }
+  if (gameId === 'numbers' && entity.kind === 'target') {
+    const state = options.isCelebrating ? 'cheer' : 'idle';
+    return `monster-${state}-${(Math.floor(options.tick / 8) % 4) + 1}`;
+  }
+  return base;
+}
+
 export function ExperienceGame({
   gameId,
   title,
@@ -84,12 +124,14 @@ export function ExperienceGame({
   const [isCelebrating, setIsCelebrating] = useState(false);
   const [facing, setFacing] = useState<FacingDirection>('front');
   const [actionAnimation, setActionAnimation] = useState<CharacterAnimationState | null>(null);
+  const [animationStartTick, setAnimationStartTick] = useState(0);
   const [arenaViewport, setArenaViewport] = useState({ width: 0, height: 0 });
   const inputRef = useRef<ExperienceInputState>({ ...EMPTY_INPUT });
   const arenaRef = useRef<HTMLDivElement>(null);
   const actionTimerRef = useRef<number | null>(null);
   const celebrationTimerRef = useRef<number | null>(null);
   const currentLevel = availableLevels[levelIndex];
+  const characterSkin = resolveCharacterSkin(gender);
   const tuning = getPhysicsTuning(age, difficulty);
   const world = currentLevel ? resolveExperienceWorld(currentLevel, difficulty) : null;
   const { snapshot, attachCarriedBody, releaseCarriedBody, stopMotion } = useExperiencePhysics(
@@ -115,12 +157,15 @@ export function ExperienceGame({
 
   const playActionAnimation = useCallback((animation: 'pickup' | 'drop') => {
     setActionAnimation(animation);
+    setAnimationStartTick(snapshot.tick);
     if (actionTimerRef.current !== null) window.clearTimeout(actionTimerRef.current);
     actionTimerRef.current = window.setTimeout(() => {
       setActionAnimation(null);
       actionTimerRef.current = null;
-    }, window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 120 : 430);
-  }, []);
+    }, window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      ? 120
+      : getAnimationDurationMs(characterSkin, animation));
+  }, [characterSkin, snapshot.tick]);
 
   useEffect(() => {
     arenaRef.current?.focus({ preventScroll: true });
@@ -177,6 +222,7 @@ export function ExperienceGame({
     setFeedback('');
     setIsCelebrating(false);
     setActionAnimation(null);
+    setAnimationStartTick(0);
   }, [availableLevels, clearInput, releaseCarriedBody]);
 
   const finishLevel = useCallback((nextProgress: number) => {
@@ -185,10 +231,13 @@ export function ExperienceGame({
     stopMotion();
     releaseCarriedBody();
     setIsCelebrating(true);
+    setAnimationStartTick(snapshot.tick);
     setFeedback(currentLevel.successText);
     playAudioCue('match');
     speak(currentLevel.successText);
-    const delay = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 5000 : 1400;
+    const delay = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      ? 1200
+      : Math.max(1400, getAnimationDurationMs(characterSkin, 'celebrate') + 900);
     celebrationTimerRef.current = window.setTimeout(() => {
       if (levelIndex + 1 >= availableLevels.length) {
         onFinish(availableLevels.length, availableLevels.length, 3);
@@ -200,12 +249,14 @@ export function ExperienceGame({
     }, delay);
   }, [
     availableLevels.length,
+    characterSkin,
     clearInput,
     currentLevel,
     levelIndex,
     onFinish,
     releaseCarriedBody,
     resetForLevel,
+    snapshot.tick,
     speak,
     stopMotion
   ]);
@@ -336,6 +387,7 @@ export function ExperienceGame({
 
   if (!currentLevel || !world) return null;
   const heldEntity = currentLevel.entities.find((entity) => entity.id === heldId);
+  const heldAssetId = heldEntity?.visual?.heldAssetId ?? heldEntity?.visual?.assetId;
   const colorStations = new Map(
     currentLevel.entities.filter((entity) => entity.kind === 'station').map((entity) => [entity.id, entity])
   );
@@ -369,11 +421,9 @@ export function ExperienceGame({
           <div className="experience-game__carry" aria-live="polite">
             <span>{gameId === 'colors' ? 'צבע במכחול' : 'בידיים'}</span>
             <strong style={heldEntity?.color ? { background: heldEntity.color } : undefined}>
-              {heldEntity?.imageAssetId && heldEntity.imageAssetId !== 'experienceSprites'
-                ? <GameImage assetId={heldEntity.imageAssetId} alt="" decorative className="experience-entity__image" />
-                : heldEntity?.sprite
-                  ? <ExperienceSprite sprite={heldEntity.sprite} />
-                  : '—'}
+              {heldAssetId
+                ? <ExperienceAsset assetId={heldAssetId} className="experience-entity__image" />
+                : '—'}
             </strong>
           </div>
         </div>
@@ -427,7 +477,14 @@ export function ExperienceGame({
                 }}
                 aria-hidden="true"
                 data-obstacle-id={obstacle.id}
-              />
+                data-x={position.x}
+                data-y={position.y}
+                data-visual-asset-id={obstacle.visual?.assetId}
+              >
+                {obstacle.visual?.assetId
+                  ? <ExperienceAsset assetId={obstacle.visual.assetId} className="experience-obstacle__image" />
+                  : null}
+              </div>
             );
           })}
           {currentLevel.entities.map((entity) => {
@@ -437,6 +494,13 @@ export function ExperienceGame({
             const isDone = completedIds.includes(entity.id);
             const completedColor = isDone && entity.accepts ? colorStations.get(entity.accepts)?.color : undefined;
             const isNear = nearestInteractiveEntity?.id === entity.id;
+            const visualAssetId = resolvedEntityAssetId(entity, gameId, {
+              isDone,
+              isNear,
+              isCelebrating,
+              progress,
+              tick: snapshot.tick
+            });
             return (
               <div
                 key={entity.id}
@@ -449,13 +513,11 @@ export function ExperienceGame({
                 data-x={position.x}
                 data-y={position.y}
                 data-accepts={entity.accepts}
-                data-image-asset-id={entity.imageAssetId}
+                data-visual-asset-id={visualAssetId}
               >
-                {entity.imageAssetId && entity.imageAssetId !== 'experienceSprites'
-                  ? <GameImage assetId={entity.imageAssetId} alt="" decorative className="experience-entity__image" />
-                  : entity.sprite
-                    ? <ExperienceSprite sprite={entity.sprite} />
-                    : <span className="experience-entity__glyph" aria-hidden="true">{entity.fallbackGlyph}</span>}
+                {visualAssetId
+                  ? <ExperienceAsset assetId={visualAssetId} className="experience-entity__image" />
+                  : <span className="experience-entity__glyph" aria-hidden="true">{entity.fallbackGlyph}</span>}
                 <small>{entity.label}</small>
               </div>
             );
@@ -473,16 +535,11 @@ export function ExperienceGame({
               animation={animation}
               facing={facing}
               tick={snapshot.tick}
+              clipStartTick={animationStartTick}
+              carried={heldAssetId
+                ? <ExperienceAsset assetId={heldAssetId} className="experience-entity__image" />
+                : null}
             />
-            {heldEntity ? (
-              <span className="experience-player__carried" aria-hidden="true">
-                {heldEntity.imageAssetId && heldEntity.imageAssetId !== 'experienceSprites'
-                  ? <GameImage assetId={heldEntity.imageAssetId} alt="" decorative className="experience-entity__image" />
-                  : heldEntity.sprite
-                    ? <ExperienceSprite sprite={heldEntity.sprite} />
-                    : null}
-              </span>
-            ) : null}
           </div>
         </div>
         <AnimatedFeedback message={feedback} tone={isCelebrating ? 'correct' : 'neutral'} />

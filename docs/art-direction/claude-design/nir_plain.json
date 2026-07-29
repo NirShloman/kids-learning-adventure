@@ -1,0 +1,1403 @@
+{
+  "textures": [
+    {
+      "image": "nir_plain.png",
+      "format": "RGBA8888",
+      "size": {
+        "w": 4096,
+        "h": 4480
+      },
+      "scale": 1,
+      "frames": [
+        {
+          "filename": "nir_idle_front_01",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_idle_back_01",
+          "frame": {
+            "x": 512,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_idle_side_01",
+          "frame": {
+            "x": 1024,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_walk_front_01",
+          "frame": {
+            "x": 1536,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_walk_front_02",
+          "frame": {
+            "x": 2048,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_walk_front_03",
+          "frame": {
+            "x": 2560,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_walk_front_04",
+          "frame": {
+            "x": 3072,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_walk_front_05",
+          "frame": {
+            "x": 3584,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_walk_front_06",
+          "frame": {
+            "x": 0,
+            "y": 640,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_walk_back_01",
+          "frame": {
+            "x": 512,
+            "y": 640,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_walk_back_02",
+          "frame": {
+            "x": 1024,
+            "y": 640,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_walk_back_03",
+          "frame": {
+            "x": 1536,
+            "y": 640,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_walk_back_04",
+          "frame": {
+            "x": 2048,
+            "y": 640,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_walk_back_05",
+          "frame": {
+            "x": 2560,
+            "y": 640,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_walk_back_06",
+          "frame": {
+            "x": 3072,
+            "y": 640,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_walk_side_01",
+          "frame": {
+            "x": 3584,
+            "y": 640,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_walk_side_02",
+          "frame": {
+            "x": 0,
+            "y": 1280,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_walk_side_03",
+          "frame": {
+            "x": 512,
+            "y": 1280,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_walk_side_04",
+          "frame": {
+            "x": 1024,
+            "y": 1280,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_walk_side_05",
+          "frame": {
+            "x": 1536,
+            "y": 1280,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_walk_side_06",
+          "frame": {
+            "x": 2048,
+            "y": 1280,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_carry_front_01",
+          "frame": {
+            "x": 2560,
+            "y": 1280,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_carry_front_02",
+          "frame": {
+            "x": 3072,
+            "y": 1280,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_carry_front_03",
+          "frame": {
+            "x": 3584,
+            "y": 1280,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_carry_front_04",
+          "frame": {
+            "x": 0,
+            "y": 1920,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_carry_front_05",
+          "frame": {
+            "x": 512,
+            "y": 1920,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_carry_front_06",
+          "frame": {
+            "x": 1024,
+            "y": 1920,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_carry_back_01",
+          "frame": {
+            "x": 1536,
+            "y": 1920,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_carry_back_02",
+          "frame": {
+            "x": 2048,
+            "y": 1920,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_carry_back_03",
+          "frame": {
+            "x": 2560,
+            "y": 1920,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_carry_back_04",
+          "frame": {
+            "x": 3072,
+            "y": 1920,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_carry_back_05",
+          "frame": {
+            "x": 3584,
+            "y": 1920,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_carry_back_06",
+          "frame": {
+            "x": 0,
+            "y": 2560,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_carry_side_01",
+          "frame": {
+            "x": 512,
+            "y": 2560,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_carry_side_02",
+          "frame": {
+            "x": 1024,
+            "y": 2560,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_carry_side_03",
+          "frame": {
+            "x": 1536,
+            "y": 2560,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_carry_side_04",
+          "frame": {
+            "x": 2048,
+            "y": 2560,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_carry_side_05",
+          "frame": {
+            "x": 2560,
+            "y": 2560,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_carry_side_06",
+          "frame": {
+            "x": 3072,
+            "y": 2560,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_pickup_01",
+          "frame": {
+            "x": 3584,
+            "y": 2560,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_pickup_02",
+          "frame": {
+            "x": 0,
+            "y": 3200,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_pickup_03",
+          "frame": {
+            "x": 512,
+            "y": 3200,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_drop_01",
+          "frame": {
+            "x": 1024,
+            "y": 3200,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_drop_02",
+          "frame": {
+            "x": 1536,
+            "y": 3200,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_drop_03",
+          "frame": {
+            "x": 2048,
+            "y": 3200,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_celebrate_01",
+          "frame": {
+            "x": 2560,
+            "y": 3200,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_celebrate_02",
+          "frame": {
+            "x": 3072,
+            "y": 3200,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_celebrate_03",
+          "frame": {
+            "x": 3584,
+            "y": 3200,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        },
+        {
+          "filename": "nir_celebrate_04",
+          "frame": {
+            "x": 0,
+            "y": 3840,
+            "w": 512,
+            "h": 640
+          },
+          "rotated": false,
+          "trimmed": false,
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 640
+          },
+          "sourceSize": {
+            "w": 512,
+            "h": 640
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.925
+          }
+        }
+      ]
+    }
+  ],
+  "animations": [
+    {
+      "key": "nir_idle_front",
+      "frames": [
+        "nir_idle_front_01"
+      ],
+      "frameRate": 6,
+      "repeat": -1,
+      "yoyo": false
+    },
+    {
+      "key": "nir_idle_back",
+      "frames": [
+        "nir_idle_back_01"
+      ],
+      "frameRate": 6,
+      "repeat": -1,
+      "yoyo": false
+    },
+    {
+      "key": "nir_idle_side",
+      "frames": [
+        "nir_idle_side_01"
+      ],
+      "frameRate": 6,
+      "repeat": -1,
+      "yoyo": false
+    },
+    {
+      "key": "nir_walk_front",
+      "frames": [
+        "nir_walk_front_01",
+        "nir_walk_front_02",
+        "nir_walk_front_03",
+        "nir_walk_front_04",
+        "nir_walk_front_05",
+        "nir_walk_front_06"
+      ],
+      "frameRate": 12,
+      "repeat": -1,
+      "yoyo": false
+    },
+    {
+      "key": "nir_walk_back",
+      "frames": [
+        "nir_walk_back_01",
+        "nir_walk_back_02",
+        "nir_walk_back_03",
+        "nir_walk_back_04",
+        "nir_walk_back_05",
+        "nir_walk_back_06"
+      ],
+      "frameRate": 12,
+      "repeat": -1,
+      "yoyo": false
+    },
+    {
+      "key": "nir_walk_side",
+      "frames": [
+        "nir_walk_side_01",
+        "nir_walk_side_02",
+        "nir_walk_side_03",
+        "nir_walk_side_04",
+        "nir_walk_side_05",
+        "nir_walk_side_06"
+      ],
+      "frameRate": 12,
+      "repeat": -1,
+      "yoyo": false
+    },
+    {
+      "key": "nir_carry_front",
+      "frames": [
+        "nir_carry_front_01",
+        "nir_carry_front_02",
+        "nir_carry_front_03",
+        "nir_carry_front_04",
+        "nir_carry_front_05",
+        "nir_carry_front_06"
+      ],
+      "frameRate": 12,
+      "repeat": -1,
+      "yoyo": false
+    },
+    {
+      "key": "nir_carry_back",
+      "frames": [
+        "nir_carry_back_01",
+        "nir_carry_back_02",
+        "nir_carry_back_03",
+        "nir_carry_back_04",
+        "nir_carry_back_05",
+        "nir_carry_back_06"
+      ],
+      "frameRate": 12,
+      "repeat": -1,
+      "yoyo": false
+    },
+    {
+      "key": "nir_carry_side",
+      "frames": [
+        "nir_carry_side_01",
+        "nir_carry_side_02",
+        "nir_carry_side_03",
+        "nir_carry_side_04",
+        "nir_carry_side_05",
+        "nir_carry_side_06"
+      ],
+      "frameRate": 12,
+      "repeat": -1,
+      "yoyo": false
+    },
+    {
+      "key": "nir_pickup",
+      "frames": [
+        "nir_pickup_01",
+        "nir_pickup_02",
+        "nir_pickup_03"
+      ],
+      "frameRate": 10,
+      "repeat": 0,
+      "yoyo": false
+    },
+    {
+      "key": "nir_drop",
+      "frames": [
+        "nir_drop_01",
+        "nir_drop_02",
+        "nir_drop_03"
+      ],
+      "frameRate": 10,
+      "repeat": 0,
+      "yoyo": false
+    },
+    {
+      "key": "nir_celebrate",
+      "frames": [
+        "nir_celebrate_01",
+        "nir_celebrate_02",
+        "nir_celebrate_03",
+        "nir_celebrate_04"
+      ],
+      "frameRate": 12,
+      "repeat": 0,
+      "yoyo": false
+    }
+  ],
+  "meta": {
+    "app": "Lomdim BeKef asset pack",
+    "version": "2.1",
+    "frameSize": {
+      "w": 512,
+      "h": 640
+    },
+    "footBaseline": 592,
+    "anchor": {
+      "x": 0.5,
+      "y": 0.925
+    },
+    "columns": 8,
+    "frameCount": 49,
+    "note": "Identical grid for every character and skin — sheets are interchangeable."
+  }
+}

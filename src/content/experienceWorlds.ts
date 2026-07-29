@@ -88,10 +88,28 @@ export function gridPointToWorld(point: ExperienceVector, gridSize: number): Exp
   };
 }
 
-function obstaclesFor(difficulty: Difficulty, seed: number): ExperienceObstacle[] {
+const obstacleVisualByGame: Record<ExperienceLevel['gameId'], string> = {
+  letters: 'letter-conveyor-straight',
+  numbers: 'basket-empty',
+  shapes: 'workbench',
+  colors: 'bush-large'
+};
+
+function obstaclesFor(
+  difficulty: Difficulty,
+  seed: number,
+  gameId: ExperienceLevel['gameId']
+): ExperienceObstacle[] {
   if (difficulty === 'easy') return [];
   const medium: ExperienceObstacle[] = [
-    { id: `wall-${seed}-1`, position: { x: 500, y: 315 }, width: 170, height: 30, kind: 'wall' }
+    {
+      id: `wall-${seed}-1`,
+      position: { x: 500, y: 315 },
+      width: 170,
+      height: 30,
+      kind: 'wall',
+      visual: { assetId: obstacleVisualByGame[gameId] }
+    }
   ];
   if (difficulty === 'medium') return medium;
   return [
@@ -105,7 +123,14 @@ function obstaclesFor(difficulty: Difficulty, seed: number): ExperienceObstacle[
       kind: 'bumper',
       axis: seed % 2 ? 'x' : 'y',
       travel: 72,
-      speed: 0.0011
+      speed: 0.0011,
+      visual: {
+        assetId: gameId === 'colors'
+          ? 'bush-small'
+          : gameId === 'letters'
+            ? 'letter-crate-closed'
+            : obstacleVisualByGame[gameId]
+      }
     }
   ];
 }
@@ -116,7 +141,7 @@ export function resolveExperienceWorld(level: ExperienceLevel, difficulty: Diffi
   return {
     ...EXPERIENCE_WORLD_SIZE,
     seed,
-    obstacles: obstaclesFor(difficulty, seed)
+    obstacles: obstaclesFor(difficulty, seed, level.gameId)
   };
 }
 
