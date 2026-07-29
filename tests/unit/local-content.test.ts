@@ -13,6 +13,7 @@ import { getMemoryCards, getQuizQuestions } from '../../src/services/questionSer
 import { clearStaticContentCache } from '../../src/services/staticContentRepository';
 import { getLocalLearnerState } from '../../src/services/learnerProgressService';
 import { getMotionInputName } from '../../src/components/motion/motion.types';
+import { musicTracks } from '../../src/assets/audioManifest';
 
 const banks = { letters, numbers, shapes, colors, matching, memory, patterns, sorting };
 const expectedCounts = { letters: 180, numbers: 170, shapes: 110, colors: 110, matching: 120, memory: 100, patterns: 110, sorting: 110 };
@@ -72,6 +73,56 @@ describe('selection and local migration', () => {
     const learner = getLocalLearnerState();
     expect(learner).toMatchObject({ age: 6, difficulty: 'hard', voiceEnabled: false, migratedFromLegacy: true });
     expect(window.localStorage.getItem('kids-learning-adventure.players')).toBe(JSON.stringify(legacyPlayers));
+  });
+
+  it('migrates schema 2 audio settings and enables music by default', () => {
+    window.localStorage.setItem('lomdim-bekef.learner.v1', JSON.stringify({
+      schemaVersion: 2,
+      name: 'נועה',
+      gender: 'girl',
+      profileCompleted: true,
+      age: 5,
+      difficulty: 'medium',
+      voiceEnabled: false,
+      narrationEnabled: false,
+      soundEffectsEnabled: false,
+      migratedFromLegacy: false,
+      updatedAt: '2026-01-01T00:00:00.000Z'
+    }));
+
+    expect(getLocalLearnerState()).toMatchObject({
+      schemaVersion: 3,
+      narrationEnabled: false,
+      voiceEnabled: false,
+      soundEffectsEnabled: false,
+      musicEnabled: true
+    });
+  });
+
+  it('repairs missing schema 3 audio flags with safe defaults', () => {
+    window.localStorage.setItem('lomdim-bekef.learner.v1', JSON.stringify({
+      schemaVersion: 3,
+      name: '',
+      gender: null,
+      profileCompleted: false,
+      age: 4,
+      difficulty: 'medium'
+    }));
+    expect(getLocalLearnerState()).toMatchObject({
+      narrationEnabled: true,
+      voiceEnabled: true,
+      soundEffectsEnabled: true,
+      musicEnabled: true
+    });
+  });
+});
+
+describe('approved music mapping', () => {
+  it('maps each world to one of the supplied tracks', () => {
+    expect(musicTracks.letters).toBe('music/letters-garden');
+    expect(musicTracks.shapes).toBe('music/polygons-at-play');
+    expect(musicTracks.colors).toBe('music/painted-garden-gate');
+    expect(musicTracks.home).toBe('music/game-of-discoveries');
   });
 });
 

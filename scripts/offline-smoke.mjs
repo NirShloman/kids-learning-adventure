@@ -25,26 +25,48 @@ async function waitForServer() {
   throw new Error('Preview server did not start.');
 }
 
+async function openLettersQuiz(page) {
+  await page.locator('.game-card').filter({ hasText: 'אותיות' }).first()
+    .getByRole('button', { name: 'מתחילים' }).click();
+  const skip = page.locator('.game-entry__skip');
+  if (await skip.isVisible().catch(() => false)) await skip.click();
+  await page.getByRole('button', { name: /טריוויה/ }).click();
+  await page.locator('[data-testid="quiz-option"]').first().waitFor();
+}
+
 let browser;
 try {
   await waitForServer();
   browser = await chromium.launch();
   const context = await browser.newContext();
+  await context.addInitScript(() => {
+    localStorage.setItem('lomdim-bekef.learner.v1', JSON.stringify({
+      schemaVersion: 3,
+      name: 'בדיקת אופליין',
+      gender: 'boy',
+      profileCompleted: true,
+      age: 4,
+      difficulty: 'medium',
+      voiceEnabled: false,
+      narrationEnabled: false,
+      soundEffectsEnabled: false,
+      musicEnabled: false,
+      migratedFromLegacy: false,
+      updatedAt: new Date(0).toISOString()
+    }));
+  });
   const page = await context.newPage();
   await page.goto(baseURL);
   await page.evaluate(() => navigator.serviceWorker.ready);
   await page.reload({ waitUntil: 'networkidle' });
 
   await page.getByRole('button', { name: /מתחילים לשחק/ }).click();
-  const lettersCard = page.locator('.game-card').filter({ hasText: 'אותיות' }).first();
-  await lettersCard.getByRole('button', { name: 'מתחילים' }).click();
-  await page.locator('[data-testid="quiz-option"]').first().waitFor();
+  await openLettersQuiz(page);
 
   await context.setOffline(true);
   await page.reload({ waitUntil: 'domcontentloaded' });
   await page.getByRole('button', { name: /מתחילים לשחק/ }).click();
-  await page.locator('.game-card').filter({ hasText: 'אותיות' }).first().getByRole('button', { name: 'מתחילים' }).click();
-  await page.locator('[data-testid="quiz-option"]').first().waitFor();
+  await openLettersQuiz(page);
 
   const canvasCount = await page.locator('canvas').count();
   if (canvasCount > 2) throw new Error(`Expected at most two active canvases, found ${canvasCount}.`);

@@ -29,10 +29,11 @@ export interface LearnerSettings {
   voiceEnabled: boolean;
   narrationEnabled: boolean;
   soundEffectsEnabled: boolean;
+  musicEnabled: boolean;
 }
 
 export interface LocalLearnerState extends LearnerSettings {
-  schemaVersion: 2;
+  schemaVersion: 3;
   name: string;
   gender: LearnerGender | null;
   profileCompleted: boolean;

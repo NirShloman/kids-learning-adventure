@@ -38,6 +38,11 @@ let lastSpokenAt = 0;
 let isSpeaking = false;
 let pendingGuidedText = '';
 
+function notifySpeechLifecycle(event: 'start' | 'end'): void {
+  if (typeof window === 'undefined') return;
+  window.dispatchEvent(new Event(`lomdim:speech-${event}`));
+}
+
 export function canSpeak(): boolean {
   return typeof window !== 'undefined' && 'speechSynthesis' in window;
 }
@@ -110,9 +115,11 @@ function speakSafeText(safeText: string, mode: SpeechMode): void {
   utterance.voice = cachedHebrewVoice ?? getPreferredHebrewVoice();
   utterance.onstart = () => {
     isSpeaking = true;
+    notifySpeechLifecycle('start');
   };
   utterance.onend = () => {
     isSpeaking = false;
+    notifySpeechLifecycle('end');
     if (!pendingGuidedText) return;
     const nextText = pendingGuidedText;
     pendingGuidedText = '';
@@ -120,6 +127,7 @@ function speakSafeText(safeText: string, mode: SpeechMode): void {
   };
   utterance.onerror = () => {
     isSpeaking = false;
+    notifySpeechLifecycle('end');
   };
 
   if (mode === 'manual') {
@@ -154,6 +162,7 @@ export function stopSpeaking(): void {
   pendingGuidedText = '';
   isSpeaking = false;
   window.speechSynthesis.cancel();
+  notifySpeechLifecycle('end');
 }
 
 if (canSpeak()) {

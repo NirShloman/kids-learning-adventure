@@ -11,6 +11,18 @@ test.describe('local app smoke', () => {
     assertNoConsoleErrors();
   });
 
+  test('loads decorative videos without exposing playback controls', async ({ page }) => {
+    await page.goto('/');
+    const welcomeVideo = page.locator('.welcome-motion video');
+    await expect(welcomeVideo).toHaveJSProperty('muted', true);
+    await expect(welcomeVideo).toHaveJSProperty('playsInline', true);
+    await expect(welcomeVideo).toHaveJSProperty('controls', false);
+
+    await page.getByRole('button', { name: /מתחילים לשחק/ }).click();
+    await completeProfileSetup(page);
+    await expect(page.locator('.home-cinematic video')).toHaveCount(1);
+  });
+
   test('persists age, difficulty, and voice locally', async ({ page }) => {
     await page.goto('/');
     await page.getByRole('button', { name: /מתחילים לשחק/ }).click();

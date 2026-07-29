@@ -7,7 +7,7 @@ import { shuffleArray, calculateStars } from '../../../utils/helpers';
 import { gameInstructions } from '../../../data/gameInstructions';
 import { GameWorld, GameWorldMessage } from '../GameWorld';
 import { GameImage } from '../../common/GameImage';
-import { playAudioCue } from '../../../services/audioService';
+import { playAudioCue, playRecordedVoice } from '../../../services/audioService';
 import { motion } from 'motion/react';
 
 interface MatchingGameProps {
@@ -69,7 +69,7 @@ export function MatchingGame({ age, difficulty, voiceEnabled, onBack, onFinish }
       setMatchedIds(updated);
       setSelectedLeft(null);
       setSelectedRight(null);
-      speak('כל הכבוד, מצאתם התאמה!');
+      playRecordedVoice('matchFound', undefined, () => speak('כל הכבוד, מצאתם התאמה!'));
       if (updated.length === total) {
         const stars = calculateStars(updated.length, total, {
           attempts: tries + 1,
@@ -82,7 +82,7 @@ export function MatchingGame({ age, difficulty, voiceEnabled, onBack, onFinish }
     }
 
     playAudioCue('retry');
-    speak('כמעט, נסו שוב');
+    playRecordedVoice('almost', undefined, () => speak('כמעט, נסו שוב'));
     window.setTimeout(() => {
       setSelectedLeft(null);
       setSelectedRight(null);

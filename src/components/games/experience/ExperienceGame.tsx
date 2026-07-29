@@ -18,7 +18,7 @@ import type {
   LearnerGender
 } from '../../../types';
 import { useSpeech } from '../../../hooks/useSpeech';
-import { playAudioCue } from '../../../services/audioService';
+import { playAudioCue, playRecordedVoice, playSfx } from '../../../services/audioService';
 import { AnimatedFeedback } from '../../common/AnimatedFeedback';
 import { ProgressBar } from '../../common/ProgressBar';
 import { GameWorld } from '../GameWorld';
@@ -130,6 +130,8 @@ export function ExperienceGame({
   const arenaRef = useRef<HTMLDivElement>(null);
   const actionTimerRef = useRef<number | null>(null);
   const celebrationTimerRef = useRef<number | null>(null);
+  const wasNearInteractiveRef = useRef(false);
+  const lastStepTickRef = useRef(0);
   const currentLevel = availableLevels[levelIndex];
   const characterSkin = resolveCharacterSkin(gender);
   const tuning = getPhysicsTuning(age, difficulty);
@@ -211,6 +213,12 @@ export function ExperienceGame({
     else setFacing(y < 0 ? 'back' : 'front');
   }, [snapshot.speed, snapshot.velocity]);
 
+  useEffect(() => {
+    if (snapshot.speed < 28 || snapshot.tick - lastStepTickRef.current < 12) return;
+    lastStepTickRef.current = snapshot.tick;
+    playSfx(Math.floor(snapshot.tick / 12) % 2 === 0 ? 'characterStep1' : 'characterStep2');
+  }, [snapshot.speed, snapshot.tick]);
+
   const resetForLevel = useCallback((nextIndex: number) => {
     if (!availableLevels[nextIndex]) return;
     clearInput();
@@ -234,7 +242,7 @@ export function ExperienceGame({
     setAnimationStartTick(snapshot.tick);
     setFeedback(currentLevel.successText);
     playAudioCue('match');
-    speak(currentLevel.successText);
+    playRecordedVoice('levelComplete', gender, () => speak(currentLevel.successText));
     const delay = window.matchMedia('(prefers-reduced-motion: reduce)').matches
       ? 1200
       : Math.max(1400, getAnimationDurationMs(characterSkin, 'celebrate') + 900);
@@ -285,6 +293,12 @@ export function ExperienceGame({
     tuning.interactionRadius
   ]);
 
+  useEffect(() => {
+    const isNear = Boolean(nearestInteractiveEntity);
+    if (isNear && !wasNearInteractiveRef.current) playSfx('objectNear');
+    wasNearInteractiveRef.current = isNear;
+  }, [nearestInteractiveEntity]);
+
   const interact = useCallback(() => {
     if (!currentLevel || isCelebrating) return;
     const entity = nearestInteractiveEntity;
@@ -300,7 +314,7 @@ export function ExperienceGame({
         attachCarriedBody(15);
         playActionAnimation('pickup');
         setFeedback(`המכחול נטען ב${entity.label}.`);
-        playAudioCue('select');
+        playSfx('pickup');
         speak(entity.label);
         return;
       }
@@ -312,6 +326,7 @@ export function ExperienceGame({
         releaseCarriedBody();
         playActionAnimation('drop');
         setFeedback('איזה יופי, הצבע מתאים!');
+        playSfx('drop');
         playAudioCue('match');
         finishLevel(next);
         return;
@@ -320,8 +335,8 @@ export function ExperienceGame({
       releaseCarriedBody();
       playActionAnimation('drop');
       setFeedback('כמעט. טענו שוב את המכחול בצבע שמסומן ליד העצם.');
-      playAudioCue('retry');
-      speak('כמעט, נסו צבע אחר.');
+      playSfx('wrongTarget');
+      playRecordedVoice('almost', gender, () => speak('כמעט, נסו צבע אחר.'));
       return;
     }
 
@@ -331,7 +346,8 @@ export function ExperienceGame({
       attachCarriedBody(entity.radius ?? 18);
       playActionAnimation('pickup');
       setFeedback(`אספתם ${entity.label}. עכשיו הביאו אותו ליעד.`);
-      playAudioCue('select');
+      playSfx('pickup');
+      playSfx('itemCollected');
       speak(entity.label);
       return;
     }
@@ -350,6 +366,8 @@ export function ExperienceGame({
           ? `${countWords[next] ?? next}!`
           : `מצוין, ${held?.label ?? 'החלק'} במקום!`;
         setFeedback(message);
+        playSfx('drop');
+        if (gameId === 'numbers') playSfx('countTick');
         playAudioCue('match');
         speak(message);
         finishLevel(next);
@@ -360,8 +378,8 @@ export function ExperienceGame({
       releaseCarriedBody();
       playActionAnimation('drop');
       setFeedback('הצורה מתאימה למקום אחר. היא חזרה לסדנה.');
-      playAudioCue('retry');
-      speak('כמעט, נסו מקום אחר.');
+      playSfx('wrongTarget');
+      playRecordedVoice('almost', gender, () => speak('כמעט, נסו מקום אחר.'));
       return;
     }
 

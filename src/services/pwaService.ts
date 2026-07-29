@@ -28,6 +28,8 @@ export async function registerServiceWorker(): Promise<void> {
   try {
     const registration = await navigator.serviceWorker.register('/sw.js', { updateViaCache: 'none' });
     await registration.update();
+    const worker = registration.active ?? registration.waiting ?? registration.installing;
+    worker?.postMessage({ type: 'WARM_AUDIO_CACHE' });
   } catch (error) {
     console.error('Service Worker registration failed:', error);
   }

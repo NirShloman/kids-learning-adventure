@@ -1,6 +1,6 @@
 import { BrandLogo } from '../components/common/BrandLogo';
+import { AmbientVideo } from '../components/common/AmbientVideo';
 import { GameImage } from '../components/common/GameImage';
-import { RiveScene } from '../components/motion/RiveScene';
 import { useSpeech } from '../hooks/useSpeech';
 
 interface LandingPageProps {
@@ -45,12 +45,11 @@ export function LandingPage({ voiceEnabled, onStart }: LandingPageProps) {
         </button>
       </section>
 
-      <RiveScene
-        scene="brand-intro"
-        event="intro"
+      <AmbientVideo
+        src="/assets/video/learning-garden-welcome.mp4"
         className="welcome-motion"
         fallback={fallback}
-        ariaLabel="דמות הלמידה פותחת ספר ומזמינה להתחיל"
+        ariaLabel="שיר וניר מזמינים את הילדים להרפתקת למידה"
       />
     </main>
   );

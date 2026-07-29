@@ -1,4 +1,4 @@
-const CACHE_NAME = 'lomdim-bekef-v1.2.0-20260721';
+const CACHE_NAME = 'lomdim-bekef-v1.2.0-media-20260729';
 const STATIC_ASSETS = ['/', '/manifest.webmanifest', '/icons/icon.svg'];
 
 function isSameOriginRequest(request) {
@@ -6,7 +6,7 @@ function isSameOriginRequest(request) {
 }
 
 async function cacheResponse(cacheKey, response) {
-  if (!response || !response.ok) return response;
+  if (!response || !response.ok || response.status === 206) return response;
   const cache = await caches.open(CACHE_NAME);
   await cache.put(cacheKey, response.clone());
   return response;
@@ -41,4 +41,28 @@ self.addEventListener('fetch', (event) => {
       .then((response) => cacheResponse(event.request, response))
       .catch(() => caches.match('/')))
   );
+});
+
+self.addEventListener('message', (event) => {
+  if (event.data?.type !== 'WARM_AUDIO_CACHE') return;
+  event.waitUntil((async () => {
+    const cache = await caches.open(CACHE_NAME);
+    const manifestResponse = await fetch('/assets/audio/audio-manifest.json');
+    if (!manifestResponse.ok) return;
+    await cache.put('/assets/audio/audio-manifest.json', manifestResponse.clone());
+    const manifest = await manifestResponse.json();
+    const mp3Urls = manifest.assets
+      .map((asset) => asset.sources?.mp3)
+      .filter(Boolean)
+      .map((path) => `/assets/audio/${path}`);
+    for (const url of mp3Urls) {
+      if (await cache.match(url)) continue;
+      try {
+        const response = await fetch(url);
+        if (response.ok) await cache.put(url, response);
+      } catch {
+        // Background warming is best-effort and must never affect gameplay.
+      }
+    }
+  })());
 });

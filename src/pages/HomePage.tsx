@@ -3,6 +3,7 @@ import { GameId, LearnerSettings } from '../types';
 import { GameCard } from '../components/games/GameCard';
 import { ageOptions, difficultyOptions, getDefaultDifficultyByAge } from '../data/levels';
 import { SelectField } from '../components/common/SelectField';
+import { AmbientVideo } from '../components/common/AmbientVideo';
 
 interface HomePageProps {
   settings: LearnerSettings;
@@ -17,6 +18,11 @@ export function HomePage({ settings, onSettingsChange, onSelectGame }: HomePageP
 
   return (
     <section className="home-page">
+      <AmbientVideo
+        src="/assets/video/learning-garden-lobby.mp4"
+        className="home-cinematic"
+        fallback={<div className="home-cinematic__fallback" />}
+      />
       <section className="game-menu-heading" aria-labelledby="game-menu-title">
         <div>
           <span>8 עולמות למידה</span>
@@ -62,6 +68,17 @@ export function HomePage({ settings, onSettingsChange, onSelectGame }: HomePageP
             />
             <span aria-hidden="true">🎵</span>
             צלילי משחק
+          </label>
+
+          <label className="voice-toggle" htmlFor="learner-music">
+            <input
+              id="learner-music"
+              type="checkbox"
+              checked={settings.musicEnabled}
+              onChange={(event) => onSettingsChange({ ...settings, musicEnabled: event.target.checked })}
+            />
+            <span aria-hidden="true">🎶</span>
+            מוזיקה
           </label>
         </div>
       </section>

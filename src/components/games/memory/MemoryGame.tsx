@@ -7,7 +7,7 @@ import { gameInstructions } from '../../../data/gameInstructions';
 import { calculateStars } from '../../../utils/helpers';
 import { GameWorld, GameWorldMessage } from '../GameWorld';
 import { GameImage } from '../../common/GameImage';
-import { playAudioCue } from '../../../services/audioService';
+import { playAudioCue, playRecordedVoice } from '../../../services/audioService';
 import { motion } from 'motion/react';
 
 interface MemoryGameProps {
@@ -86,14 +86,14 @@ export function MemoryGame({ age, difficulty, voiceEnabled, onBack, onFinish }: 
       if (firstCard && secondCard && firstCard.pairId === secondCard.pairId) {
         window.setTimeout(() => {
           playAudioCue('match');
-          speak('מצוין, מצאתם זוג!');
+          playRecordedVoice('pairFound', undefined, () => speak('מצוין, מצאתם זוג!'));
           setMatchedPairIds((previous) => [...previous, firstCard.pairId]);
           setFlippedIds([]);
         }, 450);
       } else {
         window.setTimeout(() => {
           playAudioCue('retry');
-          speak('לא זוג, נסו לזכור איפה הקלפים היו.');
+          playRecordedVoice('tryAgain', undefined, () => speak('לא זוג, נסו לזכור איפה הקלפים היו.'));
           setFlippedIds([]);
         }, 800);
       }

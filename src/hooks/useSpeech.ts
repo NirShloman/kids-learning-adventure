@@ -1,5 +1,6 @@
 import { FocusEventHandler, MouseEventHandler, useCallback } from 'react';
 import { canSpeak, SpeakOptions, speakHebrew, stopSpeaking } from '../services/speechService';
+import { stopNarration } from '../services/audioService';
 
 export function useSpeech(enabled: boolean) {
   const speak = useCallback(
@@ -21,5 +22,10 @@ export function useSpeech(enabled: boolean) {
     [speak]
   );
 
-  return { speak, stop: stopSpeaking, getSpeakProps, isSupported: canSpeak() };
+  const stop = useCallback(() => {
+    stopNarration();
+    stopSpeaking();
+  }, []);
+
+  return { speak, stop, getSpeakProps, isSupported: canSpeak() };
 }

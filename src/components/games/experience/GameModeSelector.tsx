@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import type { ExperienceGameId, GameMode } from '../../../types';
 import { useSpeech } from '../../../hooks/useSpeech';
 import { GameWorld } from '../GameWorld';
+import { AmbientVideo } from '../../common/AmbientVideo';
 
 interface GameModeSelectorProps {
   gameId: ExperienceGameId;
@@ -22,6 +23,14 @@ export function GameModeSelector({ gameId, title, voiceEnabled, onSelect, onBack
   return (
     <GameWorld gameId={gameId} title={title} status="בוחרים משחק" onBack={onBack} backSpeakProps={getSpeakProps<HTMLButtonElement>('חזרה לתפריט המשחקים')}>
       <div className="game-play-card game-mode-selector">
+        {gameId === 'numbers' && (
+          <AmbientVideo
+            src="/assets/video/counting-orchard.mp4"
+            className="game-mode-cinematic"
+            fallback={<div className="game-mode-cinematic__fallback" />}
+            ariaLabel="שיר וניר סופרים תפוחים במטע"
+          />
+        )}
         <span className="question-card__tag">איך משחקים היום?</span>
         <h2>בחרו דרך לשחק</h2>
         <p>אפשר לבחור במשחק חווייתי עם חצים ורווח, או בחידון המוכר.</p>

@@ -25,7 +25,16 @@ import {
   resolveCharacterSkin
 } from './components/games/experience/experienceAssetManifest';
 import type { ImageAssetId } from './assets/assetManifest';
-import { configureSoundEffects, playAudioCue } from './services/audioService';
+import {
+  configureAudio,
+  playAudioCue,
+  playMusic,
+  playSfx,
+  preloadAudio,
+  preloadCriticalAudio,
+  stopMusic
+} from './services/audioService';
+import { musicTracks } from './assets/audioManifest';
 
 const quizGameIds: GameId[] = ['letters', 'numbers', 'shapes', 'colors'];
 
@@ -36,7 +45,8 @@ function App() {
     difficulty: learner.difficulty,
     voiceEnabled: learner.narrationEnabled,
     narrationEnabled: learner.narrationEnabled,
-    soundEffectsEnabled: learner.soundEffectsEnabled
+    soundEffectsEnabled: learner.soundEffectsEnabled,
+    musicEnabled: learner.musicEnabled
   };
   const [selectedGameId, setSelectedGameId] = useState<GameId | null>(null);
   const [selectedGameMode, setSelectedGameMode] = useState<GameMode | null>(null);
@@ -48,6 +58,7 @@ function App() {
   const [showProfileSetup, setShowProfileSetup] = useState(false);
   const [isEnteringGame, setIsEnteringGame] = useState(false);
   const recordedPlaySessionKeyRef = useRef<number | null>(null);
+  const introMusicTimerRef = useRef<number | null>(null);
   const { getSpeakProps } = useSpeech(settings.voiceEnabled);
 
   const selectedGame = useMemo(
@@ -57,11 +68,41 @@ function App() {
 
   useEffect(() => {
     preloadCriticalAssets();
+    preloadCriticalAudio();
   }, []);
 
   useEffect(() => {
-    configureSoundEffects(settings.soundEffectsEnabled);
-  }, [settings.soundEffectsEnabled]);
+    configureAudio({
+      musicEnabled: settings.musicEnabled,
+      narrationEnabled: settings.narrationEnabled,
+      soundEffectsEnabled: settings.soundEffectsEnabled
+    });
+  }, [settings.musicEnabled, settings.narrationEnabled, settings.soundEffectsEnabled]);
+
+  useEffect(() => {
+    if (showLanding || showProfileSetup) {
+      stopMusic();
+      return;
+    }
+    if (result) {
+      playMusic('summary');
+      return;
+    }
+    if (selectedGameId && !isEnteringGame && quizGameIds.includes(selectedGameId) && !selectedGameMode) {
+      playMusic('modeSelection');
+      return;
+    }
+    if (selectedGameId && !isEnteringGame) {
+      playMusic(selectedGameId);
+      return;
+    }
+    if (!selectedGameId && introMusicTimerRef.current === null) playMusic('home');
+  }, [isEnteringGame, result, selectedGameId, selectedGameMode, showLanding, showProfileSetup]);
+
+  useEffect(() => () => {
+    if (introMusicTimerRef.current !== null) window.clearTimeout(introMusicTimerRef.current);
+    stopMusic(0);
+  }, []);
 
   useEffect(() => {
     let isActive = true;
@@ -104,10 +145,15 @@ function App() {
   }
 
   function handleSelectGame(gameId: GameId) {
+    if (introMusicTimerRef.current !== null) {
+      window.clearTimeout(introMusicTimerRef.current);
+      introMusicTimerRef.current = null;
+    }
     const nextGame = gameDefinitions.find((game) => game.id === gameId);
     const assetsToPreload = [nextGame?.backgroundAssetId, nextGame?.imageAssetId]
       .filter((assetId): assetId is ImageAssetId => Boolean(assetId));
     preloadImageAssets(assetsToPreload);
+    preloadAudio([musicTracks[gameId], musicTracks.modeSelection]);
     window.scrollTo({ top: 0, behavior: 'smooth' });
     setSelectedGameId(gameId);
     setSelectedGameMode(null);
@@ -121,6 +167,8 @@ function App() {
     if (recordedPlaySessionKeyRef.current === playSessionKey) return;
     recordedPlaySessionKeyRef.current = playSessionKey;
     playAudioCue('levelComplete');
+    if (stars > 0) window.setTimeout(() => playSfx('starReward'), 420);
+    if (stars === 3) window.setTimeout(() => playSfx('confetti'), 850);
     setResult({ score, total, stars });
     if (!selectedGame || !selectedGameId) return;
 
@@ -155,6 +203,19 @@ function App() {
     setResult(null);
     recordedPlaySessionKeyRef.current = null;
     setPlaySessionKey((previous) => previous + 1);
+  }
+
+  function handleStartFromLanding() {
+    if (!learner.profileCompleted) {
+      setShowProfileSetup(true);
+      return;
+    }
+    setShowLanding(false);
+    playMusic('mainThemeShort', { loop: false, crossfadeMs: 120 });
+    introMusicTimerRef.current = window.setTimeout(() => {
+      introMusicTimerRef.current = null;
+      if (!selectedGameId) playMusic('home');
+    }, 15000);
   }
 
   function handleSelectMode(mode: GameMode) {
@@ -270,7 +331,7 @@ function App() {
   }
 
   if (showLanding) {
-    return <LandingPage voiceEnabled={settings.voiceEnabled} onStart={() => learner.profileCompleted ? setShowLanding(false) : setShowProfileSetup(true)} />;
+    return <LandingPage voiceEnabled={settings.voiceEnabled} onStart={handleStartFromLanding} />;
   }
 
   return (

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "format": "mp3",
+  "assets": [
+    { "id": "music-game-of-discoveries", "file": "music/game-of-discoveries.mp3", "durationSeconds": 179.67, "usage": "Home, summary, sorting" },
+    { "id": "music-garden-gate", "file": "music/garden-gate.mp3", "durationSeconds": 30.41, "usage": "Mode selection, matching" },
+    { "id": "music-letters-garden", "file": "music/letters-garden.mp3", "durationSeconds": 30.54, "usage": "Letters" },
+    { "id": "music-painted-garden-gate", "file": "music/painted-garden-gate.mp3", "durationSeconds": 30.59, "usage": "Colors" },
+    { "id": "music-sunlight-on-the-bookshelf", "file": "music/sunlight-on-the-bookshelf.mp3", "durationSeconds": 30.28, "usage": "Numbers, memory" },
+    { "id": "music-polygons-at-play", "file": "music/polygons-at-play.mp3", "durationSeconds": 30.77, "usage": "Shapes, patterns" }
+  ]
+}

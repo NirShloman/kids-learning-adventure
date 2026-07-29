@@ -27,6 +27,10 @@ interface VersionOneLearner {
   updatedAt: string;
 }
 
+interface VersionTwoLearner extends Omit<LocalLearnerState, 'schemaVersion' | 'musicEnabled'> {
+  schemaVersion: 2;
+}
+
 interface LegacySession extends Omit<LocalGameSession, 'id'> {
   id?: string;
   playerId?: string;
@@ -35,7 +39,7 @@ interface LegacySession extends Omit<LocalGameSession, 'id'> {
 type RecentContentMap = Record<string, string[]>;
 
 const defaultLearner: LocalLearnerState = {
-  schemaVersion: 2,
+  schemaVersion: 3,
   name: '',
   gender: null,
   profileCompleted: false,
@@ -44,6 +48,7 @@ const defaultLearner: LocalLearnerState = {
   voiceEnabled: true,
   narrationEnabled: true,
   soundEffectsEnabled: true,
+  musicEnabled: true,
   migratedFromLegacy: false,
   updatedAt: new Date(0).toISOString()
 };
@@ -102,8 +107,34 @@ function migrateLegacyState(): LocalLearnerState {
 }
 
 export function getLocalLearnerState(): LocalLearnerState {
-  const stored = readStorage<LocalLearnerState | VersionOneLearner | null>(LEARNER_KEY, null);
-  if (stored?.schemaVersion === 2) return stored;
+  const stored = readStorage<LocalLearnerState | VersionTwoLearner | VersionOneLearner | null>(LEARNER_KEY, null);
+  if (stored?.schemaVersion === 3) return {
+    ...defaultLearner,
+    ...stored,
+    narrationEnabled: typeof stored.narrationEnabled === 'boolean'
+      ? stored.narrationEnabled
+      : defaultLearner.narrationEnabled,
+    voiceEnabled: typeof stored.narrationEnabled === 'boolean'
+      ? stored.narrationEnabled
+      : defaultLearner.voiceEnabled,
+    soundEffectsEnabled: typeof stored.soundEffectsEnabled === 'boolean'
+      ? stored.soundEffectsEnabled
+      : defaultLearner.soundEffectsEnabled,
+    musicEnabled: typeof stored.musicEnabled === 'boolean'
+      ? stored.musicEnabled
+      : defaultLearner.musicEnabled
+  };
+  if (stored?.schemaVersion === 2) {
+    const migrated: LocalLearnerState = {
+      ...stored,
+      schemaVersion: 3,
+      voiceEnabled: stored.narrationEnabled,
+      musicEnabled: true,
+      updatedAt: new Date().toISOString()
+    };
+    writeStorage(LEARNER_KEY, migrated);
+    return migrated;
+  }
   if (stored?.schemaVersion === 1) {
     const migrated: LocalLearnerState = {
       ...defaultLearner,
@@ -112,6 +143,7 @@ export function getLocalLearnerState(): LocalLearnerState {
       voiceEnabled: stored.voiceEnabled,
       narrationEnabled: stored.voiceEnabled,
       soundEffectsEnabled: true,
+      musicEnabled: true,
       migratedFromLegacy: stored.migratedFromLegacy,
       updatedAt: new Date().toISOString()
     };
