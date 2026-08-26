@@ -16,6 +16,7 @@ The authoritative working register is `docs/legal/ASSET_RIGHTS_REGISTER.csv`, ge
 | Claude Design renders and derivatives | Manifests and cut files exist, but the documented source `uploads/pasted-1785302721105-0.png` is missing; no generation receipt or terms snapshot | `BLOCKED_UNVERIFIED` |
 | Deterministically generated experience props | Runtime manifest and generation scripts exist; authorship/assignment and all upstream inputs are not independently evidenced | `UNVERIFIED` |
 | Other project images, SVGs, icons, text, and educational content | Files and Git history exist; no author declaration/assignment or external-source review evidence | `UNVERIFIED` |
+| Yadaale brand kit in `assets/brand/source` and generated runtime derivatives | Six PNG files supplied directly by the repository owner on 2026-08-26; generation records, source-layer files, and rights documentation were not supplied | `UNVERIFIED_USER_SUPPLIED` |
 | Rubik font files | `@fontsource/rubik` 5.3.0 and SIL OFL 1.1 text are present; notices are distributed | `APPROVED_LICENSE_VERIFIED` |
 | Runtime open-source software | Package versions and license texts are documented in `THIRD_PARTY_NOTICES` | `APPROVED_LICENSE_VERIFIED`, subject to preserving notices |
 | Optional `.riv` exports | No `.riv` runtime asset was found | Not distributed |

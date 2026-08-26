@@ -29,9 +29,9 @@ export function LandingPage({ voiceEnabled, onStart }: LandingPageProps) {
     <main className="welcome" dir="rtl">
       <div className="welcome__shade" aria-hidden="true" />
       <section className="welcome__content" aria-labelledby="welcome-title">
-        <BrandLogo className="welcome__logo" variant="mark" decorative />
+        <BrandLogo className="welcome__logo" variant="full" tagline="" decorative />
         <div className="welcome__copy">
-          <h1 id="welcome-title">{brand.hebrewName}</h1>
+          <h1 id="welcome-title" className="visually-hidden">{brand.hebrewName}</h1>
           <p>{brand.tagline}</p>
           <span>{brand.descriptor} {brand.ageDescriptor}</span>
         </div>

@@ -1,5 +1,12 @@
-const CACHE_NAME = 'yedale-v1.3.0-media-20260826';
-const STATIC_ASSETS = ['/', '/manifest.webmanifest', '/icons/icon.svg'];
+const CACHE_NAME = 'yedale-v1.3.1-brand-20260826';
+const STATIC_ASSETS = [
+  '/',
+  '/manifest.webmanifest',
+  '/icons/favicon-32.png',
+  '/icons/icon-192.png',
+  '/assets/brand/yadaale-mark.webp',
+  '/assets/brand/yadaale-logo-horizontal.webp'
+];
 
 function isSameOriginRequest(request) {
   return new URL(request.url).origin === self.location.origin;

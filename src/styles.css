@@ -55,6 +55,18 @@ body { min-width: 320px; overflow-x: hidden; }
 button, input, select, textarea { font: inherit; }
 button { touch-action: manipulation; -webkit-tap-highlight-color: transparent; user-select: none; }
 
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
 .app-shell {
   width: min(1200px, calc(100% - 32px));
   margin: 0 auto;
@@ -198,19 +210,28 @@ button { touch-action: manipulation; -webkit-tap-highlight-color: transparent; u
   width: 72px;
   height: 72px;
   flex: 0 0 auto;
-  border-radius: 22px;
+  object-fit: contain;
   filter: drop-shadow(0 14px 24px rgb(60 73 104 / .16));
+}
+
+.brand-logo__wordmark {
+  display: block;
+  width: clamp(220px, 28vw, 360px);
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 24px rgb(60 73 104 / .16));
+}
+
+.brand-logo--full {
+  display: grid;
+  justify-items: start;
+  gap: 5px;
 }
 
 .brand-logo__text {
   display: grid;
   gap: 2px;
   line-height: 1.05;
-}
-
-.brand-logo__text strong {
-  font-size: 1.55rem;
-  font-weight: 900;
 }
 
 .brand-logo__text span {
@@ -3094,10 +3115,8 @@ body {
   gap: clamp(18px, 3vh, 28px);
 }
 
-.welcome__logo .brand-logo__mark {
-  width: clamp(76px, 9vw, 112px);
-  height: clamp(76px, 9vw, 112px);
-  border-radius: 24px;
+.welcome__logo .brand-logo__wordmark {
+  width: clamp(300px, 38vw, 460px);
 }
 
 .welcome__logo .brand-logo__text strong {
@@ -3515,7 +3534,7 @@ body {
 
   .welcome__shade { background: linear-gradient(180deg, rgb(255 255 255 / .96) 0 50%, rgb(255 255 255 / .42)); }
   .welcome__content { grid-column: 1; grid-row: 1; width: 100%; gap: 14px; z-index: 2; }
-  .welcome__logo .brand-logo__mark { width: 68px; height: 68px; }
+  .welcome__logo .brand-logo__wordmark { width: min(100%, 360px); }
   .welcome__logo .brand-logo__text strong { font-size: 1.6rem; }
   .welcome__copy h1 { font-size: clamp(2.3rem, 12vw, 3.5rem); }
   .welcome__copy p { font-size: 1.25rem; }
@@ -3535,7 +3554,7 @@ body {
 
 @media (max-width: 380px) and (max-height: 620px) {
   .welcome { padding: 14px 16px; }
-  .welcome__logo .brand-logo__mark { width: 54px; height: 54px; }
+  .welcome__logo .brand-logo__wordmark { width: min(100%, 300px); }
   .welcome__logo .brand-logo__text strong { font-size: 1.35rem; }
   .welcome__logo .brand-logo__text span { font-size: .78rem; }
   .welcome__copy h1 { font-size: 2.15rem; }
