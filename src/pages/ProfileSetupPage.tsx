@@ -5,7 +5,7 @@ import { BrandLogo } from '../components/common/BrandLogo';
 
 interface ProfileSetupPageProps {
   learner: LocalLearnerState;
-  onSave: (name: string, gender: LearnerGender) => void;
+  onSave: (name: string, gender: LearnerGender | null) => void;
 }
 
 export function ProfileSetupPage({ learner, onSave }: ProfileSetupPageProps) {
@@ -13,11 +13,11 @@ export function ProfileSetupPage({ learner, onSave }: ProfileSetupPageProps) {
   const [gender, setGender] = useState<LearnerGender | null>(learner.gender);
   const [showErrors, setShowErrors] = useState(false);
   const normalizedName = normalizeHebrewName(name);
-  const nameIsValid = isValidHebrewName(normalizedName);
+  const nameIsValid = normalizedName.length === 0 || isValidHebrewName(normalizedName);
 
   function handleSubmit(event: FormEvent) {
     event.preventDefault();
-    if (!nameIsValid || !gender) {
+    if (!nameIsValid) {
       setShowErrors(true);
       return;
     }
@@ -33,33 +33,36 @@ export function ProfileSetupPage({ learner, onSave }: ProfileSetupPageProps) {
         <p>הפרטים נשמרים רק במכשיר הזה.</p>
 
         <label className="profile-setup__field" htmlFor="learner-name">
-          <span>איך קוראים לך?</span>
+          <span>כינוי (אופציונלי)</span>
           <input
             id="learner-name"
             value={name}
             onChange={(event) => setName(event.target.value)}
-            autoComplete="name"
+            autoComplete="off"
             inputMode="text"
             maxLength={30}
-            placeholder="השם שלי"
+            placeholder="אפשר לדלג"
             aria-invalid={showErrors && !nameIsValid}
             autoFocus
           />
         </label>
-        {showErrors && !nameIsValid ? <p className="profile-setup__error" role="alert">נא לכתוב שם בעברית.</p> : null}
+        {showErrors && !nameIsValid ? <p className="profile-setup__error" role="alert">אם בוחרים כינוי, יש לכתוב אותו בעברית.</p> : null}
 
         <fieldset className="profile-setup__gender">
-          <legend>איך לפנות אליך?</legend>
+          <legend>איזו דמות תלווה אותך? (אופציונלי)</legend>
           <button type="button" className={gender === 'boy' ? 'is-selected' : ''} aria-pressed={gender === 'boy'} onClick={() => setGender('boy')}>
             <span aria-hidden="true">👦</span>
-            אני בן
+            ניר
           </button>
           <button type="button" className={gender === 'girl' ? 'is-selected' : ''} aria-pressed={gender === 'girl'} onClick={() => setGender('girl')}>
             <span aria-hidden="true">👧</span>
-            אני בת
+            שיר
+          </button>
+          <button type="button" className={gender === null ? 'is-selected' : ''} aria-pressed={gender === null} onClick={() => setGender(null)}>
+            <span aria-hidden="true">✨</span>
+            בלי העדפה
           </button>
         </fieldset>
-        {showErrors && !gender ? <p className="profile-setup__error" role="alert">נא לבחור איך לפנות אליך.</p> : null}
 
         <button className="profile-setup__submit" type="submit">יאללה, מתחילים!</button>
       </form>

@@ -2,6 +2,7 @@ import { BrandLogo } from '../components/common/BrandLogo';
 import { AmbientVideo } from '../components/common/AmbientVideo';
 import { GameImage } from '../components/common/GameImage';
 import { useSpeech } from '../hooks/useSpeech';
+import { brand } from '../config/brand';
 
 interface LandingPageProps {
   voiceEnabled: boolean;
@@ -12,7 +13,7 @@ export function LandingPage({ voiceEnabled, onStart }: LandingPageProps) {
   const { speak, getSpeakProps } = useSpeech(voiceEnabled);
 
   function handleStart() {
-    speak('מתחילים לשחק וללמוד בכיף.');
+    speak('מתחילים לשחק ולגלות עם ידעלה.');
     onStart();
   }
 
@@ -30,9 +31,9 @@ export function LandingPage({ voiceEnabled, onStart }: LandingPageProps) {
       <section className="welcome__content" aria-labelledby="welcome-title">
         <BrandLogo className="welcome__logo" variant="mark" decorative />
         <div className="welcome__copy">
-          <h1 id="welcome-title">לומדים בכיף</h1>
-          <p>משחקי למידה בעברית</p>
-          <span>לילדים בגילאי 3–6</span>
+          <h1 id="welcome-title">{brand.hebrewName}</h1>
+          <p>{brand.tagline}</p>
+          <span>{brand.descriptor} {brand.ageDescriptor}</span>
         </div>
         <button
           type="button"
@@ -47,6 +48,7 @@ export function LandingPage({ voiceEnabled, onStart }: LandingPageProps) {
 
       <AmbientVideo
         src="/assets/video/learning-garden-welcome.mp4"
+        poster="/assets/video/learning-garden-welcome.poster.webp"
         className="welcome-motion"
         fallback={fallback}
         ariaLabel="שיר וניר מזמינים את הילדים להרפתקת למידה"

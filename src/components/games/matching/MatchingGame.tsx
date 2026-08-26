@@ -9,6 +9,7 @@ import { GameWorld, GameWorldMessage } from '../GameWorld';
 import { GameImage } from '../../common/GameImage';
 import { playAudioCue, playRecordedVoice } from '../../../services/audioService';
 import { motion } from 'motion/react';
+import { recordActiveAttempt } from '../../../services/learningEvidenceService';
 
 interface MatchingGameProps {
   age: Age;
@@ -62,6 +63,8 @@ export function MatchingGame({ age, difficulty, voiceEnabled, onBack, onFinish }
   function checkMatch(leftId: string | null, rightId: string | null) {
     if (!leftId || !rightId) return;
     setTries((previous) => previous + 1);
+    const evidencePair = pairs.find((pair) => pair.id === leftId) ?? pairs.find((pair) => pair.id === rightId);
+    if (evidencePair) recordActiveAttempt(evidencePair, 'matching', leftId === rightId, { attemptNumber: tries + 1 });
 
     if (leftId === rightId) {
       playAudioCue('match');

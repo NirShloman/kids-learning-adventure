@@ -1,4 +1,4 @@
-"""Build production/runtime character atlases from approved transparent key poses."""
+"""Build production/runtime character atlases from configured transparent key poses."""
 
 from __future__ import annotations
 

@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs';
 import Ajv2020 from 'ajv/dist/2020.js';
+import { createHash } from 'node:crypto';
 
 const games = ['letters', 'numbers', 'shapes', 'colors', 'matching', 'memory', 'patterns', 'sorting'];
 const ages = [3, 4, 5, 6];
@@ -114,9 +115,15 @@ if (reviewIds.length !== allIds.size) errors.push(`review-status: expected ${all
 for (const reviewId of reviewIds) {
   if (!allIds.has(reviewId)) errors.push(`${reviewId}: orphan review record`);
   const review = reviewFile.reviews[reviewId];
-  if (review.linguistic !== 'approved' || review.conceptual !== 'approved' || review.ageFit !== 'approved') {
-    errors.push(`${reviewId}: all three review gates must be approved`);
-  }
+  const contentItem = allItems.find(({ item }) => item.id === reviewId)?.item;
+  const expectedHash = contentItem ? createHash('sha256').update(JSON.stringify(contentItem)).digest('hex') : '';
+  if (review.contentHash !== expectedHash) errors.push(`${reviewId}: review hash does not match pedagogical content`);
+  const legacyApproved = review.status === 'legacy-approved' && review.provenance === 'legacy-2026.07.1'
+    && review.reviewer === null && review.expertise === null;
+  const fullyApproved = review.status === 'approved' && review.reviewer?.trim() && review.expertise?.trim()
+    && review.clarity === 'approved';
+  if (!legacyApproved && !fullyApproved) errors.push(`${reviewId}: release requires a hash-matched legacy approval or complete professional approval`);
+  if (review.linguistic !== 'approved' || review.conceptual !== 'approved' || review.ageFit !== 'approved') errors.push(`${reviewId}: all three review gates must be approved`);
 }
 
 const memoryValues = allItems.filter(({ gameId }) => gameId === 'memory').map(({ item }) => normalize(item.value));

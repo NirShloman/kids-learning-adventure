@@ -34,7 +34,11 @@
           "label": "🟦"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-002",
@@ -68,7 +72,12 @@
           "label": "🟦"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-003",
@@ -101,7 +110,14 @@
           "label": "6"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-004",
@@ -134,7 +150,11 @@
           "label": "🐱"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-005",
@@ -168,7 +188,12 @@
           "label": "🐱"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-006",
@@ -201,7 +226,14 @@
           "label": "5"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-007",
@@ -234,7 +266,11 @@
           "label": "🟡"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-008",
@@ -268,7 +304,12 @@
           "label": "🟡"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-009",
@@ -301,7 +342,14 @@
           "label": "4"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-010",
@@ -334,7 +382,11 @@
           "label": "🌙"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-011",
@@ -368,7 +420,12 @@
           "label": "🌙"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-012",
@@ -401,7 +458,14 @@
           "label": "7"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-013",
@@ -434,7 +498,11 @@
           "label": "🟦"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-014",
@@ -468,7 +536,12 @@
           "label": "🟦"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-015",
@@ -501,7 +574,14 @@
           "label": "6"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-016",
@@ -534,7 +614,11 @@
           "label": "🐱"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-017",
@@ -568,7 +652,12 @@
           "label": "🐱"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-018",
@@ -601,7 +690,14 @@
           "label": "5"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-019",
@@ -634,7 +730,11 @@
           "label": "🟡"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-020",
@@ -668,7 +768,12 @@
           "label": "🟡"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-021",
@@ -701,7 +806,14 @@
           "label": "4"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-022",
@@ -734,7 +846,11 @@
           "label": "🌙"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-023",
@@ -768,7 +884,12 @@
           "label": "🌙"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-024",
@@ -801,7 +922,14 @@
           "label": "7"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-025",
@@ -834,7 +962,11 @@
           "label": "🟦"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-026",
@@ -868,7 +1000,12 @@
           "label": "🟦"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-027",
@@ -901,7 +1038,14 @@
           "label": "6"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-028",
@@ -934,7 +1078,11 @@
           "label": "🐱"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-029",
@@ -968,7 +1116,12 @@
           "label": "🐱"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-030",
@@ -1001,7 +1154,14 @@
           "label": "5"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-031",
@@ -1034,7 +1194,11 @@
           "label": "🟡"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-032",
@@ -1068,7 +1232,12 @@
           "label": "🟡"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-033",
@@ -1101,7 +1270,14 @@
           "label": "8"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-034",
@@ -1134,7 +1310,11 @@
           "label": "🌙"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-035",
@@ -1168,7 +1348,12 @@
           "label": "🌙"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-036",
@@ -1201,7 +1386,14 @@
           "label": "11"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-037",
@@ -1234,7 +1426,11 @@
           "label": "🟦"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-038",
@@ -1268,7 +1464,12 @@
           "label": "🟦"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-039",
@@ -1301,7 +1502,14 @@
           "label": "10"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-040",
@@ -1334,7 +1542,11 @@
           "label": "🐱"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-041",
@@ -1368,7 +1580,12 @@
           "label": "🐱"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-042",
@@ -1401,7 +1618,14 @@
           "label": "9"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-043",
@@ -1434,7 +1658,11 @@
           "label": "🟡"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-044",
@@ -1468,7 +1696,12 @@
           "label": "🟡"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-045",
@@ -1501,7 +1734,14 @@
           "label": "8"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-046",
@@ -1534,7 +1774,11 @@
           "label": "🌙"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-047",
@@ -1568,7 +1812,12 @@
           "label": "🌙"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-048",
@@ -1601,7 +1850,14 @@
           "label": "11"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-049",
@@ -1634,7 +1890,11 @@
           "label": "🟦"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-050",
@@ -1668,7 +1928,12 @@
           "label": "🟦"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-051",
@@ -1701,7 +1966,14 @@
           "label": "10"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-052",
@@ -1734,7 +2006,11 @@
           "label": "🐱"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-053",
@@ -1768,7 +2044,12 @@
           "label": "🐱"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-054",
@@ -1801,7 +2082,14 @@
           "label": "9"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-055",
@@ -1834,7 +2122,11 @@
           "label": "🟡"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-056",
@@ -1868,7 +2160,12 @@
           "label": "🟡"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-057",
@@ -1901,7 +2198,14 @@
           "label": "8"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-058",
@@ -1934,7 +2238,11 @@
           "label": "🌙"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-059",
@@ -1968,7 +2276,12 @@
           "label": "🌙"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-060",
@@ -2001,7 +2314,14 @@
           "label": "11"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-061",
@@ -2034,7 +2354,11 @@
           "label": "🟦"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-062",
@@ -2068,7 +2392,12 @@
           "label": "🟦"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-063",
@@ -2101,7 +2430,14 @@
           "label": "14"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-064",
@@ -2134,7 +2470,11 @@
           "label": "🐱"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-065",
@@ -2168,7 +2508,12 @@
           "label": "🐱"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-066",
@@ -2201,7 +2546,14 @@
           "label": "13"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-067",
@@ -2234,7 +2586,11 @@
           "label": "🟡"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-068",
@@ -2268,7 +2624,12 @@
           "label": "🟡"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-069",
@@ -2301,7 +2662,14 @@
           "label": "12"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-070",
@@ -2334,7 +2702,11 @@
           "label": "🌙"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-071",
@@ -2368,7 +2740,12 @@
           "label": "🌙"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-072",
@@ -2401,7 +2778,14 @@
           "label": "15"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-073",
@@ -2434,7 +2818,11 @@
           "label": "🟦"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-074",
@@ -2468,7 +2856,12 @@
           "label": "🟦"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-075",
@@ -2501,7 +2894,14 @@
           "label": "14"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-076",
@@ -2534,7 +2934,11 @@
           "label": "🐱"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-077",
@@ -2568,7 +2972,12 @@
           "label": "🐱"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-078",
@@ -2601,7 +3010,14 @@
           "label": "13"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-079",
@@ -2634,7 +3050,11 @@
           "label": "🟡"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-080",
@@ -2668,7 +3088,12 @@
           "label": "🟡"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-081",
@@ -2701,7 +3126,14 @@
           "label": "12"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-082",
@@ -2734,7 +3166,11 @@
           "label": "🌙"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-083",
@@ -2768,7 +3204,12 @@
           "label": "🌙"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-084",
@@ -2801,7 +3242,14 @@
           "label": "15"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-085",
@@ -2834,7 +3282,11 @@
           "label": "🟦"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-086",
@@ -2868,7 +3320,12 @@
           "label": "🟦"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-087",
@@ -2901,7 +3358,14 @@
           "label": "14"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-088",
@@ -2934,7 +3398,11 @@
           "label": "🐱"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-089",
@@ -2968,7 +3436,12 @@
           "label": "🐱"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-090",
@@ -3001,7 +3474,14 @@
           "label": "13"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-091",
@@ -3034,7 +3514,11 @@
           "label": "🟡"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-092",
@@ -3068,7 +3552,12 @@
           "label": "🟡"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-093",
@@ -3101,7 +3590,14 @@
           "label": "12"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-094",
@@ -3134,7 +3630,11 @@
           "label": "🌙"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-095",
@@ -3168,7 +3668,12 @@
           "label": "🌙"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-096",
@@ -3201,7 +3706,14 @@
           "label": "15"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-097",
@@ -3234,7 +3746,11 @@
           "label": "🟦"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-098",
@@ -3268,7 +3784,12 @@
           "label": "🟦"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-099",
@@ -3301,7 +3822,14 @@
           "label": "14"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-100",
@@ -3334,7 +3862,11 @@
           "label": "🐱"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-101",
@@ -3368,7 +3900,12 @@
           "label": "🐱"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-102",
@@ -3401,7 +3938,14 @@
           "label": "13"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-103",
@@ -3434,7 +3978,11 @@
           "label": "🟡"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-104",
@@ -3468,7 +4016,12 @@
           "label": "🟡"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-105",
@@ -3501,7 +4054,14 @@
           "label": "12"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-106",
@@ -3534,7 +4094,11 @@
           "label": "🌙"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-107",
@@ -3568,7 +4132,12 @@
           "label": "🌙"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-108",
@@ -3601,7 +4170,14 @@
           "label": "15"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "cognition.sequence",
+        "math.numeral-recognition",
+        "cognition.problem-solving",
+        "readiness.grade-one"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-109",
@@ -3634,7 +4210,11 @@
           "label": "🟦"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "cognition.sequence"
+      ],
+      "evidenceForm": "sequence"
     },
     {
       "id": "patterns-110",
@@ -3668,7 +4248,12 @@
           "label": "🟦"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "cognition.sequence",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "sequence"
     }
   ]
 }

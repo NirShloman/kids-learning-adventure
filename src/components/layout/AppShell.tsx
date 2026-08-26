@@ -1,6 +1,7 @@
 import { PropsWithChildren, ReactNode } from 'react';
 import { AppVersion } from '../common/AppVersion';
 import { BrandLogo } from '../common/BrandLogo';
+import { brand } from '../../config/brand';
 
 interface AppShellProps {
   title: string;
@@ -16,7 +17,7 @@ export function AppShell({ title, subtitle, rightSlot, compact = false, children
         <div className="hero-card__identity">
           <BrandLogo variant="mark" className="hero-card__logo-mark" decorative />
           <div className="hero-card__content">
-            <span className="hero-card__eyebrow">לומדים בכיף</span>
+            <span className="hero-card__eyebrow">{brand.hebrewName}</span>
             <h1>{title}</h1>
             <p>{subtitle}</p>
           </div>

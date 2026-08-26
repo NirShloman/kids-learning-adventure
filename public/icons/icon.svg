@@ -1,35 +1,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <defs>
-    <linearGradient id="sky" x1="64" y1="40" x2="448" y2="472" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#fff6c9"/>
-      <stop offset=".38" stop-color="#a7dcff"/>
-      <stop offset=".7" stop-color="#f6abc9"/>
-      <stop offset="1" stop-color="#8edbd1"/>
+    <linearGradient id="field" x1="48" y1="32" x2="472" y2="488" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6659D4"/>
+      <stop offset=".54" stop-color="#4338A8"/>
+      <stop offset="1" stop-color="#2A236F"/>
     </linearGradient>
-    <linearGradient id="book" x1="112" y1="256" x2="404" y2="392" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#ffffff"/>
-      <stop offset="1" stop-color="#fff6c9"/>
+    <linearGradient id="leaf" x1="136" y1="108" x2="368" y2="408" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#B9F1DE"/>
+      <stop offset=".52" stop-color="#63D3B1"/>
+      <stop offset="1" stop-color="#32A98C"/>
     </linearGradient>
+    <linearGradient id="vein" x1="204" y1="152" x2="312" y2="376" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF9EE"/>
+      <stop offset="1" stop-color="#FFE7A2"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(136 112) rotate(46) scale(144)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD45A" stop-opacity=".54"/>
+      <stop offset="1" stop-color="#FFD45A" stop-opacity="0"/>
+    </radialGradient>
     <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
-      <feDropShadow dx="0" dy="36" stdDeviation="28" flood-color="#31415c" flood-opacity=".18"/>
+      <feDropShadow dx="0" dy="32" stdDeviation="24" flood-color="#17134A" flood-opacity=".32"/>
     </filter>
   </defs>
-
-  <rect width="512" height="512" rx="128" fill="url(#sky)"/>
-  <path d="M84 160c80-72 264-72 344 0" fill="none" stroke="#fff6c9" stroke-width="44" stroke-linecap="round" opacity=".92"/>
-  <path d="M116 180c60-48 220-48 280 0" fill="none" stroke="#ffffff" stroke-width="32" stroke-linecap="round" opacity=".78"/>
-
+  <rect width="512" height="512" rx="128" fill="url(#field)"/>
+  <circle cx="136" cy="112" r="136" fill="url(#glow)"/>
+  <path d="M56 404C128 344 176 336 228 356c72 28 148-4 228-92" fill="none" stroke="#786DE0" stroke-width="8" stroke-linecap="round" opacity=".7"/>
+  <path d="M388 76c40 36 60 76 64 128" fill="none" stroke="#A39AF0" stroke-width="12" stroke-linecap="round" opacity=".5"/>
   <g filter="url(#shadow)">
-    <path d="M104 272c52-32 104-28 152 12v128c-48-36-100-40-152-12V272Z" fill="url(#book)"/>
-    <path d="M408 272c-52-32-104-28-152 12v128c48-36 100-40 152-12V272Z" fill="#ffffff"/>
-    <path d="M256 284v128" stroke="#8edbd1" stroke-width="12" stroke-linecap="round"/>
-    <path d="M140 312c28-12 56-8 84 8M140 352c28-12 56-8 84 8M288 320c28-16 56-16 84-4M288 360c28-16 56-16 84-4" stroke="#b9adff" stroke-width="12" stroke-linecap="round" opacity=".72"/>
+    <path d="M256 88C152 116 108 200 136 300c24 88 88 124 124 136 60-32 116-92 120-176 4-88-44-148-124-172Z" fill="#FF796B" opacity=".72" transform="translate(12 8)"/>
+    <path d="M256 84C156 112 112 196 136 292c20 84 80 124 120 140 64-32 116-92 120-176 4-88-44-148-120-172Z" fill="url(#leaf)"/>
+    <path d="M256 396c-4-76 0-132 4-184M260 256c-48-32-68-72-72-112M260 256c48-32 72-72 72-116" fill="none" stroke="url(#vein)" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M168 220c20-8 32-24 40-48M332 216c-20-8-32-24-40-44M180 300c20-8 32-20 40-40M324 296c-20-8-32-20-40-40" fill="none" stroke="#E7FFF5" stroke-width="10" stroke-linecap="round" opacity=".9"/>
   </g>
-
-  <circle cx="136" cy="124" r="40" fill="#fff6c9"/>
-  <circle cx="392" cy="136" r="32" fill="#ffffff" opacity=".88"/>
-  <path d="m368 76 12 28 32 4-24 20 8 32-28-16-28 16 8-32-24-20 32-4 12-28Z" fill="#ffe58f" stroke="#ffffff" stroke-width="8"/>
-
-  <text x="256" y="252" text-anchor="middle" font-family="Rubik, Arial, sans-serif" font-size="172" font-weight="900" fill="#31415c">א</text>
-  <text x="252" y="464" text-anchor="middle" font-family="Rubik, Arial, sans-serif" font-size="72" font-weight="900" fill="#31415c">123</text>
+  <circle cx="260" cy="112" r="24" fill="#FFD45A"/>
+  <path d="m400 96 10 24 26 4-20 18 6 26-22-14-22 14 6-26-20-18 26-4 10-24Z" fill="#FFD45A"/>
+  <circle cx="412" cy="304" r="16" fill="#FFE7A2"/>
 </svg>

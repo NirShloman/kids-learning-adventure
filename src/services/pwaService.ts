@@ -1,4 +1,5 @@
 // Service Worker registration for PWA functionality
+import { platformRuntime } from './platformRuntime';
 
 async function unregisterDevelopmentServiceWorkers(): Promise<void> {
   const registrations = await navigator.serviceWorker.getRegistrations();
@@ -11,6 +12,7 @@ async function unregisterDevelopmentServiceWorkers(): Promise<void> {
 }
 
 export async function registerServiceWorker(): Promise<void> {
+  if (platformRuntime.native) return;
   if (!('serviceWorker' in navigator)) {
     return;
   }

@@ -9,6 +9,7 @@ import { gameInstructions } from '../../../data/gameInstructions';
 import { GameWorld, GameWorldMessage } from '../GameWorld';
 import { AnimatedFeedback } from '../../common/AnimatedFeedback';
 import { motion } from 'motion/react';
+import { recordActiveAttempt } from '../../../services/learningEvidenceService';
 
 interface PatternGameProps {
   age: Age;
@@ -78,6 +79,7 @@ export function PatternGame({ age, difficulty, voiceEnabled, onBack, onFinish }:
     setIsAnswered(true);
     speak(message);
     if (isCorrect) setScore((previous) => previous + 1);
+    recordActiveAttempt(currentPuzzle, 'patterns', isCorrect);
   }
 
   function nextPuzzle() {

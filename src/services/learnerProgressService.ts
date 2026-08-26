@@ -1,192 +1,54 @@
+import type { LearnerSettings, LocalGameSession, LocalLearnerState } from '../types';
 import {
-  Difficulty,
-  LearnerSettings,
-  LocalGameSession,
-  LocalLearnerState
-} from '../types';
+  createProfile, deleteAllLearningData, getActiveProfile, getLearningSnapshot,
+  getProfileData, saveProfileRecentContent, saveSessionSummary, updateProfile
+} from './learningStoreService';
 
-const LEARNER_KEY = 'lomdim-bekef.learner.v1';
-const SESSIONS_KEY = 'lomdim-bekef.sessions.v1';
-const RECENT_CONTENT_KEY = 'lomdim-bekef.recent-content.v1';
-const LEGACY_PLAYERS_KEY = 'kids-learning-adventure.players';
-const LEGACY_SESSIONS_KEY = 'kids-learning-adventure.sessions';
-
-interface LegacyPlayer {
-  id: string;
-  age?: number;
-  difficulty?: Difficulty;
-  voiceEnabled?: boolean;
+function compatibilityState(): LocalLearnerState {
+  const profile = getActiveProfile();
+  if (!profile) return { schemaVersion: 3, name: '', gender: null, profileCompleted: false, age: 4,
+    difficulty: 'medium', voiceEnabled: true, narrationEnabled: true, soundEffectsEnabled: true,
+    musicEnabled: true, migratedFromLegacy: false, updatedAt: new Date(0).toISOString() };
+  return { schemaVersion: 3, name: profile.name, gender: profile.gender, profileCompleted: true,
+    age: profile.age, difficulty: profile.manualDifficulty, voiceEnabled: profile.narrationEnabled,
+    narrationEnabled: profile.narrationEnabled, soundEffectsEnabled: profile.soundEffectsEnabled,
+    musicEnabled: profile.musicEnabled, migratedFromLegacy: false, updatedAt: profile.updatedAt };
 }
 
-interface VersionOneLearner {
-  schemaVersion: 1;
-  age: number;
-  difficulty: Difficulty;
-  voiceEnabled: boolean;
-  migratedFromLegacy: boolean;
-  updatedAt: string;
-}
-
-interface VersionTwoLearner extends Omit<LocalLearnerState, 'schemaVersion' | 'musicEnabled'> {
-  schemaVersion: 2;
-}
-
-interface LegacySession extends Omit<LocalGameSession, 'id'> {
-  id?: string;
-  playerId?: string;
-}
-
-type RecentContentMap = Record<string, string[]>;
-
-const defaultLearner: LocalLearnerState = {
-  schemaVersion: 3,
-  name: '',
-  gender: null,
-  profileCompleted: false,
-  age: 4,
-  difficulty: 'medium',
-  voiceEnabled: true,
-  narrationEnabled: true,
-  soundEffectsEnabled: true,
-  musicEnabled: true,
-  migratedFromLegacy: false,
-  updatedAt: new Date(0).toISOString()
-};
-
-function readStorage<T>(key: string, fallback: T): T {
-  if (typeof window === 'undefined') return fallback;
-
-  try {
-    const value = window.localStorage.getItem(key);
-    return value ? JSON.parse(value) as T : fallback;
-  } catch {
-    return fallback;
-  }
-}
-
-function writeStorage<T>(key: string, value: T): void {
-  if (typeof window === 'undefined') return;
-  window.localStorage.setItem(key, JSON.stringify(value));
-}
-
-function isValidAge(value: number | undefined): value is LocalLearnerState['age'] {
-  return value === 3 || value === 4 || value === 5 || value === 6;
-}
-
-function isValidDifficulty(value: Difficulty | undefined): value is Difficulty {
-  return value === 'easy' || value === 'medium' || value === 'hard';
-}
-
-function migrateLegacyState(): LocalLearnerState {
-  const players = readStorage<LegacyPlayer[]>(LEGACY_PLAYERS_KEY, []);
-  const firstPlayer = players[0];
-  const migrated: LocalLearnerState = {
-    ...defaultLearner,
-    age: isValidAge(firstPlayer?.age) ? firstPlayer.age : defaultLearner.age,
-    difficulty: isValidDifficulty(firstPlayer?.difficulty) ? firstPlayer.difficulty : defaultLearner.difficulty,
-    voiceEnabled: typeof firstPlayer?.voiceEnabled === 'boolean' ? firstPlayer.voiceEnabled : defaultLearner.voiceEnabled,
-    narrationEnabled: typeof firstPlayer?.voiceEnabled === 'boolean' ? firstPlayer.voiceEnabled : defaultLearner.narrationEnabled,
-    migratedFromLegacy: Boolean(firstPlayer),
-    updatedAt: new Date().toISOString()
-  };
-
-  if (firstPlayer) {
-    const legacySessions = readStorage<LegacySession[]>(LEGACY_SESSIONS_KEY, []);
-    const migratedSessions = legacySessions
-      .filter((session) => !session.playerId || session.playerId === firstPlayer.id)
-      .map(({ playerId: _playerId, ...session }, index): LocalGameSession => ({
-        ...session,
-        id: session.id ?? `legacy-session-${index + 1}`
-      }))
-      .slice(0, 240);
-    writeStorage(SESSIONS_KEY, migratedSessions);
-  }
-
-  writeStorage(LEARNER_KEY, migrated);
-  return migrated;
-}
-
-export function getLocalLearnerState(): LocalLearnerState {
-  const stored = readStorage<LocalLearnerState | VersionTwoLearner | VersionOneLearner | null>(LEARNER_KEY, null);
-  if (stored?.schemaVersion === 3) return {
-    ...defaultLearner,
-    ...stored,
-    narrationEnabled: typeof stored.narrationEnabled === 'boolean'
-      ? stored.narrationEnabled
-      : defaultLearner.narrationEnabled,
-    voiceEnabled: typeof stored.narrationEnabled === 'boolean'
-      ? stored.narrationEnabled
-      : defaultLearner.voiceEnabled,
-    soundEffectsEnabled: typeof stored.soundEffectsEnabled === 'boolean'
-      ? stored.soundEffectsEnabled
-      : defaultLearner.soundEffectsEnabled,
-    musicEnabled: typeof stored.musicEnabled === 'boolean'
-      ? stored.musicEnabled
-      : defaultLearner.musicEnabled
-  };
-  if (stored?.schemaVersion === 2) {
-    const migrated: LocalLearnerState = {
-      ...stored,
-      schemaVersion: 3,
-      voiceEnabled: stored.narrationEnabled,
-      musicEnabled: true,
-      updatedAt: new Date().toISOString()
-    };
-    writeStorage(LEARNER_KEY, migrated);
-    return migrated;
-  }
-  if (stored?.schemaVersion === 1) {
-    const migrated: LocalLearnerState = {
-      ...defaultLearner,
-      age: isValidAge(stored.age) ? stored.age : defaultLearner.age,
-      difficulty: isValidDifficulty(stored.difficulty) ? stored.difficulty : defaultLearner.difficulty,
-      voiceEnabled: stored.voiceEnabled,
-      narrationEnabled: stored.voiceEnabled,
-      soundEffectsEnabled: true,
-      musicEnabled: true,
-      migratedFromLegacy: stored.migratedFromLegacy,
-      updatedAt: new Date().toISOString()
-    };
-    writeStorage(LEARNER_KEY, migrated);
-    return migrated;
-  }
-  return migrateLegacyState();
-}
+export function getLocalLearnerState(): LocalLearnerState { return compatibilityState(); }
 
 export function saveLearnerSettings(settings: LearnerSettings): LocalLearnerState {
-  const current = getLocalLearnerState();
-  const next: LocalLearnerState = {
-    ...current,
-    ...settings,
-    voiceEnabled: settings.narrationEnabled,
-    updatedAt: new Date().toISOString()
-  };
-  writeStorage(LEARNER_KEY, next);
-  return next;
+  const profile = getActiveProfile() ?? createProfile({});
+  const profileFields = settings as LearnerSettings & Partial<Pick<LocalLearnerState, 'name' | 'gender'>>;
+  updateProfile(profile.id, { age: settings.age, manualDifficulty: settings.difficulty,
+    narrationEnabled: settings.narrationEnabled, soundEffectsEnabled: settings.soundEffectsEnabled,
+    musicEnabled: settings.musicEnabled,
+    ...(profileFields.name !== undefined ? { name: profileFields.name } : {}),
+    ...(profileFields.gender !== undefined ? { gender: profileFields.gender } : {}) });
+  return compatibilityState();
 }
 
 export function getStoredSessions(): LocalGameSession[] {
-  getLocalLearnerState();
-  return readStorage<LocalGameSession[]>(SESSIONS_KEY, []);
+  const snapshot = getLearningSnapshot(); const profile = getActiveProfile(snapshot);
+  if (!profile) return [];
+  return getProfileData(profile.id, snapshot).sessions.map((session) => ({ id: session.id,
+    gameId: session.gameId ?? 'letters', gameTitle: session.gameId ?? 'תרגול מותאם', mode: 'quiz',
+    age: profile.age, difficulty: profile.manualDifficulty, score: session.correct, total: session.total,
+    stars: session.total ? Math.round((session.correct / session.total) * 3) : 0, completedAt: session.completedAt }));
 }
 
 export function saveGameSession(session: Omit<LocalGameSession, 'id' | 'completedAt'>): LocalGameSession {
-  const next: LocalGameSession = {
-    ...session,
-    id: typeof crypto !== 'undefined' && 'randomUUID' in crypto
-      ? `session-${crypto.randomUUID()}`
-      : `session-${Date.now()}-${Math.random().toString(16).slice(2)}`,
-    completedAt: new Date().toISOString()
-  };
-  writeStorage(SESSIONS_KEY, [next, ...getStoredSessions()].slice(0, 240));
-  return next;
+  const profile = getActiveProfile(); if (!profile) throw new Error('No active profile');
+  const completedAt = new Date().toISOString(); const id = `session-${Date.now()}-${Math.random().toString(16).slice(2)}`;
+  saveSessionSummary({ id, profileId: profile.id, gameId: session.gameId, mode: 'manual',
+    startedAt: completedAt, completedAt, durationSeconds: 0, correct: session.score, total: session.total });
+  return { ...session, id, completedAt };
 }
 
 export function getRecentContent(key: string): string[] {
-  return readStorage<RecentContentMap>(RECENT_CONTENT_KEY, {})[key] ?? [];
+  const profile = getActiveProfile(); return profile ? getProfileData(profile.id).recentContent[key] ?? [] : [];
 }
-
 export function saveRecentContent(key: string, ids: string[]): void {
-  const recent = readStorage<RecentContentMap>(RECENT_CONTENT_KEY, {});
-  writeStorage(RECENT_CONTENT_KEY, { ...recent, [key]: ids.slice(0, 20) });
+  const profile = getActiveProfile(); if (profile) saveProfileRecentContent(profile.id, key, ids);
 }
+export function resetLocalLearnerData(): Promise<void> { return deleteAllLearningData(); }

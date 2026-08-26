@@ -7,6 +7,13 @@ export type FacingDirection = 'front' | 'back' | 'left' | 'right';
 export type CharacterAnimationState = 'idle' | 'walk' | 'carry-walk' | 'pickup' | 'drop' | 'celebrate';
 export type CharacterSkin = 'nir-kippah' | 'nir-plain' | 'shir';
 export interface ExperienceVector { x: number; y: number }
+export interface ExperienceNavigationIntent {
+  target: ExperienceVector;
+  interactEntityId?: string;
+}
+export interface NavigationPath extends ExperienceNavigationIntent {
+  waypoints: ExperienceVector[];
+}
 export interface ExperienceVisualRef {
   assetId: string;
   state?: string;

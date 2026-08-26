@@ -12,7 +12,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🍎",
-      "right": "תפוח"
+      "right": "תפוח",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-002",
@@ -23,7 +28,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🍌",
-      "right": "בננה"
+      "right": "בננה",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-003",
@@ -34,7 +44,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🍇",
-      "right": "ענבים"
+      "right": "ענבים",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-004",
@@ -45,7 +60,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🍓",
-      "right": "תות"
+      "right": "תות",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-005",
@@ -56,7 +76,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🍉",
-      "right": "אבטיח"
+      "right": "אבטיח",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-006",
@@ -67,7 +92,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🍐",
-      "right": "אגס"
+      "right": "אגס",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-007",
@@ -78,7 +108,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🍑",
-      "right": "אפרסק"
+      "right": "אפרסק",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-008",
@@ -89,7 +124,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🍒",
-      "right": "דובדבנים"
+      "right": "דובדבנים",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-009",
@@ -100,7 +140,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🍍",
-      "right": "אננס"
+      "right": "אננס",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-010",
@@ -111,7 +156,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🍊",
-      "right": "תפוז"
+      "right": "תפוז",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-011",
@@ -122,7 +172,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🥕",
-      "right": "גזר"
+      "right": "גזר",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-012",
@@ -133,7 +188,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🍅",
-      "right": "עגבנייה"
+      "right": "עגבנייה",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-013",
@@ -144,7 +204,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🥒",
-      "right": "מלפפון"
+      "right": "מלפפון",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-014",
@@ -155,7 +220,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🌽",
-      "right": "תירס"
+      "right": "תירס",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-015",
@@ -166,7 +236,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🫑",
-      "right": "פלפל"
+      "right": "פלפל",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-016",
@@ -177,7 +252,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🥦",
-      "right": "ברוקולי"
+      "right": "ברוקולי",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-017",
@@ -188,7 +268,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🧅",
-      "right": "בצל"
+      "right": "בצל",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-018",
@@ -199,7 +284,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🥔",
-      "right": "תפוח אדמה"
+      "right": "תפוח אדמה",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-019",
@@ -210,7 +300,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🍆",
-      "right": "חציל"
+      "right": "חציל",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-020",
@@ -221,7 +316,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🥬",
-      "right": "חסה"
+      "right": "חסה",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-021",
@@ -232,7 +332,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🐶",
-      "right": "כלב"
+      "right": "כלב",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-022",
@@ -243,7 +348,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🐱",
-      "right": "חתול"
+      "right": "חתול",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-023",
@@ -254,7 +364,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🦁",
-      "right": "אריה"
+      "right": "אריה",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-024",
@@ -265,7 +380,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🐘",
-      "right": "פיל"
+      "right": "פיל",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-025",
@@ -276,7 +396,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🐒",
-      "right": "קוף"
+      "right": "קוף",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-026",
@@ -287,7 +412,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🐟",
-      "right": "דג"
+      "right": "דג",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-027",
@@ -298,7 +428,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🐦",
-      "right": "ציפור"
+      "right": "ציפור",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-028",
@@ -309,7 +444,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🐢",
-      "right": "צב"
+      "right": "צב",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-029",
@@ -320,7 +460,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🐰",
-      "right": "ארנב"
+      "right": "ארנב",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-030",
@@ -331,7 +476,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🦋",
-      "right": "פרפר"
+      "right": "פרפר",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-031",
@@ -342,7 +492,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "🚗",
-      "right": "מכונית"
+      "right": "מכונית",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-032",
@@ -353,7 +508,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "🚌",
-      "right": "אוטובוס"
+      "right": "אוטובוס",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-033",
@@ -364,7 +524,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "🚂",
-      "right": "רכבת"
+      "right": "רכבת",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-034",
@@ -375,7 +540,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "🚲",
-      "right": "אופניים"
+      "right": "אופניים",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-035",
@@ -386,7 +556,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "✈️",
-      "right": "מטוס"
+      "right": "מטוס",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-036",
@@ -397,7 +572,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "⛵",
-      "right": "סירה"
+      "right": "סירה",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-037",
@@ -408,7 +588,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "🚚",
-      "right": "משאית"
+      "right": "משאית",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-038",
@@ -419,7 +604,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "🚕",
-      "right": "מונית"
+      "right": "מונית",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-039",
@@ -430,7 +620,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "🚜",
-      "right": "טרקטור"
+      "right": "טרקטור",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-040",
@@ -441,7 +636,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "🛴",
-      "right": "קורקינט"
+      "right": "קורקינט",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-041",
@@ -452,7 +652,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "👕",
-      "right": "חולצה"
+      "right": "חולצה",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-042",
@@ -463,7 +668,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "👖",
-      "right": "מכנסיים"
+      "right": "מכנסיים",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-043",
@@ -474,7 +684,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "👗",
-      "right": "שמלה"
+      "right": "שמלה",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-044",
@@ -485,7 +700,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "🧦",
-      "right": "גרב"
+      "right": "גרב",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-045",
@@ -496,7 +716,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "👟",
-      "right": "נעל"
+      "right": "נעל",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-046",
@@ -507,7 +732,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "🧢",
-      "right": "כובע"
+      "right": "כובע",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-047",
@@ -518,7 +748,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "🧥",
-      "right": "מעיל"
+      "right": "מעיל",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-048",
@@ -529,7 +764,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "🧤",
-      "right": "כפפה"
+      "right": "כפפה",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-049",
@@ -540,7 +780,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "🧣",
-      "right": "צעיף"
+      "right": "צעיף",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-050",
@@ -551,7 +796,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "🩴",
-      "right": "סנדל"
+      "right": "סנדל",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-051",
@@ -562,7 +812,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "🪑",
-      "right": "כיסא"
+      "right": "כיסא",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-052",
@@ -573,7 +828,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "🛏️",
-      "right": "מיטה"
+      "right": "מיטה",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-053",
@@ -584,7 +844,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "🛋️",
-      "right": "ספה"
+      "right": "ספה",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-054",
@@ -595,7 +860,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "▰",
-      "right": "שולחן"
+      "right": "שולחן",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-055",
@@ -606,7 +876,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "🚪",
-      "right": "ארון"
+      "right": "ארון",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-056",
@@ -617,7 +892,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "📚",
-      "right": "מדף"
+      "right": "מדף",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-057",
@@ -628,7 +908,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "🛋",
-      "right": "מנורה"
+      "right": "מנורה",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-058",
@@ -639,7 +924,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "🪑",
-      "right": "שרפרף"
+      "right": "שרפרף",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-059",
@@ -650,7 +940,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "🗄️",
-      "right": "שידה"
+      "right": "שידה",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-060",
@@ -661,7 +956,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "🛏",
-      "right": "ערסל"
+      "right": "ערסל",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-061",
@@ -672,7 +972,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "📘",
-      "right": "ספר"
+      "right": "ספר",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-062",
@@ -683,7 +988,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "✏️",
-      "right": "עיפרון"
+      "right": "עיפרון",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-063",
@@ -694,7 +1004,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "📓",
-      "right": "מחברת"
+      "right": "מחברת",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-064",
@@ -705,7 +1020,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "📏",
-      "right": "סרגל"
+      "right": "סרגל",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-065",
@@ -716,7 +1036,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "✂️",
-      "right": "מספריים"
+      "right": "מספריים",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-066",
@@ -727,7 +1052,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "🎒",
-      "right": "ילקוט"
+      "right": "ילקוט",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-067",
@@ -738,7 +1068,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "⬜",
-      "right": "מחק"
+      "right": "מחק",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-068",
@@ -749,7 +1084,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "🖍️",
-      "right": "צבע"
+      "right": "צבע",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-069",
@@ -760,7 +1100,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "🧴",
-      "right": "דבק"
+      "right": "דבק",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-070",
@@ -771,7 +1116,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "🟩",
-      "right": "לוח"
+      "right": "לוח",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-071",
@@ -782,7 +1132,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "🎸",
-      "right": "גיטרה"
+      "right": "גיטרה",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-072",
@@ -793,7 +1148,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "🎻",
-      "right": "כינור"
+      "right": "כינור",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-073",
@@ -804,7 +1164,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "🥁",
-      "right": "תוף"
+      "right": "תוף",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-074",
@@ -815,7 +1180,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "🎹",
-      "right": "פסנתר"
+      "right": "פסנתר",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-075",
@@ -826,7 +1196,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "🎺",
-      "right": "חצוצרה"
+      "right": "חצוצרה",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-076",
@@ -837,7 +1212,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "🪈",
-      "right": "חליל"
+      "right": "חליל",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-077",
@@ -848,7 +1228,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "🎤",
-      "right": "מיקרופון"
+      "right": "מיקרופון",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-078",
@@ -859,7 +1244,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "🔔",
-      "right": "פעמון"
+      "right": "פעמון",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-079",
@@ -870,7 +1260,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "🪗",
-      "right": "אקורדיון"
+      "right": "אקורדיון",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-080",
@@ -881,7 +1276,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "🎷",
-      "right": "סקסופון"
+      "right": "סקסופון",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-081",
@@ -892,7 +1292,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "☀️",
-      "right": "שמש"
+      "right": "שמש",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-082",
@@ -903,7 +1308,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "☁️",
-      "right": "ענן"
+      "right": "ענן",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-083",
@@ -914,7 +1324,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "🌧️",
-      "right": "גשם"
+      "right": "גשם",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-084",
@@ -925,7 +1340,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "❄️",
-      "right": "שלג"
+      "right": "שלג",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-085",
@@ -936,7 +1356,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "💨",
-      "right": "רוח"
+      "right": "רוח",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-086",
@@ -947,7 +1372,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "⚡",
-      "right": "ברק"
+      "right": "ברק",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-087",
@@ -958,7 +1388,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "🌈",
-      "right": "קשת"
+      "right": "קשת",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-088",
@@ -969,7 +1404,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "🌫️",
-      "right": "ערפל"
+      "right": "ערפל",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-089",
@@ -980,7 +1420,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "⛈️",
-      "right": "סערה"
+      "right": "סערה",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-090",
@@ -991,7 +1436,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "💧",
-      "right": "טיפה"
+      "right": "טיפה",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-091",
@@ -1002,7 +1452,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🌸",
-      "right": "פרח"
+      "right": "פרח",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-092",
@@ -1013,7 +1468,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "🌳",
-      "right": "עץ"
+      "right": "עץ",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-093",
@@ -1024,7 +1484,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "🍃",
-      "right": "עלה"
+      "right": "עלה",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-094",
@@ -1035,7 +1500,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🌵",
-      "right": "קקטוס"
+      "right": "קקטוס",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-095",
@@ -1046,7 +1516,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "🌱",
-      "right": "שתיל"
+      "right": "שתיל",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-096",
@@ -1057,7 +1532,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "🌻",
-      "right": "חמנייה"
+      "right": "חמנייה",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-097",
@@ -1068,7 +1548,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🌹",
-      "right": "ורד"
+      "right": "ורד",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-098",
@@ -1079,7 +1564,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "🌿",
-      "right": "עשב"
+      "right": "עשב",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-099",
@@ -1090,7 +1580,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "☘️",
-      "right": "תלתן"
+      "right": "תלתן",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-100",
@@ -1101,7 +1596,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🌴",
-      "right": "דקל"
+      "right": "דקל",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-101",
@@ -1112,7 +1612,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "⚽",
-      "right": "כדור"
+      "right": "כדור",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-102",
@@ -1123,7 +1628,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "🪆",
-      "right": "בובה"
+      "right": "בובה",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-103",
@@ -1134,7 +1644,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🧸",
-      "right": "דובי"
+      "right": "דובי",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-104",
@@ -1145,7 +1660,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "🧱",
-      "right": "קוביות"
+      "right": "קוביות",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-105",
@@ -1156,7 +1676,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "🪁",
-      "right": "עפיפון"
+      "right": "עפיפון",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-106",
@@ -1167,7 +1692,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🪀",
-      "right": "יו-יו"
+      "right": "יו-יו",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-107",
@@ -1178,7 +1708,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "🧩",
-      "right": "פאזל"
+      "right": "פאזל",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-108",
@@ -1189,7 +1724,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "🎈",
-      "right": "בלון"
+      "right": "בלון",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-109",
@@ -1200,7 +1740,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🤖",
-      "right": "רובוט"
+      "right": "רובוט",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-110",
@@ -1211,7 +1756,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "🚂",
-      "right": "רכבת צעצוע"
+      "right": "רכבת צעצוע",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-111",
@@ -1222,7 +1772,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "🥤",
-      "right": "כוס"
+      "right": "כוס",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-112",
@@ -1233,7 +1788,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🍽️",
-      "right": "צלחת"
+      "right": "צלחת",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-113",
@@ -1244,7 +1804,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "🥄",
-      "right": "כף"
+      "right": "כף",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-114",
@@ -1255,7 +1820,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "🍲",
-      "right": "סיר"
+      "right": "סיר",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-115",
@@ -1266,7 +1836,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🍳",
-      "right": "מחבת"
+      "right": "מחבת",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-116",
@@ -1277,7 +1852,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "🫖",
-      "right": "קומקום"
+      "right": "קומקום",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-117",
@@ -1288,7 +1868,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "🍴",
-      "right": "מזלג"
+      "right": "מזלג",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-118",
@@ -1299,7 +1884,12 @@
       "difficulty": "easy",
       "skill": "picture-word",
       "left": "🍼",
-      "right": "בקבוק"
+      "right": "בקבוק",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-119",
@@ -1310,7 +1900,12 @@
       "difficulty": "medium",
       "skill": "picture-word",
       "left": "🥣",
-      "right": "קערה"
+      "right": "קערה",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     },
     {
       "id": "matching-120",
@@ -1321,7 +1916,12 @@
       "difficulty": "hard",
       "skill": "picture-word",
       "left": "☕",
-      "right": "ספל"
+      "right": "ספל",
+      "skillIds": [
+        "cognition.matching",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "matching"
     }
   ]
 }

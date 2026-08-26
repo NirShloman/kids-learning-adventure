@@ -32,15 +32,28 @@ export function useExperiencePhysics(
     setSnapshot(controller.snapshot());
     let frame = 0;
     let previous = performance.now();
+    let isActive = !document.hidden;
+    const onVisibility = () => { isActive = !document.hidden; previous = performance.now(); };
+    const onAppState = (event: Event) => {
+      isActive = (event as CustomEvent<{ isActive: boolean }>).detail.isActive;
+      previous = performance.now();
+      if (!isActive) controller.stopMotion();
+    };
+    document.addEventListener('visibilitychange', onVisibility);
+    window.addEventListener('lomdim:app-state', onAppState);
     const animate = (now: number) => {
-      const next = controller.step(inputRef.current ?? undefined, now - previous);
+      const next = isActive
+        ? controller.step(inputRef.current ?? undefined, now - previous)
+        : controller.snapshot();
       previous = now;
-      setSnapshot(next);
+      if (isActive) setSnapshot(next);
       frame = requestAnimationFrame(animate);
     };
     frame = requestAnimationFrame(animate);
     return () => {
       cancelAnimationFrame(frame);
+      document.removeEventListener('visibilitychange', onVisibility);
+      window.removeEventListener('lomdim:app-state', onAppState);
       controller.destroy();
       if (controllerRef.current === controller) controllerRef.current = null;
     };

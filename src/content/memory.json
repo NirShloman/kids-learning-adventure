@@ -11,7 +11,12 @@
       ],
       "difficulty": "easy",
       "skill": "visual-memory",
-      "value": "🍎 תפוח"
+      "value": "🍎 תפוח",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-002",
@@ -21,7 +26,11 @@
       ],
       "difficulty": "easy",
       "skill": "symbol-memory",
-      "value": "🍌 בננה"
+      "value": "🍌 בננה",
+      "skillIds": [
+        "cognition.memory"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-003",
@@ -31,7 +40,12 @@
       ],
       "difficulty": "easy",
       "skill": "word-memory",
-      "value": "🍇 ענבים"
+      "value": "🍇 ענבים",
+      "skillIds": [
+        "cognition.memory",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-004",
@@ -41,7 +55,12 @@
       ],
       "difficulty": "easy",
       "skill": "visual-memory",
-      "value": "🍓 תות"
+      "value": "🍓 תות",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-005",
@@ -51,7 +70,11 @@
       ],
       "difficulty": "easy",
       "skill": "symbol-memory",
-      "value": "🍉 אבטיח"
+      "value": "🍉 אבטיח",
+      "skillIds": [
+        "cognition.memory"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-006",
@@ -61,7 +84,12 @@
       ],
       "difficulty": "easy",
       "skill": "word-memory",
-      "value": "🍐 אגס"
+      "value": "🍐 אגס",
+      "skillIds": [
+        "cognition.memory",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-007",
@@ -71,7 +99,12 @@
       ],
       "difficulty": "easy",
       "skill": "visual-memory",
-      "value": "🍑 אפרסק"
+      "value": "🍑 אפרסק",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-008",
@@ -81,7 +114,11 @@
       ],
       "difficulty": "easy",
       "skill": "symbol-memory",
-      "value": "🍒 דובדבנים"
+      "value": "🍒 דובדבנים",
+      "skillIds": [
+        "cognition.memory"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-009",
@@ -91,7 +128,12 @@
       ],
       "difficulty": "easy",
       "skill": "word-memory",
-      "value": "🍍 אננס"
+      "value": "🍍 אננס",
+      "skillIds": [
+        "cognition.memory",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-010",
@@ -101,7 +143,12 @@
       ],
       "difficulty": "easy",
       "skill": "visual-memory",
-      "value": "🍊 תפוז"
+      "value": "🍊 תפוז",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-011",
@@ -111,7 +158,11 @@
       ],
       "difficulty": "easy",
       "skill": "symbol-memory",
-      "value": "🥕 גזר"
+      "value": "🥕 גזר",
+      "skillIds": [
+        "cognition.memory"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-012",
@@ -121,7 +172,12 @@
       ],
       "difficulty": "easy",
       "skill": "word-memory",
-      "value": "🍅 עגבנייה"
+      "value": "🍅 עגבנייה",
+      "skillIds": [
+        "cognition.memory",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-013",
@@ -131,7 +187,12 @@
       ],
       "difficulty": "easy",
       "skill": "visual-memory",
-      "value": "🥒 מלפפון"
+      "value": "🥒 מלפפון",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-014",
@@ -141,7 +202,11 @@
       ],
       "difficulty": "easy",
       "skill": "symbol-memory",
-      "value": "🌽 תירס"
+      "value": "🌽 תירס",
+      "skillIds": [
+        "cognition.memory"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-015",
@@ -151,7 +216,12 @@
       ],
       "difficulty": "easy",
       "skill": "word-memory",
-      "value": "🫑 פלפל"
+      "value": "🫑 פלפל",
+      "skillIds": [
+        "cognition.memory",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-016",
@@ -161,7 +231,12 @@
       ],
       "difficulty": "easy",
       "skill": "visual-memory",
-      "value": "🥦 ברוקולי"
+      "value": "🥦 ברוקולי",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-017",
@@ -171,7 +246,11 @@
       ],
       "difficulty": "easy",
       "skill": "symbol-memory",
-      "value": "🧅 בצל"
+      "value": "🧅 בצל",
+      "skillIds": [
+        "cognition.memory"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-018",
@@ -181,7 +260,12 @@
       ],
       "difficulty": "easy",
       "skill": "word-memory",
-      "value": "🥔 תפוח אדמה"
+      "value": "🥔 תפוח אדמה",
+      "skillIds": [
+        "cognition.memory",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-019",
@@ -191,7 +275,12 @@
       ],
       "difficulty": "easy",
       "skill": "visual-memory",
-      "value": "🍆 חציל"
+      "value": "🍆 חציל",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-020",
@@ -201,7 +290,11 @@
       ],
       "difficulty": "easy",
       "skill": "symbol-memory",
-      "value": "🥬 חסה"
+      "value": "🥬 חסה",
+      "skillIds": [
+        "cognition.memory"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-021",
@@ -211,7 +304,12 @@
       ],
       "difficulty": "easy",
       "skill": "word-memory",
-      "value": "🐶 כלב"
+      "value": "🐶 כלב",
+      "skillIds": [
+        "cognition.memory",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-022",
@@ -221,7 +319,12 @@
       ],
       "difficulty": "easy",
       "skill": "visual-memory",
-      "value": "🐱 חתול"
+      "value": "🐱 חתול",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-023",
@@ -231,7 +334,11 @@
       ],
       "difficulty": "easy",
       "skill": "symbol-memory",
-      "value": "🦁 אריה"
+      "value": "🦁 אריה",
+      "skillIds": [
+        "cognition.memory"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-024",
@@ -241,7 +348,12 @@
       ],
       "difficulty": "easy",
       "skill": "word-memory",
-      "value": "🐘 פיל"
+      "value": "🐘 פיל",
+      "skillIds": [
+        "cognition.memory",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-025",
@@ -251,7 +363,12 @@
       ],
       "difficulty": "easy",
       "skill": "visual-memory",
-      "value": "🐒 קוף"
+      "value": "🐒 קוף",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-026",
@@ -261,7 +378,11 @@
       ],
       "difficulty": "easy",
       "skill": "symbol-memory",
-      "value": "🐟 דג"
+      "value": "🐟 דג",
+      "skillIds": [
+        "cognition.memory"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-027",
@@ -271,7 +392,12 @@
       ],
       "difficulty": "easy",
       "skill": "word-memory",
-      "value": "🐦 ציפור"
+      "value": "🐦 ציפור",
+      "skillIds": [
+        "cognition.memory",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-028",
@@ -281,7 +407,12 @@
       ],
       "difficulty": "easy",
       "skill": "visual-memory",
-      "value": "🐢 צב"
+      "value": "🐢 צב",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-029",
@@ -291,7 +422,11 @@
       ],
       "difficulty": "easy",
       "skill": "symbol-memory",
-      "value": "🐰 ארנב"
+      "value": "🐰 ארנב",
+      "skillIds": [
+        "cognition.memory"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-030",
@@ -301,7 +436,12 @@
       ],
       "difficulty": "easy",
       "skill": "word-memory",
-      "value": "🦋 פרפר"
+      "value": "🦋 פרפר",
+      "skillIds": [
+        "cognition.memory",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-031",
@@ -311,7 +451,12 @@
       ],
       "difficulty": "medium",
       "skill": "visual-memory",
-      "value": "🚗 מכונית"
+      "value": "🚗 מכונית",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-032",
@@ -321,7 +466,11 @@
       ],
       "difficulty": "medium",
       "skill": "symbol-memory",
-      "value": "🚌 אוטובוס"
+      "value": "🚌 אוטובוס",
+      "skillIds": [
+        "cognition.memory"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-033",
@@ -331,7 +480,12 @@
       ],
       "difficulty": "medium",
       "skill": "word-memory",
-      "value": "🚂 רכבת"
+      "value": "🚂 רכבת",
+      "skillIds": [
+        "cognition.memory",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-034",
@@ -341,7 +495,12 @@
       ],
       "difficulty": "medium",
       "skill": "visual-memory",
-      "value": "🚲 אופניים"
+      "value": "🚲 אופניים",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-035",
@@ -351,7 +510,11 @@
       ],
       "difficulty": "medium",
       "skill": "symbol-memory",
-      "value": "✈️ מטוס"
+      "value": "✈️ מטוס",
+      "skillIds": [
+        "cognition.memory"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-036",
@@ -361,7 +524,12 @@
       ],
       "difficulty": "medium",
       "skill": "word-memory",
-      "value": "⛵ סירה"
+      "value": "⛵ סירה",
+      "skillIds": [
+        "cognition.memory",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-037",
@@ -371,7 +539,12 @@
       ],
       "difficulty": "medium",
       "skill": "visual-memory",
-      "value": "🚚 משאית"
+      "value": "🚚 משאית",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-038",
@@ -381,7 +554,11 @@
       ],
       "difficulty": "medium",
       "skill": "symbol-memory",
-      "value": "🚕 מונית"
+      "value": "🚕 מונית",
+      "skillIds": [
+        "cognition.memory"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-039",
@@ -391,7 +568,12 @@
       ],
       "difficulty": "medium",
       "skill": "word-memory",
-      "value": "🚜 טרקטור"
+      "value": "🚜 טרקטור",
+      "skillIds": [
+        "cognition.memory",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-040",
@@ -401,7 +583,12 @@
       ],
       "difficulty": "medium",
       "skill": "visual-memory",
-      "value": "🛴 קורקינט"
+      "value": "🛴 קורקינט",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-041",
@@ -411,7 +598,11 @@
       ],
       "difficulty": "medium",
       "skill": "symbol-memory",
-      "value": "👕 חולצה"
+      "value": "👕 חולצה",
+      "skillIds": [
+        "cognition.memory"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-042",
@@ -421,7 +612,12 @@
       ],
       "difficulty": "medium",
       "skill": "word-memory",
-      "value": "👖 מכנסיים"
+      "value": "👖 מכנסיים",
+      "skillIds": [
+        "cognition.memory",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-043",
@@ -431,7 +627,12 @@
       ],
       "difficulty": "medium",
       "skill": "visual-memory",
-      "value": "👗 שמלה"
+      "value": "👗 שמלה",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-044",
@@ -441,7 +642,11 @@
       ],
       "difficulty": "medium",
       "skill": "symbol-memory",
-      "value": "🧦 גרב"
+      "value": "🧦 גרב",
+      "skillIds": [
+        "cognition.memory"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-045",
@@ -451,7 +656,12 @@
       ],
       "difficulty": "medium",
       "skill": "word-memory",
-      "value": "👟 נעל"
+      "value": "👟 נעל",
+      "skillIds": [
+        "cognition.memory",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-046",
@@ -461,7 +671,12 @@
       ],
       "difficulty": "medium",
       "skill": "visual-memory",
-      "value": "🧢 כובע"
+      "value": "🧢 כובע",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-047",
@@ -471,7 +686,11 @@
       ],
       "difficulty": "medium",
       "skill": "symbol-memory",
-      "value": "🧥 מעיל"
+      "value": "🧥 מעיל",
+      "skillIds": [
+        "cognition.memory"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-048",
@@ -481,7 +700,12 @@
       ],
       "difficulty": "medium",
       "skill": "word-memory",
-      "value": "🧤 כפפה"
+      "value": "🧤 כפפה",
+      "skillIds": [
+        "cognition.memory",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-049",
@@ -491,7 +715,12 @@
       ],
       "difficulty": "medium",
       "skill": "visual-memory",
-      "value": "🧣 צעיף"
+      "value": "🧣 צעיף",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-050",
@@ -501,7 +730,11 @@
       ],
       "difficulty": "medium",
       "skill": "symbol-memory",
-      "value": "🩴 סנדל"
+      "value": "🩴 סנדל",
+      "skillIds": [
+        "cognition.memory"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-051",
@@ -511,7 +744,12 @@
       ],
       "difficulty": "medium",
       "skill": "word-memory",
-      "value": "🪑 כיסא"
+      "value": "🪑 כיסא",
+      "skillIds": [
+        "cognition.memory",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-052",
@@ -521,7 +759,12 @@
       ],
       "difficulty": "medium",
       "skill": "visual-memory",
-      "value": "🛏️ מיטה"
+      "value": "🛏️ מיטה",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-053",
@@ -531,7 +774,11 @@
       ],
       "difficulty": "medium",
       "skill": "symbol-memory",
-      "value": "🛋️ ספה"
+      "value": "🛋️ ספה",
+      "skillIds": [
+        "cognition.memory"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-054",
@@ -541,7 +788,12 @@
       ],
       "difficulty": "medium",
       "skill": "word-memory",
-      "value": "▰ שולחן"
+      "value": "▰ שולחן",
+      "skillIds": [
+        "cognition.memory",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-055",
@@ -551,7 +803,12 @@
       ],
       "difficulty": "medium",
       "skill": "visual-memory",
-      "value": "🚪 ארון"
+      "value": "🚪 ארון",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-056",
@@ -561,7 +818,11 @@
       ],
       "difficulty": "medium",
       "skill": "symbol-memory",
-      "value": "📚 מדף"
+      "value": "📚 מדף",
+      "skillIds": [
+        "cognition.memory"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-057",
@@ -571,7 +832,12 @@
       ],
       "difficulty": "medium",
       "skill": "word-memory",
-      "value": "🛋 מנורה"
+      "value": "🛋 מנורה",
+      "skillIds": [
+        "cognition.memory",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-058",
@@ -581,7 +847,12 @@
       ],
       "difficulty": "medium",
       "skill": "visual-memory",
-      "value": "🪑 שרפרף"
+      "value": "🪑 שרפרף",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-059",
@@ -591,7 +862,11 @@
       ],
       "difficulty": "medium",
       "skill": "symbol-memory",
-      "value": "🗄️ שידה"
+      "value": "🗄️ שידה",
+      "skillIds": [
+        "cognition.memory"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-060",
@@ -601,7 +876,12 @@
       ],
       "difficulty": "medium",
       "skill": "word-memory",
-      "value": "🛏 ערסל"
+      "value": "🛏 ערסל",
+      "skillIds": [
+        "cognition.memory",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-061",
@@ -611,7 +891,12 @@
       ],
       "difficulty": "hard",
       "skill": "visual-memory",
-      "value": "📘 ספר"
+      "value": "📘 ספר",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-062",
@@ -621,7 +906,11 @@
       ],
       "difficulty": "hard",
       "skill": "symbol-memory",
-      "value": "✏️ עיפרון"
+      "value": "✏️ עיפרון",
+      "skillIds": [
+        "cognition.memory"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-063",
@@ -631,7 +920,12 @@
       ],
       "difficulty": "hard",
       "skill": "word-memory",
-      "value": "📓 מחברת"
+      "value": "📓 מחברת",
+      "skillIds": [
+        "cognition.memory",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-064",
@@ -641,7 +935,12 @@
       ],
       "difficulty": "hard",
       "skill": "visual-memory",
-      "value": "📏 סרגל"
+      "value": "📏 סרגל",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-065",
@@ -651,7 +950,11 @@
       ],
       "difficulty": "hard",
       "skill": "symbol-memory",
-      "value": "✂️ מספריים"
+      "value": "✂️ מספריים",
+      "skillIds": [
+        "cognition.memory"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-066",
@@ -661,7 +964,12 @@
       ],
       "difficulty": "hard",
       "skill": "word-memory",
-      "value": "🎒 ילקוט"
+      "value": "🎒 ילקוט",
+      "skillIds": [
+        "cognition.memory",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-067",
@@ -671,7 +979,12 @@
       ],
       "difficulty": "hard",
       "skill": "visual-memory",
-      "value": "⬜ מחק"
+      "value": "⬜ מחק",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-068",
@@ -681,7 +994,11 @@
       ],
       "difficulty": "hard",
       "skill": "symbol-memory",
-      "value": "🖍️ צבע"
+      "value": "🖍️ צבע",
+      "skillIds": [
+        "cognition.memory"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-069",
@@ -691,7 +1008,12 @@
       ],
       "difficulty": "hard",
       "skill": "word-memory",
-      "value": "🧴 דבק"
+      "value": "🧴 דבק",
+      "skillIds": [
+        "cognition.memory",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-070",
@@ -701,7 +1023,12 @@
       ],
       "difficulty": "hard",
       "skill": "visual-memory",
-      "value": "🟩 לוח"
+      "value": "🟩 לוח",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-071",
@@ -711,7 +1038,11 @@
       ],
       "difficulty": "hard",
       "skill": "symbol-memory",
-      "value": "🎸 גיטרה"
+      "value": "🎸 גיטרה",
+      "skillIds": [
+        "cognition.memory"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-072",
@@ -721,7 +1052,12 @@
       ],
       "difficulty": "hard",
       "skill": "word-memory",
-      "value": "🎻 כינור"
+      "value": "🎻 כינור",
+      "skillIds": [
+        "cognition.memory",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-073",
@@ -731,7 +1067,12 @@
       ],
       "difficulty": "hard",
       "skill": "visual-memory",
-      "value": "🥁 תוף"
+      "value": "🥁 תוף",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-074",
@@ -741,7 +1082,11 @@
       ],
       "difficulty": "hard",
       "skill": "symbol-memory",
-      "value": "🎹 פסנתר"
+      "value": "🎹 פסנתר",
+      "skillIds": [
+        "cognition.memory"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-075",
@@ -751,7 +1096,12 @@
       ],
       "difficulty": "hard",
       "skill": "word-memory",
-      "value": "🎺 חצוצרה"
+      "value": "🎺 חצוצרה",
+      "skillIds": [
+        "cognition.memory",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-076",
@@ -761,7 +1111,12 @@
       ],
       "difficulty": "hard",
       "skill": "visual-memory",
-      "value": "🪈 חליל"
+      "value": "🪈 חליל",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-077",
@@ -771,7 +1126,11 @@
       ],
       "difficulty": "hard",
       "skill": "symbol-memory",
-      "value": "🎤 מיקרופון"
+      "value": "🎤 מיקרופון",
+      "skillIds": [
+        "cognition.memory"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-078",
@@ -781,7 +1140,12 @@
       ],
       "difficulty": "hard",
       "skill": "word-memory",
-      "value": "🔔 פעמון"
+      "value": "🔔 פעמון",
+      "skillIds": [
+        "cognition.memory",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-079",
@@ -791,7 +1155,12 @@
       ],
       "difficulty": "hard",
       "skill": "visual-memory",
-      "value": "🪗 אקורדיון"
+      "value": "🪗 אקורדיון",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-080",
@@ -801,7 +1170,11 @@
       ],
       "difficulty": "hard",
       "skill": "symbol-memory",
-      "value": "🎷 סקסופון"
+      "value": "🎷 סקסופון",
+      "skillIds": [
+        "cognition.memory"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-081",
@@ -811,7 +1184,12 @@
       ],
       "difficulty": "hard",
       "skill": "word-memory",
-      "value": "☀️ שמש"
+      "value": "☀️ שמש",
+      "skillIds": [
+        "cognition.memory",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-082",
@@ -821,7 +1199,12 @@
       ],
       "difficulty": "hard",
       "skill": "visual-memory",
-      "value": "☁️ ענן"
+      "value": "☁️ ענן",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-083",
@@ -831,7 +1214,11 @@
       ],
       "difficulty": "hard",
       "skill": "symbol-memory",
-      "value": "🌧️ גשם"
+      "value": "🌧️ גשם",
+      "skillIds": [
+        "cognition.memory"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-084",
@@ -841,7 +1228,12 @@
       ],
       "difficulty": "hard",
       "skill": "word-memory",
-      "value": "❄️ שלג"
+      "value": "❄️ שלג",
+      "skillIds": [
+        "cognition.memory",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-085",
@@ -851,7 +1243,12 @@
       ],
       "difficulty": "hard",
       "skill": "visual-memory",
-      "value": "💨 רוח"
+      "value": "💨 רוח",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-086",
@@ -861,7 +1258,11 @@
       ],
       "difficulty": "hard",
       "skill": "symbol-memory",
-      "value": "⚡ ברק"
+      "value": "⚡ ברק",
+      "skillIds": [
+        "cognition.memory"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-087",
@@ -871,7 +1272,12 @@
       ],
       "difficulty": "hard",
       "skill": "word-memory",
-      "value": "🌈 קשת"
+      "value": "🌈 קשת",
+      "skillIds": [
+        "cognition.memory",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-088",
@@ -881,7 +1287,12 @@
       ],
       "difficulty": "hard",
       "skill": "visual-memory",
-      "value": "🌫️ ערפל"
+      "value": "🌫️ ערפל",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-089",
@@ -891,7 +1302,11 @@
       ],
       "difficulty": "hard",
       "skill": "symbol-memory",
-      "value": "⛈️ סערה"
+      "value": "⛈️ סערה",
+      "skillIds": [
+        "cognition.memory"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-090",
@@ -901,7 +1316,12 @@
       ],
       "difficulty": "hard",
       "skill": "word-memory",
-      "value": "💧 טיפה"
+      "value": "💧 טיפה",
+      "skillIds": [
+        "cognition.memory",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-091",
@@ -911,7 +1331,12 @@
       ],
       "difficulty": "easy",
       "skill": "visual-memory",
-      "value": "🌸 פרח"
+      "value": "🌸 פרח",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-092",
@@ -921,7 +1346,11 @@
       ],
       "difficulty": "medium",
       "skill": "symbol-memory",
-      "value": "🌳 עץ"
+      "value": "🌳 עץ",
+      "skillIds": [
+        "cognition.memory"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-093",
@@ -931,7 +1360,12 @@
       ],
       "difficulty": "hard",
       "skill": "word-memory",
-      "value": "🍃 עלה"
+      "value": "🍃 עלה",
+      "skillIds": [
+        "cognition.memory",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-094",
@@ -941,7 +1375,12 @@
       ],
       "difficulty": "easy",
       "skill": "visual-memory",
-      "value": "🌵 קקטוס"
+      "value": "🌵 קקטוס",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-095",
@@ -951,7 +1390,11 @@
       ],
       "difficulty": "medium",
       "skill": "symbol-memory",
-      "value": "🌱 שתיל"
+      "value": "🌱 שתיל",
+      "skillIds": [
+        "cognition.memory"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-096",
@@ -961,7 +1404,12 @@
       ],
       "difficulty": "hard",
       "skill": "word-memory",
-      "value": "🌻 חמנייה"
+      "value": "🌻 חמנייה",
+      "skillIds": [
+        "cognition.memory",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-097",
@@ -971,7 +1419,12 @@
       ],
       "difficulty": "easy",
       "skill": "visual-memory",
-      "value": "🌹 ורד"
+      "value": "🌹 ורד",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-098",
@@ -981,7 +1434,11 @@
       ],
       "difficulty": "medium",
       "skill": "symbol-memory",
-      "value": "🌿 עשב"
+      "value": "🌿 עשב",
+      "skillIds": [
+        "cognition.memory"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-099",
@@ -991,7 +1448,12 @@
       ],
       "difficulty": "hard",
       "skill": "word-memory",
-      "value": "☘️ תלתן"
+      "value": "☘️ תלתן",
+      "skillIds": [
+        "cognition.memory",
+        "hebrew.first-words"
+      ],
+      "evidenceForm": "memory"
     },
     {
       "id": "memory-100",
@@ -1001,7 +1463,12 @@
       ],
       "difficulty": "easy",
       "skill": "visual-memory",
-      "value": "🌴 דקל"
+      "value": "🌴 דקל",
+      "skillIds": [
+        "cognition.memory",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "memory"
     }
   ]
 }

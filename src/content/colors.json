@@ -32,7 +32,12 @@
           "emoji": "🌸"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-002",
@@ -63,7 +68,12 @@
           "emoji": "🔵"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-003",
@@ -91,7 +101,12 @@
           "label": "חם"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-004",
@@ -122,7 +137,12 @@
           "emoji": "🟤"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-005",
@@ -153,7 +173,12 @@
           "emoji": "🟠"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-006",
@@ -181,7 +206,12 @@
           "label": "חם"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-007",
@@ -212,7 +242,12 @@
           "emoji": "🟢"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-008",
@@ -243,7 +278,12 @@
           "emoji": "⚪"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-009",
@@ -271,7 +311,12 @@
           "label": "חם"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-010",
@@ -302,7 +347,12 @@
           "emoji": "🟣"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-011",
@@ -333,7 +383,12 @@
           "emoji": "🔴"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-012",
@@ -361,7 +416,12 @@
           "label": "חם"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-013",
@@ -392,7 +452,12 @@
           "emoji": "⚫"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-014",
@@ -423,7 +488,12 @@
           "emoji": "🟡"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-015",
@@ -451,7 +521,12 @@
           "label": "קר"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-016",
@@ -482,7 +557,12 @@
           "emoji": "🔵"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-017",
@@ -513,7 +593,12 @@
           "emoji": "🌸"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-018",
@@ -541,7 +626,12 @@
           "label": "חם"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-019",
@@ -572,7 +662,12 @@
           "emoji": "🟠"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-020",
@@ -603,7 +698,12 @@
           "emoji": "🟤"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-021",
@@ -631,7 +731,12 @@
           "label": "קר"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-022",
@@ -662,7 +767,12 @@
           "emoji": "⚪"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-023",
@@ -693,7 +803,12 @@
           "emoji": "🟢"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-024",
@@ -721,7 +836,12 @@
           "label": "קר"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-025",
@@ -752,7 +872,12 @@
           "emoji": "🔴"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-026",
@@ -783,7 +908,12 @@
           "emoji": "🟣"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-027",
@@ -811,7 +941,12 @@
           "label": "קר"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-028",
@@ -842,7 +977,12 @@
           "emoji": "🟡"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-029",
@@ -873,7 +1013,12 @@
           "emoji": "⚫"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-030",
@@ -901,7 +1046,12 @@
           "label": "קר"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-031",
@@ -932,7 +1082,12 @@
           "emoji": "🌸"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-032",
@@ -963,7 +1118,12 @@
           "emoji": "🔵"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-033",
@@ -991,7 +1151,12 @@
           "label": "חם"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-034",
@@ -1022,7 +1187,12 @@
           "emoji": "🟤"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-035",
@@ -1053,7 +1223,12 @@
           "emoji": "🟠"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-036",
@@ -1081,7 +1256,12 @@
           "label": "חם"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-037",
@@ -1112,7 +1292,12 @@
           "emoji": "🟢"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-038",
@@ -1143,7 +1328,12 @@
           "emoji": "⚪"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-039",
@@ -1171,7 +1361,12 @@
           "label": "חם"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-040",
@@ -1202,7 +1397,12 @@
           "emoji": "🟣"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-041",
@@ -1233,7 +1433,12 @@
           "emoji": "🔴"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-042",
@@ -1261,7 +1466,12 @@
           "label": "חם"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-043",
@@ -1292,7 +1502,12 @@
           "emoji": "⚫"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-044",
@@ -1323,7 +1538,12 @@
           "emoji": "🟡"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-045",
@@ -1351,7 +1571,12 @@
           "label": "קר"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-046",
@@ -1382,7 +1607,12 @@
           "emoji": "🔵"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-047",
@@ -1413,7 +1643,12 @@
           "emoji": "🌸"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-048",
@@ -1441,7 +1676,12 @@
           "label": "חם"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-049",
@@ -1472,7 +1712,12 @@
           "emoji": "🟠"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-050",
@@ -1503,7 +1748,12 @@
           "emoji": "🟤"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-051",
@@ -1531,7 +1781,12 @@
           "label": "קר"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-052",
@@ -1562,7 +1817,12 @@
           "emoji": "⚪"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-053",
@@ -1593,7 +1853,12 @@
           "emoji": "🟢"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-054",
@@ -1621,7 +1886,12 @@
           "label": "קר"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-055",
@@ -1652,7 +1922,12 @@
           "emoji": "🔴"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-056",
@@ -1683,7 +1958,12 @@
           "emoji": "🟣"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-057",
@@ -1711,7 +1991,12 @@
           "label": "קר"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-058",
@@ -1742,7 +2027,12 @@
           "emoji": "🟡"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-059",
@@ -1773,7 +2063,12 @@
           "emoji": "⚫"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-060",
@@ -1801,7 +2096,12 @@
           "label": "קר"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-061",
@@ -1832,7 +2132,12 @@
           "emoji": "🌸"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-062",
@@ -1863,7 +2168,12 @@
           "emoji": "🔵"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-063",
@@ -1891,7 +2201,12 @@
           "label": "חם"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-064",
@@ -1922,7 +2237,12 @@
           "emoji": "🟤"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-065",
@@ -1953,7 +2273,12 @@
           "emoji": "🟠"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-066",
@@ -1981,7 +2306,12 @@
           "label": "חם"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-067",
@@ -2012,7 +2342,12 @@
           "emoji": "🟢"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-068",
@@ -2043,7 +2378,12 @@
           "emoji": "⚪"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-069",
@@ -2071,7 +2411,12 @@
           "label": "חם"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-070",
@@ -2102,7 +2447,12 @@
           "emoji": "🟣"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-071",
@@ -2133,7 +2483,12 @@
           "emoji": "🔴"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-072",
@@ -2161,7 +2516,12 @@
           "label": "חם"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-073",
@@ -2192,7 +2552,12 @@
           "emoji": "⚫"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-074",
@@ -2223,7 +2588,12 @@
           "emoji": "🟡"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-075",
@@ -2251,7 +2621,12 @@
           "label": "קר"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-076",
@@ -2282,7 +2657,12 @@
           "emoji": "🔵"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-077",
@@ -2313,7 +2693,12 @@
           "emoji": "🌸"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-078",
@@ -2341,7 +2726,12 @@
           "label": "חם"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-079",
@@ -2372,7 +2762,12 @@
           "emoji": "🟠"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-080",
@@ -2403,7 +2798,12 @@
           "emoji": "🟤"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-081",
@@ -2431,7 +2831,12 @@
           "label": "קר"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-082",
@@ -2462,7 +2867,12 @@
           "emoji": "⚪"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-083",
@@ -2493,7 +2903,12 @@
           "emoji": "🟢"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-084",
@@ -2521,7 +2936,12 @@
           "label": "קר"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-085",
@@ -2552,7 +2972,12 @@
           "emoji": "🔴"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-086",
@@ -2583,7 +3008,12 @@
           "emoji": "🟣"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-087",
@@ -2611,7 +3041,12 @@
           "label": "קר"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-088",
@@ -2642,7 +3077,12 @@
           "emoji": "🟡"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-089",
@@ -2673,7 +3113,12 @@
           "emoji": "⚫"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-090",
@@ -2701,7 +3146,12 @@
           "label": "קר"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-091",
@@ -2732,7 +3182,12 @@
           "emoji": "🌸"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-092",
@@ -2763,7 +3218,12 @@
           "emoji": "🔵"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-093",
@@ -2791,7 +3251,12 @@
           "label": "חם"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-094",
@@ -2822,7 +3287,12 @@
           "emoji": "🟤"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-095",
@@ -2853,7 +3323,12 @@
           "emoji": "🟠"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-096",
@@ -2881,7 +3356,12 @@
           "label": "חם"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-097",
@@ -2912,7 +3392,12 @@
           "emoji": "🟢"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-098",
@@ -2943,7 +3428,12 @@
           "emoji": "⚪"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-099",
@@ -2971,7 +3461,12 @@
           "label": "חם"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-100",
@@ -3002,7 +3497,12 @@
           "emoji": "🟣"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-101",
@@ -3033,7 +3533,12 @@
           "emoji": "🔴"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-102",
@@ -3061,7 +3566,12 @@
           "label": "חם"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-103",
@@ -3092,7 +3602,12 @@
           "emoji": "⚫"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-104",
@@ -3123,7 +3638,12 @@
           "emoji": "🟡"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-105",
@@ -3151,7 +3671,12 @@
           "label": "קר"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-106",
@@ -3182,7 +3707,12 @@
           "emoji": "🔵"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-107",
@@ -3213,7 +3743,12 @@
           "emoji": "🌸"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-108",
@@ -3241,7 +3776,12 @@
           "label": "חם"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "concept.color",
+        "cognition.sorting"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-109",
@@ -3272,7 +3812,12 @@
           "emoji": "🟠"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "colors-110",
@@ -3303,7 +3848,12 @@
           "emoji": "🟤"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "concept.color",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     }
   ]
 }

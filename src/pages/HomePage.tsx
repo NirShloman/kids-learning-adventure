@@ -1,28 +1,33 @@
 import { gameDefinitions } from '../data/games';
 import { GameId, LearnerSettings } from '../types';
 import { GameCard } from '../components/games/GameCard';
-import { ageOptions, difficultyOptions, getDefaultDifficultyByAge } from '../data/levels';
-import { SelectField } from '../components/common/SelectField';
 import { AmbientVideo } from '../components/common/AmbientVideo';
+import { Button } from '../components/common/Button';
+import { JourneyMap } from '../components/learning/JourneyMap';
 
 interface HomePageProps {
   settings: LearnerSettings;
   onSettingsChange: (settings: LearnerSettings) => void;
   onSelectGame: (gameId: GameId) => void;
+  onStartAdaptive: () => void;
+  onStartShared: () => void;
 }
 
-export function HomePage({ settings, onSettingsChange, onSelectGame }: HomePageProps) {
-  function handleAgeChange(age: LearnerSettings['age']) {
-    onSettingsChange({ ...settings, age, difficulty: getDefaultDifficultyByAge(age) });
-  }
-
+export function HomePage({ settings, onSettingsChange, onSelectGame, onStartAdaptive, onStartShared }: HomePageProps) {
   return (
     <section className="home-page">
       <AmbientVideo
         src="/assets/video/learning-garden-lobby.mp4"
+        poster="/assets/video/learning-garden-lobby.poster.webp"
         className="home-cinematic"
         fallback={<div className="home-cinematic__fallback" />}
       />
+      <section className="adaptive-entry" aria-labelledby="adaptive-entry-title">
+        <div><span>המסלול האישי שלי</span><h2 id="adaptive-entry-title">תרגול קצר שמתאים את עצמו</h2><p>5–7 דקות של חזרה, תרגול ואתגר קטן — הכול נשמר רק במכשיר.</p></div>
+        <Button onClick={onStartAdaptive}>מתחילים תרגול מותאם</Button>
+      </section>
+      <div className="shared-entry"><Button variant="secondary" onClick={onStartShared}>משחקים יחד באותו מכשיר</Button></div>
+      <JourneyMap onSelectWorld={onSelectGame} />
       <section className="game-menu-heading" aria-labelledby="game-menu-title">
         <div>
           <span>8 עולמות למידה</span>
@@ -30,24 +35,6 @@ export function HomePage({ settings, onSettingsChange, onSelectGame }: HomePageP
         </div>
 
         <div className="quick-settings" aria-label="הגדרות משחק">
-          <SelectField
-            id="learner-age"
-            label="גיל"
-            value={settings.age}
-            onChange={(event) => handleAgeChange(Number(event.target.value) as LearnerSettings['age'])}
-          >
-            {ageOptions.map((age) => <option key={age} value={age}>{age}</option>)}
-          </SelectField>
-
-          <SelectField
-            id="learner-difficulty"
-            label="רמה"
-            value={settings.difficulty}
-            onChange={(event) => onSettingsChange({ ...settings, difficulty: event.target.value as LearnerSettings['difficulty'] })}
-          >
-            {difficultyOptions.map((difficulty) => <option key={difficulty.id} value={difficulty.id}>{difficulty.label}</option>)}
-          </SelectField>
-
           <label className="voice-toggle" htmlFor="learner-voice">
             <input
               id="learner-voice"

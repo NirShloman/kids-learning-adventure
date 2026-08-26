@@ -1,0 +1,27 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "brand": {
+    "color": {
+      "blueberry": { "$type": "color", "$value": "#4338A8" },
+      "coral": { "$type": "color", "$value": "#FF796B" },
+      "mint": { "$type": "color", "$value": "#63D3B1" },
+      "sun": { "$type": "color", "$value": "#FFD45A" },
+      "cream": { "$type": "color", "$value": "#FFF9EE" },
+      "ink": { "$type": "color", "$value": "#26324A" },
+      "slate": { "$type": "color", "$value": "#60708A" }
+    },
+    "type": {
+      "family": { "$type": "fontFamily", "$value": ["Rubik", "Segoe UI", "Arial", "sans-serif"] },
+      "weight": {
+        "body": { "$type": "fontWeight", "$value": 400 },
+        "control": { "$type": "fontWeight", "$value": 700 },
+        "display": { "$type": "fontWeight", "$value": 900 }
+      }
+    },
+    "shape": {
+      "control": { "$type": "dimension", "$value": "16px" },
+      "card": { "$type": "dimension", "$value": "24px" },
+      "icon": { "$type": "dimension", "$value": "22px" }
+    }
+  }
+}

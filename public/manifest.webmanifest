@@ -1,21 +1,39 @@
 {
-  "name": "לומדים בכיף - Kids Learning Adventure",
-  "short_name": "לומדים בכיף",
-  "description": "משחקי למידה בעברית לילדים בגילאי 3 עד 6",
+  "name": "ידעלה | Yedale — הרפתקת למידה בעברית",
+  "short_name": "ידעלה",
+  "description": "הרפתקת למידה בעברית לילדים בגילאי 3 עד 6",
   "lang": "he",
   "dir": "rtl",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "orientation": "portrait-primary",
-  "theme_color": "#a7dcff",
-  "background_color": "#fffdf8",
+  "orientation": "any",
+  "theme_color": "#4338A8",
+  "background_color": "#FFF9EE",
   "icons": [
     {
       "src": "/icons/icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }

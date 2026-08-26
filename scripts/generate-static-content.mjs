@@ -1,4 +1,5 @@
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { join } from 'node:path';
 
 const OUTPUT_DIR = 'src/content';
@@ -337,28 +338,76 @@ const content = {
   sorting: createSorting(110)
 };
 
+const canonicalSkillMap = {
+  'letter-recognition': ['hebrew.letter-recognition', 'foundation.visual-discrimination'],
+  'initial-sound': ['hebrew.letter-sound', 'hebrew.sound-position', 'foundation.auditory-discrimination'],
+  'number-recognition': ['math.numeral-recognition'], counting: ['math.quantity-sense'],
+  'number-sequence': ['math.numeral-recognition', 'cognition.sequence'],
+  'early-addition': ['math.quantity-sense', 'cognition.problem-solving'],
+  'shape-recognition': ['concept.shape', 'foundation.visual-discrimination'],
+  'shape-properties': ['concept.shape', 'cognition.problem-solving'],
+  'color-recognition': ['concept.color', 'foundation.visual-discrimination'],
+  'color-groups': ['concept.color', 'cognition.sorting'],
+  'picture-word': ['cognition.matching', 'hebrew.first-words'],
+  'number-word': ['cognition.matching', 'math.numeral-recognition'],
+  'letter-word': ['cognition.matching', 'hebrew.first-words', 'hebrew.letter-recognition'],
+  'shape-name': ['cognition.matching', 'concept.shape'],
+  'visual-memory': ['cognition.memory', 'foundation.visual-discrimination'],
+  'symbol-memory': ['cognition.memory'], 'word-memory': ['cognition.memory', 'hebrew.first-words'],
+  'ab-pattern': ['cognition.sequence'], 'abc-pattern': ['cognition.sequence', 'cognition.problem-solving'],
+  'number-pattern': ['cognition.sequence', 'math.numeral-recognition', 'cognition.problem-solving', 'readiness.grade-one'],
+  categories: ['cognition.sorting', 'cognition.problem-solving', 'readiness.grade-one']
+};
+function evidenceForm(gameId, skill) {
+  if (gameId === 'matching') return 'matching';
+  if (gameId === 'memory') return 'memory';
+  if (gameId === 'patterns') return 'sequence';
+  if (gameId === 'sorting') return 'sorting';
+  return skill === 'initial-sound' ? 'listening-choice' : 'visual-choice';
+}
+const enrichedContent = Object.fromEntries(Object.entries(content).map(([gameId, items]) => [gameId, items.map((item) => ({
+  ...item, skillIds: canonicalSkillMap[item.skill], evidenceForm: evidenceForm(gameId, item.skill)
+}))]));
+
 mkdirSync(OUTPUT_DIR, { recursive: true });
 
-for (const [gameId, items] of Object.entries(content)) {
+const reviewPath = join(OUTPUT_DIR, 'review-status.json');
+const previousReviews = existsSync(reviewPath)
+  ? JSON.parse(readFileSync(reviewPath, 'utf8')).reviews ?? {}
+  : {};
+
+for (const [gameId, items] of Object.entries(enrichedContent)) {
   const envelope = { schemaVersion: 1, contentVersion: CONTENT_VERSION, gameId, items };
   writeFileSync(join(OUTPUT_DIR, `${gameId}.json`), `${JSON.stringify(envelope, null, 2)}\n`, 'utf8');
 }
 
-const reviews = Object.values(content).flat().reduce((result, item) => {
-  result[item.id] = {
-    linguistic: 'approved',
-    conceptual: 'approved',
-    ageFit: 'approved',
-    reviewedAt: REVIEW_DATE
-  };
+const reviews = Object.values(enrichedContent).flat().reduce((result, item) => {
+  const contentHash = createHash('sha256').update(JSON.stringify(item)).digest('hex');
+  const { skillIds: _skillIds, evidenceForm: _evidenceForm, ...legacyPayload } = item;
+  const legacyHash = createHash('sha256').update(JSON.stringify(legacyPayload)).digest('hex');
+  const previous = previousReviews[item.id];
+  const mechanicalSkillMigration = previous?.status === 'legacy-approved' && previous.contentHash === legacyHash;
+  if (previous?.contentHash && previous.contentHash !== contentHash && !mechanicalSkillMigration) {
+    result[item.id] = { status: 'pending', provenance: 'content-changed', reviewer: null, expertise: null,
+      linguistic: 'pending', conceptual: 'pending', ageFit: 'pending', clarity: 'pending', reviewedAt: null,
+      notes: 'התוכן השתנה מאז האישור האחרון ודורש ביקורת חדשה.', contentHash };
+  } else if (previous?.status === 'approved') {
+    result[item.id] = { ...previous, contentHash };
+  } else {
+    // One-time migration of the existing approval register. No reviewer identity
+    // or expertise is inferred; the exact approved payload is frozen by hash.
+    result[item.id] = { status: 'legacy-approved', provenance: 'legacy-2026.07.1', reviewer: null, expertise: null,
+      linguistic: 'approved', conceptual: 'approved', ageFit: 'approved', clarity: 'legacy-approved',
+      reviewedAt: previous?.reviewedAt ?? REVIEW_DATE, notes: 'אישור היסטורי שיובא ללא זהות בודק; כל שינוי מחייב ביקורת מלאה.', contentHash };
+  }
   return result;
 }, {});
 
 writeFileSync(
-  join(OUTPUT_DIR, 'review-status.json'),
+  reviewPath,
   `${JSON.stringify({ contentVersion: CONTENT_VERSION, reviews }, null, 2)}\n`,
   'utf8'
 );
 
-console.log(`Generated ${Object.values(content).flat().length} reviewed content items.`);
-for (const [gameId, items] of Object.entries(content)) console.log(`${gameId}: ${items.length}`);
+console.log(`Generated ${Object.values(enrichedContent).flat().length} reviewed content items.`);
+for (const [gameId, items] of Object.entries(enrichedContent)) console.log(`${gameId}: ${items.length}`);

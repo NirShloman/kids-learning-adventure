@@ -12,6 +12,8 @@ interface AudioSettings {
   musicEnabled: boolean;
   narrationEnabled: boolean;
   soundEffectsEnabled: boolean;
+  musicVolume?: number;
+  soundEffectsVolume?: number;
 }
 
 interface MusicOptions {
@@ -33,7 +35,9 @@ const THROTTLE_MS: Partial<Record<SfxCue, number>> = {
 let settings: AudioSettings = {
   musicEnabled: true,
   narrationEnabled: true,
-  soundEffectsEnabled: true
+  soundEffectsEnabled: true,
+  musicVolume: MUSIC_VOLUME,
+  soundEffectsVolume: 0.75
 };
 let activeMusic: HTMLAudioElement | null = null;
 let activeMusicTrack: MusicTrack | null = null;
@@ -79,7 +83,7 @@ function fade(audio: HTMLAudioElement, target: number, durationMs: number, stopA
   const step = (now: number) => {
     if (token !== fadeTokens.get(audio)) return;
     const progress = Math.min(1, (now - startedAt) / Math.max(1, durationMs));
-    audio.volume = startVolume + (target - startVolume) * progress;
+    audio.volume = Math.max(0, Math.min(1, startVolume + (target - startVolume) * progress));
     if (progress < 1) {
       window.requestAnimationFrame(step);
       return;
@@ -93,7 +97,8 @@ function fade(audio: HTMLAudioElement, target: number, durationMs: number, stopA
 }
 
 function desiredMusicVolume(): number {
-  return isDucked ? DUCKED_MUSIC_VOLUME : MUSIC_VOLUME;
+  const configured = settings.musicVolume ?? MUSIC_VOLUME;
+  return isDucked ? Math.min(configured, DUCKED_MUSIC_VOLUME) : configured;
 }
 
 function setDucked(ducked: boolean): void {
@@ -123,6 +128,11 @@ if (typeof window !== 'undefined') {
   });
   window.addEventListener('lomdim:speech-start', () => setDucked(true));
   window.addEventListener('lomdim:speech-end', () => setDucked(false));
+  window.addEventListener('lomdim:app-state', ((event: CustomEvent<{ isActive: boolean }>) => {
+    if (!activeMusic) return;
+    if (!event.detail.isActive) activeMusic.pause();
+    else if (settings.musicEnabled && hasUserActivation) void activeMusic.play().catch(() => undefined);
+  }) as EventListener);
 }
 
 export function configureAudio(next: AudioSettings): void {
@@ -186,7 +196,7 @@ function playSyntheticFallback(cue: SfxCue): void {
     oscillator.frequency.value = frequency;
     const noteStart = start + index * 0.1;
     gain.gain.setValueAtTime(0.0001, noteStart);
-    gain.gain.exponentialRampToValueAtTime(0.035, noteStart + 0.015);
+    gain.gain.exponentialRampToValueAtTime(0.035 * (settings.soundEffectsVolume ?? 0.75), noteStart + 0.015);
     gain.gain.exponentialRampToValueAtTime(0.0001, noteStart + 0.14);
     oscillator.connect(gain);
     gain.connect(context.destination);

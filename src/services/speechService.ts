@@ -1,3 +1,5 @@
+import { nativeLearning, platformRuntime } from './platformRuntime';
+
 const CHILD_FRIENDLY_SPEECH_RATE = 0.84;
 const CHILD_FRIENDLY_SPEECH_PITCH = 1.04;
 const MAX_SPOKEN_TEXT_LENGTH = 260;
@@ -7,6 +9,7 @@ export type SpeechMode = 'hint' | 'guided' | 'manual';
 
 export interface SpeakOptions {
   mode?: SpeechMode;
+  slow?: boolean;
 }
 
 const FEMALE_HEBREW_VOICE_HINTS = [
@@ -37,6 +40,20 @@ let lastSpokenText = '';
 let lastSpokenAt = 0;
 let isSpeaking = false;
 let pendingGuidedText = '';
+let nativeSpeechAvailable = false;
+let configuredSpeechVolume = 0.8;
+let configuredSlowSpeech = false;
+
+export function configureSpeechPreferences(volume: number, slow: boolean): void {
+  configuredSpeechVolume = Math.max(0, Math.min(1, volume));
+  configuredSlowSpeech = slow;
+}
+
+export interface NarrationDriver {
+  available(): boolean;
+  speak(text: string, options?: SpeakOptions): void;
+  stop(): void;
+}
 
 function notifySpeechLifecycle(event: 'start' | 'end'): void {
   if (typeof window === 'undefined') return;
@@ -44,6 +61,7 @@ function notifySpeechLifecycle(event: 'start' | 'end'): void {
 }
 
 export function canSpeak(): boolean {
+  if (platformRuntime.native) return nativeSpeechAvailable;
   return typeof window !== 'undefined' && 'speechSynthesis' in window;
 }
 
@@ -103,14 +121,30 @@ function shouldSkipRepeatedSpeech(text: string): boolean {
 }
 
 function refreshSpeechState() {
+  if (platformRuntime.native) return;
   if (!canSpeak()) return;
   isSpeaking = window.speechSynthesis.speaking || window.speechSynthesis.pending;
 }
 
-function speakSafeText(safeText: string, mode: SpeechMode): void {
+function speakSafeText(safeText: string, mode: SpeechMode, slow = false): void {
+  const useSlowRate = slow || configuredSlowSpeech;
+  if (platformRuntime.native) {
+    if (mode === 'manual') {
+      pendingGuidedText = '';
+      void nativeLearning.stopSpeaking();
+    }
+    void nativeLearning.speak({
+      text: safeText,
+      language: 'he-IL',
+      rate: useSlowRate ? 0.68 : CHILD_FRIENDLY_SPEECH_RATE,
+      pitch: CHILD_FRIENDLY_SPEECH_PITCH
+    });
+    return;
+  }
   const utterance = new SpeechSynthesisUtterance(safeText);
   utterance.lang = 'he-IL';
-  utterance.rate = CHILD_FRIENDLY_SPEECH_RATE;
+  utterance.rate = useSlowRate ? 0.68 : CHILD_FRIENDLY_SPEECH_RATE;
+  utterance.volume = configuredSpeechVolume;
   utterance.pitch = CHILD_FRIENDLY_SPEECH_PITCH;
   utterance.voice = cachedHebrewVoice ?? getPreferredHebrewVoice();
   utterance.onstart = () => {
@@ -139,6 +173,15 @@ function speakSafeText(safeText: string, mode: SpeechMode): void {
 }
 
 export function speakHebrew(text: string, options: SpeakOptions = {}): void {
+  if (platformRuntime.native && !nativeSpeechAvailable) {
+    void nativeLearning.narrationAvailable({ language: 'he-IL' }).then(({ available }) => {
+      nativeSpeechAvailable = available;
+      if (available) speakHebrew(text, options);
+    }).catch(() => {
+      nativeSpeechAvailable = false;
+    });
+    return;
+  }
   if (!canSpeak()) return;
 
   const mode = options.mode ?? 'manual';
@@ -154,18 +197,44 @@ export function speakHebrew(text: string, options: SpeakOptions = {}): void {
     return;
   }
 
-  speakSafeText(safeText, mode);
+  speakSafeText(safeText, mode, options.slow);
 }
 
 export function stopSpeaking(): void {
-  if (!canSpeak()) return;
   pendingGuidedText = '';
   isSpeaking = false;
+  if (platformRuntime.native) {
+    void nativeLearning.stopSpeaking();
+    notifySpeechLifecycle('end');
+    return;
+  }
+  if (!canSpeak()) return;
   window.speechSynthesis.cancel();
   notifySpeechLifecycle('end');
 }
 
-if (canSpeak()) {
+if (platformRuntime.native) {
+  void nativeLearning.narrationAvailable({ language: 'he-IL' }).then(({ available }) => {
+    nativeSpeechAvailable = available;
+  }).catch(() => {
+    nativeSpeechAvailable = false;
+  });
+  void nativeLearning.addListener('speechState', ({ speaking }) => {
+    nativeSpeechAvailable = true;
+    isSpeaking = speaking;
+    notifySpeechLifecycle(speaking ? 'start' : 'end');
+    if (speaking || !pendingGuidedText) return;
+    const nextText = pendingGuidedText;
+    pendingGuidedText = '';
+    speakHebrew(nextText, { mode: 'guided' });
+  });
+} else if (canSpeak()) {
   window.speechSynthesis.addEventListener('voiceschanged', getPreferredHebrewVoice);
   getPreferredHebrewVoice();
 }
+
+export const narrationDriver: NarrationDriver = {
+  available: canSpeak,
+  speak: speakHebrew,
+  stop: stopSpeaking
+};

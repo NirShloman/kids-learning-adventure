@@ -52,6 +52,16 @@ export default defineConfig({
       name: 'mobile-safari',
       testMatch: /.*\.local\.spec\.ts/,
       use: { ...devices['iPhone 12'] }
+    },
+    {
+      name: 'mobile-android-tablet',
+      testMatch: /.*\.local\.spec\.ts/,
+      use: { ...devices['Pixel 5'], viewport: { width: 1280, height: 800 } }
+    },
+    {
+      name: 'mobile-ipad',
+      testMatch: /.*\.local\.spec\.ts/,
+      use: { ...devices['iPad Pro 11'] }
     }
   ],
   webServer: {

@@ -1,5 +1,6 @@
 import { Age, Difficulty, GameId } from './game.types';
 import type { ImageAssetId } from '../assets/assetManifest';
+import type { EvidenceForm, SkillId } from './learning.types';
 
 export interface QuizOption {
   id: string;
@@ -12,6 +13,8 @@ export interface ContentItemBase {
   ages: Age[];
   difficulty: Difficulty;
   skill: string;
+  skillIds?: SkillId[];
+  evidenceForm?: EvidenceForm;
 }
 
 export interface QuizQuestion extends ContentItemBase {
@@ -72,8 +75,15 @@ export interface ContentEnvelope<T extends ContentItemBase> {
 }
 
 export interface ContentReviewStatus {
-  linguistic: 'approved';
-  conceptual: 'approved';
-  ageFit: 'approved';
-  reviewedAt: string;
+  status: 'pending' | 'in-review' | 'approved' | 'rejected' | 'legacy-approved';
+  provenance: string;
+  reviewer: string | null;
+  expertise: string | null;
+  linguistic: 'pending' | 'approved' | 'rejected';
+  conceptual: 'pending' | 'approved' | 'rejected';
+  ageFit: 'pending' | 'approved' | 'rejected';
+  clarity: 'pending' | 'approved' | 'rejected' | 'legacy-approved';
+  reviewedAt: string | null;
+  notes: string;
+  contentHash: string;
 }

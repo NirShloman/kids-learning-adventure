@@ -17,7 +17,7 @@ function assert(condition, message) {
 }
 
 assert(manifest.version === 2, 'unexpected manifest version');
-assert(manifest.assets?.length === expectedFiles.size, 'expected six approved music tracks');
+assert(manifest.assets?.length === expectedFiles.size, 'expected six configured music tracks');
 const seen = new Set();
 for (const asset of manifest.assets) {
   assert(!seen.has(asset.id), `duplicate id ${asset.id}`);
@@ -30,5 +30,5 @@ for (const asset of manifest.assets) {
   assert(isMp3, `${asset.file} is not MP3`);
   assert(statSync(file).size > 100_000, `${asset.file} is unexpectedly small`);
 }
-assert(seen.size === expectedFiles.size, 'not all approved tracks are represented');
-console.log('Validated 6 approved MP3 music tracks.');
+assert(seen.size === expectedFiles.size, 'not all configured tracks are represented');
+console.log('Validated the format and manifest mapping of 6 MP3 music tracks; this is not a rights approval.');

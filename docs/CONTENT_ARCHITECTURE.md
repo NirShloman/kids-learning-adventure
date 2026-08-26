@@ -18,5 +18,7 @@ External products may inform pacing and mechanics only. Questions, wording, visu
 
 Primary pedagogical references:
 
+These links are background references to general educational concepts only. They do not indicate Ministry of Education approval, endorsement, partnership, curriculum certification, or review of this application.
+
 - [Hebrew language and early literacy curriculum, Ministry of Education](https://pop.education.gov.il/tchumey_daat/ivrit_chinhch_leshony/yesodi/pedagogy-hebrew-linguistic-education/curriculum/)
 - [The concept of number in kindergarten, Ministry of Education](https://pop.education.gov.il/kindergarten/topics/math/teaching-materials-math/concept-number/)

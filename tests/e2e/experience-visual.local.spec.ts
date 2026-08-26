@@ -129,7 +129,7 @@ test('success and summary visual baselines', async ({ page }) => {
     await moveKeyboardTo(page, '[data-kind="target"]');
     await page.keyboard.press('Space');
   }
-  await expect(page.locator('.experience-controls__button').first()).toBeDisabled();
+  await expect(page.locator('.experience-controls')).toHaveCount(0);
   await screenshotWorld(page, 'experience-success');
   await expect(page.locator('.summary-card')).toBeVisible();
   await expect(page.locator('.summary-card')).toHaveScreenshot('experience-summary.png', {

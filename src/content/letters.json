@@ -29,7 +29,12 @@
           "label": "נ"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-002",
@@ -57,7 +62,13 @@
           "label": "ב"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-003",
@@ -88,7 +99,13 @@
           "emoji": "🌙"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-004",
@@ -116,7 +133,12 @@
           "label": "פ"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-005",
@@ -144,7 +166,13 @@
           "label": "ה"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-006",
@@ -175,7 +203,13 @@
           "emoji": "☂️"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-007",
@@ -203,7 +237,12 @@
           "label": "ר"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-008",
@@ -231,7 +270,13 @@
           "label": "ח"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-009",
@@ -262,7 +307,13 @@
           "emoji": "🌳"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-010",
@@ -290,7 +341,12 @@
           "label": "א"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-011",
@@ -318,7 +374,13 @@
           "label": "כ"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-012",
@@ -349,7 +411,13 @@
           "emoji": "🐒"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-013",
@@ -377,7 +445,12 @@
           "label": "ד"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-014",
@@ -405,7 +478,13 @@
           "label": "נ"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-015",
@@ -436,7 +515,13 @@
           "emoji": "🍎"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-016",
@@ -464,7 +549,12 @@
           "label": "כ"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-017",
@@ -492,7 +582,13 @@
           "label": "פ"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-018",
@@ -523,7 +619,13 @@
           "emoji": "🥕"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-019",
@@ -551,7 +653,12 @@
           "label": "נ"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-020",
@@ -579,7 +686,13 @@
           "label": "ר"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-021",
@@ -610,7 +723,13 @@
           "emoji": "🎒"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-022",
@@ -638,7 +757,12 @@
           "label": "פ"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-023",
@@ -666,7 +790,13 @@
           "label": "א"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-024",
@@ -697,7 +827,13 @@
           "emoji": "🚗"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-025",
@@ -725,7 +861,12 @@
           "label": "ר"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-026",
@@ -753,7 +894,13 @@
           "label": "ד"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-027",
@@ -784,7 +931,13 @@
           "emoji": "✏️"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-028",
@@ -812,7 +965,12 @@
           "label": "א"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-029",
@@ -840,7 +998,13 @@
           "label": "כ"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-030",
@@ -871,7 +1035,13 @@
           "emoji": "🌈"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-031",
@@ -899,7 +1069,12 @@
           "label": "ד"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-032",
@@ -927,7 +1102,13 @@
           "label": "נ"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-033",
@@ -958,7 +1139,13 @@
           "emoji": "🍓"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-034",
@@ -986,7 +1173,12 @@
           "label": "ז"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-035",
@@ -1014,7 +1206,13 @@
           "label": "פ"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-036",
@@ -1045,7 +1243,13 @@
           "emoji": "🐫"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-037",
@@ -1073,7 +1277,12 @@
           "label": "י"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-038",
@@ -1101,7 +1310,13 @@
           "label": "ר"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-039",
@@ -1132,7 +1347,13 @@
           "emoji": "🌹"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-040",
@@ -1160,7 +1381,12 @@
           "label": "מ"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-041",
@@ -1188,7 +1414,13 @@
           "label": "א"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-042",
@@ -1219,7 +1451,13 @@
           "emoji": "🦚"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-043",
@@ -1247,7 +1485,12 @@
           "label": "ע"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-044",
@@ -1275,7 +1518,13 @@
           "label": "ד"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-045",
@@ -1306,7 +1555,13 @@
           "emoji": "🍋"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-046",
@@ -1334,7 +1589,12 @@
           "label": "ק"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-047",
@@ -1362,7 +1622,13 @@
           "label": "ז"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-048",
@@ -1393,7 +1659,13 @@
           "emoji": "📘"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-049",
@@ -1421,7 +1693,12 @@
           "label": "ת"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-050",
@@ -1449,7 +1726,13 @@
           "label": "י"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-051",
@@ -1480,7 +1763,13 @@
           "emoji": "🐢"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-052",
@@ -1508,7 +1797,12 @@
           "label": "ג"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-053",
@@ -1536,7 +1830,13 @@
           "label": "מ"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-054",
@@ -1567,7 +1867,13 @@
           "emoji": "☀️"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-055",
@@ -1595,7 +1901,12 @@
           "label": "י"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-056",
@@ -1623,7 +1934,13 @@
           "label": "ע"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-057",
@@ -1654,7 +1971,13 @@
           "emoji": "🍌"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-058",
@@ -1682,7 +2005,12 @@
           "label": "מ"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-059",
@@ -1710,7 +2038,13 @@
           "label": "ק"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-060",
@@ -1741,7 +2075,13 @@
           "emoji": "🐞"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-061",
@@ -1769,7 +2109,12 @@
           "label": "ע"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-062",
@@ -1797,7 +2142,13 @@
           "label": "ת"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-063",
@@ -1828,7 +2179,13 @@
           "emoji": "🍞"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-064",
@@ -1856,7 +2213,12 @@
           "label": "ק"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-065",
@@ -1884,7 +2246,13 @@
           "label": "ג"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-066",
@@ -1915,7 +2283,13 @@
           "emoji": "⛵"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-067",
@@ -1943,7 +2317,12 @@
           "label": "ת"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-068",
@@ -1971,7 +2350,13 @@
           "label": "י"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-069",
@@ -2002,7 +2387,13 @@
           "emoji": "🐦"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-070",
@@ -2030,7 +2421,12 @@
           "label": "ג"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-071",
@@ -2058,7 +2454,13 @@
           "label": "מ"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-072",
@@ -2089,7 +2491,13 @@
           "emoji": "🕐"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-073",
@@ -2117,7 +2525,12 @@
           "label": "ו"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-074",
@@ -2145,7 +2558,13 @@
           "label": "ע"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-075",
@@ -2176,7 +2595,13 @@
           "emoji": "🏠"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-076",
@@ -2204,7 +2629,12 @@
           "label": "ט"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-077",
@@ -2232,7 +2662,13 @@
           "label": "ק"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-078",
@@ -2263,7 +2699,13 @@
           "emoji": "⛰️"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-079",
@@ -2291,7 +2733,12 @@
           "label": "ל"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-080",
@@ -2319,7 +2766,13 @@
           "label": "ת"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-081",
@@ -2350,7 +2803,13 @@
           "emoji": "🐱"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-082",
@@ -2378,7 +2837,12 @@
           "label": "ס"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-083",
@@ -2406,7 +2870,13 @@
           "label": "ג"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-084",
@@ -2437,7 +2907,13 @@
           "emoji": "⚽"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-085",
@@ -2465,7 +2941,12 @@
           "label": "צ"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-086",
@@ -2493,7 +2974,13 @@
           "label": "ו"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-087",
@@ -2524,7 +3011,13 @@
           "emoji": "🕯️"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-088",
@@ -2552,7 +3045,12 @@
           "label": "ש"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-089",
@@ -2580,7 +3078,13 @@
           "label": "ט"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-090",
@@ -2611,7 +3115,13 @@
           "emoji": "🌸"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-091",
@@ -2639,7 +3149,12 @@
           "label": "ב"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-092",
@@ -2667,7 +3182,13 @@
           "label": "ל"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-093",
@@ -2698,7 +3219,13 @@
           "emoji": "🚂"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-094",
@@ -2726,7 +3253,12 @@
           "label": "ח"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-095",
@@ -2754,7 +3286,13 @@
           "label": "ס"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-096",
@@ -2785,7 +3323,13 @@
           "emoji": "🍉"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-097",
@@ -2813,7 +3357,12 @@
           "label": "ל"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-098",
@@ -2841,7 +3390,13 @@
           "label": "צ"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-099",
@@ -2872,7 +3427,13 @@
           "emoji": "🚪"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-100",
@@ -2900,7 +3461,12 @@
           "label": "ס"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-101",
@@ -2928,7 +3494,13 @@
           "label": "ש"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-102",
@@ -2959,7 +3531,13 @@
           "emoji": "⭐"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-103",
@@ -2987,7 +3565,12 @@
           "label": "צ"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-104",
@@ -3015,7 +3598,13 @@
           "label": "ב"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-105",
@@ -3046,7 +3635,13 @@
           "emoji": "👟"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-106",
@@ -3074,7 +3669,12 @@
           "label": "ש"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-107",
@@ -3102,7 +3702,13 @@
           "label": "ח"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-108",
@@ -3133,7 +3739,13 @@
           "emoji": "🐘"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-109",
@@ -3161,7 +3773,12 @@
           "label": "ב"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-110",
@@ -3189,7 +3806,13 @@
           "label": "ל"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-111",
@@ -3220,7 +3843,13 @@
           "emoji": "🍎"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-112",
@@ -3248,7 +3877,12 @@
           "label": "ה"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-113",
@@ -3276,7 +3910,13 @@
           "label": "ס"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-114",
@@ -3307,7 +3947,13 @@
           "emoji": "🦁"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-115",
@@ -3335,7 +3981,12 @@
           "label": "ח"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-116",
@@ -3363,7 +4014,13 @@
           "label": "צ"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-117",
@@ -3394,7 +4051,13 @@
           "emoji": "🐟"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-118",
@@ -3422,7 +4085,12 @@
           "label": "כ"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-119",
@@ -3450,7 +4118,13 @@
           "label": "ש"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-120",
@@ -3481,7 +4155,13 @@
           "emoji": "🦓"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-121",
@@ -3509,7 +4189,12 @@
           "label": "נ"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-122",
@@ -3537,7 +4222,13 @@
           "label": "ב"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-123",
@@ -3568,7 +4259,13 @@
           "emoji": "🌙"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-124",
@@ -3596,7 +4293,12 @@
           "label": "פ"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-125",
@@ -3624,7 +4326,13 @@
           "label": "ה"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-126",
@@ -3655,7 +4363,13 @@
           "emoji": "☂️"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-127",
@@ -3683,7 +4397,12 @@
           "label": "ר"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-128",
@@ -3711,7 +4430,13 @@
           "label": "ח"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-129",
@@ -3742,7 +4467,13 @@
           "emoji": "🌳"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-130",
@@ -3770,7 +4501,12 @@
           "label": "א"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-131",
@@ -3798,7 +4534,13 @@
           "label": "כ"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-132",
@@ -3829,7 +4571,13 @@
           "emoji": "🐒"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-133",
@@ -3857,7 +4605,12 @@
           "label": "ד"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-134",
@@ -3885,7 +4638,13 @@
           "label": "נ"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-135",
@@ -3916,7 +4675,13 @@
           "emoji": "🍎"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-136",
@@ -3944,7 +4709,12 @@
           "label": "כ"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-137",
@@ -3972,7 +4742,13 @@
           "label": "פ"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-138",
@@ -4003,7 +4779,13 @@
           "emoji": "🥕"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-139",
@@ -4031,7 +4813,12 @@
           "label": "נ"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-140",
@@ -4059,7 +4846,13 @@
           "label": "ר"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-141",
@@ -4090,7 +4883,13 @@
           "emoji": "🎒"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-142",
@@ -4118,7 +4917,12 @@
           "label": "פ"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-143",
@@ -4146,7 +4950,13 @@
           "label": "א"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-144",
@@ -4177,7 +4987,13 @@
           "emoji": "🚗"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-145",
@@ -4205,7 +5021,12 @@
           "label": "ר"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-146",
@@ -4233,7 +5054,13 @@
           "label": "ד"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-147",
@@ -4264,7 +5091,13 @@
           "emoji": "✏️"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-148",
@@ -4292,7 +5125,12 @@
           "label": "א"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-149",
@@ -4320,7 +5158,13 @@
           "label": "כ"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-150",
@@ -4351,7 +5195,13 @@
           "emoji": "🌈"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-151",
@@ -4379,7 +5229,12 @@
           "label": "ד"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-152",
@@ -4407,7 +5262,13 @@
           "label": "נ"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-153",
@@ -4438,7 +5299,13 @@
           "emoji": "🍓"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-154",
@@ -4466,7 +5333,12 @@
           "label": "ז"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-155",
@@ -4494,7 +5366,13 @@
           "label": "פ"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-156",
@@ -4525,7 +5403,13 @@
           "emoji": "🐫"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-157",
@@ -4553,7 +5437,12 @@
           "label": "י"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-158",
@@ -4581,7 +5470,13 @@
           "label": "ר"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-159",
@@ -4612,7 +5507,13 @@
           "emoji": "🌹"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-160",
@@ -4640,7 +5541,12 @@
           "label": "מ"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-161",
@@ -4668,7 +5574,13 @@
           "label": "א"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-162",
@@ -4699,7 +5611,13 @@
           "emoji": "🦚"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-163",
@@ -4727,7 +5645,12 @@
           "label": "ע"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-164",
@@ -4755,7 +5678,13 @@
           "label": "ד"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-165",
@@ -4786,7 +5715,13 @@
           "emoji": "🍋"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-166",
@@ -4814,7 +5749,12 @@
           "label": "ק"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-167",
@@ -4842,7 +5782,13 @@
           "label": "ז"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-168",
@@ -4873,7 +5819,13 @@
           "emoji": "📘"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-169",
@@ -4901,7 +5853,12 @@
           "label": "ת"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-170",
@@ -4929,7 +5886,13 @@
           "label": "י"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-171",
@@ -4960,7 +5923,13 @@
           "emoji": "🐢"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-172",
@@ -4988,7 +5957,12 @@
           "label": "ג"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-173",
@@ -5016,7 +5990,13 @@
           "label": "מ"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-174",
@@ -5047,7 +6027,13 @@
           "emoji": "☀️"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-175",
@@ -5075,7 +6061,12 @@
           "label": "י"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-176",
@@ -5103,7 +6094,13 @@
           "label": "ע"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-177",
@@ -5134,7 +6131,13 @@
           "emoji": "🍌"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-178",
@@ -5162,7 +6165,12 @@
           "label": "מ"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "hebrew.letter-recognition",
+        "foundation.visual-discrimination"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "letters-179",
@@ -5190,7 +6198,13 @@
           "label": "ק"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     },
     {
       "id": "letters-180",
@@ -5221,7 +6235,13 @@
           "emoji": "🐞"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "hebrew.letter-sound",
+        "hebrew.sound-position",
+        "foundation.auditory-discrimination"
+      ],
+      "evidenceForm": "listening-choice"
     }
   ]
 }

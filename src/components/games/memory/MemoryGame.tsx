@@ -9,6 +9,7 @@ import { GameWorld, GameWorldMessage } from '../GameWorld';
 import { GameImage } from '../../common/GameImage';
 import { playAudioCue, playRecordedVoice } from '../../../services/audioService';
 import { motion } from 'motion/react';
+import { recordActiveAttempt } from '../../../services/learningEvidenceService';
 
 interface MemoryGameProps {
   age: Age;
@@ -82,6 +83,7 @@ export function MemoryGame({ age, difficulty, voiceEnabled, onBack, onFinish }: 
       const [firstId, secondId] = nextFlipped;
       const firstCard = cards.find((item) => item.id === firstId);
       const secondCard = cards.find((item) => item.id === secondId);
+      if (firstCard && secondCard) recordActiveAttempt(firstCard, 'memory', firstCard.pairId === secondCard.pairId, { attemptNumber: moves + 1 });
 
       if (firstCard && secondCard && firstCard.pairId === secondCard.pairId) {
         window.setTimeout(() => {

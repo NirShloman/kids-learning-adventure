@@ -38,16 +38,26 @@ export async function completeProfileSetup(page: Page, gender: 'boy' | 'girl' = 
 
 export async function openLobby(page: Page, gender: 'boy' | 'girl' = 'girl') {
   await gotoFreshApp(page);
-  await expect(page.getByRole('heading', { name: 'לומדים בכיף', level: 1 })).toBeVisible();
+  // The branded Hebrew display name can change independently of onboarding.
+  // The landing-page h1 is the stable semantic readiness signal.
+  await expect(page.locator('main h1').first()).toBeVisible();
   await page.getByRole('button', { name: /מתחילים לשחק/ }).click();
   await completeProfileSetup(page, gender);
   await expect(page.locator('.home-grid')).toBeVisible();
-  await page.locator('#learner-voice').uncheck();
+  await page.locator('#learner-voice').uncheck({ force: true });
 }
 
 export async function chooseHomeSettings(page: Page, age: number, difficultyValue: 'easy' | 'medium' | 'hard') {
+  await page.getByRole('button', { name: 'אזור הורים' }).click();
+  const prompt = await page.locator('label[for="parent-answer"]').textContent();
+  const factors = prompt?.match(/(\d+)\s*×\s*(\d+)/);
+  expect(factors).not.toBeNull();
+  await page.locator('#parent-answer').fill(String(Number(factors![1]) * Number(factors![2])));
+  await page.getByRole('button', { name: 'פתיחת אזור הורים' }).click();
   await page.locator('#learner-age').selectOption(String(age));
   await page.locator('#learner-difficulty').selectOption(difficultyValue);
+  await page.getByRole('button', { name: 'שמירת פרופיל והגדרות' }).click();
+  await page.getByRole('button', { name: 'חזרה לאפליקציה' }).click();
 }
 
 export async function openGame(page: Page, title: GameTitle) {

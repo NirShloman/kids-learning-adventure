@@ -1,4 +1,6 @@
 import { ContentEnvelope, ContentItemBase, GameId } from '../types';
+import type { LearningContentDescriptor } from '../types';
+import { evidenceFormForGame, skillIdsForLegacySkill } from '../learning/skillGraph';
 
 type ContentModule = { default: unknown };
 
@@ -30,8 +32,27 @@ export async function loadGameContent<T extends ContentItemBase>(gameId: GameId)
     throw new Error(`Invalid static content envelope for ${gameId}.`);
   }
 
-  contentCache.set(gameId, module.default);
-  return module.default as ContentEnvelope<T>;
+  const source = module.default;
+  const enriched: ContentEnvelope<ContentItemBase> = {
+    ...source,
+    items: source.items.map((item) => ({
+      ...item,
+      skillIds: item.skillIds?.length ? item.skillIds : skillIdsForLegacySkill(item.skill),
+      evidenceForm: item.evidenceForm ?? evidenceFormForGame(gameId, item.skill)
+    }))
+  };
+  contentCache.set(gameId, enriched);
+  return enriched as ContentEnvelope<T>;
+}
+
+export async function loadLearningContentIndex(): Promise<LearningContentDescriptor[]> {
+  const gameIds: GameId[] = ['letters', 'numbers', 'shapes', 'colors', 'matching', 'memory', 'patterns', 'sorting'];
+  const envelopes = await Promise.all(gameIds.map((gameId) => loadGameContent(gameId)));
+  return envelopes.flatMap((envelope) => envelope.items.map((item) => ({
+    id: item.id, gameId: envelope.gameId, ages: item.ages, difficulty: item.difficulty,
+    skillIds: item.skillIds ?? skillIdsForLegacySkill(item.skill),
+    evidenceForm: item.evidenceForm ?? evidenceFormForGame(envelope.gameId, item.skill)
+  })));
 }
 
 export function clearStaticContentCache(): void {

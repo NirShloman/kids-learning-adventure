@@ -29,7 +29,11 @@
           "label": "0"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-002",
@@ -57,7 +61,11 @@
           "label": "2"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-003",
@@ -85,7 +93,12 @@
           "label": "3"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-004",
@@ -113,7 +126,12 @@
           "label": "3"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-005",
@@ -141,7 +159,11 @@
           "label": "2"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-006",
@@ -169,7 +191,11 @@
           "label": "4"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-007",
@@ -197,7 +223,12 @@
           "label": "3"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-008",
@@ -225,7 +256,12 @@
           "label": "3"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-009",
@@ -253,7 +289,11 @@
           "label": "4"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-010",
@@ -281,7 +321,11 @@
           "label": "3"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-011",
@@ -309,7 +353,12 @@
           "label": "3"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-012",
@@ -337,7 +386,12 @@
           "label": "3"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-013",
@@ -365,7 +419,11 @@
           "label": "0"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-014",
@@ -393,7 +451,11 @@
           "label": "2"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-015",
@@ -421,7 +483,12 @@
           "label": "3"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-016",
@@ -449,7 +516,12 @@
           "label": "6"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-017",
@@ -477,7 +549,11 @@
           "label": "4"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-018",
@@ -505,7 +581,11 @@
           "label": "6"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-019",
@@ -533,7 +613,12 @@
           "label": "8"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-020",
@@ -561,7 +646,12 @@
           "label": "10"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-021",
@@ -589,7 +679,11 @@
           "label": "9"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-022",
@@ -617,7 +711,11 @@
           "label": "8"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-023",
@@ -645,7 +743,12 @@
           "label": "11"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-024",
@@ -673,7 +776,12 @@
           "label": "14"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-025",
@@ -701,7 +809,11 @@
           "label": "11"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-026",
@@ -729,7 +841,11 @@
           "label": "13"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-027",
@@ -757,7 +873,12 @@
           "label": "1"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-028",
@@ -785,7 +906,12 @@
           "label": "5"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-029",
@@ -813,7 +939,11 @@
           "label": "3"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-030",
@@ -841,7 +971,11 @@
           "label": "5"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-031",
@@ -869,7 +1003,12 @@
           "label": "9"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-032",
@@ -897,7 +1036,12 @@
           "label": "9"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-033",
@@ -925,7 +1069,11 @@
           "label": "2"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-034",
@@ -953,7 +1101,11 @@
           "label": "1"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-035",
@@ -981,7 +1133,12 @@
           "label": "4"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-036",
@@ -1009,7 +1166,12 @@
           "label": "4"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-037",
@@ -1037,7 +1199,11 @@
           "label": "4"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-038",
@@ -1065,7 +1231,11 @@
           "label": "6"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-039",
@@ -1093,7 +1263,12 @@
           "label": "7"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-040",
@@ -1121,7 +1296,12 @@
           "label": "10"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-041",
@@ -1149,7 +1329,11 @@
           "label": "1"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-042",
@@ -1177,7 +1361,11 @@
           "label": "3"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-043",
@@ -1205,7 +1393,12 @@
           "label": "5"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-044",
@@ -1233,7 +1426,12 @@
           "label": "5"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-045",
@@ -1261,7 +1459,11 @@
           "label": "6"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-046",
@@ -1289,7 +1491,11 @@
           "label": "6"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-047",
@@ -1317,7 +1523,12 @@
           "label": "9"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-048",
@@ -1345,7 +1556,12 @@
           "label": "12"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-049",
@@ -1373,7 +1589,11 @@
           "label": "9"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-050",
@@ -1401,7 +1621,11 @@
           "label": "11"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-051",
@@ -1429,7 +1653,12 @@
           "label": "12"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-052",
@@ -1457,7 +1686,12 @@
           "label": "16"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-053",
@@ -1485,7 +1719,11 @@
           "label": "1"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-054",
@@ -1513,7 +1751,11 @@
           "label": "3"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-055",
@@ -1541,7 +1783,12 @@
           "label": "5"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-056",
@@ -1569,7 +1816,12 @@
           "label": "7"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-057",
@@ -1597,7 +1849,11 @@
           "label": "6"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-058",
@@ -1625,7 +1881,11 @@
           "label": "5"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-059",
@@ -1653,7 +1913,12 @@
           "label": "8"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-060",
@@ -1681,7 +1946,12 @@
           "label": "11"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-061",
@@ -1709,7 +1979,11 @@
           "label": "4"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-062",
@@ -1737,7 +2011,11 @@
           "label": "6"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-063",
@@ -1765,7 +2043,12 @@
           "label": "7"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-064",
@@ -1793,7 +2076,12 @@
           "label": "10"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-065",
@@ -1821,7 +2109,11 @@
           "label": "1"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-066",
@@ -1849,7 +2141,11 @@
           "label": "3"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-067",
@@ -1877,7 +2173,12 @@
           "label": "5"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-068",
@@ -1905,7 +2206,12 @@
           "label": "5"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-069",
@@ -1933,7 +2239,11 @@
           "label": "6"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-070",
@@ -1961,7 +2271,11 @@
           "label": "5"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-071",
@@ -1989,7 +2303,12 @@
           "label": "8"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-072",
@@ -2017,7 +2336,12 @@
           "label": "8"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-073",
@@ -2045,7 +2369,11 @@
           "label": "0"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-074",
@@ -2073,7 +2401,11 @@
           "label": "2"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-075",
@@ -2101,7 +2433,12 @@
           "label": "3"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-076",
@@ -2129,7 +2466,12 @@
           "label": "7"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-077",
@@ -2157,7 +2499,11 @@
           "label": "5"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-078",
@@ -2185,7 +2531,11 @@
           "label": "7"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-079",
@@ -2213,7 +2563,12 @@
           "label": "9"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-080",
@@ -2241,7 +2596,12 @@
           "label": "11"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-081",
@@ -2269,7 +2629,11 @@
           "label": "10"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-082",
@@ -2297,7 +2661,11 @@
           "label": "9"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-083",
@@ -2325,7 +2693,12 @@
           "label": "12"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-084",
@@ -2353,7 +2726,12 @@
           "label": "15"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-085",
@@ -2381,7 +2759,11 @@
           "label": "12"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-086",
@@ -2409,7 +2791,11 @@
           "label": "14"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-087",
@@ -2437,7 +2823,12 @@
           "label": "15"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-088",
@@ -2465,7 +2856,12 @@
           "label": "19"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-089",
@@ -2493,7 +2889,11 @@
           "label": "17"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-090",
@@ -2521,7 +2921,11 @@
           "label": "19"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-091",
@@ -2549,7 +2953,12 @@
           "label": "3"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-092",
@@ -2577,7 +2986,12 @@
           "label": "4"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-093",
@@ -2605,7 +3019,11 @@
           "label": "6"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-094",
@@ -2633,7 +3051,11 @@
           "label": "2"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-095",
@@ -2661,7 +3083,12 @@
           "label": "8"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-096",
@@ -2689,7 +3116,12 @@
           "label": "9"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-097",
@@ -2717,7 +3149,11 @@
           "label": "0"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-098",
@@ -2745,7 +3181,11 @@
           "label": "7"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-099",
@@ -2773,7 +3213,12 @@
           "label": "3"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-100",
@@ -2801,7 +3246,12 @@
           "label": "12"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-101",
@@ -2829,7 +3279,11 @@
           "label": "5"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-102",
@@ -2857,7 +3311,11 @@
           "label": "13"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-103",
@@ -2885,7 +3343,12 @@
           "label": "3"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-104",
@@ -2913,7 +3376,12 @@
           "label": "16"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-105",
@@ -2941,7 +3409,11 @@
           "label": "2"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-106",
@@ -2969,7 +3441,11 @@
           "label": "1"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-107",
@@ -2997,7 +3473,12 @@
           "label": "4"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-108",
@@ -3025,7 +3506,12 @@
           "label": "21"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-109",
@@ -3053,7 +3539,11 @@
           "label": "0"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-110",
@@ -3081,7 +3571,11 @@
           "label": "6"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-111",
@@ -3109,7 +3603,12 @@
           "label": "7"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-112",
@@ -3137,7 +3636,12 @@
           "label": "11"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-113",
@@ -3165,7 +3669,11 @@
           "label": "1"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-114",
@@ -3193,7 +3701,11 @@
           "label": "7"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-115",
@@ -3221,7 +3733,12 @@
           "label": "3"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-116",
@@ -3249,7 +3766,12 @@
           "label": "15"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-117",
@@ -3277,7 +3799,11 @@
           "label": "6"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-118",
@@ -3305,7 +3831,11 @@
           "label": "3"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-119",
@@ -3333,7 +3863,12 @@
           "label": "8"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-120",
@@ -3361,7 +3896,12 @@
           "label": "15"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-121",
@@ -3389,7 +3929,11 @@
           "label": "0"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-122",
@@ -3417,7 +3961,11 @@
           "label": "5"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-123",
@@ -3445,7 +3993,12 @@
           "label": "3"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-124",
@@ -3473,7 +4026,12 @@
           "label": "10"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-125",
@@ -3501,7 +4059,11 @@
           "label": "5"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-126",
@@ -3529,7 +4091,11 @@
           "label": "19"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-127",
@@ -3557,7 +4123,12 @@
           "label": "3"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-128",
@@ -3585,7 +4156,12 @@
           "label": "14"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-129",
@@ -3613,7 +4189,11 @@
           "label": "2"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-130",
@@ -3641,7 +4221,11 @@
           "label": "12"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-131",
@@ -3669,7 +4253,12 @@
           "label": "4"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-132",
@@ -3697,7 +4286,12 @@
           "label": "9"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-133",
@@ -3725,7 +4319,11 @@
           "label": "0"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-134",
@@ -3753,7 +4351,11 @@
           "label": "4"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-135",
@@ -3781,7 +4383,12 @@
           "label": "7"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-136",
@@ -3809,7 +4416,12 @@
           "label": "9"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-137",
@@ -3837,7 +4449,11 @@
           "label": "1"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-138",
@@ -3865,7 +4481,11 @@
           "label": "13"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-139",
@@ -3893,7 +4513,12 @@
           "label": "3"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-140",
@@ -3921,7 +4546,12 @@
           "label": "13"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-141",
@@ -3949,7 +4579,11 @@
           "label": "6"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-142",
@@ -3977,7 +4611,11 @@
           "label": "11"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-143",
@@ -4005,7 +4643,12 @@
           "label": "8"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-144",
@@ -4033,7 +4676,12 @@
           "label": "21"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-145",
@@ -4061,7 +4709,11 @@
           "label": "0"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-146",
@@ -4089,7 +4741,11 @@
           "label": "3"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-147",
@@ -4117,7 +4773,12 @@
           "label": "3"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-148",
@@ -4145,7 +4806,12 @@
           "label": "8"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-149",
@@ -4173,7 +4839,11 @@
           "label": "5"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-150",
@@ -4201,7 +4871,11 @@
           "label": "7"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-151",
@@ -4229,7 +4903,12 @@
           "label": "3"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-152",
@@ -4257,7 +4936,12 @@
           "label": "12"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-153",
@@ -4285,7 +4969,11 @@
           "label": "2"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-154",
@@ -4313,7 +5001,11 @@
           "label": "10"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-155",
@@ -4341,7 +5033,12 @@
           "label": "4"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-156",
@@ -4369,7 +5066,12 @@
           "label": "15"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-157",
@@ -4397,7 +5099,11 @@
           "label": "0"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-158",
@@ -4425,7 +5131,11 @@
           "label": "2"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-159",
@@ -4453,7 +5163,12 @@
           "label": "7"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-160",
@@ -4481,7 +5196,12 @@
           "label": "7"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-161",
@@ -4509,7 +5229,11 @@
           "label": "1"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-162",
@@ -4537,7 +5261,11 @@
           "label": "19"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-163",
@@ -4565,7 +5293,12 @@
           "label": "3"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-164",
@@ -4593,7 +5326,12 @@
           "label": "11"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-165",
@@ -4621,7 +5359,11 @@
           "label": "6"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-166",
@@ -4649,7 +5391,11 @@
           "label": "9"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-167",
@@ -4677,7 +5423,12 @@
           "label": "8"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.numeral-recognition",
+        "cognition.sequence"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-168",
@@ -4705,7 +5456,12 @@
           "label": "9"
         }
       ],
-      "correctOptionId": "option-2"
+      "correctOptionId": "option-2",
+      "skillIds": [
+        "math.quantity-sense",
+        "cognition.problem-solving"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-169",
@@ -4733,7 +5489,11 @@
           "label": "0"
         }
       ],
-      "correctOptionId": "option-1"
+      "correctOptionId": "option-1",
+      "skillIds": [
+        "math.numeral-recognition"
+      ],
+      "evidenceForm": "visual-choice"
     },
     {
       "id": "numbers-170",
@@ -4761,7 +5521,11 @@
           "label": "1"
         }
       ],
-      "correctOptionId": "option-3"
+      "correctOptionId": "option-3",
+      "skillIds": [
+        "math.quantity-sense"
+      ],
+      "evidenceForm": "visual-choice"
     }
   ]
 }

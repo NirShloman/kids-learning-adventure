@@ -1,4 +1,4 @@
-const CACHE_NAME = 'lomdim-bekef-v1.2.0-media-20260729';
+const CACHE_NAME = 'yedale-v1.3.0-media-20260826';
 const STATIC_ASSETS = ['/', '/manifest.webmanifest', '/icons/icon.svg'];
 
 function isSameOriginRequest(request) {

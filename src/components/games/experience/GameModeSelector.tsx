@@ -26,6 +26,7 @@ export function GameModeSelector({ gameId, title, voiceEnabled, onSelect, onBack
         {gameId === 'numbers' && (
           <AmbientVideo
             src="/assets/video/counting-orchard.mp4"
+            poster="/assets/video/counting-orchard.poster.webp"
             className="game-mode-cinematic"
             fallback={<div className="game-mode-cinematic__fallback" />}
             ariaLabel="שיר וניר סופרים תפוחים במטע"
@@ -33,13 +34,13 @@ export function GameModeSelector({ gameId, title, voiceEnabled, onSelect, onBack
         )}
         <span className="question-card__tag">איך משחקים היום?</span>
         <h2>בחרו דרך לשחק</h2>
-        <p>אפשר לבחור במשחק חווייתי עם חצים ורווח, או בחידון המוכר.</p>
+        <p>אפשר לבחור במשחק חווייתי במגע ישיר, או בחידון המוכר.</p>
         <div className="game-mode-selector__options">
-          <button type="button" className="game-mode-card game-mode-card--featured" onClick={() => onSelect('experience')} {...getSpeakProps<HTMLButtonElement>('משחק חווייתי, משחקים עם החצים ומקש הרווח')}>
+          <button type="button" className="game-mode-card game-mode-card--featured" onClick={() => onSelect('experience')} {...getSpeakProps<HTMLButtonElement>('משחק חווייתי, נוגעים במקום ובפריטים כדי לשחק')}>
             <span className="game-mode-card__icon" aria-hidden="true">🎮</span>
             <strong>משחק חווייתי</strong>
             <span>זזים, אוספים, בונים וצובעים</span>
-            <kbd>חצים + רווח</kbd>
+            <kbd>נוגעים ומשחקים</kbd>
           </button>
           <button type="button" className="game-mode-card" onClick={() => onSelect('quiz')} {...getSpeakProps<HTMLButtonElement>('טריוויה, בוחרים את התשובה הנכונה')}>
             <span className="game-mode-card__icon" aria-hidden="true">💡</span>

@@ -14,8 +14,10 @@ import type {
   ExperienceGameId,
   ExperienceInputState,
   ExperienceLevel,
+  ExperienceNavigationIntent,
   FacingDirection,
-  LearnerGender
+  LearnerGender,
+  NavigationPath
 } from '../../../types';
 import { useSpeech } from '../../../hooks/useSpeech';
 import { playAudioCue, playRecordedVoice, playSfx } from '../../../services/audioService';
@@ -28,8 +30,11 @@ import {
   getAnimationDurationMs,
   resolveCharacterSkin
 } from './experienceAssetManifest';
-import { GameControls } from './GameControls';
 import { useExperiencePhysics } from './useExperiencePhysics';
+import { findNavigationPath, inputToward, screenPointToWorld } from './experienceNavigation';
+import { Button } from '../../common/Button';
+import { completeJourneyLevel, getActiveProfile, recordLearningEvent } from '../../../services/learningStoreService';
+import { experienceSkillIds } from '../../../learning/skillGraph';
 
 interface ExperienceGameProps {
   gameId: ExperienceGameId;
@@ -132,6 +137,10 @@ export function ExperienceGame({
   const celebrationTimerRef = useRef<number | null>(null);
   const wasNearInteractiveRef = useRef(false);
   const lastStepTickRef = useRef(0);
+  const navigationRef = useRef<NavigationPath | null>(null);
+  const navigationProgressRef = useRef({ distance: Number.POSITIVE_INFINITY, tick: 0 });
+  const recordedLevelsRef = useRef(new Set<string>());
+  const [navigationTarget, setNavigationTarget] = useState<{ x: number; y: number } | null>(null);
   const currentLevel = availableLevels[levelIndex];
   const characterSkin = resolveCharacterSkin(gender);
   const tuning = getPhysicsTuning(age, difficulty);
@@ -156,6 +165,13 @@ export function ExperienceGame({
   const clearInput = useCallback(() => {
     inputRef.current = { ...EMPTY_INPUT };
   }, []);
+
+  const cancelNavigation = useCallback(() => {
+    navigationRef.current = null;
+    navigationProgressRef.current = { distance: Number.POSITIVE_INFINITY, tick: 0 };
+    setNavigationTarget(null);
+    clearInput();
+  }, [clearInput]);
 
   const playActionAnimation = useCallback((animation: 'pickup' | 'drop') => {
     setActionAnimation(animation);
@@ -222,6 +238,8 @@ export function ExperienceGame({
   const resetForLevel = useCallback((nextIndex: number) => {
     if (!availableLevels[nextIndex]) return;
     clearInput();
+    navigationRef.current = null;
+    setNavigationTarget(null);
     releaseCarriedBody();
     setHeldId(null);
     setRemovedIds([]);
@@ -235,6 +253,15 @@ export function ExperienceGame({
 
   const finishLevel = useCallback((nextProgress: number) => {
     if (!currentLevel || nextProgress < currentLevel.required) return;
+    const profile = getActiveProfile();
+    if (profile && !recordedLevelsRef.current.has(currentLevel.id)) {
+      recordedLevelsRef.current.add(currentLevel.id);
+      recordLearningEvent({ profileId: profile.id, sessionId: `experience-${gameId}-${currentLevel.id}`,
+        contentId: currentLevel.id, skillIds: experienceSkillIds(gameId), gameId,
+        evidenceForm: 'adventure-drag', correct: true, attemptNumber: 1, hintUsed: false,
+        responseMs: null, monotonicMs: Math.round(performance.now()) });
+      completeJourneyLevel(profile.id, currentLevel.id, gameId);
+    }
     clearInput();
     stopMotion();
     releaseCarriedBody();
@@ -260,6 +287,7 @@ export function ExperienceGame({
     characterSkin,
     clearInput,
     currentLevel,
+    gameId,
     levelIndex,
     onFinish,
     releaseCarriedBody,
@@ -303,7 +331,7 @@ export function ExperienceGame({
     if (!currentLevel || isCelebrating) return;
     const entity = nearestInteractiveEntity;
     if (!entity) {
-      setFeedback('התקרבו לפריט ולחצו על רווח או על כפתור הפעולה.');
+      setFeedback('נגעו בפריט כדי להתקרב ולבצע פעולה.');
       playAudioCue('retry');
       return;
     }
@@ -400,8 +428,69 @@ export function ExperienceGame({
 
   const setDirection = useCallback((direction: DirectionCommand, pressed: boolean) => {
     if (isCelebrating) return;
+    if (pressed) {
+      navigationRef.current = null;
+      setNavigationTarget(null);
+    }
     inputRef.current = { ...inputRef.current, [direction]: pressed };
   }, [isCelebrating]);
+
+  const navigateTo = useCallback((intent: ExperienceNavigationIntent) => {
+    if (!world || isCelebrating) return;
+    const clearance = tuning.playerRadius + 10;
+    const safeIntent = {
+      ...intent,
+      target: {
+        x: Math.max(clearance, Math.min(world.width - clearance, intent.target.x)),
+        y: Math.max(clearance, Math.min(world.height - clearance, intent.target.y))
+      }
+    };
+    navigationRef.current = findNavigationPath(
+      snapshot.position,
+      safeIntent,
+      world,
+      snapshot.obstaclePositions,
+      tuning.playerRadius
+    );
+    navigationProgressRef.current = { distance: Number.POSITIVE_INFINITY, tick: snapshot.tick };
+    setNavigationTarget(safeIntent.target);
+    arenaRef.current?.focus({ preventScroll: true });
+  }, [isCelebrating, snapshot.obstaclePositions, snapshot.position, snapshot.tick, tuning.playerRadius, world]);
+
+  useEffect(() => {
+    const navigation = navigationRef.current;
+    if (!navigation || isCelebrating) return;
+    const entityPosition = navigation.interactEntityId ? entityPositions.get(navigation.interactEntityId) : null;
+    if (entityPosition && distanceBetween(snapshot.position, entityPosition) <= tuning.interactionRadius + 18) {
+      cancelNavigation();
+      interact();
+      return;
+    }
+
+    while (navigation.waypoints.length > 1 && distanceBetween(snapshot.position, navigation.waypoints[0]) < 28) {
+      navigation.waypoints.shift();
+    }
+    const waypoint = navigation.waypoints[0];
+    if (!waypoint || distanceBetween(snapshot.position, waypoint) < 18) {
+      cancelNavigation();
+      return;
+    }
+
+    const remaining = distanceBetween(snapshot.position, waypoint);
+    const progress = navigationProgressRef.current;
+    if (remaining < progress.distance - 5) navigationProgressRef.current = { distance: remaining, tick: snapshot.tick };
+    else if (snapshot.tick - progress.tick > 45 && world) {
+      navigationRef.current = findNavigationPath(
+        snapshot.position,
+        { target: navigation.target, interactEntityId: navigation.interactEntityId },
+        world,
+        snapshot.obstaclePositions,
+        tuning.playerRadius
+      );
+      navigationProgressRef.current = { distance: Number.POSITIVE_INFINITY, tick: snapshot.tick };
+    }
+    inputRef.current = inputToward(snapshot.position, waypoint);
+  }, [cancelNavigation, entityPositions, interact, isCelebrating, snapshot.obstaclePositions, snapshot.position, snapshot.tick, tuning.interactionRadius, tuning.playerRadius, world]);
 
   if (!currentLevel || !world) return null;
   const heldEntity = currentLevel.entities.find((entity) => entity.id === heldId);
@@ -413,10 +502,15 @@ export function ExperienceGame({
     ? 'celebrate'
     : actionAnimation
       ?? (snapshot.speed > 12 ? (heldId ? 'carry-walk' : 'walk') : 'idle');
-  const worldStyle = (position: { x: number; y: number }) => ({
-    left: `${(position.x / world.width) * 100}%`,
-    top: `${(position.y / world.height) * 100}%`
-  });
+  const worldStyle = (position: { x: number; y: number }): CSSProperties => arenaViewport.width && arenaViewport.height
+    ? ({
+        '--experience-x': `${(position.x / world.width) * arenaViewport.width}px`,
+        '--experience-y': `${(position.y / world.height) * arenaViewport.height}px`
+      } as CSSProperties)
+    : {
+        left: `${(position.x / world.width) * 100}%`,
+        top: `${(position.y / world.height) * 100}%`
+      };
 
   return (
     <GameWorld
@@ -431,11 +525,20 @@ export function ExperienceGame({
       <ProgressBar current={levelIndex + 1} total={availableLevels.length} />
       <div className={`game-play-card experience-game experience-game--${gameId}`}>
         <div className="experience-game__heading">
-          <div>
+          <div className="experience-game__copy">
             <span className="question-card__tag">משחק חווייתי</span>
             <h2>{currentLevel.title}</h2>
             <p>{currentLevel.instruction}</p>
           </div>
+          <Button
+            variant="ghost"
+            className="experience-game__repeat"
+            aria-label="שמיעת ההוראה שוב"
+            title="שמיעת ההוראה שוב"
+            onClick={() => speak(currentLevel.instruction)}
+          >
+            🔊
+          </Button>
           <div className="experience-game__carry" aria-live="polite">
             <span>{gameId === 'colors' ? 'צבע במכחול' : 'בידיים'}</span>
             <strong style={heldEntity?.color ? { background: heldEntity.color } : undefined}>
@@ -450,7 +553,12 @@ export function ExperienceGame({
           className={`experience-arena experience-arena--physics ${tuning.guideStrength > 0.8 ? 'experience-arena--guided' : ''}`}
           tabIndex={0}
           role="application"
-          aria-label={`${currentLevel.title}. השתמשו בחצים או במקשי WASD כדי לנוע וברווח כדי לבצע פעולה.`}
+          aria-label={`${currentLevel.title}. נוגעים במקום כדי לנוע, או משתמשים במקשי WASD וברווח.`}
+          onClick={(event) => {
+            if ((event.target as HTMLElement).closest('[data-entity-id]')) return;
+            const bounds = event.currentTarget.getBoundingClientRect();
+            navigateTo({ target: screenPointToWorld({ x: event.clientX, y: event.clientY }, bounds, world) });
+          }}
           onKeyDown={(event) => {
             const direction = keyboardDirection(event.key);
             if (direction) {
@@ -524,8 +632,19 @@ export function ExperienceGame({
                 key={entity.id}
                 className={`experience-entity experience-entity--${entity.kind} ${isDone ? 'experience-entity--done' : ''} ${isNear ? 'experience-entity--near' : ''}`}
                 style={{ ...worldStyle(position), ...(completedColor ? { background: completedColor } : {}) }}
-                role="img"
-                aria-label={entity.label}
+                role="button"
+                tabIndex={0}
+                aria-label={`לכו אל ${entity.label}`}
+                onClick={(event) => {
+                  event.stopPropagation();
+                  navigateTo({ target: position, interactEntityId: entity.id });
+                }}
+                onKeyDown={(event) => {
+                  if (event.key !== 'Enter' && event.key !== ' ') return;
+                  event.preventDefault();
+                  event.stopPropagation();
+                  navigateTo({ target: position, interactEntityId: entity.id });
+                }}
                 data-entity-id={entity.id}
                 data-kind={entity.kind}
                 data-x={position.x}
@@ -559,17 +678,14 @@ export function ExperienceGame({
                 : null}
             />
           </div>
+          {navigationTarget ? (
+            <div className="experience-navigation-target" style={worldStyle(navigationTarget)} aria-hidden="true" />
+          ) : null}
         </div>
         <AnimatedFeedback message={feedback} tone={isCelebrating ? 'correct' : 'neutral'} />
         <div className="experience-game__help">
-          <kbd>↑ ↓ ← → / WASD</kbd><span>מחזיקים כדי ללכת</span><kbd>רווח</kbd><span>מרימים, מניחים או צובעים</span>
+          <span>נוגעים במקום כדי ללכת, ובפריט כדי לפעול</span><kbd>WASD + רווח</kbd><span>זמין גם במקלדת</span>
         </div>
-        <GameControls
-          onDirectionStart={(direction) => setDirection(direction, true)}
-          onDirectionEnd={(direction) => setDirection(direction, false)}
-          onAction={interact}
-          disabled={isCelebrating}
-        />
       </div>
     </GameWorld>
   );

@@ -11,9 +11,11 @@ import sorting from '../../src/content/sorting.json';
 import reviewStatus from '../../src/content/review-status.json';
 import { getMemoryCards, getQuizQuestions } from '../../src/services/questionService';
 import { clearStaticContentCache } from '../../src/services/staticContentRepository';
-import { getLocalLearnerState } from '../../src/services/learnerProgressService';
+import { getLocalLearnerState, resetLocalLearnerData } from '../../src/services/learnerProgressService';
 import { getMotionInputName } from '../../src/components/motion/motion.types';
 import { musicTracks } from '../../src/assets/audioManifest';
+import { getLocalDataStore } from '../../src/services/localDataStore';
+import { createProfile } from '../../src/services/learningStoreService';
 
 const banks = { letters, numbers, shapes, colors, matching, memory, patterns, sorting };
 const expectedCounts = { letters: 180, numbers: 170, shapes: 110, colors: 110, matching: 120, memory: 100, patterns: 110, sorting: 110 };
@@ -52,7 +54,17 @@ describe('static content bank', () => {
 });
 
 describe('selection and local migration', () => {
+  it('exposes asynchronous storage operations while preserving the initialized cache', async () => {
+    const store = getLocalDataStore();
+    await store.set('test-key', 'test-value');
+    expect(store.getCached('test-key')).toBe('test-value');
+    expect(await store.get('test-key')).toBe('test-value');
+    await store.remove('test-key');
+    expect(await store.get('test-key')).toBeNull();
+  });
+
   it('does not repeat quiz items from the immediately previous session', async () => {
+    createProfile({ age: 4 });
     const first = await getQuizQuestions('letters', 4, 'medium');
     const second = await getQuizQuestions('letters', 4, 'medium');
     const firstIds = new Set(first.map((item) => item.id));
@@ -71,7 +83,7 @@ describe('selection and local migration', () => {
     const legacyPlayers = [{ id: 'first', age: 6, difficulty: 'hard', voiceEnabled: false }, { id: 'second', age: 3 }];
     window.localStorage.setItem('kids-learning-adventure.players', JSON.stringify(legacyPlayers));
     const learner = getLocalLearnerState();
-    expect(learner).toMatchObject({ age: 6, difficulty: 'hard', voiceEnabled: false, migratedFromLegacy: true });
+    expect(learner).toMatchObject({ age: 6, difficulty: 'hard', voiceEnabled: false });
     expect(window.localStorage.getItem('kids-learning-adventure.players')).toBe(JSON.stringify(legacyPlayers));
   });
 
@@ -114,6 +126,21 @@ describe('selection and local migration', () => {
       soundEffectsEnabled: true,
       musicEnabled: true
     });
+  });
+
+  it('deletes all locally stored learner, progress, history, and recent-content data', async () => {
+    const store = getLocalDataStore();
+    await store.set('lomdim-bekef.learner.v1', '{"name":"נועה"}');
+    await store.set('lomdim-bekef.sessions.v1', '[{"score":8}]');
+    await store.set('lomdim-bekef.recent-content.v1', '{"letters":["a1"]}');
+    await store.set('unrelated-origin-key', 'must not be removed by the app reset');
+
+    await resetLocalLearnerData();
+
+    expect(window.localStorage.getItem('lomdim-bekef.learner.v1')).toBeNull();
+    expect(window.localStorage.getItem('lomdim-bekef.sessions.v1')).toBeNull();
+    expect(window.localStorage.getItem('lomdim-bekef.recent-content.v1')).toBeNull();
+    expect(window.localStorage.getItem('unrelated-origin-key')).toBe('must not be removed by the app reset');
   });
 });
 

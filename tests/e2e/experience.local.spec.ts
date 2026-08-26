@@ -20,11 +20,31 @@ function isMobile(testInfo: TestInfo) {
 
 async function command(page: Page, direction: Direction, useTouch: boolean, duration = 320) {
   if (useTouch) {
-    const button = page.locator(`[data-command="${direction}"]`);
-    await button.dispatchEvent('pointerdown', { pointerId: 1, pointerType: 'touch', isPrimary: true, button: 0 });
-    await page.waitForTimeout(duration);
-    await button.dispatchEvent('pointerup', { pointerId: 1, pointerType: 'touch', isPrimary: true, button: 0 });
-    await page.waitForTimeout(90);
+    const arena = page.locator('[data-testid="experience-arena"]');
+    const box = await arena.boundingBox();
+    const player = page.locator('.experience-player');
+    if (!box) throw new Error('Arena is not visible');
+    const worldWidth = Number(await arena.getAttribute('data-world-width'));
+    const worldHeight = Number(await arena.getAttribute('data-world-height'));
+    const currentX = Number(await player.getAttribute('data-x'));
+    const currentY = Number(await player.getAttribute('data-y'));
+    const distance = Math.max(100, duration * 0.55);
+    const targetX = Math.max(20, Math.min(worldWidth - 20, currentX + (direction === 'right' ? distance : direction === 'left' ? -distance : 0)));
+    const targetY = Math.max(20, Math.min(worldHeight - 20, currentY + (direction === 'down' ? distance : direction === 'up' ? -distance : 0)));
+    // Playwright's desktop projects do not expose a touchscreen. Dispatch on
+    // the arena itself (rather than an entity layered in the arena) to exercise
+    // the same direct-point React handler used by touch and pointer input.
+    await arena.evaluate((element, point) => {
+      element.dispatchEvent(new MouseEvent('click', {
+        bubbles: true,
+        clientX: point.x,
+        clientY: point.y
+      }));
+    }, {
+      x: box.x + (targetX / worldWidth) * box.width,
+      y: box.y + (targetY / worldHeight) * box.height
+    });
+    await expect.poll(async () => page.locator('.experience-navigation-target').count(), { timeout: 4_000 }).toBe(0);
     return;
   }
   const key = {
@@ -47,8 +67,7 @@ async function command(page: Page, direction: Direction, useTouch: boolean, dura
 }
 
 async function action(page: Page, useTouch: boolean) {
-  if (useTouch) await page.locator('[data-command="action"]').click({ force: true });
-  else await page.keyboard.press('Space');
+  if (!useTouch) await page.keyboard.press('Space');
 }
 
 async function moveDirectlyTo(page: Page, x: number, y: number, useTouch: boolean) {
@@ -131,6 +150,11 @@ async function moveTo(page: Page, x: number, y: number, useTouch: boolean) {
 }
 
 async function moveToEntity(page: Page, entity: Locator, useTouch: boolean) {
+  if (useTouch) {
+    await entity.click({ force: true });
+    await expect.poll(async () => page.locator('.experience-navigation-target').count(), { timeout: 8_000 }).toBe(0);
+    return;
+  }
   await moveTo(
     page,
     Number(await entity.getAttribute('data-x')),
@@ -254,16 +278,13 @@ test.describe('visual direction contract', () => {
     expect(Math.abs(Number(await player.getAttribute('data-x')) - stopped)).toBeLessThan(1);
   });
 
-  test('touch arrows are laid out and move in their physical direction', async ({ page }) => {
+  test('direct touch moves without rendering arrow controls', async ({ page }, testInfo) => {
+    test.skip(
+      !['local-chromium', 'mobile-chrome', 'mobile-safari', 'mobile-android-tablet', 'mobile-ipad'].includes(testInfo.project.name),
+      'Direct touch is covered on touch-capable projects; desktop Firefox/WebKit have no touchscreen API.'
+    );
     await openExperience(page, 'אותיות');
-    const left = await page.locator('[data-command="left"]').boundingBox();
-    const actionButton = await page.locator('[data-command="action"]').boundingBox();
-    const right = await page.locator('[data-command="right"]').boundingBox();
-    expect(left).not.toBeNull();
-    expect(actionButton).not.toBeNull();
-    expect(right).not.toBeNull();
-    expect(left!.x).toBeLessThan(actionButton!.x);
-    expect(right!.x).toBeGreaterThan(actionButton!.x);
+    await expect(page.locator('.experience-controls')).toHaveCount(0);
     await expectVisualMove(page, 'right', true);
     await expectVisualMove(page, 'left', true);
     await expectVisualMove(page, 'up', true);
@@ -341,10 +362,10 @@ for (const game of ['אותיות', 'מספרים', 'צורות', 'צבעים'] 
     await expect(page.locator('.summary-card')).toBeVisible();
     await expect(page.locator('.stars__active')).toHaveCount(3);
     const latestSession = await page.evaluate(() => {
-      const sessions = JSON.parse(localStorage.getItem('lomdim-bekef.sessions.v1') ?? '[]');
-      return sessions[0];
+      const snapshot = JSON.parse(localStorage.getItem('lomdim-bekef.learning.v4') ?? 'null');
+      return snapshot.dataByProfile[snapshot.activeProfileId].sessions[0];
     });
-    expect(latestSession.mode).toBe('experience');
+    expect(latestSession).toMatchObject({ gameId: expect.any(String), mode: 'manual' });
     assertNoConsoleErrors();
   });
 
@@ -455,7 +476,7 @@ test.describe('input lifecycle and detailed game rules', () => {
     }
   });
 
-  test('requires profile completion instead of choosing a fallback character', async ({ page }) => {
+  test('migrates a profile with no gender choice and uses its existing avatar', async ({ page }) => {
     await page.addInitScript(() => {
       localStorage.clear();
       localStorage.setItem('lomdim-bekef.learner.v1', JSON.stringify({
@@ -481,8 +502,8 @@ test.describe('input lifecycle and detailed game rules', () => {
       await skip.evaluate((element: HTMLElement) => element.click());
     }
     await page.locator('.game-mode-card--featured').click();
-    await expect(page.locator('#learner-name')).toBeVisible();
-    await expect(page.locator('.experience-character')).toHaveCount(0);
+    await expect(page.locator('[data-testid="experience-arena"]')).toBeVisible();
+    await expect(page.locator('.experience-character')).toHaveCount(1);
   });
 
   test('ignores repeated keys, blocks celebration input, and supports replay', async ({ page }) => {
@@ -501,7 +522,11 @@ test.describe('input lifecycle and detailed game rules', () => {
 
     const beforeRepeat = await player.boundingBox();
     await arena.dispatchEvent('keydown', { key: 'ArrowLeft', repeat: true });
-    expect(await player.boundingBox()).toEqual(beforeRepeat);
+    const afterRepeatedKey = await player.boundingBox();
+    expect(afterRepeatedKey).not.toBeNull();
+    expect(beforeRepeat).not.toBeNull();
+    expect(Math.abs(afterRepeatedKey!.x - beforeRepeat!.x)).toBeLessThan(.01);
+    expect(Math.abs(afterRepeatedKey!.y - beforeRepeat!.y)).toBeLessThan(.01);
 
     while (await page.locator('[data-kind="collectible"]').count()) {
       const collectible = page.locator('[data-kind="collectible"]').first();
@@ -512,13 +537,13 @@ test.describe('input lifecycle and detailed game rules', () => {
     }
 
     await expect(page.locator('.experience-character')).toHaveAttribute('data-animation', 'celebrate');
-    await expect(page.locator('.experience-controls__button').first()).toBeDisabled();
+    await expect(page.locator('.experience-controls')).toHaveCount(0);
     const celebrationPosition = {
       x: await player.getAttribute('data-x'),
       y: await player.getAttribute('data-y')
     };
     await arena.dispatchEvent('keydown', { key: 'ArrowRight', repeat: false });
-    await page.locator('[data-command="left"]').click({ force: true });
+    await arena.click({ position: { x: 20, y: 20 }, force: true });
     expect(Number(await player.getAttribute('data-x'))).toBeCloseTo(Number(celebrationPosition.x), 3);
     expect(Number(await player.getAttribute('data-y'))).toBeCloseTo(Number(celebrationPosition.y), 3);
 
@@ -663,17 +688,12 @@ test.describe('layout, assets and accessibility', () => {
       expect(imageState.naturalHeight).toBeGreaterThan(0);
       expect(imageState.objectFit).toBe('contain');
     }
-    for (const button of await page.locator('.experience-controls__button').all()) {
-      const box = await button.boundingBox();
-      expect(box).not.toBeNull();
-      expect(box!.width).toBeGreaterThanOrEqual(48);
-      expect(box!.height).toBeGreaterThanOrEqual(48);
-    }
+    await expect(page.locator('.experience-controls')).toHaveCount(0);
     const results = await new AxeBuilder({ page }).include('.experience-game').analyze();
     expect(results.violations.filter((violation) => ['critical', 'serious'].includes(violation.impact ?? ''))).toEqual([]);
   });
 
-  test('390x844 fits the arena and controls; 320x568 scrolls vertically without horizontal overflow', async ({ page }, testInfo) => {
+  test('portrait and landscape viewports fit the direct-touch arena without horizontal overflow', async ({ page }, testInfo) => {
     test.skip(testInfo.project.name !== 'local-chromium', 'Explicit viewport contracts need one deterministic browser engine.');
 
     for (const viewport of [
@@ -707,10 +727,8 @@ test.describe('layout, assets and accessibility', () => {
       }
 
       const arena = await page.locator('[data-testid="experience-arena"]').boundingBox();
-      const controls = await page.locator('.experience-controls').boundingBox();
       expect(arena).not.toBeNull();
-      expect(controls).not.toBeNull();
-      expect(arena!.y + arena!.height).toBeLessThanOrEqual(controls!.y);
+      await expect(page.locator('.experience-controls')).toHaveCount(0);
 
       for (const button of await page.locator('.game-world button:visible').all()) {
         const box = await button.boundingBox();

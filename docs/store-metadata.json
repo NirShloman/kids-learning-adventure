@@ -1,0 +1,27 @@
+{
+  "appId": "com.nirshloman.lomdimbekef",
+  "displayName": "ידעלה",
+  "version": "1.2.0",
+  "primaryCategory": "Education",
+  "secondaryCategory": "Games",
+  "pricing": "free",
+  "ads": false,
+  "inAppPurchases": false,
+  "apple": {
+    "madeForKids": true,
+    "ageBand": "5 and under",
+    "devices": ["iPhone", "iPad"],
+    "minimumOS": "16.0"
+  },
+  "googlePlay": {
+    "targetAudience": ["5 and under", "6-8"],
+    "minimumSdk": 28,
+    "targetSdk": 36,
+    "track": "internal"
+  },
+  "dataSafety": {
+    "collected": false,
+    "shared": false,
+    "tracking": false
+  }
+}
