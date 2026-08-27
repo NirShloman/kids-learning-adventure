@@ -13,7 +13,7 @@ export function LandingPage({ voiceEnabled, onStart }: LandingPageProps) {
   const { speak, getSpeakProps } = useSpeech(voiceEnabled);
 
   function handleStart() {
-    speak('מתחילים לשחק ולגלות עם ידעלה.');
+    speak('מתחילים לשחק ולגלות עם ידע׳לה.');
     onStart();
   }
 

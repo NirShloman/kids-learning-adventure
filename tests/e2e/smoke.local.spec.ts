@@ -70,7 +70,7 @@ test.describe('local app smoke', () => {
     page.once('dialog', (dialog) => dialog.accept());
     await page.getByRole('button', { name: 'מחיקת כל הנתונים מהמכשיר' }).click();
     await page.waitForLoadState('domcontentloaded');
-    await expect(page.getByRole('heading', { name: 'ידעלה', level: 1 })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'ידע׳לה', level: 1 })).toBeVisible();
     const storage = await page.evaluate(() => ({
       learner: JSON.parse(window.localStorage.getItem('lomdim-bekef.learner.v1') ?? 'null'),
       sessions: window.localStorage.getItem('lomdim-bekef.sessions.v1'),

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'yedale-v1.3.1-brand-20260826';
+const CACHE_NAME = 'yedale-v1.3.2-name-20260827';
 const STATIC_ASSETS = [
   '/',
   '/manifest.webmanifest',

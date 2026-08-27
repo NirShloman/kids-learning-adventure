@@ -2,7 +2,7 @@ import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'com.nirshloman.lomdimbekef',
-  appName: 'ידעלה',
+  appName: 'ידע׳לה',
   webDir: 'dist',
   server: {
     androidScheme: 'https',

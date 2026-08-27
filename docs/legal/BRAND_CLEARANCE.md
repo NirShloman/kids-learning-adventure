@@ -2,17 +2,17 @@
 
 Search date: 2026-08-22. This is a preliminary exact-term screen, not legal clearance or a similarity/opposition analysis.
 
-## Approved name — ידעלה / Yedale
+## Owner-selected name — ידע׳לה / Yedale
 
-Review date: 2026-08-26.
+Owner spelling confirmation: 2026-08-27.
 
-- No exact `YEDALE` or `ידעלה` result was returned from the Israeli trademark data set when queried on 2026-08-26.
+- The 2026-08-26 Israeli trademark query returned no exact `YEDALE` or `ידעלה` result. That query covered the earlier unpunctuated Hebrew spelling and does not document an exact or similarity search for `ידע׳לה`.
 - Apple App Store queries in the Israeli and US storefronts did not return an exact app-title match; a Google Play exact-name screen found no match.
 - Public web searches returned personal-name references, not a child-learning or software brand using the exact name.
 - `yedale.com` and `yedale.app` did not resolve and returned “not found” from their respective registry RDAP endpoints on the review date. Availability can change at any moment and is not proof of legal availability.
-- The selected public spelling is `ידעלה` in Hebrew and `Yedale` in Latin script, pronounced `יֶדַעְלֶה`.
+- The owner-selected public spelling is `ידע׳לה` in Hebrew and `Yedale` in Latin script, pronounced `יֶדַעְלֶה`.
 
-Result: `PRELIMINARY GO`. Use the name in product design and private testing. Before public release, obtain a phonetic/similarity search and legal advice for the intended goods and territories, register the core domains and social handles, and file the Hebrew and Latin word marks in the relevant classes. Do not use the ® symbol until registration is granted.
+Result: `REVIEW REQUIRED`. The Latin-name screen and prior Hebrew search remain useful background, but the corrected Hebrew spelling requires a refreshed exact, punctuation-normalized, phonetic, transliteration, and similarity search. Before public release, obtain legal advice for the intended goods and territories, register the core domains and social handles, and file the approved Hebrew and Latin word marks in the relevant classes. Do not use the ® symbol until registration is granted.
 
 ## Current names
 

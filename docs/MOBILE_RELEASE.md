@@ -2,7 +2,7 @@
 
 ## Fixed application contract
 
-- Display name: `ידעלה` / `Yedale`
+- Display name: `ידע׳לה` / `Yedale`
 - Bundle/Application ID: `com.nirshloman.lomdimbekef`
 - Marketing version: `1.2.0`
 - Android: min API 28, compile/target API 36, AAB with Play App Signing

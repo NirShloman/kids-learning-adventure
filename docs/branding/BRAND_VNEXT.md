@@ -1,13 +1,14 @@
 # Brand vNext — foundations and implementation brief
 
-Status: approved production direction — ידעלה / Yedale  
+Status: approved production direction — ידע׳לה / Yedale
 Created: 2026-08-26
+Hebrew spelling corrected by the owner: 2026-08-27
 
 ## Decision gate
 
-`ידעלה / Yedale` is the approved public name. It passed the preliminary availability screen on 2026-08-26: no exact app-store listing or exact Israeli trademark-database hit was found. This is not a legal opinion; a similarity search and trademark filing remain release gates.
+`ידע׳לה / Yedale` is the owner-approved public spelling. The preliminary availability screen on 2026-08-26 covered the earlier unpunctuated Hebrew spelling `ידעלה` and the Latin spelling `Yedale`; it must not be treated as clearance of the corrected Hebrew word mark. This is not a legal opinion. A refreshed exact and similarity search plus a trademark filing strategy remain release gates.
 
-The bundle identifier and local-data keys remain unchanged to preserve the existing installed app and learner progress. Public-facing name, store listing, legal pages, and production icon use `ידעלה / Yedale`.
+The bundle identifier and local-data keys remain unchanged to preserve the existing installed app and learner progress. Public-facing name, store listing, legal pages, and production wordmark use `ידע׳לה / Yedale`.
 
 1. Apple App Store and Google Play exact and similarity searches.
 2. Israeli trademark exact, contains, phonetic, transliteration, translation, and visual-similarity searches.
@@ -75,7 +76,7 @@ The personal story behind “Noni” can remain the internal origin of the proje
 
 ### Core idea: עלה הידע
 
-The identity expresses knowledge that grows. The primary symbol is a luminous leaf: its central vein branches into a subtle Y-shaped learning path, a gold seed marks the Hebrew י׳, and a small spark represents the next discovery. It is a visual reading of `ידעלה` — the warmth of knowledge with the growth of a leaf — without placing Latin text or a letter inside the icon. It must remain recognisable at 24 px and should not depend on text.
+The identity expresses knowledge that grows. The primary symbol is a luminous leaf: its central vein branches into a subtle Y-shaped learning path, a gold seed marks the Hebrew י׳, and a small spark represents the next discovery. It is a visual reading of `ידע׳לה` — the warmth of knowledge with the growth of a leaf — without placing Latin text or a letter inside the icon. It must remain recognisable at 24 px and should not depend on text.
 
 Avoid the current category clichés: open book, `א`, `123`, rainbow, multiple unrelated symbols, and a full pastel spectrum inside one icon. Those elements explain “education” but do not create an ownable memory structure.
 
@@ -160,7 +161,7 @@ Implementation rules:
 
 ### Phase 1 — naming and clearance
 
-Completed: `ידעלה / Yedale` selected. Complete an Israeli phonetic-similarity search and file the approved word marks before public launch.
+Completed: `ידע׳לה / Yedale` selected and its Hebrew spelling owner-confirmed. Repeat the exact and phonetic-similarity searches for the corrected Hebrew spelling and file the approved word marks before public launch.
 
 ### Phase 2 — identity prototypes
 

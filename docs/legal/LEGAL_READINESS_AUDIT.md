@@ -1,7 +1,7 @@
 # Legal and copyright readiness audit
 
-Audit date: 2026-08-26  
-Product reviewed: “ידעלה” / “Yedale” (formerly “לומדים בכיף” / “Kids Learning Adventure”)  
+Audit date: 2026-08-26
+Product reviewed: “ידע׳לה” / “Yedale” (formerly “לומדים בכיף” / “Kids Learning Adventure”)
 Target stores: Apple App Store and Google Play
 
 ## Conclusion
