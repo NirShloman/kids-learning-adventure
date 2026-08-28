@@ -1,18 +1,50 @@
 export const musicTracks = {
   mainTheme: 'music/game-of-discoveries',
-  mainThemeShort: 'music/garden-gate',
-  home: 'music/game-of-discoveries',
+  mainThemeShort: 'music/letters-garden',
+  home: 'music/garden-gate',
   modeSelection: 'music/garden-gate',
-  letters: 'music/letters-garden',
+  letters: 'music/garden-gate',
   numbers: 'music/sunlight-on-the-bookshelf',
   shapes: 'music/polygons-at-play',
   colors: 'music/painted-garden-gate',
   matching: 'music/garden-gate',
   memory: 'music/sunlight-on-the-bookshelf',
   patterns: 'music/polygons-at-play',
-  sorting: 'music/game-of-discoveries',
-  summary: 'music/game-of-discoveries'
+  sorting: 'music/painted-garden-gate',
+  summary: 'music/garden-gate'
 } as const;
+
+export type MusicTrack = keyof typeof musicTracks;
+export type MusicTrackKind = 'song' | 'instrumental';
+export type MusicUsage = 'intro' | 'background';
+
+export interface MusicTrackDefinition {
+  source: (typeof musicTracks)[MusicTrack];
+  kind: MusicTrackKind;
+  loop: boolean;
+  allowedUsage: readonly MusicUsage[];
+}
+
+/**
+ * Songs with lyrics are deliberately limited to the welcome sequence. Every
+ * track selected by a playable world is instrumental, so narration and game
+ * feedback remain easy to hear.
+ */
+export const musicTrackDefinitions: Record<MusicTrack, MusicTrackDefinition> = {
+  mainTheme: { source: musicTracks.mainTheme, kind: 'song', loop: false, allowedUsage: ['intro'] },
+  mainThemeShort: { source: musicTracks.mainThemeShort, kind: 'song', loop: false, allowedUsage: ['intro'] },
+  home: { source: musicTracks.home, kind: 'instrumental', loop: true, allowedUsage: ['background'] },
+  modeSelection: { source: musicTracks.modeSelection, kind: 'instrumental', loop: true, allowedUsage: ['background'] },
+  letters: { source: musicTracks.letters, kind: 'instrumental', loop: true, allowedUsage: ['background'] },
+  numbers: { source: musicTracks.numbers, kind: 'instrumental', loop: true, allowedUsage: ['background'] },
+  shapes: { source: musicTracks.shapes, kind: 'instrumental', loop: true, allowedUsage: ['background'] },
+  colors: { source: musicTracks.colors, kind: 'instrumental', loop: true, allowedUsage: ['background'] },
+  matching: { source: musicTracks.matching, kind: 'instrumental', loop: true, allowedUsage: ['background'] },
+  memory: { source: musicTracks.memory, kind: 'instrumental', loop: true, allowedUsage: ['background'] },
+  patterns: { source: musicTracks.patterns, kind: 'instrumental', loop: true, allowedUsage: ['background'] },
+  sorting: { source: musicTracks.sorting, kind: 'instrumental', loop: true, allowedUsage: ['background'] },
+  summary: { source: musicTracks.summary, kind: 'instrumental', loop: true, allowedUsage: ['background'] }
+};
 
 /**
  * The supplied package contains music only. These names preserve the game
@@ -64,7 +96,6 @@ export const recordedVoiceTracks = {
   letsStart: 'lets-start'
 } as const;
 
-export type MusicTrack = keyof typeof musicTracks;
 export type SfxCue = keyof typeof sfxTracks;
 export type RecordedVoiceCue = keyof typeof recordedVoiceTracks;
 

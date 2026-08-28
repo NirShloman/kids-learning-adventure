@@ -13,7 +13,7 @@ test.describe('local app smoke', () => {
 
   test('loads decorative videos without exposing playback controls', async ({ page }) => {
     await page.goto('/');
-    const welcomeVideo = page.locator('.welcome-motion video');
+    const welcomeVideo = page.locator('.welcome__video video');
     await expect(welcomeVideo).toHaveJSProperty('muted', true);
     // Firefox exposes the standard playsinline attribute but not the WebKit
     // `HTMLVideoElement.playsInline` convenience property.
@@ -47,7 +47,31 @@ test.describe('local app smoke', () => {
     await expect(page.locator('#learner-name')).toHaveValue('');
     await expect(page.getByRole('button', { name: 'בלי העדפה' })).toHaveAttribute('aria-pressed', 'true');
     await page.getByRole('button', { name: 'יאללה, מתחילים!' }).click();
+    await expect(page.getByRole('alert')).toContainText('צריך לבחור גיל ורמה');
+    await page.locator('#learner-age').selectOption('3');
+    await page.locator('#learner-difficulty').selectOption('easy');
+    await page.getByRole('button', { name: 'יאללה, מתחילים!' }).click();
     await expect(page.locator('.home-grid')).toBeVisible();
+  });
+
+  test('creates an additional profile only after age and difficulty are chosen', async ({ page }) => {
+    await openLobby(page);
+    await page.getByRole('button', { name: 'אזור הורים' }).click();
+    const prompt = await page.locator('label[for="parent-answer"]').textContent();
+    const factors = prompt?.match(/(\d+)\s*×\s*(\d+)/);
+    expect(factors).not.toBeNull();
+    await page.locator('#parent-answer').fill(String(Number(factors![1]) * Number(factors![2])));
+    await page.getByRole('button', { name: 'פתיחת אזור הורים' }).click();
+    await page.getByRole('button', { name: 'הוספת פרופיל' }).click();
+    await page.getByRole('button', { name: 'יאללה, מתחילים!' }).click();
+    await expect(page.getByRole('alert')).toContainText('צריך לבחור גיל ורמה');
+    await page.locator('#learner-age').selectOption('6');
+    await page.locator('#learner-difficulty').selectOption('hard');
+    await page.getByRole('button', { name: 'יאללה, מתחילים!' }).click();
+    await expect(page.locator('.home-grid')).toBeVisible();
+    const snapshot = await page.evaluate(() => JSON.parse(localStorage.getItem('lomdim-bekef.learning.v4') ?? 'null'));
+    expect(snapshot.profiles).toHaveLength(2);
+    expect(snapshot.profiles.find((profile: { id: string }) => profile.id === snapshot.activeProfileId)).toMatchObject({ age: 6, manualDifficulty: 'hard' });
   });
 
   test('keeps legal links and full local deletion behind the parental gate', async ({ page }) => {

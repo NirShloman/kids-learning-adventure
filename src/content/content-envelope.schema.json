@@ -5,15 +5,15 @@
   "required": ["schemaVersion", "contentVersion", "gameId", "items"],
   "additionalProperties": false,
   "properties": {
-    "schemaVersion": { "const": 1 },
+    "schemaVersion": { "const": 2 },
     "contentVersion": { "type": "string", "minLength": 1 },
     "gameId": { "enum": ["letters", "numbers", "shapes", "colors", "matching", "memory", "patterns", "sorting"] },
     "items": {
       "type": "array",
-      "minItems": 90,
+      "minItems": 480,
       "items": {
         "type": "object",
-        "required": ["id", "ages", "difficulty", "skill", "skillIds", "evidenceForm"],
+        "required": ["id", "ages", "difficulty", "skill", "taskFamily", "conceptKey", "variantKey", "visualRole", "skillIds", "evidenceForm"],
         "properties": {
           "id": { "type": "string", "minLength": 4 },
           "ages": {
@@ -24,6 +24,10 @@
           },
           "difficulty": { "enum": ["easy", "medium", "hard"] },
           "skill": { "type": "string", "minLength": 2 },
+          "taskFamily": { "type": "string", "minLength": 2 },
+          "conceptKey": { "type": "string", "minLength": 2 },
+          "variantKey": { "type": "string", "minLength": 2 },
+          "visualRole": { "enum": ["stimulus", "context", "direct-match", "none"] },
           "skillIds": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 3 } },
           "evidenceForm": { "enum": ["visual-choice", "listening-choice", "matching", "memory", "sequence", "sorting", "adventure-drag", "adventure-navigation", "shared-turn", "shared-cooperation"] }
         }

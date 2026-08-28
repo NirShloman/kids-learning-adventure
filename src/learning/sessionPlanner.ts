@@ -11,15 +11,10 @@ function hash(value: string): number {
   return result >>> 0;
 }
 
-function difficultyRank(difficulty: Difficulty): number {
-  return difficulty === 'easy' ? 0 : difficulty === 'medium' ? 1 : 2;
-}
-
-function recommendedDifficulty(profile: LearnerProfile, confidence: number): Difficulty {
-  if (profile.learningMode === 'manual') return profile.manualDifficulty;
-  if (confidence < 35 || profile.age === 3) return 'easy';
-  if (confidence >= 75 && profile.age >= 5) return 'hard';
-  return 'medium';
+function recommendedDifficulty(profile: LearnerProfile, _confidence: number): Difficulty {
+  // The profile selection is the source of truth for both free play and the
+  // adaptive route. Adaptation changes subject matter and review cadence only.
+  return profile.manualDifficulty;
 }
 
 function chooseFocusSkill(profile: LearnerProfile, data: ProfileLearningData): SkillId {
@@ -66,6 +61,7 @@ export function planAdaptiveSession(
   const today = now.toISOString().slice(0, 10);
   const recent = new Set(data.events.slice(-20).map((event) => event.contentId));
   const eligible = content.filter((item) => item.ages.includes(profile.age))
+    .filter((item) => item.difficulty === targetDifficulty)
     .filter((item) => (data.dailyContentCounts[`${today}:${item.id}`] ?? 0) < 2)
     .sort((first, second) => hash(`${seed}:${first.id}`) - hash(`${seed}:${second.id}`));
   const tasks: SessionTask[] = [];
@@ -79,10 +75,10 @@ export function planAdaptiveSession(
     });
     if (candidate) tasks.push(taskFrom(candidate, kind, tasks.length, reason));
   };
-  const focusPool = eligible.filter((item) => item.skillIds.includes(focusSkill) && difficultyRank(item.difficulty) <= difficultyRank(targetDifficulty));
+  const focusPool = eligible.filter((item) => item.skillIds.includes(focusSkill));
   const reviewPool = eligible.filter((item) => item.skillIds.some((skill) => dueSkills.has(skill)) && !recent.has(item.id));
-  const stretchPool = eligible.filter((item) => item.skillIds.some((skill) => getSkillDefinition(skill).prerequisites.includes(focusSkill)) || difficultyRank(item.difficulty) === Math.min(2, difficultyRank(targetDifficulty) + 1));
-  if (consecutiveErrors(data.events) >= 2) push(eligible.filter((item) => item.difficulty === 'easy' && item.skillIds.some((skill) => (data.mastery[skill]?.confidence ?? 0) >= 60)), 'confidence', 'הצלחה מוכרת אחרי רצף מאתגר');
+  const stretchPool = eligible.filter((item) => item.skillIds.some((skill) => getSkillDefinition(skill).prerequisites.includes(focusSkill)));
+  if (consecutiveErrors(data.events) >= 2) push(eligible.filter((item) => item.skillIds.some((skill) => (data.mastery[skill]?.confidence ?? 0) >= 60)), 'confidence', 'הצלחה מוכרת אחרי רצף מאתגר');
   for (let index = tasks.length; index < 3; index += 1) push(focusPool, 'focus', `תרגול ממוקד: ${getSkillDefinition(focusSkill).name}`);
   for (let index = 0; index < 2; index += 1) push(reviewPool.length ? reviewPool : eligible.filter((item) => !recent.has(item.id)), 'review', 'חזרה בזמן המתאים לחיזוק');
   push(stretchPool, 'stretch', 'אתגר קטן לקראת השלב הבא');

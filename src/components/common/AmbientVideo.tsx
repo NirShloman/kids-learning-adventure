@@ -7,9 +7,10 @@ interface AmbientVideoProps {
   className: string;
   fallback: ReactNode;
   ariaLabel?: string;
+  children?: ReactNode;
 }
 
-export function AmbientVideo({ src, poster, className, fallback, ariaLabel }: AmbientVideoProps) {
+export function AmbientVideo({ src, poster, className, fallback, ariaLabel, children }: AmbientVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const reduceMotion = useReducedMotion();
   const [isReady, setIsReady] = useState(false);
@@ -37,9 +38,9 @@ export function AmbientVideo({ src, poster, className, fallback, ariaLabel }: Am
   return (
     <div
       className={`${className} ambient-video ${isReady ? 'ambient-video--ready' : ''}`}
-      role={ariaLabel ? 'img' : undefined}
+      role={ariaLabel && !children ? 'img' : undefined}
       aria-label={ariaLabel}
-      aria-hidden={ariaLabel ? undefined : 'true'}
+      aria-hidden={ariaLabel && !children ? undefined : children ? undefined : 'true'}
     >
       <div className="ambient-video__fallback">{fallback}</div>
       {!hasError && (
@@ -58,6 +59,7 @@ export function AmbientVideo({ src, poster, className, fallback, ariaLabel }: Am
           autoPlay={!reduceMotion}
         />
       )}
+      {children ? <div className="ambient-video__overlay">{children}</div> : null}
     </div>
   );
 }

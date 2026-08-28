@@ -21,11 +21,13 @@ export function HomePage({ settings, onSettingsChange, onSelectGame, onStartAdap
         poster="/assets/video/learning-garden-lobby.poster.webp"
         className="home-cinematic"
         fallback={<div className="home-cinematic__fallback" />}
-      />
-      <section className="adaptive-entry" aria-labelledby="adaptive-entry-title">
-        <div><span>המסלול האישי שלי</span><h2 id="adaptive-entry-title">תרגול קצר שמתאים את עצמו</h2><p>5–7 דקות של חזרה, תרגול ואתגר קטן — הכול נשמר רק במכשיר.</p></div>
-        <Button onClick={onStartAdaptive}>מתחילים תרגול מותאם</Button>
-      </section>
+        ariaLabel="גן למידה צבעוני"
+      >
+        <section className="adaptive-entry" aria-labelledby="adaptive-entry-title">
+          <div><span>המסלול האישי שלי</span><h2 id="adaptive-entry-title">תרגול קצר שמתאים את עצמו</h2><p>5–7 דקות של חזרה, תרגול ואתגר קטן — הכול נשמר רק במכשיר.</p></div>
+          <Button onClick={onStartAdaptive}>מתחילים תרגול מותאם</Button>
+        </section>
+      </AmbientVideo>
       <div className="shared-entry"><Button variant="secondary" onClick={onStartShared}>משחקים יחד באותו מכשיר</Button></div>
       <JourneyMap onSelectWorld={onSelectGame} />
       <section className="game-menu-heading" aria-labelledby="game-menu-title">

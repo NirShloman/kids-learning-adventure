@@ -20,11 +20,14 @@ export function getLocalLearnerState(): LocalLearnerState { return compatibility
 export function saveLearnerSettings(settings: LearnerSettings): LocalLearnerState {
   const profile = getActiveProfile() ?? createProfile({});
   const profileFields = settings as LearnerSettings & Partial<Pick<LocalLearnerState, 'name' | 'gender'>>;
-  updateProfile(profile.id, { age: settings.age, manualDifficulty: settings.difficulty,
+  updateProfile(profile.id, { age: settings.age, manualDifficulty: settings.difficulty, learningMode: 'manual',
     narrationEnabled: settings.narrationEnabled, soundEffectsEnabled: settings.soundEffectsEnabled,
     musicEnabled: settings.musicEnabled,
     ...(profileFields.name !== undefined ? { name: profileFields.name } : {}),
-    ...(profileFields.gender !== undefined ? { gender: profileFields.gender } : {}) });
+    ...(profileFields.gender !== undefined ? {
+      gender: profileFields.gender,
+      avatarId: profileFields.gender === 'boy' ? 'nir-kippah' : 'shir'
+    } : {}) });
   return compatibilityState();
 }
 

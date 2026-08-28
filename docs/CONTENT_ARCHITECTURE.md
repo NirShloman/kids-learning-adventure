@@ -1,10 +1,10 @@
 # Static content architecture
 
-Each game owns one versioned JSON envelope in `src/content`. Items share `id`, `ages`, `difficulty`, and `skill`; game-specific fields are validated by `scripts/validate-static-content.mjs` and `content-envelope.schema.json`.
+Each game owns one versioned JSON envelope in `src/content`. Version 2 items have one explicit target age, a difficulty, and stable pedagogical metadata: `taskFamily`, `conceptKey`, `variantKey`, and `visualRole`.
 
-The validator enforces exact totals, unique ids, Hebrew text constraints, valid answers, semantic arithmetic and sequence results, category consistency, unique memory pairs, and at least 15 eligible items for every game/age/difficulty combination. `review-status.json` must approve linguistic quality, conceptual correctness, and age fit for every id.
+The validator enforces 480 items per game and exactly 40 items for every game/age/difficulty combination. It rejects duplicate challenge signatures, invalid answers, out-of-age skills, and answer-revealing visuals above the easy direct-recognition tier. `review-status.json` records a hash-matched, transparent AI-simulation review for every item; it is not represented as human professional approval.
 
-`staticContentRepository.ts` lazy-loads and memory-caches one bank at a time. `questionService.ts` performs exact filtering and balances the session by skill. It never falls back to content for another age or difficulty.
+`staticContentRepository.ts` lazy-loads and memory-caches one bank at a time. `questionService.ts` performs exact filtering and balances the session by skill and semantic signature. It never falls back to content for another age or difficulty.
 
 Content principles:
 

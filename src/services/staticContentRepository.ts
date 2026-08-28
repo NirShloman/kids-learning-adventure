@@ -19,8 +19,12 @@ const contentCache = new Map<GameId, ContentEnvelope<ContentItemBase>>();
 
 function isContentEnvelope(value: unknown, gameId: GameId): value is ContentEnvelope<ContentItemBase> {
   if (!value || typeof value !== 'object') return false;
-  const candidate = value as Partial<ContentEnvelope<ContentItemBase>>;
-  return candidate.schemaVersion === 1 && candidate.gameId === gameId && Array.isArray(candidate.items);
+  const candidate = value as { schemaVersion?: unknown; gameId?: unknown; items?: unknown };
+  // Keep existing local packs readable while the authored v2 content packs are
+  // rolled out. Both envelopes share the same runtime game identity and items.
+  return (candidate.schemaVersion === 1 || candidate.schemaVersion === 2)
+    && candidate.gameId === gameId
+    && Array.isArray(candidate.items);
 }
 
 export async function loadGameContent<T extends ContentItemBase>(gameId: GameId): Promise<ContentEnvelope<T>> {

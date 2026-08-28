@@ -146,7 +146,9 @@ export function MemoryGame({ age, difficulty, voiceEnabled, onBack, onFinish }: 
               >
                 <span className="game-memory-card__back" aria-hidden="true">?</span>
                 <span className="game-memory-card__front">
-                  {card.imageAssetId ? <GameImage assetId={card.imageAssetId} alt="" decorative className="game-token__image" /> : card.value}
+                  <span className="game-memory-card__content">
+                    {card.imageAssetId ? <GameImage assetId={card.imageAssetId} alt="" decorative className="game-token__image" /> : card.value}
+                  </span>
                 </span>
               </motion.button>
             );

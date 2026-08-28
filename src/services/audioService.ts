@@ -1,6 +1,7 @@
 import {
   audioSource,
   musicTracks,
+  musicTrackDefinitions,
   type MusicTrack,
   type RecordedVoiceCue,
   type SfxCue
@@ -19,6 +20,7 @@ interface AudioSettings {
 interface MusicOptions {
   loop?: boolean;
   crossfadeMs?: number;
+  onEnded?: () => void;
 }
 
 const MUSIC_VOLUME = 0.28;
@@ -42,6 +44,7 @@ let settings: AudioSettings = {
 let activeMusic: HTMLAudioElement | null = null;
 let activeMusicTrack: MusicTrack | null = null;
 let pendingMusic: { track: MusicTrack; options: MusicOptions } | null = null;
+let introSequenceToken = 0;
 let hasUserActivation = false;
 let isDucked = false;
 const fadeTokens = new WeakMap<HTMLAudioElement, number>();
@@ -150,7 +153,7 @@ export function configureSoundEffects(enabled: boolean): void {
   configureAudio({ ...settings, soundEffectsEnabled: enabled });
 }
 
-export function playMusic(track: MusicTrack, options: MusicOptions = {}): void {
+function playTrack(track: MusicTrack, options: MusicOptions = {}): void {
   activeMusicTrack = track;
   if (!settings.musicEnabled || !canUseAudio()) return;
   if (!hasUserActivation) {
@@ -159,10 +162,12 @@ export function playMusic(track: MusicTrack, options: MusicOptions = {}): void {
   }
   if (activeMusic?.dataset.track === track && !activeMusic.paused) return;
 
-  const next = createAudio(musicTracks[track], 0);
+  const definition = musicTrackDefinitions[track];
+  const next = createAudio(definition.source, 0);
   if (!next) return;
   next.dataset.track = track;
-  next.loop = options.loop ?? (track !== 'mainTheme' && track !== 'mainThemeShort');
+  next.loop = options.loop ?? definition.loop;
+  next.onended = options.onEnded ?? null;
   const previous = activeMusic;
   activeMusic = next;
   void next.play()
@@ -173,7 +178,40 @@ export function playMusic(track: MusicTrack, options: MusicOptions = {}): void {
   if (previous) fade(previous, 0, options.crossfadeMs ?? DEFAULT_CROSSFADE_MS, true);
 }
 
+/** Compatibility wrapper for callers outside the view-level audio router. */
+export function playMusic(track: MusicTrack, options: MusicOptions = {}): void {
+  introSequenceToken += 1;
+  playTrack(track, options);
+}
+
+export function playBackgroundMusic(track: MusicTrack, options: Omit<MusicOptions, 'loop' | 'onEnded'> = {}): void {
+  const definition = musicTrackDefinitions[track];
+  if (definition.kind !== 'instrumental') return;
+  introSequenceToken += 1;
+  playTrack(track, { ...options, loop: true });
+}
+
+export function playIntroSequence(onComplete?: () => void): void {
+  const sequence: MusicTrack[] = ['mainThemeShort', 'mainTheme'];
+  const token = ++introSequenceToken;
+  const playNext = (index: number) => {
+    if (token !== introSequenceToken) return;
+    const track = sequence[index];
+    if (!track) {
+      onComplete?.();
+      return;
+    }
+    playTrack(track, {
+      loop: false,
+      crossfadeMs: 120,
+      onEnded: () => playNext(index + 1)
+    });
+  };
+  playNext(0);
+}
+
 export function stopMusic(fadeMs = DEFAULT_CROSSFADE_MS): void {
+  introSequenceToken += 1;
   pendingMusic = null;
   if (!activeMusic) return;
   const previous = activeMusic;
@@ -247,6 +285,7 @@ export function preloadAudio(relativeBases: string[]): void {
 export function preloadCriticalAudio(): void {
   preloadAudio([
     musicTracks.home,
-    musicTracks.mainThemeShort
+    musicTracks.mainThemeShort,
+    musicTracks.mainTheme
   ]);
 }

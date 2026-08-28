@@ -20,7 +20,8 @@ export function SharedPlayPage({ profiles, onBack }: SharedPlayPageProps) {
   useEffect(() => {
     if (!mode) return;
     const learner = profiles.find((profile) => profile.id === firstId) ?? profiles[0];
-    void getQuizQuestions(index % 2 ? 'numbers' : 'letters', learner?.age ?? 4, 'easy').then((items) => setQuestions(items.slice(0, 6)));
+    void getQuizQuestions(index % 2 ? 'numbers' : 'letters', learner?.age ?? 4, learner?.manualDifficulty ?? 'medium')
+      .then((items) => setQuestions(items.slice(0, 6)));
   }, [firstId, mode, profiles]);
 
   function answer(optionId: string) {

@@ -13,6 +13,11 @@ export interface ContentItemBase {
   ages: Age[];
   difficulty: Difficulty;
   skill: string;
+  /** Stable pedagogical metadata used for QA and repeat avoidance. */
+  taskFamily: string;
+  conceptKey: string;
+  variantKey: string;
+  visualRole: 'stimulus' | 'context' | 'direct-match' | 'none';
   skillIds?: SkillId[];
   evidenceForm?: EvidenceForm;
 }
@@ -37,8 +42,10 @@ export interface MatchingPair extends ContentItemBase {
 }
 
 export interface MemoryPair extends ContentItemBase {
-  value: string;
-  imageAssetId?: ImageAssetId;
+  leftValue: string;
+  rightValue: string;
+  leftImageAssetId?: ImageAssetId;
+  rightImageAssetId?: ImageAssetId;
 }
 
 export interface MemoryCard extends ContentItemBase {
@@ -68,21 +75,24 @@ export interface SortingChallenge extends ContentItemBase {
 }
 
 export interface ContentEnvelope<T extends ContentItemBase> {
-  schemaVersion: 1;
+  schemaVersion: 2;
   contentVersion: string;
   gameId: GameId;
   items: T[];
 }
 
 export interface ContentReviewStatus {
-  status: 'pending' | 'in-review' | 'approved' | 'rejected' | 'legacy-approved';
+  status: 'pending' | 'in-review' | 'ai-reviewed' | 'approved' | 'rejected';
   provenance: string;
   reviewer: string | null;
   expertise: string | null;
+  reviewerType: 'ai-simulation' | 'human' | null;
   linguistic: 'pending' | 'approved' | 'rejected';
   conceptual: 'pending' | 'approved' | 'rejected';
   ageFit: 'pending' | 'approved' | 'rejected';
   clarity: 'pending' | 'approved' | 'rejected' | 'legacy-approved';
+  visualLeak: 'pending' | 'approved' | 'rejected';
+  focusGroupLenses: string[];
   reviewedAt: string | null;
   notes: string;
   contentHash: string;

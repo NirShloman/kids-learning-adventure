@@ -29,11 +29,15 @@ export function GameModeSelector({ gameId, title, voiceEnabled, onSelect, onBack
             poster="/assets/video/counting-orchard.poster.webp"
             className="game-mode-cinematic"
             fallback={<div className="game-mode-cinematic__fallback" />}
-            ariaLabel="שיר וניר סופרים תפוחים במטע"
-          />
+            ariaLabel="ילד וילדה סופרים תפוחים במטע"
+          >
+            <div className="game-mode-cinematic__overlay">
+              <span className="question-card__tag">הרפתקת מספרים</span>
+              <h2>סופרים יחד במטע</h2>
+            </div>
+          </AmbientVideo>
         )}
-        <span className="question-card__tag">איך משחקים היום?</span>
-        <h2>בחרו דרך לשחק</h2>
+        {gameId !== 'numbers' ? <><span className="question-card__tag">איך משחקים היום?</span><h2>בחרו דרך לשחק</h2></> : null}
         <p>אפשר לבחור במשחק חווייתי במגע ישיר, או בחידון המוכר.</p>
         <div className="game-mode-selector__options">
           <button type="button" className="game-mode-card game-mode-card--featured" onClick={() => onSelect('experience')} {...getSpeakProps<HTMLButtonElement>('משחק חווייתי, נוגעים במקום ובפריטים כדי לשחק')}>

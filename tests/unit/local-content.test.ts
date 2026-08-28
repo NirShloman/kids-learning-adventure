@@ -9,7 +9,7 @@ import memory from '../../src/content/memory.json';
 import patterns from '../../src/content/patterns.json';
 import sorting from '../../src/content/sorting.json';
 import reviewStatus from '../../src/content/review-status.json';
-import { getMemoryCards, getQuizQuestions } from '../../src/services/questionService';
+import { getMatchingPairs, getMemoryCards, getPatternPuzzles, getQuizQuestions, getSortingChallenges } from '../../src/services/questionService';
 import { clearStaticContentCache } from '../../src/services/staticContentRepository';
 import { getLocalLearnerState, resetLocalLearnerData } from '../../src/services/learnerProgressService';
 import { getMotionInputName } from '../../src/components/motion/motion.types';
@@ -18,7 +18,7 @@ import { getLocalDataStore } from '../../src/services/localDataStore';
 import { createProfile } from '../../src/services/learningStoreService';
 
 const banks = { letters, numbers, shapes, colors, matching, memory, patterns, sorting };
-const expectedCounts = { letters: 180, numbers: 170, shapes: 110, colors: 110, matching: 120, memory: 100, patterns: 110, sorting: 110 };
+const expectedCounts = { letters: 480, numbers: 480, shapes: 480, colors: 480, matching: 480, memory: 480, patterns: 480, sorting: 480 };
 
 beforeEach(() => {
   window.localStorage.clear();
@@ -26,27 +26,31 @@ beforeEach(() => {
 });
 
 describe('static content bank', () => {
-  it('contains 1,010 uniquely reviewed items in versioned envelopes', () => {
+  it('contains 3,840 uniquely AI-reviewed, age-and-level classified items', () => {
     const allItems = Object.values(banks).flatMap((bank) => bank.items);
-    expect(allItems).toHaveLength(1010);
-    expect(new Set(allItems.map((item) => item.id)).size).toBe(1010);
-    expect(Object.keys(reviewStatus.reviews)).toHaveLength(1010);
+    expect(allItems).toHaveLength(3840);
+    expect(new Set(allItems.map((item) => item.id)).size).toBe(3840);
+    expect(Object.keys(reviewStatus.reviews)).toHaveLength(3840);
 
     for (const [gameId, bank] of Object.entries(banks)) {
-      expect(bank.schemaVersion).toBe(1);
+      expect(bank.schemaVersion).toBe(2);
       expect(bank.gameId).toBe(gameId);
       expect(bank.items).toHaveLength(expectedCounts[gameId as keyof typeof expectedCounts]);
       for (const item of bank.items) {
-        expect(reviewStatus.reviews[item.id as keyof typeof reviewStatus.reviews]).toMatchObject({ linguistic: 'approved', conceptual: 'approved', ageFit: 'approved' });
+        expect(item.ages).toHaveLength(1);
+        expect(item.taskFamily).toBeTruthy();
+        expect(item.conceptKey).toBeTruthy();
+        expect(item.variantKey).toBeTruthy();
+        expect(reviewStatus.reviews[item.id as keyof typeof reviewStatus.reviews]).toMatchObject({ status: 'ai-reviewed', reviewerType: 'ai-simulation', linguistic: 'approved', conceptual: 'approved', ageFit: 'approved' });
       }
     }
   });
 
-  it('provides at least 15 items for every game, age, and difficulty', () => {
+  it('provides exactly 40 items for every game, age, and difficulty', () => {
     for (const bank of Object.values(banks)) {
       for (const age of [3, 4, 5, 6]) {
         for (const difficulty of ['easy', 'medium', 'hard']) {
-          expect(bank.items.filter((item) => item.ages.includes(age) && item.difficulty === difficulty).length).toBeGreaterThanOrEqual(15);
+          expect(bank.items.filter((item) => item.ages.includes(age) && item.difficulty === difficulty)).toHaveLength(40);
         }
       }
     }
@@ -77,6 +81,20 @@ describe('selection and local migration', () => {
     cards.forEach((card) => counts.set(card.pairId, (counts.get(card.pairId) ?? 0) + 1));
     expect(cards).toHaveLength(12);
     expect([...counts.values()].every((count) => count === 2)).toBe(true);
+  });
+
+  it('selects only the requested age and difficulty across every game', async () => {
+    const difficulty = 'hard' as const;
+    for (const age of [3, 4, 5, 6] as const) {
+      const [letters, numbers, shapes, colors, matchingPairs, cards, patterns, sorting] = await Promise.all([
+        getQuizQuestions('letters', age, difficulty), getQuizQuestions('numbers', age, difficulty), getQuizQuestions('shapes', age, difficulty), getQuizQuestions('colors', age, difficulty),
+        getMatchingPairs(age, difficulty), getMemoryCards(age, difficulty), getPatternPuzzles(age, difficulty), getSortingChallenges(age, difficulty)
+      ]);
+      for (const item of [...letters, ...numbers, ...shapes, ...colors, ...matchingPairs, ...cards, ...patterns, ...sorting]) {
+        expect(item.ages).toEqual([age]);
+        expect(item.difficulty).toBe(difficulty);
+      }
+    }
   });
 
   it('migrates the first legacy learner without deleting legacy keys', () => {
@@ -145,11 +163,11 @@ describe('selection and local migration', () => {
 });
 
 describe('approved music mapping', () => {
-  it('maps each world to one of the supplied tracks', () => {
-    expect(musicTracks.letters).toBe('music/letters-garden');
+  it('maps each playable world to an instrumental track', () => {
+    expect(musicTracks.letters).toBe('music/garden-gate');
     expect(musicTracks.shapes).toBe('music/polygons-at-play');
     expect(musicTracks.colors).toBe('music/painted-garden-gate');
-    expect(musicTracks.home).toBe('music/game-of-discoveries');
+    expect(musicTracks.home).toBe('music/garden-gate');
   });
 });
 

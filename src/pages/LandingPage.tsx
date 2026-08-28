@@ -27,6 +27,13 @@ export function LandingPage({ voiceEnabled, onStart }: LandingPageProps) {
 
   return (
     <main className="welcome" dir="rtl">
+      <AmbientVideo
+        src="/assets/video/learning-garden-welcome.mp4"
+        poster="/assets/video/learning-garden-welcome.poster.webp"
+        className="welcome__video"
+        fallback={fallback}
+        ariaLabel="ילד וילדה מזמינים את הילדים להרפתקת למידה"
+      />
       <div className="welcome__shade" aria-hidden="true" />
       <section className="welcome__content" aria-labelledby="welcome-title">
         <BrandLogo className="welcome__logo" variant="full" tagline="" decorative />
@@ -46,13 +53,6 @@ export function LandingPage({ voiceEnabled, onStart }: LandingPageProps) {
         </button>
       </section>
 
-      <AmbientVideo
-        src="/assets/video/learning-garden-welcome.mp4"
-        poster="/assets/video/learning-garden-welcome.poster.webp"
-        className="welcome-motion"
-        fallback={fallback}
-        ariaLabel="שיר וניר מזמינים את הילדים להרפתקת למידה"
-      />
     </main>
   );
 }

@@ -3,10 +3,10 @@ import { Button } from '../components/common/Button';
 import { ageOptions, difficultyOptions } from '../data/levels';
 import type { AccessibilitySettings, LearnerProfile, LocalLearnerState, MasteryStatus } from '../types';
 import { isValidHebrewName, normalizeHebrewName } from '../utils/hebrew';
-import { createProfile, deleteProfile, getLearningSnapshot, getProfileData, selectProfile, updateProfile } from '../services/learningStoreService';
+import { deleteProfile, getLearningSnapshot, getProfileData, selectProfile, updateProfile } from '../services/learningStoreService';
 import { skillGraph } from '../learning/skillGraph';
 
-interface ParentAreaPageProps { learner: LocalLearnerState; onBack: () => void; onReloadState: () => void; onReset: () => Promise<void> }
+interface ParentAreaPageProps { learner: LocalLearnerState; onBack: () => void; onAddProfile: () => void; onReloadState: () => void; onReset: () => Promise<void> }
 const statusLabels: Record<MasteryStatus, string> = { new: 'חדש', exposed: 'נחשף', practicing: 'בתרגול', 'almost-mastered': 'כמעט שולט', mastered: 'נרכש', 'needs-reinforcement': 'דורש חיזוק' };
 const accessibilityLabels: Record<keyof AccessibilitySettings, string> = {
   noTimeLimit: 'ללא הגבלת זמן', reducedMotion: 'פחות אנימציה', reducedParticles: 'פחות חלקיקים',
@@ -23,7 +23,7 @@ function trendFor(profile: LearnerProfile): string {
   return change > 0.08 ? 'מגמת שיפור' : change < -0.08 ? 'כדאי לחזק חומר מוכר' : 'התקדמות יציבה';
 }
 
-export function ParentAreaPage({ learner, onBack, onReloadState, onReset }: ParentAreaPageProps) {
+export function ParentAreaPage({ learner, onBack, onAddProfile, onReloadState, onReset }: ParentAreaPageProps) {
   const challenge = useMemo(() => { const first = 7 + Math.floor(Math.random() * 3); const second = 6 + Math.floor(Math.random() * 3); return { first, second, answer: first * second }; }, []);
   const [answer, setAnswer] = useState(''); const [unlocked, setUnlocked] = useState(false); const [error, setError] = useState(false);
   const [revision, setRevision] = useState(0);
@@ -56,7 +56,7 @@ export function ParentAreaPage({ learner, onBack, onReloadState, onReset }: Pare
         <button type="button" onClick={() => { selectProfile(profile.id); setName(profile.name); refresh(); }}><span aria-hidden="true">{profile.avatarId === 'shir' ? '👧' : '👦'}</span>{profile.name || `ילד/ה בגיל ${profile.age}`}</button>
         <button type="button" aria-label={`מחיקת הפרופיל ${profile.name || ''}`} onClick={() => { if (window.confirm('למחוק את הפרופיל וההתקדמות שלו?')) { deleteProfile(profile.id); refresh(); } }}>×</button>
       </div>)}
-      <Button variant="secondary" onClick={() => { const created = createProfile({ age: 4, name: '', avatarId: 'shir' }); setName(created.name); refresh(); }}>הוספת פרופיל</Button>
+      <Button variant="secondary" onClick={onAddProfile}>הוספת פרופיל</Button>
     </div></section>
 
     {active && data ? <>
@@ -70,8 +70,7 @@ export function ParentAreaPage({ learner, onBack, onReloadState, onReset }: Pare
 
       <section className="parent-dashboard__section"><h2>פרופיל והעדפות</h2><form className="parent-area__profile" onSubmit={saveProfile}><label htmlFor="parent-learner-name">כינוי אופציונלי</label><input id="parent-learner-name" value={name} maxLength={30} autoComplete="off" onChange={(event) => setName(event.target.value)} />
         <label htmlFor="learner-age">גיל</label><select id="learner-age" value={active.age} onChange={(event) => patchActive({ age: Number(event.target.value) as LearnerProfile['age'] })}>{ageOptions.map((age) => <option key={age}>{age}</option>)}</select>
-        <label htmlFor="learner-avatar">דמות מלווה</label><select id="learner-avatar" value={active.avatarId} onChange={(event) => patchActive({ avatarId: event.target.value as LearnerProfile['avatarId'] })}><option value="shir">שיר</option><option value="nir-kippah">ניר</option><option value="nir-plain">ניר ללא כיפה</option></select>
-        <label htmlFor="learning-mode">בחירת רמה</label><select id="learning-mode" value={active.learningMode} onChange={(event) => patchActive({ learningMode: event.target.value as LearnerProfile['learningMode'] })}><option value="automatic">התאמה אוטומטית</option><option value="manual">בחירה ידנית</option></select>
+        <label htmlFor="learner-avatar">דמות מלווה</label><select id="learner-avatar" value={active.avatarId} onChange={(event) => { const avatarId = event.target.value as LearnerProfile['avatarId']; patchActive({ avatarId, gender: avatarId === 'shir' ? 'girl' : 'boy' }); }}><option value="shir">בת</option><option value="nir-kippah">בן עם כיפה</option><option value="nir-plain">בן ללא כיפה</option></select>
         <label htmlFor="learner-difficulty">רמה ידנית</label><select id="learner-difficulty" value={active.manualDifficulty} onChange={(event) => patchActive({ learningMode: 'manual', manualDifficulty: event.target.value as LearnerProfile['manualDifficulty'] })}>{difficultyOptions.map((option) => <option key={option.id} value={option.id}>{option.label}</option>)}</select>
         {error ? <p role="alert">אם בוחרים כינוי, יש לכתוב אותו בעברית.</p> : null}<Button type="submit">שמירת פרופיל והגדרות</Button></form></section>
 

@@ -9,12 +9,12 @@ import { speakHebrew } from '../services/speechService';
 
 interface AdaptiveSessionPageProps { profile: LearnerProfile; onBack: () => void; onComplete: () => void }
 interface Choice { id: string; label: string }
-type ActivityItem = ContentItemBase & { prompt?: string; audioText?: string; visual?: string; left?: string; right?: string; value?: string; itemName?: string; options?: Choice[]; correctOptionId?: string };
+type ActivityItem = ContentItemBase & { prompt?: string; audioText?: string; visual?: string; left?: string; right?: string; leftValue?: string; rightValue?: string; value?: string; itemName?: string; options?: Choice[]; correctOptionId?: string };
 
 function deterministicChoices(item: ActivityItem, bank: ActivityItem[]): { prompt: string; choices: Choice[]; correctId: string } {
   if (item.options?.length && item.correctOptionId) return { prompt: item.prompt ?? item.audioText ?? 'מה מתאים?', choices: item.options, correctId: item.correctOptionId };
-  const correct = item.right ?? item.value ?? '';
-  const candidates = bank.map((candidate) => candidate.right ?? candidate.value ?? '').filter((value) => value && value !== correct);
+  const correct = item.right ?? item.rightValue ?? item.value ?? '';
+  const candidates = bank.map((candidate) => candidate.right ?? candidate.rightValue ?? candidate.value ?? '').filter((value) => value && value !== correct);
   const distractors = [...new Set(candidates)].sort((first, second) => `${item.id}:${first}`.localeCompare(`${item.id}:${second}`)).slice(0, 2);
   const choices = [correct, ...distractors].map((label, index) => ({ id: `choice-${index}`, label }));
   return { prompt: item.left ? `מה מתאים ל־${item.left}?` : 'איזה כרטיס ראינו?', choices, correctId: 'choice-0' };
@@ -103,7 +103,7 @@ export function AdaptiveSessionPage({ profile, onBack, onComplete }: AdaptiveSes
       <section className="adaptive-session__card" aria-live="polite">
         <span className="question-card__tag">משימה {index + 1} מתוך {plan.tasks.length}</span>
         <h1>{isMemoryPreview ? 'זוכרים את הכרטיס' : activity.prompt}</h1>
-        {isMemoryPreview ? <div className="adaptive-session__memory">{item.value}</div> : (
+        {isMemoryPreview ? <div className="adaptive-session__memory">{item.leftValue ?? item.value}</div> : (
           <div className="adaptive-session__choices">
             {activity.choices.map((choice) => <button key={choice.id} type="button" disabled={Boolean(selected)}
               className={selected === choice.id ? choice.id === activity.correctId ? 'is-correct' : 'is-wrong' : ''}

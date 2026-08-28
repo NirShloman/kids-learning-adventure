@@ -1,4 +1,4 @@
-import { test } from '@playwright/test';
+import { expect, test } from '@playwright/test';
 import {
   completeChoiceGame,
   completeMatchingGame,
@@ -56,6 +56,12 @@ test('completes memory game', async ({ page }) => {
   await openLobby(page);
   await openGame(page, 'זיכרון');
   await expectNoUnavailableContent(page);
+  const firstCard = page.locator('[data-testid="memory-card"]').first();
+  await firstCard.click();
+  const front = firstCard.locator('.game-memory-card__front');
+  await expect(front).toBeVisible();
+  await expect(front).toHaveCSS('backface-visibility', 'hidden');
+  await expect(front).not.toHaveCSS('transform', 'none');
   await completeMemoryGame(page);
   assertNoConsoleErrors();
 });

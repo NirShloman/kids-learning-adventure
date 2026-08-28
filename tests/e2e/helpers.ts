@@ -33,6 +33,8 @@ export async function completeProfileSetup(page: Page, gender: 'boy' | 'girl' = 
   if (!await nameInput.isVisible().catch(() => false)) return;
   await nameInput.fill('נועה');
   await page.locator('.profile-setup__gender button').nth(gender === 'boy' ? 0 : 1).click();
+  await page.locator('#learner-age').selectOption('4');
+  await page.locator('#learner-difficulty').selectOption('medium');
   await page.getByRole('button', { name: 'יאללה, מתחילים!' }).click();
 }
 

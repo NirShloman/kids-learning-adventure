@@ -20,6 +20,12 @@ function exactItems<T extends ContentItemBase>(items: T[], age: Age, difficulty:
   return items.filter((item) => item.ages.includes(age) && item.difficulty === difficulty);
 }
 
+function contentSignature(item: ContentItemBase): string {
+  return item.taskFamily && item.conceptKey && item.variantKey
+    ? `${item.taskFamily}:${item.conceptKey}:${item.variantKey}`
+    : item.id;
+}
+
 function selectBalancedItems<T extends ContentItemBase>(
   gameId: GameId,
   items: T[],
@@ -31,8 +37,8 @@ function selectBalancedItems<T extends ContentItemBase>(
   if (!eligible.length) return [];
 
   const recentKey = `${gameId}:${age}:${difficulty}`;
-  const recentIds = new Set(getRecentContent(recentKey));
-  const freshItems = eligible.filter((item) => !recentIds.has(item.id));
+  const recentSignatures = new Set(getRecentContent(recentKey));
+  const freshItems = eligible.filter((item) => !recentSignatures.has(contentSignature(item)));
   const source = freshItems.length >= count ? freshItems : eligible;
   const bySkill = new Map<string, T[]>();
 
@@ -52,7 +58,7 @@ function selectBalancedItems<T extends ContentItemBase>(
     });
   }
 
-  saveRecentContent(recentKey, selected.map((item) => item.id));
+  saveRecentContent(recentKey, selected.map(contentSignature));
   return selected;
 }
 
@@ -75,20 +81,30 @@ export async function getQuizQuestions(gameId: GameId, age: Age, difficulty: Dif
 
 export async function getMatchingPairs(age: Age, difficulty: Difficulty): Promise<MatchingPair[]> {
   const bank = await loadGameContent<MatchingPair>('matching');
-  const maxPairs = age <= 3 ? 4 : age <= 4 ? 5 : 6;
+  const maxPairs = pairCount(age, difficulty);
   const selected = selectBalancedItems('matching', bank.items, age, difficulty, maxPairs * 2);
   return uniqueMatchingPairs(selected).slice(0, maxPairs);
 }
 
 export async function getMemoryCards(age: Age, difficulty: Difficulty): Promise<MemoryCard[]> {
   const bank = await loadGameContent<MemoryPair>('memory');
-  const maxPairs = age <= 3 ? 4 : age <= 4 ? 5 : 6;
+  const maxPairs = pairCount(age, difficulty);
   const pairs = selectBalancedItems('memory', bank.items, age, difficulty, maxPairs);
   const cards = pairs.flatMap((pair): MemoryCard[] => [
-    { ...pair, id: `${pair.id}-a`, pairId: pair.id },
-    { ...pair, id: `${pair.id}-b`, pairId: pair.id }
+    { ...pair, id: `${pair.id}-a`, pairId: pair.id, value: pair.leftValue, imageAssetId: pair.leftImageAssetId },
+    { ...pair, id: `${pair.id}-b`, pairId: pair.id, value: pair.rightValue, imageAssetId: pair.rightImageAssetId }
   ]);
   return shuffleArray(cards);
+}
+
+function pairCount(age: Age, difficulty: Difficulty): number {
+  const byAge: Record<Age, Record<Difficulty, number>> = {
+    3: { easy: 3, medium: 4, hard: 4 },
+    4: { easy: 4, medium: 5, hard: 5 },
+    5: { easy: 4, medium: 5, hard: 6 },
+    6: { easy: 5, medium: 6, hard: 7 }
+  };
+  return byAge[age][difficulty];
 }
 
 export async function getPatternPuzzles(age: Age, difficulty: Difficulty): Promise<PatternPuzzle[]> {

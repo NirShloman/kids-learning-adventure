@@ -22,7 +22,7 @@ for (const game of games) {
 }
 
 // The eight existing adventure levels are learning activities and provide
-// motor/navigation evidence without changing the documented 1,010-item bank.
+// motor/navigation evidence without changing the documented 3,840-item bank.
 const experiences = JSON.parse(readFileSync('src/content/experiences.json', 'utf8')) as Array<{ gameId: 'letters' | 'numbers' | 'shapes' | 'colors'; ages: Age[] }>;
 for (const experience of experiences) for (const age of experience.ages) {
   coverage.get('motor.fine')?.set(age, (coverage.get('motor.fine')?.get(age) ?? 0) + 1);
@@ -39,5 +39,5 @@ if (errors.length) {
   errors.forEach((error) => console.error(error));
   process.exitCode = 1;
 } else {
-  console.log(`Validated ${skillGraph.length} skills, prerequisite DAG, 1,010 mapped content units, and age coverage.`);
+  console.log(`Validated ${skillGraph.length} skills, prerequisite DAG, 3,840 mapped content units, and age coverage.`);
 }

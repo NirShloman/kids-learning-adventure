@@ -65,4 +65,15 @@ describe('audio service', () => {
     expect(fallback).toHaveBeenCalledOnce();
     expect(FakeAudio.instances.some((instance) => instance.src.includes('/voice/'))).toBe(false);
   });
+
+  it('keeps songs out of background playback', async () => {
+    const audio = await import('../../src/services/audioService');
+    audio.configureAudio({ musicEnabled: true, narrationEnabled: true, soundEffectsEnabled: true });
+    window.dispatchEvent(new Event('pointerdown'));
+    audio.playBackgroundMusic('letters');
+    expect(FakeAudio.instances.some((instance) => instance.src.includes('music/garden-gate.mp3'))).toBe(true);
+    const before = FakeAudio.instances.length;
+    audio.playBackgroundMusic('mainTheme');
+    expect(FakeAudio.instances).toHaveLength(before);
+  });
 });
