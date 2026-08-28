@@ -89,6 +89,14 @@ export function AdaptiveSessionPage({ profile, onBack, onComplete }: AdaptiveSes
     setPlan(completedPlan); onComplete();
   }
 
+  const isCorrectAnswer = Boolean(selected) && selected === activity?.correctId;
+
+  useEffect(() => {
+    if (!isCorrectAnswer) return;
+    const timer = window.setTimeout(next, 900);
+    return () => window.clearTimeout(timer);
+  }, [isCorrectAnswer, next]);
+
   if (error) return <main className="adaptive-session" dir="rtl"><p role="alert">{error}</p><Button onClick={onBack}>חזרה</Button></main>;
   if (!plan || !task || !item || !activity) return <main className="adaptive-session" dir="rtl"><p role="status">מכינים תרגול מותאם...</p></main>;
   const isMemoryPreview = task.evidenceForm === 'memory' && memoryVisible;
@@ -106,14 +114,14 @@ export function AdaptiveSessionPage({ profile, onBack, onComplete }: AdaptiveSes
         {isMemoryPreview ? <div className="adaptive-session__memory">{item.leftValue ?? item.value}</div> : (
           <div className="adaptive-session__choices">
             {activity.choices.map((choice) => <button key={choice.id} type="button" disabled={Boolean(selected)}
-              className={selected === choice.id ? choice.id === activity.correctId ? 'is-correct' : 'is-wrong' : ''}
+              className={selected && choice.id === activity.correctId ? 'is-correct' : selected === choice.id ? 'is-wrong' : ''}
               onClick={() => submit(choice.id)}>{choice.label}</button>)}
           </div>
         )}
         {!isMemoryPreview && !selected ? <Button variant="ghost" onClick={() => { setHintUsed(true); speakHebrew(`רמז: התשובה היא ${activity.choices.find((choice) => choice.id === activity.correctId)?.label ?? ''}`, { mode: 'manual' }); }}>רמז עדין</Button> : null}
         {selected ? <div className="adaptive-session__feedback" role="status">
-          <strong>{selected === activity.correctId ? 'מצוין!' : 'ניסיון טוב — עכשיו ראינו את התשובה.'}</strong>
-          <Button onClick={next}>{index === plan.tasks.length - 1 ? 'סיום התרגול' : 'למשימה הבאה'}</Button>
+          <strong>{isCorrectAnswer ? 'מצוין!' : 'ניסיון טוב — עכשיו ראינו את התשובה.'}</strong>
+          {!isCorrectAnswer ? <Button onClick={next}>{index === plan.tasks.length - 1 ? 'סיום התרגול' : 'למשימה הבאה'}</Button> : null}
         </div> : null}
       </section>
     </main>

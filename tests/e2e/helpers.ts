@@ -101,11 +101,13 @@ export async function completeChoiceGame(page: Page, optionTestId: string, nextB
       if (await summary.isVisible().catch(() => false)) return;
     }
     await expect(answerOption).toBeVisible();
-    await activate(answerOption);
-    const nextButton = page.getByRole('button', { name: nextButtonName });
-    await expect(nextButton).toBeEnabled();
     const statusBefore = await page.locator('.game-world__status small').textContent();
-    await activate(nextButton);
+    await activate(answerOption);
+    if (!answerCorrect) {
+      const nextButton = page.getByRole('button', { name: nextButtonName });
+      await expect(nextButton).toBeEnabled();
+      await activate(nextButton);
+    }
     await page.waitForFunction(
       ({ status }) => Boolean(document.querySelector('.summary-card') || document.querySelector('.game-world__status small')?.textContent !== status),
       { status: statusBefore }

@@ -71,6 +71,14 @@ export function SortingGame({ age, difficulty, voiceEnabled, onBack, onFinish }:
     }
   }, [currentIndex, onFinish, score, total]);
 
+  const isCorrectAnswer = isAnswered && selectedOptionId === currentChallenge?.correctOptionId;
+
+  useEffect(() => {
+    if (!isCorrectAnswer) return;
+    const timer = window.setTimeout(nextChallenge, 900);
+    return () => window.clearTimeout(timer);
+  }, [isCorrectAnswer, nextChallenge]);
+
   function submitAnswer(optionId: string) {
     if (isAnswered || !currentChallenge) return;
     const isCorrect = optionId === currentChallenge.correctOptionId;
@@ -150,11 +158,11 @@ export function SortingGame({ age, difficulty, voiceEnabled, onBack, onFinish }:
           })}
         </div>
 
-        <AnimatedFeedback message={feedback} tone={isAnswered && selectedOptionId === currentChallenge.correctOptionId ? 'correct' : 'wrong'} />
+        <AnimatedFeedback message={feedback} tone={isCorrectAnswer ? 'correct' : 'wrong'} />
 
-        <div className="question-card__actions">
-          <Button onClick={nextChallenge} disabled={!isAnswered} {...getSpeakProps<HTMLButtonElement>('לפריט הבא')}>לפריט הבא</Button>
-        </div>
+        {isAnswered && !isCorrectAnswer ? <div className="question-card__actions">
+          <Button onClick={nextChallenge} {...getSpeakProps<HTMLButtonElement>('לפריט הבא')}>לפריט הבא</Button>
+        </div> : null}
       </div>
     </GameWorld>
   );

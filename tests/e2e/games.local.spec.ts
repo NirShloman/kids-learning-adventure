@@ -24,6 +24,29 @@ for (const title of quizGames) {
   });
 }
 
+test('marks feedback and advances only correct quiz answers automatically', async ({ page }) => {
+  await openLobby(page);
+  await openGame(page, 'אותיות');
+  await selectGameMode(page, 'quiz');
+
+  const status = page.locator('.game-world__status small');
+  const initialStatus = await status.textContent();
+  const correct = page.locator('[data-testid="quiz-option"][data-correct="true"]').first();
+  await correct.click();
+  await expect(correct).toHaveClass(/option-card--correct/);
+  await expect.poll(() => status.textContent()).not.toBe(initialStatus);
+
+  const nextStatus = await status.textContent();
+  const wrong = page.locator('[data-testid="quiz-option"][data-correct="false"]').first();
+  const nextCorrect = page.locator('[data-testid="quiz-option"][data-correct="true"]').first();
+  await wrong.click();
+  await expect(wrong).toHaveClass(/option-card--wrong/);
+  await expect(nextCorrect).toHaveClass(/option-card--correct/);
+  await expect(page.getByRole('button', { name: 'לשאלה הבאה' })).toBeEnabled();
+  await page.waitForTimeout(1100);
+  await expect(status).toHaveText(nextStatus ?? '');
+});
+
 test('completes patterns game', async ({ page }) => {
   const assertNoConsoleErrors = installConsoleErrorGuard(page);
   await openLobby(page);

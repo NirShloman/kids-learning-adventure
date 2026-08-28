@@ -45,6 +45,14 @@ export function SharedPlayPage({ profiles, onBack }: SharedPlayPageProps) {
     setIndex(questions.length);
   }
 
+  const isCorrectAnswer = Boolean(selected) && selected === questions[index]?.correctOptionId;
+
+  useEffect(() => {
+    if (!isCorrectAnswer) return;
+    const timer = window.setTimeout(next, 900);
+    return () => window.clearTimeout(timer);
+  }, [isCorrectAnswer, next]);
+
   if (!mode) return <main className="shared-play" dir="rtl"><section><span className="question-card__tag">משחק משותף מקומי</span><h1>לומדים יחד, בלי מנצחים ומפסידים</h1><p>בוחרים דרך לשתף פעולה. אין צורך ברשת והמידע נשאר במכשיר.</p><div className="shared-play__modes"><button onClick={() => setMode('turns')}><strong>שני ילדים בתורות</strong><span>כל אחד מקבל תור קצר והכוכבים שייכים לקבוצה.</span></button><button onClick={() => setMode('cooperation')}><strong>הורה וילד</strong><span>המבוגר נותן רמז והילד או הילדה מגלים.</span></button></div><Button variant="ghost" onClick={onBack}>חזרה</Button></section></main>;
   if (!questions.length) return <main className="shared-play" dir="rtl"><p>מכינים משימה משותפת...</p></main>;
   if (index >= questions.length) return <main className="shared-play" dir="rtl"><section><h1>איזו עבודת צוות נהדרת!</h1><p>אספתם יחד {teamScore} כוכבי קבוצה. כל ניסיון עזר לקבוצה ללמוד.</p><Button onClick={onBack}>חזרה לעולמות</Button></section></main>;
@@ -53,7 +61,7 @@ export function SharedPlayPage({ profiles, onBack }: SharedPlayPageProps) {
   return <main className="shared-play" dir="rtl"><section><header><Button variant="ghost" onClick={onBack}>חזרה</Button><strong>כוכבי קבוצה: {teamScore}</strong></header>
     {index === 0 ? <div className="shared-play__participants"><label>משתתף/ת ראשון/ה<select value={firstId} onChange={(event) => setFirstId(event.target.value)}>{profiles.map((profile) => <option key={profile.id} value={profile.id}>{profile.name || `גיל ${profile.age}`}</option>)}<option value="guest-1">אורח/ת</option></select></label>{mode === 'turns' ? <label>משתתף/ת שני/ה<select value={secondId} onChange={(event) => setSecondId(event.target.value)}>{profiles.filter((profile) => profile.id !== firstId).map((profile) => <option key={profile.id} value={profile.id}>{profile.name || `גיל ${profile.age}`}</option>)}<option value="guest-2">אורח/ת</option></select></label> : null}</div> : null}
     <span className="question-card__tag">{mode === 'turns' ? `התור של ${currentName}` : 'המבוגר נותן רמז, הילד/ה בוחר/ת'}</span><h1>{question.prompt}</h1>
-    <div className="shared-play__choices">{question.options.map((option) => <button key={option.id} disabled={Boolean(selected)} className={selected === option.id ? option.id === question.correctOptionId ? 'is-correct' : 'is-wrong' : ''} onClick={() => answer(option.id)}>{option.emoji} {option.label}</button>)}</div>
-    {selected ? <div role="status"><p>{selected === question.correctOptionId ? 'הקבוצה מצאה יחד!' : 'ניסיון קבוצתי טוב — ממשיכים יחד.'}</p><Button onClick={next}>{index === questions.length - 1 ? 'סיום' : 'לתור הבא'}</Button></div> : null}
+    <div className="shared-play__choices">{question.options.map((option) => <button key={option.id} disabled={Boolean(selected)} className={selected && option.id === question.correctOptionId ? 'is-correct' : selected === option.id ? 'is-wrong' : ''} onClick={() => answer(option.id)}>{option.emoji} {option.label}</button>)}</div>
+    {selected ? <div role="status"><p>{isCorrectAnswer ? 'הקבוצה מצאה יחד!' : 'ניסיון קבוצתי טוב — ממשיכים יחד.'}</p>{!isCorrectAnswer ? <Button onClick={next}>{index === questions.length - 1 ? 'סיום' : 'לתור הבא'}</Button> : null}</div> : null}
   </section></main>;
 }

@@ -39,6 +39,14 @@ export function QuizGame({ title, gameId, questions, voiceEnabled, onBack, onFin
     if (isFinished) onFinish(score, total, stars);
   }, [isFinished, onFinish, score, stars, total]);
 
+  const isCorrectAnswer = isAnswered && selectedOptionId === currentQuestion?.correctOptionId;
+
+  useEffect(() => {
+    if (!isCorrectAnswer) return;
+    const timer = window.setTimeout(nextQuestion, 900);
+    return () => window.clearTimeout(timer);
+  }, [isCorrectAnswer, nextQuestion]);
+
   if (isFinished || !currentQuestion) return null;
 
   return (
@@ -95,11 +103,11 @@ export function QuizGame({ title, gameId, questions, voiceEnabled, onBack, onFin
           })}
         </div>
 
-        <AnimatedFeedback message={feedback} tone={isAnswered && selectedOptionId === currentQuestion.correctOptionId ? 'correct' : 'wrong'} />
+        <AnimatedFeedback message={feedback} tone={isCorrectAnswer ? 'correct' : 'wrong'} />
 
-        <div className="question-card__actions">
-          <Button onClick={nextQuestion} disabled={!isAnswered} {...getSpeakProps<HTMLButtonElement>('לשאלה הבאה')}>לשאלה הבאה</Button>
-        </div>
+        {isAnswered && !isCorrectAnswer ? <div className="question-card__actions">
+          <Button onClick={nextQuestion} {...getSpeakProps<HTMLButtonElement>('לשאלה הבאה')}>לשאלה הבאה</Button>
+        </div> : null}
       </div>
     </GameWorld>
   );

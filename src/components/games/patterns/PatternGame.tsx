@@ -70,6 +70,14 @@ export function PatternGame({ age, difficulty, voiceEnabled, onBack, onFinish }:
     }
   }, [currentIndex, onFinish, score, total]);
 
+  const isCorrectAnswer = isAnswered && selectedOptionId === currentPuzzle?.correctOptionId;
+
+  useEffect(() => {
+    if (!isCorrectAnswer) return;
+    const timer = window.setTimeout(nextPuzzle, 900);
+    return () => window.clearTimeout(timer);
+  }, [isCorrectAnswer, nextPuzzle]);
+
   function submitAnswer(optionId: string) {
     if (isAnswered || !currentPuzzle) return;
     const isCorrect = optionId === currentPuzzle.correctOptionId;
@@ -151,11 +159,11 @@ export function PatternGame({ age, difficulty, voiceEnabled, onBack, onFinish }:
           })}
         </div>
 
-        <AnimatedFeedback message={feedback} tone={isAnswered && selectedOptionId === currentPuzzle.correctOptionId ? 'correct' : 'wrong'} />
+        <AnimatedFeedback message={feedback} tone={isCorrectAnswer ? 'correct' : 'wrong'} />
 
-        <div className="question-card__actions">
-          <Button onClick={nextPuzzle} disabled={!isAnswered} {...getSpeakProps<HTMLButtonElement>('לרצף הבא')}>לרצף הבא</Button>
-        </div>
+        {isAnswered && !isCorrectAnswer ? <div className="question-card__actions">
+          <Button onClick={nextPuzzle} {...getSpeakProps<HTMLButtonElement>('לרצף הבא')}>לרצף הבא</Button>
+        </div> : null}
       </div>
     </GameWorld>
   );
