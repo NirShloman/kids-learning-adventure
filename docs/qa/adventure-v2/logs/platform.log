@@ -1,0 +1,32 @@
+
+Running 15 tests using 1 worker
+
+(node:17392) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:17392) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [adventure-performance] › tests\e2e\adventure-performance.spec.ts:5:1 › PERF-01: active animation and pointer-to-painted-feedback measurements (6.4s)
+(node:10928) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:10928) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  2 [adventure-offline] › tests\e2e\adventure-offline.spec.ts:7:3 › OFF-01 letters: prepared production world and narration survive offline reload (7.2s)
+  ok  3 [adventure-offline] › tests\e2e\adventure-offline.spec.ts:7:3 › OFF-01 numbers: prepared production world and narration survive offline reload (5.4s)
+  ok  4 [adventure-offline] › tests\e2e\adventure-offline.spec.ts:7:3 › OFF-01 shapes: prepared production world and narration survive offline reload (5.0s)
+  ok  5 [adventure-offline] › tests\e2e\adventure-offline.spec.ts:7:3 › OFF-01 colors: prepared production world and narration survive offline reload (6.8s)
+(node:31448) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:31448) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  6 [local-webkit] › tests\e2e\experience.local.spec.ts:11:3 › letters: complete three different mechanics and replay collection (16.5s)
+  ok  7 [local-webkit] › tests\e2e\experience.local.spec.ts:11:3 › numbers: complete three different mechanics and replay collection (18.7s)
+  ok  8 [local-webkit] › tests\e2e\experience.local.spec.ts:11:3 › shapes: complete three different mechanics and replay collection (23.6s)
+  ok  9 [local-webkit] › tests\e2e\experience.local.spec.ts:11:3 › colors: complete three different mechanics and replay collection (22.5s)
+  ok 10 [local-webkit] › tests\e2e\experience.local.spec.ts:65:1 › wrong answers, hints, double-submit and checkpoint survive reload (13.8s)
+  ok 11 [local-webkit] › tests\e2e\experience.local.spec.ts:104:1 › drag, outside release, cancellation and touch sizes (6.1s)
+  ok 12 [local-webkit] › tests\e2e\experience.local.spec.ts:137:1 › rotation and paint are usable with taps and keyboard (8.1s)
+  ok 13 [local-webkit] › tests\e2e\experience.local.spec.ts:155:1 › portrait and landscape preserve activity, reachable controls, accessibility (10.5s)
+  ok 14 [local-webkit] › tests\e2e\experience.local.spec.ts:194:1 › application background pauses play and resumes without losing state (7.3s)
+  ok 15 [local-webkit] › tests\e2e\experience.local.spec.ts:211:1 › LIFE-01: reload after one assembly stage resumes without duplicate evidence (11.0s)
+
+  15 passed (2.9m)

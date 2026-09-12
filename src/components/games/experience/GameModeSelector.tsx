@@ -1,8 +1,13 @@
-import { useEffect } from 'react';
-import type { ExperienceGameId, GameMode } from '../../../types';
-import { useSpeech } from '../../../hooks/useSpeech';
-import { GameWorld } from '../GameWorld';
-import { AmbientVideo } from '../../common/AmbientVideo';
+import { useEffect } from "react";
+import type { ExperienceGameId, GameMode } from "../../../types";
+import { useSpeech } from "../../../hooks/useSpeech";
+import { GameWorld } from "../GameWorld";
+import { adventureWorlds } from "../../../content/adventureMissions";
+import { OfflinePreparation } from "./OfflinePreparation";
+import {
+  getActiveProfile,
+  getAdventureProgress,
+} from "../../../services/learningStoreService";
 
 interface GameModeSelectorProps {
   gameId: ExperienceGameId;
@@ -10,10 +15,29 @@ interface GameModeSelectorProps {
   voiceEnabled: boolean;
   onSelect: (mode: GameMode) => void;
   onBack: () => void;
+  onCollection: () => void;
 }
 
-export function GameModeSelector({ gameId, title, voiceEnabled, onSelect, onBack }: GameModeSelectorProps) {
-  const { speak, stop, getSpeakProps } = useSpeech(voiceEnabled);
+export function GameModeSelector({
+  gameId,
+  title,
+  voiceEnabled,
+  onSelect,
+  onBack,
+  onCollection,
+}: GameModeSelectorProps) {
+  const { speak, stop, preload, getSpeakProps } = useSpeech(voiceEnabled);
+  const profile = getActiveProfile();
+  const hasCollection =
+    profile && getAdventureProgress(profile.id, gameId).rewards.length > 0;
+
+  useEffect(() => {
+    preload([
+      `איך תרצו לשחק ב${title}? אפשר לצאת להרפתקה, או לשחק בחידון.`,
+      "משחק חווייתי, נוגעים במקום ובפריטים כדי לשחק",
+      "טריוויה, בוחרים את התשובה הנכונה",
+    ]);
+  }, [preload, title]);
 
   useEffect(() => {
     speak(`איך תרצו לשחק ב${title}? אפשר לצאת להרפתקה, או לשחק בחידון.`);
@@ -21,37 +45,68 @@ export function GameModeSelector({ gameId, title, voiceEnabled, onSelect, onBack
   }, [speak, stop, title]);
 
   return (
-    <GameWorld gameId={gameId} title={title} status="בוחרים משחק" onBack={onBack} backSpeakProps={getSpeakProps<HTMLButtonElement>('חזרה לתפריט המשחקים')}>
+    <GameWorld
+      gameId={gameId}
+      title={title}
+      status="בוחרים משחק"
+      onBack={onBack}
+      backSpeakProps={getSpeakProps<HTMLButtonElement>("חזרה לתפריט המשחקים")}
+    >
       <div className="game-play-card game-mode-selector">
-        {gameId === 'numbers' && (
-          <AmbientVideo
-            src="/assets/video/counting-orchard.mp4"
-            poster="/assets/video/counting-orchard.poster.webp"
-            className="game-mode-cinematic"
-            fallback={<div className="game-mode-cinematic__fallback" />}
-            ariaLabel="ילד וילדה סופרים תפוחים במטע"
-          >
-            <div className="game-mode-cinematic__overlay">
-              <span className="question-card__tag">הרפתקת מספרים</span>
-              <h2>סופרים יחד במטע</h2>
-            </div>
-          </AmbientVideo>
-        )}
-        {gameId !== 'numbers' ? <><span className="question-card__tag">איך משחקים היום?</span><h2>בחרו דרך לשחק</h2></> : null}
+        <span className="question-card__tag">איך משחקים היום?</span>
+        <h2>בחרו דרך לשחק</h2>
         <p>אפשר לבחור במשחק חווייתי במגע ישיר, או בחידון המוכר.</p>
         <div className="game-mode-selector__options">
-          <button type="button" className="game-mode-card game-mode-card--featured" onClick={() => onSelect('experience')} {...getSpeakProps<HTMLButtonElement>('משחק חווייתי, נוגעים במקום ובפריטים כדי לשחק')}>
-            <span className="game-mode-card__icon" aria-hidden="true">🎮</span>
+          <button
+            type="button"
+            className="game-mode-card game-mode-card--featured"
+            onClick={() => onSelect("experience")}
+            {...getSpeakProps<HTMLButtonElement>(
+              "משחק חווייתי, נוגעים במקום ובפריטים כדי לשחק",
+            )}
+          >
+            <img
+              src={adventureWorlds[gameId].image}
+              alt=""
+              className="adventure-mode-preview"
+              style={{
+                width: "100%",
+                height: 150,
+                objectFit: "cover",
+                borderRadius: 20,
+              }}
+            />
             <strong>משחק חווייתי</strong>
-            <span>זזים, אוספים, בונים וצובעים</span>
+            <span>{adventureWorlds[gameId].title}</span>
             <kbd>נוגעים ומשחקים</kbd>
           </button>
-          <button type="button" className="game-mode-card" onClick={() => onSelect('quiz')} {...getSpeakProps<HTMLButtonElement>('טריוויה, בוחרים את התשובה הנכונה')}>
-            <span className="game-mode-card__icon" aria-hidden="true">💡</span>
+          <button
+            type="button"
+            className="game-mode-card"
+            onClick={() => onSelect("quiz")}
+            {...getSpeakProps<HTMLButtonElement>(
+              "טריוויה, בוחרים את התשובה הנכונה",
+            )}
+          >
+            <span className="game-mode-card__icon" aria-hidden="true">
+              💡
+            </span>
             <strong>טריוויה</strong>
             <span>מקשיבים ובוחרים תשובה</span>
           </button>
         </div>
+        <OfflinePreparation gameId={gameId} />
+        {hasCollection && (
+          <button
+            type="button"
+            className="btn btn--secondary"
+            style={{ minHeight: 56, marginTop: 16 }}
+            onClick={onCollection}
+            {...getSpeakProps<HTMLButtonElement>("האוסף שלי")}
+          >
+            האוסף שלי ✦
+          </button>
+        )}
       </div>
     </GameWorld>
   );

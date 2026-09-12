@@ -1,7 +1,7 @@
 export const brand = {
   hebrewName: 'ידע׳לה',
   latinName: 'Yedale',
-  pronunciation: 'יֶדַעְלֶה',
+  pronunciation: "יֶדַע, לֶה",
   tagline: 'משחקים. מגלים. מתקדמים.',
   descriptor: 'הרפתקת למידה בעברית',
   ageDescriptor: 'לגילאי 3–6',

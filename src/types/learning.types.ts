@@ -161,6 +161,7 @@ export interface JourneyProgress {
 }
 
 export interface ProfileLearningData {
+  adventures?: Partial<Record<import('./experience.types').ExperienceGameId, import('./adventure.types').AdventureProgress>>;
   mastery: Partial<Record<SkillId, SkillMastery>>;
   events: LearningEvent[];
   sessions: LearningSessionSummary[];

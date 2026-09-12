@@ -7,10 +7,10 @@ tracks under `public/assets/audio/music`. Their roles are documented in
 Run `npm run validate:audio` to verify the expected files, headers, sizes,
 unique IDs and manifest entries.
 
-Runtime behavior is centralized in `src/services/audioService.ts`. Hebrew
-narration uses browser Speech Synthesis in the PWA and the operating system's
-AVSpeechSynthesizer/Android TextToSpeech service in native builds. Android
-explicitly filters out voices that report a network requirement; browser and
-iOS voice behavior remains subject to the device, browser, and OS provider.
-The existing small Web Audio feedback palette remains in use until dedicated
-one-shot effects are supplied.
+Runtime music and effects remain centralized in `src/services/audioService.ts`.
+Hebrew narration is centralized in `src/services/narrationService.ts`: bundled,
+content-addressed Google Chirp 3 HD MP3 files are the primary path. Browser
+Speech Synthesis and the native AVSpeechSynthesizer/Android TextToSpeech drivers
+are retained only as failure and not-yet-generated fallbacks. The application
+never calls Google or Firebase while a child is playing. Full generation,
+storage, synchronization and operations documentation is in `narration.md`.

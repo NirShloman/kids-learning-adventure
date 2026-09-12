@@ -20,10 +20,18 @@ interface MemoryGameProps {
 }
 
 export function MemoryGame({ age, difficulty, voiceEnabled, onBack, onFinish }: MemoryGameProps) {
-  const { speak, stop, getSpeakProps } = useSpeech(voiceEnabled);
+  const { speak, stop, preload, getSpeakProps } = useSpeech(voiceEnabled);
   const [cards, setCards] = useState<MemoryCard[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [flippedIds, setFlippedIds] = useState<string[]>([]);
+
+  useEffect(() => {
+    preload([
+      gameInstructions.memory.intro,
+      ...cards.slice(0, 12).map((card) => card.value),
+      'מצוין, מצאתם זוג!', 'לא זוג, נסו לזכור איפה הקלפים היו.'
+    ]);
+  }, [cards, preload]);
   const [matchedPairIds, setMatchedPairIds] = useState<string[]>([]);
   const [moves, setMoves] = useState(0);
   const totalPairs = cards.length / 2;

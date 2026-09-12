@@ -1,0 +1,12 @@
+
+> kids-learning-adventure-web@1.2.0 test:integration
+> vitest run tests/integration
+
+
+ RUN  v4.1.7 C:/Dev/kids-learning-adventure
+
+
+ Test Files  2 passed (2)
+      Tests  3 passed (3)
+   Start at  09:28:29
+   Duration  3.62s (transform 246ms, setup 0ms, import 361ms, tests 30ms, environment 2.93s)

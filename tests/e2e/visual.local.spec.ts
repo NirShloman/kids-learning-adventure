@@ -1,4 +1,3 @@
-import { mkdir } from 'node:fs/promises';
 import { expect, test } from '@playwright/test';
 import { completeChoiceGame, completeProfileSetup, gotoFreshApp, openGame, selectGameMode } from './helpers';
 
@@ -10,9 +9,7 @@ test('keeps welcome and menu framed without overflow', async ({ page }, testInfo
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await gotoFreshApp(page);
 
-  const outputDir = 'test-results/visual';
-  await mkdir(outputDir, { recursive: true });
-  await page.screenshot({ path: `${outputDir}/welcome-${safeProjectName(testInfo.project.name)}.png`, fullPage: true });
+  await page.screenshot({ path: testInfo.outputPath(`welcome-${safeProjectName(testInfo.project.name)}.png`), fullPage: true });
 
   const welcomeMetrics = await page.evaluate(() => ({
     width: document.documentElement.scrollWidth,
@@ -25,7 +22,7 @@ test('keeps welcome and menu framed without overflow', async ({ page }, testInfo
   await page.getByRole('button', { name: /מתחילים לשחק/ }).click();
   await completeProfileSetup(page);
   await expect(page.locator('.home-grid')).toBeVisible();
-  await page.screenshot({ path: `${outputDir}/menu-${safeProjectName(testInfo.project.name)}.png`, fullPage: true });
+  await page.screenshot({ path: testInfo.outputPath(`menu-${safeProjectName(testInfo.project.name)}.png`), fullPage: true });
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(await page.evaluate(() => window.innerWidth));
 });
 
@@ -39,5 +36,5 @@ test('renders earned and unearned stars as distinct non-gray rewards', async ({ 
   await completeChoiceGame(page, 'quiz-option', /לשאלה הבאה/, false);
   await expect(page.locator('.stars__active')).toHaveCount(1);
   await expect(page.locator('.stars__empty')).toHaveCount(2);
-  await page.screenshot({ path: 'test-results/visual/reward-stars.png', fullPage: true });
+  await page.screenshot({ path: testInfo.outputPath('reward-stars.png'), fullPage: true });
 });

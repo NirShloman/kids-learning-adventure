@@ -35,6 +35,7 @@ import {
 import { musicTracks } from './assets/audioManifest';
 import { createProfile, getActiveProfile, getLearningSnapshot } from './services/learningStoreService';
 import { configureSpeechPreferences } from './services/speechService';
+import { configureNarrationPreferences } from './services/narrationService';
 import { brand } from './config/brand';
 
 const quizGameIds: GameId[] = ['letters', 'numbers', 'shapes', 'colors'];
@@ -44,6 +45,7 @@ const PatternGame = lazy(() => import('./components/games/patterns/PatternGame')
 const SortingGame = lazy(() => import('./components/games/sorting/SortingGame').then((module) => ({ default: module.SortingGame })));
 const QuizGame = lazy(() => import('./components/games/quiz/QuizGame').then((module) => ({ default: module.QuizGame })));
 const ExperienceGame = lazy(() => import('./components/games/experience/ExperienceGame').then((module) => ({ default: module.ExperienceGame })));
+const AdventureSummary = lazy(() => import('./components/games/experience/AdventureSummary').then((module) => ({ default: module.AdventureSummary })));
 
 function App() {
   const [learner, setLearner] = useState<LocalLearnerState>(() => getLocalLearnerState());
@@ -57,6 +59,7 @@ function App() {
   };
   const [selectedGameId, setSelectedGameId] = useState<GameId | null>(null);
   const [selectedGameMode, setSelectedGameMode] = useState<GameMode | null>(null);
+  const [showAdventureCollection,setShowAdventureCollection]=useState(false);
   const [result, setResult] = useState<GameResult | null>(null);
   const [playSessionKey, setPlaySessionKey] = useState(0);
   const [quizQuestions, setQuizQuestions] = useState<QuizQuestion[]>([]);
@@ -91,8 +94,11 @@ function App() {
       musicVolume: (profile?.musicVolume ?? 45) / 100,
       soundEffectsVolume: (profile?.soundEffectsVolume ?? 75) / 100
     });
-    configureSpeechPreferences((profile?.narrationVolume ?? 80) / 100, profile?.accessibility.slowNarration ?? false);
-  }, [settings.musicEnabled, settings.narrationEnabled, settings.soundEffectsEnabled]);
+    const narrationVolume = (profile?.narrationVolume ?? 80) / 100;
+    const slowNarration = profile?.accessibility.slowNarration ?? false;
+    configureSpeechPreferences(narrationVolume, slowNarration);
+    configureNarrationPreferences(narrationVolume, slowNarration);
+  }, [learner.updatedAt, settings.musicEnabled, settings.narrationEnabled, settings.soundEffectsEnabled]);
 
   useEffect(() => {
     const profile = getActiveProfile();
@@ -230,6 +236,7 @@ function App() {
     preloadAudio([musicTracks[gameId], musicTracks.modeSelection]);
     window.scrollTo({ top: 0, behavior: 'smooth' });
     setSelectedGameId(gameId);
+    setShowAdventureCollection(false);
     setSelectedGameMode(null);
     setIsEnteringGame(true);
     setResult(null);
@@ -259,6 +266,7 @@ function App() {
   }
 
   function handleBackToGamesMenu() {
+    setShowAdventureCollection(false);
     setSelectedGameId(null);
     setSelectedGameMode(null);
     setIsEnteringGame(false);
@@ -329,7 +337,10 @@ function App() {
       return <GameEntryTransition game={selectedGame} voiceEnabled={settings.narrationEnabled} onComplete={() => setIsEnteringGame(false)} />;
     }
 
+    if(showAdventureCollection)return <AdventureSummary gameId={selectedGameId as ExperienceGameId} onPlayAgain={()=>{setShowAdventureCollection(false);handlePlayAgain();}} onBackHome={handleBackToGamesMenu}/>;
+
     if (result) {
+      if (selectedGameMode === 'experience') return <AdventureSummary gameId={selectedGameId as ExperienceGameId} onPlayAgain={handlePlayAgain} onBackHome={handleBackToGamesMenu} />;
       return (
         <SummaryPage
           title={selectedGame.title}
@@ -342,7 +353,7 @@ function App() {
     }
 
     if (quizGameIds.includes(selectedGameId) && !selectedGameMode) {
-      return <GameModeSelector gameId={selectedGameId as ExperienceGameId} title={selectedGame.title} voiceEnabled={settings.voiceEnabled} onSelect={handleSelectMode} onBack={handleBackToGamesMenu} />;
+      return <GameModeSelector gameId={selectedGameId as ExperienceGameId} title={selectedGame.title} voiceEnabled={settings.voiceEnabled} onSelect={handleSelectMode} onBack={handleBackToGamesMenu} onCollection={()=>{setSelectedGameMode('experience');setShowAdventureCollection(true);}} />;
     }
 
     if (quizGameIds.includes(selectedGameId) && selectedGameMode === 'experience') {
@@ -351,6 +362,8 @@ function App() {
         <ExperienceGame
           key={playSessionKey}
           gameId={selectedGameId as ExperienceGameId}
+          avatarId={getActiveProfile()?.avatarId}
+          accessibility={getActiveProfile()?.accessibility}
           title={selectedGame.title}
           age={settings.age}
           difficulty={settings.difficulty}
@@ -438,6 +451,7 @@ function App() {
       title={selectedGame?.title ?? brand.hebrewName}
       subtitle={selectedGame ? brand.descriptor : 'בוחרים משחק, מתנסים ומתקדמים בקצב שלכם.'}
       compact={Boolean(selectedGame && !result)}
+      immersive={selectedGameMode === 'experience'}
       rightSlot={(
         <>
           <Button variant="ghost" className="app-shell__profile-button" onClick={() => { setProfileSetupMode('edit'); setShowProfileSetup(true); }}>

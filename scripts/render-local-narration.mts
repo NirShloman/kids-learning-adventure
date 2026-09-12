@@ -1,0 +1,167 @@
+/** Offline release asset preparation. Uses the existing configured voice and TTS gateway;
+ * never enables, deploys or changes the automatic cloud generation service. */
+import { existsSync, readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { dirname, join, resolve } from "node:path";
+import { createRequire } from "node:module";
+import { pathToFileURL } from "node:url";
+import { GoogleTextToSpeechGateway } from "../functions/src/narration/firebase-adapters";
+import {
+  DEFAULT_NARRATION_CONFIG,
+  createNarrationAssetKey,
+  narrationStoragePath,
+  checksumAudio,
+  validateNarrationText,
+} from "../functions/src/narration/core";
+
+const root = resolve(import.meta.dirname, "..");
+const require = createRequire(join(root, "functions/package.json"));
+const { parseBuffer } = await import(
+  pathToFileURL(require.resolve("music-metadata")).href
+);
+const catalog = JSON.parse(
+  readFileSync(join(root, "tmp/narration/catalog.json"), "utf8"),
+);
+const manifestPath = join(root, "tmp/narration/local-generated-manifest.json");
+const manifest = JSON.parse(
+  readFileSync(
+    existsSync(manifestPath)
+      ? manifestPath
+      : join(root, "src/assets/generatedNarrationManifest.json"),
+    "utf8",
+  ),
+);
+const config = DEFAULT_NARRATION_CONFIG;
+const texts = [
+  ...new Set<string>(
+    catalog.entries.map((e: { sourceText: string }) =>
+      validateNarrationText(e.sourceText),
+    ),
+  ),
+];
+const missing = texts.filter((text) => {
+  const entry = manifest.entries[text];
+  return (
+    !entry ||
+    entry.assetKey !== createNarrationAssetKey(text, config) ||
+    !existsSync(join(root, "public", entry.localPath)) ||
+    checksumAudio(readFileSync(join(root, "public", entry.localPath))) !==
+      entry.checksum
+  );
+});
+console.log(
+  JSON.stringify({
+    voice: config.voice,
+    total: texts.length,
+    missing: missing.length,
+    characters: missing.reduce((n, t) => n + t.length, 0),
+  }),
+);
+if (!process.argv.includes("--apply")) process.exit(0);
+if (
+  process.env.TTS_GENERATION_ENABLED !== "true" ||
+  !process.argv.includes("--allow-generation")
+)
+  throw new Error(
+    "Explicit generation consent is required: TTS_GENERATION_ENABLED=true and --allow-generation.",
+  );
+const gateway = new GoogleTextToSpeechGateway();
+let cursor = 0,
+  done = 0,
+  failed: Error | undefined;
+let nextStart = Date.now();
+const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+const persist = () => {
+  const content =
+    JSON.stringify(
+      {
+        ...manifest,
+        schemaVersion: 1,
+        generatedAt: new Date().toISOString(),
+        config,
+        entries: Object.fromEntries(
+          Object.entries(manifest.entries).sort(([a], [b]) =>
+            a.localeCompare(b),
+          ),
+        ),
+      },
+      null,
+      2,
+    ) + "\n";
+  // This is a resumable build checkpoint, separate from the release manifest.
+  // Windows scanners can lock a destination briefly and reject rename-overwrite.
+  // Keep a recovery copy before writing the checkpoint; publish only after validation.
+  if (existsSync(manifestPath))
+    writeFileSync(`${manifestPath}.backup`, readFileSync(manifestPath));
+  writeFileSync(manifestPath, content);
+};
+await Promise.all(
+  Array.from({ length: 3 }, async () => {
+    while (!failed) {
+      const index = cursor++;
+      if (index >= missing.length) return;
+      const text = missing[index],
+        assetKey = createNarrationAssetKey(text, config),
+        storagePath = narrationStoragePath(assetKey, config);
+      const path = join(root, "public/assets/audio", storagePath);
+      try {
+        let audio: Buffer | undefined;
+        if (existsSync(path)) audio = readFileSync(path);
+        for (let attempt = 0; !audio && attempt < 3; attempt++) {
+          const start = Math.max(Date.now(), nextStart);
+          nextStart = start + 400;
+          await delay(Math.max(0, start - Date.now()));
+          try {
+            audio = Buffer.from(await gateway.synthesize(text, config));
+          } catch (error) {
+            if (attempt === 2) throw error;
+            await delay(5000 * (attempt + 1));
+          }
+        }
+        if (!audio?.length) throw new Error("Empty narration output");
+        mkdirSync(dirname(path), { recursive: true });
+        writeFileSync(path, audio);
+        const metadata = await parseBuffer(
+          audio,
+          { mimeType: "audio/mpeg", path },
+          { duration: true },
+        );
+        if (!(metadata.format.duration > 0))
+          throw new Error("Invalid MP3 duration");
+        manifest.entries[text] = {
+          assetKey,
+          storagePath,
+          localPath: `/assets/audio/${storagePath}`,
+          audioUrl: `/assets/audio/${storagePath}`,
+          checksum: checksumAudio(audio),
+          byteLength: audio.length,
+          durationMs: Math.round(metadata.format.duration * 1000),
+        };
+        done++;
+        persist();
+        if (done % 25 === 0 || done === missing.length)
+          console.log(`Recorded ${done}/${missing.length}`);
+      } catch (error) {
+        failed = error instanceof Error ? error : new Error(String(error));
+        console.error(`Stopped at binding ${assetKey}: ${failed.message}`);
+      }
+    }
+  }),
+);
+if (failed) throw failed;
+console.log(`Local narration ready: ${texts.length} texts.`);
+if (process.argv.includes("--publish")) {
+  const release = {
+    ...manifest,
+    generatedAt: new Date().toISOString(),
+    entries: Object.fromEntries(
+      texts.map((text) => [text, manifest.entries[text]]),
+    ),
+  };
+  writeFileSync(
+    join(root, "src/assets/generatedNarrationManifest.json"),
+    JSON.stringify(release, null, 2) + "\n",
+  );
+  console.log(
+    `Published ${texts.length} validated local bindings to the release manifest.`,
+  );
+}

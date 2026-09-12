@@ -6,10 +6,14 @@ reports/
 .vite/
 *.tsbuildinfo
 *.log
+!/docs/qa/adventure-v2/logs/*.log
 
 .env
 .env.*
 !.env.example
+.firebaserc
+*service-account*.json
+application_default_credentials.json
 
 .DS_Store
 Thumbs.db
@@ -20,3 +24,11 @@ Thumbs.db
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+/qa-results/
+/qa-reports/
+
+# Generated narration working data and voice samples
+/tmp/narration/
+/functions/lib/
+/functions/.firebase/
+/functions/tmp/

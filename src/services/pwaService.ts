@@ -29,6 +29,9 @@ export async function registerServiceWorker(): Promise<void> {
 
   try {
     const registration = await navigator.serviceWorker.register('/sw.js', { updateViaCache: 'none' });
+    // Restricted web containers can suppress registration without a result.
+    // Online play remains usable when offline installation is unavailable.
+    if (!registration) return;
     await registration.update();
     const worker = registration.active ?? registration.waiting ?? registration.installing;
     worker?.postMessage({ type: 'WARM_AUDIO_CACHE' });

@@ -20,7 +20,7 @@ interface PatternGameProps {
 }
 
 export function PatternGame({ age, difficulty, voiceEnabled, onBack, onFinish }: PatternGameProps) {
-  const { speak, stop, getSpeakProps } = useSpeech(voiceEnabled);
+  const { speak, stop, preload, getSpeakProps } = useSpeech(voiceEnabled);
   const [puzzles, setPuzzles] = useState<PatternPuzzle[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -30,6 +30,16 @@ export function PatternGame({ age, difficulty, voiceEnabled, onBack, onFinish }:
   const [isAnswered, setIsAnswered] = useState(false);
   const currentPuzzle = puzzles[currentIndex];
   const total = puzzles.length;
+
+  useEffect(() => {
+    const upcoming = puzzles.slice(currentIndex, currentIndex + 3);
+    preload([
+      gameInstructions.patterns.intro,
+      ...upcoming.map((puzzle) => puzzle.audioText ?? puzzle.prompt),
+      ...upcoming.flatMap((puzzle) => puzzle.options.map((option) => option.label)),
+      'כל הכבוד!', 'מצוין!', 'כמעט!', 'בואו ננסה שוב!'
+    ]);
+  }, [currentIndex, preload, puzzles]);
 
   useEffect(() => {
     let isActive = true;

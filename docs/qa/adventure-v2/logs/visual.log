@@ -1,0 +1,89 @@
+
+Running 28 tests using 2 workers
+
+(node:28204) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:32144) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:28204) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:32144) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [local-chromium] › tests\e2e\experience-visual.local.spec.ts:6:3 › letters: scene has decoded art, readable controls and no overflow (4.2s)
+  ok  2 [local-chromium] › tests\e2e\experience-visual.local.spec.ts:6:3 › numbers: scene has decoded art, readable controls and no overflow (4.3s)
+  ok  4 [local-chromium] › tests\e2e\experience-visual.local.spec.ts:6:3 › colors: scene has decoded art, readable controls and no overflow (4.0s)
+  ok  3 [local-chromium] › tests\e2e\experience-visual.local.spec.ts:6:3 › shapes: scene has decoded art, readable controls and no overflow (4.1s)
+(node:28044) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:4276) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:28044) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:4276) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  6 [local-firefox] › tests\e2e\experience-visual.local.spec.ts:6:3 › numbers: scene has decoded art, readable controls and no overflow (10.2s)
+  ok  5 [local-firefox] › tests\e2e\experience-visual.local.spec.ts:6:3 › letters: scene has decoded art, readable controls and no overflow (10.7s)
+  ok  7 [local-firefox] › tests\e2e\experience-visual.local.spec.ts:6:3 › shapes: scene has decoded art, readable controls and no overflow (5.1s)
+  ok  8 [local-firefox] › tests\e2e\experience-visual.local.spec.ts:6:3 › colors: scene has decoded art, readable controls and no overflow (5.3s)
+(node:20444) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:20444) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:29404) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:29404) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  9 [local-webkit] › tests\e2e\experience-visual.local.spec.ts:6:3 › letters: scene has decoded art, readable controls and no overflow (9.0s)
+  ok 10 [local-webkit] › tests\e2e\experience-visual.local.spec.ts:6:3 › numbers: scene has decoded art, readable controls and no overflow (9.1s)
+  ok 11 [local-webkit] › tests\e2e\experience-visual.local.spec.ts:6:3 › shapes: scene has decoded art, readable controls and no overflow (8.9s)
+(node:22668) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:22668) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 12 [local-webkit] › tests\e2e\experience-visual.local.spec.ts:6:3 › colors: scene has decoded art, readable controls and no overflow (8.3s)
+(node:32144) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:32144) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 13 [mobile-chrome] › tests\e2e\experience-visual.local.spec.ts:6:3 › letters: scene has decoded art, readable controls and no overflow (4.9s)
+  ok 14 [mobile-chrome] › tests\e2e\experience-visual.local.spec.ts:6:3 › numbers: scene has decoded art, readable controls and no overflow (4.9s)
+  ok 15 [mobile-chrome] › tests\e2e\experience-visual.local.spec.ts:6:3 › shapes: scene has decoded art, readable controls and no overflow (4.8s)
+(node:6384) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:6384) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 16 [mobile-chrome] › tests\e2e\experience-visual.local.spec.ts:6:3 › colors: scene has decoded art, readable controls and no overflow (4.3s)
+(node:22964) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:22964) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 17 [mobile-safari] › tests\e2e\experience-visual.local.spec.ts:6:3 › letters: scene has decoded art, readable controls and no overflow (8.7s)
+  ok 18 [mobile-safari] › tests\e2e\experience-visual.local.spec.ts:6:3 › numbers: scene has decoded art, readable controls and no overflow (7.2s)
+  ok 19 [mobile-safari] › tests\e2e\experience-visual.local.spec.ts:6:3 › shapes: scene has decoded art, readable controls and no overflow (7.2s)
+(node:25436) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 20 [mobile-safari] › tests\e2e\experience-visual.local.spec.ts:6:3 › colors: scene has decoded art, readable controls and no overflow (7.8s)
+(node:25436) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:31120) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:31120) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 21 [mobile-android-tablet] › tests\e2e\experience-visual.local.spec.ts:6:3 › letters: scene has decoded art, readable controls and no overflow (8.0s)
+  ok 22 [mobile-android-tablet] › tests\e2e\experience-visual.local.spec.ts:6:3 › numbers: scene has decoded art, readable controls and no overflow (8.4s)
+  ok 23 [mobile-android-tablet] › tests\e2e\experience-visual.local.spec.ts:6:3 › shapes: scene has decoded art, readable controls and no overflow (7.8s)
+(node:7496) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:7496) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 24 [mobile-android-tablet] › tests\e2e\experience-visual.local.spec.ts:6:3 › colors: scene has decoded art, readable controls and no overflow (7.8s)
+(node:10508) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:10508) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 25 [mobile-ipad] › tests\e2e\experience-visual.local.spec.ts:6:3 › letters: scene has decoded art, readable controls and no overflow (11.7s)
+  ok 26 [mobile-ipad] › tests\e2e\experience-visual.local.spec.ts:6:3 › numbers: scene has decoded art, readable controls and no overflow (11.8s)
+  ok 27 [mobile-ipad] › tests\e2e\experience-visual.local.spec.ts:6:3 › shapes: scene has decoded art, readable controls and no overflow (9.0s)
+  ok 28 [mobile-ipad] › tests\e2e\experience-visual.local.spec.ts:6:3 › colors: scene has decoded art, readable controls and no overflow (8.5s)
+
+  28 passed (2.0m)

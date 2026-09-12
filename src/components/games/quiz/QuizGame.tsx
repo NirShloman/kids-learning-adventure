@@ -21,8 +21,18 @@ interface QuizGameProps {
 }
 
 export function QuizGame({ title, gameId, questions, voiceEnabled, onBack, onFinish }: QuizGameProps) {
-  const { speak, stop, getSpeakProps } = useSpeech(voiceEnabled);
+  const { speak, stop, preload, getSpeakProps } = useSpeech(voiceEnabled);
   const { currentQuestion, currentIndex, score, selectedOptionId, feedback, isAnswered, isFinished, total, stars, submitAnswer, nextQuestion } = useQuizGame(questions);
+
+  useEffect(() => {
+    const upcoming = questions.slice(currentIndex, currentIndex + 3);
+    preload([
+      gameInstructions[gameId].intro,
+      ...upcoming.map((question) => question.audioText ?? question.prompt),
+      ...upcoming.flatMap((question) => question.options.map((option) => option.label)),
+      'כל הכבוד!', 'מצוין!', 'כמעט!', 'בואו ננסה שוב!'
+    ]);
+  }, [currentIndex, gameId, preload, questions]);
 
   useEffect(() => {
     if (!currentQuestion) return;
