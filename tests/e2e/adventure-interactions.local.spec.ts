@@ -152,8 +152,10 @@ for (const id of [
       );
       for (const control of await controls.all()) {
         const b = (await control.boundingBox())!;
-        expect(b.width).toBeGreaterThanOrEqual(56);
-        expect(b.height).toBeGreaterThanOrEqual(56);
+        // Firefox/Linux can report a 56px transformed box as 55.999969px.
+        // Compare at 0.001 CSS-pixel precision, retaining the 56px minimum.
+        expect(Number(b.width.toFixed(3))).toBeGreaterThanOrEqual(56);
+        expect(Number(b.height.toFixed(3))).toBeGreaterThanOrEqual(56);
         expect(b.x).toBeGreaterThanOrEqual(0);
         expect(b.y).toBeGreaterThanOrEqual(0);
         expect(b.x + b.width).toBeLessThanOrEqual(viewport.width + 1);

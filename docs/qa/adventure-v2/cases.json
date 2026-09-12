@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-12T06:50:13.538Z",
-  "executionCount": 636,
+  "generatedAt": "2026-09-12T20:00:29.288Z",
+  "executionCount": 671,
   "runs": [
     {
       "name": "acceptance.json",
@@ -56,6 +56,20 @@
         "startTime": "2026-09-12T06:47:08.230Z",
         "duration": 173970.333,
         "expected": 15,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "globalErrors": []
+    },
+    {
+      "name": "ci-repair.json",
+      "startedAt": "2026-09-12T19:54:58.677Z",
+      "durationMs": 312509.218,
+      "counts": {
+        "startTime": "2026-09-12T19:54:58.677Z",
+        "duration": 312509.218,
+        "expected": 35,
         "skipped": 0,
         "unexpected": 0,
         "flaky": 0
@@ -1996,7 +2010,7 @@
     },
     {
       "id": "local-chromium/a505d2b229d24614384d-9c11104a9f0928678403",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-letter-bridge accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -2005,9 +2019,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "local-chromium (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 6077,
+      "durationMs": 8184,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:29:16.030Z",
+      "startedAt": "2026-09-12T19:55:03.328Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -2017,12 +2031,17 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\u001b[39m\n\u001b[31m+     at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:183:5"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
       "id": "local-chromium/a505d2b229d24614384d-aafa6dfb09ceccf03f7e",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-number-breakfast accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -2031,9 +2050,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "local-chromium (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 6325,
+      "durationMs": 8335,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:29:17.381Z",
+      "startedAt": "2026-09-12T19:55:03.323Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -2043,12 +2062,17 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\u001b[39m\n\u001b[31m+     at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:183:5"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
       "id": "local-chromium/a505d2b229d24614384d-4e140fbbf4792444bae3",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-shape-windmill accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -2057,9 +2081,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "local-chromium (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 8067,
+      "durationMs": 8953,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:29:22.134Z",
+      "startedAt": "2026-09-12T19:55:18.618Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -2069,12 +2093,17 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\u001b[39m\n\u001b[31m+     at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:183:5"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
       "id": "local-chromium/a505d2b229d24614384d-45c6ecbf8fc3cc5d3d70",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-color-petals accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -2083,9 +2112,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "local-chromium (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 7477,
+      "durationMs": 8085,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:29:23.739Z",
+      "startedAt": "2026-09-12T19:55:18.724Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -2095,12 +2124,17 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\u001b[39m\n\u001b[31m+     at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:183:5"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
       "id": "local-chromium/a505d2b229d24614384d-d25c23eca1fb7baa60c4",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-color-orange accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -2109,9 +2143,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "local-chromium (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 7981,
+      "durationMs": 7011,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:29:30.227Z",
+      "startedAt": "2026-09-12T19:55:26.840Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -2121,6 +2155,11 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\u001b[39m\n\u001b[31m+     at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:183:5"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
@@ -2198,7 +2237,7 @@
     },
     {
       "id": "local-firefox/a505d2b229d24614384d-3cb518cf177048edb4d2",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-letter-bridge accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -2207,9 +2246,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "local-firefox (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 12069,
+      "durationMs": 21364,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:31:07.695Z",
+      "startedAt": "2026-09-12T19:55:30.548Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -2217,12 +2256,17 @@
           "run": "acceptance.json",
           "actual": "passed",
           "errors": []
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
       "id": "local-firefox/a505d2b229d24614384d-5e6d153a943cb862b556",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-number-breakfast accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -2231,9 +2275,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "local-firefox (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 9534,
+      "durationMs": 19384,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:31:13.449Z",
+      "startedAt": "2026-09-12T19:55:36.385Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -2241,12 +2285,17 @@
           "run": "acceptance.json",
           "actual": "passed",
           "errors": []
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
       "id": "local-firefox/a505d2b229d24614384d-6323815691e8478fea1d",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-shape-windmill accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -2255,9 +2304,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "local-firefox (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 8296,
+      "durationMs": 13837,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:31:19.797Z",
+      "startedAt": "2026-09-12T19:56:06.761Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -2265,12 +2314,17 @@
           "run": "acceptance.json",
           "actual": "passed",
           "errors": []
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
       "id": "local-firefox/a505d2b229d24614384d-4b1d1f169a7247709241",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-color-petals accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -2279,9 +2333,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "local-firefox (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 7836,
+      "durationMs": 12549,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:31:23.016Z",
+      "startedAt": "2026-09-12T19:56:07.430Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -2289,12 +2343,17 @@
           "run": "acceptance.json",
           "actual": "passed",
           "errors": []
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
       "id": "local-firefox/a505d2b229d24614384d-ec7018d313aa770fabc1",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-color-orange accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -2303,14 +2362,19 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "local-firefox (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 8976,
+      "durationMs": 13313,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:31:28.122Z",
+      "startedAt": "2026-09-12T19:56:20.015Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
         {
           "run": "acceptance.json",
+          "actual": "passed",
+          "errors": []
+        },
+        {
+          "run": "repair.json",
           "actual": "passed",
           "errors": []
         }
@@ -2394,7 +2458,7 @@
     },
     {
       "id": "local-webkit/a505d2b229d24614384d-d4b613fe0d6193698cb9",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-letter-bridge accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -2403,9 +2467,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "local-webkit (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 12762,
+      "durationMs": 23433,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:32:59.283Z",
+      "startedAt": "2026-09-12T19:56:25.407Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -2415,12 +2479,17 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n   at e2e\\helpers.ts:20\n\n  18 |   });\n  19 |   page.on('pageerror', (error) => errors.push(error.message));\n> 20 |   return () => expect(errors, `Critical browser errors:\\n${errors.join('\\n')}`).toEqual([]);\n     |                                                                                 ^\n  21 | }\n  22 |\n  23 | export async function gotoFreshApp(page: Page) {\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:183:5"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
       "id": "local-webkit/a505d2b229d24614384d-60fe4eb81af760db5f5e",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-number-breakfast accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -2429,9 +2498,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "local-webkit (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 14496,
+      "durationMs": 25208,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:33:05.178Z",
+      "startedAt": "2026-09-12T19:56:37.692Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -2441,12 +2510,17 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n   at e2e\\helpers.ts:20\n\n  18 |   });\n  19 |   page.on('pageerror', (error) => errors.push(error.message));\n> 20 |   return () => expect(errors, `Critical browser errors:\\n${errors.join('\\n')}`).toEqual([]);\n     |                                                                                 ^\n  21 | }\n  22 |\n  23 | export async function gotoFreshApp(page: Page) {\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:183:5"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
       "id": "local-webkit/a505d2b229d24614384d-58135e4af24201990aed",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-shape-windmill accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -2455,9 +2529,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "local-webkit (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 13064,
+      "durationMs": 22030,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:33:12.067Z",
+      "startedAt": "2026-09-12T19:56:53.850Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -2467,12 +2541,17 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n   at e2e\\helpers.ts:20\n\n  18 |   });\n  19 |   page.on('pageerror', (error) => errors.push(error.message));\n> 20 |   return () => expect(errors, `Critical browser errors:\\n${errors.join('\\n')}`).toEqual([]);\n     |                                                                                 ^\n  21 | }\n  22 |\n  23 | export async function gotoFreshApp(page: Page) {\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:183:5"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
       "id": "local-webkit/a505d2b229d24614384d-f3ceb5547660acd23d74",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-color-petals accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -2481,9 +2560,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "local-webkit (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 12605,
+      "durationMs": 21687,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:33:19.700Z",
+      "startedAt": "2026-09-12T19:57:03.256Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -2493,12 +2572,17 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n   at e2e\\helpers.ts:20\n\n  18 |   });\n  19 |   page.on('pageerror', (error) => errors.push(error.message));\n> 20 |   return () => expect(errors, `Critical browser errors:\\n${errors.join('\\n')}`).toEqual([]);\n     |                                                                                 ^\n  21 | }\n  22 |\n  23 | export async function gotoFreshApp(page: Page) {\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:183:5"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
       "id": "local-webkit/a505d2b229d24614384d-47f15c3f33edcc29885c",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-color-orange accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -2507,9 +2591,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "local-webkit (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 14784,
+      "durationMs": 21868,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:33:25.148Z",
+      "startedAt": "2026-09-12T19:57:15.911Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -2519,6 +2603,11 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n   at e2e\\helpers.ts:20\n\n  18 |   });\n  19 |   page.on('pageerror', (error) => errors.push(error.message));\n> 20 |   return () => expect(errors, `Critical browser errors:\\n${errors.join('\\n')}`).toEqual([]);\n     |                                                                                 ^\n  21 | }\n  22 |\n  23 | export async function gotoFreshApp(page: Page) {\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:183:5"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
@@ -2600,7 +2689,7 @@
     },
     {
       "id": "mobile-chrome/a505d2b229d24614384d-f265766be54e0780a76d",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-letter-bridge accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -2609,9 +2698,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "mobile-chrome (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 7107,
+      "durationMs": 6406,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:35:44.932Z",
+      "startedAt": "2026-09-12T19:57:26.528Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -2621,12 +2710,17 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\u001b[39m\n\u001b[31m+     at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:183:5"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
       "id": "mobile-chrome/a505d2b229d24614384d-ae770c6a6d6fd95402ea",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-number-breakfast accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -2635,9 +2729,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "mobile-chrome (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 7010,
+      "durationMs": 6815,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:35:45.762Z",
+      "startedAt": "2026-09-12T19:57:33.408Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -2647,12 +2741,17 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\u001b[39m\n\u001b[31m+     at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:183:5"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
       "id": "mobile-chrome/a505d2b229d24614384d-58cdbfcd367c9a60c822",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-shape-windmill accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -2661,9 +2760,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "mobile-chrome (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 7330,
+      "durationMs": 8797,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:35:52.066Z",
+      "startedAt": "2026-09-12T19:57:39.794Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -2673,12 +2772,17 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\u001b[39m\n\u001b[31m+     at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:183:5"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
       "id": "mobile-chrome/a505d2b229d24614384d-78b95904b053914d3ada",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-color-petals accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -2687,9 +2791,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "mobile-chrome (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 6913,
+      "durationMs": 7842,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:35:52.803Z",
+      "startedAt": "2026-09-12T19:57:40.256Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -2699,12 +2803,17 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\u001b[39m\n\u001b[31m+     at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:183:5"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
       "id": "mobile-chrome/a505d2b229d24614384d-8597ac49ef61e381a4c4",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-color-orange accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -2713,9 +2822,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "mobile-chrome (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 7669,
+      "durationMs": 7690,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:35:59.421Z",
+      "startedAt": "2026-09-12T19:57:48.126Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -2725,6 +2834,11 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\u001b[39m\n\u001b[31m+     at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:183:5"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
@@ -2806,7 +2920,7 @@
     },
     {
       "id": "mobile-safari/a505d2b229d24614384d-da00ccb47dabd4b0b5d3",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-letter-bridge accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -2815,9 +2929,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "mobile-safari (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 13137,
+      "durationMs": 17998,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:37:28.515Z",
+      "startedAt": "2026-09-12T19:57:51.779Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -2827,12 +2941,17 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n   at e2e\\helpers.ts:20\n\n  18 |   });\n  19 |   page.on('pageerror', (error) => errors.push(error.message));\n> 20 |   return () => expect(errors, `Critical browser errors:\\n${errors.join('\\n')}`).toEqual([]);\n     |                                                                                 ^\n  21 | }\n  22 |\n  23 | export async function gotoFreshApp(page: Page) {\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:183:5"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
       "id": "mobile-safari/a505d2b229d24614384d-2dd6418325e6aba870d2",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-number-breakfast accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -2841,9 +2960,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "mobile-safari (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 12913,
+      "durationMs": 19601,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:37:33.205Z",
+      "startedAt": "2026-09-12T19:57:58.454Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -2853,12 +2972,17 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n   at e2e\\helpers.ts:20\n\n  18 |   });\n  19 |   page.on('pageerror', (error) => errors.push(error.message));\n> 20 |   return () => expect(errors, `Critical browser errors:\\n${errors.join('\\n')}`).toEqual([]);\n     |                                                                                 ^\n  21 | }\n  22 |\n  23 | export async function gotoFreshApp(page: Page) {\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:183:5"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
       "id": "mobile-safari/a505d2b229d24614384d-1a075009117d1fa8a429",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-shape-windmill accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -2867,9 +2991,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "mobile-safari (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 12067,
+      "durationMs": 16820,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:37:41.675Z",
+      "startedAt": "2026-09-12T19:58:11.709Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -2879,12 +3003,17 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n   at e2e\\helpers.ts:20\n\n  18 |   });\n  19 |   page.on('pageerror', (error) => errors.push(error.message));\n> 20 |   return () => expect(errors, `Critical browser errors:\\n${errors.join('\\n')}`).toEqual([]);\n     |                                                                                 ^\n  21 | }\n  22 |\n  23 | export async function gotoFreshApp(page: Page) {\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:183:5"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
       "id": "mobile-safari/a505d2b229d24614384d-1bb83237177ab696d12b",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-color-petals accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -2893,9 +3022,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "mobile-safari (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 11823,
+      "durationMs": 15480,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:37:46.140Z",
+      "startedAt": "2026-09-12T19:58:18.539Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -2905,12 +3034,17 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n   at e2e\\helpers.ts:20\n\n  18 |   });\n  19 |   page.on('pageerror', (error) => errors.push(error.message));\n> 20 |   return () => expect(errors, `Critical browser errors:\\n${errors.join('\\n')}`).toEqual([]);\n     |                                                                                 ^\n  21 | }\n  22 |\n  23 | export async function gotoFreshApp(page: Page) {\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:183:5"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
       "id": "mobile-safari/a505d2b229d24614384d-47a81c9f521ef3529886",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-color-orange accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -2919,9 +3053,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "mobile-safari (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 13555,
+      "durationMs": 16388,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:37:53.767Z",
+      "startedAt": "2026-09-12T19:58:28.557Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -2931,6 +3065,11 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n   at e2e\\helpers.ts:20\n\n  18 |   });\n  19 |   page.on('pageerror', (error) => errors.push(error.message));\n> 20 |   return () => expect(errors, `Critical browser errors:\\n${errors.join('\\n')}`).toEqual([]);\n     |                                                                                 ^\n  21 | }\n  22 |\n  23 | export async function gotoFreshApp(page: Page) {\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:183:5"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
@@ -3012,7 +3151,7 @@
     },
     {
       "id": "mobile-android-tablet/a505d2b229d24614384d-3161c9b0699bc8a34dca",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-letter-bridge accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -3021,9 +3160,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "mobile-android-tablet (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 7986,
+      "durationMs": 8841,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:39:57.526Z",
+      "startedAt": "2026-09-12T19:58:35.629Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -3033,12 +3172,17 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\u001b[39m\n\u001b[31m+     at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:183:5"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
       "id": "mobile-android-tablet/a505d2b229d24614384d-bbfa7ed7f35264cfe59c",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-number-breakfast accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -3047,9 +3191,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "mobile-android-tablet (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 7854,
+      "durationMs": 9321,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:39:58.624Z",
+      "startedAt": "2026-09-12T19:58:44.840Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -3059,12 +3203,17 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\u001b[39m\n\u001b[31m+     at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:183:5"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
       "id": "mobile-android-tablet/a505d2b229d24614384d-9160e51798b61a566572",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-shape-windmill accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -3073,9 +3222,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "mobile-android-tablet (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 7220,
+      "durationMs": 9621,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:40:05.533Z",
+      "startedAt": "2026-09-12T19:58:46.995Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -3085,12 +3234,17 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\u001b[39m\n\u001b[31m+     at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:183:5"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
       "id": "mobile-android-tablet/a505d2b229d24614384d-a95bb59ac6914435950f",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-color-petals accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -3099,9 +3253,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "mobile-android-tablet (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 6859,
+      "durationMs": 8961,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:40:06.507Z",
+      "startedAt": "2026-09-12T19:58:54.188Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -3111,12 +3265,17 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\u001b[39m\n\u001b[31m+     at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:183:5"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
       "id": "mobile-android-tablet/a505d2b229d24614384d-9a7d5e7dbad983b014ca",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-color-orange accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -3125,9 +3284,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "mobile-android-tablet (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 9335,
+      "durationMs": 8795,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:40:12.773Z",
+      "startedAt": "2026-09-12T19:58:56.998Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -3137,6 +3296,11 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\u001b[39m\n\u001b[31m+     at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:183:5"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
@@ -3218,7 +3382,7 @@
     },
     {
       "id": "mobile-ipad/a505d2b229d24614384d-98f4d12d9523c88d2b27",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-letter-bridge accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -3227,9 +3391,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "mobile-ipad (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 16180,
+      "durationMs": 22541,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:42:03.387Z",
+      "startedAt": "2026-09-12T19:59:05.021Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -3239,12 +3403,17 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n   at e2e\\helpers.ts:20\n\n  18 |   });\n  19 |   page.on('pageerror', (error) => errors.push(error.message));\n> 20 |   return () => expect(errors, `Critical browser errors:\\n${errors.join('\\n')}`).toEqual([]);\n     |                                                                                 ^\n  21 | }\n  22 |\n  23 | export async function gotoFreshApp(page: Page) {\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:183:5"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
       "id": "mobile-ipad/a505d2b229d24614384d-223367a87757dc037531",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-number-breakfast accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -3253,9 +3422,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "mobile-ipad (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 15941,
+      "durationMs": 21182,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:42:04.414Z",
+      "startedAt": "2026-09-12T19:59:08.160Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -3265,12 +3434,17 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n   at e2e\\helpers.ts:20\n\n  18 |   });\n  19 |   page.on('pageerror', (error) => errors.push(error.message));\n> 20 |   return () => expect(errors, `Critical browser errors:\\n${errors.join('\\n')}`).toEqual([]);\n     |                                                                                 ^\n  21 | }\n  22 |\n  23 | export async function gotoFreshApp(page: Page) {\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:183:5"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
       "id": "mobile-ipad/a505d2b229d24614384d-6b624151ec384de588ac",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-shape-windmill accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -3279,9 +3453,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "mobile-ipad (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 16448,
+      "durationMs": 27176,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:42:19.587Z",
+      "startedAt": "2026-09-12T19:59:27.989Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -3291,12 +3465,17 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n   at e2e\\helpers.ts:20\n\n  18 |   });\n  19 |   page.on('pageerror', (error) => errors.push(error.message));\n> 20 |   return () => expect(errors, `Critical browser errors:\\n${errors.join('\\n')}`).toEqual([]);\n     |                                                                                 ^\n  21 | }\n  22 |\n  23 | export async function gotoFreshApp(page: Page) {\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:183:5"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
       "id": "mobile-ipad/a505d2b229d24614384d-98a194678c4c9b7b801f",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-color-petals accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -3305,9 +3484,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "mobile-ipad (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 16651,
+      "durationMs": 24220,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:42:20.381Z",
+      "startedAt": "2026-09-12T19:59:29.793Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -3317,12 +3496,17 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n   at e2e\\helpers.ts:20\n\n  18 |   });\n  19 |   page.on('pageerror', (error) => errors.push(error.message));\n> 20 |   return () => expect(errors, `Critical browser errors:\\n${errors.join('\\n')}`).toEqual([]);\n     |                                                                                 ^\n  21 | }\n  22 |\n  23 | export async function gotoFreshApp(page: Page) {\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:183:5"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
       "id": "mobile-ipad/a505d2b229d24614384d-0b45ecd04ae75937c3e2",
-      "run": "repair.json",
+      "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-color-orange accessible with enlarged controls in both orientations",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:117",
@@ -3331,9 +3515,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for A11Y-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "mobile-ipad (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 17136,
+      "durationMs": 16482,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:42:36.053Z",
+      "startedAt": "2026-09-12T19:59:54.039Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -3343,6 +3527,11 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n   at e2e\\helpers.ts:20\n\n  18 |   });\n  19 |   page.on('pageerror', (error) => errors.push(error.message));\n> 20 |   return () => expect(errors, `Critical browser errors:\\n${errors.join('\\n')}`).toEqual([]);\n     |                                                                                 ^\n  21 | }\n  22 |\n  23 | export async function gotoFreshApp(page: Page) {\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:183:5"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
