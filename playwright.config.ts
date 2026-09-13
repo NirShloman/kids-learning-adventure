@@ -8,6 +8,7 @@ export default defineConfig({
   outputDir: process.env.PLAYWRIGHT_OUTPUT_DIR || 'test-results',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
+  failOnFlakyTests: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : 2,
   timeout: 90_000,

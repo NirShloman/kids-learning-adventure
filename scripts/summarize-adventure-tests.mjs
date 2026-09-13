@@ -27,7 +27,9 @@ for (const input of inputs) {
           : spec.file.includes('visual') || spec.file.includes('recordings') ? 'VIS-01'
           : spec.file.includes('experience.local') ? 'CUR-03' : 'REG-01');
       cases.push({
-        id: `${test.projectName}/${spec.id}`,
+        // Playwright changes spec.id for --repeat-each. Repetitions are evidence
+        // for the same scenario, not additional curriculum/acceptance coverage.
+        id: `${test.projectName}/${spec.file.replaceAll('\\', '/')}#${spec.title}`,
         run: path.basename(input),
         requirement,
         scenario: spec.title,

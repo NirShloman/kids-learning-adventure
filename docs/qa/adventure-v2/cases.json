@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-12T20:00:29.288Z",
-  "executionCount": 671,
+  "generatedAt": "2026-09-13T14:32:47.464Z",
+  "executionCount": 713,
   "runs": [
     {
       "name": "acceptance.json",
@@ -75,11 +75,25 @@
         "flaky": 0
       },
       "globalErrors": []
+    },
+    {
+      "name": "recovery.json",
+      "startedAt": "2026-09-13T14:28:10.589Z",
+      "durationMs": 178863.495,
+      "counts": {
+        "startTime": "2026-09-13T14:28:10.589Z",
+        "duration": 178863.495,
+        "expected": 42,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "globalErrors": []
     }
   ],
   "cases": [
     {
-      "id": "adventure-recordings/a205ab8ad21b019fdf00-4f0b0bd407f28a3c98a6",
+      "id": "adventure-recordings/e2e/adventure-recordings.spec.ts#VIS-01 letters: animated round with correction, hint and collection",
       "run": "acceptance.json",
       "requirement": "VIS-01",
       "scenario": "VIS-01 letters: animated round with correction, hint and collection",
@@ -97,7 +111,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-recordings/a205ab8ad21b019fdf00-0473dac4ed3d30948061",
+      "id": "adventure-recordings/e2e/adventure-recordings.spec.ts#VIS-01 numbers: animated round with correction, hint and collection",
       "run": "acceptance.json",
       "requirement": "VIS-01",
       "scenario": "VIS-01 numbers: animated round with correction, hint and collection",
@@ -115,7 +129,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-recordings/a205ab8ad21b019fdf00-f17d6bf00b83231c3e4c",
+      "id": "adventure-recordings/e2e/adventure-recordings.spec.ts#VIS-01 shapes: animated round with correction, hint and collection",
       "run": "acceptance.json",
       "requirement": "VIS-01",
       "scenario": "VIS-01 shapes: animated round with correction, hint and collection",
@@ -133,7 +147,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-recordings/a205ab8ad21b019fdf00-244787dc2eec4169ca69",
+      "id": "adventure-recordings/e2e/adventure-recordings.spec.ts#VIS-01 colors: animated round with correction, hint and collection",
       "run": "acceptance.json",
       "requirement": "VIS-01",
       "scenario": "VIS-01 colors: animated round with correction, hint and collection",
@@ -151,7 +165,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-touch/97cea3c506b79d106e3b-d92d17daddff625c6194",
+      "id": "adventure-touch/e2e/adventure-touch.spec.ts#INT-01: browser touch protocol handles dragging, a second finger and tap alternatives",
       "run": "acceptance.json",
       "requirement": "INT-01",
       "scenario": "INT-01: browser touch protocol handles dragging, a second finger and tap alternatives",
@@ -169,7 +183,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-3d00a60a96f779484515",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-letter-bridge: גשר של אותיות",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-letter-bridge: גשר של אותיות",
@@ -187,7 +201,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-339866805bb8eb498cc7",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-letter-lantern: פנסים לחצר",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-letter-lantern: פנסים לחצר",
@@ -205,7 +219,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-ef46b0cf2e345029df0f",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-letter-train: רכבת הסיפורים",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-letter-train: רכבת הסיפורים",
@@ -223,7 +237,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-6ed3290c30a3ffbb66e7",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-letter-kite: עפיפון בשמיים",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-letter-kite: עפיפון בשמיים",
@@ -241,7 +255,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-b66b142037d05042d30f",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-letter-post: הדואר הגיע",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-letter-post: הדואר הגיע",
@@ -259,7 +273,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-91582921135f42fad360",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-letter-stars: כוכבים לספרייה",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-letter-stars: כוכבים לספרייה",
@@ -277,7 +291,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-b911b367a758baf58835",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-letter-garden: ערוגת האותיות",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-letter-garden: ערוגת האותיות",
@@ -295,7 +309,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-1cda1ff7d4e7e5f3e603",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-letter-tickets: כרטיס לתיאטרון",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-letter-tickets: כרטיס לתיאטרון",
@@ -313,7 +327,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-b57eec75776939192230",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-letter-animal: שלט לחברים",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-letter-animal: שלט לחברים",
@@ -331,7 +345,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-f384e494ae6ab9a4f86b",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-letter-market: החנות הקטנה",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-letter-market: החנות הקטנה",
@@ -349,7 +363,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-1138e10bbc5140263741",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-letter-harbor: שלטים בנמל",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-letter-harbor: שלטים בנמל",
@@ -367,7 +381,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-2266316ecf03711e89cc",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-letter-museum: המוזיאון שלנו",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-letter-museum: המוזיאון שלנו",
@@ -385,7 +399,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-8239f135389aebf4afff",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-number-breakfast: ארוחת בוקר",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-number-breakfast: ארוחת בוקר",
@@ -403,7 +417,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-dcbd8f784b565de59b77",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-number-picnic: פיקניק לחבר",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-number-picnic: פיקניק לחבר",
@@ -421,7 +435,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-14018e688e3965885f35",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-number-party: מסיבת הטעימות",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-number-party: מסיבת הטעימות",
@@ -439,7 +453,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-f9b1689ecd0932ee0828",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-number-soup: מרק של ערב",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-number-soup: מרק של ערב",
@@ -457,7 +471,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-58f34f7ea33a80c93974",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-number-twins: שני אורחים",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-number-twins: שני אורחים",
@@ -475,7 +489,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-7d9bc2979d50eb2e37cd",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-number-tea: שעת התה",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-number-tea: שעת התה",
@@ -493,7 +507,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-f71c553a3c17e6279dd9",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-number-baskets: סלים לטיול",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-number-baskets: סלים לטיול",
@@ -511,7 +525,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-19d579ca961922981925",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-number-feast: סעודת החברים",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-number-feast: סעודת החברים",
@@ -529,7 +543,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-4eebc35e8c45010c8a18",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-number-missing: עוד קצת תפוחים",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-number-missing: עוד קצת תפוחים",
@@ -547,7 +561,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-9ddff22d558707ce9168",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-number-box: קופסת ההפתעה",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-number-box: קופסת ההפתעה",
@@ -565,7 +579,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-b70d44255d36eefe6126",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-number-cookies: תבנית העוגיות",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-number-cookies: תבנית העוגיות",
@@ -583,7 +597,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-b4a2b3f8638ec15a6880",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-number-carrots: סיר כמעט מוכן",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-number-carrots: סיר כמעט מוכן",
@@ -601,7 +615,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-664e1b08ed1750c6a36f",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-shape-house: בית לבובה",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-shape-house: בית לבובה",
@@ -619,7 +633,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-e48b5b31b80f51209171",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-shape-boat: סירה לאגם",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-shape-boat: סירה לאגם",
@@ -637,7 +651,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-bf7db7bf0ab721a3a3c0",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-shape-rocket: טיסה לירח",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-shape-rocket: טיסה לירח",
@@ -655,7 +669,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-c52b0c8faf77e33ada7f",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-shape-flower: פרח מכני",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-shape-flower: פרח מכני",
@@ -673,7 +687,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-b35e56e4a51c4398f73d",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-shape-windmill: טחנת הרוח",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-shape-windmill: טחנת הרוח",
@@ -691,7 +705,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-50accbacaf8b0e976dbf",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-shape-bridge: גשר למכונית",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-shape-bridge: גשר למכונית",
@@ -709,7 +723,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-d1c3174d0ec27da251d0",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-shape-fish: דג קטן",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-shape-fish: דג קטן",
@@ -727,7 +741,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-20df906a1b7abd773fa9",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-shape-arrow: שבשבת לגינה",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-shape-arrow: שבשבת לגינה",
@@ -745,7 +759,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-3171a2979b0184abc97d",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-shape-car: המכונית הראשונה",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-shape-car: המכונית הראשונה",
@@ -763,7 +777,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-b51b28dfdd9d456dbee3",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-shape-robot: חבר רובוט",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-shape-robot: חבר רובוט",
@@ -781,7 +795,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-d663503f888644036cac",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-shape-train: רכבת צבעונית",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-shape-train: רכבת צבעונית",
@@ -799,7 +813,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-e81c03897cb9af9ed8ab",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-shape-castle: טירה בעננים",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-shape-castle: טירה בעננים",
@@ -817,7 +831,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-c90f68c61fc6bb79a9c5",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-color-petals: הפרחים התעוררו",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-color-petals: הפרחים התעוררו",
@@ -835,7 +849,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-622ef4f63a49fb1868ef",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-color-wings: כנפיים לפרפר",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-color-wings: כנפיים לפרפר",
@@ -853,7 +867,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-ed423a6e11ee628f84bc",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-color-pots: עציצים לחממה",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-color-pots: עציצים לחממה",
@@ -871,7 +885,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-cee677a15f2226dfa23d",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-color-balloons: בלונים לחגיגה",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-color-balloons: בלונים לחגיגה",
@@ -889,7 +903,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-2c63da27bcde14ebf058",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-color-orange: שמש כתומה",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-color-orange: שמש כתומה",
@@ -907,7 +921,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-7bc14e7f946f45d32eb8",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-color-green: עלים ירוקים",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-color-green: עלים ירוקים",
@@ -925,7 +939,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-9aa2048318470cc82b45",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-color-purple: פרחי ערב",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-color-purple: פרחי ערב",
@@ -943,7 +957,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-94ef0be85e90b46e315e",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-color-rainbow: מעבדת הגן",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-color-rainbow: מעבדת הגן",
@@ -961,7 +975,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-8a5f51ea969f7613c445",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-color-birds: בתים לציפורים",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-color-birds: בתים לציפורים",
@@ -979,7 +993,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-817d663b087b0fbc0368",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-color-snail: שביל החלזונות",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-color-snail: שביל החלזונות",
@@ -997,7 +1011,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-6e2bd8a42fb8cd2bd094",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-color-lights: אורות בגן",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-color-lights: אורות בגן",
@@ -1015,7 +1029,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/0fe08b3d25673fb6b415-4d6dc7a018d822b7b911",
+      "id": "adventure-content/e2e/adventure-content.spec.ts#v2-color-festival: חגיגת הגן",
       "run": "acceptance.json",
       "requirement": "CUR-01",
       "scenario": "v2-color-festival: חגיגת הגן",
@@ -1033,7 +1047,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/f3d4110b0095edd79202-7fa1db1f654bb28c0491",
+      "id": "adventure-content/e2e/adventure-glyphs.spec.ts#LET-01 א: each assembly piece contains visible ink",
       "run": "acceptance.json",
       "requirement": "LET-01",
       "scenario": "LET-01 א: each assembly piece contains visible ink",
@@ -1051,7 +1065,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/f3d4110b0095edd79202-005b15aa02997102604a",
+      "id": "adventure-content/e2e/adventure-glyphs.spec.ts#LET-01 ב: each assembly piece contains visible ink",
       "run": "acceptance.json",
       "requirement": "LET-01",
       "scenario": "LET-01 ב: each assembly piece contains visible ink",
@@ -1069,7 +1083,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/f3d4110b0095edd79202-b3f5a76cac30c956374f",
+      "id": "adventure-content/e2e/adventure-glyphs.spec.ts#LET-01 ג: each assembly piece contains visible ink",
       "run": "acceptance.json",
       "requirement": "LET-01",
       "scenario": "LET-01 ג: each assembly piece contains visible ink",
@@ -1087,7 +1101,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/f3d4110b0095edd79202-f9239ebfda81dd9c8098",
+      "id": "adventure-content/e2e/adventure-glyphs.spec.ts#LET-01 ד: each assembly piece contains visible ink",
       "run": "acceptance.json",
       "requirement": "LET-01",
       "scenario": "LET-01 ד: each assembly piece contains visible ink",
@@ -1105,7 +1119,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/f3d4110b0095edd79202-2ebe599f41be46176554",
+      "id": "adventure-content/e2e/adventure-glyphs.spec.ts#LET-01 ה: each assembly piece contains visible ink",
       "run": "acceptance.json",
       "requirement": "LET-01",
       "scenario": "LET-01 ה: each assembly piece contains visible ink",
@@ -1123,7 +1137,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/f3d4110b0095edd79202-c1378093910c25d15596",
+      "id": "adventure-content/e2e/adventure-glyphs.spec.ts#LET-01 ו: each assembly piece contains visible ink",
       "run": "acceptance.json",
       "requirement": "LET-01",
       "scenario": "LET-01 ו: each assembly piece contains visible ink",
@@ -1141,7 +1155,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/f3d4110b0095edd79202-22b4a825feed102fc17d",
+      "id": "adventure-content/e2e/adventure-glyphs.spec.ts#LET-01 ז: each assembly piece contains visible ink",
       "run": "acceptance.json",
       "requirement": "LET-01",
       "scenario": "LET-01 ז: each assembly piece contains visible ink",
@@ -1159,7 +1173,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/f3d4110b0095edd79202-426e343e7c8e5601cdf7",
+      "id": "adventure-content/e2e/adventure-glyphs.spec.ts#LET-01 ח: each assembly piece contains visible ink",
       "run": "acceptance.json",
       "requirement": "LET-01",
       "scenario": "LET-01 ח: each assembly piece contains visible ink",
@@ -1177,7 +1191,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/f3d4110b0095edd79202-bdd0ba3841719c37c8aa",
+      "id": "adventure-content/e2e/adventure-glyphs.spec.ts#LET-01 ט: each assembly piece contains visible ink",
       "run": "acceptance.json",
       "requirement": "LET-01",
       "scenario": "LET-01 ט: each assembly piece contains visible ink",
@@ -1195,7 +1209,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/f3d4110b0095edd79202-28310fa0bf4c72046ab9",
+      "id": "adventure-content/e2e/adventure-glyphs.spec.ts#LET-01 י: each assembly piece contains visible ink",
       "run": "acceptance.json",
       "requirement": "LET-01",
       "scenario": "LET-01 י: each assembly piece contains visible ink",
@@ -1213,7 +1227,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/f3d4110b0095edd79202-841ec9b5f391adf3306f",
+      "id": "adventure-content/e2e/adventure-glyphs.spec.ts#LET-01 כ: each assembly piece contains visible ink",
       "run": "acceptance.json",
       "requirement": "LET-01",
       "scenario": "LET-01 כ: each assembly piece contains visible ink",
@@ -1231,7 +1245,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/f3d4110b0095edd79202-72c488e24de7be5c853c",
+      "id": "adventure-content/e2e/adventure-glyphs.spec.ts#LET-01 ל: each assembly piece contains visible ink",
       "run": "acceptance.json",
       "requirement": "LET-01",
       "scenario": "LET-01 ל: each assembly piece contains visible ink",
@@ -1249,7 +1263,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/f3d4110b0095edd79202-49886f5e947aa81cc3df",
+      "id": "adventure-content/e2e/adventure-glyphs.spec.ts#LET-01 מ: each assembly piece contains visible ink",
       "run": "acceptance.json",
       "requirement": "LET-01",
       "scenario": "LET-01 מ: each assembly piece contains visible ink",
@@ -1267,7 +1281,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/f3d4110b0095edd79202-b7ecffa285391a096a28",
+      "id": "adventure-content/e2e/adventure-glyphs.spec.ts#LET-01 נ: each assembly piece contains visible ink",
       "run": "acceptance.json",
       "requirement": "LET-01",
       "scenario": "LET-01 נ: each assembly piece contains visible ink",
@@ -1285,7 +1299,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/f3d4110b0095edd79202-aabeb5d8506e0cdc1ffe",
+      "id": "adventure-content/e2e/adventure-glyphs.spec.ts#LET-01 ס: each assembly piece contains visible ink",
       "run": "acceptance.json",
       "requirement": "LET-01",
       "scenario": "LET-01 ס: each assembly piece contains visible ink",
@@ -1303,7 +1317,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/f3d4110b0095edd79202-c24a80114d18d8e8200b",
+      "id": "adventure-content/e2e/adventure-glyphs.spec.ts#LET-01 ע: each assembly piece contains visible ink",
       "run": "acceptance.json",
       "requirement": "LET-01",
       "scenario": "LET-01 ע: each assembly piece contains visible ink",
@@ -1321,7 +1335,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/f3d4110b0095edd79202-5106f82cd1291b38e692",
+      "id": "adventure-content/e2e/adventure-glyphs.spec.ts#LET-01 פ: each assembly piece contains visible ink",
       "run": "acceptance.json",
       "requirement": "LET-01",
       "scenario": "LET-01 פ: each assembly piece contains visible ink",
@@ -1339,7 +1353,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/f3d4110b0095edd79202-f0d78cedd1030baf514a",
+      "id": "adventure-content/e2e/adventure-glyphs.spec.ts#LET-01 צ: each assembly piece contains visible ink",
       "run": "acceptance.json",
       "requirement": "LET-01",
       "scenario": "LET-01 צ: each assembly piece contains visible ink",
@@ -1357,7 +1371,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/f3d4110b0095edd79202-626b945623519aab0b8e",
+      "id": "adventure-content/e2e/adventure-glyphs.spec.ts#LET-01 ק: each assembly piece contains visible ink",
       "run": "acceptance.json",
       "requirement": "LET-01",
       "scenario": "LET-01 ק: each assembly piece contains visible ink",
@@ -1375,7 +1389,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/f3d4110b0095edd79202-c3aed5c107e072606d08",
+      "id": "adventure-content/e2e/adventure-glyphs.spec.ts#LET-01 ר: each assembly piece contains visible ink",
       "run": "acceptance.json",
       "requirement": "LET-01",
       "scenario": "LET-01 ר: each assembly piece contains visible ink",
@@ -1393,7 +1407,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/f3d4110b0095edd79202-3b6a3e98fd79ca14a47a",
+      "id": "adventure-content/e2e/adventure-glyphs.spec.ts#LET-01 ש: each assembly piece contains visible ink",
       "run": "acceptance.json",
       "requirement": "LET-01",
       "scenario": "LET-01 ש: each assembly piece contains visible ink",
@@ -1411,7 +1425,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-content/f3d4110b0095edd79202-1c4351f36959ee7d154a",
+      "id": "adventure-content/e2e/adventure-glyphs.spec.ts#LET-01 ת: each assembly piece contains visible ink",
       "run": "acceptance.json",
       "requirement": "LET-01",
       "scenario": "LET-01 ת: each assembly piece contains visible ink",
@@ -1429,7 +1443,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-chromium/fa30abd67b2b36354a90-c9ac6b5098908fd6d549",
+      "id": "local-chromium/e2e/adaptive.local.spec.ts#starts an adaptive plan and records item-level evidence",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "starts an adaptive plan and records item-level evidence",
@@ -1447,7 +1461,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-chromium/fa30abd67b2b36354a90-f34a3d6e385a03eee2eb",
+      "id": "local-chromium/e2e/adaptive.local.spec.ts#creates, selects and deletes isolated profiles in the parent area",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "creates, selects and deletes isolated profiles in the parent area",
@@ -1465,7 +1479,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-chromium/fa30abd67b2b36354a90-f3450e0048052cb7abce",
+      "id": "local-chromium/e2e/adaptive.local.spec.ts#offers both non-competitive shared-play modes",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "offers both non-competitive shared-play modes",
@@ -1483,7 +1497,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-firefox/fa30abd67b2b36354a90-ad92da34d32f9b9c855e",
+      "id": "local-firefox/e2e/adaptive.local.spec.ts#starts an adaptive plan and records item-level evidence",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "starts an adaptive plan and records item-level evidence",
@@ -1501,7 +1515,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-firefox/fa30abd67b2b36354a90-ceae2539cff450f2c34a",
+      "id": "local-firefox/e2e/adaptive.local.spec.ts#creates, selects and deletes isolated profiles in the parent area",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "creates, selects and deletes isolated profiles in the parent area",
@@ -1519,7 +1533,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-firefox/fa30abd67b2b36354a90-80ad11348f5d39cdf51b",
+      "id": "local-firefox/e2e/adaptive.local.spec.ts#offers both non-competitive shared-play modes",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "offers both non-competitive shared-play modes",
@@ -1537,7 +1551,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-webkit/fa30abd67b2b36354a90-f1cc88fa92b89000e10e",
+      "id": "local-webkit/e2e/adaptive.local.spec.ts#starts an adaptive plan and records item-level evidence",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "starts an adaptive plan and records item-level evidence",
@@ -1555,7 +1569,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-webkit/fa30abd67b2b36354a90-cd5a713f6b233810892f",
+      "id": "local-webkit/e2e/adaptive.local.spec.ts#creates, selects and deletes isolated profiles in the parent area",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "creates, selects and deletes isolated profiles in the parent area",
@@ -1573,7 +1587,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-webkit/fa30abd67b2b36354a90-206bf9545ddda284b6de",
+      "id": "local-webkit/e2e/adaptive.local.spec.ts#offers both non-competitive shared-play modes",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "offers both non-competitive shared-play modes",
@@ -1591,7 +1605,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-chrome/fa30abd67b2b36354a90-c252e7babcce0ee52a22",
+      "id": "mobile-chrome/e2e/adaptive.local.spec.ts#starts an adaptive plan and records item-level evidence",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "starts an adaptive plan and records item-level evidence",
@@ -1609,7 +1623,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-chrome/fa30abd67b2b36354a90-12dbed50096dd14828d8",
+      "id": "mobile-chrome/e2e/adaptive.local.spec.ts#creates, selects and deletes isolated profiles in the parent area",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "creates, selects and deletes isolated profiles in the parent area",
@@ -1627,7 +1641,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-chrome/fa30abd67b2b36354a90-8be5721254557217a0ad",
+      "id": "mobile-chrome/e2e/adaptive.local.spec.ts#offers both non-competitive shared-play modes",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "offers both non-competitive shared-play modes",
@@ -1645,7 +1659,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-safari/fa30abd67b2b36354a90-81485a898833b79e9ce2",
+      "id": "mobile-safari/e2e/adaptive.local.spec.ts#starts an adaptive plan and records item-level evidence",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "starts an adaptive plan and records item-level evidence",
@@ -1663,7 +1677,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-safari/fa30abd67b2b36354a90-6509d4681e43dfe6310a",
+      "id": "mobile-safari/e2e/adaptive.local.spec.ts#creates, selects and deletes isolated profiles in the parent area",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "creates, selects and deletes isolated profiles in the parent area",
@@ -1681,7 +1695,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-safari/fa30abd67b2b36354a90-eb0e523cc7702631324a",
+      "id": "mobile-safari/e2e/adaptive.local.spec.ts#offers both non-competitive shared-play modes",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "offers both non-competitive shared-play modes",
@@ -1699,7 +1713,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-android-tablet/fa30abd67b2b36354a90-3564ec6da862fe604098",
+      "id": "mobile-android-tablet/e2e/adaptive.local.spec.ts#starts an adaptive plan and records item-level evidence",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "starts an adaptive plan and records item-level evidence",
@@ -1717,7 +1731,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-android-tablet/fa30abd67b2b36354a90-a276af36203923d5d39a",
+      "id": "mobile-android-tablet/e2e/adaptive.local.spec.ts#creates, selects and deletes isolated profiles in the parent area",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "creates, selects and deletes isolated profiles in the parent area",
@@ -1735,7 +1749,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-android-tablet/fa30abd67b2b36354a90-cbbab4542572af3fee8a",
+      "id": "mobile-android-tablet/e2e/adaptive.local.spec.ts#offers both non-competitive shared-play modes",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "offers both non-competitive shared-play modes",
@@ -1753,7 +1767,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-ipad/fa30abd67b2b36354a90-f6985843a611d77117d1",
+      "id": "mobile-ipad/e2e/adaptive.local.spec.ts#starts an adaptive plan and records item-level evidence",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "starts an adaptive plan and records item-level evidence",
@@ -1771,7 +1785,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-ipad/fa30abd67b2b36354a90-42f6c73e5fd007e94460",
+      "id": "mobile-ipad/e2e/adaptive.local.spec.ts#creates, selects and deletes isolated profiles in the parent area",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "creates, selects and deletes isolated profiles in the parent area",
@@ -1789,7 +1803,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-ipad/fa30abd67b2b36354a90-1910a76a93b09656a6b7",
+      "id": "mobile-ipad/e2e/adaptive.local.spec.ts#offers both non-competitive shared-play modes",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "offers both non-competitive shared-play modes",
@@ -1807,7 +1821,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-chromium/d2a5bb3dca365d0a698f-d7f9faabdf129d4536d3",
+      "id": "local-chromium/e2e/adventure-audio.local.spec.ts#AUDIO-01: real packaged narration plays, repeats without overlap and respects mute",
       "run": "acceptance.json",
       "requirement": "AUDIO-01",
       "scenario": "AUDIO-01: real packaged narration plays, repeats without overlap and respects mute",
@@ -1825,7 +1839,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-firefox/d2a5bb3dca365d0a698f-0adf7d7bd54338be8048",
+      "id": "local-firefox/e2e/adventure-audio.local.spec.ts#AUDIO-01: real packaged narration plays, repeats without overlap and respects mute",
       "run": "acceptance.json",
       "requirement": "AUDIO-01",
       "scenario": "AUDIO-01: real packaged narration plays, repeats without overlap and respects mute",
@@ -1843,7 +1857,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-webkit/d2a5bb3dca365d0a698f-480c983786a7950395a7",
+      "id": "local-webkit/e2e/adventure-audio.local.spec.ts#AUDIO-01: real packaged narration plays, repeats without overlap and respects mute",
       "run": "acceptance.json",
       "requirement": "AUDIO-01",
       "scenario": "AUDIO-01: real packaged narration plays, repeats without overlap and respects mute",
@@ -1861,7 +1875,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-chrome/d2a5bb3dca365d0a698f-dc0acf64bee2777e5f7a",
+      "id": "mobile-chrome/e2e/adventure-audio.local.spec.ts#AUDIO-01: real packaged narration plays, repeats without overlap and respects mute",
       "run": "acceptance.json",
       "requirement": "AUDIO-01",
       "scenario": "AUDIO-01: real packaged narration plays, repeats without overlap and respects mute",
@@ -1879,7 +1893,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-safari/d2a5bb3dca365d0a698f-9b7b39988c61987bf0f0",
+      "id": "mobile-safari/e2e/adventure-audio.local.spec.ts#AUDIO-01: real packaged narration plays, repeats without overlap and respects mute",
       "run": "acceptance.json",
       "requirement": "AUDIO-01",
       "scenario": "AUDIO-01: real packaged narration plays, repeats without overlap and respects mute",
@@ -1897,7 +1911,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-android-tablet/d2a5bb3dca365d0a698f-b4bd5914fafaa13ae6ef",
+      "id": "mobile-android-tablet/e2e/adventure-audio.local.spec.ts#AUDIO-01: real packaged narration plays, repeats without overlap and respects mute",
       "run": "acceptance.json",
       "requirement": "AUDIO-01",
       "scenario": "AUDIO-01: real packaged narration plays, repeats without overlap and respects mute",
@@ -1915,7 +1929,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-ipad/d2a5bb3dca365d0a698f-1d5d02a173ef59bcc5d2",
+      "id": "mobile-ipad/e2e/adventure-audio.local.spec.ts#AUDIO-01: real packaged narration plays, repeats without overlap and respects mute",
       "run": "acceptance.json",
       "requirement": "AUDIO-01",
       "scenario": "AUDIO-01: real packaged narration plays, repeats without overlap and respects mute",
@@ -1933,8 +1947,8 @@
       "previousRuns": []
     },
     {
-      "id": "local-chromium/a505d2b229d24614384d-0ecbfc2b6757129635a9",
-      "run": "repair.json",
+      "id": "local-chromium/e2e/adventure-interactions.local.spec.ts#COL-01: finger paint stays clipped, survives cancellation and requires a choice",
+      "run": "recovery.json",
       "requirement": "COL-01",
       "scenario": "COL-01: finger paint stays clipped, survives cancellation and requires a choice",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:11",
@@ -1943,9 +1957,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for COL-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "local-chromium (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 4315,
+      "durationMs": 4181,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:29:09.542Z",
+      "startedAt": "2026-09-13T14:28:29.336Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -1955,11 +1969,26 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\u001b[39m\n\u001b[31m+     at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:56:3"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
+        },
+        {
+          "run": "recovery.json",
+          "actual": "passed",
+          "errors": []
+        },
+        {
+          "run": "recovery.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
-      "id": "local-chromium/a505d2b229d24614384d-a4b8931c1e0c50592c80",
+      "id": "local-chromium/e2e/adventure-interactions.local.spec.ts#INT-01: extra pointer does not cancel the active drag; resizing does",
       "run": "repair.json",
       "requirement": "INT-01",
       "scenario": "INT-01: extra pointer does not cancel the active drag; resizing does",
@@ -1985,8 +2014,8 @@
       ]
     },
     {
-      "id": "local-chromium/a505d2b229d24614384d-04927e59a1718e02535c",
-      "run": "repair.json",
+      "id": "local-chromium/e2e/adventure-interactions.local.spec.ts#ERR-01: unavailable artwork offers a working retry",
+      "run": "recovery.json",
       "requirement": "ERR-01",
       "scenario": "ERR-01: unavailable artwork offers a working retry",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:94",
@@ -1995,9 +2024,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for ERR-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "local-chromium (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 2700,
+      "durationMs": 2567,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:29:14.655Z",
+      "startedAt": "2026-09-13T14:28:29.550Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -2005,11 +2034,26 @@
           "run": "acceptance.json",
           "actual": "passed",
           "errors": []
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
+        },
+        {
+          "run": "recovery.json",
+          "actual": "passed",
+          "errors": []
+        },
+        {
+          "run": "recovery.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
-      "id": "local-chromium/a505d2b229d24614384d-9c11104a9f0928678403",
+      "id": "local-chromium/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-letter-bridge accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-letter-bridge accessible with enlarged controls in both orientations",
@@ -2040,7 +2084,7 @@
       ]
     },
     {
-      "id": "local-chromium/a505d2b229d24614384d-aafa6dfb09ceccf03f7e",
+      "id": "local-chromium/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-number-breakfast accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-number-breakfast accessible with enlarged controls in both orientations",
@@ -2071,7 +2115,7 @@
       ]
     },
     {
-      "id": "local-chromium/a505d2b229d24614384d-4e140fbbf4792444bae3",
+      "id": "local-chromium/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-shape-windmill accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-shape-windmill accessible with enlarged controls in both orientations",
@@ -2102,7 +2146,7 @@
       ]
     },
     {
-      "id": "local-chromium/a505d2b229d24614384d-45c6ecbf8fc3cc5d3d70",
+      "id": "local-chromium/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-color-petals accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-color-petals accessible with enlarged controls in both orientations",
@@ -2133,7 +2177,7 @@
       ]
     },
     {
-      "id": "local-chromium/a505d2b229d24614384d-d25c23eca1fb7baa60c4",
+      "id": "local-chromium/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-color-orange accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-color-orange accessible with enlarged controls in both orientations",
@@ -2164,8 +2208,8 @@
       ]
     },
     {
-      "id": "local-firefox/a505d2b229d24614384d-a3d433c554d0377dbf1f",
-      "run": "repair.json",
+      "id": "local-firefox/e2e/adventure-interactions.local.spec.ts#COL-01: finger paint stays clipped, survives cancellation and requires a choice",
+      "run": "recovery.json",
       "requirement": "COL-01",
       "scenario": "COL-01: finger paint stays clipped, survives cancellation and requires a choice",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:11",
@@ -2174,9 +2218,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for COL-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "local-firefox (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 13150,
+      "durationMs": 8625,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:30:48.231Z",
+      "startedAt": "2026-09-13T14:29:01.463Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -2184,11 +2228,26 @@
           "run": "acceptance.json",
           "actual": "passed",
           "errors": []
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
+        },
+        {
+          "run": "recovery.json",
+          "actual": "passed",
+          "errors": []
+        },
+        {
+          "run": "recovery.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
-      "id": "local-firefox/a505d2b229d24614384d-1a0bf42de46ce38e0c9a",
+      "id": "local-firefox/e2e/adventure-interactions.local.spec.ts#INT-01: extra pointer does not cancel the active drag; resizing does",
       "run": "repair.json",
       "requirement": "INT-01",
       "scenario": "INT-01: extra pointer does not cancel the active drag; resizing does",
@@ -2212,8 +2271,8 @@
       ]
     },
     {
-      "id": "local-firefox/a505d2b229d24614384d-34f7a028fd458e0a136c",
-      "run": "repair.json",
+      "id": "local-firefox/e2e/adventure-interactions.local.spec.ts#ERR-01: unavailable artwork offers a working retry",
+      "run": "recovery.json",
       "requirement": "ERR-01",
       "scenario": "ERR-01: unavailable artwork offers a working retry",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:94",
@@ -2222,9 +2281,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for ERR-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "local-firefox (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 6895,
+      "durationMs": 7906,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:31:06.520Z",
+      "startedAt": "2026-09-13T14:29:03.355Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -2232,11 +2291,26 @@
           "run": "acceptance.json",
           "actual": "passed",
           "errors": []
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
+        },
+        {
+          "run": "recovery.json",
+          "actual": "passed",
+          "errors": []
+        },
+        {
+          "run": "recovery.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
-      "id": "local-firefox/a505d2b229d24614384d-3cb518cf177048edb4d2",
+      "id": "local-firefox/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-letter-bridge accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-letter-bridge accessible with enlarged controls in both orientations",
@@ -2265,7 +2339,7 @@
       ]
     },
     {
-      "id": "local-firefox/a505d2b229d24614384d-5e6d153a943cb862b556",
+      "id": "local-firefox/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-number-breakfast accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-number-breakfast accessible with enlarged controls in both orientations",
@@ -2294,7 +2368,7 @@
       ]
     },
     {
-      "id": "local-firefox/a505d2b229d24614384d-6323815691e8478fea1d",
+      "id": "local-firefox/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-shape-windmill accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-shape-windmill accessible with enlarged controls in both orientations",
@@ -2323,7 +2397,7 @@
       ]
     },
     {
-      "id": "local-firefox/a505d2b229d24614384d-4b1d1f169a7247709241",
+      "id": "local-firefox/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-color-petals accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-color-petals accessible with enlarged controls in both orientations",
@@ -2352,7 +2426,7 @@
       ]
     },
     {
-      "id": "local-firefox/a505d2b229d24614384d-ec7018d313aa770fabc1",
+      "id": "local-firefox/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-color-orange accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-color-orange accessible with enlarged controls in both orientations",
@@ -2381,8 +2455,8 @@
       ]
     },
     {
-      "id": "local-webkit/a505d2b229d24614384d-0f8cc2d65ed7dc912cbf",
-      "run": "repair.json",
+      "id": "local-webkit/e2e/adventure-interactions.local.spec.ts#COL-01: finger paint stays clipped, survives cancellation and requires a choice",
+      "run": "recovery.json",
       "requirement": "COL-01",
       "scenario": "COL-01: finger paint stays clipped, survives cancellation and requires a choice",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:11",
@@ -2391,9 +2465,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for COL-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "local-webkit (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 11135,
+      "durationMs": 8610,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:32:47.868Z",
+      "startedAt": "2026-09-13T14:29:36.808Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -2403,11 +2477,26 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n   at e2e\\helpers.ts:20\n\n  18 |   });\n  19 |   page.on('pageerror', (error) => errors.push(error.message));\n> 20 |   return () => expect(errors, `Critical browser errors:\\n${errors.join('\\n')}`).toEqual([]);\n     |                                                                                 ^\n  21 | }\n  22 |\n  23 | export async function gotoFreshApp(page: Page) {\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:56:3"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
+        },
+        {
+          "run": "recovery.json",
+          "actual": "passed",
+          "errors": []
+        },
+        {
+          "run": "recovery.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
-      "id": "local-webkit/a505d2b229d24614384d-49c5a32582c96d04af04",
+      "id": "local-webkit/e2e/adventure-interactions.local.spec.ts#INT-01: extra pointer does not cancel the active drag; resizing does",
       "run": "repair.json",
       "requirement": "INT-01",
       "scenario": "INT-01: extra pointer does not cancel the active drag; resizing does",
@@ -2433,8 +2522,8 @@
       ]
     },
     {
-      "id": "local-webkit/a505d2b229d24614384d-28180e95b1e71d2f630f",
-      "run": "repair.json",
+      "id": "local-webkit/e2e/adventure-interactions.local.spec.ts#ERR-01: unavailable artwork offers a working retry",
+      "run": "recovery.json",
       "requirement": "ERR-01",
       "scenario": "ERR-01: unavailable artwork offers a working retry",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:94",
@@ -2443,9 +2532,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for ERR-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "local-webkit (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 7126,
+      "durationMs": 5586,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:32:58.005Z",
+      "startedAt": "2026-09-13T14:29:38.212Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -2453,11 +2542,26 @@
           "run": "acceptance.json",
           "actual": "passed",
           "errors": []
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
+        },
+        {
+          "run": "recovery.json",
+          "actual": "passed",
+          "errors": []
+        },
+        {
+          "run": "recovery.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
-      "id": "local-webkit/a505d2b229d24614384d-d4b613fe0d6193698cb9",
+      "id": "local-webkit/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-letter-bridge accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-letter-bridge accessible with enlarged controls in both orientations",
@@ -2488,7 +2592,7 @@
       ]
     },
     {
-      "id": "local-webkit/a505d2b229d24614384d-60fe4eb81af760db5f5e",
+      "id": "local-webkit/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-number-breakfast accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-number-breakfast accessible with enlarged controls in both orientations",
@@ -2519,7 +2623,7 @@
       ]
     },
     {
-      "id": "local-webkit/a505d2b229d24614384d-58135e4af24201990aed",
+      "id": "local-webkit/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-shape-windmill accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-shape-windmill accessible with enlarged controls in both orientations",
@@ -2550,7 +2654,7 @@
       ]
     },
     {
-      "id": "local-webkit/a505d2b229d24614384d-f3ceb5547660acd23d74",
+      "id": "local-webkit/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-color-petals accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-color-petals accessible with enlarged controls in both orientations",
@@ -2581,7 +2685,7 @@
       ]
     },
     {
-      "id": "local-webkit/a505d2b229d24614384d-47f15c3f33edcc29885c",
+      "id": "local-webkit/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-color-orange accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-color-orange accessible with enlarged controls in both orientations",
@@ -2612,8 +2716,8 @@
       ]
     },
     {
-      "id": "mobile-chrome/a505d2b229d24614384d-6f5101332cd28f7ed8cb",
-      "run": "repair.json",
+      "id": "mobile-chrome/e2e/adventure-interactions.local.spec.ts#COL-01: finger paint stays clipped, survives cancellation and requires a choice",
+      "run": "recovery.json",
       "requirement": "COL-01",
       "scenario": "COL-01: finger paint stays clipped, survives cancellation and requires a choice",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:11",
@@ -2622,9 +2726,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for COL-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "mobile-chrome (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 5520,
+      "durationMs": 4201,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:35:36.862Z",
+      "startedAt": "2026-09-13T14:29:55.675Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -2634,11 +2738,26 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\u001b[39m\n\u001b[31m+     at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:56:3"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
+        },
+        {
+          "run": "recovery.json",
+          "actual": "passed",
+          "errors": []
+        },
+        {
+          "run": "recovery.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
-      "id": "mobile-chrome/a505d2b229d24614384d-88db7a6ee84b0ccefac2",
+      "id": "mobile-chrome/e2e/adventure-interactions.local.spec.ts#INT-01: extra pointer does not cancel the active drag; resizing does",
       "run": "repair.json",
       "requirement": "INT-01",
       "scenario": "INT-01: extra pointer does not cancel the active drag; resizing does",
@@ -2664,8 +2783,8 @@
       ]
     },
     {
-      "id": "mobile-chrome/a505d2b229d24614384d-a3dd97074cf8c3931714",
-      "run": "repair.json",
+      "id": "mobile-chrome/e2e/adventure-interactions.local.spec.ts#ERR-01: unavailable artwork offers a working retry",
+      "run": "recovery.json",
       "requirement": "ERR-01",
       "scenario": "ERR-01: unavailable artwork offers a working retry",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:94",
@@ -2674,9 +2793,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for ERR-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "mobile-chrome (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 2759,
+      "durationMs": 2078,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:35:42.966Z",
+      "startedAt": "2026-09-13T14:29:57.790Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -2684,11 +2803,26 @@
           "run": "acceptance.json",
           "actual": "passed",
           "errors": []
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
+        },
+        {
+          "run": "recovery.json",
+          "actual": "passed",
+          "errors": []
+        },
+        {
+          "run": "recovery.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
-      "id": "mobile-chrome/a505d2b229d24614384d-f265766be54e0780a76d",
+      "id": "mobile-chrome/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-letter-bridge accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-letter-bridge accessible with enlarged controls in both orientations",
@@ -2719,7 +2853,7 @@
       ]
     },
     {
-      "id": "mobile-chrome/a505d2b229d24614384d-ae770c6a6d6fd95402ea",
+      "id": "mobile-chrome/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-number-breakfast accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-number-breakfast accessible with enlarged controls in both orientations",
@@ -2750,7 +2884,7 @@
       ]
     },
     {
-      "id": "mobile-chrome/a505d2b229d24614384d-58cdbfcd367c9a60c822",
+      "id": "mobile-chrome/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-shape-windmill accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-shape-windmill accessible with enlarged controls in both orientations",
@@ -2781,7 +2915,7 @@
       ]
     },
     {
-      "id": "mobile-chrome/a505d2b229d24614384d-78b95904b053914d3ada",
+      "id": "mobile-chrome/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-color-petals accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-color-petals accessible with enlarged controls in both orientations",
@@ -2812,7 +2946,7 @@
       ]
     },
     {
-      "id": "mobile-chrome/a505d2b229d24614384d-8597ac49ef61e381a4c4",
+      "id": "mobile-chrome/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-color-orange accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-color-orange accessible with enlarged controls in both orientations",
@@ -2843,8 +2977,8 @@
       ]
     },
     {
-      "id": "mobile-safari/a505d2b229d24614384d-7f41c577dd5ff4fbc15c",
-      "run": "repair.json",
+      "id": "mobile-safari/e2e/adventure-interactions.local.spec.ts#COL-01: finger paint stays clipped, survives cancellation and requires a choice",
+      "run": "recovery.json",
       "requirement": "COL-01",
       "scenario": "COL-01: finger paint stays clipped, survives cancellation and requires a choice",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:11",
@@ -2853,9 +2987,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for COL-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "mobile-safari (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 10402,
+      "durationMs": 7928,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:37:14.725Z",
+      "startedAt": "2026-09-13T14:30:18.745Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -2865,11 +2999,26 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n   at e2e\\helpers.ts:20\n\n  18 |   });\n  19 |   page.on('pageerror', (error) => errors.push(error.message));\n> 20 |   return () => expect(errors, `Critical browser errors:\\n${errors.join('\\n')}`).toEqual([]);\n     |                                                                                 ^\n  21 | }\n  22 |\n  23 | export async function gotoFreshApp(page: Page) {\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:56:3"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
+        },
+        {
+          "run": "recovery.json",
+          "actual": "passed",
+          "errors": []
+        },
+        {
+          "run": "recovery.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
-      "id": "mobile-safari/a505d2b229d24614384d-bc2efe992d3a73fef8a0",
+      "id": "mobile-safari/e2e/adventure-interactions.local.spec.ts#INT-01: extra pointer does not cancel the active drag; resizing does",
       "run": "repair.json",
       "requirement": "INT-01",
       "scenario": "INT-01: extra pointer does not cancel the active drag; resizing does",
@@ -2895,8 +3044,8 @@
       ]
     },
     {
-      "id": "mobile-safari/a505d2b229d24614384d-7c225f64679dcf2e1a23",
-      "run": "repair.json",
+      "id": "mobile-safari/e2e/adventure-interactions.local.spec.ts#ERR-01: unavailable artwork offers a working retry",
+      "run": "recovery.json",
       "requirement": "ERR-01",
       "scenario": "ERR-01: unavailable artwork offers a working retry",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:94",
@@ -2905,9 +3054,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for ERR-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "mobile-safari (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 7803,
+      "durationMs": 4753,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:37:25.378Z",
+      "startedAt": "2026-09-13T14:30:19.616Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -2915,11 +3064,26 @@
           "run": "acceptance.json",
           "actual": "passed",
           "errors": []
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
+        },
+        {
+          "run": "recovery.json",
+          "actual": "passed",
+          "errors": []
+        },
+        {
+          "run": "recovery.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
-      "id": "mobile-safari/a505d2b229d24614384d-da00ccb47dabd4b0b5d3",
+      "id": "mobile-safari/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-letter-bridge accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-letter-bridge accessible with enlarged controls in both orientations",
@@ -2950,7 +3114,7 @@
       ]
     },
     {
-      "id": "mobile-safari/a505d2b229d24614384d-2dd6418325e6aba870d2",
+      "id": "mobile-safari/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-number-breakfast accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-number-breakfast accessible with enlarged controls in both orientations",
@@ -2981,7 +3145,7 @@
       ]
     },
     {
-      "id": "mobile-safari/a505d2b229d24614384d-1a075009117d1fa8a429",
+      "id": "mobile-safari/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-shape-windmill accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-shape-windmill accessible with enlarged controls in both orientations",
@@ -3012,7 +3176,7 @@
       ]
     },
     {
-      "id": "mobile-safari/a505d2b229d24614384d-1bb83237177ab696d12b",
+      "id": "mobile-safari/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-color-petals accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-color-petals accessible with enlarged controls in both orientations",
@@ -3043,7 +3207,7 @@
       ]
     },
     {
-      "id": "mobile-safari/a505d2b229d24614384d-47a81c9f521ef3529886",
+      "id": "mobile-safari/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-color-orange accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-color-orange accessible with enlarged controls in both orientations",
@@ -3074,8 +3238,8 @@
       ]
     },
     {
-      "id": "mobile-android-tablet/a505d2b229d24614384d-edb8ceef2c0abb73f290",
-      "run": "repair.json",
+      "id": "mobile-android-tablet/e2e/adventure-interactions.local.spec.ts#COL-01: finger paint stays clipped, survives cancellation and requires a choice",
+      "run": "recovery.json",
       "requirement": "COL-01",
       "scenario": "COL-01: finger paint stays clipped, survives cancellation and requires a choice",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:11",
@@ -3084,9 +3248,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for COL-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "mobile-android-tablet (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 6399,
+      "durationMs": 5213,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:39:47.700Z",
+      "startedAt": "2026-09-13T14:30:36.561Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -3096,11 +3260,26 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: Cannot read properties of undefined (reading 'update')\u001b[39m\n\u001b[31m+     at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at rh (http://127.0.0.1:4179/assets/index-Bs75Av6o.js:9:1693144)\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:56:3"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
+        },
+        {
+          "run": "recovery.json",
+          "actual": "passed",
+          "errors": []
+        },
+        {
+          "run": "recovery.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
-      "id": "mobile-android-tablet/a505d2b229d24614384d-c24588ce6d17526fcec3",
+      "id": "mobile-android-tablet/e2e/adventure-interactions.local.spec.ts#INT-01: extra pointer does not cancel the active drag; resizing does",
       "run": "repair.json",
       "requirement": "INT-01",
       "scenario": "INT-01: extra pointer does not cancel the active drag; resizing does",
@@ -3126,8 +3305,8 @@
       ]
     },
     {
-      "id": "mobile-android-tablet/a505d2b229d24614384d-3f4945eea49d8b75f649",
-      "run": "repair.json",
+      "id": "mobile-android-tablet/e2e/adventure-interactions.local.spec.ts#ERR-01: unavailable artwork offers a working retry",
+      "run": "recovery.json",
       "requirement": "ERR-01",
       "scenario": "ERR-01: unavailable artwork offers a working retry",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:94",
@@ -3136,9 +3315,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for ERR-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "mobile-android-tablet (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 3062,
+      "durationMs": 2006,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:39:54.435Z",
+      "startedAt": "2026-09-13T14:30:38.686Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -3146,11 +3325,26 @@
           "run": "acceptance.json",
           "actual": "passed",
           "errors": []
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
+        },
+        {
+          "run": "recovery.json",
+          "actual": "passed",
+          "errors": []
+        },
+        {
+          "run": "recovery.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
-      "id": "mobile-android-tablet/a505d2b229d24614384d-3161c9b0699bc8a34dca",
+      "id": "mobile-android-tablet/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-letter-bridge accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-letter-bridge accessible with enlarged controls in both orientations",
@@ -3181,7 +3375,7 @@
       ]
     },
     {
-      "id": "mobile-android-tablet/a505d2b229d24614384d-bbfa7ed7f35264cfe59c",
+      "id": "mobile-android-tablet/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-number-breakfast accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-number-breakfast accessible with enlarged controls in both orientations",
@@ -3212,7 +3406,7 @@
       ]
     },
     {
-      "id": "mobile-android-tablet/a505d2b229d24614384d-9160e51798b61a566572",
+      "id": "mobile-android-tablet/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-shape-windmill accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-shape-windmill accessible with enlarged controls in both orientations",
@@ -3243,7 +3437,7 @@
       ]
     },
     {
-      "id": "mobile-android-tablet/a505d2b229d24614384d-a95bb59ac6914435950f",
+      "id": "mobile-android-tablet/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-color-petals accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-color-petals accessible with enlarged controls in both orientations",
@@ -3274,7 +3468,7 @@
       ]
     },
     {
-      "id": "mobile-android-tablet/a505d2b229d24614384d-9a7d5e7dbad983b014ca",
+      "id": "mobile-android-tablet/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-color-orange accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-color-orange accessible with enlarged controls in both orientations",
@@ -3305,8 +3499,8 @@
       ]
     },
     {
-      "id": "mobile-ipad/a505d2b229d24614384d-e4007f37edcd79c7cf27",
-      "run": "repair.json",
+      "id": "mobile-ipad/e2e/adventure-interactions.local.spec.ts#COL-01: finger paint stays clipped, survives cancellation and requires a choice",
+      "run": "recovery.json",
       "requirement": "COL-01",
       "scenario": "COL-01: finger paint stays clipped, survives cancellation and requires a choice",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:11",
@@ -3315,9 +3509,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for COL-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "mobile-ipad (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 11175,
+      "durationMs": 8420,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:41:44.512Z",
+      "startedAt": "2026-09-13T14:31:00.310Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -3327,11 +3521,26 @@
           "errors": [
             "Error: Critical browser errors:\nService Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Service Worker registration failed: TypeError: undefined is not an object (evaluating 'e.update')\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n   at e2e\\helpers.ts:20\n\n  18 |   });\n  19 |   page.on('pageerror', (error) => errors.push(error.message));\n> 20 |   return () => expect(errors, `Critical browser errors:\\n${errors.join('\\n')}`).toEqual([]);\n     |                                                                                 ^\n  21 | }\n  22 |\n  23 | export async function gotoFreshApp(page: Page) {\n    at guard (C:\\Dev\\kids-learning-adventure\\tests\\e2e\\helpers.ts:20:81)\n    at C:\\Dev\\kids-learning-adventure\\tests\\e2e\\adventure-interactions.local.spec.ts:56:3"
           ]
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
+        },
+        {
+          "run": "recovery.json",
+          "actual": "passed",
+          "errors": []
+        },
+        {
+          "run": "recovery.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
-      "id": "mobile-ipad/a505d2b229d24614384d-a795f0b9ff9ead81248e",
+      "id": "mobile-ipad/e2e/adventure-interactions.local.spec.ts#INT-01: extra pointer does not cancel the active drag; resizing does",
       "run": "repair.json",
       "requirement": "INT-01",
       "scenario": "INT-01: extra pointer does not cancel the active drag; resizing does",
@@ -3357,8 +3566,8 @@
       ]
     },
     {
-      "id": "mobile-ipad/a505d2b229d24614384d-25e54f6e824dacd3ab40",
-      "run": "repair.json",
+      "id": "mobile-ipad/e2e/adventure-interactions.local.spec.ts#ERR-01: unavailable artwork offers a working retry",
+      "run": "recovery.json",
       "requirement": "ERR-01",
       "scenario": "ERR-01: unavailable artwork offers a working retry",
       "source": "tests/e2e/adventure-interactions.local.spec.ts:94",
@@ -3367,9 +3576,9 @@
       "expected": "The behavior named by this scenario, with acceptance criteria for ERR-01 in ADVENTURE_TEST_PLAN.md.",
       "environment": "mobile-ipad (browser simulation; host win32)",
       "actual": "passed",
-      "durationMs": 8420,
+      "durationMs": 5565,
       "attempts": 1,
-      "startedAt": "2026-09-12T06:41:55.963Z",
+      "startedAt": "2026-09-13T14:31:02.589Z",
       "errors": [],
       "annotations": [],
       "previousRuns": [
@@ -3377,11 +3586,26 @@
           "run": "acceptance.json",
           "actual": "passed",
           "errors": []
+        },
+        {
+          "run": "repair.json",
+          "actual": "passed",
+          "errors": []
+        },
+        {
+          "run": "recovery.json",
+          "actual": "passed",
+          "errors": []
+        },
+        {
+          "run": "recovery.json",
+          "actual": "passed",
+          "errors": []
         }
       ]
     },
     {
-      "id": "mobile-ipad/a505d2b229d24614384d-98f4d12d9523c88d2b27",
+      "id": "mobile-ipad/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-letter-bridge accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-letter-bridge accessible with enlarged controls in both orientations",
@@ -3412,7 +3636,7 @@
       ]
     },
     {
-      "id": "mobile-ipad/a505d2b229d24614384d-223367a87757dc037531",
+      "id": "mobile-ipad/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-number-breakfast accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-number-breakfast accessible with enlarged controls in both orientations",
@@ -3443,7 +3667,7 @@
       ]
     },
     {
-      "id": "mobile-ipad/a505d2b229d24614384d-6b624151ec384de588ac",
+      "id": "mobile-ipad/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-shape-windmill accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-shape-windmill accessible with enlarged controls in both orientations",
@@ -3474,7 +3698,7 @@
       ]
     },
     {
-      "id": "mobile-ipad/a505d2b229d24614384d-98a194678c4c9b7b801f",
+      "id": "mobile-ipad/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-color-petals accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-color-petals accessible with enlarged controls in both orientations",
@@ -3505,7 +3729,7 @@
       ]
     },
     {
-      "id": "mobile-ipad/a505d2b229d24614384d-0b45ecd04ae75937c3e2",
+      "id": "mobile-ipad/e2e/adventure-interactions.local.spec.ts#A11Y-01 INT-03: v2-color-orange accessible with enlarged controls in both orientations",
       "run": "ci-repair.json",
       "requirement": "A11Y-01",
       "scenario": "A11Y-01 INT-03: v2-color-orange accessible with enlarged controls in both orientations",
@@ -3536,7 +3760,7 @@
       ]
     },
     {
-      "id": "local-chromium/1cec655c576198edbd78-b10daa55f1ddf6201422",
+      "id": "local-chromium/e2e/adventure-prototype.local.spec.ts#kitchen vertical slice: real quantities, evidence and celebration",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "kitchen vertical slice: real quantities, evidence and celebration",
@@ -3554,7 +3778,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-firefox/1cec655c576198edbd78-ac0ff31ffbe2c9cd4a29",
+      "id": "local-firefox/e2e/adventure-prototype.local.spec.ts#kitchen vertical slice: real quantities, evidence and celebration",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "kitchen vertical slice: real quantities, evidence and celebration",
@@ -3572,7 +3796,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-webkit/1cec655c576198edbd78-19904df54c38ff70ac4a",
+      "id": "local-webkit/e2e/adventure-prototype.local.spec.ts#kitchen vertical slice: real quantities, evidence and celebration",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "kitchen vertical slice: real quantities, evidence and celebration",
@@ -3590,7 +3814,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-chrome/1cec655c576198edbd78-67c8c3721c0eab15b620",
+      "id": "mobile-chrome/e2e/adventure-prototype.local.spec.ts#kitchen vertical slice: real quantities, evidence and celebration",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "kitchen vertical slice: real quantities, evidence and celebration",
@@ -3608,7 +3832,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-safari/1cec655c576198edbd78-a41a7e151b066fe60730",
+      "id": "mobile-safari/e2e/adventure-prototype.local.spec.ts#kitchen vertical slice: real quantities, evidence and celebration",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "kitchen vertical slice: real quantities, evidence and celebration",
@@ -3626,7 +3850,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-android-tablet/1cec655c576198edbd78-d74b90d00b8a1cb0cb71",
+      "id": "mobile-android-tablet/e2e/adventure-prototype.local.spec.ts#kitchen vertical slice: real quantities, evidence and celebration",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "kitchen vertical slice: real quantities, evidence and celebration",
@@ -3644,7 +3868,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-ipad/1cec655c576198edbd78-fcd7ac4580873144d91e",
+      "id": "mobile-ipad/e2e/adventure-prototype.local.spec.ts#kitchen vertical slice: real quantities, evidence and celebration",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "kitchen vertical slice: real quantities, evidence and celebration",
@@ -3662,7 +3886,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-chromium/139c85bb1e10bada4f2b-40a8d64c750d878c0094",
+      "id": "local-chromium/e2e/experience-visual.local.spec.ts#letters: scene has decoded art, readable controls and no overflow",
       "run": "visual.json",
       "requirement": "VIS-01",
       "scenario": "letters: scene has decoded art, readable controls and no overflow",
@@ -3686,7 +3910,7 @@
       ]
     },
     {
-      "id": "local-chromium/139c85bb1e10bada4f2b-299ce11359ff290faf48",
+      "id": "local-chromium/e2e/experience-visual.local.spec.ts#numbers: scene has decoded art, readable controls and no overflow",
       "run": "visual.json",
       "requirement": "VIS-01",
       "scenario": "numbers: scene has decoded art, readable controls and no overflow",
@@ -3710,7 +3934,7 @@
       ]
     },
     {
-      "id": "local-chromium/139c85bb1e10bada4f2b-ad754027b76c79302499",
+      "id": "local-chromium/e2e/experience-visual.local.spec.ts#shapes: scene has decoded art, readable controls and no overflow",
       "run": "visual.json",
       "requirement": "VIS-01",
       "scenario": "shapes: scene has decoded art, readable controls and no overflow",
@@ -3734,7 +3958,7 @@
       ]
     },
     {
-      "id": "local-chromium/139c85bb1e10bada4f2b-215c2dd4deb10d69465a",
+      "id": "local-chromium/e2e/experience-visual.local.spec.ts#colors: scene has decoded art, readable controls and no overflow",
       "run": "visual.json",
       "requirement": "VIS-01",
       "scenario": "colors: scene has decoded art, readable controls and no overflow",
@@ -3758,7 +3982,7 @@
       ]
     },
     {
-      "id": "local-firefox/139c85bb1e10bada4f2b-f65081b065079080281f",
+      "id": "local-firefox/e2e/experience-visual.local.spec.ts#letters: scene has decoded art, readable controls and no overflow",
       "run": "visual.json",
       "requirement": "VIS-01",
       "scenario": "letters: scene has decoded art, readable controls and no overflow",
@@ -3782,7 +4006,7 @@
       ]
     },
     {
-      "id": "local-firefox/139c85bb1e10bada4f2b-02894eb1e9d8bea694c8",
+      "id": "local-firefox/e2e/experience-visual.local.spec.ts#numbers: scene has decoded art, readable controls and no overflow",
       "run": "visual.json",
       "requirement": "VIS-01",
       "scenario": "numbers: scene has decoded art, readable controls and no overflow",
@@ -3806,7 +4030,7 @@
       ]
     },
     {
-      "id": "local-firefox/139c85bb1e10bada4f2b-dfb72b3977971ac6d7d1",
+      "id": "local-firefox/e2e/experience-visual.local.spec.ts#shapes: scene has decoded art, readable controls and no overflow",
       "run": "visual.json",
       "requirement": "VIS-01",
       "scenario": "shapes: scene has decoded art, readable controls and no overflow",
@@ -3830,7 +4054,7 @@
       ]
     },
     {
-      "id": "local-firefox/139c85bb1e10bada4f2b-cab9af1b02cb5ba43071",
+      "id": "local-firefox/e2e/experience-visual.local.spec.ts#colors: scene has decoded art, readable controls and no overflow",
       "run": "visual.json",
       "requirement": "VIS-01",
       "scenario": "colors: scene has decoded art, readable controls and no overflow",
@@ -3854,7 +4078,7 @@
       ]
     },
     {
-      "id": "local-webkit/139c85bb1e10bada4f2b-d2624e638f1caf2fb8ba",
+      "id": "local-webkit/e2e/experience-visual.local.spec.ts#letters: scene has decoded art, readable controls and no overflow",
       "run": "visual.json",
       "requirement": "VIS-01",
       "scenario": "letters: scene has decoded art, readable controls and no overflow",
@@ -3878,7 +4102,7 @@
       ]
     },
     {
-      "id": "local-webkit/139c85bb1e10bada4f2b-9f7c83b8234006425f64",
+      "id": "local-webkit/e2e/experience-visual.local.spec.ts#numbers: scene has decoded art, readable controls and no overflow",
       "run": "visual.json",
       "requirement": "VIS-01",
       "scenario": "numbers: scene has decoded art, readable controls and no overflow",
@@ -3902,7 +4126,7 @@
       ]
     },
     {
-      "id": "local-webkit/139c85bb1e10bada4f2b-aaceb11abb34feb48d62",
+      "id": "local-webkit/e2e/experience-visual.local.spec.ts#shapes: scene has decoded art, readable controls and no overflow",
       "run": "visual.json",
       "requirement": "VIS-01",
       "scenario": "shapes: scene has decoded art, readable controls and no overflow",
@@ -3926,7 +4150,7 @@
       ]
     },
     {
-      "id": "local-webkit/139c85bb1e10bada4f2b-0db61f71ee0e33442e91",
+      "id": "local-webkit/e2e/experience-visual.local.spec.ts#colors: scene has decoded art, readable controls and no overflow",
       "run": "visual.json",
       "requirement": "VIS-01",
       "scenario": "colors: scene has decoded art, readable controls and no overflow",
@@ -3950,7 +4174,7 @@
       ]
     },
     {
-      "id": "mobile-chrome/139c85bb1e10bada4f2b-fdbf16affe63089f9c85",
+      "id": "mobile-chrome/e2e/experience-visual.local.spec.ts#letters: scene has decoded art, readable controls and no overflow",
       "run": "visual.json",
       "requirement": "VIS-01",
       "scenario": "letters: scene has decoded art, readable controls and no overflow",
@@ -3974,7 +4198,7 @@
       ]
     },
     {
-      "id": "mobile-chrome/139c85bb1e10bada4f2b-6f28febb659a42615240",
+      "id": "mobile-chrome/e2e/experience-visual.local.spec.ts#numbers: scene has decoded art, readable controls and no overflow",
       "run": "visual.json",
       "requirement": "VIS-01",
       "scenario": "numbers: scene has decoded art, readable controls and no overflow",
@@ -3998,7 +4222,7 @@
       ]
     },
     {
-      "id": "mobile-chrome/139c85bb1e10bada4f2b-7eddd5d0b342b821e9a5",
+      "id": "mobile-chrome/e2e/experience-visual.local.spec.ts#shapes: scene has decoded art, readable controls and no overflow",
       "run": "visual.json",
       "requirement": "VIS-01",
       "scenario": "shapes: scene has decoded art, readable controls and no overflow",
@@ -4022,7 +4246,7 @@
       ]
     },
     {
-      "id": "mobile-chrome/139c85bb1e10bada4f2b-8c34b61f74969c9a13ae",
+      "id": "mobile-chrome/e2e/experience-visual.local.spec.ts#colors: scene has decoded art, readable controls and no overflow",
       "run": "visual.json",
       "requirement": "VIS-01",
       "scenario": "colors: scene has decoded art, readable controls and no overflow",
@@ -4046,7 +4270,7 @@
       ]
     },
     {
-      "id": "mobile-safari/139c85bb1e10bada4f2b-784300cf4dca9defae6f",
+      "id": "mobile-safari/e2e/experience-visual.local.spec.ts#letters: scene has decoded art, readable controls and no overflow",
       "run": "visual.json",
       "requirement": "VIS-01",
       "scenario": "letters: scene has decoded art, readable controls and no overflow",
@@ -4070,7 +4294,7 @@
       ]
     },
     {
-      "id": "mobile-safari/139c85bb1e10bada4f2b-85b42ff0444c9861dda8",
+      "id": "mobile-safari/e2e/experience-visual.local.spec.ts#numbers: scene has decoded art, readable controls and no overflow",
       "run": "visual.json",
       "requirement": "VIS-01",
       "scenario": "numbers: scene has decoded art, readable controls and no overflow",
@@ -4094,7 +4318,7 @@
       ]
     },
     {
-      "id": "mobile-safari/139c85bb1e10bada4f2b-c8e54ad3f4752e7d64f2",
+      "id": "mobile-safari/e2e/experience-visual.local.spec.ts#shapes: scene has decoded art, readable controls and no overflow",
       "run": "visual.json",
       "requirement": "VIS-01",
       "scenario": "shapes: scene has decoded art, readable controls and no overflow",
@@ -4118,7 +4342,7 @@
       ]
     },
     {
-      "id": "mobile-safari/139c85bb1e10bada4f2b-4c80e8ad97276ccc9dd7",
+      "id": "mobile-safari/e2e/experience-visual.local.spec.ts#colors: scene has decoded art, readable controls and no overflow",
       "run": "visual.json",
       "requirement": "VIS-01",
       "scenario": "colors: scene has decoded art, readable controls and no overflow",
@@ -4142,7 +4366,7 @@
       ]
     },
     {
-      "id": "mobile-android-tablet/139c85bb1e10bada4f2b-b3e65680957362f33895",
+      "id": "mobile-android-tablet/e2e/experience-visual.local.spec.ts#letters: scene has decoded art, readable controls and no overflow",
       "run": "visual.json",
       "requirement": "VIS-01",
       "scenario": "letters: scene has decoded art, readable controls and no overflow",
@@ -4166,7 +4390,7 @@
       ]
     },
     {
-      "id": "mobile-android-tablet/139c85bb1e10bada4f2b-7ed822fd84b1809560ec",
+      "id": "mobile-android-tablet/e2e/experience-visual.local.spec.ts#numbers: scene has decoded art, readable controls and no overflow",
       "run": "visual.json",
       "requirement": "VIS-01",
       "scenario": "numbers: scene has decoded art, readable controls and no overflow",
@@ -4190,7 +4414,7 @@
       ]
     },
     {
-      "id": "mobile-android-tablet/139c85bb1e10bada4f2b-581f1a97f7c365b8efef",
+      "id": "mobile-android-tablet/e2e/experience-visual.local.spec.ts#shapes: scene has decoded art, readable controls and no overflow",
       "run": "visual.json",
       "requirement": "VIS-01",
       "scenario": "shapes: scene has decoded art, readable controls and no overflow",
@@ -4214,7 +4438,7 @@
       ]
     },
     {
-      "id": "mobile-android-tablet/139c85bb1e10bada4f2b-d04e2632f0cbde6086db",
+      "id": "mobile-android-tablet/e2e/experience-visual.local.spec.ts#colors: scene has decoded art, readable controls and no overflow",
       "run": "visual.json",
       "requirement": "VIS-01",
       "scenario": "colors: scene has decoded art, readable controls and no overflow",
@@ -4238,7 +4462,7 @@
       ]
     },
     {
-      "id": "mobile-ipad/139c85bb1e10bada4f2b-4e4bc6c5c84585e4e42b",
+      "id": "mobile-ipad/e2e/experience-visual.local.spec.ts#letters: scene has decoded art, readable controls and no overflow",
       "run": "visual.json",
       "requirement": "VIS-01",
       "scenario": "letters: scene has decoded art, readable controls and no overflow",
@@ -4262,7 +4486,7 @@
       ]
     },
     {
-      "id": "mobile-ipad/139c85bb1e10bada4f2b-3a652da7b03f59e50662",
+      "id": "mobile-ipad/e2e/experience-visual.local.spec.ts#numbers: scene has decoded art, readable controls and no overflow",
       "run": "visual.json",
       "requirement": "VIS-01",
       "scenario": "numbers: scene has decoded art, readable controls and no overflow",
@@ -4286,7 +4510,7 @@
       ]
     },
     {
-      "id": "mobile-ipad/139c85bb1e10bada4f2b-7f67e077a7c218292358",
+      "id": "mobile-ipad/e2e/experience-visual.local.spec.ts#shapes: scene has decoded art, readable controls and no overflow",
       "run": "visual.json",
       "requirement": "VIS-01",
       "scenario": "shapes: scene has decoded art, readable controls and no overflow",
@@ -4310,7 +4534,7 @@
       ]
     },
     {
-      "id": "mobile-ipad/139c85bb1e10bada4f2b-0973141698a1e5d7c9fd",
+      "id": "mobile-ipad/e2e/experience-visual.local.spec.ts#colors: scene has decoded art, readable controls and no overflow",
       "run": "visual.json",
       "requirement": "VIS-01",
       "scenario": "colors: scene has decoded art, readable controls and no overflow",
@@ -4334,7 +4558,7 @@
       ]
     },
     {
-      "id": "local-chromium/f2f2f6794055165053a1-d28c9fb07860c27250e3",
+      "id": "local-chromium/e2e/experience.local.spec.ts#letters: complete three different mechanics and replay collection",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "letters: complete three different mechanics and replay collection",
@@ -4352,7 +4576,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-chromium/f2f2f6794055165053a1-f7227f59e834b98343d2",
+      "id": "local-chromium/e2e/experience.local.spec.ts#numbers: complete three different mechanics and replay collection",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "numbers: complete three different mechanics and replay collection",
@@ -4370,7 +4594,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-chromium/f2f2f6794055165053a1-d91cf0a6228e6d9cae6a",
+      "id": "local-chromium/e2e/experience.local.spec.ts#shapes: complete three different mechanics and replay collection",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "shapes: complete three different mechanics and replay collection",
@@ -4388,7 +4612,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-chromium/f2f2f6794055165053a1-2d3c76871eabf376145b",
+      "id": "local-chromium/e2e/experience.local.spec.ts#colors: complete three different mechanics and replay collection",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "colors: complete three different mechanics and replay collection",
@@ -4406,7 +4630,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-chromium/f2f2f6794055165053a1-beb5eb0ddc0d9061d117",
+      "id": "local-chromium/e2e/experience.local.spec.ts#wrong answers, hints, double-submit and checkpoint survive reload",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "wrong answers, hints, double-submit and checkpoint survive reload",
@@ -4424,7 +4648,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-chromium/f2f2f6794055165053a1-c4f168ec01498b029103",
+      "id": "local-chromium/e2e/experience.local.spec.ts#drag, outside release, cancellation and touch sizes",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "drag, outside release, cancellation and touch sizes",
@@ -4442,7 +4666,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-chromium/f2f2f6794055165053a1-b4686b8220dbcef9ccac",
+      "id": "local-chromium/e2e/experience.local.spec.ts#rotation and paint are usable with taps and keyboard",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "rotation and paint are usable with taps and keyboard",
@@ -4460,7 +4684,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-chromium/f2f2f6794055165053a1-307273fc7411e527f104",
+      "id": "local-chromium/e2e/experience.local.spec.ts#portrait and landscape preserve activity, reachable controls, accessibility",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "portrait and landscape preserve activity, reachable controls, accessibility",
@@ -4478,7 +4702,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-chromium/f2f2f6794055165053a1-5207ede8d92421a42c8a",
+      "id": "local-chromium/e2e/experience.local.spec.ts#application background pauses play and resumes without losing state",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "application background pauses play and resumes without losing state",
@@ -4496,7 +4720,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-chromium/f2f2f6794055165053a1-f19b192f63e3880f7f61",
+      "id": "local-chromium/e2e/experience.local.spec.ts#LIFE-01: reload after one assembly stage resumes without duplicate evidence",
       "run": "acceptance.json",
       "requirement": "LIFE-01",
       "scenario": "LIFE-01: reload after one assembly stage resumes without duplicate evidence",
@@ -4514,7 +4738,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-firefox/f2f2f6794055165053a1-8164726fb21b60f23f4f",
+      "id": "local-firefox/e2e/experience.local.spec.ts#letters: complete three different mechanics and replay collection",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "letters: complete three different mechanics and replay collection",
@@ -4532,7 +4756,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-firefox/f2f2f6794055165053a1-4b2eb4edc220df35a94e",
+      "id": "local-firefox/e2e/experience.local.spec.ts#numbers: complete three different mechanics and replay collection",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "numbers: complete three different mechanics and replay collection",
@@ -4550,7 +4774,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-firefox/f2f2f6794055165053a1-cc6433a3f7dca7c2361e",
+      "id": "local-firefox/e2e/experience.local.spec.ts#shapes: complete three different mechanics and replay collection",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "shapes: complete three different mechanics and replay collection",
@@ -4568,7 +4792,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-firefox/f2f2f6794055165053a1-da4e48f9ccf79dc2fb3f",
+      "id": "local-firefox/e2e/experience.local.spec.ts#colors: complete three different mechanics and replay collection",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "colors: complete three different mechanics and replay collection",
@@ -4586,7 +4810,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-firefox/f2f2f6794055165053a1-fb4f2ec923cbcf850949",
+      "id": "local-firefox/e2e/experience.local.spec.ts#wrong answers, hints, double-submit and checkpoint survive reload",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "wrong answers, hints, double-submit and checkpoint survive reload",
@@ -4604,7 +4828,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-firefox/f2f2f6794055165053a1-85c365d225aaec5fc083",
+      "id": "local-firefox/e2e/experience.local.spec.ts#drag, outside release, cancellation and touch sizes",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "drag, outside release, cancellation and touch sizes",
@@ -4622,7 +4846,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-firefox/f2f2f6794055165053a1-404c5537bb3a38a000cb",
+      "id": "local-firefox/e2e/experience.local.spec.ts#rotation and paint are usable with taps and keyboard",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "rotation and paint are usable with taps and keyboard",
@@ -4640,7 +4864,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-firefox/f2f2f6794055165053a1-cff20fd19269ac2e9573",
+      "id": "local-firefox/e2e/experience.local.spec.ts#portrait and landscape preserve activity, reachable controls, accessibility",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "portrait and landscape preserve activity, reachable controls, accessibility",
@@ -4658,7 +4882,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-firefox/f2f2f6794055165053a1-8bc9b54a83c3d148ecb9",
+      "id": "local-firefox/e2e/experience.local.spec.ts#application background pauses play and resumes without losing state",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "application background pauses play and resumes without losing state",
@@ -4676,7 +4900,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-firefox/f2f2f6794055165053a1-d385bcf27cd8ef26c257",
+      "id": "local-firefox/e2e/experience.local.spec.ts#LIFE-01: reload after one assembly stage resumes without duplicate evidence",
       "run": "acceptance.json",
       "requirement": "LIFE-01",
       "scenario": "LIFE-01: reload after one assembly stage resumes without duplicate evidence",
@@ -4694,7 +4918,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-webkit/f2f2f6794055165053a1-594c0f82bb0ec7d6f004",
+      "id": "local-webkit/e2e/experience.local.spec.ts#letters: complete three different mechanics and replay collection",
       "run": "platform.json",
       "requirement": "CUR-03",
       "scenario": "letters: complete three different mechanics and replay collection",
@@ -4718,7 +4942,7 @@
       ]
     },
     {
-      "id": "local-webkit/f2f2f6794055165053a1-88f86afbb5615650ea61",
+      "id": "local-webkit/e2e/experience.local.spec.ts#numbers: complete three different mechanics and replay collection",
       "run": "platform.json",
       "requirement": "CUR-03",
       "scenario": "numbers: complete three different mechanics and replay collection",
@@ -4742,7 +4966,7 @@
       ]
     },
     {
-      "id": "local-webkit/f2f2f6794055165053a1-8d5bc65926599b1fd955",
+      "id": "local-webkit/e2e/experience.local.spec.ts#shapes: complete three different mechanics and replay collection",
       "run": "platform.json",
       "requirement": "CUR-03",
       "scenario": "shapes: complete three different mechanics and replay collection",
@@ -4766,7 +4990,7 @@
       ]
     },
     {
-      "id": "local-webkit/f2f2f6794055165053a1-f4b114b67bac556a468f",
+      "id": "local-webkit/e2e/experience.local.spec.ts#colors: complete three different mechanics and replay collection",
       "run": "platform.json",
       "requirement": "CUR-03",
       "scenario": "colors: complete three different mechanics and replay collection",
@@ -4790,7 +5014,7 @@
       ]
     },
     {
-      "id": "local-webkit/f2f2f6794055165053a1-142415d963e16498b850",
+      "id": "local-webkit/e2e/experience.local.spec.ts#wrong answers, hints, double-submit and checkpoint survive reload",
       "run": "platform.json",
       "requirement": "CUR-03",
       "scenario": "wrong answers, hints, double-submit and checkpoint survive reload",
@@ -4814,7 +5038,7 @@
       ]
     },
     {
-      "id": "local-webkit/f2f2f6794055165053a1-89044e11d2c82e57e12a",
+      "id": "local-webkit/e2e/experience.local.spec.ts#drag, outside release, cancellation and touch sizes",
       "run": "platform.json",
       "requirement": "CUR-03",
       "scenario": "drag, outside release, cancellation and touch sizes",
@@ -4838,7 +5062,7 @@
       ]
     },
     {
-      "id": "local-webkit/f2f2f6794055165053a1-ad12fd4571cd9134e952",
+      "id": "local-webkit/e2e/experience.local.spec.ts#rotation and paint are usable with taps and keyboard",
       "run": "platform.json",
       "requirement": "CUR-03",
       "scenario": "rotation and paint are usable with taps and keyboard",
@@ -4862,7 +5086,7 @@
       ]
     },
     {
-      "id": "local-webkit/f2f2f6794055165053a1-196014ae068c8656c992",
+      "id": "local-webkit/e2e/experience.local.spec.ts#portrait and landscape preserve activity, reachable controls, accessibility",
       "run": "platform.json",
       "requirement": "CUR-03",
       "scenario": "portrait and landscape preserve activity, reachable controls, accessibility",
@@ -4886,7 +5110,7 @@
       ]
     },
     {
-      "id": "local-webkit/f2f2f6794055165053a1-084953e473402e6b0b09",
+      "id": "local-webkit/e2e/experience.local.spec.ts#application background pauses play and resumes without losing state",
       "run": "platform.json",
       "requirement": "CUR-03",
       "scenario": "application background pauses play and resumes without losing state",
@@ -4910,7 +5134,7 @@
       ]
     },
     {
-      "id": "local-webkit/f2f2f6794055165053a1-31f34ff2c94c8f3aaefa",
+      "id": "local-webkit/e2e/experience.local.spec.ts#LIFE-01: reload after one assembly stage resumes without duplicate evidence",
       "run": "platform.json",
       "requirement": "LIFE-01",
       "scenario": "LIFE-01: reload after one assembly stage resumes without duplicate evidence",
@@ -4934,7 +5158,7 @@
       ]
     },
     {
-      "id": "mobile-chrome/f2f2f6794055165053a1-65a2733e90e4360f1f6c",
+      "id": "mobile-chrome/e2e/experience.local.spec.ts#letters: complete three different mechanics and replay collection",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "letters: complete three different mechanics and replay collection",
@@ -4952,7 +5176,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-chrome/f2f2f6794055165053a1-bdb462febb7560438e98",
+      "id": "mobile-chrome/e2e/experience.local.spec.ts#numbers: complete three different mechanics and replay collection",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "numbers: complete three different mechanics and replay collection",
@@ -4970,7 +5194,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-chrome/f2f2f6794055165053a1-0e080d3dc2f4fcb66cca",
+      "id": "mobile-chrome/e2e/experience.local.spec.ts#shapes: complete three different mechanics and replay collection",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "shapes: complete three different mechanics and replay collection",
@@ -4988,7 +5212,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-chrome/f2f2f6794055165053a1-51724716a9fb50733ade",
+      "id": "mobile-chrome/e2e/experience.local.spec.ts#colors: complete three different mechanics and replay collection",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "colors: complete three different mechanics and replay collection",
@@ -5006,7 +5230,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-chrome/f2f2f6794055165053a1-5adbfcb6c242f143af89",
+      "id": "mobile-chrome/e2e/experience.local.spec.ts#wrong answers, hints, double-submit and checkpoint survive reload",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "wrong answers, hints, double-submit and checkpoint survive reload",
@@ -5024,7 +5248,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-chrome/f2f2f6794055165053a1-8a51e499e695c1e1b573",
+      "id": "mobile-chrome/e2e/experience.local.spec.ts#drag, outside release, cancellation and touch sizes",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "drag, outside release, cancellation and touch sizes",
@@ -5042,7 +5266,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-chrome/f2f2f6794055165053a1-9a1695ea23a03e00db29",
+      "id": "mobile-chrome/e2e/experience.local.spec.ts#rotation and paint are usable with taps and keyboard",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "rotation and paint are usable with taps and keyboard",
@@ -5060,7 +5284,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-chrome/f2f2f6794055165053a1-5d5ff7ea584e7961d4e9",
+      "id": "mobile-chrome/e2e/experience.local.spec.ts#portrait and landscape preserve activity, reachable controls, accessibility",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "portrait and landscape preserve activity, reachable controls, accessibility",
@@ -5078,7 +5302,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-chrome/f2f2f6794055165053a1-d252f0a3e87ca8a5bc79",
+      "id": "mobile-chrome/e2e/experience.local.spec.ts#application background pauses play and resumes without losing state",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "application background pauses play and resumes without losing state",
@@ -5096,7 +5320,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-chrome/f2f2f6794055165053a1-8e1f624526da4cb613c0",
+      "id": "mobile-chrome/e2e/experience.local.spec.ts#LIFE-01: reload after one assembly stage resumes without duplicate evidence",
       "run": "acceptance.json",
       "requirement": "LIFE-01",
       "scenario": "LIFE-01: reload after one assembly stage resumes without duplicate evidence",
@@ -5114,7 +5338,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-safari/f2f2f6794055165053a1-67144d9035c54dd3447f",
+      "id": "mobile-safari/e2e/experience.local.spec.ts#letters: complete three different mechanics and replay collection",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "letters: complete three different mechanics and replay collection",
@@ -5132,7 +5356,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-safari/f2f2f6794055165053a1-c6fc5b495975677060ab",
+      "id": "mobile-safari/e2e/experience.local.spec.ts#numbers: complete three different mechanics and replay collection",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "numbers: complete three different mechanics and replay collection",
@@ -5150,7 +5374,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-safari/f2f2f6794055165053a1-e34d508208d5cd5d7d27",
+      "id": "mobile-safari/e2e/experience.local.spec.ts#shapes: complete three different mechanics and replay collection",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "shapes: complete three different mechanics and replay collection",
@@ -5168,7 +5392,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-safari/f2f2f6794055165053a1-16088acc9c5e1442478d",
+      "id": "mobile-safari/e2e/experience.local.spec.ts#colors: complete three different mechanics and replay collection",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "colors: complete three different mechanics and replay collection",
@@ -5186,7 +5410,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-safari/f2f2f6794055165053a1-0e854213cd62e1f3acb4",
+      "id": "mobile-safari/e2e/experience.local.spec.ts#wrong answers, hints, double-submit and checkpoint survive reload",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "wrong answers, hints, double-submit and checkpoint survive reload",
@@ -5204,7 +5428,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-safari/f2f2f6794055165053a1-283751ab193673bd4713",
+      "id": "mobile-safari/e2e/experience.local.spec.ts#drag, outside release, cancellation and touch sizes",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "drag, outside release, cancellation and touch sizes",
@@ -5222,7 +5446,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-safari/f2f2f6794055165053a1-47030695f0d0e1717752",
+      "id": "mobile-safari/e2e/experience.local.spec.ts#rotation and paint are usable with taps and keyboard",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "rotation and paint are usable with taps and keyboard",
@@ -5240,7 +5464,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-safari/f2f2f6794055165053a1-88a50201d5a84eca713e",
+      "id": "mobile-safari/e2e/experience.local.spec.ts#portrait and landscape preserve activity, reachable controls, accessibility",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "portrait and landscape preserve activity, reachable controls, accessibility",
@@ -5258,7 +5482,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-safari/f2f2f6794055165053a1-55ab0f8c41e42546d79d",
+      "id": "mobile-safari/e2e/experience.local.spec.ts#application background pauses play and resumes without losing state",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "application background pauses play and resumes without losing state",
@@ -5276,7 +5500,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-safari/f2f2f6794055165053a1-48222bbeac039648fbc2",
+      "id": "mobile-safari/e2e/experience.local.spec.ts#LIFE-01: reload after one assembly stage resumes without duplicate evidence",
       "run": "acceptance.json",
       "requirement": "LIFE-01",
       "scenario": "LIFE-01: reload after one assembly stage resumes without duplicate evidence",
@@ -5294,7 +5518,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-android-tablet/f2f2f6794055165053a1-39b1bcac37a29b14f806",
+      "id": "mobile-android-tablet/e2e/experience.local.spec.ts#letters: complete three different mechanics and replay collection",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "letters: complete three different mechanics and replay collection",
@@ -5312,7 +5536,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-android-tablet/f2f2f6794055165053a1-be12d32c258c1713a67f",
+      "id": "mobile-android-tablet/e2e/experience.local.spec.ts#numbers: complete three different mechanics and replay collection",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "numbers: complete three different mechanics and replay collection",
@@ -5330,7 +5554,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-android-tablet/f2f2f6794055165053a1-c6359ed466d3177c15a1",
+      "id": "mobile-android-tablet/e2e/experience.local.spec.ts#shapes: complete three different mechanics and replay collection",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "shapes: complete three different mechanics and replay collection",
@@ -5348,7 +5572,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-android-tablet/f2f2f6794055165053a1-1dad7913d526376d4e31",
+      "id": "mobile-android-tablet/e2e/experience.local.spec.ts#colors: complete three different mechanics and replay collection",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "colors: complete three different mechanics and replay collection",
@@ -5366,7 +5590,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-android-tablet/f2f2f6794055165053a1-615869da17df6fcf8279",
+      "id": "mobile-android-tablet/e2e/experience.local.spec.ts#wrong answers, hints, double-submit and checkpoint survive reload",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "wrong answers, hints, double-submit and checkpoint survive reload",
@@ -5384,7 +5608,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-android-tablet/f2f2f6794055165053a1-ac0866d3d033b3e0000d",
+      "id": "mobile-android-tablet/e2e/experience.local.spec.ts#drag, outside release, cancellation and touch sizes",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "drag, outside release, cancellation and touch sizes",
@@ -5402,7 +5626,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-android-tablet/f2f2f6794055165053a1-4f265eecff123f595086",
+      "id": "mobile-android-tablet/e2e/experience.local.spec.ts#rotation and paint are usable with taps and keyboard",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "rotation and paint are usable with taps and keyboard",
@@ -5420,7 +5644,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-android-tablet/f2f2f6794055165053a1-21ecda2dc4f4bab49301",
+      "id": "mobile-android-tablet/e2e/experience.local.spec.ts#portrait and landscape preserve activity, reachable controls, accessibility",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "portrait and landscape preserve activity, reachable controls, accessibility",
@@ -5438,7 +5662,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-android-tablet/f2f2f6794055165053a1-d61b5cd2cf307483b238",
+      "id": "mobile-android-tablet/e2e/experience.local.spec.ts#application background pauses play and resumes without losing state",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "application background pauses play and resumes without losing state",
@@ -5456,7 +5680,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-android-tablet/f2f2f6794055165053a1-0391662fd1b21af0b0f2",
+      "id": "mobile-android-tablet/e2e/experience.local.spec.ts#LIFE-01: reload after one assembly stage resumes without duplicate evidence",
       "run": "acceptance.json",
       "requirement": "LIFE-01",
       "scenario": "LIFE-01: reload after one assembly stage resumes without duplicate evidence",
@@ -5474,7 +5698,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-ipad/f2f2f6794055165053a1-e38a2251c3e07f7287ef",
+      "id": "mobile-ipad/e2e/experience.local.spec.ts#letters: complete three different mechanics and replay collection",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "letters: complete three different mechanics and replay collection",
@@ -5492,7 +5716,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-ipad/f2f2f6794055165053a1-d37f9e2276df806bd130",
+      "id": "mobile-ipad/e2e/experience.local.spec.ts#numbers: complete three different mechanics and replay collection",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "numbers: complete three different mechanics and replay collection",
@@ -5510,7 +5734,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-ipad/f2f2f6794055165053a1-a6eb219eae0eb62f4755",
+      "id": "mobile-ipad/e2e/experience.local.spec.ts#shapes: complete three different mechanics and replay collection",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "shapes: complete three different mechanics and replay collection",
@@ -5528,7 +5752,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-ipad/f2f2f6794055165053a1-f13835384c6fc5d5e652",
+      "id": "mobile-ipad/e2e/experience.local.spec.ts#colors: complete three different mechanics and replay collection",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "colors: complete three different mechanics and replay collection",
@@ -5546,7 +5770,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-ipad/f2f2f6794055165053a1-97f5d8e5c264a656643e",
+      "id": "mobile-ipad/e2e/experience.local.spec.ts#wrong answers, hints, double-submit and checkpoint survive reload",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "wrong answers, hints, double-submit and checkpoint survive reload",
@@ -5564,7 +5788,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-ipad/f2f2f6794055165053a1-97c9da5d1915721d694e",
+      "id": "mobile-ipad/e2e/experience.local.spec.ts#drag, outside release, cancellation and touch sizes",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "drag, outside release, cancellation and touch sizes",
@@ -5582,7 +5806,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-ipad/f2f2f6794055165053a1-36c34442e84ecdfc3811",
+      "id": "mobile-ipad/e2e/experience.local.spec.ts#rotation and paint are usable with taps and keyboard",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "rotation and paint are usable with taps and keyboard",
@@ -5600,7 +5824,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-ipad/f2f2f6794055165053a1-22a2e5ae504a66428478",
+      "id": "mobile-ipad/e2e/experience.local.spec.ts#portrait and landscape preserve activity, reachable controls, accessibility",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "portrait and landscape preserve activity, reachable controls, accessibility",
@@ -5618,7 +5842,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-ipad/f2f2f6794055165053a1-55aa2d860530fb7e2cdf",
+      "id": "mobile-ipad/e2e/experience.local.spec.ts#application background pauses play and resumes without losing state",
       "run": "acceptance.json",
       "requirement": "CUR-03",
       "scenario": "application background pauses play and resumes without losing state",
@@ -5636,7 +5860,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-ipad/f2f2f6794055165053a1-1d08e72a01fb3166fd2a",
+      "id": "mobile-ipad/e2e/experience.local.spec.ts#LIFE-01: reload after one assembly stage resumes without duplicate evidence",
       "run": "acceptance.json",
       "requirement": "LIFE-01",
       "scenario": "LIFE-01: reload after one assembly stage resumes without duplicate evidence",
@@ -5654,7 +5878,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-chromium/85c2bc79cc651223384f-c3d03b8cfee06b51667b",
+      "id": "local-chromium/e2e/games.local.spec.ts#completes quiz game: אותיות",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes quiz game: אותיות",
@@ -5678,7 +5902,7 @@
       ]
     },
     {
-      "id": "local-chromium/85c2bc79cc651223384f-0eed67fb875ea162d072",
+      "id": "local-chromium/e2e/games.local.spec.ts#completes quiz game: מספרים",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes quiz game: מספרים",
@@ -5702,7 +5926,7 @@
       ]
     },
     {
-      "id": "local-chromium/85c2bc79cc651223384f-4af1940237430df6073a",
+      "id": "local-chromium/e2e/games.local.spec.ts#completes quiz game: צורות",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes quiz game: צורות",
@@ -5726,7 +5950,7 @@
       ]
     },
     {
-      "id": "local-chromium/85c2bc79cc651223384f-9850d3c37323444749f4",
+      "id": "local-chromium/e2e/games.local.spec.ts#completes quiz game: צבעים",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes quiz game: צבעים",
@@ -5750,7 +5974,7 @@
       ]
     },
     {
-      "id": "local-chromium/85c2bc79cc651223384f-2c07ff410c1c98fa5f69",
+      "id": "local-chromium/e2e/games.local.spec.ts#marks feedback and advances only correct quiz answers automatically",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "marks feedback and advances only correct quiz answers automatically",
@@ -5774,7 +5998,7 @@
       ]
     },
     {
-      "id": "local-chromium/85c2bc79cc651223384f-caf06903113987129d80",
+      "id": "local-chromium/e2e/games.local.spec.ts#completes patterns game",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes patterns game",
@@ -5798,7 +6022,7 @@
       ]
     },
     {
-      "id": "local-chromium/85c2bc79cc651223384f-5d360ef8a4013edccd54",
+      "id": "local-chromium/e2e/games.local.spec.ts#completes sorting game",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes sorting game",
@@ -5824,7 +6048,7 @@
       ]
     },
     {
-      "id": "local-chromium/85c2bc79cc651223384f-4ff81ad157c11f518a46",
+      "id": "local-chromium/e2e/games.local.spec.ts#completes matching game",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes matching game",
@@ -5848,7 +6072,7 @@
       ]
     },
     {
-      "id": "local-chromium/85c2bc79cc651223384f-3f3789f8e5c1bb50a9f4",
+      "id": "local-chromium/e2e/games.local.spec.ts#completes memory game",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes memory game",
@@ -5872,7 +6096,7 @@
       ]
     },
     {
-      "id": "local-firefox/85c2bc79cc651223384f-2318a462a9a49736890c",
+      "id": "local-firefox/e2e/games.local.spec.ts#completes quiz game: אותיות",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes quiz game: אותיות",
@@ -5896,7 +6120,7 @@
       ]
     },
     {
-      "id": "local-firefox/85c2bc79cc651223384f-bffdb9f07339a1228464",
+      "id": "local-firefox/e2e/games.local.spec.ts#completes quiz game: מספרים",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes quiz game: מספרים",
@@ -5920,7 +6144,7 @@
       ]
     },
     {
-      "id": "local-firefox/85c2bc79cc651223384f-6f4b1b9887da6d4d16d0",
+      "id": "local-firefox/e2e/games.local.spec.ts#completes quiz game: צורות",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes quiz game: צורות",
@@ -5944,7 +6168,7 @@
       ]
     },
     {
-      "id": "local-firefox/85c2bc79cc651223384f-03830fb98fb49d1a1e99",
+      "id": "local-firefox/e2e/games.local.spec.ts#completes quiz game: צבעים",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes quiz game: צבעים",
@@ -5968,7 +6192,7 @@
       ]
     },
     {
-      "id": "local-firefox/85c2bc79cc651223384f-b728f3463b4809aedb4e",
+      "id": "local-firefox/e2e/games.local.spec.ts#marks feedback and advances only correct quiz answers automatically",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "marks feedback and advances only correct quiz answers automatically",
@@ -5992,7 +6216,7 @@
       ]
     },
     {
-      "id": "local-firefox/85c2bc79cc651223384f-40d13bd074b61b93fa32",
+      "id": "local-firefox/e2e/games.local.spec.ts#completes patterns game",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes patterns game",
@@ -6016,7 +6240,7 @@
       ]
     },
     {
-      "id": "local-firefox/85c2bc79cc651223384f-3f498a95f2856b9a5ed0",
+      "id": "local-firefox/e2e/games.local.spec.ts#completes sorting game",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes sorting game",
@@ -6040,7 +6264,7 @@
       ]
     },
     {
-      "id": "local-firefox/85c2bc79cc651223384f-2ec8f71c804e3651c09a",
+      "id": "local-firefox/e2e/games.local.spec.ts#completes matching game",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes matching game",
@@ -6064,7 +6288,7 @@
       ]
     },
     {
-      "id": "local-firefox/85c2bc79cc651223384f-ffa3bb987a8ce7cccd0a",
+      "id": "local-firefox/e2e/games.local.spec.ts#completes memory game",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes memory game",
@@ -6088,7 +6312,7 @@
       ]
     },
     {
-      "id": "local-webkit/85c2bc79cc651223384f-72d2bdcef6af4458492f",
+      "id": "local-webkit/e2e/games.local.spec.ts#completes quiz game: אותיות",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes quiz game: אותיות",
@@ -6112,7 +6336,7 @@
       ]
     },
     {
-      "id": "local-webkit/85c2bc79cc651223384f-8086fea7ae00109079c7",
+      "id": "local-webkit/e2e/games.local.spec.ts#completes quiz game: מספרים",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes quiz game: מספרים",
@@ -6136,7 +6360,7 @@
       ]
     },
     {
-      "id": "local-webkit/85c2bc79cc651223384f-24a79bac31b14276b5c3",
+      "id": "local-webkit/e2e/games.local.spec.ts#completes quiz game: צורות",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes quiz game: צורות",
@@ -6160,7 +6384,7 @@
       ]
     },
     {
-      "id": "local-webkit/85c2bc79cc651223384f-dcf5ef12afefb8b2133b",
+      "id": "local-webkit/e2e/games.local.spec.ts#completes quiz game: צבעים",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes quiz game: צבעים",
@@ -6184,7 +6408,7 @@
       ]
     },
     {
-      "id": "local-webkit/85c2bc79cc651223384f-b2f24b4b7fc9b5385257",
+      "id": "local-webkit/e2e/games.local.spec.ts#marks feedback and advances only correct quiz answers automatically",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "marks feedback and advances only correct quiz answers automatically",
@@ -6208,7 +6432,7 @@
       ]
     },
     {
-      "id": "local-webkit/85c2bc79cc651223384f-5f8ba174c156681c1ccd",
+      "id": "local-webkit/e2e/games.local.spec.ts#completes patterns game",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes patterns game",
@@ -6232,7 +6456,7 @@
       ]
     },
     {
-      "id": "local-webkit/85c2bc79cc651223384f-c35de036e2f08a47c48d",
+      "id": "local-webkit/e2e/games.local.spec.ts#completes sorting game",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes sorting game",
@@ -6256,7 +6480,7 @@
       ]
     },
     {
-      "id": "local-webkit/85c2bc79cc651223384f-d359b58a48f01d7d0967",
+      "id": "local-webkit/e2e/games.local.spec.ts#completes matching game",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes matching game",
@@ -6280,7 +6504,7 @@
       ]
     },
     {
-      "id": "local-webkit/85c2bc79cc651223384f-db693cbb9a08a376d484",
+      "id": "local-webkit/e2e/games.local.spec.ts#completes memory game",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes memory game",
@@ -6304,7 +6528,7 @@
       ]
     },
     {
-      "id": "mobile-chrome/85c2bc79cc651223384f-b46db46dcbce1e00d0df",
+      "id": "mobile-chrome/e2e/games.local.spec.ts#completes quiz game: אותיות",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes quiz game: אותיות",
@@ -6328,7 +6552,7 @@
       ]
     },
     {
-      "id": "mobile-chrome/85c2bc79cc651223384f-c5e9fd375a9a6718dbf4",
+      "id": "mobile-chrome/e2e/games.local.spec.ts#completes quiz game: מספרים",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes quiz game: מספרים",
@@ -6352,7 +6576,7 @@
       ]
     },
     {
-      "id": "mobile-chrome/85c2bc79cc651223384f-8438273e418191af31ba",
+      "id": "mobile-chrome/e2e/games.local.spec.ts#completes quiz game: צורות",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes quiz game: צורות",
@@ -6376,7 +6600,7 @@
       ]
     },
     {
-      "id": "mobile-chrome/85c2bc79cc651223384f-58c9c5fe89d03b31d292",
+      "id": "mobile-chrome/e2e/games.local.spec.ts#completes quiz game: צבעים",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes quiz game: צבעים",
@@ -6400,7 +6624,7 @@
       ]
     },
     {
-      "id": "mobile-chrome/85c2bc79cc651223384f-6229930a42fcc4fc4dc0",
+      "id": "mobile-chrome/e2e/games.local.spec.ts#marks feedback and advances only correct quiz answers automatically",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "marks feedback and advances only correct quiz answers automatically",
@@ -6424,7 +6648,7 @@
       ]
     },
     {
-      "id": "mobile-chrome/85c2bc79cc651223384f-fa2549228d2c5fb9df4e",
+      "id": "mobile-chrome/e2e/games.local.spec.ts#completes patterns game",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes patterns game",
@@ -6448,7 +6672,7 @@
       ]
     },
     {
-      "id": "mobile-chrome/85c2bc79cc651223384f-d14ecb4cda6cfacc6247",
+      "id": "mobile-chrome/e2e/games.local.spec.ts#completes sorting game",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes sorting game",
@@ -6472,7 +6696,7 @@
       ]
     },
     {
-      "id": "mobile-chrome/85c2bc79cc651223384f-26c939e0a60a0dd9ce1d",
+      "id": "mobile-chrome/e2e/games.local.spec.ts#completes matching game",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes matching game",
@@ -6496,7 +6720,7 @@
       ]
     },
     {
-      "id": "mobile-chrome/85c2bc79cc651223384f-2948d43e66ef8f1abe89",
+      "id": "mobile-chrome/e2e/games.local.spec.ts#completes memory game",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes memory game",
@@ -6520,7 +6744,7 @@
       ]
     },
     {
-      "id": "mobile-safari/85c2bc79cc651223384f-e1d0dd6217b75442f3a5",
+      "id": "mobile-safari/e2e/games.local.spec.ts#completes quiz game: אותיות",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes quiz game: אותיות",
@@ -6544,7 +6768,7 @@
       ]
     },
     {
-      "id": "mobile-safari/85c2bc79cc651223384f-1a85a1102919f636ae9f",
+      "id": "mobile-safari/e2e/games.local.spec.ts#completes quiz game: מספרים",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes quiz game: מספרים",
@@ -6568,7 +6792,7 @@
       ]
     },
     {
-      "id": "mobile-safari/85c2bc79cc651223384f-f66f4f0df13b21f9b278",
+      "id": "mobile-safari/e2e/games.local.spec.ts#completes quiz game: צורות",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes quiz game: צורות",
@@ -6592,7 +6816,7 @@
       ]
     },
     {
-      "id": "mobile-safari/85c2bc79cc651223384f-313580eb90b74cedb969",
+      "id": "mobile-safari/e2e/games.local.spec.ts#completes quiz game: צבעים",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes quiz game: צבעים",
@@ -6616,7 +6840,7 @@
       ]
     },
     {
-      "id": "mobile-safari/85c2bc79cc651223384f-47e571a59624ddade7c9",
+      "id": "mobile-safari/e2e/games.local.spec.ts#marks feedback and advances only correct quiz answers automatically",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "marks feedback and advances only correct quiz answers automatically",
@@ -6640,7 +6864,7 @@
       ]
     },
     {
-      "id": "mobile-safari/85c2bc79cc651223384f-36abbeb29bf7b0203641",
+      "id": "mobile-safari/e2e/games.local.spec.ts#completes patterns game",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes patterns game",
@@ -6664,7 +6888,7 @@
       ]
     },
     {
-      "id": "mobile-safari/85c2bc79cc651223384f-48e3c50dca6c690f1245",
+      "id": "mobile-safari/e2e/games.local.spec.ts#completes sorting game",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes sorting game",
@@ -6688,7 +6912,7 @@
       ]
     },
     {
-      "id": "mobile-safari/85c2bc79cc651223384f-4dfd4a8f7491992ab307",
+      "id": "mobile-safari/e2e/games.local.spec.ts#completes matching game",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes matching game",
@@ -6712,7 +6936,7 @@
       ]
     },
     {
-      "id": "mobile-safari/85c2bc79cc651223384f-a91877a872bc499c1274",
+      "id": "mobile-safari/e2e/games.local.spec.ts#completes memory game",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes memory game",
@@ -6736,7 +6960,7 @@
       ]
     },
     {
-      "id": "mobile-android-tablet/85c2bc79cc651223384f-605b8660bf3f382fcbf8",
+      "id": "mobile-android-tablet/e2e/games.local.spec.ts#completes quiz game: אותיות",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes quiz game: אותיות",
@@ -6760,7 +6984,7 @@
       ]
     },
     {
-      "id": "mobile-android-tablet/85c2bc79cc651223384f-68690bcabae274438e5b",
+      "id": "mobile-android-tablet/e2e/games.local.spec.ts#completes quiz game: מספרים",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes quiz game: מספרים",
@@ -6784,7 +7008,7 @@
       ]
     },
     {
-      "id": "mobile-android-tablet/85c2bc79cc651223384f-4e373fbabf9ea70657ba",
+      "id": "mobile-android-tablet/e2e/games.local.spec.ts#completes quiz game: צורות",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes quiz game: צורות",
@@ -6808,7 +7032,7 @@
       ]
     },
     {
-      "id": "mobile-android-tablet/85c2bc79cc651223384f-ec1e58dce6a28786d5c3",
+      "id": "mobile-android-tablet/e2e/games.local.spec.ts#completes quiz game: צבעים",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes quiz game: צבעים",
@@ -6832,7 +7056,7 @@
       ]
     },
     {
-      "id": "mobile-android-tablet/85c2bc79cc651223384f-043b47311763e971194a",
+      "id": "mobile-android-tablet/e2e/games.local.spec.ts#marks feedback and advances only correct quiz answers automatically",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "marks feedback and advances only correct quiz answers automatically",
@@ -6856,7 +7080,7 @@
       ]
     },
     {
-      "id": "mobile-android-tablet/85c2bc79cc651223384f-707c4f00fd8ef5c99004",
+      "id": "mobile-android-tablet/e2e/games.local.spec.ts#completes patterns game",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes patterns game",
@@ -6880,7 +7104,7 @@
       ]
     },
     {
-      "id": "mobile-android-tablet/85c2bc79cc651223384f-d707d2be25c08db7fd12",
+      "id": "mobile-android-tablet/e2e/games.local.spec.ts#completes sorting game",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes sorting game",
@@ -6904,7 +7128,7 @@
       ]
     },
     {
-      "id": "mobile-android-tablet/85c2bc79cc651223384f-c0c4b37cf26fb99a2bde",
+      "id": "mobile-android-tablet/e2e/games.local.spec.ts#completes matching game",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes matching game",
@@ -6928,7 +7152,7 @@
       ]
     },
     {
-      "id": "mobile-android-tablet/85c2bc79cc651223384f-20f8461dca55f3819aca",
+      "id": "mobile-android-tablet/e2e/games.local.spec.ts#completes memory game",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes memory game",
@@ -6952,7 +7176,7 @@
       ]
     },
     {
-      "id": "mobile-ipad/85c2bc79cc651223384f-c064fc157bf527742238",
+      "id": "mobile-ipad/e2e/games.local.spec.ts#completes quiz game: אותיות",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes quiz game: אותיות",
@@ -6976,7 +7200,7 @@
       ]
     },
     {
-      "id": "mobile-ipad/85c2bc79cc651223384f-8574841f99d6a24a23fb",
+      "id": "mobile-ipad/e2e/games.local.spec.ts#completes quiz game: מספרים",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes quiz game: מספרים",
@@ -7000,7 +7224,7 @@
       ]
     },
     {
-      "id": "mobile-ipad/85c2bc79cc651223384f-c0f7a9c05fc28b2a5947",
+      "id": "mobile-ipad/e2e/games.local.spec.ts#completes quiz game: צורות",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes quiz game: צורות",
@@ -7024,7 +7248,7 @@
       ]
     },
     {
-      "id": "mobile-ipad/85c2bc79cc651223384f-965a4a4a554d487abf91",
+      "id": "mobile-ipad/e2e/games.local.spec.ts#completes quiz game: צבעים",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes quiz game: צבעים",
@@ -7048,7 +7272,7 @@
       ]
     },
     {
-      "id": "mobile-ipad/85c2bc79cc651223384f-49c2aa14a03a2cbe83fa",
+      "id": "mobile-ipad/e2e/games.local.spec.ts#marks feedback and advances only correct quiz answers automatically",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "marks feedback and advances only correct quiz answers automatically",
@@ -7072,7 +7296,7 @@
       ]
     },
     {
-      "id": "mobile-ipad/85c2bc79cc651223384f-5ce06a13e936d966049d",
+      "id": "mobile-ipad/e2e/games.local.spec.ts#completes patterns game",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes patterns game",
@@ -7096,7 +7320,7 @@
       ]
     },
     {
-      "id": "mobile-ipad/85c2bc79cc651223384f-89e298a4b05ddeab4d41",
+      "id": "mobile-ipad/e2e/games.local.spec.ts#completes sorting game",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes sorting game",
@@ -7120,7 +7344,7 @@
       ]
     },
     {
-      "id": "mobile-ipad/85c2bc79cc651223384f-b593e79f15e3ec6e8a49",
+      "id": "mobile-ipad/e2e/games.local.spec.ts#completes matching game",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes matching game",
@@ -7144,7 +7368,7 @@
       ]
     },
     {
-      "id": "mobile-ipad/85c2bc79cc651223384f-8a58b69773a089100ae4",
+      "id": "mobile-ipad/e2e/games.local.spec.ts#completes memory game",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "completes memory game",
@@ -7168,7 +7392,7 @@
       ]
     },
     {
-      "id": "local-chromium/6292a41146a3ff56d8c2-8db38f792b6d9c7a5ae6",
+      "id": "local-chromium/e2e/security.local.spec.ts#does not use unsafe HTML/eval APIs in source or scripts",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "does not use unsafe HTML/eval APIs in source or scripts",
@@ -7186,7 +7410,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-firefox/6292a41146a3ff56d8c2-a524813d5c66d711f580",
+      "id": "local-firefox/e2e/security.local.spec.ts#does not use unsafe HTML/eval APIs in source or scripts",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "does not use unsafe HTML/eval APIs in source or scripts",
@@ -7204,7 +7428,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-webkit/6292a41146a3ff56d8c2-5c7f1bf35bca35469a29",
+      "id": "local-webkit/e2e/security.local.spec.ts#does not use unsafe HTML/eval APIs in source or scripts",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "does not use unsafe HTML/eval APIs in source or scripts",
@@ -7222,7 +7446,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-chrome/6292a41146a3ff56d8c2-900c771a4941f2f29506",
+      "id": "mobile-chrome/e2e/security.local.spec.ts#does not use unsafe HTML/eval APIs in source or scripts",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "does not use unsafe HTML/eval APIs in source or scripts",
@@ -7240,7 +7464,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-safari/6292a41146a3ff56d8c2-41a28de72e9573da8424",
+      "id": "mobile-safari/e2e/security.local.spec.ts#does not use unsafe HTML/eval APIs in source or scripts",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "does not use unsafe HTML/eval APIs in source or scripts",
@@ -7258,7 +7482,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-android-tablet/6292a41146a3ff56d8c2-261b5c4996ad99d9939b",
+      "id": "mobile-android-tablet/e2e/security.local.spec.ts#does not use unsafe HTML/eval APIs in source or scripts",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "does not use unsafe HTML/eval APIs in source or scripts",
@@ -7276,7 +7500,7 @@
       "previousRuns": []
     },
     {
-      "id": "mobile-ipad/6292a41146a3ff56d8c2-5f9334b699b8360190d7",
+      "id": "mobile-ipad/e2e/security.local.spec.ts#does not use unsafe HTML/eval APIs in source or scripts",
       "run": "acceptance.json",
       "requirement": "REG-01",
       "scenario": "does not use unsafe HTML/eval APIs in source or scripts",
@@ -7294,7 +7518,7 @@
       "previousRuns": []
     },
     {
-      "id": "local-chromium/678ae9a2faa5947c6700-454551c18647475f8873",
+      "id": "local-chromium/e2e/smoke.local.spec.ts#opens a focused welcome screen and renders all eight games",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "opens a focused welcome screen and renders all eight games",
@@ -7318,7 +7542,7 @@
       ]
     },
     {
-      "id": "local-chromium/678ae9a2faa5947c6700-25dc2d6e16245066acfd",
+      "id": "local-chromium/e2e/smoke.local.spec.ts#loads decorative videos without exposing playback controls",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "loads decorative videos without exposing playback controls",
@@ -7342,7 +7566,7 @@
       ]
     },
     {
-      "id": "local-chromium/678ae9a2faa5947c6700-524d8db08f6e1da3554e",
+      "id": "local-chromium/e2e/smoke.local.spec.ts#persists age, difficulty, and voice locally",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "persists age, difficulty, and voice locally",
@@ -7366,7 +7590,7 @@
       ]
     },
     {
-      "id": "local-chromium/678ae9a2faa5947c6700-50a300532200e7c01c93",
+      "id": "local-chromium/e2e/smoke.local.spec.ts#allows profile setup without a nickname or character preference",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "allows profile setup without a nickname or character preference",
@@ -7390,7 +7614,7 @@
       ]
     },
     {
-      "id": "local-chromium/678ae9a2faa5947c6700-60723371e225bea6b707",
+      "id": "local-chromium/e2e/smoke.local.spec.ts#creates an additional profile only after age and difficulty are chosen",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "creates an additional profile only after age and difficulty are chosen",
@@ -7414,7 +7638,7 @@
       ]
     },
     {
-      "id": "local-chromium/678ae9a2faa5947c6700-ca2112c8ce314dbdd285",
+      "id": "local-chromium/e2e/smoke.local.spec.ts#keeps legal links and full local deletion behind the parental gate",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "keeps legal links and full local deletion behind the parental gate",
@@ -7438,7 +7662,7 @@
       ]
     },
     {
-      "id": "local-chromium/678ae9a2faa5947c6700-0133d4f4e4f55e1855bb",
+      "id": "local-chromium/e2e/smoke.local.spec.ts#loads local JSON without third-party network requests",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "loads local JSON without third-party network requests",
@@ -7462,7 +7686,7 @@
       ]
     },
     {
-      "id": "local-chromium/678ae9a2faa5947c6700-5b53055b98f69be15113",
+      "id": "local-chromium/e2e/smoke.local.spec.ts#keeps the primary action visible at 320 by 568",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "keeps the primary action visible at 320 by 568",
@@ -7486,7 +7710,7 @@
       ]
     },
     {
-      "id": "local-firefox/678ae9a2faa5947c6700-dc3d1e66b4ca06722d02",
+      "id": "local-firefox/e2e/smoke.local.spec.ts#opens a focused welcome screen and renders all eight games",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "opens a focused welcome screen and renders all eight games",
@@ -7510,7 +7734,7 @@
       ]
     },
     {
-      "id": "local-firefox/678ae9a2faa5947c6700-27aa5a9bb8243b59c2e4",
+      "id": "local-firefox/e2e/smoke.local.spec.ts#loads decorative videos without exposing playback controls",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "loads decorative videos without exposing playback controls",
@@ -7534,7 +7758,7 @@
       ]
     },
     {
-      "id": "local-firefox/678ae9a2faa5947c6700-fe75029cf75b9af44ee5",
+      "id": "local-firefox/e2e/smoke.local.spec.ts#persists age, difficulty, and voice locally",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "persists age, difficulty, and voice locally",
@@ -7558,7 +7782,7 @@
       ]
     },
     {
-      "id": "local-firefox/678ae9a2faa5947c6700-a47f042fc2f9b2e32ea8",
+      "id": "local-firefox/e2e/smoke.local.spec.ts#allows profile setup without a nickname or character preference",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "allows profile setup without a nickname or character preference",
@@ -7582,7 +7806,7 @@
       ]
     },
     {
-      "id": "local-firefox/678ae9a2faa5947c6700-5388ada1427d32d78864",
+      "id": "local-firefox/e2e/smoke.local.spec.ts#creates an additional profile only after age and difficulty are chosen",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "creates an additional profile only after age and difficulty are chosen",
@@ -7606,7 +7830,7 @@
       ]
     },
     {
-      "id": "local-firefox/678ae9a2faa5947c6700-481a16b33d2d43a99394",
+      "id": "local-firefox/e2e/smoke.local.spec.ts#keeps legal links and full local deletion behind the parental gate",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "keeps legal links and full local deletion behind the parental gate",
@@ -7630,7 +7854,7 @@
       ]
     },
     {
-      "id": "local-firefox/678ae9a2faa5947c6700-044dc3cb691837268c92",
+      "id": "local-firefox/e2e/smoke.local.spec.ts#loads local JSON without third-party network requests",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "loads local JSON without third-party network requests",
@@ -7654,7 +7878,7 @@
       ]
     },
     {
-      "id": "local-firefox/678ae9a2faa5947c6700-2223d9d80718db6be042",
+      "id": "local-firefox/e2e/smoke.local.spec.ts#keeps the primary action visible at 320 by 568",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "keeps the primary action visible at 320 by 568",
@@ -7678,7 +7902,7 @@
       ]
     },
     {
-      "id": "local-webkit/678ae9a2faa5947c6700-370b19746ab1c1c461bb",
+      "id": "local-webkit/e2e/smoke.local.spec.ts#opens a focused welcome screen and renders all eight games",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "opens a focused welcome screen and renders all eight games",
@@ -7702,7 +7926,7 @@
       ]
     },
     {
-      "id": "local-webkit/678ae9a2faa5947c6700-b819833b5bccc93d66a5",
+      "id": "local-webkit/e2e/smoke.local.spec.ts#loads decorative videos without exposing playback controls",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "loads decorative videos without exposing playback controls",
@@ -7726,7 +7950,7 @@
       ]
     },
     {
-      "id": "local-webkit/678ae9a2faa5947c6700-cf7fb432636a5c653694",
+      "id": "local-webkit/e2e/smoke.local.spec.ts#persists age, difficulty, and voice locally",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "persists age, difficulty, and voice locally",
@@ -7750,7 +7974,7 @@
       ]
     },
     {
-      "id": "local-webkit/678ae9a2faa5947c6700-2ca74b4d4c3b820094e5",
+      "id": "local-webkit/e2e/smoke.local.spec.ts#allows profile setup without a nickname or character preference",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "allows profile setup without a nickname or character preference",
@@ -7774,7 +7998,7 @@
       ]
     },
     {
-      "id": "local-webkit/678ae9a2faa5947c6700-fec06f58b9fe68a773d5",
+      "id": "local-webkit/e2e/smoke.local.spec.ts#creates an additional profile only after age and difficulty are chosen",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "creates an additional profile only after age and difficulty are chosen",
@@ -7798,7 +8022,7 @@
       ]
     },
     {
-      "id": "local-webkit/678ae9a2faa5947c6700-cb9406f5bad193d7354c",
+      "id": "local-webkit/e2e/smoke.local.spec.ts#keeps legal links and full local deletion behind the parental gate",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "keeps legal links and full local deletion behind the parental gate",
@@ -7822,7 +8046,7 @@
       ]
     },
     {
-      "id": "local-webkit/678ae9a2faa5947c6700-277f70a7a184e48b3d10",
+      "id": "local-webkit/e2e/smoke.local.spec.ts#loads local JSON without third-party network requests",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "loads local JSON without third-party network requests",
@@ -7846,7 +8070,7 @@
       ]
     },
     {
-      "id": "local-webkit/678ae9a2faa5947c6700-bc0fc51c15977ce3c074",
+      "id": "local-webkit/e2e/smoke.local.spec.ts#keeps the primary action visible at 320 by 568",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "keeps the primary action visible at 320 by 568",
@@ -7870,7 +8094,7 @@
       ]
     },
     {
-      "id": "mobile-chrome/678ae9a2faa5947c6700-096ea2f20bf701ecec44",
+      "id": "mobile-chrome/e2e/smoke.local.spec.ts#opens a focused welcome screen and renders all eight games",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "opens a focused welcome screen and renders all eight games",
@@ -7894,7 +8118,7 @@
       ]
     },
     {
-      "id": "mobile-chrome/678ae9a2faa5947c6700-a881a84967e896dfc5eb",
+      "id": "mobile-chrome/e2e/smoke.local.spec.ts#loads decorative videos without exposing playback controls",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "loads decorative videos without exposing playback controls",
@@ -7918,7 +8142,7 @@
       ]
     },
     {
-      "id": "mobile-chrome/678ae9a2faa5947c6700-c4c87ed9fe16e01a1259",
+      "id": "mobile-chrome/e2e/smoke.local.spec.ts#persists age, difficulty, and voice locally",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "persists age, difficulty, and voice locally",
@@ -7942,7 +8166,7 @@
       ]
     },
     {
-      "id": "mobile-chrome/678ae9a2faa5947c6700-4b88dd7547a9fafe0abc",
+      "id": "mobile-chrome/e2e/smoke.local.spec.ts#allows profile setup without a nickname or character preference",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "allows profile setup without a nickname or character preference",
@@ -7966,7 +8190,7 @@
       ]
     },
     {
-      "id": "mobile-chrome/678ae9a2faa5947c6700-1be5d7e7ee2c89e02a81",
+      "id": "mobile-chrome/e2e/smoke.local.spec.ts#creates an additional profile only after age and difficulty are chosen",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "creates an additional profile only after age and difficulty are chosen",
@@ -7990,7 +8214,7 @@
       ]
     },
     {
-      "id": "mobile-chrome/678ae9a2faa5947c6700-5a07c82dbc74b2056bc4",
+      "id": "mobile-chrome/e2e/smoke.local.spec.ts#keeps legal links and full local deletion behind the parental gate",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "keeps legal links and full local deletion behind the parental gate",
@@ -8014,7 +8238,7 @@
       ]
     },
     {
-      "id": "mobile-chrome/678ae9a2faa5947c6700-0c7621aef1853ad8efe4",
+      "id": "mobile-chrome/e2e/smoke.local.spec.ts#loads local JSON without third-party network requests",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "loads local JSON without third-party network requests",
@@ -8038,7 +8262,7 @@
       ]
     },
     {
-      "id": "mobile-chrome/678ae9a2faa5947c6700-b03d74a27a1cdd05525c",
+      "id": "mobile-chrome/e2e/smoke.local.spec.ts#keeps the primary action visible at 320 by 568",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "keeps the primary action visible at 320 by 568",
@@ -8062,7 +8286,7 @@
       ]
     },
     {
-      "id": "mobile-safari/678ae9a2faa5947c6700-c49fbfe23aec116c2c55",
+      "id": "mobile-safari/e2e/smoke.local.spec.ts#opens a focused welcome screen and renders all eight games",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "opens a focused welcome screen and renders all eight games",
@@ -8086,7 +8310,7 @@
       ]
     },
     {
-      "id": "mobile-safari/678ae9a2faa5947c6700-5c318115e24c225cf4d8",
+      "id": "mobile-safari/e2e/smoke.local.spec.ts#loads decorative videos without exposing playback controls",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "loads decorative videos without exposing playback controls",
@@ -8110,7 +8334,7 @@
       ]
     },
     {
-      "id": "mobile-safari/678ae9a2faa5947c6700-e5004aec7a417cf5fdd0",
+      "id": "mobile-safari/e2e/smoke.local.spec.ts#persists age, difficulty, and voice locally",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "persists age, difficulty, and voice locally",
@@ -8134,7 +8358,7 @@
       ]
     },
     {
-      "id": "mobile-safari/678ae9a2faa5947c6700-e7e674e0df4e9c5fd0dd",
+      "id": "mobile-safari/e2e/smoke.local.spec.ts#allows profile setup without a nickname or character preference",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "allows profile setup without a nickname or character preference",
@@ -8158,7 +8382,7 @@
       ]
     },
     {
-      "id": "mobile-safari/678ae9a2faa5947c6700-aece9231a9946709383e",
+      "id": "mobile-safari/e2e/smoke.local.spec.ts#creates an additional profile only after age and difficulty are chosen",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "creates an additional profile only after age and difficulty are chosen",
@@ -8182,7 +8406,7 @@
       ]
     },
     {
-      "id": "mobile-safari/678ae9a2faa5947c6700-98be77dbd045e26a2f5a",
+      "id": "mobile-safari/e2e/smoke.local.spec.ts#keeps legal links and full local deletion behind the parental gate",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "keeps legal links and full local deletion behind the parental gate",
@@ -8206,7 +8430,7 @@
       ]
     },
     {
-      "id": "mobile-safari/678ae9a2faa5947c6700-e326e0e2bb3698086d32",
+      "id": "mobile-safari/e2e/smoke.local.spec.ts#loads local JSON without third-party network requests",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "loads local JSON without third-party network requests",
@@ -8230,7 +8454,7 @@
       ]
     },
     {
-      "id": "mobile-safari/678ae9a2faa5947c6700-4f90f195f8f0c79ec67f",
+      "id": "mobile-safari/e2e/smoke.local.spec.ts#keeps the primary action visible at 320 by 568",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "keeps the primary action visible at 320 by 568",
@@ -8254,7 +8478,7 @@
       ]
     },
     {
-      "id": "mobile-android-tablet/678ae9a2faa5947c6700-94040dba17e37e347841",
+      "id": "mobile-android-tablet/e2e/smoke.local.spec.ts#opens a focused welcome screen and renders all eight games",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "opens a focused welcome screen and renders all eight games",
@@ -8278,7 +8502,7 @@
       ]
     },
     {
-      "id": "mobile-android-tablet/678ae9a2faa5947c6700-d0d7f90e351696750652",
+      "id": "mobile-android-tablet/e2e/smoke.local.spec.ts#loads decorative videos without exposing playback controls",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "loads decorative videos without exposing playback controls",
@@ -8302,7 +8526,7 @@
       ]
     },
     {
-      "id": "mobile-android-tablet/678ae9a2faa5947c6700-60cce4348048ce33728c",
+      "id": "mobile-android-tablet/e2e/smoke.local.spec.ts#persists age, difficulty, and voice locally",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "persists age, difficulty, and voice locally",
@@ -8326,7 +8550,7 @@
       ]
     },
     {
-      "id": "mobile-android-tablet/678ae9a2faa5947c6700-4da2c2e8b4cd8bb5c741",
+      "id": "mobile-android-tablet/e2e/smoke.local.spec.ts#allows profile setup without a nickname or character preference",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "allows profile setup without a nickname or character preference",
@@ -8350,7 +8574,7 @@
       ]
     },
     {
-      "id": "mobile-android-tablet/678ae9a2faa5947c6700-6c056a00bc306cef8e27",
+      "id": "mobile-android-tablet/e2e/smoke.local.spec.ts#creates an additional profile only after age and difficulty are chosen",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "creates an additional profile only after age and difficulty are chosen",
@@ -8374,7 +8598,7 @@
       ]
     },
     {
-      "id": "mobile-android-tablet/678ae9a2faa5947c6700-deb66381a34d4ca4ad93",
+      "id": "mobile-android-tablet/e2e/smoke.local.spec.ts#keeps legal links and full local deletion behind the parental gate",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "keeps legal links and full local deletion behind the parental gate",
@@ -8398,7 +8622,7 @@
       ]
     },
     {
-      "id": "mobile-android-tablet/678ae9a2faa5947c6700-9c2c1f2ceff65296c730",
+      "id": "mobile-android-tablet/e2e/smoke.local.spec.ts#loads local JSON without third-party network requests",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "loads local JSON without third-party network requests",
@@ -8422,7 +8646,7 @@
       ]
     },
     {
-      "id": "mobile-android-tablet/678ae9a2faa5947c6700-c7329376de659a69de51",
+      "id": "mobile-android-tablet/e2e/smoke.local.spec.ts#keeps the primary action visible at 320 by 568",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "keeps the primary action visible at 320 by 568",
@@ -8446,7 +8670,7 @@
       ]
     },
     {
-      "id": "mobile-ipad/678ae9a2faa5947c6700-3d7cf10a8bbc06f3f529",
+      "id": "mobile-ipad/e2e/smoke.local.spec.ts#opens a focused welcome screen and renders all eight games",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "opens a focused welcome screen and renders all eight games",
@@ -8470,7 +8694,7 @@
       ]
     },
     {
-      "id": "mobile-ipad/678ae9a2faa5947c6700-f14c103fde7bda09c099",
+      "id": "mobile-ipad/e2e/smoke.local.spec.ts#loads decorative videos without exposing playback controls",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "loads decorative videos without exposing playback controls",
@@ -8494,7 +8718,7 @@
       ]
     },
     {
-      "id": "mobile-ipad/678ae9a2faa5947c6700-e4ec6c52b63f15e1f295",
+      "id": "mobile-ipad/e2e/smoke.local.spec.ts#persists age, difficulty, and voice locally",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "persists age, difficulty, and voice locally",
@@ -8518,7 +8742,7 @@
       ]
     },
     {
-      "id": "mobile-ipad/678ae9a2faa5947c6700-5dc9533688535bf87d63",
+      "id": "mobile-ipad/e2e/smoke.local.spec.ts#allows profile setup without a nickname or character preference",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "allows profile setup without a nickname or character preference",
@@ -8542,7 +8766,7 @@
       ]
     },
     {
-      "id": "mobile-ipad/678ae9a2faa5947c6700-34ff961c6f1602568208",
+      "id": "mobile-ipad/e2e/smoke.local.spec.ts#creates an additional profile only after age and difficulty are chosen",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "creates an additional profile only after age and difficulty are chosen",
@@ -8566,7 +8790,7 @@
       ]
     },
     {
-      "id": "mobile-ipad/678ae9a2faa5947c6700-6b6aee1da5ff4c762ebd",
+      "id": "mobile-ipad/e2e/smoke.local.spec.ts#keeps legal links and full local deletion behind the parental gate",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "keeps legal links and full local deletion behind the parental gate",
@@ -8590,7 +8814,7 @@
       ]
     },
     {
-      "id": "mobile-ipad/678ae9a2faa5947c6700-8b4f89d91f08f0d62ea8",
+      "id": "mobile-ipad/e2e/smoke.local.spec.ts#loads local JSON without third-party network requests",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "loads local JSON without third-party network requests",
@@ -8614,7 +8838,7 @@
       ]
     },
     {
-      "id": "mobile-ipad/678ae9a2faa5947c6700-8f99f2f68b1a7b4d64e4",
+      "id": "mobile-ipad/e2e/smoke.local.spec.ts#keeps the primary action visible at 320 by 568",
       "run": "repair.json",
       "requirement": "REG-01",
       "scenario": "keeps the primary action visible at 320 by 568",
@@ -8638,7 +8862,7 @@
       ]
     },
     {
-      "id": "local-chromium/b5d63855cc77d2674c68-4d3b1cc6fead9d651e14",
+      "id": "local-chromium/e2e/visual.local.spec.ts#keeps welcome and menu framed without overflow",
       "run": "repair.json",
       "requirement": "VIS-01",
       "scenario": "keeps welcome and menu framed without overflow",
@@ -8662,7 +8886,7 @@
       ]
     },
     {
-      "id": "local-chromium/b5d63855cc77d2674c68-838ba893ac66606d024e",
+      "id": "local-chromium/e2e/visual.local.spec.ts#renders earned and unearned stars as distinct non-gray rewards",
       "run": "repair.json",
       "requirement": "VIS-01",
       "scenario": "renders earned and unearned stars as distinct non-gray rewards",
@@ -8686,7 +8910,7 @@
       ]
     },
     {
-      "id": "local-firefox/b5d63855cc77d2674c68-681c456f84cbb8ecd8aa",
+      "id": "local-firefox/e2e/visual.local.spec.ts#keeps welcome and menu framed without overflow",
       "run": "repair.json",
       "requirement": "VIS-01",
       "scenario": "keeps welcome and menu framed without overflow",
@@ -8710,7 +8934,7 @@
       ]
     },
     {
-      "id": "local-firefox/b5d63855cc77d2674c68-1fb86a5e1a7d9d4676e5",
+      "id": "local-firefox/e2e/visual.local.spec.ts#renders earned and unearned stars as distinct non-gray rewards",
       "run": "repair.json",
       "requirement": "VIS-01",
       "scenario": "renders earned and unearned stars as distinct non-gray rewards",
@@ -8744,7 +8968,7 @@
       ]
     },
     {
-      "id": "local-webkit/b5d63855cc77d2674c68-e6924473a8f6a7d5e390",
+      "id": "local-webkit/e2e/visual.local.spec.ts#keeps welcome and menu framed without overflow",
       "run": "repair.json",
       "requirement": "VIS-01",
       "scenario": "keeps welcome and menu framed without overflow",
@@ -8768,7 +8992,7 @@
       ]
     },
     {
-      "id": "local-webkit/b5d63855cc77d2674c68-d6745cf5b16d6815b1ab",
+      "id": "local-webkit/e2e/visual.local.spec.ts#renders earned and unearned stars as distinct non-gray rewards",
       "run": "repair.json",
       "requirement": "VIS-01",
       "scenario": "renders earned and unearned stars as distinct non-gray rewards",
@@ -8802,7 +9026,7 @@
       ]
     },
     {
-      "id": "mobile-chrome/b5d63855cc77d2674c68-35d95311e48eb0a103fd",
+      "id": "mobile-chrome/e2e/visual.local.spec.ts#keeps welcome and menu framed without overflow",
       "run": "repair.json",
       "requirement": "VIS-01",
       "scenario": "keeps welcome and menu framed without overflow",
@@ -8826,7 +9050,7 @@
       ]
     },
     {
-      "id": "mobile-chrome/b5d63855cc77d2674c68-3081a646427f47b2520d",
+      "id": "mobile-chrome/e2e/visual.local.spec.ts#renders earned and unearned stars as distinct non-gray rewards",
       "run": "repair.json",
       "requirement": "VIS-01",
       "scenario": "renders earned and unearned stars as distinct non-gray rewards",
@@ -8860,7 +9084,7 @@
       ]
     },
     {
-      "id": "mobile-safari/b5d63855cc77d2674c68-90ebd95a7b27717fd82d",
+      "id": "mobile-safari/e2e/visual.local.spec.ts#keeps welcome and menu framed without overflow",
       "run": "repair.json",
       "requirement": "VIS-01",
       "scenario": "keeps welcome and menu framed without overflow",
@@ -8886,7 +9110,7 @@
       ]
     },
     {
-      "id": "mobile-safari/b5d63855cc77d2674c68-e7ddc72a32d36a6ae7c6",
+      "id": "mobile-safari/e2e/visual.local.spec.ts#renders earned and unearned stars as distinct non-gray rewards",
       "run": "repair.json",
       "requirement": "VIS-01",
       "scenario": "renders earned and unearned stars as distinct non-gray rewards",
@@ -8920,7 +9144,7 @@
       ]
     },
     {
-      "id": "mobile-android-tablet/b5d63855cc77d2674c68-240ca92a08d46ec3c0e7",
+      "id": "mobile-android-tablet/e2e/visual.local.spec.ts#keeps welcome and menu framed without overflow",
       "run": "repair.json",
       "requirement": "VIS-01",
       "scenario": "keeps welcome and menu framed without overflow",
@@ -8944,7 +9168,7 @@
       ]
     },
     {
-      "id": "mobile-android-tablet/b5d63855cc77d2674c68-d09a1ded040e8e677370",
+      "id": "mobile-android-tablet/e2e/visual.local.spec.ts#renders earned and unearned stars as distinct non-gray rewards",
       "run": "repair.json",
       "requirement": "VIS-01",
       "scenario": "renders earned and unearned stars as distinct non-gray rewards",
@@ -8978,7 +9202,7 @@
       ]
     },
     {
-      "id": "mobile-ipad/b5d63855cc77d2674c68-e5020e18814223b434ec",
+      "id": "mobile-ipad/e2e/visual.local.spec.ts#keeps welcome and menu framed without overflow",
       "run": "repair.json",
       "requirement": "VIS-01",
       "scenario": "keeps welcome and menu framed without overflow",
@@ -9002,7 +9226,7 @@
       ]
     },
     {
-      "id": "mobile-ipad/b5d63855cc77d2674c68-9bb61597f624430e97a4",
+      "id": "mobile-ipad/e2e/visual.local.spec.ts#renders earned and unearned stars as distinct non-gray rewards",
       "run": "repair.json",
       "requirement": "VIS-01",
       "scenario": "renders earned and unearned stars as distinct non-gray rewards",
@@ -9036,7 +9260,7 @@
       ]
     },
     {
-      "id": "adventure-performance/a64a8b5c6447558b1db9-c07636e66e1ef54233ea",
+      "id": "adventure-performance/e2e/adventure-performance.spec.ts#PERF-01: active animation and pointer-to-painted-feedback measurements",
       "run": "platform.json",
       "requirement": "PERF-01",
       "scenario": "PERF-01: active animation and pointer-to-painted-feedback measurements",
@@ -9054,7 +9278,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-offline/7f383eb763ba1900bf1c-7fd64f6a86df81303f53",
+      "id": "adventure-offline/e2e/adventure-offline.spec.ts#OFF-01 letters: prepared production world and narration survive offline reload",
       "run": "platform.json",
       "requirement": "OFF-01",
       "scenario": "OFF-01 letters: prepared production world and narration survive offline reload",
@@ -9072,7 +9296,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-offline/7f383eb763ba1900bf1c-b1d8bc6df5c00fe2c047",
+      "id": "adventure-offline/e2e/adventure-offline.spec.ts#OFF-01 numbers: prepared production world and narration survive offline reload",
       "run": "platform.json",
       "requirement": "OFF-01",
       "scenario": "OFF-01 numbers: prepared production world and narration survive offline reload",
@@ -9090,7 +9314,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-offline/7f383eb763ba1900bf1c-304f4ea0e1672a74f277",
+      "id": "adventure-offline/e2e/adventure-offline.spec.ts#OFF-01 shapes: prepared production world and narration survive offline reload",
       "run": "platform.json",
       "requirement": "OFF-01",
       "scenario": "OFF-01 shapes: prepared production world and narration survive offline reload",
@@ -9108,7 +9332,7 @@
       "previousRuns": []
     },
     {
-      "id": "adventure-offline/7f383eb763ba1900bf1c-28446b071b20cc29228b",
+      "id": "adventure-offline/e2e/adventure-offline.spec.ts#OFF-01 colors: prepared production world and narration survive offline reload",
       "run": "platform.json",
       "requirement": "OFF-01",
       "scenario": "OFF-01 colors: prepared production world and narration survive offline reload",

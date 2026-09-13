@@ -5,7 +5,7 @@ import type { AdventureMission } from "../../src/types/adventure.types";
 import type { AccessibilitySettings, Age, Difficulty } from "../../src/types";
 import { openGame, selectGameMode } from "./helpers";
 
-export async function openAdventure(
+export async function openAdventureIntro(
   page: Page,
   mission: AdventureMission,
   age: Age = 4,
@@ -114,6 +114,11 @@ export async function openAdventure(
     ] as "אותיות",
   );
   await selectGameMode(page, "experience");
+}
+
+export async function openAdventure(...args: Parameters<typeof openAdventureIntro>) {
+  await openAdventureIntro(...args);
+  const [page] = args;
   // The app's asset loader has a 15-second recovery deadline. Wait long enough
   // to observe that state rather than failing at the default 10-second click.
   await page

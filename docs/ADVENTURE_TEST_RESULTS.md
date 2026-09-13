@@ -4,7 +4,7 @@ Report generated 2026-09-12T06:51:45.938Z. Original acceptance application/test 
 
 ## Result
 
-All available local acceptance checks passed after the corrections below. Across 409 unique browser scenarios, the latest actual results are **403 passed, 0 failed, 6 blocked/skipped duplicates**. There were 671 recorded executions including original failures and remedial reruns. The six skipped cases are duplicate star-reward screenshots on secondary projects; the identical deterministic case passed on Chromium. They are retained as blocked with their skip reason, never counted as passed.
+All available local acceptance checks passed after the corrections below. Across 409 unique browser scenarios, the latest actual results are **403 passed, 0 failed, 6 blocked/skipped duplicates**. There were 713 recorded executions including original failures and remedial reruns. The six skipped cases are duplicate star-reward screenshots on secondary projects; the identical deterministic case passed on Chromium. They are retained as blocked with their skip reason, never counted as passed.
 
 | Browser run | Passed | Failed | Skipped | Global runner errors |
 |---|---:|---:|---:|---:|
@@ -13,6 +13,7 @@ All available local acceptance checks passed after the corrections below. Across
 | visual.json | 28 | 0 | 0 | 0 |
 | platform.json | 15 | 0 | 0 | 0 |
 | ci-repair.json | 35 | 0 | 0 | 0 |
+| recovery.json | 42 | 0 | 0 | 0 |
 
 The initial matrix had 42 console-guard failures caused by suppressed service-worker registration, one sorting test synchronization failure, and one real iPhone menu overflow. All affected scenarios were actually repeated after correction. Two WebKit workers also required forced teardown (three reported runner errors); the affected scenarios were repeated with reduced concurrency and clean reports. Earlier results and errors remain in the [scenario register](qa/adventure-v2/cases.json) and [defect history](qa/adventure-v2/DEFECTS.md).
 
@@ -61,3 +62,5 @@ The branch is codex/experiential-games-redesign. Upload and PR creation are auth
 ## Post-upload CI corrections
 
 The first uploaded revision passed web gates, iOS simulator compilation and three browser shards. Android stopped before Gradle with a missing executable bit; two Firefox/Linux geometry comparisons failed on floating-point noise below 0.001 CSS px. The corrective commit changes the Git executable mode and test comparison precision, with no application-bundle change. All 35 affected local browser/device scenarios passed again. See [CI evidence and corrections](qa/adventure-v2/CI.md) and the [PR CI section](https://github.com/NirShloman/kids-learning-adventure/pull/2) for the final checked revision and live run results.
+
+The subsequent CI run passed every job, but inspection found two recovery scenarios that required one retry. A sequential recovery fixture replaced the concurrent navigation/assertion. Recovery plus ordinary board entry then passed three times in all seven local configurations (42 executions of 14 scenarios); repetitions count as additional evidence, not extra unique coverage. CI now rejects flaky tests even when a retry succeeds. The final strict CI outcome is recorded in the PR.

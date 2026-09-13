@@ -5,7 +5,7 @@ test.use({ serviceWorkers: "block" });
 import AxeBuilder from "@axe-core/playwright";
 import { adventureMissions } from "../../src/content/adventureMissions";
 import { missionSteps } from "../../src/components/games/experience/adventureEngine";
-import { openAdventure } from "./adventure-helpers";
+import { openAdventure, openAdventureIntro } from "./adventure-helpers";
 import { installConsoleErrorGuard } from "./helpers";
 
 test("COL-01: finger paint stays clipped, survives cancellation and requires a choice", async ({
@@ -96,14 +96,16 @@ test("ERR-01: unavailable artwork offers a working retry", async ({ page }) => {
   await page.route("**/assets/experience/v2/numbers.webp", (route) =>
     broken ? route.abort() : route.continue(),
   );
-  const entering = openAdventure(
+  await openAdventureIntro(
     page,
     adventureMissions.find((m) => m.id === "v2-number-breakfast")!,
   );
-  await expect(page.getByText("חלק מהתמונות עדיין לא נטענו.")).toBeVisible();
+  // Start the recovery assertion after navigation, and allow the loader's
+  // 15-second fallback deadline if WebKit delays the image error callback.
+  await expect(page.getByText("חלק מהתמונות עדיין לא נטענו.")).toBeVisible({timeout: 20_000});
   broken = false;
   await page.getByRole("button", { name: "ננסה שוב", exact: true }).click();
-  await entering;
+  await page.locator(".adventure-intro .adventure-primary").click();
   await expect(page.locator('[data-toy="food"]')).toBeVisible();
 });
 

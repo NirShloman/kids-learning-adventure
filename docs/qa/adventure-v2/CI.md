@@ -21,3 +21,11 @@ The two browser failures were enlarged-control geometry comparisons in Firefox/L
 - Repeat all five enlarged-control scenarios on all seven local browser/device configurations, then rerun CI on the correction commit. The application bundle is unchanged by these CI compatibility fixes.
 
 The final outcome is linked in the PR's CI section. Earlier failed runs remain available and are not relabeled as successful. Physical-device checks remain separate from successful simulator compilation and browser tests.
+
+## Revision 9c1ce569e1d5f5e3847792f80f15421b9b42536d
+
+[Web, Android and iOS gates](https://github.com/NirShloman/kids-learning-adventure/actions/runs/34715811309) all passed. Android executed all 232 Gradle tasks and uploaded the debug APK. [All four browser shards](https://github.com/NirShloman/kids-learning-adventure/actions/runs/34715811315) also finished successfully, but log review found two intermittent ERR-01 failures in iPhone/iPad simulations that passed on their first retry. The other 396 matrix cases passed directly; six duplicate screenshots were skipped. The additional smoke, performance and offline gates passed.
+
+The recovery assertion was launched concurrently with navigation, so its eight-second budget could expire before the app reached the deliberately broken image. The corrected test awaits the adventure shell, checks the error within the loader's actual fallback deadline, retries, and then starts play. No product assertion is removed, and no pending navigation promise is left behind. The shared ordinary-entry helper retains its original behavior and is exercised alongside repeated recovery cases.
+
+Recovery and ordinary entry subsequently passed three repetitions in each of the seven local configurations: 42 executions, zero failures. CI now enables `failOnFlakyTests`, retaining retries for diagnosis while rejecting a run that only succeeds on retry. The PR CI section links the subsequent strict run and its actual result.
