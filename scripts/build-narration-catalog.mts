@@ -48,14 +48,14 @@ for (const gameId of contentFiles) {
   for (const item of envelope.items) {
     const prompt = item.audioText ?? item.prompt;
     add('content', `${gameId}.${item.id}.prompt`, prompt);
-    if (typeof prompt === 'string') add('content', `${gameId}.${item.id}.first-prompt`, `${instruction} ${prompt}`);
+    if (typeof prompt === 'string' && !item.logic) add('content', `${gameId}.${item.id}.first-prompt`, `${instruction} ${prompt}`);
     // Sorting's `item` is decorative emoji; the spoken binding is `itemName`.
-    for (const field of ['right', 'leftValue', 'rightValue', 'itemName'] as const) {
+    for (const field of ['right', 'leftValue', 'rightValue', 'itemName', 'hint', 'explanation'] as const) {
       add('content', `${gameId}.${item.id}.${field}`, item[field]);
     }
     for (const option of item.options ?? []) {
       add('content', `${gameId}.${item.id}.option.${option.id}`, option.label);
-      add('dynamic', `${gameId}.${item.id}.hint.${option.id}`, `רמז: התשובה היא ${option.label}`);
+      if (!item.logic) add('dynamic', `${gameId}.${item.id}.hint.${option.id}`, `רמז: התשובה היא ${option.label}`);
     }
   }
 }
@@ -113,6 +113,8 @@ for (const mission of adventureMissions) {
 for (const entry of fixedNarrationEntries) add(entry.category === 'feedback' ? 'feedback' : 'interface', entry.id, entry.text);
 
 const sharedTexts = [
+  'הופכים שני קלפים ומחפשים זוג.', 'בוחרים כרטיס מכל צד ומחברים זוג.',
+  'הכרטיסים שונים. נזכור אותם וננסה שוב.', 'נביט שוב.',
   'מתחילים לשחק ולגלות עם ידע׳לה.', 'מתחילים לשחק', 'חזרה לתפריט המשחקים', 'חזרה למסך הפתיחה',
   'משחק חווייתי, נוגעים במקום ובפריטים כדי לשחק', 'טריוויה, בוחרים את התשובה הנכונה',
   'לשחק שוב', 'לשאלה הבאה', 'לרצף הבא', 'לפריט הבא', 'כל הכבוד!', 'מצוין!', 'אלוף/ה!', 'מעולה!',

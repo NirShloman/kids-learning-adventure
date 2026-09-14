@@ -6,6 +6,20 @@ export interface QuizOption {
   id: string;
   label: string;
   emoji?: string;
+  visualToken?: VisualToken;
+}
+
+export interface VisualToken {
+  kind: 'text' | 'emoji' | 'shape' | 'color' | 'quantity';
+  value: string;
+  label: string;
+  count?: number;
+  rotation?: number;
+}
+
+export interface QuestionScene {
+  kind: 'single' | 'row' | 'groups' | 'addition' | 'sequence';
+  items: VisualToken[];
 }
 
 export interface ContentItemBase {
@@ -20,6 +34,10 @@ export interface ContentItemBase {
   visualRole: 'stimulus' | 'context' | 'direct-match' | 'none';
   skillIds?: SkillId[];
   evidenceForm?: EvidenceForm;
+  hint?: string;
+  explanation?: string;
+  scene?: QuestionScene;
+  logic?: { rule: string; operands: Array<string | number> };
 }
 
 export interface QuizQuestion extends ContentItemBase {
@@ -35,6 +53,8 @@ export interface QuizQuestion extends ContentItemBase {
 }
 
 export interface MatchingPair extends ContentItemBase {
+  leftVisual?: VisualToken;
+  rightVisual?: VisualToken;
   left: string;
   right: string;
   leftImageAssetId?: ImageAssetId;
@@ -42,6 +62,8 @@ export interface MatchingPair extends ContentItemBase {
 }
 
 export interface MemoryPair extends ContentItemBase {
+  leftVisual?: VisualToken;
+  rightVisual?: VisualToken;
   leftValue: string;
   rightValue: string;
   leftImageAssetId?: ImageAssetId;
@@ -49,6 +71,7 @@ export interface MemoryPair extends ContentItemBase {
 }
 
 export interface MemoryCard extends ContentItemBase {
+  visualToken?: VisualToken;
   pairId: string;
   value: string;
   imageAssetId?: ImageAssetId;

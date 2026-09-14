@@ -1,3 +1,4 @@
+import { finishDetective, solveDetectiveStep } from './detective-helpers';
 import { expect, Locator, Page } from '@playwright/test';
 
 export type GameTitle = 'אותיות' | 'מספרים' | 'צורות' | 'צבעים' | 'התאמה' | 'זיכרון' | 'רצפים' | 'מיון וסיווג';
@@ -87,65 +88,16 @@ export async function expectNoUnavailableContent(page: Page) {
   await expect(page.getByText('התוכן לא נטען')).toHaveCount(0);
 }
 
-export async function completeChoiceGame(page: Page, optionTestId: string, nextButtonName: RegExp, answerCorrect = true) {
-  const answerValue = answerCorrect ? 'true' : 'false';
-  for (let index = 0; index < 15; index += 1) {
-    const summary = page.locator('.summary-card');
-    if (await summary.isVisible().catch(() => false)) return;
-    const answerOption = page.locator(`[data-testid="${optionTestId}"][data-correct="${answerValue}"]`).first();
-    if (await answerOption.count() === 0) {
-      await page.waitForFunction(
-        ({ testId, value }) => Boolean(document.querySelector('.summary-card') || document.querySelector(`[data-testid="${testId}"][data-correct="${value}"]`)),
-        { testId: optionTestId, value: answerValue }
-      );
-      if (await summary.isVisible().catch(() => false)) return;
-    }
-    await expect(answerOption).toBeVisible();
-    await expect(answerOption).toBeEnabled();
-    const statusBefore = await page.locator('.game-world__status small').textContent();
-    await activate(answerOption);
+export async function completeChoiceGame(page: Page, _optionTestId: string, _nextButtonName: RegExp, answerCorrect = true) {
+  for (let index = 0; index < 16; index++) {
+    if (await page.locator('.summary-card').isVisible().catch(() => false)) return;
     if (!answerCorrect) {
-      const nextButton = page.getByRole('button', { name: nextButtonName });
-      await expect(nextButton).toBeEnabled();
-      await activate(nextButton);
+      const wrong = page.locator('.detective-answer[data-correct="false"]:enabled').first();
+      if (await wrong.count()) await wrong.click();
     }
-    await page.waitForFunction(
-      ({ status }) => Boolean(document.querySelector('.summary-card') || document.querySelector('.game-world__status small')?.textContent !== status),
-      { status: statusBefore }
-    );
+    await solveDetectiveStep(page);
   }
   await expect(page.locator('.summary-card')).toBeVisible();
 }
-
-export async function completeMatchingGame(page: Page) {
-  const leftItems = page.locator('[data-testid="matching-left"]');
-  await expect(leftItems.first()).toBeVisible();
-  const total = await leftItems.count();
-  expect(total).toBeGreaterThan(0);
-  for (let index = 0; index < total; index += 1) {
-    const left = page.locator('[data-testid="matching-left"]:not(.matching-item--done)').first();
-    const pairId = await left.getAttribute('data-pair-id');
-    expect(pairId).toBeTruthy();
-    await activate(left);
-    await activate(page.locator(`[data-testid="matching-right"][data-pair-id="${pairId}"]`));
-    await page.waitForFunction(
-      ({ id }) => Boolean(document.querySelector('.summary-card') || document.querySelector(`[data-testid="matching-left"][data-pair-id="${id}"]`)?.classList.contains('matching-item--done')),
-      { id: pairId }
-    );
-  }
-  await expect(page.locator('.summary-card')).toBeVisible();
-}
-
-export async function completeMemoryGame(page: Page) {
-  const cards = page.locator('[data-testid="memory-card"]');
-  await expect(cards.first()).toBeVisible();
-  const pairIds = await cards.evaluateAll((items) => [...new Set(items.map((item) => item.getAttribute('data-pair-id')).filter(Boolean))]);
-  expect(pairIds.length).toBeGreaterThan(0);
-  for (const pairId of pairIds) {
-    const pairCards = page.locator(`[data-testid="memory-card"][data-pair-id="${pairId}"]`);
-    await activate(pairCards.nth(0));
-    await activate(pairCards.nth(1));
-    await page.waitForTimeout(520);
-  }
-  await expect(page.locator('.summary-card')).toBeVisible();
-}
+export async function completeMatchingGame(page: Page) { await finishDetective(page); }
+export async function completeMemoryGame(page: Page) { await finishDetective(page); }

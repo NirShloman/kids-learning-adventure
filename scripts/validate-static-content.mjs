@@ -1,6 +1,9 @@
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import Ajv2020 from 'ajv/dist/2020.js';
+import { validateSemantics } from './validate-detective-semantics.mjs';
+import { semanticSignature } from './generate-static-content.mjs';
+import { policy } from './content-facts.mjs';
 
 const games = ['letters', 'numbers', 'shapes', 'colors', 'matching', 'memory', 'patterns', 'sorting'];
 const ages = [3, 4, 5, 6];
@@ -17,9 +20,9 @@ const semanticSignatures = new Set();
 
 function normalize(value) { return String(value ?? '').normalize('NFKD').replace(/[\u0591-\u05C7]/g, '').replace(/\s+/g, ' ').trim().toLowerCase(); }
 function optionFor(item) { return item.options?.find((option) => option.id === item.correctOptionId); }
-function signature(gameId, item) { return createHash('sha256').update(`${gameId}:${item.taskFamily}:${item.conceptKey}:${item.variantKey}`).digest('hex'); }
+function signature(gameId, item) { return createHash('sha256').update(`${gameId}:${item.ages[0]}:${item.difficulty}:${item.taskFamily}:${item.conceptKey}:${item.variantKey}`).digest('hex'); }
 function validateOptions(item) {
-  if (!Array.isArray(item.options) || item.options.length !== 3) return errors.push(`${item.id}: exactly three options are required`);
+  if (!Array.isArray(item.options) || item.options.length !== (item.logic?.rule === 'compare' ? 2 : policy(item.ages[0], item.difficulty).choices)) return errors.push(`${item.id}: invalid number of options`);
   if (!optionFor(item)) errors.push(`${item.id}: correctOptionId does not exist`);
   const labels = item.options.map((option) => normalize(option.label));
   if (new Set(labels).size !== labels.length) errors.push(`${item.id}: duplicate option labels`);
@@ -27,7 +30,7 @@ function validateOptions(item) {
 function visualOverlapsAnswer(item) { const correct = optionFor(item); return Boolean(correct && item.visual && (normalize(item.visual) === normalize(correct.label) || item.visual === correct.emoji)); }
 function validateItem(gameId, item) {
   if (ids.has(item.id)) errors.push(`${item.id}: duplicate global id`); ids.add(item.id); allItems.push({ gameId, item });
-  if (!/^([a-z]+)-a[3-6]-(easy|medium|hard)-\d{3}$/.test(item.id)) errors.push(`${item.id}: invalid v2 id`);
+  if (!/^([a-z]+)-a[3-6]-(easy|medium|hard)-d\d{3}$/.test(item.id)) errors.push(`${item.id}: invalid detective id`);
   if (!Array.isArray(item.ages) || item.ages.length !== 1 || !ages.includes(item.ages[0])) errors.push(`${item.id}: item must have one supported age`);
   if (!difficulties.includes(item.difficulty)) errors.push(`${item.id}: invalid difficulty`);
   for (const key of ['taskFamily', 'conceptKey', 'variantKey']) if (!item[key]?.trim()) errors.push(`${item.id}: ${key} is required`);
@@ -37,6 +40,10 @@ function validateItem(gameId, item) {
   if (!Array.isArray(item.skillIds) || !item.skillIds.length) errors.push(`${item.id}: skillIds are required`);
   for (const skillId of item.skillIds ?? []) if (item.ages[0] < (targetAge[skillId] ?? 3)) errors.push(`${item.id}: ${skillId} is outside its target age`);
   const itemSignature = signature(gameId, item); if (semanticSignatures.has(itemSignature)) errors.push(`${item.id}: duplicate semantic challenge`); semanticSignatures.add(itemSignature);
+  const renderedSignature = `${gameId}:${item.ages[0]}:${item.difficulty}:${semanticSignature(item)}`;
+  if (semanticSignatures.has(renderedSignature)) errors.push(`${item.id}: duplicate rendered challenge`);
+  semanticSignatures.add(renderedSignature);
+  errors.push(...validateSemantics(item));
   if (['letters', 'numbers', 'shapes', 'colors'].includes(gameId)) { validateOptions(item); if (item.category !== gameId || !item.prompt?.trim() || !item.audioText?.trim()) errors.push(`${item.id}: invalid quiz payload`); }
   if (gameId === 'patterns') { validateOptions(item); if (!Array.isArray(item.sequence) || item.sequence.filter((value) => value === '?').length !== 1) errors.push(`${item.id}: pattern needs exactly one missing item`); }
   if (gameId === 'sorting') { validateOptions(item); if (!item.item?.trim() || !item.itemName?.trim()) errors.push(`${item.id}: sorting item is incomplete`); }
@@ -59,8 +66,10 @@ for (const { item } of allItems) {
   const review = reviewFile.reviews[item.id]; if (!review) continue;
   const hash = createHash('sha256').update(JSON.stringify(item)).digest('hex');
   if (review.contentHash !== hash) errors.push(`${item.id}: review hash does not match content`);
-  if (review.status !== 'ai-reviewed' || review.reviewerType !== 'ai-simulation' || review.provenance !== 'synthetic-focus-group-v1') errors.push(`${item.id}: transparent AI review is required`);
-  if (review.linguistic !== 'approved' || review.conceptual !== 'approved' || review.ageFit !== 'approved' || review.clarity !== 'approved' || review.visualLeak !== 'approved' || !Array.isArray(review.focusGroupLenses)) errors.push(`${item.id}: review gates are incomplete`);
+  if (!process.argv.includes('--unreviewed')) {
+    if (review.status !== 'ai-reviewed' || review.reviewerType !== 'ai-simulation' || review.provenance !== 'authored-semantic-review-v1') errors.push(`${item.id}: transparent AI review is required`);
+    if (review.linguistic !== 'approved' || review.conceptual !== 'approved' || review.ageFit !== 'approved' || review.clarity !== 'approved' || review.visualLeak !== 'approved' || !Array.isArray(review.focusGroupLenses)) errors.push(`${item.id}: review gates are incomplete`);
+  }
 }
 if (errors.length) { console.error(`Static content validation failed with ${errors.length} issue(s).`); errors.slice(0, 120).forEach((error) => console.error(error)); process.exitCode = 1; }
-else { console.log(`Validated ${allItems.length} AI-reviewed static content items across ${games.length} games.`); games.forEach((gameId) => console.log(`${gameId}: 480`)); }
+else { console.log(`Validated ${allItems.length} ${process.argv.includes('--unreviewed') ? 'structurally and semantically checked' : 'AI-reviewed'} static content items across ${games.length} games.`); games.forEach((gameId) => console.log(`${gameId}: 480`)); }

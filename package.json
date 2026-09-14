@@ -46,14 +46,16 @@
     "test:unit": "vitest run tests/unit",
     "test:integration": "vitest run tests/integration",
     "test:offline": "node scripts/offline-smoke.mjs",
-    "test:e2e": "playwright test --project=local-chromium --project=local-firefox --project=local-webkit --project=mobile-chrome --project=mobile-safari --project=mobile-android-tablet --project=mobile-ipad --project=adventure-content --project=adventure-touch --project=adventure-recordings",
+    "test:e2e": "playwright test --project=local-chromium --project=local-firefox --project=local-webkit --project=mobile-chrome --project=mobile-safari --project=mobile-android-tablet --project=mobile-ipad --project=adventure-content --project=adventure-touch --project=adventure-recordings --project=detective-matrix-phone --project=detective-matrix-tablet --project=detective-offline --project=detective-adaptive-phone --project=detective-adaptive-tablet",
     "test:e2e:smoke": "playwright test tests/e2e/smoke.local.spec.ts --project=local-chromium --project=mobile-chrome",
     "test:e2e:visual": "playwright test tests/e2e/experience-visual.local.spec.ts --project=local-chromium --project=mobile-chrome",
     "test:e2e:ui": "playwright test --ui",
     "test:e2e:local": "playwright test --project=local-chromium --project=local-firefox --project=local-webkit --project=mobile-chrome --project=mobile-safari --project=mobile-android-tablet --project=mobile-ipad",
     "test:e2e:debug": "playwright test --project=local-chromium --debug",
     "test:adventure:offline": "node scripts/run-adventure-offline.mjs",
-    "test:adventure:performance": "playwright test --project=adventure-performance --workers=1"
+    "test:adventure:performance": "playwright test --project=adventure-performance --workers=1",
+    "test:detectives": "playwright test --project=detective-matrix-phone --project=detective-matrix-tablet",
+    "test:detectives:offline": "node scripts/run-detective-offline.mjs"
   },
   "dependencies": {
     "@capacitor/android": "8.5.0",

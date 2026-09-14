@@ -1,7 +1,7 @@
 import { readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
 import { join, relative, sep } from 'node:path';
 
-const dist = 'dist';
+const dist = process.argv[2] ?? 'dist';
 const workerPath = join(dist, 'sw.js');
 const assets = ['/', '/index.html', '/manifest.webmanifest'];
 function visit(directory) {

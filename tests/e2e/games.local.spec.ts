@@ -24,27 +24,17 @@ for (const title of quizGames) {
   });
 }
 
-test('marks feedback and advances only correct quiz answers automatically', async ({ page }) => {
-  await openLobby(page);
-  await openGame(page, 'אותיות');
-  await selectGameMode(page, 'quiz');
-
-  const status = page.locator('.game-world__status small');
-  const initialStatus = await status.textContent();
-  const correct = page.locator('[data-testid="quiz-option"][data-correct="true"]').first();
-  await correct.click();
-  await expect(correct).toHaveClass(/option-card--correct/);
-  await expect.poll(() => status.textContent()).not.toBe(initialStatus);
-
-  const nextStatus = await status.textContent();
-  const wrong = page.locator('[data-testid="quiz-option"][data-correct="false"]').first();
-  const nextCorrect = page.locator('[data-testid="quiz-option"][data-correct="true"]').first();
-  await wrong.click();
-  await expect(wrong).toHaveClass(/option-card--wrong/);
-  await expect(nextCorrect).toHaveClass(/option-card--correct/);
-  await expect(page.getByRole('button', { name: 'לשאלה הבאה' })).toBeEnabled();
-  await page.waitForTimeout(1100);
-  await expect(status).toHaveText(nextStatus ?? '');
+test('offers a hint after an error and always waits for explicit progression', async ({ page }) => {
+  await openLobby(page); await openGame(page, 'אותיות'); await selectGameMode(page, 'quiz');
+  const status = page.locator('.detective-chip'); const initial = await status.textContent();
+  await page.locator('[data-testid="quiz-option"][data-correct="true"]').click();
+  await expect(page.locator('.option-card--correct')).toBeVisible();
+  await page.waitForTimeout(1100); await expect(status).toHaveText(initial!);
+  await page.getByRole('button', { name: 'לשאלה הבאה', exact: true }).click();
+  await page.locator('[data-testid="quiz-option"][data-correct="false"]').first().click();
+  await expect(page.locator('.detective-feedback--hint')).toBeVisible();
+  await expect(page.locator('[data-testid="quiz-option"][data-correct="true"]')).toBeEnabled();
+  await expect(page.locator('.option-card--correct')).toHaveCount(0);
 });
 
 test('completes patterns game', async ({ page }) => {
@@ -81,10 +71,8 @@ test('completes memory game', async ({ page }) => {
   await expectNoUnavailableContent(page);
   const firstCard = page.locator('[data-testid="memory-card"]').first();
   await firstCard.click();
-  const front = firstCard.locator('.game-memory-card__front');
-  await expect(front).toBeVisible();
-  await expect(front).toHaveCSS('backface-visibility', 'hidden');
-  await expect(front).not.toHaveCSS('transform', 'none');
+  await expect(firstCard).toHaveAttribute('aria-pressed', 'true');
+  await expect(firstCard).not.toHaveClass(/detective-pair-card--hidden/);
   await completeMemoryGame(page);
   assertNoConsoleErrors();
 });

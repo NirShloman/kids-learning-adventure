@@ -13,7 +13,10 @@ export default defineConfig({
   },
   preview: {
     host: '0.0.0.0',
-    port: 4173
+    port: 4173,
+    // The production app is same-origin. Preview CORS adds Vary: Origin,
+    // making precached modules miss when reloaded offline as module requests.
+    cors: false
   },
   build: {
     target: 'es2020',

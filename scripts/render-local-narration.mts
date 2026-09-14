@@ -56,6 +56,22 @@ console.log(
     characters: missing.reduce((n, t) => n + t.length, 0),
   }),
 );
+const requestFlag = process.argv.indexOf('--request-file');
+if (requestFlag >= 0) {
+  const output = process.argv[requestFlag + 1];
+  if (!output || output.startsWith('--')) throw new Error('--request-file requires a path');
+  const missingSet = new Set(missing);
+  const characters = missing.reduce((sum, text) => sum + text.length, 0);
+  mkdirSync(dirname(resolve(output)), {recursive: true});
+  writeFileSync(output, JSON.stringify({
+    voice: config.voice, date: new Date().toISOString().slice(0, 10),
+    count: missing.length, characters, usdPerMillion: 30,
+    estimatedUsdBeforeTax: characters * 30 / 1_000_000,
+    pricingSource: 'https://cloud.google.com/text-to-speech/pricing',
+    pricingChecked: '2026-09-14', approval: 'pending',
+    entries: catalog.entries.filter((entry: {sourceText: string}) => missingSet.has(validateNarrationText(entry.sourceText)))
+  }, null, 2) + '\n');
+}
 if (!process.argv.includes("--apply")) process.exit(0);
 if (
   process.env.TTS_GENERATION_ENABLED !== "true" ||
