@@ -22,6 +22,9 @@ export default defineConfig({
   ],
   use: {
     baseURL,
+    // Functional tests do not need background cache workers. Keep real worker
+    // lifecycle coverage in the dedicated production offline projects below.
+    serviceWorkers: 'block',
     trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
     video: process.env.E2E_VIDEO === 'off' ? 'off' : 'retain-on-failure',
@@ -31,7 +34,7 @@ export default defineConfig({
   projects: [
     { name: 'detective-adaptive-phone', testMatch: /detective-adaptive\.spec\.ts/, use: { ...devices['Pixel 5'] } },
     { name: 'detective-adaptive-tablet', testMatch: /detective-adaptive\.spec\.ts/, use: { ...devices['iPad Pro 11'] } },
-    { name: 'detective-offline', testMatch: /detective-offline\.spec\.ts/, use: { ...devices['Desktop Chrome'], baseURL } },
+    { name: 'detective-offline', testMatch: /detective-offline\.spec\.ts/, use: { ...devices['Desktop Chrome'], baseURL, serviceWorkers: 'allow' } },
     { name: 'detective-matrix-phone', testMatch: /detective-matrix\.spec\.ts/, use: { ...devices['Pixel 5'], viewport: {width:393,height:851} } },
     { name: 'detective-matrix-tablet', testMatch: /detective-matrix\.spec\.ts/, use: { ...devices['iPad Pro 11'] } },
     {
@@ -53,7 +56,7 @@ export default defineConfig({
       name: 'adventure-offline',
       testMatch: /adventure-offline\.spec\.ts/,
       timeout: 180_000,
-      use: { ...devices['Desktop Chrome'], baseURL: 'http://127.0.0.1:4179' }
+      use: { ...devices['Desktop Chrome'], baseURL: 'http://127.0.0.1:4179', serviceWorkers: 'allow' }
     },
     {
       name: 'adventure-content',

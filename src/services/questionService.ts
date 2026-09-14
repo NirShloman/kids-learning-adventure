@@ -91,8 +91,8 @@ export async function getMemoryCards(age: Age, difficulty: Difficulty): Promise<
 
 export function pairCount(age: Age, difficulty: Difficulty): number {
   const byAge: Record<Age, Record<Difficulty, number>> = {
-    3: { easy: 3, medium: 4, hard: 4 },
-    4: { easy: 4, medium: 5, hard: 5 },
+    3: { easy: 2, medium: 3, hard: 4 },
+    4: { easy: 3, medium: 4, hard: 5 },
     5: { easy: 4, medium: 5, hard: 6 },
     6: { easy: 5, medium: 6, hard: 7 }
   };

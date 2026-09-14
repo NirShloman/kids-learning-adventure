@@ -6,7 +6,7 @@ import { validateSemantics } from '../../scripts/validate-detective-semantics.mj
 import { createProfile, getActiveProfile, saveDetectiveRound } from '../../src/services/learningStoreService';
 import { getRecentContent } from '../../src/services/learnerProgressService';
 import { newRound } from '../../src/components/games/detective/detectiveEngine';
-import { sounds } from '../../scripts/content-facts.mjs';
+import { sounds, policy } from '../../scripts/content-facts.mjs';
 import { clearStaticContentCache } from '../../src/services/staticContentRepository';
 import { getQuizQuestions, getPatternPuzzles, getSortingChallenges, getMatchingPairs, getMemoryCards, pairCount } from '../../src/services/questionService';
 
@@ -14,6 +14,21 @@ const games=['letters','numbers','shapes','colors','patterns','sorting','matchin
 const banks=Object.fromEntries(games.map(game=>[game,JSON.parse(readFileSync(`src/content/${game}.json`,'utf8')).items]));
 beforeEach(()=>{localStorage.clear();clearStaticContentCache();createProfile({age:4});});
 describe('detective content semantics',()=>{
+  it('changes the actual task between difficulty levels and reaches each authored number ceiling',()=>{
+    for(const age of [3,4,5,6] as const) {
+      for(const game of ['letters','numbers','shapes','colors','patterns','sorting']) {
+        const cell=(difficulty:string)=>banks[game].filter((item:any)=>item.ages[0]===age&&item.difficulty===difficulty).map(semanticSignature).sort();
+        expect(cell('easy'),`${game}/${age}: easy-medium`).not.toEqual(cell('medium'));
+        expect(cell('medium'),`${game}/${age}: medium-hard`).not.toEqual(cell('hard'));
+      }
+      expect(pairCount(age,'easy')).toBeLessThan(pairCount(age,'medium'));
+      expect(pairCount(age,'medium')).toBeLessThan(pairCount(age,'hard'));
+      for(const difficulty of ['easy','medium','hard'] as const) {
+        const counting=banks.numbers.filter((item:any)=>item.ages[0]===age&&item.difficulty===difficulty&&item.logic.rule==='count');
+        expect(Math.max(...counting.map((item:any)=>item.logic.operands[0]))).toBe(policy(age,difficulty).max);
+      }
+    }
+  });
   it('changes the checkpoint version when authored content changes',()=>{
     const original=generateContent(),version=versionForContent(original);
     expect(JSON.parse(readFileSync('src/content/letters.json','utf8')).contentVersion).toBe(version);

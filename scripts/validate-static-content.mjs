@@ -22,7 +22,7 @@ function normalize(value) { return String(value ?? '').normalize('NFKD').replace
 function optionFor(item) { return item.options?.find((option) => option.id === item.correctOptionId); }
 function signature(gameId, item) { return createHash('sha256').update(`${gameId}:${item.ages[0]}:${item.difficulty}:${item.taskFamily}:${item.conceptKey}:${item.variantKey}`).digest('hex'); }
 function validateOptions(item) {
-  if (!Array.isArray(item.options) || item.options.length !== (item.logic?.rule === 'compare' ? 2 : policy(item.ages[0], item.difficulty).choices)) return errors.push(`${item.id}: invalid number of options`);
+  if (!Array.isArray(item.options) || item.options.length !== (item.logic?.rule?.startsWith('compare') ? 2 : policy(item.ages[0], item.difficulty).choices)) return errors.push(`${item.id}: invalid number of options`);
   if (!optionFor(item)) errors.push(`${item.id}: correctOptionId does not exist`);
   const labels = item.options.map((option) => normalize(option.label));
   if (new Set(labels).size !== labels.length) errors.push(`${item.id}: duplicate option labels`);

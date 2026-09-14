@@ -129,7 +129,8 @@ export const groups = {
 export const objects = Object.entries(groups).flatMap(([category, entries]) =>
   entries.map(([name, emoji]) => ({ name, emoji, category })),
 );
-export const tokens = objects.slice(0, 8);
+// Each counting mark depicts one whole object, never a bunch, pair or slice.
+export const tokens = ['תפוח','בננה','תות','אגס','אפרסק','גזר','בצל','חציל'].map(name=>objects.find(object=>object.name===name));
 export const atom = (kind, value, label = value, extra = {}) => ({
   kind,
   value: String(value),
@@ -138,7 +139,7 @@ export const atom = (kind, value, label = value, extra = {}) => ({
 });
 export const objectAtom = (object) => atom("emoji", object.emoji, object.name);
 export const quantity = (count, token) =>
-  atom("quantity", token.emoji, `${count} ${token.name}`, { count });
+  atom("quantity", token.emoji, count===1?'פריט אחד':`${count} פריטים`, { count });
 export const shapeAtom = (shape, rotation = 0) =>
   atom("shape", shape.id, shape.name, { rotation });
 export const colorAtom = (color) => atom("color", color.hex, color.name);

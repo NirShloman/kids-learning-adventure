@@ -163,6 +163,9 @@
   border-radius: 22px;
   margin: 16px 0 24px;
 }
+.detective-stimulus--row {
+  flex-wrap: wrap;
+}
 .detective-stimulus-item {
   display: flex;
   align-items: center;
@@ -207,7 +210,8 @@
 }
 .detective-quantity {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(1em, 1fr));
+  width: calc(5em + 16px);
   gap: 4px;
   max-width: 100%;
   font-size: clamp(19px, 3.3vw, 31px);
@@ -517,7 +521,9 @@
   }
 }
 @media (max-width: 380px) {
-  .detective-answers {
+  .detective-answers,
+  .detective-answers[data-count="2"] {
+    grid-template-columns: 1fr;
     gap: 6px;
   }
   .detective-answer {
@@ -528,6 +534,7 @@
   }
   .detective-answer-label {
     font-size: 14px;
+    overflow-wrap: normal;
   }
   .detective-shape,
   .detective-swatch {
@@ -559,6 +566,14 @@
   }
   .detective-header h1 {
     font-size: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .detective-stimulus--groups {
+    flex-direction: column;
+  }
+  .detective-stimulus--groups .detective-stimulus-item {
+    width: 100%;
   }
 }
 @media (orientation: landscape) and (max-height: 600px) {
@@ -656,5 +671,15 @@
   .detective-game.game-world {
     padding: 10px;
     border-radius: 24px;
+  }
+}
+@media (max-width: 850px) {
+  .detective-stimulus--row {
+    gap: 10px;
+  }
+  .detective-stimulus--row .detective-shape,
+  .detective-stimulus--row .detective-swatch {
+    width: 56px;
+    height: 56px;
   }
 }

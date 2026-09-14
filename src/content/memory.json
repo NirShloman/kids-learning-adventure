@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "contentVersion": "2026.09.detectives.1.042f5f0c3b580704",
+  "contentVersion": "2026.09.detectives.1.05c6aa07e431d404",
   "gameId": "memory",
   "items": [
     {
@@ -1564,7 +1564,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:1:תפוח",
-      "variantKey": "1d492c4cd7bec848",
+      "variantKey": "7d56925508e2a0b9",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -1590,13 +1590,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "1 תפוח",
+        "label": "פריט אחד",
         "count": 1
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 1 מתאימה לכמות של 1 פריטים.",
       "leftValue": "1",
-      "rightValue": "1 תפוח"
+      "rightValue": "פריט אחד"
     },
     {
       "id": "memory-a3-medium-d004",
@@ -1679,7 +1679,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:2:תפוח",
-      "variantKey": "6418c1155ce3433a",
+      "variantKey": "33a8409c18ec9ede",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -1705,13 +1705,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "2 תפוח",
+        "label": "2 פריטים",
         "count": 2
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 2 מתאימה לכמות של 2 פריטים.",
       "leftValue": "2",
-      "rightValue": "2 תפוח"
+      "rightValue": "2 פריטים"
     },
     {
       "id": "memory-a3-medium-d007",
@@ -1794,7 +1794,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:3:תפוח",
-      "variantKey": "124d379fa1928d3e",
+      "variantKey": "5737ce10ba8e9cac",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -1820,13 +1820,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "3 תפוח",
+        "label": "3 פריטים",
         "count": 3
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 3 מתאימה לכמות של 3 פריטים.",
       "leftValue": "3",
-      "rightValue": "3 תפוח"
+      "rightValue": "3 פריטים"
     },
     {
       "id": "memory-a3-medium-d010",
@@ -1909,7 +1909,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:4:תפוח",
-      "variantKey": "e76f09e99ba62436",
+      "variantKey": "2574911df861a454",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -1935,13 +1935,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "4 תפוח",
+        "label": "4 פריטים",
         "count": 4
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 4 מתאימה לכמות של 4 פריטים.",
       "leftValue": "4",
-      "rightValue": "4 תפוח"
+      "rightValue": "4 פריטים"
     },
     {
       "id": "memory-a3-medium-d013",
@@ -2024,7 +2024,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:5:תפוח",
-      "variantKey": "3785e5fc64d84a93",
+      "variantKey": "fc72554effa76c29",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -2050,13 +2050,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "5 תפוח",
+        "label": "5 פריטים",
         "count": 5
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 5 מתאימה לכמות של 5 פריטים.",
       "leftValue": "5",
-      "rightValue": "5 תפוח"
+      "rightValue": "5 פריטים"
     },
     {
       "id": "memory-a3-medium-d016",
@@ -2139,7 +2139,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:1:בננה",
-      "variantKey": "153543238e2a3389",
+      "variantKey": "68a87d79e918046e",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -2165,13 +2165,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "1 בננה",
+        "label": "פריט אחד",
         "count": 1
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 1 מתאימה לכמות של 1 פריטים.",
       "leftValue": "1",
-      "rightValue": "1 בננה"
+      "rightValue": "פריט אחד"
     },
     {
       "id": "memory-a3-medium-d019",
@@ -2254,7 +2254,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:2:בננה",
-      "variantKey": "ee7731c7cb903924",
+      "variantKey": "121850af371832ba",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -2280,13 +2280,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "2 בננה",
+        "label": "2 פריטים",
         "count": 2
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 2 מתאימה לכמות של 2 פריטים.",
       "leftValue": "2",
-      "rightValue": "2 בננה"
+      "rightValue": "2 פריטים"
     },
     {
       "id": "memory-a3-medium-d022",
@@ -2369,7 +2369,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:3:בננה",
-      "variantKey": "358d2a8d02293f5d",
+      "variantKey": "15ed86f30145d0e7",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -2395,13 +2395,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "3 בננה",
+        "label": "3 פריטים",
         "count": 3
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 3 מתאימה לכמות של 3 פריטים.",
       "leftValue": "3",
-      "rightValue": "3 בננה"
+      "rightValue": "3 פריטים"
     },
     {
       "id": "memory-a3-medium-d025",
@@ -2484,7 +2484,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:4:בננה",
-      "variantKey": "39007e64365473af",
+      "variantKey": "c5297c7f5ac66cbd",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -2510,13 +2510,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "4 בננה",
+        "label": "4 פריטים",
         "count": 4
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 4 מתאימה לכמות של 4 פריטים.",
       "leftValue": "4",
-      "rightValue": "4 בננה"
+      "rightValue": "4 פריטים"
     },
     {
       "id": "memory-a3-medium-d028",
@@ -2599,7 +2599,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:5:בננה",
-      "variantKey": "ba72e90970f11b64",
+      "variantKey": "7b39672b512d640a",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -2625,13 +2625,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "5 בננה",
+        "label": "5 פריטים",
         "count": 5
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 5 מתאימה לכמות של 5 פריטים.",
       "leftValue": "5",
-      "rightValue": "5 בננה"
+      "rightValue": "5 פריטים"
     },
     {
       "id": "memory-a3-medium-d031",
@@ -2713,8 +2713,8 @@
         3
       ],
       "difficulty": "medium",
-      "conceptKey": "number-quantity:1:ענבים",
-      "variantKey": "2ff2d281e228e242",
+      "conceptKey": "number-quantity:1:תות",
+      "variantKey": "0317bde3270de047",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -2729,7 +2729,7 @@
         "rule": "number-quantity",
         "operands": [
           1,
-          "ענבים"
+          "תות"
         ]
       },
       "leftVisual": {
@@ -2739,14 +2739,14 @@
       },
       "rightVisual": {
         "kind": "quantity",
-        "value": "🍇",
-        "label": "1 ענבים",
+        "value": "🍓",
+        "label": "פריט אחד",
         "count": 1
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 1 מתאימה לכמות של 1 פריטים.",
       "leftValue": "1",
-      "rightValue": "1 ענבים"
+      "rightValue": "פריט אחד"
     },
     {
       "id": "memory-a3-medium-d034",
@@ -2828,8 +2828,8 @@
         3
       ],
       "difficulty": "medium",
-      "conceptKey": "number-quantity:2:ענבים",
-      "variantKey": "ccbc73264d92f08a",
+      "conceptKey": "number-quantity:2:תות",
+      "variantKey": "8d0e7cdc9b2587b7",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -2844,7 +2844,7 @@
         "rule": "number-quantity",
         "operands": [
           2,
-          "ענבים"
+          "תות"
         ]
       },
       "leftVisual": {
@@ -2854,14 +2854,14 @@
       },
       "rightVisual": {
         "kind": "quantity",
-        "value": "🍇",
-        "label": "2 ענבים",
+        "value": "🍓",
+        "label": "2 פריטים",
         "count": 2
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 2 מתאימה לכמות של 2 פריטים.",
       "leftValue": "2",
-      "rightValue": "2 ענבים"
+      "rightValue": "2 פריטים"
     },
     {
       "id": "memory-a3-medium-d037",
@@ -2943,8 +2943,8 @@
         3
       ],
       "difficulty": "medium",
-      "conceptKey": "number-quantity:3:ענבים",
-      "variantKey": "854bd208e9e4c7fb",
+      "conceptKey": "number-quantity:3:תות",
+      "variantKey": "e735dafdfe365393",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -2959,7 +2959,7 @@
         "rule": "number-quantity",
         "operands": [
           3,
-          "ענבים"
+          "תות"
         ]
       },
       "leftVisual": {
@@ -2969,14 +2969,14 @@
       },
       "rightVisual": {
         "kind": "quantity",
-        "value": "🍇",
-        "label": "3 ענבים",
+        "value": "🍓",
+        "label": "3 פריטים",
         "count": 3
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 3 מתאימה לכמות של 3 פריטים.",
       "leftValue": "3",
-      "rightValue": "3 ענבים"
+      "rightValue": "3 פריטים"
     },
     {
       "id": "memory-a3-medium-d040",
@@ -3096,7 +3096,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:1:תפוח",
-      "variantKey": "1d492c4cd7bec848",
+      "variantKey": "7d56925508e2a0b9",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -3122,13 +3122,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "1 תפוח",
+        "label": "פריט אחד",
         "count": 1
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 1 מתאימה לכמות של 1 פריטים.",
       "leftValue": "1",
-      "rightValue": "1 תפוח"
+      "rightValue": "פריט אחד"
     },
     {
       "id": "memory-a3-hard-d004",
@@ -3211,7 +3211,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:2:תפוח",
-      "variantKey": "6418c1155ce3433a",
+      "variantKey": "33a8409c18ec9ede",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -3237,13 +3237,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "2 תפוח",
+        "label": "2 פריטים",
         "count": 2
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 2 מתאימה לכמות של 2 פריטים.",
       "leftValue": "2",
-      "rightValue": "2 תפוח"
+      "rightValue": "2 פריטים"
     },
     {
       "id": "memory-a3-hard-d007",
@@ -3326,7 +3326,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:3:תפוח",
-      "variantKey": "124d379fa1928d3e",
+      "variantKey": "5737ce10ba8e9cac",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -3352,13 +3352,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "3 תפוח",
+        "label": "3 פריטים",
         "count": 3
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 3 מתאימה לכמות של 3 פריטים.",
       "leftValue": "3",
-      "rightValue": "3 תפוח"
+      "rightValue": "3 פריטים"
     },
     {
       "id": "memory-a3-hard-d010",
@@ -3441,7 +3441,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:4:תפוח",
-      "variantKey": "e76f09e99ba62436",
+      "variantKey": "2574911df861a454",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -3467,13 +3467,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "4 תפוח",
+        "label": "4 פריטים",
         "count": 4
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 4 מתאימה לכמות של 4 פריטים.",
       "leftValue": "4",
-      "rightValue": "4 תפוח"
+      "rightValue": "4 פריטים"
     },
     {
       "id": "memory-a3-hard-d013",
@@ -3556,7 +3556,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:5:תפוח",
-      "variantKey": "3785e5fc64d84a93",
+      "variantKey": "fc72554effa76c29",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -3582,13 +3582,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "5 תפוח",
+        "label": "5 פריטים",
         "count": 5
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 5 מתאימה לכמות של 5 פריטים.",
       "leftValue": "5",
-      "rightValue": "5 תפוח"
+      "rightValue": "5 פריטים"
     },
     {
       "id": "memory-a3-hard-d016",
@@ -3671,7 +3671,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:1:בננה",
-      "variantKey": "153543238e2a3389",
+      "variantKey": "68a87d79e918046e",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -3697,13 +3697,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "1 בננה",
+        "label": "פריט אחד",
         "count": 1
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 1 מתאימה לכמות של 1 פריטים.",
       "leftValue": "1",
-      "rightValue": "1 בננה"
+      "rightValue": "פריט אחד"
     },
     {
       "id": "memory-a3-hard-d019",
@@ -3786,7 +3786,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:2:בננה",
-      "variantKey": "ee7731c7cb903924",
+      "variantKey": "121850af371832ba",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -3812,13 +3812,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "2 בננה",
+        "label": "2 פריטים",
         "count": 2
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 2 מתאימה לכמות של 2 פריטים.",
       "leftValue": "2",
-      "rightValue": "2 בננה"
+      "rightValue": "2 פריטים"
     },
     {
       "id": "memory-a3-hard-d022",
@@ -3901,7 +3901,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:3:בננה",
-      "variantKey": "358d2a8d02293f5d",
+      "variantKey": "15ed86f30145d0e7",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -3927,13 +3927,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "3 בננה",
+        "label": "3 פריטים",
         "count": 3
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 3 מתאימה לכמות של 3 פריטים.",
       "leftValue": "3",
-      "rightValue": "3 בננה"
+      "rightValue": "3 פריטים"
     },
     {
       "id": "memory-a3-hard-d025",
@@ -4016,7 +4016,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:4:בננה",
-      "variantKey": "39007e64365473af",
+      "variantKey": "c5297c7f5ac66cbd",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -4042,13 +4042,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "4 בננה",
+        "label": "4 פריטים",
         "count": 4
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 4 מתאימה לכמות של 4 פריטים.",
       "leftValue": "4",
-      "rightValue": "4 בננה"
+      "rightValue": "4 פריטים"
     },
     {
       "id": "memory-a3-hard-d028",
@@ -4131,7 +4131,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:5:בננה",
-      "variantKey": "ba72e90970f11b64",
+      "variantKey": "7b39672b512d640a",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -4157,13 +4157,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "5 בננה",
+        "label": "5 פריטים",
         "count": 5
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 5 מתאימה לכמות של 5 פריטים.",
       "leftValue": "5",
-      "rightValue": "5 בננה"
+      "rightValue": "5 פריטים"
     },
     {
       "id": "memory-a3-hard-d031",
@@ -4245,8 +4245,8 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "number-quantity:1:ענבים",
-      "variantKey": "2ff2d281e228e242",
+      "conceptKey": "number-quantity:1:תות",
+      "variantKey": "0317bde3270de047",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -4261,7 +4261,7 @@
         "rule": "number-quantity",
         "operands": [
           1,
-          "ענבים"
+          "תות"
         ]
       },
       "leftVisual": {
@@ -4271,14 +4271,14 @@
       },
       "rightVisual": {
         "kind": "quantity",
-        "value": "🍇",
-        "label": "1 ענבים",
+        "value": "🍓",
+        "label": "פריט אחד",
         "count": 1
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 1 מתאימה לכמות של 1 פריטים.",
       "leftValue": "1",
-      "rightValue": "1 ענבים"
+      "rightValue": "פריט אחד"
     },
     {
       "id": "memory-a3-hard-d034",
@@ -4360,8 +4360,8 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "number-quantity:2:ענבים",
-      "variantKey": "ccbc73264d92f08a",
+      "conceptKey": "number-quantity:2:תות",
+      "variantKey": "8d0e7cdc9b2587b7",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -4376,7 +4376,7 @@
         "rule": "number-quantity",
         "operands": [
           2,
-          "ענבים"
+          "תות"
         ]
       },
       "leftVisual": {
@@ -4386,14 +4386,14 @@
       },
       "rightVisual": {
         "kind": "quantity",
-        "value": "🍇",
-        "label": "2 ענבים",
+        "value": "🍓",
+        "label": "2 פריטים",
         "count": 2
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 2 מתאימה לכמות של 2 פריטים.",
       "leftValue": "2",
-      "rightValue": "2 ענבים"
+      "rightValue": "2 פריטים"
     },
     {
       "id": "memory-a3-hard-d037",
@@ -4475,8 +4475,8 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "number-quantity:3:ענבים",
-      "variantKey": "854bd208e9e4c7fb",
+      "conceptKey": "number-quantity:3:תות",
+      "variantKey": "e735dafdfe365393",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -4491,7 +4491,7 @@
         "rule": "number-quantity",
         "operands": [
           3,
-          "ענבים"
+          "תות"
         ]
       },
       "leftVisual": {
@@ -4501,14 +4501,14 @@
       },
       "rightVisual": {
         "kind": "quantity",
-        "value": "🍇",
-        "label": "3 ענבים",
+        "value": "🍓",
+        "label": "3 פריטים",
         "count": 3
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 3 מתאימה לכמות של 3 פריטים.",
       "leftValue": "3",
-      "rightValue": "3 ענבים"
+      "rightValue": "3 פריטים"
     },
     {
       "id": "memory-a3-hard-d040",
@@ -6110,7 +6110,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:1:תפוח",
-      "variantKey": "1d492c4cd7bec848",
+      "variantKey": "7d56925508e2a0b9",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -6136,13 +6136,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "1 תפוח",
+        "label": "פריט אחד",
         "count": 1
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 1 מתאימה לכמות של 1 פריטים.",
       "leftValue": "1",
-      "rightValue": "1 תפוח"
+      "rightValue": "פריט אחד"
     },
     {
       "id": "memory-a4-medium-d004",
@@ -6227,7 +6227,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:2:תפוח",
-      "variantKey": "6418c1155ce3433a",
+      "variantKey": "33a8409c18ec9ede",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -6253,13 +6253,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "2 תפוח",
+        "label": "2 פריטים",
         "count": 2
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 2 מתאימה לכמות של 2 פריטים.",
       "leftValue": "2",
-      "rightValue": "2 תפוח"
+      "rightValue": "2 פריטים"
     },
     {
       "id": "memory-a4-medium-d007",
@@ -6344,7 +6344,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:3:תפוח",
-      "variantKey": "124d379fa1928d3e",
+      "variantKey": "5737ce10ba8e9cac",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -6370,13 +6370,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "3 תפוח",
+        "label": "3 פריטים",
         "count": 3
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 3 מתאימה לכמות של 3 פריטים.",
       "leftValue": "3",
-      "rightValue": "3 תפוח"
+      "rightValue": "3 פריטים"
     },
     {
       "id": "memory-a4-medium-d010",
@@ -6461,7 +6461,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:4:תפוח",
-      "variantKey": "e76f09e99ba62436",
+      "variantKey": "2574911df861a454",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -6487,13 +6487,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "4 תפוח",
+        "label": "4 פריטים",
         "count": 4
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 4 מתאימה לכמות של 4 פריטים.",
       "leftValue": "4",
-      "rightValue": "4 תפוח"
+      "rightValue": "4 פריטים"
     },
     {
       "id": "memory-a4-medium-d013",
@@ -6578,7 +6578,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:5:תפוח",
-      "variantKey": "3785e5fc64d84a93",
+      "variantKey": "fc72554effa76c29",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -6604,13 +6604,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "5 תפוח",
+        "label": "5 פריטים",
         "count": 5
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 5 מתאימה לכמות של 5 פריטים.",
       "leftValue": "5",
-      "rightValue": "5 תפוח"
+      "rightValue": "5 פריטים"
     },
     {
       "id": "memory-a4-medium-d016",
@@ -6695,7 +6695,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:6:בננה",
-      "variantKey": "ce53c8b03bf55189",
+      "variantKey": "e472b5686193b29f",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -6721,13 +6721,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "6 בננה",
+        "label": "6 פריטים",
         "count": 6
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 6 מתאימה לכמות של 6 פריטים.",
       "leftValue": "6",
-      "rightValue": "6 בננה"
+      "rightValue": "6 פריטים"
     },
     {
       "id": "memory-a4-medium-d019",
@@ -6812,7 +6812,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:7:בננה",
-      "variantKey": "41172ef526d87166",
+      "variantKey": "b8d66da30767aa99",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -6838,13 +6838,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "7 בננה",
+        "label": "7 פריטים",
         "count": 7
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 7 מתאימה לכמות של 7 פריטים.",
       "leftValue": "7",
-      "rightValue": "7 בננה"
+      "rightValue": "7 פריטים"
     },
     {
       "id": "memory-a4-medium-d022",
@@ -6929,7 +6929,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:8:בננה",
-      "variantKey": "8cf1f6b7a365d6a4",
+      "variantKey": "a90cb33ba793830f",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -6955,13 +6955,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "8 בננה",
+        "label": "8 פריטים",
         "count": 8
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 8 מתאימה לכמות של 8 פריטים.",
       "leftValue": "8",
-      "rightValue": "8 בננה"
+      "rightValue": "8 פריטים"
     },
     {
       "id": "memory-a4-medium-d025",
@@ -7046,7 +7046,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:9:בננה",
-      "variantKey": "83dcdb2e2ca9fcbf",
+      "variantKey": "fa5fb10f96db7b8b",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -7072,13 +7072,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "9 בננה",
+        "label": "9 פריטים",
         "count": 9
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 9 מתאימה לכמות של 9 פריטים.",
       "leftValue": "9",
-      "rightValue": "9 בננה"
+      "rightValue": "9 פריטים"
     },
     {
       "id": "memory-a4-medium-d028",
@@ -7163,7 +7163,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:10:בננה",
-      "variantKey": "c37e0ad2bd1af8bd",
+      "variantKey": "68c0933135938a99",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -7189,13 +7189,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "10 בננה",
+        "label": "10 פריטים",
         "count": 10
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 10 מתאימה לכמות של 10 פריטים.",
       "leftValue": "10",
-      "rightValue": "10 בננה"
+      "rightValue": "10 פריטים"
     },
     {
       "id": "memory-a4-medium-d031",
@@ -7279,8 +7279,8 @@
         4
       ],
       "difficulty": "medium",
-      "conceptKey": "number-quantity:1:ענבים",
-      "variantKey": "2ff2d281e228e242",
+      "conceptKey": "number-quantity:1:תות",
+      "variantKey": "0317bde3270de047",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -7295,7 +7295,7 @@
         "rule": "number-quantity",
         "operands": [
           1,
-          "ענבים"
+          "תות"
         ]
       },
       "leftVisual": {
@@ -7305,14 +7305,14 @@
       },
       "rightVisual": {
         "kind": "quantity",
-        "value": "🍇",
-        "label": "1 ענבים",
+        "value": "🍓",
+        "label": "פריט אחד",
         "count": 1
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 1 מתאימה לכמות של 1 פריטים.",
       "leftValue": "1",
-      "rightValue": "1 ענבים"
+      "rightValue": "פריט אחד"
     },
     {
       "id": "memory-a4-medium-d034",
@@ -7396,8 +7396,8 @@
         4
       ],
       "difficulty": "medium",
-      "conceptKey": "number-quantity:2:ענבים",
-      "variantKey": "ccbc73264d92f08a",
+      "conceptKey": "number-quantity:2:תות",
+      "variantKey": "8d0e7cdc9b2587b7",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -7412,7 +7412,7 @@
         "rule": "number-quantity",
         "operands": [
           2,
-          "ענבים"
+          "תות"
         ]
       },
       "leftVisual": {
@@ -7422,14 +7422,14 @@
       },
       "rightVisual": {
         "kind": "quantity",
-        "value": "🍇",
-        "label": "2 ענבים",
+        "value": "🍓",
+        "label": "2 פריטים",
         "count": 2
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 2 מתאימה לכמות של 2 פריטים.",
       "leftValue": "2",
-      "rightValue": "2 ענבים"
+      "rightValue": "2 פריטים"
     },
     {
       "id": "memory-a4-medium-d037",
@@ -7474,8 +7474,8 @@
         4
       ],
       "difficulty": "medium",
-      "conceptKey": "number-quantity:3:ענבים",
-      "variantKey": "854bd208e9e4c7fb",
+      "conceptKey": "number-quantity:3:תות",
+      "variantKey": "e735dafdfe365393",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -7490,7 +7490,7 @@
         "rule": "number-quantity",
         "operands": [
           3,
-          "ענבים"
+          "תות"
         ]
       },
       "leftVisual": {
@@ -7500,14 +7500,14 @@
       },
       "rightVisual": {
         "kind": "quantity",
-        "value": "🍇",
-        "label": "3 ענבים",
+        "value": "🍓",
+        "label": "3 פריטים",
         "count": 3
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 3 מתאימה לכמות של 3 פריטים.",
       "leftValue": "3",
-      "rightValue": "3 ענבים"
+      "rightValue": "3 פריטים"
     },
     {
       "id": "memory-a4-medium-d039",
@@ -7552,8 +7552,8 @@
         4
       ],
       "difficulty": "medium",
-      "conceptKey": "number-quantity:4:ענבים",
-      "variantKey": "c33ecfa77a0854dc",
+      "conceptKey": "number-quantity:4:תות",
+      "variantKey": "f2f5b61c96e36b62",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -7568,7 +7568,7 @@
         "rule": "number-quantity",
         "operands": [
           4,
-          "ענבים"
+          "תות"
         ]
       },
       "leftVisual": {
@@ -7578,14 +7578,14 @@
       },
       "rightVisual": {
         "kind": "quantity",
-        "value": "🍇",
-        "label": "4 ענבים",
+        "value": "🍓",
+        "label": "4 פריטים",
         "count": 4
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 4 מתאימה לכמות של 4 פריטים.",
       "leftValue": "4",
-      "rightValue": "4 ענבים"
+      "rightValue": "4 פריטים"
     },
     {
       "id": "memory-a4-hard-d001",
@@ -7670,7 +7670,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:1:תפוח",
-      "variantKey": "1d492c4cd7bec848",
+      "variantKey": "7d56925508e2a0b9",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -7696,13 +7696,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "1 תפוח",
+        "label": "פריט אחד",
         "count": 1
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 1 מתאימה לכמות של 1 פריטים.",
       "leftValue": "1",
-      "rightValue": "1 תפוח"
+      "rightValue": "פריט אחד"
     },
     {
       "id": "memory-a4-hard-d004",
@@ -7787,7 +7787,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:2:תפוח",
-      "variantKey": "6418c1155ce3433a",
+      "variantKey": "33a8409c18ec9ede",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -7813,13 +7813,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "2 תפוח",
+        "label": "2 פריטים",
         "count": 2
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 2 מתאימה לכמות של 2 פריטים.",
       "leftValue": "2",
-      "rightValue": "2 תפוח"
+      "rightValue": "2 פריטים"
     },
     {
       "id": "memory-a4-hard-d007",
@@ -7904,7 +7904,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:3:תפוח",
-      "variantKey": "124d379fa1928d3e",
+      "variantKey": "5737ce10ba8e9cac",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -7930,13 +7930,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "3 תפוח",
+        "label": "3 פריטים",
         "count": 3
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 3 מתאימה לכמות של 3 פריטים.",
       "leftValue": "3",
-      "rightValue": "3 תפוח"
+      "rightValue": "3 פריטים"
     },
     {
       "id": "memory-a4-hard-d010",
@@ -8021,7 +8021,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:4:תפוח",
-      "variantKey": "e76f09e99ba62436",
+      "variantKey": "2574911df861a454",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -8047,13 +8047,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "4 תפוח",
+        "label": "4 פריטים",
         "count": 4
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 4 מתאימה לכמות של 4 פריטים.",
       "leftValue": "4",
-      "rightValue": "4 תפוח"
+      "rightValue": "4 פריטים"
     },
     {
       "id": "memory-a4-hard-d013",
@@ -8138,7 +8138,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:5:תפוח",
-      "variantKey": "3785e5fc64d84a93",
+      "variantKey": "fc72554effa76c29",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -8164,13 +8164,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "5 תפוח",
+        "label": "5 פריטים",
         "count": 5
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 5 מתאימה לכמות של 5 פריטים.",
       "leftValue": "5",
-      "rightValue": "5 תפוח"
+      "rightValue": "5 פריטים"
     },
     {
       "id": "memory-a4-hard-d016",
@@ -8255,7 +8255,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:6:בננה",
-      "variantKey": "ce53c8b03bf55189",
+      "variantKey": "e472b5686193b29f",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -8281,13 +8281,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "6 בננה",
+        "label": "6 פריטים",
         "count": 6
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 6 מתאימה לכמות של 6 פריטים.",
       "leftValue": "6",
-      "rightValue": "6 בננה"
+      "rightValue": "6 פריטים"
     },
     {
       "id": "memory-a4-hard-d019",
@@ -8372,7 +8372,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:7:בננה",
-      "variantKey": "41172ef526d87166",
+      "variantKey": "b8d66da30767aa99",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -8398,13 +8398,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "7 בננה",
+        "label": "7 פריטים",
         "count": 7
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 7 מתאימה לכמות של 7 פריטים.",
       "leftValue": "7",
-      "rightValue": "7 בננה"
+      "rightValue": "7 פריטים"
     },
     {
       "id": "memory-a4-hard-d022",
@@ -8489,7 +8489,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:8:בננה",
-      "variantKey": "8cf1f6b7a365d6a4",
+      "variantKey": "a90cb33ba793830f",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -8515,13 +8515,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "8 בננה",
+        "label": "8 פריטים",
         "count": 8
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 8 מתאימה לכמות של 8 פריטים.",
       "leftValue": "8",
-      "rightValue": "8 בננה"
+      "rightValue": "8 פריטים"
     },
     {
       "id": "memory-a4-hard-d025",
@@ -8606,7 +8606,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:9:בננה",
-      "variantKey": "83dcdb2e2ca9fcbf",
+      "variantKey": "fa5fb10f96db7b8b",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -8632,13 +8632,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "9 בננה",
+        "label": "9 פריטים",
         "count": 9
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 9 מתאימה לכמות של 9 פריטים.",
       "leftValue": "9",
-      "rightValue": "9 בננה"
+      "rightValue": "9 פריטים"
     },
     {
       "id": "memory-a4-hard-d028",
@@ -8723,7 +8723,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:10:בננה",
-      "variantKey": "c37e0ad2bd1af8bd",
+      "variantKey": "68c0933135938a99",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -8749,13 +8749,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "10 בננה",
+        "label": "10 פריטים",
         "count": 10
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 10 מתאימה לכמות של 10 פריטים.",
       "leftValue": "10",
-      "rightValue": "10 בננה"
+      "rightValue": "10 פריטים"
     },
     {
       "id": "memory-a4-hard-d031",
@@ -8839,8 +8839,8 @@
         4
       ],
       "difficulty": "hard",
-      "conceptKey": "number-quantity:1:ענבים",
-      "variantKey": "2ff2d281e228e242",
+      "conceptKey": "number-quantity:1:תות",
+      "variantKey": "0317bde3270de047",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -8855,7 +8855,7 @@
         "rule": "number-quantity",
         "operands": [
           1,
-          "ענבים"
+          "תות"
         ]
       },
       "leftVisual": {
@@ -8865,14 +8865,14 @@
       },
       "rightVisual": {
         "kind": "quantity",
-        "value": "🍇",
-        "label": "1 ענבים",
+        "value": "🍓",
+        "label": "פריט אחד",
         "count": 1
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 1 מתאימה לכמות של 1 פריטים.",
       "leftValue": "1",
-      "rightValue": "1 ענבים"
+      "rightValue": "פריט אחד"
     },
     {
       "id": "memory-a4-hard-d034",
@@ -8956,8 +8956,8 @@
         4
       ],
       "difficulty": "hard",
-      "conceptKey": "number-quantity:2:ענבים",
-      "variantKey": "ccbc73264d92f08a",
+      "conceptKey": "number-quantity:2:תות",
+      "variantKey": "8d0e7cdc9b2587b7",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -8972,7 +8972,7 @@
         "rule": "number-quantity",
         "operands": [
           2,
-          "ענבים"
+          "תות"
         ]
       },
       "leftVisual": {
@@ -8982,14 +8982,14 @@
       },
       "rightVisual": {
         "kind": "quantity",
-        "value": "🍇",
-        "label": "2 ענבים",
+        "value": "🍓",
+        "label": "2 פריטים",
         "count": 2
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 2 מתאימה לכמות של 2 פריטים.",
       "leftValue": "2",
-      "rightValue": "2 ענבים"
+      "rightValue": "2 פריטים"
     },
     {
       "id": "memory-a4-hard-d037",
@@ -9034,8 +9034,8 @@
         4
       ],
       "difficulty": "hard",
-      "conceptKey": "number-quantity:3:ענבים",
-      "variantKey": "854bd208e9e4c7fb",
+      "conceptKey": "number-quantity:3:תות",
+      "variantKey": "e735dafdfe365393",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -9050,7 +9050,7 @@
         "rule": "number-quantity",
         "operands": [
           3,
-          "ענבים"
+          "תות"
         ]
       },
       "leftVisual": {
@@ -9060,14 +9060,14 @@
       },
       "rightVisual": {
         "kind": "quantity",
-        "value": "🍇",
-        "label": "3 ענבים",
+        "value": "🍓",
+        "label": "3 פריטים",
         "count": 3
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 3 מתאימה לכמות של 3 פריטים.",
       "leftValue": "3",
-      "rightValue": "3 ענבים"
+      "rightValue": "3 פריטים"
     },
     {
       "id": "memory-a4-hard-d039",
@@ -9112,8 +9112,8 @@
         4
       ],
       "difficulty": "hard",
-      "conceptKey": "number-quantity:4:ענבים",
-      "variantKey": "c33ecfa77a0854dc",
+      "conceptKey": "number-quantity:4:תות",
+      "variantKey": "f2f5b61c96e36b62",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -9128,7 +9128,7 @@
         "rule": "number-quantity",
         "operands": [
           4,
-          "ענבים"
+          "תות"
         ]
       },
       "leftVisual": {
@@ -9138,14 +9138,14 @@
       },
       "rightVisual": {
         "kind": "quantity",
-        "value": "🍇",
-        "label": "4 ענבים",
+        "value": "🍓",
+        "label": "4 פריטים",
         "count": 4
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 4 מתאימה לכמות של 4 פריטים.",
       "leftValue": "4",
-      "rightValue": "4 ענבים"
+      "rightValue": "4 פריטים"
     },
     {
       "id": "memory-a5-easy-d001",
@@ -10710,7 +10710,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:1:תפוח",
-      "variantKey": "1d492c4cd7bec848",
+      "variantKey": "7d56925508e2a0b9",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -10736,13 +10736,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "1 תפוח",
+        "label": "פריט אחד",
         "count": 1
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 1 מתאימה לכמות של 1 פריטים.",
       "leftValue": "1",
-      "rightValue": "1 תפוח"
+      "rightValue": "פריט אחד"
     },
     {
       "id": "memory-a5-medium-d004",
@@ -10827,7 +10827,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:2:תפוח",
-      "variantKey": "6418c1155ce3433a",
+      "variantKey": "33a8409c18ec9ede",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -10853,13 +10853,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "2 תפוח",
+        "label": "2 פריטים",
         "count": 2
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 2 מתאימה לכמות של 2 פריטים.",
       "leftValue": "2",
-      "rightValue": "2 תפוח"
+      "rightValue": "2 פריטים"
     },
     {
       "id": "memory-a5-medium-d007",
@@ -10944,7 +10944,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:3:תפוח",
-      "variantKey": "124d379fa1928d3e",
+      "variantKey": "5737ce10ba8e9cac",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -10970,13 +10970,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "3 תפוח",
+        "label": "3 פריטים",
         "count": 3
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 3 מתאימה לכמות של 3 פריטים.",
       "leftValue": "3",
-      "rightValue": "3 תפוח"
+      "rightValue": "3 פריטים"
     },
     {
       "id": "memory-a5-medium-d010",
@@ -11061,7 +11061,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:4:תפוח",
-      "variantKey": "e76f09e99ba62436",
+      "variantKey": "2574911df861a454",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -11087,13 +11087,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "4 תפוח",
+        "label": "4 פריטים",
         "count": 4
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 4 מתאימה לכמות של 4 פריטים.",
       "leftValue": "4",
-      "rightValue": "4 תפוח"
+      "rightValue": "4 פריטים"
     },
     {
       "id": "memory-a5-medium-d013",
@@ -11178,7 +11178,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:5:תפוח",
-      "variantKey": "3785e5fc64d84a93",
+      "variantKey": "fc72554effa76c29",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -11204,13 +11204,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "5 תפוח",
+        "label": "5 פריטים",
         "count": 5
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 5 מתאימה לכמות של 5 פריטים.",
       "leftValue": "5",
-      "rightValue": "5 תפוח"
+      "rightValue": "5 פריטים"
     },
     {
       "id": "memory-a5-medium-d016",
@@ -11295,7 +11295,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:6:בננה",
-      "variantKey": "ce53c8b03bf55189",
+      "variantKey": "e472b5686193b29f",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -11321,13 +11321,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "6 בננה",
+        "label": "6 פריטים",
         "count": 6
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 6 מתאימה לכמות של 6 פריטים.",
       "leftValue": "6",
-      "rightValue": "6 בננה"
+      "rightValue": "6 פריטים"
     },
     {
       "id": "memory-a5-medium-d019",
@@ -11412,7 +11412,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:7:בננה",
-      "variantKey": "41172ef526d87166",
+      "variantKey": "b8d66da30767aa99",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -11438,13 +11438,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "7 בננה",
+        "label": "7 פריטים",
         "count": 7
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 7 מתאימה לכמות של 7 פריטים.",
       "leftValue": "7",
-      "rightValue": "7 בננה"
+      "rightValue": "7 פריטים"
     },
     {
       "id": "memory-a5-medium-d022",
@@ -11529,7 +11529,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:8:בננה",
-      "variantKey": "8cf1f6b7a365d6a4",
+      "variantKey": "a90cb33ba793830f",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -11555,13 +11555,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "8 בננה",
+        "label": "8 פריטים",
         "count": 8
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 8 מתאימה לכמות של 8 פריטים.",
       "leftValue": "8",
-      "rightValue": "8 בננה"
+      "rightValue": "8 פריטים"
     },
     {
       "id": "memory-a5-medium-d025",
@@ -11646,7 +11646,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:9:בננה",
-      "variantKey": "83dcdb2e2ca9fcbf",
+      "variantKey": "fa5fb10f96db7b8b",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -11672,13 +11672,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "9 בננה",
+        "label": "9 פריטים",
         "count": 9
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 9 מתאימה לכמות של 9 פריטים.",
       "leftValue": "9",
-      "rightValue": "9 בננה"
+      "rightValue": "9 פריטים"
     },
     {
       "id": "memory-a5-medium-d028",
@@ -11763,7 +11763,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:10:בננה",
-      "variantKey": "c37e0ad2bd1af8bd",
+      "variantKey": "68c0933135938a99",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -11789,13 +11789,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "10 בננה",
+        "label": "10 פריטים",
         "count": 10
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 10 מתאימה לכמות של 10 פריטים.",
       "leftValue": "10",
-      "rightValue": "10 בננה"
+      "rightValue": "10 פריטים"
     },
     {
       "id": "memory-a5-medium-d031",
@@ -11879,8 +11879,8 @@
         5
       ],
       "difficulty": "medium",
-      "conceptKey": "number-quantity:11:ענבים",
-      "variantKey": "0de966d15dcd3544",
+      "conceptKey": "number-quantity:11:תות",
+      "variantKey": "d4ddef07820e8c81",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -11895,7 +11895,7 @@
         "rule": "number-quantity",
         "operands": [
           11,
-          "ענבים"
+          "תות"
         ]
       },
       "leftVisual": {
@@ -11905,14 +11905,14 @@
       },
       "rightVisual": {
         "kind": "quantity",
-        "value": "🍇",
-        "label": "11 ענבים",
+        "value": "🍓",
+        "label": "11 פריטים",
         "count": 11
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 11 מתאימה לכמות של 11 פריטים.",
       "leftValue": "11",
-      "rightValue": "11 ענבים"
+      "rightValue": "11 פריטים"
     },
     {
       "id": "memory-a5-medium-d034",
@@ -11996,8 +11996,8 @@
         5
       ],
       "difficulty": "medium",
-      "conceptKey": "number-quantity:12:ענבים",
-      "variantKey": "dc10ed9a7c2a99c0",
+      "conceptKey": "number-quantity:12:תות",
+      "variantKey": "5a2c37d036e25ab3",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -12012,7 +12012,7 @@
         "rule": "number-quantity",
         "operands": [
           12,
-          "ענבים"
+          "תות"
         ]
       },
       "leftVisual": {
@@ -12022,14 +12022,14 @@
       },
       "rightVisual": {
         "kind": "quantity",
-        "value": "🍇",
-        "label": "12 ענבים",
+        "value": "🍓",
+        "label": "12 פריטים",
         "count": 12
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 12 מתאימה לכמות של 12 פריטים.",
       "leftValue": "12",
-      "rightValue": "12 ענבים"
+      "rightValue": "12 פריטים"
     },
     {
       "id": "memory-a5-medium-d037",
@@ -12074,8 +12074,8 @@
         5
       ],
       "difficulty": "medium",
-      "conceptKey": "number-quantity:1:ענבים",
-      "variantKey": "2ff2d281e228e242",
+      "conceptKey": "number-quantity:1:תות",
+      "variantKey": "0317bde3270de047",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -12090,7 +12090,7 @@
         "rule": "number-quantity",
         "operands": [
           1,
-          "ענבים"
+          "תות"
         ]
       },
       "leftVisual": {
@@ -12100,14 +12100,14 @@
       },
       "rightVisual": {
         "kind": "quantity",
-        "value": "🍇",
-        "label": "1 ענבים",
+        "value": "🍓",
+        "label": "פריט אחד",
         "count": 1
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 1 מתאימה לכמות של 1 פריטים.",
       "leftValue": "1",
-      "rightValue": "1 ענבים"
+      "rightValue": "פריט אחד"
     },
     {
       "id": "memory-a5-medium-d039",
@@ -12152,8 +12152,8 @@
         5
       ],
       "difficulty": "medium",
-      "conceptKey": "number-quantity:2:ענבים",
-      "variantKey": "ccbc73264d92f08a",
+      "conceptKey": "number-quantity:2:תות",
+      "variantKey": "8d0e7cdc9b2587b7",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -12168,7 +12168,7 @@
         "rule": "number-quantity",
         "operands": [
           2,
-          "ענבים"
+          "תות"
         ]
       },
       "leftVisual": {
@@ -12178,14 +12178,14 @@
       },
       "rightVisual": {
         "kind": "quantity",
-        "value": "🍇",
-        "label": "2 ענבים",
+        "value": "🍓",
+        "label": "2 פריטים",
         "count": 2
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 2 מתאימה לכמות של 2 פריטים.",
       "leftValue": "2",
-      "rightValue": "2 ענבים"
+      "rightValue": "2 פריטים"
     },
     {
       "id": "memory-a5-hard-d001",
@@ -12270,7 +12270,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:1:תפוח",
-      "variantKey": "1d492c4cd7bec848",
+      "variantKey": "7d56925508e2a0b9",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -12296,13 +12296,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "1 תפוח",
+        "label": "פריט אחד",
         "count": 1
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 1 מתאימה לכמות של 1 פריטים.",
       "leftValue": "1",
-      "rightValue": "1 תפוח"
+      "rightValue": "פריט אחד"
     },
     {
       "id": "memory-a5-hard-d004",
@@ -12387,7 +12387,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:2:תפוח",
-      "variantKey": "6418c1155ce3433a",
+      "variantKey": "33a8409c18ec9ede",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -12413,13 +12413,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "2 תפוח",
+        "label": "2 פריטים",
         "count": 2
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 2 מתאימה לכמות של 2 פריטים.",
       "leftValue": "2",
-      "rightValue": "2 תפוח"
+      "rightValue": "2 פריטים"
     },
     {
       "id": "memory-a5-hard-d007",
@@ -12504,7 +12504,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:3:תפוח",
-      "variantKey": "124d379fa1928d3e",
+      "variantKey": "5737ce10ba8e9cac",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -12530,13 +12530,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "3 תפוח",
+        "label": "3 פריטים",
         "count": 3
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 3 מתאימה לכמות של 3 פריטים.",
       "leftValue": "3",
-      "rightValue": "3 תפוח"
+      "rightValue": "3 פריטים"
     },
     {
       "id": "memory-a5-hard-d010",
@@ -12621,7 +12621,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:4:תפוח",
-      "variantKey": "e76f09e99ba62436",
+      "variantKey": "2574911df861a454",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -12647,13 +12647,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "4 תפוח",
+        "label": "4 פריטים",
         "count": 4
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 4 מתאימה לכמות של 4 פריטים.",
       "leftValue": "4",
-      "rightValue": "4 תפוח"
+      "rightValue": "4 פריטים"
     },
     {
       "id": "memory-a5-hard-d013",
@@ -12738,7 +12738,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:5:תפוח",
-      "variantKey": "3785e5fc64d84a93",
+      "variantKey": "fc72554effa76c29",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -12764,13 +12764,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "5 תפוח",
+        "label": "5 פריטים",
         "count": 5
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 5 מתאימה לכמות של 5 פריטים.",
       "leftValue": "5",
-      "rightValue": "5 תפוח"
+      "rightValue": "5 פריטים"
     },
     {
       "id": "memory-a5-hard-d016",
@@ -12855,7 +12855,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:6:בננה",
-      "variantKey": "ce53c8b03bf55189",
+      "variantKey": "e472b5686193b29f",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -12881,13 +12881,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "6 בננה",
+        "label": "6 פריטים",
         "count": 6
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 6 מתאימה לכמות של 6 פריטים.",
       "leftValue": "6",
-      "rightValue": "6 בננה"
+      "rightValue": "6 פריטים"
     },
     {
       "id": "memory-a5-hard-d019",
@@ -12972,7 +12972,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:7:בננה",
-      "variantKey": "41172ef526d87166",
+      "variantKey": "b8d66da30767aa99",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -12998,13 +12998,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "7 בננה",
+        "label": "7 פריטים",
         "count": 7
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 7 מתאימה לכמות של 7 פריטים.",
       "leftValue": "7",
-      "rightValue": "7 בננה"
+      "rightValue": "7 פריטים"
     },
     {
       "id": "memory-a5-hard-d022",
@@ -13089,7 +13089,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:8:בננה",
-      "variantKey": "8cf1f6b7a365d6a4",
+      "variantKey": "a90cb33ba793830f",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -13115,13 +13115,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "8 בננה",
+        "label": "8 פריטים",
         "count": 8
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 8 מתאימה לכמות של 8 פריטים.",
       "leftValue": "8",
-      "rightValue": "8 בננה"
+      "rightValue": "8 פריטים"
     },
     {
       "id": "memory-a5-hard-d025",
@@ -13206,7 +13206,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:9:בננה",
-      "variantKey": "83dcdb2e2ca9fcbf",
+      "variantKey": "fa5fb10f96db7b8b",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -13232,13 +13232,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "9 בננה",
+        "label": "9 פריטים",
         "count": 9
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 9 מתאימה לכמות של 9 פריטים.",
       "leftValue": "9",
-      "rightValue": "9 בננה"
+      "rightValue": "9 פריטים"
     },
     {
       "id": "memory-a5-hard-d028",
@@ -13323,7 +13323,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:10:בננה",
-      "variantKey": "c37e0ad2bd1af8bd",
+      "variantKey": "68c0933135938a99",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -13349,13 +13349,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "10 בננה",
+        "label": "10 פריטים",
         "count": 10
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 10 מתאימה לכמות של 10 פריטים.",
       "leftValue": "10",
-      "rightValue": "10 בננה"
+      "rightValue": "10 פריטים"
     },
     {
       "id": "memory-a5-hard-d031",
@@ -13439,8 +13439,8 @@
         5
       ],
       "difficulty": "hard",
-      "conceptKey": "number-quantity:11:ענבים",
-      "variantKey": "0de966d15dcd3544",
+      "conceptKey": "number-quantity:11:תות",
+      "variantKey": "d4ddef07820e8c81",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -13455,7 +13455,7 @@
         "rule": "number-quantity",
         "operands": [
           11,
-          "ענבים"
+          "תות"
         ]
       },
       "leftVisual": {
@@ -13465,14 +13465,14 @@
       },
       "rightVisual": {
         "kind": "quantity",
-        "value": "🍇",
-        "label": "11 ענבים",
+        "value": "🍓",
+        "label": "11 פריטים",
         "count": 11
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 11 מתאימה לכמות של 11 פריטים.",
       "leftValue": "11",
-      "rightValue": "11 ענבים"
+      "rightValue": "11 פריטים"
     },
     {
       "id": "memory-a5-hard-d034",
@@ -13556,8 +13556,8 @@
         5
       ],
       "difficulty": "hard",
-      "conceptKey": "number-quantity:12:ענבים",
-      "variantKey": "dc10ed9a7c2a99c0",
+      "conceptKey": "number-quantity:12:תות",
+      "variantKey": "5a2c37d036e25ab3",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -13572,7 +13572,7 @@
         "rule": "number-quantity",
         "operands": [
           12,
-          "ענבים"
+          "תות"
         ]
       },
       "leftVisual": {
@@ -13582,14 +13582,14 @@
       },
       "rightVisual": {
         "kind": "quantity",
-        "value": "🍇",
-        "label": "12 ענבים",
+        "value": "🍓",
+        "label": "12 פריטים",
         "count": 12
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 12 מתאימה לכמות של 12 פריטים.",
       "leftValue": "12",
-      "rightValue": "12 ענבים"
+      "rightValue": "12 פריטים"
     },
     {
       "id": "memory-a5-hard-d037",
@@ -13634,8 +13634,8 @@
         5
       ],
       "difficulty": "hard",
-      "conceptKey": "number-quantity:13:ענבים",
-      "variantKey": "d03c8f13755bed2a",
+      "conceptKey": "number-quantity:13:תות",
+      "variantKey": "1acd888ad50d1927",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -13650,7 +13650,7 @@
         "rule": "number-quantity",
         "operands": [
           13,
-          "ענבים"
+          "תות"
         ]
       },
       "leftVisual": {
@@ -13660,14 +13660,14 @@
       },
       "rightVisual": {
         "kind": "quantity",
-        "value": "🍇",
-        "label": "13 ענבים",
+        "value": "🍓",
+        "label": "13 פריטים",
         "count": 13
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 13 מתאימה לכמות של 13 פריטים.",
       "leftValue": "13",
-      "rightValue": "13 ענבים"
+      "rightValue": "13 פריטים"
     },
     {
       "id": "memory-a5-hard-d039",
@@ -13712,8 +13712,8 @@
         5
       ],
       "difficulty": "hard",
-      "conceptKey": "number-quantity:14:ענבים",
-      "variantKey": "4d7662753db6bad7",
+      "conceptKey": "number-quantity:14:תות",
+      "variantKey": "881d2a0b1776bac0",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -13728,7 +13728,7 @@
         "rule": "number-quantity",
         "operands": [
           14,
-          "ענבים"
+          "תות"
         ]
       },
       "leftVisual": {
@@ -13738,14 +13738,14 @@
       },
       "rightVisual": {
         "kind": "quantity",
-        "value": "🍇",
-        "label": "14 ענבים",
+        "value": "🍓",
+        "label": "14 פריטים",
         "count": 14
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 14 מתאימה לכמות של 14 פריטים.",
       "leftValue": "14",
-      "rightValue": "14 ענבים"
+      "rightValue": "14 פריטים"
     },
     {
       "id": "memory-a6-easy-d001",
@@ -15310,7 +15310,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:1:תפוח",
-      "variantKey": "1d492c4cd7bec848",
+      "variantKey": "7d56925508e2a0b9",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -15336,13 +15336,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "1 תפוח",
+        "label": "פריט אחד",
         "count": 1
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 1 מתאימה לכמות של 1 פריטים.",
       "leftValue": "1",
-      "rightValue": "1 תפוח"
+      "rightValue": "פריט אחד"
     },
     {
       "id": "memory-a6-medium-d004",
@@ -15427,7 +15427,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:2:תפוח",
-      "variantKey": "6418c1155ce3433a",
+      "variantKey": "33a8409c18ec9ede",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -15453,13 +15453,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "2 תפוח",
+        "label": "2 פריטים",
         "count": 2
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 2 מתאימה לכמות של 2 פריטים.",
       "leftValue": "2",
-      "rightValue": "2 תפוח"
+      "rightValue": "2 פריטים"
     },
     {
       "id": "memory-a6-medium-d007",
@@ -15544,7 +15544,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:3:תפוח",
-      "variantKey": "124d379fa1928d3e",
+      "variantKey": "5737ce10ba8e9cac",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -15570,13 +15570,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "3 תפוח",
+        "label": "3 פריטים",
         "count": 3
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 3 מתאימה לכמות של 3 פריטים.",
       "leftValue": "3",
-      "rightValue": "3 תפוח"
+      "rightValue": "3 פריטים"
     },
     {
       "id": "memory-a6-medium-d010",
@@ -15661,7 +15661,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:4:תפוח",
-      "variantKey": "e76f09e99ba62436",
+      "variantKey": "2574911df861a454",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -15687,13 +15687,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "4 תפוח",
+        "label": "4 פריטים",
         "count": 4
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 4 מתאימה לכמות של 4 פריטים.",
       "leftValue": "4",
-      "rightValue": "4 תפוח"
+      "rightValue": "4 פריטים"
     },
     {
       "id": "memory-a6-medium-d013",
@@ -15778,7 +15778,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:5:תפוח",
-      "variantKey": "3785e5fc64d84a93",
+      "variantKey": "fc72554effa76c29",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -15804,13 +15804,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "5 תפוח",
+        "label": "5 פריטים",
         "count": 5
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 5 מתאימה לכמות של 5 פריטים.",
       "leftValue": "5",
-      "rightValue": "5 תפוח"
+      "rightValue": "5 פריטים"
     },
     {
       "id": "memory-a6-medium-d016",
@@ -15895,7 +15895,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:6:בננה",
-      "variantKey": "ce53c8b03bf55189",
+      "variantKey": "e472b5686193b29f",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -15921,13 +15921,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "6 בננה",
+        "label": "6 פריטים",
         "count": 6
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 6 מתאימה לכמות של 6 פריטים.",
       "leftValue": "6",
-      "rightValue": "6 בננה"
+      "rightValue": "6 פריטים"
     },
     {
       "id": "memory-a6-medium-d019",
@@ -16012,7 +16012,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:7:בננה",
-      "variantKey": "41172ef526d87166",
+      "variantKey": "b8d66da30767aa99",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -16038,13 +16038,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "7 בננה",
+        "label": "7 פריטים",
         "count": 7
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 7 מתאימה לכמות של 7 פריטים.",
       "leftValue": "7",
-      "rightValue": "7 בננה"
+      "rightValue": "7 פריטים"
     },
     {
       "id": "memory-a6-medium-d022",
@@ -16129,7 +16129,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:8:בננה",
-      "variantKey": "8cf1f6b7a365d6a4",
+      "variantKey": "a90cb33ba793830f",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -16155,13 +16155,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "8 בננה",
+        "label": "8 פריטים",
         "count": 8
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 8 מתאימה לכמות של 8 פריטים.",
       "leftValue": "8",
-      "rightValue": "8 בננה"
+      "rightValue": "8 פריטים"
     },
     {
       "id": "memory-a6-medium-d025",
@@ -16246,7 +16246,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:9:בננה",
-      "variantKey": "83dcdb2e2ca9fcbf",
+      "variantKey": "fa5fb10f96db7b8b",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -16272,13 +16272,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "9 בננה",
+        "label": "9 פריטים",
         "count": 9
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 9 מתאימה לכמות של 9 פריטים.",
       "leftValue": "9",
-      "rightValue": "9 בננה"
+      "rightValue": "9 פריטים"
     },
     {
       "id": "memory-a6-medium-d028",
@@ -16363,7 +16363,7 @@
       ],
       "difficulty": "medium",
       "conceptKey": "number-quantity:10:בננה",
-      "variantKey": "c37e0ad2bd1af8bd",
+      "variantKey": "68c0933135938a99",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -16389,13 +16389,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "10 בננה",
+        "label": "10 פריטים",
         "count": 10
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 10 מתאימה לכמות של 10 פריטים.",
       "leftValue": "10",
-      "rightValue": "10 בננה"
+      "rightValue": "10 פריטים"
     },
     {
       "id": "memory-a6-medium-d031",
@@ -16479,8 +16479,8 @@
         6
       ],
       "difficulty": "medium",
-      "conceptKey": "number-quantity:11:ענבים",
-      "variantKey": "0de966d15dcd3544",
+      "conceptKey": "number-quantity:11:תות",
+      "variantKey": "d4ddef07820e8c81",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -16495,7 +16495,7 @@
         "rule": "number-quantity",
         "operands": [
           11,
-          "ענבים"
+          "תות"
         ]
       },
       "leftVisual": {
@@ -16505,14 +16505,14 @@
       },
       "rightVisual": {
         "kind": "quantity",
-        "value": "🍇",
-        "label": "11 ענבים",
+        "value": "🍓",
+        "label": "11 פריטים",
         "count": 11
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 11 מתאימה לכמות של 11 פריטים.",
       "leftValue": "11",
-      "rightValue": "11 ענבים"
+      "rightValue": "11 פריטים"
     },
     {
       "id": "memory-a6-medium-d034",
@@ -16596,8 +16596,8 @@
         6
       ],
       "difficulty": "medium",
-      "conceptKey": "number-quantity:12:ענבים",
-      "variantKey": "dc10ed9a7c2a99c0",
+      "conceptKey": "number-quantity:12:תות",
+      "variantKey": "5a2c37d036e25ab3",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -16612,7 +16612,7 @@
         "rule": "number-quantity",
         "operands": [
           12,
-          "ענבים"
+          "תות"
         ]
       },
       "leftVisual": {
@@ -16622,14 +16622,14 @@
       },
       "rightVisual": {
         "kind": "quantity",
-        "value": "🍇",
-        "label": "12 ענבים",
+        "value": "🍓",
+        "label": "12 פריטים",
         "count": 12
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 12 מתאימה לכמות של 12 פריטים.",
       "leftValue": "12",
-      "rightValue": "12 ענבים"
+      "rightValue": "12 פריטים"
     },
     {
       "id": "memory-a6-medium-d037",
@@ -16674,8 +16674,8 @@
         6
       ],
       "difficulty": "medium",
-      "conceptKey": "number-quantity:13:ענבים",
-      "variantKey": "d03c8f13755bed2a",
+      "conceptKey": "number-quantity:13:תות",
+      "variantKey": "1acd888ad50d1927",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -16690,7 +16690,7 @@
         "rule": "number-quantity",
         "operands": [
           13,
-          "ענבים"
+          "תות"
         ]
       },
       "leftVisual": {
@@ -16700,14 +16700,14 @@
       },
       "rightVisual": {
         "kind": "quantity",
-        "value": "🍇",
-        "label": "13 ענבים",
+        "value": "🍓",
+        "label": "13 פריטים",
         "count": 13
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 13 מתאימה לכמות של 13 פריטים.",
       "leftValue": "13",
-      "rightValue": "13 ענבים"
+      "rightValue": "13 פריטים"
     },
     {
       "id": "memory-a6-medium-d039",
@@ -16752,8 +16752,8 @@
         6
       ],
       "difficulty": "medium",
-      "conceptKey": "number-quantity:14:ענבים",
-      "variantKey": "4d7662753db6bad7",
+      "conceptKey": "number-quantity:14:תות",
+      "variantKey": "881d2a0b1776bac0",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -16768,7 +16768,7 @@
         "rule": "number-quantity",
         "operands": [
           14,
-          "ענבים"
+          "תות"
         ]
       },
       "leftVisual": {
@@ -16778,14 +16778,14 @@
       },
       "rightVisual": {
         "kind": "quantity",
-        "value": "🍇",
-        "label": "14 ענבים",
+        "value": "🍓",
+        "label": "14 פריטים",
         "count": 14
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 14 מתאימה לכמות של 14 פריטים.",
       "leftValue": "14",
-      "rightValue": "14 ענבים"
+      "rightValue": "14 פריטים"
     },
     {
       "id": "memory-a6-hard-d001",
@@ -16870,7 +16870,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:1:תפוח",
-      "variantKey": "1d492c4cd7bec848",
+      "variantKey": "7d56925508e2a0b9",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -16896,13 +16896,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "1 תפוח",
+        "label": "פריט אחד",
         "count": 1
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 1 מתאימה לכמות של 1 פריטים.",
       "leftValue": "1",
-      "rightValue": "1 תפוח"
+      "rightValue": "פריט אחד"
     },
     {
       "id": "memory-a6-hard-d004",
@@ -16987,7 +16987,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:2:תפוח",
-      "variantKey": "6418c1155ce3433a",
+      "variantKey": "33a8409c18ec9ede",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -17013,13 +17013,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "2 תפוח",
+        "label": "2 פריטים",
         "count": 2
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 2 מתאימה לכמות של 2 פריטים.",
       "leftValue": "2",
-      "rightValue": "2 תפוח"
+      "rightValue": "2 פריטים"
     },
     {
       "id": "memory-a6-hard-d007",
@@ -17104,7 +17104,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:3:תפוח",
-      "variantKey": "124d379fa1928d3e",
+      "variantKey": "5737ce10ba8e9cac",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -17130,13 +17130,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "3 תפוח",
+        "label": "3 פריטים",
         "count": 3
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 3 מתאימה לכמות של 3 פריטים.",
       "leftValue": "3",
-      "rightValue": "3 תפוח"
+      "rightValue": "3 פריטים"
     },
     {
       "id": "memory-a6-hard-d010",
@@ -17221,7 +17221,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:4:תפוח",
-      "variantKey": "e76f09e99ba62436",
+      "variantKey": "2574911df861a454",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -17247,13 +17247,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "4 תפוח",
+        "label": "4 פריטים",
         "count": 4
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 4 מתאימה לכמות של 4 פריטים.",
       "leftValue": "4",
-      "rightValue": "4 תפוח"
+      "rightValue": "4 פריטים"
     },
     {
       "id": "memory-a6-hard-d013",
@@ -17338,7 +17338,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:5:תפוח",
-      "variantKey": "3785e5fc64d84a93",
+      "variantKey": "fc72554effa76c29",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -17364,13 +17364,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍎",
-        "label": "5 תפוח",
+        "label": "5 פריטים",
         "count": 5
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 5 מתאימה לכמות של 5 פריטים.",
       "leftValue": "5",
-      "rightValue": "5 תפוח"
+      "rightValue": "5 פריטים"
     },
     {
       "id": "memory-a6-hard-d016",
@@ -17455,7 +17455,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:6:בננה",
-      "variantKey": "ce53c8b03bf55189",
+      "variantKey": "e472b5686193b29f",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -17481,13 +17481,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "6 בננה",
+        "label": "6 פריטים",
         "count": 6
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 6 מתאימה לכמות של 6 פריטים.",
       "leftValue": "6",
-      "rightValue": "6 בננה"
+      "rightValue": "6 פריטים"
     },
     {
       "id": "memory-a6-hard-d019",
@@ -17572,7 +17572,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:7:בננה",
-      "variantKey": "41172ef526d87166",
+      "variantKey": "b8d66da30767aa99",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -17598,13 +17598,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "7 בננה",
+        "label": "7 פריטים",
         "count": 7
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 7 מתאימה לכמות של 7 פריטים.",
       "leftValue": "7",
-      "rightValue": "7 בננה"
+      "rightValue": "7 פריטים"
     },
     {
       "id": "memory-a6-hard-d022",
@@ -17689,7 +17689,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:8:בננה",
-      "variantKey": "8cf1f6b7a365d6a4",
+      "variantKey": "a90cb33ba793830f",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -17715,13 +17715,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "8 בננה",
+        "label": "8 פריטים",
         "count": 8
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 8 מתאימה לכמות של 8 פריטים.",
       "leftValue": "8",
-      "rightValue": "8 בננה"
+      "rightValue": "8 פריטים"
     },
     {
       "id": "memory-a6-hard-d025",
@@ -17806,7 +17806,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:9:בננה",
-      "variantKey": "83dcdb2e2ca9fcbf",
+      "variantKey": "fa5fb10f96db7b8b",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -17832,13 +17832,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "9 בננה",
+        "label": "9 פריטים",
         "count": 9
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 9 מתאימה לכמות של 9 פריטים.",
       "leftValue": "9",
-      "rightValue": "9 בננה"
+      "rightValue": "9 פריטים"
     },
     {
       "id": "memory-a6-hard-d028",
@@ -17923,7 +17923,7 @@
       ],
       "difficulty": "hard",
       "conceptKey": "number-quantity:10:בננה",
-      "variantKey": "c37e0ad2bd1af8bd",
+      "variantKey": "68c0933135938a99",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -17949,13 +17949,13 @@
       "rightVisual": {
         "kind": "quantity",
         "value": "🍌",
-        "label": "10 בננה",
+        "label": "10 פריטים",
         "count": 10
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 10 מתאימה לכמות של 10 פריטים.",
       "leftValue": "10",
-      "rightValue": "10 בננה"
+      "rightValue": "10 פריטים"
     },
     {
       "id": "memory-a6-hard-d031",
@@ -18039,8 +18039,8 @@
         6
       ],
       "difficulty": "hard",
-      "conceptKey": "number-quantity:11:ענבים",
-      "variantKey": "0de966d15dcd3544",
+      "conceptKey": "number-quantity:11:תות",
+      "variantKey": "d4ddef07820e8c81",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -18055,7 +18055,7 @@
         "rule": "number-quantity",
         "operands": [
           11,
-          "ענבים"
+          "תות"
         ]
       },
       "leftVisual": {
@@ -18065,14 +18065,14 @@
       },
       "rightVisual": {
         "kind": "quantity",
-        "value": "🍇",
-        "label": "11 ענבים",
+        "value": "🍓",
+        "label": "11 פריטים",
         "count": 11
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 11 מתאימה לכמות של 11 פריטים.",
       "leftValue": "11",
-      "rightValue": "11 ענבים"
+      "rightValue": "11 פריטים"
     },
     {
       "id": "memory-a6-hard-d034",
@@ -18156,8 +18156,8 @@
         6
       ],
       "difficulty": "hard",
-      "conceptKey": "number-quantity:12:ענבים",
-      "variantKey": "dc10ed9a7c2a99c0",
+      "conceptKey": "number-quantity:12:תות",
+      "variantKey": "5a2c37d036e25ab3",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -18172,7 +18172,7 @@
         "rule": "number-quantity",
         "operands": [
           12,
-          "ענבים"
+          "תות"
         ]
       },
       "leftVisual": {
@@ -18182,14 +18182,14 @@
       },
       "rightVisual": {
         "kind": "quantity",
-        "value": "🍇",
-        "label": "12 ענבים",
+        "value": "🍓",
+        "label": "12 פריטים",
         "count": 12
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 12 מתאימה לכמות של 12 פריטים.",
       "leftValue": "12",
-      "rightValue": "12 ענבים"
+      "rightValue": "12 פריטים"
     },
     {
       "id": "memory-a6-hard-d037",
@@ -18234,8 +18234,8 @@
         6
       ],
       "difficulty": "hard",
-      "conceptKey": "number-quantity:13:ענבים",
-      "variantKey": "d03c8f13755bed2a",
+      "conceptKey": "number-quantity:13:תות",
+      "variantKey": "1acd888ad50d1927",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -18250,7 +18250,7 @@
         "rule": "number-quantity",
         "operands": [
           13,
-          "ענבים"
+          "תות"
         ]
       },
       "leftVisual": {
@@ -18260,14 +18260,14 @@
       },
       "rightVisual": {
         "kind": "quantity",
-        "value": "🍇",
-        "label": "13 ענבים",
+        "value": "🍓",
+        "label": "13 פריטים",
         "count": 13
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 13 מתאימה לכמות של 13 פריטים.",
       "leftValue": "13",
-      "rightValue": "13 ענבים"
+      "rightValue": "13 פריטים"
     },
     {
       "id": "memory-a6-hard-d039",
@@ -18312,8 +18312,8 @@
         6
       ],
       "difficulty": "hard",
-      "conceptKey": "number-quantity:14:ענבים",
-      "variantKey": "4d7662753db6bad7",
+      "conceptKey": "number-quantity:14:תות",
+      "variantKey": "881d2a0b1776bac0",
       "taskFamily": "symbol-memory",
       "skill": "symbol-memory",
       "skillIds": [
@@ -18328,7 +18328,7 @@
         "rule": "number-quantity",
         "operands": [
           14,
-          "ענבים"
+          "תות"
         ]
       },
       "leftVisual": {
@@ -18338,14 +18338,14 @@
       },
       "rightVisual": {
         "kind": "quantity",
-        "value": "🍇",
-        "label": "14 ענבים",
+        "value": "🍓",
+        "label": "14 פריטים",
         "count": 14
       },
       "hint": "ספרו את הפריטים וחפשו את הספרה המתאימה.",
       "explanation": "הספרה 14 מתאימה לכמות של 14 פריטים.",
       "leftValue": "14",
-      "rightValue": "14 ענבים"
+      "rightValue": "14 פריטים"
     }
   ]
 }

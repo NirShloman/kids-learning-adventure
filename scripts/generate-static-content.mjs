@@ -98,7 +98,15 @@ function makeChoice(game, age, difficulty, seed) {
     pool = candidates;
   };
   if (game === "letters") {
-    if (!p.sounds || (difficulty !== "hard" && seed % 3 === 0)) {
+    if (age === 3 && difficulty === 'hard') {
+      const letter=alphabet[seed%alphabet.length], other=alphabet[(seed+1+Math.floor(seed/alphabet.length))%alphabet.length];
+      if(letter===other)return null;
+      prompt='איזו אות מופיעה פעמיים?';hint='חפשו שני סימנים עם אותם קווים.';
+      explanation=`האות ${letter} מופיעה פעמיים.`;
+      stimulus=scene(...rotate([text(letter),text(letter),text(other)],seed));
+      rule='repeated-letter';operands=stimulus.items.map(item=>item.value);skill='recognizeLetter';family=rule;
+      answer(text(letter),alphabet.map(text));
+    } else if (!p.sounds || (difficulty !== "hard" && seed % 3 === 0)) {
       const letter = alphabet[seed % alphabet.length];
       prompt = `מצאו את האות ${letter}`;
       hint = "הביטו בקווים של האות והקשיבו לשמה.";
@@ -140,7 +148,7 @@ function makeChoice(game, age, difficulty, seed) {
       skill = "letter";
     }
   } else if (game === "numbers") {
-    const n = 1 + (Math.floor(seed / 4) % p.max),
+    const n = 1 + Math.floor((Math.floor(seed / 4) % 10) * (p.max - 1) / 9),
       token = tokens[Math.floor(seed / (p.max * 4)) % tokens.length];
     const modes = p.addition
       ? ["count", "compare", "next", "add"]
@@ -161,7 +169,9 @@ function makeChoice(game, age, difficulty, seed) {
     } else if (rule === "compare") {
       const m = 1 + ((n + Math.floor(seed / (p.max * 4))) % p.max);
       if (m === n) return null;
-      prompt = "באיזו קבוצה יש יותר פריטים?";
+      const fewer=difficulty==='hard'&&Math.floor(seed/4)%2===1;
+      if(fewer){rule='compare-less';family=rule;}
+      prompt = fewer ? 'באיזו קבוצה יש פחות פריטים?' : "באיזו קבוצה יש יותר פריטים?";
       hint = "ספרו כל קבוצה, או התאימו פריט מול פריט.";
       const first = quantity(n, token),
         second = quantity(
@@ -174,10 +184,11 @@ function makeChoice(game, age, difficulty, seed) {
         atom("quantity", first.value, "הקבוצה הראשונה", { count: n }),
         atom("quantity", second.value, "הקבוצה השנייה", { count: m }),
       ];
-      answer(options[n > m ? 0 : 1], options);
-      explanation = `בקבוצה ${n > m ? "הראשונה" : "השנייה"} יש ${Math.max(n, m)} פריטים. זה יותר מ־${Math.min(n, m)}.`;
+      const firstCorrect=fewer?n<m:n>m;
+      answer(options[firstCorrect?0:1], options);
+      explanation = `בקבוצה ${firstCorrect ? "הראשונה" : "השנייה"} יש ${fewer?Math.min(n,m):Math.max(n,m)} פריטים. זה ${fewer?'פחות':'יותר'} מ־${fewer?Math.max(n,m):Math.min(n,m)}.`;
     } else if (rule === "next") {
-      const start = 1 + (Math.floor(seed / 4) % (p.max - 1));
+      const start = Math.min(n, p.max - 1);
       prompt = `איזה מספר בא אחרי ${start}?`;
       hint = `מתחילים ב־${start} ומתקדמים צעד אחד בספירה.`;
       explanation = `אחרי ${start} בא ${start + 1}.`;
@@ -185,9 +196,9 @@ function makeChoice(game, age, difficulty, seed) {
       operands = [start];
       answer(text(start + 1), numericPool);
     } else {
-      const a = 1 + (Math.floor(seed / 4) % (p.max - 1)),
+      const a = Math.min(n, p.max - 1),
         b =
-          1 + (Math.floor(seed / (p.max * 4)) % Math.min(tier + 1, p.max - a));
+          1 + (Math.floor(seed / 4) % Math.min(tier + 1, p.max - a));
       prompt = "כמה פריטים יש יחד?";
       hint = "סופרים את הקבוצה הראשונה וממשיכים לספור בקבוצה השנייה.";
       explanation = `${a} ועוד ${b} הם ${a + b}.`;
@@ -217,14 +228,14 @@ function makeChoice(game, age, difficulty, seed) {
       stimulus = scene(shapeAtom(shape));
       answer(text(shape.sides), [0, 3, 4, 5, 6, 7].map(text));
       operands = [shape.id];
-    } else if (difficulty !== "easy" && offset % 2) {
+    } else if (difficulty === 'hard' || difficulty !== "easy" && offset % 2) {
       rule = "odd-shape";
       skill = "shape";
-      prompt = "איזו צורה שונה משתי האחרות?";
+      prompt = "איזו צורה שונה מהאחרות?";
       hint = "חפשו את הצורה שמופיעה רק פעם אחת.";
       stimulus = scene(
         ...rotate(
-          [shapeAtom(shape), shapeAtom(shape), shapeAtom(other)],
+          [...Array.from({length:difficulty==='hard'?4:2},()=>shapeAtom(shape)), shapeAtom(other)],
           offset,
         ),
       );
@@ -233,7 +244,7 @@ function makeChoice(game, age, difficulty, seed) {
         available.map((s) => shapeAtom(s)),
       );
       operands = stimulus.items.map((item) => item.value);
-      explanation = `ה${other.name} מופיע פעם אחת. שתי הצורות האחרות הן ${shape.name}.`;
+      explanation = `הצורה מסוג ${other.name} מופיעה פעם אחת. השאר מסוג ${shape.name}.`;
     } else {
       rule = offset % 3 === 2 ? "find-shape" : "shape";
       skill = "shape";
@@ -263,19 +274,19 @@ function makeChoice(game, age, difficulty, seed) {
           (seed + 1 + (offset % (available.length - 1))) % available.length
         ];
     skill = "color";
-    if (difficulty !== "easy" && offset % 2) {
+    if (difficulty === 'hard' || difficulty !== "easy" && offset % 2) {
       rule = "odd-color";
-      prompt = "איזה צבע שונה משני האחרים?";
+      prompt = "איזה צבע שונה מהאחרים?";
       hint = "חפשו את הדוגמית שצבעה מופיע רק פעם אחת.";
       stimulus = scene(
         ...rotate(
-          [colorAtom(color), colorAtom(color), colorAtom(other)],
+          [...Array.from({length:difficulty==='hard'?4:2},()=>colorAtom(color)), colorAtom(other)],
           offset,
         ),
       );
       operands = stimulus.items.map((item) => item.value);
       answer(colorAtom(other), available.map(colorAtom));
-      explanation = `הצבע ${other.name} מופיע פעם אחת. שתי הדוגמיות האחרות בצבע ${color.name}.`;
+      explanation = `הצבע ${other.name} מופיע פעם אחת. שאר הדוגמיות בצבע ${color.name}.`;
     } else {
       rule = offset % 3 === 2 ? "find-color" : "color";
       prompt =
@@ -350,6 +361,14 @@ function makeChoice(game, age, difficulty, seed) {
     stimulus = scene(objectAtom(object));
     rule = "category";
     operands = [object.name];
+    if(difficulty!=='easy') {
+      const categoryObjects=objects.filter(item=>item.category===object.category), start=categoryObjects.findIndex(item=>item.name===object.name);
+      const examples=Array.from({length:tier+1},(_,index)=>categoryObjects[(start+index)%categoryObjects.length]);
+      stimulus=scene(...examples.map(objectAtom));operands=examples.map(item=>item.name);
+      prompt='ממיינים לפי סוג. לאיזו קבוצה שייכים הפריטים?';
+      hint='הביטו בכל הפריטים. מה משותף לסוג שלהם?';
+      explanation=`כל הפריטים שייכים לקבוצת ${object.category}.`;
+    }
     skill = "categories";
     family = "categories";
     const categoryToken = (name) => atom("emoji", groups[name][0][1], name);
@@ -398,7 +417,7 @@ function makeChoice(game, age, difficulty, seed) {
     ...choices(
       correct,
       pool,
-      rule === "compare" ? 2 : count,
+      rule.startsWith('compare') ? 2 : count,
       seed + Math.floor(seed / 7),
     ),
   };

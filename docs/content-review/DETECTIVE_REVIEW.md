@@ -26,9 +26,13 @@ Easy choice tasks for ages 3–4 have two answers. Others have three, except two
 
 ## Evidence and limitations
 
+The final difficulty audit found identical medium/hard cells and numeric generation that stopped before reaching the age ceiling. Difficulty now changes rendered activities: age-three hard letters find a repeated symbol; hard comparisons mix more/fewer and use larger addition increments where permitted; hard visual odd-one-out shows five samples; category sorting uses one/two/three examples by level. Normal pair boards increase from easy to medium to hard at every age (2–4, 3–5, 4–6, 5–7 pairs for ages 3–6). Adaptive boards retain their separate two/three-pair limit. Number examples span the entire authored ceiling. These differences and ceilings are executable acceptance assertions.
+
 The final phonology pass replaced מכונית/מפתח, קוף/קופסה and רכבת/רגל: their initial consonants match but their initial vowels do not. The reviewed pairs are מתנה/מפתח (מַ), קופסה/קובייה (קוּ), and רכבת/רדיו (רַ). This is an editorial check of pronunciation; the executable oracle alone cannot establish pronunciation from spelling.
 
 The pair תפוח/תפוז replaces תפוח/תנור because the hot-springs symbol did not actually depict an oven. Both fruit images now denote the spoken words.
+
+Counting marks are restricted to individual whole apples, bananas, strawberries, pears, peaches, carrots, onions and eggplants. Grape bunches, cherry pairs and watermelon slices are excluded from quantities. Spoken quantity labels use "פריט אחד" or "N פריטים", avoiding incorrect singular/plural fruit names. These exclusions are enforced by the visual oracle.
 
 The generator resets reviews to pending. `validate-static-content.mjs --unreviewed` checks schema, age/level coverage, unique content, domain options, visual consistency and independently derived answers without waiving any content checks. The explicit editorial-record command then checks that a review document exists and records the exact content hashes. Later edits invalidate those hashes.
 

@@ -1,0 +1,205 @@
+{
+  "date": "2026-09-15",
+  "status": "local checks passed; narration approval and release/CI pending",
+  "contentVersion": "2026.09.detectives.1.05c6aa07e431d404",
+  "sourceHashes": {
+    "src/components/games/detective/DetectiveSession.tsx": "4e5a3cf6e75a227822d5f8fbf84f1d5216fd43188ce146b620f448f6e5702865",
+    "src/components/games/detective/detective.css": "b8220c99be9b48fdf33701a98f5be94d5161474970cf3be33ed7b750834e81b5",
+    "src/services/questionService.ts": "37653586758b029bb63aeba9a6e8b62d3bc9fab471601eacf0c7398f9f99f911",
+    "scripts/generate-static-content.mjs": "83257fb6d7e2c67091d903168e3d2e5c6f8e7c53f4a7815fd5e57e08f105479e"
+  },
+  "unitAndIntegration": {
+    "source": "qa-reports/detective-final-unit-integration.json",
+    "sha256": "b6d7451c8763215e9471c8ec30444b91411cf546a33505cc271a4a62ce3c916d",
+    "passed": 194,
+    "failed": 0,
+    "success": true
+  },
+  "browserRuns": [
+    {
+      "source": "qa-reports/detective-regression-final.json",
+      "sha256": "2f99c97276d0a0691cc35e3b7cb3c2d1ae375d6ee040aa61c014c82dfbfd50c3",
+      "startTime": "2026-09-14T17:08:37.664Z",
+      "duration": 2888917.014,
+      "expected": 374,
+      "skipped": 18,
+      "unexpected": 0,
+      "flaky": 0,
+      "globalErrors": 0,
+      "projects": {
+        "local-chromium": {
+          "passed": 56,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        },
+        "local-firefox": {
+          "passed": 53,
+          "skipped": 3,
+          "unexpected": 0,
+          "flaky": 0
+        },
+        "local-webkit": {
+          "passed": 53,
+          "skipped": 3,
+          "unexpected": 0,
+          "flaky": 0
+        },
+        "mobile-chrome": {
+          "passed": 53,
+          "skipped": 3,
+          "unexpected": 0,
+          "flaky": 0
+        },
+        "mobile-safari": {
+          "passed": 53,
+          "skipped": 3,
+          "unexpected": 0,
+          "flaky": 0
+        },
+        "mobile-android-tablet": {
+          "passed": 53,
+          "skipped": 3,
+          "unexpected": 0,
+          "flaky": 0
+        },
+        "mobile-ipad": {
+          "passed": 53,
+          "skipped": 3,
+          "unexpected": 0,
+          "flaky": 0
+        }
+      }
+    },
+    {
+      "source": "qa-reports/detective-curriculum-matrix.json",
+      "sha256": "79d6244020fcec489b9a4865c8ec39d908c174d7d7f27ae406272305982dab9f",
+      "startTime": "2026-09-14T17:31:18.547Z",
+      "duration": 2427787.289,
+      "expected": 216,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "globalErrors": 0,
+      "projects": {
+        "detective-adaptive-phone": {
+          "passed": 12,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        },
+        "detective-adaptive-tablet": {
+          "passed": 12,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        },
+        "detective-matrix-phone": {
+          "passed": 96,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        },
+        "detective-matrix-tablet": {
+          "passed": 96,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        }
+      }
+    },
+    {
+      "source": "qa-reports/detective-layout-quantity.json",
+      "sha256": "2541bb2a7a03d76d8bcd8ac94bfefd5a40fbe26dff84d50c28a0e0e4a02b733a",
+      "startTime": "2026-09-14T22:59:56.823Z",
+      "duration": 42786.328,
+      "expected": 6,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "globalErrors": 0,
+      "projects": {
+        "local-chromium": {
+          "passed": 6,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        }
+      }
+    },
+    {
+      "source": "qa-reports/detective-delivery-final.json",
+      "sha256": "13d545ee09ffa5eb27c759230df0955b79138f868eae9bbee218ffbaa716297f",
+      "startTime": "2026-09-14T23:02:54.829Z",
+      "duration": 317425.588,
+      "expected": 87,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "globalErrors": 0,
+      "projects": {
+        "detective-offline": {
+          "passed": 8,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        },
+        "adventure-recordings": {
+          "passed": 4,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        },
+        "adventure-touch": {
+          "passed": 1,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        },
+        "adventure-offline": {
+          "passed": 4,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        },
+        "adventure-content": {
+          "passed": 70,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        }
+      }
+    },
+    {
+      "source": "qa-reports/detective-performance.json",
+      "sha256": "7874b115b2c6d180848f0e8261790965f11a3d3f72ce529aa08822bd26cf869a",
+      "startTime": "2026-09-14T23:02:27.659Z",
+      "duration": 5975.286,
+      "expected": 1,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "globalErrors": 0,
+      "projects": {
+        "adventure-performance": {
+          "passed": 1,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        }
+      }
+    }
+  ],
+  "blocked": {
+    "narrationMissingTexts": 861,
+    "releaseBuild": "strict narration gate",
+    "pushAndPr": "after release gate",
+    "remoteCi": "not run before PR"
+  },
+  "limitations": [
+    "All device tests use browser emulation; no physical devices attached.",
+    "Local Windows cannot compile iOS; macOS CI is pending.",
+    "The broad browser run precedes the final curriculum; the 216-case matrix covers the changed content.",
+    "Final narrow-screen CSS is covered by the dedicated six-case layout run."
+  ]
+}

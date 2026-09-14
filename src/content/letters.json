@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "contentVersion": "2026.09.detectives.1.042f5f0c3b580704",
+  "contentVersion": "2026.09.detectives.1.05c6aa07e431d404",
   "gameId": "letters",
   "items": [
     {
@@ -5169,33 +5169,45 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:א",
-      "variantKey": "214d5bb4dcadcaf2",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:א:א:ב",
+      "variantKey": "a6ed1305ef8877eb",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות א",
-      "audioText": "מצאו את האות א",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות א.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות א מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "א",
+            "label": "א"
+          },
+          {
+            "kind": "text",
+            "value": "א",
+            "label": "א"
+          },
+          {
+            "kind": "text",
+            "value": "ב",
+            "label": "ב"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
-          "א"
+          "א",
+          "א",
+          "ב"
         ]
       },
       "visualRole": "stimulus",
@@ -5238,32 +5250,44 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:ב",
-      "variantKey": "f262c3fb75f2ed9f",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:ב:ג:ב",
+      "variantKey": "0fddf1f70f10fb96",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות ב",
-      "audioText": "מצאו את האות ב",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות ב.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות ב מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "ב",
+            "label": "ב"
+          },
+          {
+            "kind": "text",
+            "value": "ג",
+            "label": "ג"
+          },
+          {
+            "kind": "text",
+            "value": "ב",
+            "label": "ב"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
+          "ב",
+          "ג",
           "ב"
         ]
       },
@@ -5307,32 +5331,44 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:ג",
-      "variantKey": "4d1aadf9c2017faa",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:ד:ג:ג",
+      "variantKey": "5c61e8884f01863a",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות ג",
-      "audioText": "מצאו את האות ג",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות ג.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות ג מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "ד",
+            "label": "ד"
+          },
+          {
+            "kind": "text",
+            "value": "ג",
+            "label": "ג"
+          },
+          {
+            "kind": "text",
+            "value": "ג",
+            "label": "ג"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
+          "ד",
+          "ג",
           "ג"
         ]
       },
@@ -5376,33 +5412,45 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:ד",
-      "variantKey": "7b238585a5efc870",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:ד:ד:ה",
+      "variantKey": "6c0a0983e2c5cf76",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות ד",
-      "audioText": "מצאו את האות ד",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות ד.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות ד מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "ד",
+            "label": "ד"
+          },
+          {
+            "kind": "text",
+            "value": "ד",
+            "label": "ד"
+          },
+          {
+            "kind": "text",
+            "value": "ה",
+            "label": "ה"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
-          "ד"
+          "ד",
+          "ד",
+          "ה"
         ]
       },
       "visualRole": "stimulus",
@@ -5445,32 +5493,44 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:ה",
-      "variantKey": "856edbfcb3ebd3cb",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:ה:ו:ה",
+      "variantKey": "5eac0eec64161975",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות ה",
-      "audioText": "מצאו את האות ה",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות ה.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות ה מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "ה",
+            "label": "ה"
+          },
+          {
+            "kind": "text",
+            "value": "ו",
+            "label": "ו"
+          },
+          {
+            "kind": "text",
+            "value": "ה",
+            "label": "ה"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
+          "ה",
+          "ו",
           "ה"
         ]
       },
@@ -5514,32 +5574,44 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:ו",
-      "variantKey": "81f14325b233026c",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:ז:ו:ו",
+      "variantKey": "78e26e132db20110",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות ו",
-      "audioText": "מצאו את האות ו",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות ו.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות ו מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "ז",
+            "label": "ז"
+          },
+          {
+            "kind": "text",
+            "value": "ו",
+            "label": "ו"
+          },
+          {
+            "kind": "text",
+            "value": "ו",
+            "label": "ו"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
+          "ז",
+          "ו",
           "ו"
         ]
       },
@@ -5583,33 +5655,45 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:ז",
-      "variantKey": "b8ef2553b7a70cdc",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:ז:ז:ח",
+      "variantKey": "a95abe25ae93bbbb",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות ז",
-      "audioText": "מצאו את האות ז",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות ז.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות ז מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "ז",
+            "label": "ז"
+          },
+          {
+            "kind": "text",
+            "value": "ז",
+            "label": "ז"
+          },
+          {
+            "kind": "text",
+            "value": "ח",
+            "label": "ח"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
-          "ז"
+          "ז",
+          "ז",
+          "ח"
         ]
       },
       "visualRole": "stimulus",
@@ -5652,32 +5736,44 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:ח",
-      "variantKey": "6d14013e22c0157f",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:ח:ט:ח",
+      "variantKey": "0235f77aa9c2e883",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות ח",
-      "audioText": "מצאו את האות ח",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות ח.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות ח מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "ח",
+            "label": "ח"
+          },
+          {
+            "kind": "text",
+            "value": "ט",
+            "label": "ט"
+          },
+          {
+            "kind": "text",
+            "value": "ח",
+            "label": "ח"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
+          "ח",
+          "ט",
           "ח"
         ]
       },
@@ -5721,32 +5817,44 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:ט",
-      "variantKey": "5dcf61fc4b661e44",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:י:ט:ט",
+      "variantKey": "2c99290a63dd0cff",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות ט",
-      "audioText": "מצאו את האות ט",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות ט.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות ט מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "י",
+            "label": "י"
+          },
+          {
+            "kind": "text",
+            "value": "ט",
+            "label": "ט"
+          },
+          {
+            "kind": "text",
+            "value": "ט",
+            "label": "ט"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
+          "י",
+          "ט",
           "ט"
         ]
       },
@@ -5790,33 +5898,45 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:י",
-      "variantKey": "41277bce5794d171",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:י:י:כ",
+      "variantKey": "0410b21d911e2a77",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות י",
-      "audioText": "מצאו את האות י",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות י.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות י מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "י",
+            "label": "י"
+          },
+          {
+            "kind": "text",
+            "value": "י",
+            "label": "י"
+          },
+          {
+            "kind": "text",
+            "value": "כ",
+            "label": "כ"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
-          "י"
+          "י",
+          "י",
+          "כ"
         ]
       },
       "visualRole": "stimulus",
@@ -5859,32 +5979,44 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:כ",
-      "variantKey": "6315107e4f7ca627",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:כ:ל:כ",
+      "variantKey": "bd4057160816d0e9",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות כ",
-      "audioText": "מצאו את האות כ",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות כ.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות כ מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "כ",
+            "label": "כ"
+          },
+          {
+            "kind": "text",
+            "value": "ל",
+            "label": "ל"
+          },
+          {
+            "kind": "text",
+            "value": "כ",
+            "label": "כ"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
+          "כ",
+          "ל",
           "כ"
         ]
       },
@@ -5928,32 +6060,44 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:ל",
-      "variantKey": "fe792bbc05a8d3d4",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:מ:ל:ל",
+      "variantKey": "9889626aa1ad9747",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות ל",
-      "audioText": "מצאו את האות ל",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות ל.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות ל מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "מ",
+            "label": "מ"
+          },
+          {
+            "kind": "text",
+            "value": "ל",
+            "label": "ל"
+          },
+          {
+            "kind": "text",
+            "value": "ל",
+            "label": "ל"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
+          "מ",
+          "ל",
           "ל"
         ]
       },
@@ -5997,33 +6141,45 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:מ",
-      "variantKey": "38f36c7ae37e99d8",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:מ:מ:נ",
+      "variantKey": "96d3c2c1d3167726",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות מ",
-      "audioText": "מצאו את האות מ",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות מ.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות מ מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "מ",
+            "label": "מ"
+          },
+          {
+            "kind": "text",
+            "value": "מ",
+            "label": "מ"
+          },
+          {
+            "kind": "text",
+            "value": "נ",
+            "label": "נ"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
-          "מ"
+          "מ",
+          "מ",
+          "נ"
         ]
       },
       "visualRole": "stimulus",
@@ -6066,32 +6222,44 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:נ",
-      "variantKey": "4590fde0abadf52b",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:נ:ס:נ",
+      "variantKey": "ab68661eb6040bfb",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות נ",
-      "audioText": "מצאו את האות נ",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות נ.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות נ מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "נ",
+            "label": "נ"
+          },
+          {
+            "kind": "text",
+            "value": "ס",
+            "label": "ס"
+          },
+          {
+            "kind": "text",
+            "value": "נ",
+            "label": "נ"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
+          "נ",
+          "ס",
           "נ"
         ]
       },
@@ -6135,32 +6303,44 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:ס",
-      "variantKey": "bd18cb2b5dc567e5",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:ע:ס:ס",
+      "variantKey": "fbd4d8d19ec81588",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות ס",
-      "audioText": "מצאו את האות ס",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות ס.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות ס מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "ע",
+            "label": "ע"
+          },
+          {
+            "kind": "text",
+            "value": "ס",
+            "label": "ס"
+          },
+          {
+            "kind": "text",
+            "value": "ס",
+            "label": "ס"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
+          "ע",
+          "ס",
           "ס"
         ]
       },
@@ -6204,33 +6384,45 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:ע",
-      "variantKey": "935f36703f76919b",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:ע:ע:פ",
+      "variantKey": "b058e4637740e5ae",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות ע",
-      "audioText": "מצאו את האות ע",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות ע.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות ע מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "ע",
+            "label": "ע"
+          },
+          {
+            "kind": "text",
+            "value": "ע",
+            "label": "ע"
+          },
+          {
+            "kind": "text",
+            "value": "פ",
+            "label": "פ"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
-          "ע"
+          "ע",
+          "ע",
+          "פ"
         ]
       },
       "visualRole": "stimulus",
@@ -6273,32 +6465,44 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:פ",
-      "variantKey": "bf1dfcc39eaac358",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:פ:צ:פ",
+      "variantKey": "59a8016f4934fa46",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות פ",
-      "audioText": "מצאו את האות פ",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות פ.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות פ מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "פ",
+            "label": "פ"
+          },
+          {
+            "kind": "text",
+            "value": "צ",
+            "label": "צ"
+          },
+          {
+            "kind": "text",
+            "value": "פ",
+            "label": "פ"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
+          "פ",
+          "צ",
           "פ"
         ]
       },
@@ -6342,32 +6546,44 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:צ",
-      "variantKey": "5326ac7d1854c5f3",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:ק:צ:צ",
+      "variantKey": "63bf7b26e86f2f5f",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות צ",
-      "audioText": "מצאו את האות צ",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות צ.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות צ מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "ק",
+            "label": "ק"
+          },
+          {
+            "kind": "text",
+            "value": "צ",
+            "label": "צ"
+          },
+          {
+            "kind": "text",
+            "value": "צ",
+            "label": "צ"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
+          "ק",
+          "צ",
           "צ"
         ]
       },
@@ -6411,33 +6627,45 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:ק",
-      "variantKey": "18e343034982b797",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:ק:ק:ר",
+      "variantKey": "7f6e7b16b82123ff",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות ק",
-      "audioText": "מצאו את האות ק",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות ק.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות ק מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "ק",
+            "label": "ק"
+          },
+          {
+            "kind": "text",
+            "value": "ק",
+            "label": "ק"
+          },
+          {
+            "kind": "text",
+            "value": "ר",
+            "label": "ר"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
-          "ק"
+          "ק",
+          "ק",
+          "ר"
         ]
       },
       "visualRole": "stimulus",
@@ -6480,32 +6708,44 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:ר",
-      "variantKey": "bbc1a29a34e4efba",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:ר:ש:ר",
+      "variantKey": "0aae956ab11807f5",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות ר",
-      "audioText": "מצאו את האות ר",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות ר.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות ר מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "ר",
+            "label": "ר"
+          },
+          {
+            "kind": "text",
+            "value": "ש",
+            "label": "ש"
+          },
+          {
+            "kind": "text",
+            "value": "ר",
+            "label": "ר"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
+          "ר",
+          "ש",
           "ר"
         ]
       },
@@ -6549,32 +6789,44 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:ש",
-      "variantKey": "09d264acbae0b3cc",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:ת:ש:ש",
+      "variantKey": "e379ecea93043206",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות ש",
-      "audioText": "מצאו את האות ש",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות ש.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות ש מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "ת",
+            "label": "ת"
+          },
+          {
+            "kind": "text",
+            "value": "ש",
+            "label": "ש"
+          },
+          {
+            "kind": "text",
+            "value": "ש",
+            "label": "ש"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
+          "ת",
+          "ש",
           "ש"
         ]
       },
@@ -6618,33 +6870,45 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:ת",
-      "variantKey": "ecff2fd5cea74a10",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:ת:ת:א",
+      "variantKey": "d951dd181131471b",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות ת",
-      "audioText": "מצאו את האות ת",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות ת.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות ת מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "ת",
+            "label": "ת"
+          },
+          {
+            "kind": "text",
+            "value": "ת",
+            "label": "ת"
+          },
+          {
+            "kind": "text",
+            "value": "א",
+            "label": "א"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
-          "ת"
+          "ת",
+          "ת",
+          "א"
         ]
       },
       "visualRole": "stimulus",
@@ -6687,32 +6951,44 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:א",
-      "variantKey": "435d55eb62b83005",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:א:ג:א",
+      "variantKey": "fdff5c9b728637df",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות א",
-      "audioText": "מצאו את האות א",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות א.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות א מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "א",
+            "label": "א"
+          },
+          {
+            "kind": "text",
+            "value": "ג",
+            "label": "ג"
+          },
+          {
+            "kind": "text",
+            "value": "א",
+            "label": "א"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
+          "א",
+          "ג",
           "א"
         ]
       },
@@ -6756,32 +7032,44 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:ב",
-      "variantKey": "dcbd4a0d6a3a3aa2",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:ד:ב:ב",
+      "variantKey": "57eb68b678e53234",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות ב",
-      "audioText": "מצאו את האות ב",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות ב.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות ב מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "ד",
+            "label": "ד"
+          },
+          {
+            "kind": "text",
+            "value": "ב",
+            "label": "ב"
+          },
+          {
+            "kind": "text",
+            "value": "ב",
+            "label": "ב"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
+          "ד",
+          "ב",
           "ב"
         ]
       },
@@ -6825,33 +7113,45 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:ג",
-      "variantKey": "743c45cdb77f1ea9",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:ג:ג:ה",
+      "variantKey": "1d8d67ed20144c0d",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות ג",
-      "audioText": "מצאו את האות ג",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות ג.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות ג מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "ג",
+            "label": "ג"
+          },
+          {
+            "kind": "text",
+            "value": "ג",
+            "label": "ג"
+          },
+          {
+            "kind": "text",
+            "value": "ה",
+            "label": "ה"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
-          "ג"
+          "ג",
+          "ג",
+          "ה"
         ]
       },
       "visualRole": "stimulus",
@@ -6894,32 +7194,44 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:ד",
-      "variantKey": "39c1b4aeafe958b7",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:ד:ו:ד",
+      "variantKey": "d685344bc2efe459",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות ד",
-      "audioText": "מצאו את האות ד",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות ד.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות ד מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "ד",
+            "label": "ד"
+          },
+          {
+            "kind": "text",
+            "value": "ו",
+            "label": "ו"
+          },
+          {
+            "kind": "text",
+            "value": "ד",
+            "label": "ד"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
+          "ד",
+          "ו",
           "ד"
         ]
       },
@@ -6963,32 +7275,44 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:ה",
-      "variantKey": "6acd3a0fe36fcd8a",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:ז:ה:ה",
+      "variantKey": "8bc045d58e4566f4",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות ה",
-      "audioText": "מצאו את האות ה",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות ה.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות ה מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "ז",
+            "label": "ז"
+          },
+          {
+            "kind": "text",
+            "value": "ה",
+            "label": "ה"
+          },
+          {
+            "kind": "text",
+            "value": "ה",
+            "label": "ה"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
+          "ז",
+          "ה",
           "ה"
         ]
       },
@@ -7032,33 +7356,45 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:ו",
-      "variantKey": "780e643688d1d715",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:ו:ו:ח",
+      "variantKey": "a813cf56261a1a46",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות ו",
-      "audioText": "מצאו את האות ו",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות ו.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות ו מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "ו",
+            "label": "ו"
+          },
+          {
+            "kind": "text",
+            "value": "ו",
+            "label": "ו"
+          },
+          {
+            "kind": "text",
+            "value": "ח",
+            "label": "ח"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
-          "ו"
+          "ו",
+          "ו",
+          "ח"
         ]
       },
       "visualRole": "stimulus",
@@ -7101,32 +7437,44 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:ז",
-      "variantKey": "d1d629c9f620d0d5",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:ז:ט:ז",
+      "variantKey": "277f5b9b0a16383e",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות ז",
-      "audioText": "מצאו את האות ז",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות ז.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות ז מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "ז",
+            "label": "ז"
+          },
+          {
+            "kind": "text",
+            "value": "ט",
+            "label": "ט"
+          },
+          {
+            "kind": "text",
+            "value": "ז",
+            "label": "ז"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
+          "ז",
+          "ט",
           "ז"
         ]
       },
@@ -7170,32 +7518,44 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:ח",
-      "variantKey": "b53ff54bcb7d2762",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:י:ח:ח",
+      "variantKey": "818e3af77c18750c",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות ח",
-      "audioText": "מצאו את האות ח",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות ח.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות ח מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "י",
+            "label": "י"
+          },
+          {
+            "kind": "text",
+            "value": "ח",
+            "label": "ח"
+          },
+          {
+            "kind": "text",
+            "value": "ח",
+            "label": "ח"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
+          "י",
+          "ח",
           "ח"
         ]
       },
@@ -7239,33 +7599,45 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:ט",
-      "variantKey": "769afca2e3514625",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:ט:ט:כ",
+      "variantKey": "e4fccfb2b8da8342",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות ט",
-      "audioText": "מצאו את האות ט",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות ט.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות ט מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "ט",
+            "label": "ט"
+          },
+          {
+            "kind": "text",
+            "value": "ט",
+            "label": "ט"
+          },
+          {
+            "kind": "text",
+            "value": "כ",
+            "label": "כ"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
-          "ט"
+          "ט",
+          "ט",
+          "כ"
         ]
       },
       "visualRole": "stimulus",
@@ -7308,32 +7680,44 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:י",
-      "variantKey": "910df6ac48e8a47c",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:י:ל:י",
+      "variantKey": "13e2487af98ee8e7",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות י",
-      "audioText": "מצאו את האות י",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות י.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות י מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "י",
+            "label": "י"
+          },
+          {
+            "kind": "text",
+            "value": "ל",
+            "label": "ל"
+          },
+          {
+            "kind": "text",
+            "value": "י",
+            "label": "י"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
+          "י",
+          "ל",
           "י"
         ]
       },
@@ -7377,32 +7761,44 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:כ",
-      "variantKey": "2d014a6edeba6751",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:מ:כ:כ",
+      "variantKey": "435af7792f150a58",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות כ",
-      "audioText": "מצאו את האות כ",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות כ.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות כ מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "מ",
+            "label": "מ"
+          },
+          {
+            "kind": "text",
+            "value": "כ",
+            "label": "כ"
+          },
+          {
+            "kind": "text",
+            "value": "כ",
+            "label": "כ"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
+          "מ",
+          "כ",
           "כ"
         ]
       },
@@ -7446,33 +7842,45 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:ל",
-      "variantKey": "ae31fc8545634da9",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:ל:ל:נ",
+      "variantKey": "fbad955b942231e0",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות ל",
-      "audioText": "מצאו את האות ל",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות ל.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות ל מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "ל",
+            "label": "ל"
+          },
+          {
+            "kind": "text",
+            "value": "ל",
+            "label": "ל"
+          },
+          {
+            "kind": "text",
+            "value": "נ",
+            "label": "נ"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
-          "ל"
+          "ל",
+          "ל",
+          "נ"
         ]
       },
       "visualRole": "stimulus",
@@ -7515,32 +7923,44 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:מ",
-      "variantKey": "717dd33844f21ba9",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:מ:ס:מ",
+      "variantKey": "5fa23762dadc19ac",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות מ",
-      "audioText": "מצאו את האות מ",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות מ.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות מ מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "מ",
+            "label": "מ"
+          },
+          {
+            "kind": "text",
+            "value": "ס",
+            "label": "ס"
+          },
+          {
+            "kind": "text",
+            "value": "מ",
+            "label": "מ"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
+          "מ",
+          "ס",
           "מ"
         ]
       },
@@ -7584,32 +8004,44 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:נ",
-      "variantKey": "7abaa8fdc96dd98f",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:ע:נ:נ",
+      "variantKey": "2b411a75bd283862",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות נ",
-      "audioText": "מצאו את האות נ",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות נ.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות נ מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "ע",
+            "label": "ע"
+          },
+          {
+            "kind": "text",
+            "value": "נ",
+            "label": "נ"
+          },
+          {
+            "kind": "text",
+            "value": "נ",
+            "label": "נ"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
+          "ע",
+          "נ",
           "נ"
         ]
       },
@@ -7653,33 +8085,45 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:ס",
-      "variantKey": "ed3e7be5453816c7",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:ס:ס:פ",
+      "variantKey": "d00bc944bd6b8b2f",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות ס",
-      "audioText": "מצאו את האות ס",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות ס.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות ס מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "ס",
+            "label": "ס"
+          },
+          {
+            "kind": "text",
+            "value": "ס",
+            "label": "ס"
+          },
+          {
+            "kind": "text",
+            "value": "פ",
+            "label": "פ"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
-          "ס"
+          "ס",
+          "ס",
+          "פ"
         ]
       },
       "visualRole": "stimulus",
@@ -7722,32 +8166,44 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:ע",
-      "variantKey": "384a8b7283a5690f",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:ע:צ:ע",
+      "variantKey": "57d31fbcb15850fe",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות ע",
-      "audioText": "מצאו את האות ע",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות ע.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות ע מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "ע",
+            "label": "ע"
+          },
+          {
+            "kind": "text",
+            "value": "צ",
+            "label": "צ"
+          },
+          {
+            "kind": "text",
+            "value": "ע",
+            "label": "ע"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
+          "ע",
+          "צ",
           "ע"
         ]
       },
@@ -7791,32 +8247,44 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:פ",
-      "variantKey": "82c47a80f83449b3",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:ק:פ:פ",
+      "variantKey": "18f10b49674cc54c",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות פ",
-      "audioText": "מצאו את האות פ",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות פ.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות פ מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "ק",
+            "label": "ק"
+          },
+          {
+            "kind": "text",
+            "value": "פ",
+            "label": "פ"
+          },
+          {
+            "kind": "text",
+            "value": "פ",
+            "label": "פ"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
+          "ק",
+          "פ",
           "פ"
         ]
       },
@@ -7860,33 +8328,45 @@
         3
       ],
       "difficulty": "hard",
-      "conceptKey": "letter-recognition:צ",
-      "variantKey": "54014e4472c5071d",
-      "taskFamily": "letter-recognition",
-      "skill": "letter-recognition",
+      "conceptKey": "repeated-letter:צ:צ:ר",
+      "variantKey": "a5993f0e402985d7",
+      "taskFamily": "repeated-letter",
+      "skill": "repeated-letter",
       "skillIds": [
         "hebrew.letter-recognition",
         "foundation.visual-discrimination",
         "foundation.auditory-discrimination"
       ],
-      "prompt": "מצאו את האות צ",
-      "audioText": "מצאו את האות צ",
-      "hint": "הביטו בקווים של האות והקשיבו לשמה.",
-      "explanation": "זאת האות צ.",
+      "prompt": "איזו אות מופיעה פעמיים?",
+      "audioText": "איזו אות מופיעה פעמיים?",
+      "hint": "חפשו שני סימנים עם אותם קווים.",
+      "explanation": "האות צ מופיעה פעמיים.",
       "scene": {
-        "kind": "single",
+        "kind": "row",
         "items": [
           {
-            "kind": "emoji",
-            "value": "🔎",
-            "label": "חפשו את האות"
+            "kind": "text",
+            "value": "צ",
+            "label": "צ"
+          },
+          {
+            "kind": "text",
+            "value": "צ",
+            "label": "צ"
+          },
+          {
+            "kind": "text",
+            "value": "ר",
+            "label": "ר"
           }
         ]
       },
       "logic": {
-        "rule": "letter-recognition",
+        "rule": "repeated-letter",
         "operands": [
-          "צ"
+          "צ",
+          "צ",
+          "ר"
         ]
       },
       "visualRole": "stimulus",
