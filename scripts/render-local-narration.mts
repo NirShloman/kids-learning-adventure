@@ -4,6 +4,8 @@ import { existsSync, readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { createRequire } from "node:module";
 import { pathToFileURL } from "node:url";
+import { createHash } from 'node:crypto';
+import { NarrationBudget } from './narration-budget.mts';
 import { GoogleTextToSpeechGateway } from "../functions/src/narration/firebase-adapters";
 import {
   DEFAULT_NARRATION_CONFIG,
@@ -80,7 +82,17 @@ if (
   throw new Error(
     "Explicit generation consent is required: TTS_GENERATION_ENABLED=true and --allow-generation.",
   );
-const gateway = new GoogleTextToSpeechGateway();
+const maxUsdFlag = process.argv.indexOf('--max-usd');
+const maxUsd = maxUsdFlag >= 0 ? Number(process.argv[maxUsdFlag + 1]) : NaN;
+const approvalId = createHash('sha256').update(JSON.stringify({ config, texts: [...texts].sort() })).digest('hex');
+const budget = new NarrationBudget(join(root, 'tmp/narration', `budget-${approvalId}.jsonl`), approvalId, maxUsd);
+const paidCharacters = missing.reduce((sum, text) => {
+  const path = join(root, 'public/assets/audio', narrationStoragePath(createNarrationAssetKey(text, config), config));
+  return sum + (existsSync(path) ? 0 : text.length);
+}, 0);
+// Preflight the whole remaining batch before incurring any new cost.
+budget.check(paidCharacters);
+const gateway = new GoogleTextToSpeechGateway(undefined, true);
 let cursor = 0,
   done = 0,
   failed: Error | undefined;
@@ -126,6 +138,10 @@ await Promise.all(
           const start = Math.max(Date.now(), nextStart);
           nextStart = start + 400;
           await delay(Math.max(0, start - Date.now()));
+          if (failed) return;
+          // Reserve synchronously before each request, including retries. The
+          // durable ledger also counts uncertain attempts after a process restart.
+          budget.reserve(assetKey, text.length);
           try {
             audio = Buffer.from(await gateway.synthesize(text, config));
           } catch (error) {
@@ -165,6 +181,7 @@ await Promise.all(
 );
 if (failed) throw failed;
 console.log(`Local narration ready: ${texts.length} texts.`);
+console.log(`Conservative generation cost reserved: USD ${budget.estimatedUsdReserved.toFixed(6)} before tax.`);
 if (process.argv.includes("--publish")) {
   const release = {
     ...manifest,

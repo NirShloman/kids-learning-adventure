@@ -7,7 +7,7 @@
   "estimatedUsdBeforeTax": 0.90189,
   "pricingSource": "https://cloud.google.com/text-to-speech/pricing",
   "pricingChecked": "2026-09-14",
-  "approval": "pending",
+  "approval": "approved-with-cap",
   "entries": [
     {
       "id": "text.004ee9744eae9672b6e8f485597ce4ec14f03d264b07f779ecfde25794e5d870",
@@ -47145,5 +47145,8 @@
         }
       ]
     }
-  ]
+  ],
+  "approvedBudgetUsd": 0.9,
+  "generationStatus": "blocked-before-spending",
+  "requiredEstimateUsd": 0.90189
 }

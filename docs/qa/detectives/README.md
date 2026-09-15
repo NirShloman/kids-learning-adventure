@@ -2,7 +2,7 @@
 
 Updated: 2026-09-15. Branch: `codex/trivia-detectives-upgrade`. Base: `codex/experiential-games-redesign` at `152418237597e0a8794725184337e8d96b4d1765`.
 
-This report records actual checks, not a release approval. Paid narration is pending explicit user consent. No pull request, merge or deployment has been performed for this upgrade yet.
+This report records actual checks, not a release approval. The user approved narration with a strict spending limit. The USD 0.90 budget preflight stopped before any paid request because the exact batch estimate is USD 0.90189. Approval of an adjusted cap is pending. No pull request, merge or deployment has been performed for this upgrade yet.
 
 ## Completed checks
 
@@ -51,7 +51,7 @@ The first 87-scenario delivery run overlapped a local rebuild: 86 passed and one
 
 ## Pending delivery gates
 
-* Approve and generate the 861 missing local narration entries in [the recording request](narration-request.json): 30,063 characters, approximately USD 0.90189 before tax at USD 30 per million characters. Strict narration validation currently fails for exactly these missing texts. No paid generation has been performed. After approval, generate/package them and pass strict coverage and `build:release`.
+* Approve an adjusted spending cap and generate the 861 missing local narration entries in [the recording request](narration-request.json): 30,063 characters, USD 0.90189 before tax at USD 30 per million characters. The approved USD 0.90 cap blocked generation before any paid request. The tool now preflights the batch and persists a reservation before each potentially billable attempt, including retries; hidden SDK retries are disabled. Four dedicated budget tests and the narration-functions TypeScript build passed. Strict narration validation still fails for exactly the missing texts. After approval, generate/package them and pass strict coverage and `build:release`.
 * iOS compilation requires the macOS CI runner. Android local debug gates have passed; release packaging still requires strict narration coverage.
 * Attach final screenshots and test totals, commit only related work, push and create a PR against `codex/experiential-games-redesign`, then inspect CI. No automatic merge or deployment.
 

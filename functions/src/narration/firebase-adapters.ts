@@ -150,14 +150,14 @@ export class FirestoreNarrationRepository implements NarrationRepository {
 }
 
 export class GoogleTextToSpeechGateway implements TextToSpeechGateway {
-  constructor(private readonly client = new TextToSpeechClient()) {}
+  constructor(private readonly client = new TextToSpeechClient(), private readonly disableAutomaticRetries = false) {}
 
   async synthesize(text: string, config: NarrationConfig): Promise<Uint8Array> {
     const [response] = await this.client.synthesizeSpeech({
       input: { text },
       voice: { languageCode: config.language, name: config.voice },
       audioConfig: { audioEncoding: 'MP3', speakingRate: config.speakingRate }
-    });
+    }, this.disableAutomaticRetries ? { retry: { retryCodes: [] }, timeout: 60_000 } : undefined);
     const content = response.audioContent;
     if (!content) throw new Error('Google TTS returned no audio content.');
     return typeof content === 'string' ? Uint8Array.from(Buffer.from(content, 'base64')) : Uint8Array.from(content);

@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "status": "local checks passed; narration approval and release/CI pending",
+  "status": "local game checks passed; narration generation blocked by approved spending cap",
   "contentVersion": "2026.09.detectives.1.05c6aa07e431d404",
   "sourceHashes": {
     "src/components/games/detective/DetectiveSession.tsx": "4e5a3cf6e75a227822d5f8fbf84f1d5216fd43188ce146b620f448f6e5702865",
@@ -194,12 +194,20 @@
     "narrationMissingTexts": 861,
     "releaseBuild": "strict narration gate",
     "pushAndPr": "after release gate",
-    "remoteCi": "not run before PR"
+    "remoteCi": "not run before PR",
+    "approvedNarrationBudgetUsd": 0.9,
+    "requiredNarrationEstimateUsd": 0.90189,
+    "paidRequestsSent": 0
   },
   "limitations": [
     "All device tests use browser emulation; no physical devices attached.",
     "Local Windows cannot compile iOS; macOS CI is pending.",
     "The broad browser run precedes the final curriculum; the 216-case matrix covers the changed content.",
     "Final narrow-screen CSS is covered by the dedicated six-case layout run."
-  ]
+  ],
+  "budgetVerification": {
+    "testsPassed": 4,
+    "narrationFunctionsTypecheck": "passed",
+    "preflight": "BUDGET_LIMIT before request submission"
+  }
 }
