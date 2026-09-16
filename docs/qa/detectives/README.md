@@ -53,10 +53,15 @@ The first 87-scenario delivery run overlapped a local rebuild: 86 passed and one
 
 [Small-phone quantities with enlarged text](devices/numbers-320x700.png), [landscape sequence](devices/patterns-740x360.png), [tablet colors](devices/colors-1280x800.png), [maximum 14-card tablet board](devices/memory-1280x800.png). The narrow quantity and maximum memory layouts were visually inspected. These are browser screenshots, not physical-device captures.
 
-## Pending delivery gates
+## Remote delivery status
 
-* Inspect the PR browser/mobile CI results, including iOS compilation on the macOS runner. Windows cannot execute that native build locally.
-* Push and create a PR against `codex/experiential-games-redesign`, then inspect CI. Final screenshots, local test totals and [narration execution](narration-execution.json) are attached. No automatic merge or deployment.
+* [PR #3](https://github.com/NirShloman/kids-learning-adventure/pull/3) is open against `codex/experiential-games-redesign`. No merge or deployment was performed.
+* At commit `aaea82ed0cfeb9cc18e42533938ed6350cda74f7`, [mobile CI run 35062357824](https://github.com/NirShloman/kids-learning-adventure/actions/runs/35062357824) passed all Web gates and the iOS simulator build on macOS/Xcode 26.6.
+* Android CI failed before application compilation: `android-actions/setup-android@v3` requested the unavailable legacy SDK package `tools`. Local Android unit/lint/assembly passed. Following the user's instruction to continue after the proposed infrastructure fix, the workflow now specifies `packages: platform-tools`. The action's existing command-line tools setup and Android 36 installation remain in place; the corrected CI run is still required.
+* [Browser CI run 35062357806](https://github.com/NirShloman/kids-learning-adventure/actions/runs/35062357806) completed with 737 passes, 24 deliberate skips and one flaky existing adventure test. The Safari drag scenario stalled while entering the adventure before exercising drag, then passed in nine seconds on retry. Three shards passed; the fourth correctly failed the strict no-flaky gate. Sixteen smoke cases, the performance case and four adventure offline cases also passed. The rerun retains all assertions and the no-flaky gate.
+* Final screenshots, local test totals and [narration execution](narration-execution.json) are attached; delivery is not declared fully green while the corrected remote gates remain pending.
+
+The Safari drag scenario subsequently passed five consecutive local executions with unchanged assertions and video enabled (`qa-reports/detective-safari-ci-recheck.json`). This supports a transient runner/browser stall but does not replace a clean remote gate.
 
 ## Environment limitations
 
