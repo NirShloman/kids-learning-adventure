@@ -32,7 +32,7 @@ for (const game of games)
       clarity: "approved",
       visualLeak: "approved",
       focusGroupLenses: [],
-      reviewedAt: "2026-09-14",
+      reviewedAt: new Date().toISOString().slice(0, 10),
       notes: `Reviewed rule ${item.logic.rule}; see docs/content-review/DETECTIVE_REVIEW.md. All item semantics verified by executable oracle.`,
       contentHash: createHash("sha256")
         .update(JSON.stringify(item))

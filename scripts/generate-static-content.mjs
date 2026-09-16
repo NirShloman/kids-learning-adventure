@@ -162,7 +162,7 @@ function makeChoice(game, age, difficulty, seed) {
     if (rule === "count") {
       prompt = "כמה פריטים רואים?";
       hint = "נוגעים בכל פריט פעם אחת וסופרים לאט.";
-      explanation = `ספרנו ${n} פריטים.`;
+      explanation = n === 1 ? 'ספרנו פריט אחד.' : `ספרנו ${n} פריטים.`;
       stimulus = scene(quantity(n, token));
       operands = [n];
       answer(text(n), numericPool);
@@ -187,6 +187,7 @@ function makeChoice(game, age, difficulty, seed) {
       const firstCorrect=fewer?n<m:n>m;
       answer(options[firstCorrect?0:1], options);
       explanation = `בקבוצה ${firstCorrect ? "הראשונה" : "השנייה"} יש ${fewer?Math.min(n,m):Math.max(n,m)} פריטים. זה ${fewer?'פחות':'יותר'} מ־${fewer?Math.max(n,m):Math.min(n,m)}.`;
+      if (fewer && Math.min(n, m) === 1) explanation = `בקבוצה ${firstCorrect ? 'הראשונה' : 'השנייה'} פריט אחד. זו הקבוצה הקטנה יותר.`;
     } else if (rule === "next") {
       const start = Math.min(n, p.max - 1);
       prompt = `איזה מספר בא אחרי ${start}?`;
@@ -463,7 +464,7 @@ function makePair(game, age, difficulty, seed) {
     leftVisual = text(n);
     rightVisual = quantity(n, token);
     hint = "ספרו את הפריטים וחפשו את הספרה המתאימה.";
-    explanation = `הספרה ${n} מתאימה לכמות של ${n} פריטים.`;
+    explanation = n === 1 ? 'הספרה 1 מתאימה לפריט אחד.' : `הספרה ${n} מתאימה לכמות של ${n} פריטים.`;
     skillIds.push("math.quantity-sense", "math.numeral-recognition");
   }
   const family =

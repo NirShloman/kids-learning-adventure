@@ -8,11 +8,13 @@
 
 ```powershell
 $env:TTS_GENERATION_ENABLED = 'true'
-npm run narration:local -- --apply --allow-generation --publish
+npm run narration:local -- --apply --allow-generation --publish --max-usd <approved-cap>
 npm run validate:narration:strict
 ```
 
 This local path uses the same TTS gateway and hash/checksum rules without deploying a Function or changing the cloud generation switch. It checkpoints to `tmp/narration/local-generated-manifest.json`, retries transient requests and publishes only a completely validated catalog. Zero-length/silent recordings fail validation. Only audio paths referenced by the published manifest belong in a release; temporary samples and superseded outputs do not. Generation can incur the configured provider's charges and must remain an explicit administrative action.
+
+Replace `<approved-cap>` with the explicitly approved dollar amount before tax. The CLI preflights the full batch and reserves spending before every request, including retries and attempts interrupted before their result is known. When correcting a catalog under the same authorization, pass `--budget-id <existing-ledger-id>` so prior spending still counts; do not start a fresh budget for the correction. The existing ledger must be present. SDK-level automatic retries are disabled in this CLI so all paid attempts remain visible to the budget guard.
 
 The experiential catalog enumerates authored missions, age/difficulty variants and semantic object labels. `narration-symbols.json` converts decorative display symbols to spoken Hebrew before lookup, avoiding silent emoji-only synthesis.
 

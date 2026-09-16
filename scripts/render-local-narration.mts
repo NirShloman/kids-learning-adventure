@@ -84,7 +84,14 @@ if (
   );
 const maxUsdFlag = process.argv.indexOf('--max-usd');
 const maxUsd = maxUsdFlag >= 0 ? Number(process.argv[maxUsdFlag + 1]) : NaN;
-const approvalId = createHash('sha256').update(JSON.stringify({ config, texts: [...texts].sort() })).digest('hex');
+const budgetIdFlag = process.argv.indexOf('--budget-id');
+const continuedBudgetId = budgetIdFlag >= 0 ? process.argv[budgetIdFlag + 1] : undefined;
+if (budgetIdFlag >= 0 && (!continuedBudgetId || !/^[a-f0-9]{64}$/.test(continuedBudgetId) || !existsSync(join(root, 'tmp/narration', `budget-${continuedBudgetId}.jsonl`)))) {
+  throw new Error('--budget-id must refer to an existing approved recording ledger.');
+}
+// Corrections belonging to the same approval keep the original ledger even
+// when the catalog changes, so previous spending is never reset.
+const approvalId = continuedBudgetId ?? createHash('sha256').update(JSON.stringify({ config, texts: [...texts].sort() })).digest('hex');
 const budget = new NarrationBudget(join(root, 'tmp/narration', `budget-${approvalId}.jsonl`), approvalId, maxUsd);
 const paidCharacters = missing.reduce((sum, text) => {
   const path = join(root, 'public/assets/audio', narrationStoragePath(createNarrationAssetKey(text, config), config));

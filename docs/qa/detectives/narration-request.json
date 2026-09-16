@@ -47146,7 +47146,9 @@
       ]
     }
   ],
-  "approvedBudgetUsd": 0.9,
-  "generationStatus": "blocked-before-spending",
-  "requiredEstimateUsd": 0.90189
+  "approvedBudgetUsd": 0.91,
+  "generationStatus": "completed-within-approved-cap",
+  "requiredEstimateUsd": 0.90189,
+  "executionReport": "narration-execution.json",
+  "originalCatalogNote": "Original 861-request approved inventory; five subsequent corrections stayed within the same USD 0.91 ledger. Current published manifest is authoritative."
 }

@@ -1,0 +1,15 @@
+{
+  "date": "2026-09-16",
+  "approvedCapUsd": 0.91,
+  "requests": 866,
+  "characters": 30241,
+  "conservativeEstimatedUsdBeforeTax": 0.90723,
+  "actualInvoice": "not queried; free tier not assumed",
+  "retries": 0,
+  "originalRequests": 861,
+  "correctionRequests": 5,
+  "publishedBindings": 1982,
+  "newPackagedAssets": 858,
+  "supersededGeneratedAssetsExcluded": 8,
+  "ledgerSha256": "3089541fa449e46896bab895060bb9229ab1dd6ddc75d592decc43ff8238e151"
+}

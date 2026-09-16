@@ -18,7 +18,7 @@ interface SummaryPageProps {
 }
 
 export function SummaryPage({ result, title, voiceEnabled, onPlayAgain, onBackHome }: SummaryPageProps) {
-  const { speak, getSpeakProps } = useSpeech(voiceEnabled);
+  const { speak, stop, getSpeakProps } = useSpeech(voiceEnabled);
   const starMessage = getStarMessage(result.stars);
   const starFallback = (
     <div className="stars" aria-label={`קיבלתם ${result.stars} כוכבים`}>
@@ -29,8 +29,9 @@ export function SummaryPage({ result, title, voiceEnabled, onPlayAgain, onBackHo
   );
 
   useEffect(() => {
-    speak(`סיימתם את ${title}. צברתם ${result.score} מתוך ${result.total}. קיבלתם ${result.stars} כוכבים. ${starMessage}`);
-  }, [result.score, result.stars, result.total, speak, starMessage, title]);
+    speak('סיימנו את התעלומה וגילינו תמונה חדשה. כל הכבוד!');
+    return stop;
+  }, [speak, stop]);
 
   return (
     <section className="summary-card summary-card--premium">

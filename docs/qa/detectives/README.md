@@ -1,17 +1,19 @@
 # Detective upgrade — local acceptance report
 
-Updated: 2026-09-15. Branch: `codex/trivia-detectives-upgrade`. Base: `codex/experiential-games-redesign` at `152418237597e0a8794725184337e8d96b4d1765`.
+Updated: 2026-09-16. Branch: `codex/trivia-detectives-upgrade`. Base: `codex/experiential-games-redesign` at `152418237597e0a8794725184337e8d96b4d1765`.
 
-This report records actual checks, not a release approval. The user approved narration with a strict spending limit. The USD 0.90 budget preflight stopped before any paid request because the exact batch estimate is USD 0.90189. Approval of an adjusted cap is pending. No pull request, merge or deployment has been performed for this upgrade yet.
+This report records actual checks, not a deployment approval. The user approved a USD 0.91 narration cap. Generation completed at a conservative estimated USD 0.90723 before tax, with no request retries; the actual bill may be lower because free-tier credits are not assumed. Strict narration coverage and the release build passed. No merge or deployment has been performed.
 
 ## Completed checks
 
 * All 3,840 generated activities passed schema, independent semantic checks and hash-bound AI editorial review. Each of the 96 game/age/level cells contains 40 distinct rendered activities. See [content review](../../content-review/DETECTIVE_REVIEW.md).
-* 191 unit tests and 3 integration tests passed in one complete run (194 total, no failures). They include every selection cell, corrupt-content rejection, retry/demonstration evidence, checkpoint compatibility, profile isolation, deterministic shuffled boards, resume without consuming another selection, missing/empty content recovery and delayed loading after unmount. An earlier concurrent run timed out in the existing audio-service test, which subsequently passed in isolation and in the complete suite.
-* TypeScript and the production web build passed. The existing large-bundle warning remains (main bundle approximately 1.87 MB minified).
+* 197 unit tests and 3 integration tests passed in one complete release run (200 total, no failures). They include every selection cell, corrupt-content rejection, retry/demonstration evidence, checkpoint compatibility, profile isolation, deterministic shuffled boards, resume without consuming another selection, missing/empty content recovery, delayed loading after unmount, strict spending reservations and every spoken detective content binding. An earlier concurrent run timed out in the existing audio-service test, which subsequently passed in isolation and in the complete suite.
+* TypeScript, strict coverage of all 1,982 catalog bindings and `build:release` passed. The existing large-bundle warning remains; no performance improvement is claimed from asset packaging alone.
+* Eighteen real MP3 playback scenarios passed across Android-phone and iPad browser emulation: all eight games plus adaptive practice, hint decoding, recorded completion, no missing narration bindings, no overlapping playback and no continued completion playback after exit. This includes the two-pair age-three boards and adaptive summaries that previously had no generated score-summary recording. The completion voice now celebrates revealing the picture; detailed outcome counts remain visible and accessible.
 * Six final Chromium accessibility/lifecycle scenarios passed: all eight boards in four sizes, enlarged text, keyboard and separate audio controls, a second mistake/demonstration, reload/version invalidation, rapid Next activation, and distinct counting marks in narrow comparison/addition cards. Device sizes: 320×568, 740×360, 768×1024 and 1280×800; the additional quantity case uses widths 320 and 393 with 200% question/answer text.
-* All eight game types passed reload and full completion with the browser network disabled on the updated production preview. This verifies cached activity operation; it does not claim missing narration files are available offline.
+* All eight games plus adaptive practice passed preparation, reload and full completion with the browser network disabled on the final release preview. Each case decoded actual locally cached MP3 audio with no missing/failed narration request or media error. The new web preparation button caches recordings for the selected age and level using the existing service worker; native packages already bundle them.
 * All 192 phone/tablet game/age/level scenarios and 24 adaptive scenarios passed in a clean final-curriculum run (216 total). Every adaptive scenario also completed a replay. This run includes the corrected phonology, full number ceilings and distinct difficulty levels. Later narrow-screen CSS changes passed the six dedicated layout/lifecycle scenarios above.
+  The subsequent singular-wording corrections did not change answer rules or board sizes; all content was regenerated/reviewed and revalidated, and the final playback run completed all game types against those corrected packs.
 * The seven browser/device regression configurations passed 374 scenarios, with 18 deliberate duplicate skips, zero flaky cases and zero global runner errors. They cover Chromium, Firefox, WebKit, Android-phone, iPhone, Android-tablet and iPad emulation, including all four existing adventure worlds. This run preceded the final curriculum refinement; the 216-scenario run above verifies the changed content and board sizes.
 * Eleven updated accessibility/lifecycle scenarios passed across Chromium, Android-phone emulation and iPad emulation; four duplicate desktop-only cases were explicitly skipped. Rapid Next activation advances exactly one question.
 * Android `testDebugUnitTest lintDebug assembleDebug` passed against the updated packaged web build: 232 Gradle tasks, 49 executed and 183 up-to-date. Existing SDK XML/deprecation/flat-directory warnings remain non-fatal. ADB reported no attached devices.
@@ -36,6 +38,8 @@ This report records actual checks, not a release approval. The user approved nar
 | Some medium/hard content was identical and number generation did not reach the age ceiling | Manual level did not reliably change the activity | Add explicit visual/quantitative differences within age bounds, monotonic pair-board sizes and complete number ranges; independent curriculum assertions and all 216 device scenarios pass. |
 | Counting marks included bunches/slices and awkward plural labels | Ambiguous quantity and inaccurate spoken grammar | Use whole individual objects and grammatical generic quantity labels; reject incompatible marks during validation. |
 | Narrow answer cards broke enlarged Hebrew words and compressed counting marks | Reduced readability at 320 CSS px | Stack narrow answers/comparison groups; quantity grids wrap while reserving each mark's full width. Maximum-count comparison/addition checks and captures pass. |
+| Eight explanations retained plural wording for one item | Incorrect spoken Hebrew | Four grammatical singular explanations replace them; the whole bank is checked for the old phrase. |
+| Dynamic summary narration did not cover adaptive totals or two-pair boards | Completion could fall back to device speech | Use a locally recorded picture-completion message and verify actual MP3 decoding on phone/tablet. |
 
 The first offline run stopped after two failures and six unrun cases. Those failures remain recorded in `qa-reports/detective-offline.json`; the corrective run `detective-offline-fixed.json` has eight passes. Interrupted earlier runs without final reports are not counted as completed acceptance.
 
@@ -51,9 +55,8 @@ The first 87-scenario delivery run overlapped a local rebuild: 86 passed and one
 
 ## Pending delivery gates
 
-* Approve an adjusted spending cap and generate the 861 missing local narration entries in [the recording request](narration-request.json): 30,063 characters, USD 0.90189 before tax at USD 30 per million characters. The approved USD 0.90 cap blocked generation before any paid request. The tool now preflights the batch and persists a reservation before each potentially billable attempt, including retries; hidden SDK retries are disabled. Four dedicated budget tests and the narration-functions TypeScript build passed. Strict narration validation still fails for exactly the missing texts. After approval, generate/package them and pass strict coverage and `build:release`.
-* iOS compilation requires the macOS CI runner. Android local debug gates have passed; release packaging still requires strict narration coverage.
-* Attach final screenshots and test totals, commit only related work, push and create a PR against `codex/experiential-games-redesign`, then inspect CI. No automatic merge or deployment.
+* Inspect the PR browser/mobile CI results, including iOS compilation on the macOS runner. Windows cannot execute that native build locally.
+* Push and create a PR against `codex/experiential-games-redesign`, then inspect CI. Final screenshots, local test totals and [narration execution](narration-execution.json) are attached. No automatic merge or deployment.
 
 ## Environment limitations
 

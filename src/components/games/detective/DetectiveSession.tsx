@@ -24,6 +24,7 @@ import {
 } from "./DetectiveVisual";
 import { gameDefinitions } from "../../../data/games";
 import "./detective.css";
+import { DetectiveOfflinePreparation } from './DetectiveOfflinePreparation';
 
 interface Props {
   profile: LearnerProfile;
@@ -478,6 +479,7 @@ export function DetectiveSession({
           ) : null}
         </div>
       </div>
+      <DetectiveOfflinePreparation items={items} round={round} />
       <span className="visually-hidden">{discoveryThemes[scope].icon}</span>
     </section>
   );

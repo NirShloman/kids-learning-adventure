@@ -333,6 +333,13 @@
   padding: 40px;
   text-align: center;
 }
+.detective-offline {
+  margin-top: 20px;
+}
+.detective-offline p {
+  font-size: 14px;
+  line-height: 1.5;
+}
 .detective-pair-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));

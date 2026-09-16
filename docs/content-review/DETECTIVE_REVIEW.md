@@ -34,6 +34,8 @@ The pair תפוח/תפוז replaces תפוח/תנור because the hot-springs sy
 
 Counting marks are restricted to individual whole apples, bananas, strawberries, pears, peaches, carrots, onions and eggplants. Grape bunches, cherry pairs and watermelon slices are excluded from quantities. Spoken quantity labels use "פריט אחד" or "N פריטים", avoiding incorrect singular/plural fruit names. These exclusions are enforced by the visual oracle.
 
+The recording pass on 2026-09-16 also corrected eight distinct singular explanations that still said "1 פריטים". Counting and pair explanations now use "פריט אחד"; a one-item comparison names the smaller group explicitly. The discovery summary uses one recorded celebration of completing the picture, which also covers adaptive sessions and two-pair boards; detailed outcome counts remain visible and available to screen readers.
+
 The generator resets reviews to pending. `validate-static-content.mjs --unreviewed` checks schema, age/level coverage, unique content, domain options, visual consistency and independently derived answers without waiving any content checks. The explicit editorial-record command then checks that a review document exists and records the exact content hashes. Later edits invalidate those hashes.
 
 `detective-content.test.ts` recomputes all 3,840 generated items, covers all 96 selections, and deliberately corrupts answers, quantities, group visuals, shapes, words, sequences and pairs to verify rejection. Browser tests separately exercise actual rendering and interaction. These checks cannot establish children's comprehension; no human usability study is claimed.

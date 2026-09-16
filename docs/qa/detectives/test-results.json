@@ -1,17 +1,20 @@
 {
-  "date": "2026-09-15",
-  "status": "local game checks passed; narration generation blocked by approved spending cap",
-  "contentVersion": "2026.09.detectives.1.05c6aa07e431d404",
+  "date": "2026-09-16",
+  "status": "all local release gates passed; remote CI pending PR",
+  "contentVersion": "2026.09.detectives.1.34bc05e308b5700b",
   "sourceHashes": {
-    "src/components/games/detective/DetectiveSession.tsx": "4e5a3cf6e75a227822d5f8fbf84f1d5216fd43188ce146b620f448f6e5702865",
-    "src/components/games/detective/detective.css": "b8220c99be9b48fdf33701a98f5be94d5161474970cf3be33ed7b750834e81b5",
+    "src/components/games/detective/DetectiveSession.tsx": "d112bf6925d449eae91540bf575eb3f7cc4af429b8b1981a0b8b18cf53ee3678",
+    "src/components/games/detective/detective.css": "f677e0e17d5932d4c9b97587f7956cf8cecb55dab7247c445982553626dd0154",
     "src/services/questionService.ts": "37653586758b029bb63aeba9a6e8b62d3bc9fab471601eacf0c7398f9f99f911",
-    "scripts/generate-static-content.mjs": "83257fb6d7e2c67091d903168e3d2e5c6f8e7c53f4a7815fd5e57e08f105479e"
+    "scripts/generate-static-content.mjs": "d956ff5fbc38dcae2da807551c8dc840d41e385f0b75d4a29b15207c360043a7",
+    "src/components/games/detective/DetectiveOfflinePreparation.tsx": "c8b66743a70ae8b005eaf3233274cc4a81f2acb0a89a82f3b7ea41739e3ac6cc",
+    "src/pages/SummaryPage.tsx": "454660f7e2f7bad77cd987e3076bcf9f70c70cdeda093afa49626f44f85d1ecc",
+    "src/assets/generatedNarrationManifest.json": "c8dfbe8379fd32253e672ec764a75f5dbe4567cfc7779f649ece2aafb3b56733"
   },
   "unitAndIntegration": {
-    "source": "qa-reports/detective-final-unit-integration.json",
-    "sha256": "b6d7451c8763215e9471c8ec30444b91411cf546a33505cc271a4a62ce3c916d",
-    "passed": 194,
+    "source": "qa-reports/detective-release-unit.json",
+    "sha256": "f1d5bcb4ebefe5cc01383017989dd44f9506d832c6abb2395200bd793626a239",
+    "passed": 200,
     "failed": 0,
     "success": true
   },
@@ -188,26 +191,101 @@
           "flaky": 0
         }
       }
+    },
+    {
+      "source": "qa-reports/detective-release-audio.json",
+      "sha256": "0cfa89c6a6b1e9d564a6f979b847a638613356d652f952fef891c5b32962605f",
+      "startTime": "2026-09-16T05:52:24.643Z",
+      "duration": 217367.23799999998,
+      "expected": 18,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "globalErrors": 0,
+      "projects": {
+        "mobile-chrome": {
+          "passed": 9,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        },
+        "mobile-ipad": {
+          "passed": 9,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        }
+      }
+    },
+    {
+      "source": "qa-reports/detective-release-offline.json",
+      "sha256": "e02ea308ce63dd131c00139777e2a2aa0856f409610588fd35c35d8ca4bbb84d",
+      "startTime": "2026-09-16T05:59:05.838Z",
+      "duration": 134433.49500000002,
+      "expected": 15,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "globalErrors": 0,
+      "projects": {
+        "detective-offline": {
+          "passed": 9,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        },
+        "local-chromium": {
+          "passed": 6,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        }
+      }
     }
   ],
-  "blocked": {
-    "narrationMissingTexts": 861,
-    "releaseBuild": "strict narration gate",
-    "pushAndPr": "after release gate",
-    "remoteCi": "not run before PR",
-    "approvedNarrationBudgetUsd": 0.9,
-    "requiredNarrationEstimateUsd": 0.90189,
-    "paidRequestsSent": 0
-  },
   "limitations": [
     "All device tests use browser emulation; no physical devices attached.",
     "Local Windows cannot compile iOS; macOS CI is pending.",
     "The broad browser run precedes the final curriculum; the 216-case matrix covers the changed content.",
-    "Final narrow-screen CSS is covered by the dedicated six-case layout run."
+    "Final narrow-screen CSS is covered by the dedicated six-case layout run.",
+    "Final singular grammar and recorded summary changes are covered by 18 actual-audio playthroughs and nine offline-audio playthroughs; the earlier 216-case curriculum matrix is retained with its original timestamp."
   ],
   "budgetVerification": {
     "testsPassed": 4,
     "narrationFunctionsTypecheck": "passed",
     "preflight": "BUDGET_LIMIT before request submission"
+  },
+  "narration": {
+    "date": "2026-09-16",
+    "approvedCapUsd": 0.91,
+    "requests": 866,
+    "characters": 30241,
+    "conservativeEstimatedUsdBeforeTax": 0.90723,
+    "actualInvoice": "not queried; free tier not assumed",
+    "retries": 0,
+    "originalRequests": 861,
+    "correctionRequests": 5,
+    "publishedBindings": 1982,
+    "newPackagedAssets": 858,
+    "supersededGeneratedAssetsExcluded": 8,
+    "ledgerSha256": "3089541fa449e46896bab895060bb9229ab1dd6ddc75d592decc43ff8238e151"
+  },
+  "releaseBuild": {
+    "status": "passed",
+    "source": "qa-reports/detective-release-build.log",
+    "sha256": "ee9e42470e2f4adb630be91764cbed60a9ffd160b00991e1cb70a1d05a802fd2"
+  },
+  "android": {
+    "status": "passed",
+    "tasks": [
+      "testDebugUnitTest",
+      "lintDebug",
+      "assembleDebug"
+    ],
+    "source": "qa-reports/detective-release-android.log",
+    "sha256": "440969a564daaf86aa3aec0343de4564bb29d8d153e7df1d87839204dcb1b5ea"
+  },
+  "remoteCi": {
+    "status": "pending PR"
   }
 }
