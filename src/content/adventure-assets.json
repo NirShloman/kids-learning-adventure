@@ -1,0 +1,124 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "id": "letters",
+      "path": "/assets/experience/v2/letters.webp",
+      "kind": "background",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "numbers",
+      "path": "/assets/experience/v2/numbers.webp",
+      "kind": "background",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "shapes",
+      "path": "/assets/experience/v2/shapes.webp",
+      "kind": "background",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "colors",
+      "path": "/assets/experience/v2/colors.webp",
+      "kind": "background",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "monster-idle",
+      "path": "/assets/experience/v2/monster-idle.webp",
+      "kind": "cutout",
+      "width": 384,
+      "height": 384
+    },
+    {
+      "id": "monster-ready",
+      "path": "/assets/experience/v2/monster-ready.webp",
+      "kind": "cutout",
+      "width": 384,
+      "height": 384
+    },
+    {
+      "id": "monster-eat",
+      "path": "/assets/experience/v2/monster-eat.webp",
+      "kind": "cutout",
+      "width": 384,
+      "height": 384
+    },
+    {
+      "id": "monster-celebrate",
+      "path": "/assets/experience/v2/monster-celebrate.webp",
+      "kind": "cutout",
+      "width": 384,
+      "height": 384
+    },
+    {
+      "id": "nir-kippah-idle",
+      "path": "/assets/experience/v2/nir-kippah-idle.webp",
+      "kind": "cutout",
+      "width": 256,
+      "height": 320
+    },
+    {
+      "id": "nir-kippah-point",
+      "path": "/assets/experience/v2/nir-kippah-point.webp",
+      "kind": "cutout",
+      "width": 256,
+      "height": 320
+    },
+    {
+      "id": "nir-kippah-celebrate",
+      "path": "/assets/experience/v2/nir-kippah-celebrate.webp",
+      "kind": "cutout",
+      "width": 256,
+      "height": 320
+    },
+    {
+      "id": "nir-plain-idle",
+      "path": "/assets/experience/v2/nir-plain-idle.webp",
+      "kind": "cutout",
+      "width": 256,
+      "height": 320
+    },
+    {
+      "id": "nir-plain-point",
+      "path": "/assets/experience/v2/nir-plain-point.webp",
+      "kind": "cutout",
+      "width": 256,
+      "height": 320
+    },
+    {
+      "id": "nir-plain-celebrate",
+      "path": "/assets/experience/v2/nir-plain-celebrate.webp",
+      "kind": "cutout",
+      "width": 256,
+      "height": 320
+    },
+    {
+      "id": "shir-idle",
+      "path": "/assets/experience/v2/shir-idle.webp",
+      "kind": "cutout",
+      "width": 256,
+      "height": 320
+    },
+    {
+      "id": "shir-point",
+      "path": "/assets/experience/v2/shir-point.webp",
+      "kind": "cutout",
+      "width": 256,
+      "height": 320
+    },
+    {
+      "id": "shir-celebrate",
+      "path": "/assets/experience/v2/shir-celebrate.webp",
+      "kind": "cutout",
+      "width": 256,
+      "height": 320
+    }
+  ]
+}

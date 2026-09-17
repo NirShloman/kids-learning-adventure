@@ -1,0 +1,5 @@
+
+> kids-learning-adventure-web@1.2.0 mobile:verify
+> node scripts/verify-mobile-config.mjs
+
+Mobile configuration, privacy, permissions, versions, and bundled media verified.

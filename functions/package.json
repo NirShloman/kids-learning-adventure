@@ -1,0 +1,27 @@
+{
+  "name": "yedale-narration-functions",
+  "private": true,
+  "type": "module",
+  "main": "lib/index.js",
+  "engines": {
+    "node": "22"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "cli": "tsx src/cli.ts",
+    "serve": "npm run build && firebase emulators:start --only functions,firestore,storage",
+    "deploy": "npm run build && firebase deploy --only functions,firestore:rules,storage"
+  },
+  "dependencies": {
+    "@google-cloud/text-to-speech": "^7.0.0",
+    "firebase-admin": "^14.3.0",
+    "firebase-functions": "^7.3.2",
+    "music-metadata": "^11.15.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "firebase-tools": "^15.28.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.6.2"
+  }
+}

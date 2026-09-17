@@ -134,6 +134,31 @@ export function saveSessionSummary(summary: LearningSessionSummary): void {
   const snapshot = getLearningSnapshot(); const data = getProfileData(summary.profileId, snapshot);
   writeSnapshot({ ...snapshot, dataByProfile: { ...snapshot.dataByProfile, [summary.profileId]: { ...data, sessions: [summary, ...data.sessions].slice(0, MAX_SESSIONS) } }, updatedAt: nowIso() });
 }
+
+export function getAdventureProgress(profileId: string, gameId: import('../types').ExperienceGameId): import('../types/adventure.types').AdventureProgress {
+  return getProfileData(profileId).adventures?.[gameId] ?? { version: 1, completed: [], rewards: [], recent: [] };
+}
+
+/** Persist evidence and its checkpoint together, so reload cannot duplicate a learning action. */
+export function saveAdventureProgress(profileId: string, gameId: import('../types').ExperienceGameId,
+  progress: import('../types/adventure.types').AdventureProgress, evidence?: NewLearningEvent): void {
+  const snapshot = getLearningSnapshot();
+  if (!snapshot.profiles.some(profile => profile.id === profileId)) return;
+  const data = getProfileData(profileId, snapshot);
+  let nextData = data;
+  if (evidence && !data.events.some(event => event.sessionId === evidence.sessionId && event.contentId === evidence.contentId && event.attemptNumber === evidence.attemptNumber)) {
+    const now = effectiveNow(new Date(), data.lastEffectiveNow);
+    const event: LearningEvent = { ...evidence, id: createId('event'), occurredAt: now.toISOString(), effectiveDay: now.toISOString().slice(0, 10) };
+    const mastery = { ...data.mastery };
+    for (const skillId of event.skillIds) mastery[skillId] = applyLearningEvent(mastery[skillId] ?? emptyMastery(skillId), event, mastery, now);
+    const countKey = `${event.effectiveDay}:${event.contentId}`;
+    nextData = { ...data, mastery, events: [...data.events, event].slice(-MAX_EVENTS), lastEffectiveNow: now.toISOString(),
+      dailyContentCounts: { ...data.dailyContentCounts, [countKey]: (data.dailyContentCounts[countKey] ?? 0) + 1 } };
+  }
+  writeSnapshot({ ...snapshot, dataByProfile: { ...snapshot.dataByProfile, [profileId]: {
+    ...nextData, adventures: { ...nextData.adventures, [gameId]: progress }
+  } }, updatedAt: nowIso() });
+}
 export function saveActivePlan(profileId: string, plan: SessionPlan | null): void {
   const snapshot = getLearningSnapshot(); const data = getProfileData(profileId, snapshot);
   writeSnapshot({ ...snapshot, dataByProfile: { ...snapshot.dataByProfile, [profileId]: { ...data, activePlan: plan } }, updatedAt: nowIso() });

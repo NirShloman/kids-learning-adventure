@@ -1,0 +1,217 @@
+[WebServer] (node:12428) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 42 tests using 2 workers
+
+(node:22976) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:23548) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:22976) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:23548) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [local-chromium] › tests\e2e\adventure-interactions.local.spec.ts:94:1 › ERR-01: unavailable artwork offers a working retry (2.6s)
+(node:7644) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:7644) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  2 [local-chromium] › tests\e2e\adventure-interactions.local.spec.ts:11:1 › COL-01: finger paint stays clipped, survives cancellation and requires a choice (4.1s)
+(node:21732) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:21732) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  3 [local-chromium] › tests\e2e\adventure-interactions.local.spec.ts:11:1 › COL-01: finger paint stays clipped, survives cancellation and requires a choice (3.8s)
+  ok  4 [local-chromium] › tests\e2e\adventure-interactions.local.spec.ts:94:1 › ERR-01: unavailable artwork offers a working retry (2.0s)
+(node:30364) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:30364) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:30660) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:30660) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  6 [local-chromium] › tests\e2e\adventure-interactions.local.spec.ts:94:1 › ERR-01: unavailable artwork offers a working retry (2.6s)
+(node:24088) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:24088) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  5 [local-chromium] › tests\e2e\adventure-interactions.local.spec.ts:11:1 › COL-01: finger paint stays clipped, survives cancellation and requires a choice (4.2s)
+(node:25416) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:25416) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  8 [local-firefox] › tests\e2e\adventure-interactions.local.spec.ts:94:1 › ERR-01: unavailable artwork offers a working retry (6.2s)
+  ok  7 [local-firefox] › tests\e2e\adventure-interactions.local.spec.ts:11:1 › COL-01: finger paint stays clipped, survives cancellation and requires a choice (8.4s)
+(node:27356) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:27356) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:14684) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:14684) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 10 [local-firefox] › tests\e2e\adventure-interactions.local.spec.ts:94:1 › ERR-01: unavailable artwork offers a working retry (6.3s)
+(node:26440) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:26440) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  9 [local-firefox] › tests\e2e\adventure-interactions.local.spec.ts:11:1 › COL-01: finger paint stays clipped, survives cancellation and requires a choice (7.7s)
+(node:27264) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:27264) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 11 [local-firefox] › tests\e2e\adventure-interactions.local.spec.ts:11:1 › COL-01: finger paint stays clipped, survives cancellation and requires a choice (8.6s)
+  ok 12 [local-firefox] › tests\e2e\adventure-interactions.local.spec.ts:94:1 › ERR-01: unavailable artwork offers a working retry (7.9s)
+(node:21992) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:21992) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:1096) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:1096) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 14 [local-webkit] › tests\e2e\adventure-interactions.local.spec.ts:94:1 › ERR-01: unavailable artwork offers a working retry (7.5s)
+(node:28316) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:28316) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 13 [local-webkit] › tests\e2e\adventure-interactions.local.spec.ts:11:1 › COL-01: finger paint stays clipped, survives cancellation and requires a choice (10.9s)
+(node:5264) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:5264) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 16 [local-webkit] › tests\e2e\adventure-interactions.local.spec.ts:94:1 › ERR-01: unavailable artwork offers a working retry (5.8s)
+(node:6628) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:6628) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 15 [local-webkit] › tests\e2e\adventure-interactions.local.spec.ts:11:1 › COL-01: finger paint stays clipped, survives cancellation and requires a choice (9.8s)
+(node:7012) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:7012) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 18 [local-webkit] › tests\e2e\adventure-interactions.local.spec.ts:94:1 › ERR-01: unavailable artwork offers a working retry (5.6s)
+(node:27204) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:27204) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 17 [local-webkit] › tests\e2e\adventure-interactions.local.spec.ts:11:1 › COL-01: finger paint stays clipped, survives cancellation and requires a choice (8.6s)
+(node:13856) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:13856) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 19 [mobile-chrome] › tests\e2e\adventure-interactions.local.spec.ts:11:1 › COL-01: finger paint stays clipped, survives cancellation and requires a choice (4.2s)
+  ok 20 [mobile-chrome] › tests\e2e\adventure-interactions.local.spec.ts:94:1 › ERR-01: unavailable artwork offers a working retry (2.2s)
+(node:3772) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3772) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:25916) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:25916) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 22 [mobile-chrome] › tests\e2e\adventure-interactions.local.spec.ts:94:1 › ERR-01: unavailable artwork offers a working retry (2.5s)
+(node:2096) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:2096) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 21 [mobile-chrome] › tests\e2e\adventure-interactions.local.spec.ts:11:1 › COL-01: finger paint stays clipped, survives cancellation and requires a choice (4.4s)
+(node:12424) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:12424) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 24 [mobile-chrome] › tests\e2e\adventure-interactions.local.spec.ts:94:1 › ERR-01: unavailable artwork offers a working retry (2.1s)
+  ok 23 [mobile-chrome] › tests\e2e\adventure-interactions.local.spec.ts:11:1 › COL-01: finger paint stays clipped, survives cancellation and requires a choice (4.2s)
+(node:24040) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:21648) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:24040) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:21648) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 26 [mobile-safari] › tests\e2e\adventure-interactions.local.spec.ts:94:1 › ERR-01: unavailable artwork offers a working retry (6.7s)
+(node:28436) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:28436) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 25 [mobile-safari] › tests\e2e\adventure-interactions.local.spec.ts:11:1 › COL-01: finger paint stays clipped, survives cancellation and requires a choice (9.4s)
+(node:25136) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:25136) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 28 [mobile-safari] › tests\e2e\adventure-interactions.local.spec.ts:94:1 › ERR-01: unavailable artwork offers a working retry (4.4s)
+  ok 27 [mobile-safari] › tests\e2e\adventure-interactions.local.spec.ts:11:1 › COL-01: finger paint stays clipped, survives cancellation and requires a choice (7.7s)
+(node:23308) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:23308) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:18752) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:18752) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 30 [mobile-safari] › tests\e2e\adventure-interactions.local.spec.ts:94:1 › ERR-01: unavailable artwork offers a working retry (4.8s)
+(node:23288) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:23288) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 29 [mobile-safari] › tests\e2e\adventure-interactions.local.spec.ts:11:1 › COL-01: finger paint stays clipped, survives cancellation and requires a choice (7.9s)
+(node:24156) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:24156) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 32 [mobile-android-tablet] › tests\e2e\adventure-interactions.local.spec.ts:94:1 › ERR-01: unavailable artwork offers a working retry (2.0s)
+(node:24436) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:24436) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 31 [mobile-android-tablet] › tests\e2e\adventure-interactions.local.spec.ts:11:1 › COL-01: finger paint stays clipped, survives cancellation and requires a choice (5.3s)
+(node:28660) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:28660) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 34 [mobile-android-tablet] › tests\e2e\adventure-interactions.local.spec.ts:94:1 › ERR-01: unavailable artwork offers a working retry (2.3s)
+(node:22880) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:22880) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 33 [mobile-android-tablet] › tests\e2e\adventure-interactions.local.spec.ts:11:1 › COL-01: finger paint stays clipped, survives cancellation and requires a choice (5.3s)
+(node:29212) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:29212) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 36 [mobile-android-tablet] › tests\e2e\adventure-interactions.local.spec.ts:94:1 › ERR-01: unavailable artwork offers a working retry (2.0s)
+(node:30196) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:30196) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 35 [mobile-android-tablet] › tests\e2e\adventure-interactions.local.spec.ts:11:1 › COL-01: finger paint stays clipped, survives cancellation and requires a choice (5.2s)
+(node:12980) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:12980) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 38 [mobile-ipad] › tests\e2e\adventure-interactions.local.spec.ts:94:1 › ERR-01: unavailable artwork offers a working retry (7.1s)
+(node:20788) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:20788) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 37 [mobile-ipad] › tests\e2e\adventure-interactions.local.spec.ts:11:1 › COL-01: finger paint stays clipped, survives cancellation and requires a choice (9.6s)
+(node:26280) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:26280) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 40 [mobile-ipad] › tests\e2e\adventure-interactions.local.spec.ts:94:1 › ERR-01: unavailable artwork offers a working retry (5.6s)
+(node:20592) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:20592) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 39 [mobile-ipad] › tests\e2e\adventure-interactions.local.spec.ts:11:1 › COL-01: finger paint stays clipped, survives cancellation and requires a choice (8.9s)
+(node:30416) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:30416) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 42 [mobile-ipad] › tests\e2e\adventure-interactions.local.spec.ts:94:1 › ERR-01: unavailable artwork offers a working retry (5.6s)
+  ok 41 [mobile-ipad] › tests\e2e\adventure-interactions.local.spec.ts:11:1 › COL-01: finger paint stays clipped, survives cancellation and requires a choice (8.4s)
+
+  42 passed (3.0m)

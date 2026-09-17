@@ -1,0 +1,98 @@
+[WebServer] (node:20080) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 35 tests using 2 workers
+
+(node:19408) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:1960) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:19408) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:1960) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  2 [local-chromium] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-letter-bridge accessible with enlarged controls in both orientations (8.2s)
+  ok  1 [local-chromium] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-number-breakfast accessible with enlarged controls in both orientations (8.3s)
+  ok  4 [local-chromium] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-color-petals accessible with enlarged controls in both orientations (8.1s)
+  ok  3 [local-chromium] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-shape-windmill accessible with enlarged controls in both orientations (9.0s)
+(node:22244) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:22244) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  5 [local-chromium] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-color-orange accessible with enlarged controls in both orientations (7.0s)
+(node:21592) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:21592) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  7 [local-firefox] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-number-breakfast accessible with enlarged controls in both orientations (19.4s)
+  ok  6 [local-firefox] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-letter-bridge accessible with enlarged controls in both orientations (21.4s)
+  ok  9 [local-firefox] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-color-petals accessible with enlarged controls in both orientations (12.5s)
+  ok  8 [local-firefox] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-shape-windmill accessible with enlarged controls in both orientations (13.8s)
+(node:21708) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:21708) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 10 [local-firefox] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-color-orange accessible with enlarged controls in both orientations (13.3s)
+(node:22216) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:22216) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 11 [local-webkit] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-letter-bridge accessible with enlarged controls in both orientations (23.4s)
+  ok 12 [local-webkit] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-number-breakfast accessible with enlarged controls in both orientations (25.2s)
+  ok 13 [local-webkit] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-shape-windmill accessible with enlarged controls in both orientations (22.0s)
+  ok 14 [local-webkit] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-color-petals accessible with enlarged controls in both orientations (21.7s)
+(node:21580) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:21580) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 16 [mobile-chrome] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-letter-bridge accessible with enlarged controls in both orientations (6.4s)
+  ok 15 [local-webkit] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-color-orange accessible with enlarged controls in both orientations (21.9s)
+(node:16408) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:16408) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 17 [mobile-chrome] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-number-breakfast accessible with enlarged controls in both orientations (6.8s)
+  ok 19 [mobile-chrome] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-color-petals accessible with enlarged controls in both orientations (7.8s)
+  ok 18 [mobile-chrome] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-shape-windmill accessible with enlarged controls in both orientations (8.8s)
+(node:6376) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:6376) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 20 [mobile-chrome] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-color-orange accessible with enlarged controls in both orientations (7.7s)
+(node:22108) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:22108) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 21 [mobile-safari] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-letter-bridge accessible with enlarged controls in both orientations (18.0s)
+  ok 22 [mobile-safari] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-number-breakfast accessible with enlarged controls in both orientations (19.6s)
+  ok 23 [mobile-safari] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-shape-windmill accessible with enlarged controls in both orientations (16.8s)
+  ok 24 [mobile-safari] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-color-petals accessible with enlarged controls in both orientations (15.5s)
+(node:22104) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:22104) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 26 [mobile-android-tablet] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-letter-bridge accessible with enlarged controls in both orientations (8.8s)
+  ok 25 [mobile-safari] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-color-orange accessible with enlarged controls in both orientations (16.4s)
+(node:24608) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:24608) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 27 [mobile-android-tablet] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-number-breakfast accessible with enlarged controls in both orientations (9.3s)
+  ok 28 [mobile-android-tablet] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-shape-windmill accessible with enlarged controls in both orientations (9.6s)
+  ok 29 [mobile-android-tablet] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-color-petals accessible with enlarged controls in both orientations (9.0s)
+(node:19292) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:19292) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 30 [mobile-android-tablet] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-color-orange accessible with enlarged controls in both orientations (8.8s)
+(node:18060) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:18060) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 31 [mobile-ipad] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-letter-bridge accessible with enlarged controls in both orientations (22.5s)
+  ok 32 [mobile-ipad] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-number-breakfast accessible with enlarged controls in both orientations (21.2s)
+  ok 34 [mobile-ipad] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-color-petals accessible with enlarged controls in both orientations (24.2s)
+  ok 33 [mobile-ipad] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-shape-windmill accessible with enlarged controls in both orientations (27.2s)
+  ok 35 [mobile-ipad] › tests\e2e\adventure-interactions.local.spec.ts:117:3 › A11Y-01 INT-03: v2-color-orange accessible with enlarged controls in both orientations (16.5s)
+
+  35 passed (5.2m)

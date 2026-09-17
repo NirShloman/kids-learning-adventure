@@ -5,7 +5,7 @@ import type { ContentItemBase, LearnerProfile, LearningContentDescriptor, Sessio
 import { planAdaptiveSession } from '../learning/sessionPlanner';
 import { loadGameContent, loadLearningContentIndex } from '../services/staticContentRepository';
 import { getProfileData, recordLearningEvent, saveActivePlan, saveSessionSummary } from '../services/learningStoreService';
-import { speakHebrew } from '../services/speechService';
+import { playNarrationText } from '../services/narrationService';
 
 interface AdaptiveSessionPageProps { profile: LearnerProfile; onBack: () => void; onComplete: () => void }
 interface Choice { id: string; label: string }
@@ -70,7 +70,7 @@ export function AdaptiveSessionPage({ profile, onBack, onComplete }: AdaptiveSes
       skillIds: task.skillIds, gameId: task.gameId, evidenceForm: task.evidenceForm, correct,
       attemptNumber: attempt, hintUsed, responseMs: Math.round(performance.now() - startedAt.current), monotonicMs: Math.round(performance.now()) });
     if (!correct) setAttempt((value) => value + 1);
-    speakHebrew(correct ? 'כל הכבוד!' : 'כמעט. ננסה בדרך אחרת.', { mode: 'guided' });
+    playNarrationText(correct ? 'כל הכבוד!' : 'כמעט. ננסה בדרך אחרת.', { mode: 'guided' });
   }
 
   function next() {
@@ -105,7 +105,7 @@ export function AdaptiveSessionPage({ profile, onBack, onComplete }: AdaptiveSes
       <header className="adaptive-session__header">
         <Button variant="ghost" onClick={onBack}>חזרה</Button>
         <div><strong>תרגול מותאם</strong><small>{task.reason}</small></div>
-        <Button variant="ghost" aria-label="חזרה על ההוראה" onClick={() => speakHebrew(activity.prompt, { mode: 'manual' })}>🔊 שוב</Button>
+        <Button variant="ghost" aria-label="חזרה על ההוראה" onClick={() => playNarrationText(activity.prompt, { mode: 'manual' })}>🔊 שוב</Button>
       </header>
       <ProgressBar current={index + 1} total={plan.tasks.length} />
       <section className="adaptive-session__card" aria-live="polite">
@@ -118,7 +118,7 @@ export function AdaptiveSessionPage({ profile, onBack, onComplete }: AdaptiveSes
               onClick={() => submit(choice.id)}>{choice.label}</button>)}
           </div>
         )}
-        {!isMemoryPreview && !selected ? <Button variant="ghost" onClick={() => { setHintUsed(true); speakHebrew(`רמז: התשובה היא ${activity.choices.find((choice) => choice.id === activity.correctId)?.label ?? ''}`, { mode: 'manual' }); }}>רמז עדין</Button> : null}
+        {!isMemoryPreview && !selected ? <Button variant="ghost" onClick={() => { setHintUsed(true); playNarrationText(`רמז: התשובה היא ${activity.choices.find((choice) => choice.id === activity.correctId)?.label ?? ''}`, { mode: 'manual' }); }}>רמז עדין</Button> : null}
         {selected ? <div className="adaptive-session__feedback" role="status">
           <strong>{isCorrectAnswer ? 'מצוין!' : 'ניסיון טוב — עכשיו ראינו את התשובה.'}</strong>
           {!isCorrectAnswer ? <Button onClick={next}>{index === plan.tasks.length - 1 ? 'סיום התרגול' : 'למשימה הבאה'}</Button> : null}

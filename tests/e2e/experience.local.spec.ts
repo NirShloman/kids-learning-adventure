@@ -1,760 +1,233 @@
-import AxeBuilder from '@axe-core/playwright';
-import { expect, Locator, Page, test, TestInfo } from '@playwright/test';
-import {
-  chooseHomeSettings,
-  GameTitle,
-  installConsoleErrorGuard,
-  openGame,
-  openLobby,
-  selectGameMode
-} from './helpers';
+import AxeBuilder from "@axe-core/playwright";
+import { test, expect } from "@playwright/test";
+import { adventureMissions } from "../../src/content/adventureMissions";
+import { missionSteps } from "../../src/components/games/experience/adventureEngine";
+import { openAdventure, solveMission } from "./adventure-helpers";
+import { openGame, selectGameMode, installConsoleErrorGuard } from "./helpers";
 
-type Direction = 'up' | 'down' | 'left' | 'right';
-type ExperienceTitle = Extract<GameTitle, 'אותיות' | 'מספרים' | 'צורות' | 'צבעים'>;
-
-test.describe.configure({ timeout: 180_000 });
-
-function isMobile(testInfo: TestInfo) {
-  return testInfo.project.name.startsWith('mobile-');
-}
-
-async function command(page: Page, direction: Direction, useTouch: boolean, duration = 320) {
-  if (useTouch) {
-    const arena = page.locator('[data-testid="experience-arena"]');
-    const box = await arena.boundingBox();
-    const player = page.locator('.experience-player');
-    if (!box) throw new Error('Arena is not visible');
-    const worldWidth = Number(await arena.getAttribute('data-world-width'));
-    const worldHeight = Number(await arena.getAttribute('data-world-height'));
-    const currentX = Number(await player.getAttribute('data-x'));
-    const currentY = Number(await player.getAttribute('data-y'));
-    const distance = Math.max(100, duration * 0.55);
-    const targetX = Math.max(20, Math.min(worldWidth - 20, currentX + (direction === 'right' ? distance : direction === 'left' ? -distance : 0)));
-    const targetY = Math.max(20, Math.min(worldHeight - 20, currentY + (direction === 'down' ? distance : direction === 'up' ? -distance : 0)));
-    // Playwright's desktop projects do not expose a touchscreen. Dispatch on
-    // the arena itself (rather than an entity layered in the arena) to exercise
-    // the same direct-point React handler used by touch and pointer input.
-    await arena.evaluate((element, point) => {
-      element.dispatchEvent(new MouseEvent('click', {
-        bubbles: true,
-        clientX: point.x,
-        clientY: point.y
-      }));
-    }, {
-      x: box.x + (targetX / worldWidth) * box.width,
-      y: box.y + (targetY / worldHeight) * box.height
-    });
-    await expect.poll(async () => page.locator('.experience-navigation-target').count(), { timeout: 4_000 }).toBe(0);
-    return;
-  }
-  const key = {
-    up: 'ArrowUp',
-    down: 'ArrowDown',
-    left: 'ArrowLeft',
-    right: 'ArrowRight'
-  }[direction];
-  await page.locator('[data-testid="experience-arena"]').evaluate(
-    (element: HTMLElement) => element.focus({ preventScroll: true })
-  );
-  await page.keyboard.down(key);
-  await page.waitForTimeout(duration);
-  await page.keyboard.up(key);
-  await page.locator('[data-testid="experience-arena"]').evaluate((element: HTMLElement) => element.blur());
-  await page.locator('[data-testid="experience-arena"]').evaluate(
-    (element: HTMLElement) => element.focus({ preventScroll: true })
-  );
-  await page.waitForTimeout(90);
-}
-
-async function action(page: Page, useTouch: boolean) {
-  if (!useTouch) await page.keyboard.press('Space');
-}
-
-async function moveDirectlyTo(page: Page, x: number, y: number, useTouch: boolean) {
-  const player = page.locator('.experience-player');
-  // Age-three levels expose a 92px interaction radius plus the entity radius.
-  // Stop just inside that real interaction envelope instead of oscillating around its centre.
-  const tolerance = await page.locator('.experience-arena--guided').count() ? 114 : 78;
-  const axisTolerance = tolerance * 0.62;
-  for (let pass = 0; pass < 3; pass += 1) {
-    for (const axis of ['x', 'y'] as const) {
-      const coordinate = axis === 'x' ? 'data-x' : 'data-y';
-      const target = axis === 'x' ? x : y;
-      for (let attempt = 0; attempt < 30; attempt += 1) {
-        const current = Number(await player.getAttribute(coordinate));
-        const delta = target - current;
-        if (Math.abs(delta) <= axisTolerance) break;
-        const direction: Direction = axis === 'x'
-          ? (delta < 0 ? 'left' : 'right')
-          : (delta < 0 ? 'up' : 'down');
-        await command(page, direction, useTouch, useTouch ? 180 : 260);
-      }
-    }
-    const currentX = Number(await player.getAttribute('data-x'));
-    const currentY = Number(await player.getAttribute('data-y'));
-    if (Math.hypot(x - currentX, y - currentY) <= tolerance) return;
-  }
-  const finalX = Number(await player.getAttribute('data-x'));
-  const finalY = Number(await player.getAttribute('data-y'));
-  throw new Error(
-    `Player did not reach ${x},${y}; stopped at ${finalX.toFixed(1)},${finalY.toFixed(1)} `
-    + `(distance ${Math.hypot(x - finalX, y - finalY).toFixed(1)}, tolerance ${tolerance})`
-  );
-}
-
-async function moveTo(page: Page, x: number, y: number, useTouch: boolean) {
-  const player = page.locator('.experience-player');
-  const currentX = Number(await player.getAttribute('data-x'));
-  const currentY = Number(await player.getAttribute('data-y'));
-  const needsBumperBypass = x >= 500 && x <= 650 && y >= 330 && y <= 390
-    && await page.locator('.experience-obstacle--bumper').count();
-  if (needsBumperBypass) {
-    await moveDirectlyTo(page, 850, currentY, useTouch);
-    await moveDirectlyTo(page, 850, 520, useTouch);
-    await moveDirectlyTo(page, 520, 520, useTouch);
-    await moveDirectlyTo(page, 520, 400, useTouch);
-    return;
-  }
-  const crossesCentralWall = (currentY > 340 && y < 280) || (currentY < 280 && y > 340);
-  if (crossesCentralWall && await page.locator('.experience-obstacle--wall').count()) {
-    await moveDirectlyTo(page, 850, currentY, useTouch);
-    await moveDirectlyTo(page, 850, y, useTouch);
-  }
-  const crossesCentralWallHorizontally = !crossesCentralWall && (
-    (currentX > 640 && x < 640)
-    || (currentX < 360 && x > 360)
-  ) && (
-    (currentY > 250 && currentY < 395)
-    || (y > 250 && y < 395)
-  );
-  if (crossesCentralWallHorizontally && await page.locator('.experience-obstacle--wall').count()) {
-    await moveDirectlyTo(page, currentX, 520, useTouch);
-    await moveDirectlyTo(page, x, 520, useTouch);
-    await moveDirectlyTo(page, x, y, useTouch);
-    return;
-  }
-  const routedX = Number(await player.getAttribute('data-x'));
-  const routedY = Number(await player.getAttribute('data-y'));
-  const crossesVerticalWall = (routedX > 330 && x < 210) || (routedX < 210 && x > 330);
-  if (
-    crossesVerticalWall
-    && !(routedY > 365 && y > 365)
-    && await page.locator('.experience-obstacle--wall').count() > 1
-  ) {
-    await moveDirectlyTo(page, routedX, 100, useTouch);
-    await moveDirectlyTo(page, x, 100, useTouch);
-    await moveDirectlyTo(page, x, y, useTouch);
-    return;
-  }
-  await moveDirectlyTo(page, x, y, useTouch);
-}
-
-async function moveToEntity(page: Page, entity: Locator, useTouch: boolean) {
-  if (useTouch) {
-    await entity.click({ force: true });
-    await expect.poll(async () => page.locator('.experience-navigation-target').count(), { timeout: 8_000 }).toBe(0);
-    return;
-  }
-  await moveTo(
+test.describe.configure({ timeout: 90_000 });
+test.use({ video: "on" });
+for (const game of ["letters", "numbers", "shapes", "colors"] as const)
+  test(`${game}: complete three different mechanics and replay collection`, async ({
     page,
-    Number(await entity.getAttribute('data-x')),
-    Number(await entity.getAttribute('data-y')),
-    useTouch
+  }, info) => {
+    const guard = installConsoleErrorGuard(page);
+    const mission = adventureMissions.find((m) => m.gameId === game)!;
+    await openAdventure(page, mission);
+    const scene = await page
+      .locator('[data-testid="adventure-scene"]')
+      .boundingBox();
+    expect(scene!.height / page.viewportSize()!.height).toBeGreaterThanOrEqual(
+      0.7,
+    );
+    const ids = await page.evaluate(
+      (game) =>
+        JSON.parse(localStorage.getItem("lomdim-bekef.learning.v4")!)
+          .dataByProfile["adventure-test"].adventures[game].checkpoint
+          .missionIds,
+      game,
+    );
+    for (let i = 0; i < 3; i++) {
+      await solveMission(page, adventureMissions.find((m) => m.id === ids[i])!);
+      await page.locator(".adventure-celebration .adventure-primary").click();
+      if (i < 2)
+        await page.locator(".adventure-intro .adventure-primary").click();
+    }
+    await expect(page.getByTestId("adventure-summary")).toBeVisible();
+    expect(await page.locator(".adventure-reward-grid button").count()).toBe(3);
+    const reward = page.locator(".adventure-reward-grid button").first();
+    await reward.click();
+    await expect(reward).toHaveAttribute("aria-pressed", "true");
+    await page.screenshot({ path: info.outputPath(`${game}-collection.png`) });
+    await page
+      .getByRole("button", { name: "חזרה לתפריט המשחקים", exact: true })
+      .click();
+    await openGame(
+      page,
+      {
+        letters: "אותיות",
+        numbers: "מספרים",
+        shapes: "צורות",
+        colors: "צבעים",
+      }[game] as "אותיות",
+    );
+    await page.getByRole("button", { name: "האוסף שלי ✦" }).click();
+    await expect(page.locator(".adventure-reward-grid button")).toHaveCount(3);
+    await page.getByRole("button", { name: "עוד הרפתקאות" }).click();
+    await expect(page.locator(".adventure-intro")).toBeVisible();
+    const newId = await page
+      .getByTestId("adventure")
+      .getAttribute("data-mission");
+    expect(ids).not.toContain(newId);
+    guard();
+  });
+
+test("wrong answers, hints, double-submit and checkpoint survive reload", async ({
+  page,
+}) => {
+  const m = adventureMissions.find((m) => m.id === "v2-number-breakfast")!;
+  await openAdventure(page, m);
+  await page.getByRole("button", { name: /מגישים/ }).dblclick();
+  let data = await page.evaluate(
+    () =>
+      JSON.parse(localStorage.getItem("lomdim-bekef.learning.v4")!)
+        .dataByProfile["adventure-test"],
   );
-}
-
-async function expectVisualMove(page: Page, direction: Direction, useTouch: boolean) {
-  const player = page.locator('.experience-player');
-  await expect.poll(async () => Number(await player.getAttribute('data-speed'))).toBeLessThan(1);
-  const before = await player.boundingBox();
-  expect(before).not.toBeNull();
-  await command(page, direction, useTouch, 520);
-  await expect.poll(async () => await player.boundingBox()).not.toBeNull();
-  const after = await player.boundingBox();
-  expect(after).not.toBeNull();
-  if (direction === 'left') expect(after!.x).toBeLessThan(before!.x - 2);
-  if (direction === 'right') expect(after!.x).toBeGreaterThan(before!.x + 2);
-  if (direction === 'up') expect(after!.y).toBeLessThan(before!.y - 2);
-  if (direction === 'down') expect(after!.y).toBeGreaterThan(before!.y + 2);
-  await expect.poll(async () => Number(await player.getAttribute('data-speed'))).toBeLessThan(1);
-}
-
-async function completeCurrentLevel(page: Page, game: ExperienceTitle, useTouch: boolean) {
-  if (game === 'צבעים') {
-    while (await page.locator('[data-kind="target"]:not(.experience-entity--done)').count()) {
-      const target = page.locator('[data-kind="target"]:not(.experience-entity--done)').first();
-      const colorId = await target.getAttribute('data-accepts');
-      const station = page.locator(`[data-kind="station"][data-entity-id="${colorId}"]`);
-      await moveToEntity(page, station, useTouch);
-      await action(page, useTouch);
-      await moveToEntity(page, target, useTouch);
-      await action(page, useTouch);
-    }
-    return;
-  }
-
-  while (await page.locator('[data-kind="collectible"]').count()) {
-    const collectible = page.locator('[data-kind="collectible"]').first();
-    const accepts = await collectible.getAttribute('data-accepts');
-    const target = game === 'צורות'
-      ? page.locator(`[data-kind="target"][data-accepts="${accepts}"]:not(.experience-entity--done)`).first()
-      : page.locator('[data-kind="target"]').first();
-    await moveToEntity(page, collectible, useTouch);
-    await action(page, useTouch);
-    await moveToEntity(page, target, useTouch);
-    await action(page, useTouch);
-  }
-}
-
-async function completeAllLevels(page: Page, game: ExperienceTitle, useTouch: boolean) {
-  for (let level = 0; level < 4; level += 1) {
-    await completeCurrentLevel(page, game, useTouch);
-    await page.waitForFunction((isColorGame) => {
-      if (document.querySelector('.summary-card')) return true;
-      return isColorGame
-        ? Boolean(document.querySelector('[data-kind="target"]:not(.experience-entity--done)'))
-        : Boolean(document.querySelector('[data-kind="collectible"]'));
-    }, game === 'צבעים');
-    if (await page.locator('.summary-card').isVisible().catch(() => false)) return;
-  }
-  throw new Error(`Experience ${game} did not reach its summary after four levels.`);
-}
-
-async function openExperience(page: Page, title: ExperienceTitle, difficulty: 'easy' | 'hard' = 'easy') {
-  await openLobby(page);
-  await chooseHomeSettings(page, difficulty === 'easy' ? 3 : 6, difficulty);
-  await openGame(page, title);
-  await selectGameMode(page, 'experience');
-}
-
-async function openExperienceById(
-  page: Page,
-  gameId: 'letters' | 'numbers' | 'shapes' | 'colors',
-  difficulty: 'easy' | 'hard' = 'easy',
-  gender: 'boy' | 'girl' = 'girl'
-) {
-  await openLobby(page, gender);
-  await chooseHomeSettings(page, difficulty === 'easy' ? 3 : 6, difficulty);
-  const card = page.locator(`.game-card[data-game-id="${gameId}"]`);
-  await expect(card).toBeVisible();
-  await card.getByRole('button').click();
-  const skip = page.locator('.game-entry__skip');
-  if (await skip.isVisible().catch(() => false)) {
-    await skip.evaluate((element: HTMLElement) => element.click());
-  }
-  await selectGameMode(page, 'experience');
-}
-
-test.describe('visual direction contract', () => {
-  test('keyboard arrows move in their physical screen direction', async ({ page }, testInfo) => {
-    test.skip(isMobile(testInfo), 'Physical keyboard behavior is covered by desktop projects.');
-    await openExperience(page, 'אותיות');
-    const arena = page.locator('[data-testid="experience-arena"]');
-    await expect(arena).toBeFocused();
-    await expectVisualMove(page, 'right', false);
-    await expectVisualMove(page, 'left', false);
-    await expectVisualMove(page, 'up', false);
-    await expectVisualMove(page, 'down', false);
-  });
-
-  test('WASD moves continuously, then friction slows and stops the character', async ({ page }, testInfo) => {
-    test.skip(testInfo.project.name !== 'local-chromium', 'The deterministic velocity curve is sampled once.');
-    await openExperience(page, 'אותיות');
-    const player = page.locator('.experience-player');
-    const before = Number(await player.getAttribute('data-x'));
-    await page.keyboard.down('d');
-    await page.waitForTimeout(180);
-    const duringFirst = Number(await player.getAttribute('data-x'));
-    await page.waitForTimeout(180);
-    const duringSecond = Number(await player.getAttribute('data-x'));
-    expect(duringFirst).toBeGreaterThan(before);
-    expect(duringSecond).toBeGreaterThan(duringFirst);
-    await page.keyboard.up('d');
-    await expect.poll(async () => Number(await player.getAttribute('data-speed')), {
-      timeout: 2_500
-    }).toBeLessThan(1);
-    const stopped = Number(await player.getAttribute('data-x'));
-    await page.waitForTimeout(180);
-    expect(Math.abs(Number(await player.getAttribute('data-x')) - stopped)).toBeLessThan(1);
-  });
-
-  test('direct touch moves without rendering arrow controls', async ({ page }, testInfo) => {
-    test.skip(
-      !['local-chromium', 'mobile-chrome', 'mobile-safari', 'mobile-android-tablet', 'mobile-ipad'].includes(testInfo.project.name),
-      'Direct touch is covered on touch-capable projects; desktop Firefox/WebKit have no touchscreen API.'
-    );
-    await openExperience(page, 'אותיות');
-    await expect(page.locator('.experience-controls')).toHaveCount(0);
-    await expectVisualMove(page, 'right', true);
-    await expectVisualMove(page, 'left', true);
-    await expectVisualMove(page, 'up', true);
-    await expectVisualMove(page, 'down', true);
-  });
-
-  test('game keys do not scroll and movement stays inside the arena', async ({ page }, testInfo) => {
-    await openExperience(page, 'אותיות');
-    const useTouch = isMobile(testInfo);
-    const arena = page.locator('[data-testid="experience-arena"]');
-    const scrollBefore = await page.evaluate(() => ({ x: window.scrollX, y: window.scrollY }));
-    for (let index = 0; index < 8; index += 1) await command(page, 'left', useTouch);
-    for (let index = 0; index < 8; index += 1) await command(page, 'up', useTouch);
-    if (!useTouch) await action(page, false);
-    const scrollAfter = await page.evaluate(() => ({ x: window.scrollX, y: window.scrollY }));
-    if (!useTouch) expect(scrollAfter).toEqual(scrollBefore);
-    else expect(scrollAfter.x).toBe(scrollBefore.x);
-    const arenaBox = await arena.boundingBox();
-    const playerBox = await page.locator('.experience-player').boundingBox();
-    expect(arenaBox).not.toBeNull();
-    expect(playerBox).not.toBeNull();
-    expect(playerBox!.x).toBeGreaterThanOrEqual(arenaBox!.x);
-    expect(playerBox!.y).toBeGreaterThanOrEqual(arenaBox!.y);
-    expect(playerBox!.x + playerBox!.width).toBeLessThanOrEqual(arenaBox!.x + arenaBox!.width);
-    expect(playerBox!.y + playerBox!.height).toBeLessThanOrEqual(arenaBox!.y + arenaBox!.height);
-  });
-
-  test('leaving the experience removes its keyboard interception', async ({ page }, testInfo) => {
-    test.skip(testInfo.project.name !== 'local-chromium', 'Listener cleanup is independent of the browser engine.');
-    await openExperience(page, 'אותיות');
-    await page.getByRole('button', { name: 'חזרה לתפריט' }).click();
-    await expect(page.locator('[data-testid="experience-arena"]')).toHaveCount(0);
-    const defaultPrevented = await page.evaluate(() => {
-      const event = new KeyboardEvent('keydown', {
-        key: 'ArrowDown',
-        bubbles: true,
-        cancelable: true
-      });
-      document.body.dispatchEvent(event);
-      return event.defaultPrevented;
-    });
-    expect(defaultPrevented).toBe(false);
-  });
-
-  test('hard-mode wall blocks movement and its soft bumper keeps moving', async ({ page }, testInfo) => {
-    test.skip(testInfo.project.name !== 'local-chromium', 'Matter collision behavior is sampled once in-browser and stress-tested in unit tests.');
-    await openExperienceById(page, 'letters', 'hard');
-    const player = page.locator('.experience-player');
-    const bumper = page.locator('.experience-obstacle--bumper');
-    await expect(bumper).toBeVisible();
-    const bumperBefore = await bumper.getAttribute('style');
-    await command(page, 'left', false, 300);
-    await expect.poll(async () => Number(await player.getAttribute('data-speed'))).toBeLessThan(1);
-    const alignedX = Number(await player.getAttribute('data-x'));
-    expect(alignedX).toBeGreaterThan(455);
-    expect(alignedX).toBeLessThan(545);
-    await page.keyboard.down('ArrowUp');
-    await page.waitForTimeout(2_400);
-    await page.keyboard.up('ArrowUp');
-    await expect.poll(async () => Number(await player.getAttribute('data-speed'))).toBeLessThan(1);
-    const playerY = Number(await player.getAttribute('data-y'));
-    expect(Number.isFinite(playerY)).toBe(true);
-    expect(playerY).toBeGreaterThanOrEqual(345);
-    await expect.poll(async () => await bumper.getAttribute('style')).not.toBe(bumperBefore);
-  });
+  expect(data.events).toHaveLength(1);
+  expect(data.events[0].correct).toBe(false);
+  await page.getByRole("button", { name: "רמז", exact: true }).click();
+  await solveMission(page, m);
+  data = await page.evaluate(
+    () =>
+      JSON.parse(localStorage.getItem("lomdim-bekef.learning.v4")!)
+        .dataByProfile["adventure-test"],
+  );
+  expect(data.events[1].hintUsed).toBe(true);
+  expect(data.events[1].attemptNumber).toBe(2);
+  const expectedId = data.adventures.numbers.checkpoint.missionIds[1];
+  await page.reload();
+  await page.getByRole("button", { name: /מתחילים לשחק/ }).click();
+  await openGame(page, "מספרים");
+  await selectGameMode(page, "experience");
+  await expect(page.getByTestId("adventure")).toHaveAttribute(
+    "data-mission",
+    expectedId,
+  );
+  const events = await page.evaluate(
+    () =>
+      JSON.parse(localStorage.getItem("lomdim-bekef.learning.v4")!)
+        .dataByProfile["adventure-test"].events,
+  );
+  expect(events).toHaveLength(3);
 });
 
-for (const game of ['אותיות', 'מספרים', 'צורות', 'צבעים'] as const) {
-  test(`completes ${game} in easy mode with the device's primary input`, async ({ page }, testInfo) => {
-    test.setTimeout(300_000);
-    const assertNoConsoleErrors = installConsoleErrorGuard(page);
-    await openExperience(page, game);
-    const useTouchControls = isMobile(testInfo) || testInfo.project.name === 'local-webkit';
-    await completeAllLevels(page, game, useTouchControls);
-    await expect(page.locator('.summary-card')).toBeVisible();
-    await expect(page.locator('.stars__active')).toHaveCount(3);
-    const latestSession = await page.evaluate(() => {
-      const snapshot = JSON.parse(localStorage.getItem('lomdim-bekef.learning.v4') ?? 'null');
-      return snapshot.dataByProfile[snapshot.activeProfileId].sessions[0];
-    });
-    expect(latestSession).toMatchObject({ gameId: expect.any(String), mode: 'manual' });
-    assertNoConsoleErrors();
+test("drag, outside release, cancellation and touch sizes", async ({
+  page,
+}) => {
+  const m = adventureMissions.find((m) => m.id === "v2-number-breakfast")!;
+  await openAdventure(page, m);
+  const toy = page.locator('[data-toy="food"]');
+  const plate = page.locator("[data-drop-zone]");
+  const from = await toy.boundingBox(),
+    to = await plate.boundingBox();
+  expect(from!.width).toBeGreaterThanOrEqual(56);
+  expect(from!.height).toBeGreaterThanOrEqual(56);
+  await page.mouse.move(from!.x + from!.width / 2, from!.y + from!.height / 2);
+  await page.mouse.down();
+  await page.mouse.move(to!.x + to!.width / 2, to!.y + to!.height / 2, {
+    steps: 8,
   });
-
-  test(`completes ${game} in hard mode with continuous input`, async ({ page }, testInfo) => {
-    test.skip(!['local-chromium', 'mobile-chrome'].includes(testInfo.project.name), 'Hard completion runs once per primary input type.');
-    test.setTimeout(300_000);
-    const assertNoConsoleErrors = installConsoleErrorGuard(page);
-    await openExperience(page, game, 'hard');
-    await completeAllLevels(page, game, isMobile(testInfo));
-    await expect(page.locator('.summary-card')).toBeVisible();
-    await expect(page.locator('.stars__active')).toHaveCount(3);
-    assertNoConsoleErrors();
-  });
-}
-
-test.describe('game rules and resilience', () => {
-  test('wrong shape target returns the piece without losing progress', async ({ page }, testInfo) => {
-    test.skip(testInfo.project.name !== 'local-chromium', 'One deterministic behavioral run is sufficient.');
-    await openExperience(page, 'צורות');
-    const square = page.locator('[data-entity-id="square"]');
-    const wrongTarget = page.locator('[data-entity-id="slot-triangle"]');
-    await moveToEntity(page, square, false);
-    await action(page, false);
-    await moveToEntity(page, wrongTarget, false);
-    await action(page, false);
-    await expect(square).toBeVisible();
-    await expect(page.locator('.experience-game__carry strong')).toHaveText('—');
-    await expect(page.locator('.game-world__status strong')).toHaveText('0');
-  });
-
-  test('wrong color clears the brush and preserves completed objects', async ({ page }, testInfo) => {
-    test.skip(testInfo.project.name !== 'local-chromium', 'One deterministic behavioral run is sufficient.');
-    await openExperience(page, 'צבעים');
-    const red = page.locator('[data-entity-id="red"]');
-    const blueFlower = page.locator('[data-entity-id="flower-blue"]');
-    await moveToEntity(page, red, false);
-    await action(page, false);
-    await moveToEntity(page, blueFlower, false);
-    await action(page, false);
-    await expect(page.locator('.experience-game__carry strong')).toHaveText('—');
-    await expect(blueFlower).not.toHaveClass(/experience-entity--done/);
-  });
-
-  test('hard content opens and remains playable for every game', async ({ page }, testInfo) => {
-    test.skip(!['local-chromium', 'mobile-chrome'].includes(testInfo.project.name), 'Hard-mode sampling runs on one desktop and one mobile engine.');
-    for (const game of ['אותיות', 'מספרים', 'צורות', 'צבעים'] as const) {
-      await openExperience(page, game, 'hard');
-      await expect(page.locator('[data-testid="experience-arena"]')).toBeVisible();
-      await expect(page.locator('[data-kind="target"]').first()).toBeVisible();
-      await page.getByRole('button', { name: 'חזרה לתפריט' }).click();
-    }
-  });
+  await page.mouse.up();
+  await expect(page.locator("[data-count]")).toHaveAttribute("data-count", "1");
+  await page.mouse.move(from!.x + from!.width / 2, from!.y + from!.height / 2);
+  await page.mouse.down();
+  await page.mouse.move(3, 4, { steps: 8 });
+  await page.mouse.up();
+  await expect(page.locator("[data-count]")).toHaveAttribute("data-count", "1");
+  await toy.dispatchEvent("pointercancel", { pointerId: 1 });
+  expect(await page.locator(".adventure-drag-ghost").count()).toBe(0);
+  const events = await page.evaluate(
+    () =>
+      JSON.parse(localStorage.getItem("lomdim-bekef.learning.v4")!)
+        .dataByProfile["adventure-test"].events,
+  );
+  expect(events).toEqual([]);
 });
 
-test.describe('input lifecycle and detailed game rules', () => {
-  test.beforeEach(async ({}, testInfo) => {
-    test.skip(testInfo.project.name !== 'local-chromium', 'Detailed deterministic rules run once; cross-browser completion is covered separately.');
-  });
-
-  test('loads the profile character and exposes real movement and action animation states', async ({ page }) => {
-    for (const gender of ['boy', 'girl'] as const) {
-      await openExperienceById(page, 'letters', 'easy', gender);
-      const character = page.locator('.experience-character');
-      await expect(character).toHaveAttribute('data-gender', gender);
-      await expect(character).toHaveAttribute('data-skin', gender === 'boy' ? 'nir-kippah' : 'shir');
-      await expect(character).toHaveAttribute('data-animation', 'idle');
-      await page.keyboard.down('ArrowRight');
-      await expect(character).toHaveAttribute('data-animation', 'walk');
-      const walkingFrames = await character.evaluate((element) => new Promise<string[]>((resolve) => {
-        const observed = new Set<string>([element.getAttribute('data-frame') ?? '']);
-        const observer = new MutationObserver(() => {
-          observed.add(element.getAttribute('data-frame') ?? '');
-        });
-        observer.observe(element, { attributes: true, attributeFilter: ['data-frame'] });
-        window.setTimeout(() => {
-          observer.disconnect();
-          resolve([...observed]);
-        }, 1_100);
-      }));
-      expect(new Set(walkingFrames).size).toBeGreaterThanOrEqual(6);
-      await page.keyboard.up('ArrowRight');
-      await expect(character).toHaveAttribute('data-animation', 'idle');
-
-      const collectible = page.locator('[data-kind="collectible"]').first();
-      await moveToEntity(page, collectible, false);
-      await action(page, false);
-      await expect(character).toHaveAttribute('data-animation', 'pickup');
-      await expect(character).toHaveAttribute('data-facing', /front|back|left|right/);
-      await page.waitForTimeout(500);
-      await page.keyboard.down('ArrowRight');
-      await expect(character).toHaveAttribute('data-animation', 'carry-walk');
-      const carryingFrames = await character.evaluate((element) => new Promise<string[]>((resolve) => {
-        const observed = new Set<string>([element.getAttribute('data-frame') ?? '']);
-        const observer = new MutationObserver(() => {
-          observed.add(element.getAttribute('data-frame') ?? '');
-        });
-        observer.observe(element, { attributes: true, attributeFilter: ['data-frame'] });
-        window.setTimeout(() => {
-          observer.disconnect();
-          resolve([...observed]);
-        }, 1_100);
-      }));
-      expect(new Set(carryingFrames).size).toBeGreaterThanOrEqual(6);
-      await page.keyboard.up('ArrowRight');
-      await moveToEntity(page, page.locator('[data-kind="target"]').first(), false);
-      await action(page, false);
-      await expect(character).toHaveAttribute('data-animation', 'drop');
-    }
-  });
-
-  test('migrates a profile with no gender choice and uses its existing avatar', async ({ page }) => {
-    await page.addInitScript(() => {
-      localStorage.clear();
-      localStorage.setItem('lomdim-bekef.learner.v1', JSON.stringify({
-        schemaVersion: 2,
-        name: 'נועם',
-        gender: null,
-        profileCompleted: true,
-        age: 4,
-        difficulty: 'easy',
-        voiceEnabled: false,
-        narrationEnabled: false,
-        soundEffectsEnabled: false,
-        migratedFromLegacy: false,
-        updatedAt: new Date().toISOString()
-      }));
-    });
-    await page.goto('/');
-    await page.getByRole('button', { name: /מתחילים לשחק/ }).click();
-    const card = page.locator('.game-card[data-game-id="letters"]');
-    await card.getByRole('button').click();
-    const skip = page.locator('.game-entry__skip');
-    if (await skip.isVisible().catch(() => false)) {
-      await skip.evaluate((element: HTMLElement) => element.click());
-    }
-    await page.locator('.game-mode-card--featured').click();
-    await expect(page.locator('[data-testid="experience-arena"]')).toBeVisible();
-    await expect(page.locator('.experience-character')).toHaveCount(1);
-  });
-
-  test('ignores repeated keys, blocks celebration input, and supports replay', async ({ page }) => {
-    await page.emulateMedia({ reducedMotion: 'reduce' });
-    await openExperienceById(page, 'letters');
-    const arena = page.locator('[data-testid="experience-arena"]');
-    const player = page.locator('.experience-player');
-    const reducedCharacter = page.locator('.experience-character');
-    await page.keyboard.down('ArrowRight');
-    await expect(reducedCharacter).toHaveAttribute('data-animation', 'walk');
-    const reducedWalkingFrame = await reducedCharacter.getAttribute('data-frame');
-    await page.waitForTimeout(450);
-    await expect(reducedCharacter).toHaveAttribute('data-frame', reducedWalkingFrame ?? '');
-    await page.keyboard.up('ArrowRight');
-    await expect.poll(async () => Number(await player.getAttribute('data-speed'))).toBeLessThan(1);
-
-    const beforeRepeat = await player.boundingBox();
-    await arena.dispatchEvent('keydown', { key: 'ArrowLeft', repeat: true });
-    const afterRepeatedKey = await player.boundingBox();
-    expect(afterRepeatedKey).not.toBeNull();
-    expect(beforeRepeat).not.toBeNull();
-    expect(Math.abs(afterRepeatedKey!.x - beforeRepeat!.x)).toBeLessThan(.01);
-    expect(Math.abs(afterRepeatedKey!.y - beforeRepeat!.y)).toBeLessThan(.01);
-
-    while (await page.locator('[data-kind="collectible"]').count()) {
-      const collectible = page.locator('[data-kind="collectible"]').first();
-      await moveToEntity(page, collectible, false);
-      await action(page, false);
-      await moveToEntity(page, page.locator('[data-kind="target"]').first(), false);
-      await action(page, false);
-    }
-
-    await expect(page.locator('.experience-character')).toHaveAttribute('data-animation', 'celebrate');
-    await expect(page.locator('.experience-controls')).toHaveCount(0);
-    const celebrationPosition = {
-      x: await player.getAttribute('data-x'),
-      y: await player.getAttribute('data-y')
-    };
-    await arena.dispatchEvent('keydown', { key: 'ArrowRight', repeat: false });
-    await arena.click({ position: { x: 20, y: 20 }, force: true });
-    expect(Number(await player.getAttribute('data-x'))).toBeCloseTo(Number(celebrationPosition.x), 3);
-    expect(Number(await player.getAttribute('data-y'))).toBeCloseTo(Number(celebrationPosition.y), 3);
-
-    await expect(page.locator('.summary-card')).toBeVisible();
-    await page.locator('.summary-card__actions button').first().click();
-    await expect(arena).toBeVisible();
-    await expect(page.locator('.game-world__status strong')).toHaveText('0');
-  });
-
-  test('numbers count exactly once and reject a second item while carrying', async ({ page }) => {
-    await openExperienceById(page, 'numbers');
-    const first = page.locator('[data-kind="collectible"]').first();
-    const firstId = await first.getAttribute('data-entity-id');
-    await moveToEntity(page, first, false);
-    await action(page, false);
-    await expect(page.locator(`[data-entity-id="${firstId}"]`)).toHaveCount(0);
-
-    const second = page.locator('[data-kind="collectible"]').first();
-    const secondId = await second.getAttribute('data-entity-id');
-    await moveToEntity(page, second, false);
-    await action(page, false);
-    await expect(page.locator(`[data-entity-id="${secondId}"]`)).toBeVisible();
-    await expect(page.locator('.game-world__status strong')).toHaveText('0');
-
-    await moveToEntity(page, page.locator('[data-kind="target"]').first(), false);
-    await action(page, false);
-    await expect(page.locator('.game-world__status strong')).toHaveText('1');
-    await action(page, false);
-    await expect(page.locator('.game-world__status strong')).toHaveText('1');
-  });
-
-  test('a completed shape target rejects another piece without changing progress', async ({ page }) => {
-    await openExperienceById(page, 'shapes');
-    const square = page.locator('[data-entity-id="square"]');
-    const squareTarget = page.locator('[data-entity-id="slot-square"]');
-    await moveToEntity(page, square, false);
-    await action(page, false);
-    await moveToEntity(page, squareTarget, false);
-    await action(page, false);
-    await expect(squareTarget).toHaveClass(/experience-entity--done/);
-    await expect(page.locator('.game-world__status strong')).toHaveText('1');
-
-    const triangle = page.locator('[data-entity-id="triangle"]');
-    await moveToEntity(page, triangle, false);
-    await action(page, false);
-    await moveToEntity(page, squareTarget, false);
-    await action(page, false);
-    await expect(triangle).toHaveCount(0);
-    await expect(page.locator('.experience-game__carry .experience-entity__image')).toHaveCount(1);
-    await expect(squareTarget).toHaveClass(/experience-entity--done/);
-    await expect(page.locator('.game-world__status strong')).toHaveText('1');
-  });
-
-  test('switches paint colors, clears a wrong color, and preserves a painted object', async ({ page }) => {
-    await openExperienceById(page, 'colors');
-    const red = page.locator('[data-entity-id="red"]');
-    const blue = page.locator('[data-entity-id="blue"]');
-    const blueFlower = page.locator('[data-entity-id="flower-blue"]');
-    const redFlower = page.locator('[data-entity-id="flower-red"]');
-
-    await moveToEntity(page, red, false);
-    await action(page, false);
-    await moveToEntity(page, blue, false);
-    await action(page, false);
-    await moveToEntity(page, blueFlower, false);
-    await action(page, false);
-    await expect(blueFlower).toHaveClass(/experience-entity--done/);
-    await expect(blueFlower).toHaveCSS('background-color', 'rgb(66, 165, 245)');
-    const paintedBackground = await blueFlower.evaluate((element) => getComputedStyle(element).backgroundColor);
-
-    await moveToEntity(page, blue, false);
-    await action(page, false);
-    await moveToEntity(page, redFlower, false);
-    await action(page, false);
-    await expect(page.locator('.experience-game__carry strong .experience-entity__image')).toHaveCount(0);
-    await expect(blueFlower).toHaveCSS('background-color', paintedBackground);
-    await expect(page.locator('.game-world__status strong')).toHaveText('1');
-  });
+test("rotation and paint are usable with taps and keyboard", async ({
+  page,
+}) => {
+  const m = adventureMissions.find((m) => m.id === "v2-shape-windmill")!;
+  await openAdventure(page, m);
+  const step = missionSteps(m, { age: 4, difficulty: "medium" }, 137)[0];
+  await page.locator(`[data-toy="${step.answer}"]`).focus();
+  await page.keyboard.press("Enter");
+  await page.locator("[data-drop-zone]").click();
+  await expect(page.locator(".adventure-feedback")).toContainText("כמעט");
+  await page.getByRole("button", { name: "סיבוב החלק ברבע סיבוב" }).click();
+  await page.locator("[data-drop-zone]").click();
+  await expect(page.getByTestId("adventure")).toHaveAttribute(
+    "data-step",
+    "piece-1",
+  );
 });
 
-test.describe('layout, assets and accessibility', () => {
-  test('loads no character atlas on the home screen and only the active skin and world in experience mode', async ({ page }, testInfo) => {
-    test.skip(testInfo.project.name !== 'local-chromium', 'Network loading is deterministic in one desktop engine.');
-    const imageRequests: string[] = [];
-    page.on('request', (request) => {
-      if (request.resourceType() === 'image') imageRequests.push(request.url());
-    });
-    await openLobby(page, 'boy');
-    await page.waitForTimeout(250);
-    expect(imageRequests.some((url) => url.includes('/assets/experience/characters/'))).toBe(false);
+test("portrait and landscape preserve activity, reachable controls, accessibility", async ({
+  page,
+}, info) => {
+  const m = adventureMissions.find((m) => m.id === "v2-color-orange")!;
+  await openAdventure(page, m);
+  const id = await page.getByTestId("adventure").getAttribute("data-step");
+  const viewport = page.viewportSize()!;
+  const flipped = { width: viewport.height, height: viewport.width };
+  await page.setViewportSize(flipped);
+  await expect
+    .poll(() =>
+      page
+        .getByTestId("adventure")
+        .evaluate((el) => Math.round(el.getBoundingClientRect().height)),
+    )
+    .toBe(flipped.height);
+  await expect(page.getByTestId("adventure")).toHaveAttribute("data-step", id);
+  for (const box of await page
+    .locator(".adventure-tray button,.adventure-mix-actions button")
+    .evaluateAll((nodes) =>
+      nodes.map((n) => {
+        const b = n.getBoundingClientRect();
+        return { x: b.x, y: b.y, width: b.width, height: b.height };
+      }),
+    )) {
+    expect(box.x).toBeGreaterThanOrEqual(0);
+    expect(box.y).toBeGreaterThanOrEqual(0);
+    expect(box.x + box.width).toBeLessThanOrEqual(flipped.width + 1);
+    expect(box.y + box.height).toBeLessThanOrEqual(flipped.height + 1);
+  }
+  await page.screenshot({ path: info.outputPath("rotated-mixing.png") });
+  const results = await new AxeBuilder({ page })
+    .include(".adventure")
+    .withTags(["wcag2a", "wcag2aa"])
+    .analyze();
+  expect(results.violations).toEqual([]);
+  await solveMission(page, m);
+});
 
-    await chooseHomeSettings(page, 3, 'easy');
-    const card = page.locator('.game-card[data-game-id="letters"]');
-    await card.getByRole('button').click();
-    const skip = page.locator('.game-entry__skip');
-    if (await skip.isVisible().catch(() => false)) {
-      await skip.evaluate((element: HTMLElement) => element.click());
-    }
-    await selectGameMode(page, 'experience');
-    await expect(page.locator('.experience-character')).toHaveAttribute('data-skin', 'nir-kippah');
-    await expect.poll(() => imageRequests.some((url) => url.includes('/nir-kippah-v1.webp'))).toBe(true);
-    expect(imageRequests.some((url) => url.includes('/nir-plain-v1.'))).toBe(false);
-    expect(imageRequests.some((url) => url.includes('/shir-v1.'))).toBe(false);
-    expect(imageRequests.some((url) => url.includes('/generated/letter-factory/'))).toBe(true);
-    expect(imageRequests.some((url) => /\/generated\/(feed-the-monster|building-workshop|magic-garden)\//.test(url))).toBe(false);
-  });
+test("application background pauses play and resumes without losing state", async ({
+  page,
+}) => {
+  const m = adventureMissions.find((m) => m.id === "v2-number-breakfast")!;
+  await openAdventure(page, m);
+  await page.locator('[data-toy="food"]').click();
+  await page.locator("[data-drop-zone]").click();
+  await page.evaluate(() =>
+    window.dispatchEvent(
+      new CustomEvent("lomdim:app-state", { detail: { isActive: false } }),
+    ),
+  );
+  await expect(page.locator(".adventure-pause")).toBeVisible();
+  await page.getByRole("button", { name: "ממשיכים לשחק", exact: true }).click();
+  await expect(page.locator("[data-count]")).toHaveAttribute("data-count", "1");
+});
 
-  test('has no horizontal overflow, broken sprite, undersized controls, or critical axe violations', async ({ page }) => {
-    const failedImages: string[] = [];
-    page.on('response', (response) => {
-      if (response.request().resourceType() === 'image' && !response.ok()) failedImages.push(response.url());
-    });
-    await openExperience(page, 'מספרים');
-    expect(failedImages).toEqual([]);
-    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(
-      await page.evaluate(() => window.innerWidth)
-    );
-    await expect(page.locator('.experience-sprite')).toHaveCount(0);
-    await expect(page.locator('.experience-entity__image').first()).toBeVisible();
-    const characterUrl = await page.locator('.experience-character').evaluate((element) =>
-      getComputedStyle(element).backgroundImage
-    );
-    const activeSkin = await page.locator('.experience-character').getAttribute('data-skin');
-    expect(characterUrl).toContain(`/assets/experience/characters/${activeSkin}-v1.webp`);
-    const characterSource = characterUrl.match(/url\(["']?(.*?)["']?\)/)?.[1];
-    expect(characterSource).toBeTruthy();
-    const characterDimensions = await page.evaluate((source) => new Promise<{ width: number; height: number }>((resolve, reject) => {
-      const image = new Image();
-      image.onload = () => resolve({ width: image.naturalWidth, height: image.naturalHeight });
-      image.onerror = () => reject(new Error(`Unable to load ${source}`));
-      image.src = source!;
-    }), characterSource);
-    expect(characterDimensions.width).toBeGreaterThan(0);
-    expect(characterDimensions.height).toBeGreaterThan(0);
-    for (const image of await page.locator('.experience-entity img').all()) {
-      const imageState = await image.evaluate((element: HTMLImageElement) => ({
-        naturalWidth: element.naturalWidth,
-        naturalHeight: element.naturalHeight,
-        objectFit: getComputedStyle(element).objectFit
-      }));
-      expect(imageState.naturalWidth).toBeGreaterThan(0);
-      expect(imageState.naturalHeight).toBeGreaterThan(0);
-      expect(imageState.objectFit).toBe('contain');
-    }
-    await expect(page.locator('.experience-controls')).toHaveCount(0);
-    const results = await new AxeBuilder({ page }).include('.experience-game').analyze();
-    expect(results.violations.filter((violation) => ['critical', 'serious'].includes(violation.impact ?? ''))).toEqual([]);
-  });
-
-  test('portrait and landscape viewports fit the direct-touch arena without horizontal overflow', async ({ page }, testInfo) => {
-    test.skip(testInfo.project.name !== 'local-chromium', 'Explicit viewport contracts need one deterministic browser engine.');
-
-    for (const viewport of [
-      { width: 390, height: 844, shouldFitVertically: true },
-      { width: 320, height: 568, shouldFitVertically: false },
-      { width: 844, height: 390, shouldFitVertically: false }
-    ]) {
-      await page.setViewportSize(viewport);
-      await openLobby(page);
-      await chooseHomeSettings(page, 3, 'easy');
-      const lettersCard = page.locator('.game-card[data-game-id="letters"]');
-      await expect(lettersCard).toBeVisible();
-      await lettersCard.getByRole('button').click();
-      const skip = page.locator('.game-entry__skip');
-      if (await skip.isVisible().catch(() => false)) {
-        await skip.evaluate((element: HTMLElement) => element.click());
-      }
-      await selectGameMode(page, 'experience');
-
-      const dimensions = await page.evaluate(() => ({
-        viewportWidth: window.innerWidth,
-        viewportHeight: window.innerHeight,
-        documentWidth: document.documentElement.scrollWidth,
-        documentHeight: document.documentElement.scrollHeight
-      }));
-      expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewportWidth);
-      if (viewport.shouldFitVertically) {
-        expect(dimensions.documentHeight).toBeLessThanOrEqual(dimensions.viewportHeight + 2);
-      } else {
-        expect(dimensions.documentHeight).toBeGreaterThan(dimensions.viewportHeight);
-      }
-
-      const arena = await page.locator('[data-testid="experience-arena"]').boundingBox();
-      expect(arena).not.toBeNull();
-      await expect(page.locator('.experience-controls')).toHaveCount(0);
-
-      for (const button of await page.locator('.game-world button:visible').all()) {
-        const box = await button.boundingBox();
-        expect(box).not.toBeNull();
-        expect(box!.width).toBeGreaterThanOrEqual(48);
-        expect(box!.height).toBeGreaterThanOrEqual(48);
-      }
-    }
-  });
-
-  test('resizing the arena updates its render scale without changing world coordinates', async ({ page }, testInfo) => {
-    test.skip(testInfo.project.name !== 'local-chromium', 'ResizeObserver behavior is engine-independent.');
-    await page.setViewportSize({ width: 390, height: 844 });
-    await openExperienceById(page, 'letters');
-    const arena = page.locator('[data-testid="experience-arena"]');
-    const player = page.locator('.experience-player');
-    await expect.poll(async () => Number(await arena.getAttribute('data-render-width'))).toBeGreaterThan(0);
-    const widthBefore = Number(await arena.getAttribute('data-render-width'));
-    const positionBefore = {
-      x: Number(await player.getAttribute('data-x')),
-      y: Number(await player.getAttribute('data-y'))
-    };
-    await page.setViewportSize({ width: 900, height: 650 });
-    await expect.poll(async () => Number(await arena.getAttribute('data-render-width'))).not.toBe(widthBefore);
-    await expect.poll(async () => Number(await player.getAttribute('data-speed'))).toBeLessThan(1);
-    expect(Number(await player.getAttribute('data-x'))).toBeCloseTo(positionBefore.x, 1);
-    expect(Number(await player.getAttribute('data-y'))).toBeCloseTo(positionBefore.y, 1);
-  });
+test("LIFE-01: reload after one assembly stage resumes without duplicate evidence", async ({
+  page,
+}) => {
+  const mission = adventureMissions.find((m) => m.id === "v2-letter-bridge")!;
+  await openAdventure(page, mission);
+  await page.locator('[data-toy="part-0"]').click();
+  await page.locator("[data-drop-zone]").click();
+  await page.reload();
+  await page.getByRole("button", { name: /מתחילים לשחק/ }).click();
+  await openGame(page, "אותיות");
+  await selectGameMode(page, "experience");
+  await expect(page.getByTestId("adventure")).toHaveAttribute(
+    "data-step",
+    "part-1",
+  );
+  const data = await page.evaluate(
+    () =>
+      JSON.parse(localStorage.getItem("lomdim-bekef.learning.v4")!)
+        .dataByProfile["adventure-test"],
+  );
+  expect(data.events).toHaveLength(1);
+  expect(data.events[0].skillIds).toEqual(["motor.fine"]);
 });

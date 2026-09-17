@@ -109,7 +109,7 @@ function normalizeSpeechText(text: string): string {
     .replace(/\s+/g, ' ')
     .trim()
     .slice(0, MAX_SPOKEN_TEXT_LENGTH);
-  return /[A-Za-z]/.test(normalized) ? '' : normalized;
+  return normalized;
 }
 
 function shouldSkipRepeatedSpeech(text: string): boolean {

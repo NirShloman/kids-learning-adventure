@@ -1,41 +1,59 @@
-import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
-import rawLevels from '../../../content/experiences.json';
 import {
-  getPhysicsTuning,
-  resolveEntityPosition,
-  resolveExperienceWorld,
-  selectExperienceLevels
-} from '../../../content/experienceWorlds';
+  lazy,
+  Suspense,
+  useEffect,
+  useRef,
+  useState,
+  type CSSProperties,
+} from "react";
+import { MotionConfig, motion } from "motion/react";
+import {
+  adventureMissions,
+  adventureWorlds,
+} from "../../../content/adventureMissions";
 import type {
+  AccessibilitySettings,
   Age,
-  CharacterAnimationState,
+  CharacterSkin,
   Difficulty,
-  ExperienceEntity,
   ExperienceGameId,
-  ExperienceInputState,
-  ExperienceLevel,
-  ExperienceNavigationIntent,
-  FacingDirection,
   LearnerGender,
-  NavigationPath
-} from '../../../types';
-import { useSpeech } from '../../../hooks/useSpeech';
-import { playAudioCue, playRecordedVoice, playSfx } from '../../../services/audioService';
-import { AnimatedFeedback } from '../../common/AnimatedFeedback';
-import { ProgressBar } from '../../common/ProgressBar';
-import { GameWorld } from '../GameWorld';
-import { ExperienceAsset } from './ExperienceAsset';
-import { ExperienceCharacter } from './ExperienceCharacter';
+} from "../../../types";
+import type {
+  AdventureCheckpoint,
+  AdventureProgress,
+} from "../../../types/adventure.types";
 import {
-  getAnimationDurationMs,
-  resolveCharacterSkin
-} from './experienceAssetManifest';
-import { useExperiencePhysics } from './useExperiencePhysics';
-import { findNavigationPath, inputToward, screenPointToWorld } from './experienceNavigation';
-import { Button } from '../../common/Button';
-import { completeJourneyLevel, getActiveProfile, recordLearningEvent } from '../../../services/learningStoreService';
-import { experienceSkillIds } from '../../../learning/skillGraph';
+  getActiveProfile,
+  getAdventureProgress,
+  getProfileData,
+  saveAdventureProgress,
+} from "../../../services/learningStoreService";
+import { useSpeech } from "../../../hooks/useSpeech";
+import { playAudioCue, playSfx } from "../../../services/audioService";
+import {
+  isCorrectAction,
+  itemLabel,
+  missionSteps,
+  selectAdventureMissions,
+} from "./adventureEngine";
+import { preloadAdventure } from "./adventurePreload";
+import { ActivityDemo } from "./ActivityDemo";
+import { WorldCreation } from "./WorldCreation";
+import "./adventure.css";
 
+const NumbersAdventure = lazy(() =>
+  import("./NumbersAdventure").then((m) => ({ default: m.NumbersAdventure })),
+);
+const LettersAdventure = lazy(() =>
+  import("./LettersAdventure").then((m) => ({ default: m.LettersAdventure })),
+);
+const ShapesAdventure = lazy(() =>
+  import("./ShapesAdventure").then((m) => ({ default: m.ShapesAdventure })),
+);
+const ColorsAdventure = lazy(() =>
+  import("./ColorsAdventure").then((m) => ({ default: m.ColorsAdventure })),
+);
 interface ExperienceGameProps {
   gameId: ExperienceGameId;
   title: string;
@@ -44,649 +62,524 @@ interface ExperienceGameProps {
   gender: LearnerGender;
   learnerName: string;
   voiceEnabled: boolean;
+  avatarId?: CharacterSkin;
+  accessibility?: AccessibilitySettings;
   onBack: () => void;
   onFinish: (score: number, total: number, stars: number) => void;
 }
-
-type DirectionCommand = 'up' | 'down' | 'left' | 'right';
-
-const levels = rawLevels as ExperienceLevel[];
-const EMPTY_INPUT: ExperienceInputState = { up: false, down: false, left: false, right: false };
-const countWords = ['אפס', 'אחת', 'שתיים', 'שלוש', 'ארבע', 'חמש', 'שש', 'שבע', 'שמונה', 'תשע', 'עשר'];
-
-function keyboardDirection(key: string): DirectionCommand | null {
-  const normalized = key.toLowerCase();
-  if (key === 'ArrowUp' || normalized === 'w') return 'up';
-  if (key === 'ArrowDown' || normalized === 's') return 'down';
-  if (key === 'ArrowLeft' || normalized === 'a') return 'left';
-  if (key === 'ArrowRight' || normalized === 'd') return 'right';
-  return null;
-}
-
-function distanceBetween(first: { x: number; y: number }, second: { x: number; y: number }) {
-  return Math.hypot(first.x - second.x, first.y - second.y);
-}
-
-function resolvedEntityAssetId(
-  entity: ExperienceEntity,
-  gameId: ExperienceGameId,
-  options: {
-    isDone: boolean;
-    isNear: boolean;
-    isCelebrating: boolean;
-    progress: number;
-    tick: number;
-  }
-) {
-  const base = entity.visual?.assetId;
-  if (!base) return undefined;
-  if (gameId === 'shapes' && entity.kind === 'target') {
-    const state = options.isDone ? 'locked' : options.isNear ? 'hover' : 'empty';
-    return base.replace(/-(?:empty|hover|locked)$/, `-${state}`);
-  }
-  if (gameId === 'colors' && entity.kind === 'target' && options.isDone) {
-    return base.startsWith('balloon-')
-      ? `balloon-${entity.visual?.state ?? entity.accepts ?? 'red'}`
-      : base.replace('-uncoloured', '-coloured');
-  }
-  if (gameId === 'letters' && entity.kind === 'target') {
-    const state = options.isDone
-      ? 'filled-glow'
-      : options.progress > 0
-        ? 'partial'
-        : 'empty';
-    return base.replace(/-(?:empty|partial|filled-glow)$/, `-${state}`);
-  }
-  if (gameId === 'numbers' && entity.kind === 'target') {
-    const state = options.isCelebrating ? 'cheer' : 'idle';
-    return `monster-${state}-${(Math.floor(options.tick / 8) % 4) + 1}`;
-  }
-  return base;
-}
-
-export function ExperienceGame({
-  gameId,
-  title,
-  age,
-  difficulty,
-  gender,
-  learnerName,
-  voiceEnabled,
-  onBack,
-  onFinish
-}: ExperienceGameProps) {
-  const { speak, stop, getSpeakProps } = useSpeech(voiceEnabled);
-  const availableLevels = useMemo(
-    () => selectExperienceLevels(levels, gameId, age, difficulty),
-    [age, difficulty, gameId]
-  );
-  const [levelIndex, setLevelIndex] = useState(0);
-  const [heldId, setHeldId] = useState<string | null>(null);
-  const [removedIds, setRemovedIds] = useState<string[]>([]);
-  const [completedIds, setCompletedIds] = useState<string[]>([]);
-  const [progress, setProgress] = useState(0);
-  const [feedback, setFeedback] = useState('');
-  const [isCelebrating, setIsCelebrating] = useState(false);
-  const [facing, setFacing] = useState<FacingDirection>('front');
-  const [actionAnimation, setActionAnimation] = useState<CharacterAnimationState | null>(null);
-  const [animationStartTick, setAnimationStartTick] = useState(0);
-  const [arenaViewport, setArenaViewport] = useState({ width: 0, height: 0 });
-  const inputRef = useRef<ExperienceInputState>({ ...EMPTY_INPUT });
-  const arenaRef = useRef<HTMLDivElement>(null);
-  const actionTimerRef = useRef<number | null>(null);
-  const celebrationTimerRef = useRef<number | null>(null);
-  const wasNearInteractiveRef = useRef(false);
-  const lastStepTickRef = useRef(0);
-  const navigationRef = useRef<NavigationPath | null>(null);
-  const navigationProgressRef = useRef({ distance: Number.POSITIVE_INFINITY, tick: 0 });
-  const recordedLevelsRef = useRef(new Set<string>());
-  const [navigationTarget, setNavigationTarget] = useState<{ x: number; y: number } | null>(null);
-  const currentLevel = availableLevels[levelIndex];
-  const characterSkin = resolveCharacterSkin(gender);
-  const tuning = getPhysicsTuning(age, difficulty);
-  const world = currentLevel ? resolveExperienceWorld(currentLevel, difficulty) : null;
-  const { snapshot, attachCarriedBody, releaseCarriedBody, stopMotion } = useExperiencePhysics(
-    currentLevel,
+export function ExperienceGame(props: ExperienceGameProps) {
+  const {
+    gameId,
     age,
     difficulty,
-    inputRef
-  );
-
-  const entityPositions = useMemo(() => {
-    const positions = new Map<string, { x: number; y: number }>();
-    if (currentLevel) {
-      for (const entity of currentLevel.entities) {
-        positions.set(entity.id, resolveEntityPosition(currentLevel, entity));
-      }
-    }
-    return positions;
-  }, [currentLevel]);
-
-  const clearInput = useCallback(() => {
-    inputRef.current = { ...EMPTY_INPUT };
-  }, []);
-
-  const cancelNavigation = useCallback(() => {
-    navigationRef.current = null;
-    navigationProgressRef.current = { distance: Number.POSITIVE_INFINITY, tick: 0 };
-    setNavigationTarget(null);
-    clearInput();
-  }, [clearInput]);
-
-  const playActionAnimation = useCallback((animation: 'pickup' | 'drop') => {
-    setActionAnimation(animation);
-    setAnimationStartTick(snapshot.tick);
-    if (actionTimerRef.current !== null) window.clearTimeout(actionTimerRef.current);
-    actionTimerRef.current = window.setTimeout(() => {
-      setActionAnimation(null);
-      actionTimerRef.current = null;
-    }, window.matchMedia('(prefers-reduced-motion: reduce)').matches
-      ? 120
-      : getAnimationDurationMs(characterSkin, animation));
-  }, [characterSkin, snapshot.tick]);
-
-  useEffect(() => {
-    arenaRef.current?.focus({ preventScroll: true });
-  }, [levelIndex]);
-
-  useEffect(() => {
-    const arena = arenaRef.current;
-    if (!arena || typeof ResizeObserver === 'undefined') return;
-    const observer = new ResizeObserver(([entry]) => {
-      const { width, height } = entry.contentRect;
-      setArenaViewport((previous) =>
-        Math.abs(previous.width - width) < 0.5 && Math.abs(previous.height - height) < 0.5
-          ? previous
-          : { width, height }
-      );
-    });
-    observer.observe(arena);
-    return () => observer.disconnect();
-  }, [currentLevel?.id]);
-
-  useEffect(() => {
-    if (!currentLevel) return;
-    speak(`${currentLevel.title}. ${currentLevel.instruction}`);
-    return stop;
-  }, [currentLevel, speak, stop]);
-
-  useEffect(() => {
-    const onWindowBlur = () => clearInput();
-    window.addEventListener('blur', onWindowBlur);
-    return () => window.removeEventListener('blur', onWindowBlur);
-  }, [clearInput]);
-
-  useEffect(() => () => {
-    clearInput();
-    if (actionTimerRef.current !== null) window.clearTimeout(actionTimerRef.current);
-    if (celebrationTimerRef.current !== null) window.clearTimeout(celebrationTimerRef.current);
-  }, [clearInput]);
-
-  useEffect(() => {
-    if (snapshot.speed < 8) return;
-    const { x, y } = snapshot.velocity;
-    if (Math.abs(x) > Math.abs(y)) setFacing(x < 0 ? 'left' : 'right');
-    else setFacing(y < 0 ? 'back' : 'front');
-  }, [snapshot.speed, snapshot.velocity]);
-
-  useEffect(() => {
-    if (snapshot.speed < 28 || snapshot.tick - lastStepTickRef.current < 12) return;
-    lastStepTickRef.current = snapshot.tick;
-    playSfx(Math.floor(snapshot.tick / 12) % 2 === 0 ? 'characterStep1' : 'characterStep2');
-  }, [snapshot.speed, snapshot.tick]);
-
-  const resetForLevel = useCallback((nextIndex: number) => {
-    if (!availableLevels[nextIndex]) return;
-    clearInput();
-    navigationRef.current = null;
-    setNavigationTarget(null);
-    releaseCarriedBody();
-    setHeldId(null);
-    setRemovedIds([]);
-    setCompletedIds([]);
-    setProgress(0);
-    setFeedback('');
-    setIsCelebrating(false);
-    setActionAnimation(null);
-    setAnimationStartTick(0);
-  }, [availableLevels, clearInput, releaseCarriedBody]);
-
-  const finishLevel = useCallback((nextProgress: number) => {
-    if (!currentLevel || nextProgress < currentLevel.required) return;
-    const profile = getActiveProfile();
-    if (profile && !recordedLevelsRef.current.has(currentLevel.id)) {
-      recordedLevelsRef.current.add(currentLevel.id);
-      recordLearningEvent({ profileId: profile.id, sessionId: `experience-${gameId}-${currentLevel.id}`,
-        contentId: currentLevel.id, skillIds: experienceSkillIds(gameId), gameId,
-        evidenceForm: 'adventure-drag', correct: true, attemptNumber: 1, hintUsed: false,
-        responseMs: null, monotonicMs: Math.round(performance.now()) });
-      completeJourneyLevel(profile.id, currentLevel.id, gameId);
-    }
-    clearInput();
-    stopMotion();
-    releaseCarriedBody();
-    setIsCelebrating(true);
-    setAnimationStartTick(snapshot.tick);
-    setFeedback(currentLevel.successText);
-    playAudioCue('match');
-    playRecordedVoice('levelComplete', gender, () => speak(currentLevel.successText));
-    const delay = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-      ? 1200
-      : Math.max(1400, getAnimationDurationMs(characterSkin, 'celebrate') + 900);
-    celebrationTimerRef.current = window.setTimeout(() => {
-      if (levelIndex + 1 >= availableLevels.length) {
-        onFinish(availableLevels.length, availableLevels.length, 3);
-        return;
-      }
-      const nextIndex = levelIndex + 1;
-      resetForLevel(nextIndex);
-      setLevelIndex(nextIndex);
-    }, delay);
-  }, [
-    availableLevels.length,
-    characterSkin,
-    clearInput,
-    currentLevel,
-    gameId,
-    levelIndex,
+    gender,
+    learnerName,
+    voiceEnabled,
+    onBack,
     onFinish,
-    releaseCarriedBody,
-    resetForLevel,
-    snapshot.tick,
-    speak,
-    stopMotion
-  ]);
-
-  const nearestInteractiveEntity = useMemo(() => {
-    if (!currentLevel) return null;
-    let nearest: ExperienceEntity | null = null;
-    let nearestDistance = Number.POSITIVE_INFINITY;
-    for (const entity of currentLevel.entities) {
-      if (removedIds.includes(entity.id) || completedIds.includes(entity.id)) continue;
-      const position = entityPositions.get(entity.id);
-      if (!position) continue;
-      const distance = distanceBetween(snapshot.position, position);
-      if (distance <= tuning.interactionRadius + (entity.radius ?? 24) && distance < nearestDistance) {
-        nearest = entity;
-        nearestDistance = distance;
-      }
-    }
-    return nearest;
-  }, [
-    completedIds,
-    currentLevel,
-    entityPositions,
-    removedIds,
-    snapshot.position,
-    tuning.interactionRadius
-  ]);
-
+    accessibility,
+    avatarId,
+  } = props;
+  const profile = useRef(getActiveProfile()).current;
+  const skin = avatarId ?? (gender === "boy" ? "nir-kippah" : "shir");
+  const { speak, stop, preload } = useSpeech(voiceEnabled);
+  const progressRef = useRef<AdventureProgress>(
+    profile
+      ? getAdventureProgress(profile.id, gameId)
+      : { version: 1, completed: [], rewards: [], recent: [] },
+  );
+  const [checkpoint, setCheckpoint] = useState<AdventureCheckpoint>(() => {
+    const previous = progressRef.current.checkpoint;
+    if (
+      previous &&
+      previous.age === age &&
+      previous.difficulty === difficulty &&
+      Number.isInteger(previous.missionIndex) &&
+      previous.missionIndex >= 0 &&
+      previous.missionIndex < 3 &&
+      Number.isInteger(previous.stepIndex) &&
+      previous.stepIndex >= 0 &&
+      previous.stepIndex < 5 &&
+      previous.attempt >= 1 &&
+      Number.isFinite(previous.seed) &&
+      previous.missionIds.length === 3 &&
+      previous.missionIds.every((id) =>
+        adventureMissions.some((m) => m.id === id && m.gameId === gameId),
+      )
+    )
+      return previous;
+    const seed = Math.floor(Math.random() * 1_000_000);
+    const missions = selectAdventureMissions(
+      gameId,
+      progressRef.current.recent,
+      seed,
+      profile ? getProfileData(profile.id).events : [],
+    );
+    const confidence = profile
+      ? Math.min(
+          ...missions[0].skillIds.map(
+            (id) => getProfileData(profile.id).mastery[id]?.confidence ?? 0,
+          ),
+        )
+      : 0;
+    const challenge =
+      profile?.learningMode === "automatic"
+        ? confidence < 25
+          ? "easy"
+          : confidence < 65
+            ? "medium"
+            : "hard"
+        : difficulty;
+    return {
+      sessionId: crypto.randomUUID(),
+      seed,
+      age,
+      difficulty,
+      challenge,
+      fewerItems: accessibility?.fewerItems,
+      missionIds: missions.map((m) => m.id),
+      missionIndex: 0,
+      stepIndex: 0,
+      attempt: 1,
+      hint: false,
+      evidenceKeys: [],
+    };
+  });
+  const checkpointRef = useRef(checkpoint);
+  const [intro, setIntro] = useState(checkpoint.stepIndex === 0);
+  const [selected, setSelected] = useState<string | null>(null);
+  const [feedback, setFeedback] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [celebration, setCelebration] = useState(false);
+  const [paused, setPaused] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [loadError, setLoadError] = useState(false);
+  const [retryLoad, setRetryLoad] = useState(0);
+  const busyRef = useRef(false);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const startedRef = useRef(performance.now());
+  const mission = adventureMissions.find(
+    (m) => m.id === checkpoint.missionIds[checkpoint.missionIndex],
+  )!;
+  const steps = missionSteps(
+    mission,
+    {
+      age,
+      difficulty: checkpoint.challenge ?? difficulty,
+      fewerItems: checkpoint.fewerItems,
+    },
+    checkpoint.seed,
+  );
+  const step = steps[Math.min(checkpoint.stepIndex, steps.length - 1)];
+  const world = adventureWorlds[gameId];
+  const reduced = Boolean(accessibility?.reducedMotion);
+  const persist = (
+    cp: AdventureCheckpoint,
+    evidence?: Parameters<typeof saveAdventureProgress>[3],
+  ) => {
+    progressRef.current = { ...progressRef.current, checkpoint: cp };
+    checkpointRef.current = cp;
+    if (profile)
+      saveAdventureProgress(profile.id, gameId, progressRef.current, evidence);
+  };
   useEffect(() => {
-    const isNear = Boolean(nearestInteractiveEntity);
-    if (isNear && !wasNearInteractiveRef.current) playSfx('objectNear');
-    wasNearInteractiveRef.current = isNear;
-  }, [nearestInteractiveEntity]);
-
-  const interact = useCallback(() => {
-    if (!currentLevel || isCelebrating) return;
-    const entity = nearestInteractiveEntity;
-    if (!entity) {
-      setFeedback('נגעו בפריט כדי להתקרב ולבצע פעולה.');
-      playAudioCue('retry');
-      return;
-    }
-
-    if (gameId === 'colors') {
-      if (entity.kind === 'station') {
-        setHeldId(entity.id);
-        attachCarriedBody(15);
-        playActionAnimation('pickup');
-        setFeedback(`המכחול נטען ב${entity.label}.`);
-        playSfx('pickup');
-        speak(entity.label);
-        return;
-      }
-      if (entity.kind === 'target' && heldId === entity.accepts) {
-        const next = progress + 1;
-        setCompletedIds((previous) => [...previous, entity.id]);
-        setProgress(next);
-        setHeldId(null);
-        releaseCarriedBody();
-        playActionAnimation('drop');
-        setFeedback('איזה יופי, הצבע מתאים!');
-        playSfx('drop');
-        playAudioCue('match');
-        finishLevel(next);
-        return;
-      }
-      setHeldId(null);
-      releaseCarriedBody();
-      playActionAnimation('drop');
-      setFeedback('כמעט. טענו שוב את המכחול בצבע שמסומן ליד העצם.');
-      playSfx('wrongTarget');
-      playRecordedVoice('almost', gender, () => speak('כמעט, נסו צבע אחר.'));
-      return;
-    }
-
-    if (entity.kind === 'collectible' && !heldId) {
-      setHeldId(entity.id);
-      setRemovedIds((previous) => [...previous, entity.id]);
-      attachCarriedBody(entity.radius ?? 18);
-      playActionAnimation('pickup');
-      setFeedback(`אספתם ${entity.label}. עכשיו הביאו אותו ליעד.`);
-      playSfx('pickup');
-      playSfx('itemCollected');
-      speak(entity.label);
-      return;
-    }
-
-    if (entity.kind === 'target' && heldId) {
-      const held = currentLevel.entities.find((item) => item.id === heldId);
-      const matches = gameId === 'letters' || gameId === 'numbers' || held?.accepts === entity.accepts;
-      if (matches) {
-        const next = progress + 1;
-        setProgress(next);
-        setHeldId(null);
-        releaseCarriedBody();
-        playActionAnimation('drop');
-        if (gameId === 'shapes') setCompletedIds((previous) => [...previous, entity.id]);
-        const message = gameId === 'numbers'
-          ? `${countWords[next] ?? next}!`
-          : `מצוין, ${held?.label ?? 'החלק'} במקום!`;
-        setFeedback(message);
-        playSfx('drop');
-        if (gameId === 'numbers') playSfx('countTick');
-        playAudioCue('match');
-        speak(message);
-        finishLevel(next);
-        return;
-      }
-      if (held) setRemovedIds((previous) => previous.filter((id) => id !== held.id));
-      setHeldId(null);
-      releaseCarriedBody();
-      playActionAnimation('drop');
-      setFeedback('הצורה מתאימה למקום אחר. היא חזרה לסדנה.');
-      playSfx('wrongTarget');
-      playRecordedVoice('almost', gender, () => speak('כמעט, נסו מקום אחר.'));
-      return;
-    }
-
-    setFeedback('הידיים מלאות. הביאו קודם את הפריט אל היעד.');
-  }, [
-    attachCarriedBody,
-    currentLevel,
-    finishLevel,
-    gameId,
-    heldId,
-    isCelebrating,
-    nearestInteractiveEntity,
-    playActionAnimation,
-    progress,
-    releaseCarriedBody,
-    speak
-  ]);
-
-  const setDirection = useCallback((direction: DirectionCommand, pressed: boolean) => {
-    if (isCelebrating) return;
-    if (pressed) {
-      navigationRef.current = null;
-      setNavigationTarget(null);
-    }
-    inputRef.current = { ...inputRef.current, [direction]: pressed };
-  }, [isCelebrating]);
-
-  const navigateTo = useCallback((intent: ExperienceNavigationIntent) => {
-    if (!world || isCelebrating) return;
-    const clearance = tuning.playerRadius + 10;
-    const safeIntent = {
-      ...intent,
-      target: {
-        x: Math.max(clearance, Math.min(world.width - clearance, intent.target.x)),
-        y: Math.max(clearance, Math.min(world.height - clearance, intent.target.y))
+    persist(checkpointRef.current);
+  }, []);
+  useEffect(() => {
+    let active = true;
+    setLoading(true);
+    setLoadError(false);
+    preloadAdventure(gameId, skin)
+      .then(() => {
+        if (active) setLoading(false);
+      })
+      .catch(() => {
+        if (active) {
+          setLoading(false);
+          setLoadError(true);
+        }
+      });
+    return () => {
+      active = false;
+    };
+  }, [gameId, skin, retryLoad]);
+  useEffect(() => {
+    preload([
+      mission.story,
+      mission.instruction,
+      ...steps.map((s) => s.prompt),
+      "מצוין!",
+      "ננסה שוב. אפשר להיעזר ברמז.",
+    ]);
+    const upcoming = adventureMissions.find(
+      (m) => m.id === checkpoint.missionIds[checkpoint.missionIndex + 1],
+    );
+    if (upcoming)
+      preload([
+        `${upcoming.title}. ${upcoming.story}`,
+        upcoming.story,
+        ...missionSteps(
+          upcoming,
+          {
+            age,
+            difficulty: checkpoint.challenge ?? difficulty,
+            fewerItems: checkpoint.fewerItems,
+          },
+          checkpoint.seed,
+        ).map((s) => s.prompt),
+      ]);
+    if (!loading && !paused)
+      speak(intro ? `${mission.title}. ${mission.story}` : step.prompt);
+    startedRef.current = performance.now();
+    return stop;
+  }, [mission.id, step.id, intro, loading, paused, speak, stop, preload]);
+  useEffect(() => {
+    const pause = () => {
+      if (document.hidden) {
+        setPaused(true);
+        stop();
+        setSelected(null);
       }
     };
-    navigationRef.current = findNavigationPath(
-      snapshot.position,
-      safeIntent,
-      world,
-      snapshot.obstaclePositions,
-      tuning.playerRadius
-    );
-    navigationProgressRef.current = { distance: Number.POSITIVE_INFINITY, tick: snapshot.tick };
-    setNavigationTarget(safeIntent.target);
-    arenaRef.current?.focus({ preventScroll: true });
-  }, [isCelebrating, snapshot.obstaclePositions, snapshot.position, snapshot.tick, tuning.playerRadius, world]);
-
-  useEffect(() => {
-    const navigation = navigationRef.current;
-    if (!navigation || isCelebrating) return;
-    const entityPosition = navigation.interactEntityId ? entityPositions.get(navigation.interactEntityId) : null;
-    if (entityPosition && distanceBetween(snapshot.position, entityPosition) <= tuning.interactionRadius + 18) {
-      cancelNavigation();
-      interact();
-      return;
-    }
-
-    while (navigation.waypoints.length > 1 && distanceBetween(snapshot.position, navigation.waypoints[0]) < 28) {
-      navigation.waypoints.shift();
-    }
-    const waypoint = navigation.waypoints[0];
-    if (!waypoint || distanceBetween(snapshot.position, waypoint) < 18) {
-      cancelNavigation();
-      return;
-    }
-
-    const remaining = distanceBetween(snapshot.position, waypoint);
-    const progress = navigationProgressRef.current;
-    if (remaining < progress.distance - 5) navigationProgressRef.current = { distance: remaining, tick: snapshot.tick };
-    else if (snapshot.tick - progress.tick > 45 && world) {
-      navigationRef.current = findNavigationPath(
-        snapshot.position,
-        { target: navigation.target, interactEntityId: navigation.interactEntityId },
-        world,
-        snapshot.obstaclePositions,
-        tuning.playerRadius
-      );
-      navigationProgressRef.current = { distance: Number.POSITIVE_INFINITY, tick: snapshot.tick };
-    }
-    inputRef.current = inputToward(snapshot.position, waypoint);
-  }, [cancelNavigation, entityPositions, interact, isCelebrating, snapshot.obstaclePositions, snapshot.position, snapshot.tick, tuning.interactionRadius, tuning.playerRadius, world]);
-
-  if (!currentLevel || !world) return null;
-  const heldEntity = currentLevel.entities.find((entity) => entity.id === heldId);
-  const heldAssetId = heldEntity?.visual?.heldAssetId ?? heldEntity?.visual?.assetId;
-  const colorStations = new Map(
-    currentLevel.entities.filter((entity) => entity.kind === 'station').map((entity) => [entity.id, entity])
-  );
-  const animation: CharacterAnimationState = isCelebrating
-    ? 'celebrate'
-    : actionAnimation
-      ?? (snapshot.speed > 12 ? (heldId ? 'carry-walk' : 'walk') : 'idle');
-  const worldStyle = (position: { x: number; y: number }): CSSProperties => arenaViewport.width && arenaViewport.height
-    ? ({
-        '--experience-x': `${(position.x / world.width) * arenaViewport.width}px`,
-        '--experience-y': `${(position.y / world.height) * arenaViewport.height}px`
-      } as CSSProperties)
-    : {
-        left: `${(position.x / world.width) * 100}%`,
-        top: `${(position.y / world.height) * 100}%`
+    const appPause = (e: Event) => {
+      if (!(e as CustomEvent<{ isActive: boolean }>).detail.isActive) {
+        setPaused(true);
+        stop();
+        setSelected(null);
+      }
+    };
+    document.addEventListener("visibilitychange", pause);
+    window.addEventListener("lomdim:app-state", appPause);
+    return () => {
+      document.removeEventListener("visibilitychange", pause);
+      window.removeEventListener("lomdim:app-state", appPause);
+      if (timerRef.current) clearTimeout(timerRef.current);
+      stop();
+    };
+  }, [stop]);
+  const answer = (value: string, rotation = 0) => {
+    if (busyRef.current || intro || paused || loading) return;
+    const current = checkpointRef.current;
+    const correct = isCorrectAction(step, value, rotation);
+    const evidence = profile
+      ? {
+          profileId: profile.id,
+          sessionId: current.sessionId,
+          contentId: `${mission.id}.${step.id}.${current.seed}`,
+          skillIds:
+            mission.activity === "letter-build" && step.kind === "place"
+              ? ["motor.fine" as const]
+              : mission.skillIds,
+          gameId,
+          evidenceForm:
+            step.kind === "choose"
+              ? gameId === "letters" && voiceEnabled
+                ? ("listening-choice" as const)
+                : ("visual-choice" as const)
+              : mission.evidenceForm,
+          correct,
+          attemptNumber: current.attempt,
+          hintUsed: current.hint || Boolean(accessibility?.strongGuidance),
+          responseMs: Math.round(performance.now() - startedRef.current),
+          monotonicMs: Math.round(performance.now()),
+        }
+      : undefined;
+    if (!correct) {
+      const next = {
+        ...current,
+        attempt: current.attempt + 1,
+        hint: current.hint || current.attempt >= 2,
       };
-
+      persist(next, evidence);
+      setCheckpoint(next);
+      setFeedback("כמעט. נבדוק וננסה שוב.");
+      playSfx("wrongTarget");
+      speak("ננסה שוב. אפשר להיעזר ברמז.");
+      busyRef.current = true;
+      setBusy(true);
+      timerRef.current = setTimeout(() => {
+        busyRef.current = false;
+        setBusy(false);
+      }, 350);
+      return;
+    }
+    busyRef.current = true;
+    setBusy(true);
+    setFeedback("מצוין!");
+    playAudioCue("match");
+    const finished = current.stepIndex + 1 >= steps.length;
+    const next = {
+      ...current,
+      stepIndex: finished ? 0 : current.stepIndex + 1,
+      missionIndex: current.missionIndex + (finished ? 1 : 0),
+      attempt: 1,
+      hint: false,
+    };
+    if (finished)
+      progressRef.current = {
+        ...progressRef.current,
+        completed: [...new Set([...progressRef.current.completed, mission.id])],
+        rewards: [...new Set([...progressRef.current.rewards, mission.id])],
+        recent: [
+          ...progressRef.current.recent.filter((id) => id !== mission.id),
+          mission.id,
+        ].slice(-12),
+        creations: [
+          ...(progressRef.current.creations ?? []),
+          {
+            id: `${current.sessionId}.${mission.id}`,
+            missionId: mission.id,
+            seed: current.seed,
+            completedAt: new Date().toISOString(),
+          },
+        ].slice(-120),
+      };
+    persist(next, evidence);
+    timerRef.current = setTimeout(
+      () => {
+        setSelected(null);
+        setFeedback("");
+        if (finished) {
+          setCelebration(true);
+          playSfx("levelComplete");
+          if (!document.hidden)
+            speak(`הצלחנו! ${mission.reward} נוספה לאוסף שלנו.`);
+        } else {
+          setCheckpoint(next);
+          busyRef.current = false;
+          setBusy(false);
+        }
+      },
+      reduced ? 160 : 750,
+    );
+  };
+  const nextMission = () => {
+    const next = checkpointRef.current;
+    if (next.missionIndex >= 3) {
+      progressRef.current = { ...progressRef.current, checkpoint: undefined };
+      if (profile)
+        saveAdventureProgress(profile.id, gameId, progressRef.current);
+      onFinish(3, 3, 3);
+      return;
+    }
+    setCheckpoint(next);
+    setCelebration(false);
+    setIntro(true);
+    setBusy(false);
+    busyRef.current = false;
+  };
+  const hint = () => {
+    const next = { ...checkpointRef.current, hint: true };
+    persist(next);
+    setCheckpoint(next);
+    speak(step.prompt);
+    playSfx("select");
+  };
+  const boardProps = {
+    mission,
+    step,
+    selected,
+    hint: checkpoint.hint || Boolean(accessibility?.strongGuidance),
+    busy,
+    onSelect: (value: string) => {
+      setSelected(value);
+      playSfx("pickup");
+      speak(itemLabel(value), { mode: "hint" });
+    },
+    onAnswer: answer,
+  };
+  const Board = {
+    letters: LettersAdventure,
+    numbers: NumbersAdventure,
+    shapes: ShapesAdventure,
+    colors: ColorsAdventure,
+  }[gameId];
   return (
-    <GameWorld
-      gameId={gameId}
-      title={title}
-      scoreLabel="הושלמו"
-      scoreValue={progress}
-      status={`${levelIndex + 1}/${availableLevels.length}`}
-      onBack={onBack}
-      backSpeakProps={getSpeakProps<HTMLButtonElement>('חזרה לתפריט המשחקים')}
-    >
-      <ProgressBar current={levelIndex + 1} total={availableLevels.length} />
-      <div className={`game-play-card experience-game experience-game--${gameId}`}>
-        <div className="experience-game__heading">
-          <div className="experience-game__copy">
-            <span className="question-card__tag">משחק חווייתי</span>
-            <h2>{currentLevel.title}</h2>
-            <p>{currentLevel.instruction}</p>
-          </div>
-          <Button
-            variant="ghost"
-            className="experience-game__repeat"
-            aria-label="שמיעת ההוראה שוב"
-            title="שמיעת ההוראה שוב"
-            onClick={() => speak(currentLevel.instruction)}
+    <MotionConfig reducedMotion={reduced ? "always" : "user"}>
+      <section
+        className={`adventure adventure--${gameId}`}
+        dir="rtl"
+        style={
+          {
+            "--adventure-accent": world.color,
+            "--adventure-background": `url("${world.image}")`,
+          } as CSSProperties
+        }
+        data-testid="adventure"
+        data-game={gameId}
+        data-mission={mission.id}
+        data-step={step.id}
+        data-activity={mission.activity}
+        data-seed={checkpoint.seed}
+        data-difficulty={checkpoint.challenge ?? difficulty}
+        data-reduced-motion={reduced}
+        data-strong-snap={Boolean(accessibility?.strongSnap)}
+      >
+        <header className="adventure-header">
+          <button
+            type="button"
+            className="adventure-icon-button"
+            aria-label="חזרה לתפריט המשחקים"
+            onClick={() => {
+              stop();
+              onBack();
+            }}
           >
-            🔊
-          </Button>
-          <div className="experience-game__carry" aria-live="polite">
-            <span>{gameId === 'colors' ? 'צבע במכחול' : 'בידיים'}</span>
-            <strong style={heldEntity?.color ? { background: heldEntity.color } : undefined}>
-              {heldAssetId
-                ? <ExperienceAsset assetId={heldAssetId} className="experience-entity__image" />
-                : '—'}
-            </strong>
+            →
+          </button>
+          <div>
+            <span>{world.title}</span>
+            <h1>{mission.title}</h1>
           </div>
-        </div>
-        <div
-          ref={arenaRef}
-          className={`experience-arena experience-arena--physics ${tuning.guideStrength > 0.8 ? 'experience-arena--guided' : ''}`}
-          tabIndex={0}
-          role="application"
-          aria-label={`${currentLevel.title}. נוגעים במקום כדי לנוע, או משתמשים במקשי WASD וברווח.`}
-          onClick={(event) => {
-            if ((event.target as HTMLElement).closest('[data-entity-id]')) return;
-            const bounds = event.currentTarget.getBoundingClientRect();
-            navigateTo({ target: screenPointToWorld({ x: event.clientX, y: event.clientY }, bounds, world) });
-          }}
-          onKeyDown={(event) => {
-            const direction = keyboardDirection(event.key);
-            if (direction) {
-              event.preventDefault();
-              if (event.repeat) return;
-              setDirection(direction, true);
-              return;
-            }
-            if ((event.key === ' ' || event.key === 'Enter') && !event.repeat) {
-              event.preventDefault();
-              interact();
-            }
-          }}
-          onKeyUp={(event) => {
-            const direction = keyboardDirection(event.key);
-            if (!direction) return;
-            event.preventDefault();
-            setDirection(direction, false);
-          }}
-          onBlur={clearInput}
-          style={{
-            '--experience-render-scale': arenaViewport.width && arenaViewport.height
-              ? Math.min(arenaViewport.width / world.width, arenaViewport.height / world.height)
-              : 1
-          } as CSSProperties}
-          data-testid="experience-arena"
-          data-world-width={world.width}
-          data-world-height={world.height}
-          data-render-width={arenaViewport.width.toFixed(1)}
-          data-render-height={arenaViewport.height.toFixed(1)}
-        >
-          {world.obstacles.map((obstacle) => {
-            const position = snapshot.obstaclePositions[obstacle.id] ?? obstacle.position;
-            return (
-              <div
-                key={obstacle.id}
-                className={`experience-obstacle experience-obstacle--${obstacle.kind}`}
-                style={{
-                  ...worldStyle(position),
-                  width: `${(obstacle.width / world.width) * 100}%`,
-                  height: `${(obstacle.height / world.height) * 100}%`
-                }}
-                aria-hidden="true"
-                data-obstacle-id={obstacle.id}
-                data-x={position.x}
-                data-y={position.y}
-                data-visual-asset-id={obstacle.visual?.assetId}
-              >
-                {obstacle.visual?.assetId
-                  ? <ExperienceAsset assetId={obstacle.visual.assetId} className="experience-obstacle__image" />
-                  : null}
-              </div>
-            );
-          })}
-          {currentLevel.entities.map((entity) => {
-            if (removedIds.includes(entity.id)) return null;
-            const position = entityPositions.get(entity.id);
-            if (!position) return null;
-            const isDone = completedIds.includes(entity.id);
-            const completedColor = isDone && entity.accepts ? colorStations.get(entity.accepts)?.color : undefined;
-            const isNear = nearestInteractiveEntity?.id === entity.id;
-            const visualAssetId = resolvedEntityAssetId(entity, gameId, {
-              isDone,
-              isNear,
-              isCelebrating,
-              progress,
-              tick: snapshot.tick
-            });
-            return (
-              <div
-                key={entity.id}
-                className={`experience-entity experience-entity--${entity.kind} ${isDone ? 'experience-entity--done' : ''} ${isNear ? 'experience-entity--near' : ''}`}
-                style={{ ...worldStyle(position), ...(completedColor ? { background: completedColor } : {}) }}
-                role="button"
-                tabIndex={0}
-                aria-label={`לכו אל ${entity.label}`}
-                onClick={(event) => {
-                  event.stopPropagation();
-                  navigateTo({ target: position, interactEntityId: entity.id });
-                }}
-                onKeyDown={(event) => {
-                  if (event.key !== 'Enter' && event.key !== ' ') return;
-                  event.preventDefault();
-                  event.stopPropagation();
-                  navigateTo({ target: position, interactEntityId: entity.id });
-                }}
-                data-entity-id={entity.id}
-                data-kind={entity.kind}
-                data-x={position.x}
-                data-y={position.y}
-                data-accepts={entity.accepts}
-                data-visual-asset-id={visualAssetId}
-              >
-                {visualAssetId
-                  ? <ExperienceAsset assetId={visualAssetId} className="experience-entity__image" />
-                  : <span className="experience-entity__glyph" aria-hidden="true">{entity.fallbackGlyph}</span>}
-                <small>{entity.label}</small>
-              </div>
-            );
-          })}
           <div
-            className="experience-player"
-            style={worldStyle(snapshot.position)}
-            data-x={snapshot.position.x}
-            data-y={snapshot.position.y}
-            data-speed={snapshot.speed.toFixed(2)}
+            className="adventure-session-progress"
+            role="group"
+            aria-label={`משימה ${checkpoint.missionIndex + 1} מתוך 3`}
           >
-            <ExperienceCharacter
-              gender={gender}
-              learnerName={learnerName}
-              animation={animation}
-              facing={facing}
-              tick={snapshot.tick}
-              clipStartTick={animationStartTick}
-              carried={heldAssetId
-                ? <ExperienceAsset assetId={heldAssetId} className="experience-entity__image" />
-                : null}
+            {[0, 1, 2].map((i) => (
+              <span
+                key={i}
+                className={
+                  i < checkpoint.missionIndex
+                    ? "is-done"
+                    : i === checkpoint.missionIndex
+                      ? "is-current"
+                      : ""
+                }
+              >
+                {i < checkpoint.missionIndex ? "✓" : i + 1}
+              </span>
+            ))}
+          </div>
+          <button
+            type="button"
+            className="adventure-icon-button"
+            aria-label="השמעת ההוראה"
+            onClick={() => speak(intro ? mission.story : step.prompt)}
+          >
+            ♪
+          </button>
+        </header>
+        <div className="adventure-scene" data-testid="adventure-scene">
+          <div className="adventure-ambient" aria-hidden="true">
+            <i />
+            <i />
+            <i />
+          </div>
+          <div className="adventure-guide">
+            <motion.img
+              src={`/assets/experience/v2/${skin}-${celebration ? "celebrate" : selected ? "point" : "idle"}.webp`}
+              alt={learnerName ? `${learnerName}, משחקים יחד` : "משחקים יחד"}
+              data-skin={skin}
+              animate={celebration ? { y: [0, -12, 0] } : { y: [0, -2, 0] }}
+              transition={{
+                duration: celebration ? 0.8 : 3.5,
+                repeat: Infinity,
+              }}
             />
           </div>
-          {navigationTarget ? (
-            <div className="experience-navigation-target" style={worldStyle(navigationTarget)} aria-hidden="true" />
-          ) : null}
+          {loading ? (
+            <div className="adventure-overlay">
+              <p role="status">מכינים עולם של הפתעות…</p>
+            </div>
+          ) : loadError ? (
+            <div className="adventure-overlay">
+              <h2>עוד רגע מתחילים</h2>
+              <p>חלק מהתמונות עדיין לא נטענו.</p>
+              <button
+                className="adventure-primary"
+                onClick={() => setRetryLoad((n) => n + 1)}
+              >
+                ננסה שוב
+              </button>
+            </div>
+          ) : intro ? (
+            <div className="adventure-overlay adventure-intro">
+              <span className="adventure-kicker">הרפתקה קטנה מתחילה</span>
+              <h2>{mission.title}</h2>
+              <p>{mission.story}</p>
+              <ActivityDemo mission={mission} step={step} />
+              <p className="adventure-intro-instruction">
+                {mission.instruction}
+              </p>
+              <button
+                type="button"
+                className="adventure-primary"
+                onClick={() => {
+                  setIntro(false);
+                  playSfx("levelStart");
+                }}
+              >
+                מתחילים לשחק <span aria-hidden="true">←</span>
+              </button>
+            </div>
+          ) : celebration ? (
+            <div className="adventure-overlay adventure-celebration">
+              <WorldCreation
+                mission={mission}
+                seed={checkpoint.seed}
+                playing={!reduced}
+              />
+              <h2>איזה יופי, הצלחנו!</h2>
+              <p>{mission.reward} נוספה לאוסף שלנו</p>
+              <button
+                type="button"
+                className="adventure-primary"
+                onClick={nextMission}
+              >
+                {checkpointRef.current.missionIndex >= 3
+                  ? "לאוסף שלי"
+                  : "להרפתקה הבאה"}{" "}
+                ←
+              </button>
+            </div>
+          ) : (
+            <>
+              <div className="adventure-instruction">
+                <p>{step.prompt}</p>
+                <button
+                  type="button"
+                  className="adventure-hint-button"
+                  aria-label="רמז"
+                  disabled={busy}
+                  onClick={hint}
+                >
+                  ✦
+                </button>
+              </div>
+              <div className="adventure-board" key={`${mission.id}.${step.id}`}>
+                <Suspense fallback={<p>מכינים את המשחק…</p>}>
+                  <Board {...boardProps} />
+                </Suspense>
+              </div>
+              <div
+                className="adventure-feedback"
+                role="status"
+                aria-live="polite"
+              >
+                {feedback || (
+                  <span dir="ltr">
+                    {Math.min(checkpoint.stepIndex + 1, steps.length)} /{" "}
+                    {steps.length}
+                  </span>
+                )}
+              </div>
+            </>
+          )}
+          {paused && (
+            <div className="adventure-overlay adventure-pause">
+              <h2>כיף שחזרתם</h2>
+              <p>המשחק מחכה בדיוק כאן.</p>
+              <button
+                className="adventure-primary"
+                onClick={() => setPaused(false)}
+              >
+                ממשיכים לשחק
+              </button>
+            </div>
+          )}
         </div>
-        <AnimatedFeedback message={feedback} tone={isCelebrating ? 'correct' : 'neutral'} />
-        <div className="experience-game__help">
-          <span>נוגעים במקום כדי ללכת, ובפריט כדי לפעול</span><kbd>WASD + רווח</kbd><span>זמין גם במקלדת</span>
-        </div>
-      </div>
-    </GameWorld>
+      </section>
+    </MotionConfig>
   );
 }

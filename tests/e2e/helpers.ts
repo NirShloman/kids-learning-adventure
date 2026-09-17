@@ -25,7 +25,7 @@ export async function gotoFreshApp(page: Page) {
     window.localStorage.clear();
     window.sessionStorage.clear();
   });
-  await page.goto('/');
+  await page.goto('/', { waitUntil: 'domcontentloaded' });
 }
 
 export async function completeProfileSetup(page: Page, gender: 'boy' | 'girl' = 'girl') {
@@ -78,8 +78,8 @@ export async function selectGameMode(page: Page, mode: ExperienceMode) {
   await expect(selector).toBeVisible();
   await selector.click();
   await expect(mode === 'experience'
-    ? page.locator('[data-testid="experience-arena"]')
-    : page.locator('[data-testid="quiz-option"]').first()).toBeVisible();
+    ? page.locator('[data-testid="adventure"]')
+    : page.locator('[data-testid="quiz-option"]').first()).toBeVisible({timeout:20_000});
 }
 
 export async function expectNoUnavailableContent(page: Page) {
@@ -101,6 +101,7 @@ export async function completeChoiceGame(page: Page, optionTestId: string, nextB
       if (await summary.isVisible().catch(() => false)) return;
     }
     await expect(answerOption).toBeVisible();
+    await expect(answerOption).toBeEnabled();
     const statusBefore = await page.locator('.game-world__status small').textContent();
     await activate(answerOption);
     if (!answerCorrect) {

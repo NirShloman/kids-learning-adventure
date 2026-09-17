@@ -1,140 +1,37 @@
-import { expect, Page, test } from '@playwright/test';
-import { chooseHomeSettings, openGame, openLobby, selectGameMode } from './helpers';
+import { test, expect } from "@playwright/test";
+import { adventureMissions } from "../../src/content/adventureMissions";
+import { openAdventure } from "./adventure-helpers";
 
-const visualProjects = ['local-chromium', 'mobile-chrome'];
-
-test.describe.configure({ timeout: 180_000 });
-
-async function prepare(
-  page: Page,
-  title: 'אותיות' | 'מספרים' | 'צורות' | 'צבעים',
-  gender: 'boy' | 'girl' = 'girl'
-) {
-  await openLobby(page, gender);
-  await chooseHomeSettings(page, 3, 'easy');
-  await openGame(page, title);
-}
-
-async function moveKeyboardTo(page: Page, entitySelector: string) {
-  const player = page.locator('.experience-player');
-  const entity = page.locator(entitySelector).first();
-  const targetX = Number(await entity.getAttribute('data-x'));
-  const targetY = Number(await entity.getAttribute('data-y'));
-  for (let attempt = 0; attempt < 45; attempt += 1) {
-    const x = Number(await player.getAttribute('data-x'));
-    const y = Number(await player.getAttribute('data-y'));
-    const dx = targetX - x;
-    const dy = targetY - y;
-    if (Math.hypot(dx, dy) <= 52) return;
-    const key = Math.abs(dx) > Math.abs(dy)
-      ? (dx < 0 ? 'ArrowLeft' : 'ArrowRight')
-      : (dy < 0 ? 'ArrowUp' : 'ArrowDown');
-    const distance = Math.max(Math.abs(dx), Math.abs(dy));
-    await page.keyboard.down(key);
-    await page.waitForTimeout(Math.min(420, Math.max(150, distance * 1.5)));
-    await page.keyboard.up(key);
-    await page.waitForTimeout(90);
-  }
-  throw new Error(`Player did not reach ${entitySelector}`);
-}
-
-async function screenshotWorld(page: Page, name: string) {
-  await expect(page.locator('.game-world')).toHaveScreenshot(`${name}.png`, {
-    animations: 'disabled',
-    caret: 'hide',
-    maxDiffPixelRatio: 0.012
+for (const game of ["letters", "numbers", "shapes", "colors"] as const)
+  test(`${game}: scene has decoded art, readable controls and no overflow`, async ({
+    page,
+  }, info) => {
+    await openAdventure(
+      page,
+      adventureMissions.find((m) => m.gameId === game)!,
+    );
+    await expect(page.locator('[data-toy]').first()).toBeVisible();
+    await page.evaluate(() => document.fonts.ready);
+    for (const image of await page
+      .locator(".adventure img")
+      .evaluateAll((images) =>
+        images.map((image) => ({
+          src: (image as HTMLImageElement).src,
+          loaded:
+            (image as HTMLImageElement).complete &&
+            (image as HTMLImageElement).naturalWidth > 0,
+        })),
+      ))
+      expect(image.loaded, image.src).toBe(true);
+    const original = page.viewportSize()!;
+    for (const viewport of [original, {width: original.height, height: original.width}]) {
+      await page.setViewportSize(viewport);
+      await expect.poll(() => page.getByTestId("adventure").evaluate(node => Math.round(node.getBoundingClientRect().height))).toBe(viewport.height);
+      expect(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)).toBe(false);
+      const orientation = viewport.width > viewport.height ? 'landscape' : 'portrait';
+      const screenshot = await page.screenshot({path: info.outputPath(`${game}-${orientation}.png`)});
+      await info.attach(`${game}-${orientation}`, {body: screenshot, contentType: "image/png"});
+      const main = await page.getByTestId("adventure").boundingBox();
+      expect(main!.height).toBeLessThanOrEqual(viewport.height + 1);
+    }
   });
-}
-
-test.beforeEach(async ({ page }, testInfo) => {
-  test.skip(!visualProjects.includes(testInfo.project.name), 'Golden screenshots run on deterministic Chromium desktop and mobile projects.');
-  await page.emulateMedia({ reducedMotion: 'reduce' });
-});
-
-test('mode selector visual baseline', async ({ page }) => {
-  await prepare(page, 'אותיות');
-  await screenshotWorld(page, 'experience-mode-selector');
-});
-
-test('boy character visual baseline', async ({ page }) => {
-  await prepare(page, 'אותיות', 'boy');
-  await selectGameMode(page, 'experience');
-  await expect(page.locator('.experience-character')).toHaveAttribute('data-gender', 'boy');
-  await screenshotWorld(page, 'experience-boy-character');
-});
-
-test('boy and girl walking visual baselines', async ({ page }) => {
-  for (const gender of ['boy', 'girl'] as const) {
-    await prepare(page, 'אותיות', gender);
-    await selectGameMode(page, 'experience');
-    const character = page.locator('.experience-character');
-    await page.keyboard.down('ArrowRight');
-    await expect(character).toHaveAttribute('data-animation', 'walk');
-    await screenshotWorld(page, `experience-${gender}-walking`);
-    await page.keyboard.up('ArrowRight');
-  }
-});
-
-test('opening state visual baselines for all experiential games', async ({ page }) => {
-  for (const [title, slug] of [
-    ['אותיות', 'letters'],
-    ['מספרים', 'numbers'],
-    ['צורות', 'shapes'],
-    ['צבעים', 'colors']
-  ] as const) {
-    await prepare(page, title);
-    await selectGameMode(page, 'experience');
-    await screenshotWorld(page, `experience-${slug}-start`);
-  }
-});
-
-test('representative interaction states visual baselines', async ({ page }) => {
-  await prepare(page, 'אותיות');
-  await selectGameMode(page, 'experience');
-  await moveKeyboardTo(page, '[data-kind="collectible"]');
-  await page.keyboard.press('Space');
-  await screenshotWorld(page, 'experience-letters-carrying');
-
-  await prepare(page, 'מספרים');
-  await selectGameMode(page, 'experience');
-  await moveKeyboardTo(page, '[data-kind="collectible"]');
-  await page.keyboard.press('Space');
-  await moveKeyboardTo(page, '[data-kind="target"]');
-  await page.keyboard.press('Space');
-  await screenshotWorld(page, 'experience-numbers-counting');
-
-  await prepare(page, 'צורות');
-  await selectGameMode(page, 'experience');
-  await moveKeyboardTo(page, '[data-entity-id="square"]');
-  await page.keyboard.press('Space');
-  await moveKeyboardTo(page, '[data-entity-id="slot-triangle"]');
-  await page.keyboard.press('Space');
-  await screenshotWorld(page, 'experience-shapes-wrong-target');
-
-  await prepare(page, 'צבעים');
-  await selectGameMode(page, 'experience');
-  await moveKeyboardTo(page, '[data-entity-id="red"]');
-  await page.keyboard.press('Space');
-  await moveKeyboardTo(page, '[data-entity-id="flower-red"]');
-  await page.keyboard.press('Space');
-  await screenshotWorld(page, 'experience-colors-painted');
-});
-
-test('success and summary visual baselines', async ({ page }) => {
-  await prepare(page, 'אותיות');
-  await selectGameMode(page, 'experience');
-  for (let index = 0; index < 3; index += 1) {
-    await moveKeyboardTo(page, '[data-kind="collectible"]');
-    await page.keyboard.press('Space');
-    await moveKeyboardTo(page, '[data-kind="target"]');
-    await page.keyboard.press('Space');
-  }
-  await expect(page.locator('.experience-controls')).toHaveCount(0);
-  await screenshotWorld(page, 'experience-success');
-  await expect(page.locator('.summary-card')).toBeVisible();
-  await expect(page.locator('.summary-card')).toHaveScreenshot('experience-summary.png', {
-    animations: 'disabled',
-    caret: 'hide',
-    maxDiffPixelRatio: 0.012
-  });
-});

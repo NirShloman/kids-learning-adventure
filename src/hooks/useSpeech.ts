@@ -1,12 +1,12 @@
 import { FocusEventHandler, MouseEventHandler, useCallback } from 'react';
-import { canSpeak, SpeakOptions, speakHebrew, stopSpeaking } from '../services/speechService';
-import { stopNarration } from '../services/audioService';
+import { canSpeak, SpeakOptions } from '../services/speechService';
+import { playNarrationText, preloadNarrationTexts, stopNarrationPlayback } from '../services/narrationService';
 
 export function useSpeech(enabled: boolean) {
   const speak = useCallback(
     (text: string, options?: SpeakOptions) => {
       if (!enabled) return;
-      speakHebrew(text, options);
+      playNarrationText(text, options);
     },
     [enabled]
   );
@@ -23,9 +23,12 @@ export function useSpeech(enabled: boolean) {
   );
 
   const stop = useCallback(() => {
-    stopNarration();
-    stopSpeaking();
+    stopNarrationPlayback();
   }, []);
 
-  return { speak, stop, getSpeakProps, isSupported: canSpeak() };
+  const preload = useCallback((texts: string[]) => {
+    if (enabled) preloadNarrationTexts(texts);
+  }, [enabled]);
+
+  return { speak, stop, preload, getSpeakProps, isSupported: canSpeak() };
 }

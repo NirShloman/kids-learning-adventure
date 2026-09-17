@@ -20,7 +20,7 @@ interface MatchingGameProps {
 }
 
 export function MatchingGame({ age, difficulty, voiceEnabled, onBack, onFinish }: MatchingGameProps) {
-  const { speak, stop, getSpeakProps } = useSpeech(voiceEnabled);
+  const { speak, stop, preload, getSpeakProps } = useSpeech(voiceEnabled);
   const [pairs, setPairs] = useState<MatchingPair[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const shuffledRight = useMemo(() => shuffleArray(pairs), [pairs]);
@@ -29,6 +29,14 @@ export function MatchingGame({ age, difficulty, voiceEnabled, onBack, onFinish }
   const [matchedIds, setMatchedIds] = useState<string[]>([]);
   const [tries, setTries] = useState(0);
   const total = pairs.length;
+
+  useEffect(() => {
+    preload([
+      gameInstructions.matching.intro,
+      ...pairs.slice(0, 6).map((pair) => pair.right),
+      'כל הכבוד, מצאתם התאמה!', 'כמעט, נסו שוב'
+    ]);
+  }, [pairs, preload]);
 
   useEffect(() => {
     let isActive = true;
@@ -143,7 +151,7 @@ export function MatchingGame({ age, difficulty, voiceEnabled, onBack, onFinish }
                 onClick={() => handleLeftSelect(pair)}
                 animate={{ scale: matchedIds.includes(pair.id) ? 0.96 : 1 }}
                 whileTap={{ scale: 0.94 }}
-                {...getSpeakProps<HTMLButtonElement>(String(pair.left))}
+                {...getSpeakProps<HTMLButtonElement>(pair.right)}
               >
                 {pair.leftImageAssetId ? <GameImage assetId={pair.leftImageAssetId} alt="" decorative className="game-token__image" /> : null}
                 <span>{pair.left}</span>

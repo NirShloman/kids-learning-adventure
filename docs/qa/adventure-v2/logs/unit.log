@@ -1,0 +1,12 @@
+
+> kids-learning-adventure-web@1.2.0 test:unit
+> vitest run tests/unit
+
+
+ RUN  v4.1.7 C:/Dev/kids-learning-adventure
+
+
+ Test Files  13 passed (13)
+      Tests  79 passed (79)
+   Start at  09:28:15
+   Duration  11.18s (transform 9.38s, setup 0ms, import 12.80s, tests 4.74s, environment 24.85s)

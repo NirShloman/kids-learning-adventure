@@ -1,0 +1,104 @@
+
+> kids-learning-adventure-web@1.2.0 build:release
+> npm run validate:narration:strict && npm run build
+
+
+> kids-learning-adventure-web@1.2.0 validate:narration:strict
+> npm run narration:catalog && tsx scripts/validate-generated-narration.mts --strict
+
+
+> kids-learning-adventure-web@1.2.0 narration:catalog
+> tsx scripts/build-narration-catalog.mts
+
+Narration catalog: 2059 unique bindings from 26708 source references -> C:\Dev\kids-learning-adventure\tmp\narration\catalog.json
+Validated 2059 generated narration assets with strict catalog coverage.
+
+> kids-learning-adventure-web@1.2.0 build
+> npm run validate:content && npm run validate:privacy && tsc -b && vite build && node scripts/finalize-service-worker.mjs
+
+
+> kids-learning-adventure-web@1.2.0 validate:content
+> node scripts/validate-static-content.mjs && tsx scripts/validate-learning-model.mts && node scripts/validate-hebrew-narration.mjs && tsx scripts/validate-narration-manifest.mts && tsx scripts/validate-generated-narration.mts && node scripts/validate-experience-assets.mjs && node scripts/validate-audio-assets.mjs && tsx scripts/validate-adventures.mts
+
+Validated 3840 AI-reviewed static content items across 8 games.
+letters: 480
+numbers: 480
+shapes: 480
+colors: 480
+matching: 480
+memory: 480
+patterns: 480
+sorting: 480
+Validated 17 skills, prerequisite DAG, 3,840 mapped content units, and age coverage.
+Hebrew narration validation passed.
+Validated 5 stable narration entries; missing human recordings use local speech fallback.
+Validated 2059 generated narration assets.
+Validated 3 character atlases and 252 experience assets
+Validated the format and manifest mapping of 6 MP3 music tracks; this is not a rights approval.
+Validated 48 missions, 17280 age/difficulty/seed scenarios, 22 letters and 17 assets.
+
+> kids-learning-adventure-web@1.2.0 validate:privacy
+> node scripts/validate-local-privacy.mjs
+
+Validated local-only runtime: no analytics, external transport, device IDs, camera, or microphone APIs.
+vite v8.1.5 building client environment for production...
+[2K
+transforming...✓ 520 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                         1.66 kB │ gzip:   0.77 kB
+dist/assets/rubik-hebrew-900-normal-CNJSgxQA.woff2      5.19 kB
+dist/assets/rubik-hebrew-400-normal-Dp0lvSRB.woff2      5.32 kB
+dist/assets/rubik-hebrew-800-normal-CEoY7Wj3.woff2      5.40 kB
+dist/assets/rubik-hebrew-500-normal-B_5jqoVI.woff2      5.41 kB
+dist/assets/rubik-hebrew-700-normal-Da14F88e.woff2      5.45 kB
+dist/assets/rubik-hebrew-600-normal-CpCbvE17.woff2      5.46 kB
+dist/assets/rubik-hebrew-900-normal-B3V9FX5z.woff       6.72 kB
+dist/assets/rubik-hebrew-400-normal-BQDoxs6C.woff       6.76 kB
+dist/assets/rubik-hebrew-700-normal-B2Hm7hpE.woff       6.78 kB
+dist/assets/rubik-hebrew-500-normal--anb7y8_.woff       6.83 kB
+dist/assets/rubik-hebrew-600-normal-BGAyptFf.woff       6.87 kB
+dist/assets/rubik-hebrew-800-normal-DgqUxLtA.woff       6.91 kB
+dist/assets/adventure-CQPUJR1F.css                     20.20 kB │ gzip:   5.14 kB
+dist/assets/index-DQcPcAMe.css                         88.70 kB │ gzip:  17.32 kB
+dist/assets/learningEvidenceService-BJMcb0on.js         0.44 kB │ gzip:   0.30 kB
+dist/assets/AnimatedFeedback-CGmZEoko.js                0.67 kB │ gzip:   0.40 kB
+dist/assets/web-C3g5hQUx.js                             0.75 kB │ gzip:   0.35 kB
+dist/assets/ShapesAdventure-Du-OGJDK.js                 1.26 kB │ gzip:   0.67 kB
+dist/assets/LettersAdventure-DPCzIqf3.js                1.60 kB │ gzip:   0.69 kB
+dist/assets/AdventureSummary-CL6jt6rf.js                1.71 kB │ gzip:   0.87 kB
+dist/assets/NumbersAdventure-C1GYesbG.js                3.33 kB │ gzip:   1.38 kB
+dist/assets/PatternGame-CDJj9lNt.js                     3.51 kB │ gzip:   1.60 kB
+dist/assets/MemoryGame-gUaDB6u7.js                      3.54 kB │ gzip:   1.58 kB
+dist/assets/SortingGame-Dnn6D7Bg.js                     3.66 kB │ gzip:   1.64 kB
+dist/assets/MatchingGame-CtMrf0Gf.js                    3.98 kB │ gzip:   1.54 kB
+dist/assets/QuizGame-DvvWis3B.js                        4.01 kB │ gzip:   1.88 kB
+dist/assets/ColorsAdventure-KibS_Fyr.js                 4.77 kB │ gzip:   1.92 kB
+dist/assets/dist-DqXBHO1Q.js                            7.77 kB │ gzip:   3.10 kB
+dist/assets/jsx-runtime-CKh-7KOC.js                     7.93 kB │ gzip:   3.06 kB
+dist/assets/ExperienceGame-DZ-c-4R_.js                 10.64 kB │ gzip:   4.05 kB
+dist/assets/adventure-CWodBaNq.js                      14.02 kB │ gzip:   5.68 kB
+dist/assets/memory-4OCQhzZb.js                        144.70 kB │ gzip:   8.94 kB
+dist/assets/matching-DSENmVDw.js                      151.53 kB │ gzip:  10.89 kB
+dist/assets/RiveRuntimeScene-CNI_0fta.js              172.22 kB │ gzip:  49.89 kB
+dist/assets/numbers-BN_zjh7u.js                       246.48 kB │ gzip:  11.74 kB
+dist/assets/patterns-Jx76R0v4.js                      250.96 kB │ gzip:   8.31 kB
+dist/assets/shapes-Dkq8eLP7.js                        276.93 kB │ gzip:  12.07 kB
+dist/assets/colors-9eAjgmv7.js                        285.14 kB │ gzip:  11.49 kB
+dist/assets/letters-BF_U_1QB.js                       299.31 kB │ gzip:  17.34 kB
+dist/assets/sorting-DRhoUICx.js                       314.17 kB │ gzip:  14.87 kB
+dist/assets/index-D-I0qOog.js                       1,856.98 kB │ gzip: 362.92 kB
+
+[PLUGIN_TIMINGS] Your build spent significant time in plugins. Here is a breakdown:
+  - vite:prepare-out-dir (51%)
+  - vite:css-post (22%)
+  - vite:css (10%)
+See https://rolldown.rs/reference/InputOptions.checks#plugintimings for more details.
+
+[plugin builtin:vite-reporter]
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 12.04s
+Prepared service worker with 64 same-origin app-shell assets.

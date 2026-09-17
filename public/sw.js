@@ -51,6 +51,39 @@ self.addEventListener('fetch', (event) => {
 });
 
 self.addEventListener('message', (event) => {
+  if (event.data?.type === 'PREPARE_ADVENTURE_OFFLINE') {
+    const urls = Array.isArray(event.data.urls) ? event.data.urls : [];
+    const allowed = urls.length > 0 && urls.length < 2000 && urls.every(url =>
+      typeof url === 'string' && /^\/assets\/(experience\/v2\/|audio\/narration\/|images\/objects\/)/.test(url) && !url.includes('..'));
+    event.waitUntil((async () => {
+      if (!allowed) { event.ports[0]?.postMessage({ok:false}); return; }
+      const cache = await caches.open(CACHE_NAME);
+      let cursor = 0, ok = true;
+      await Promise.all(Array.from({length:4}, async () => {
+        while (cursor < urls.length) {
+          const url = urls[cursor++];
+          if (await cache.match(url)) continue;
+          try {
+            const response = await fetch(url);
+            if (!response.ok || response.status === 206 || response.headers.get('content-type')?.includes('text/html')) { ok = false; continue; }
+            await cache.put(url, response);
+          } catch { ok = false; }
+        }
+      }));
+      event.ports[0]?.postMessage({ok});
+    })());
+    return;
+  }
+  if (event.data?.type === 'WARM_ADVENTURE_CACHE') {
+    const urls = Array.isArray(event.data.urls) ? event.data.urls.filter((url) => typeof url === 'string' && url.startsWith('/assets/experience/v2/') && !url.includes('..')) : [];
+    event.waitUntil(caches.open(CACHE_NAME).then(async (cache) => {
+      for (const url of urls) {
+        if (await cache.match(url)) continue;
+        try { const response = await fetch(url); if (response.ok) await cache.put(url, response); } catch { /* A later visit retries warming. */ }
+      }
+    }));
+    return;
+  }
   if (event.data?.type !== 'WARM_AUDIO_CACHE') return;
   event.waitUntil((async () => {
     const cache = await caches.open(CACHE_NAME);

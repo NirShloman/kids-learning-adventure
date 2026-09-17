@@ -1,0 +1,7 @@
+
+> kids-learning-adventure-web@1.2.0 narration:functions:build
+> npm --prefix functions run build
+
+
+> build
+> tsc -p tsconfig.json

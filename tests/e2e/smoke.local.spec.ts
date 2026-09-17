@@ -12,7 +12,7 @@ test.describe('local app smoke', () => {
   });
 
   test('loads decorative videos without exposing playback controls', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('/', { waitUntil: 'domcontentloaded' });
     const welcomeVideo = page.locator('.welcome__video video');
     await expect(welcomeVideo).toHaveJSProperty('muted', true);
     // Firefox exposes the standard playsinline attribute but not the WebKit
@@ -26,7 +26,7 @@ test.describe('local app smoke', () => {
   });
 
   test('persists age, difficulty, and voice locally', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('/', { waitUntil: 'domcontentloaded' });
     await page.getByRole('button', { name: /מתחילים לשחק/ }).click();
     await completeProfileSetup(page);
     await chooseHomeSettings(page, 6, 'hard');
@@ -42,7 +42,7 @@ test.describe('local app smoke', () => {
   });
 
   test('allows profile setup without a nickname or character preference', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('/', { waitUntil: 'domcontentloaded' });
     await page.getByRole('button', { name: /מתחילים לשחק/ }).click();
     await expect(page.locator('#learner-name')).toHaveValue('');
     await expect(page.getByRole('button', { name: 'בלי העדפה' })).toHaveAttribute('aria-pressed', 'true');
@@ -124,7 +124,7 @@ test.describe('local app smoke', () => {
 
   test('keeps the primary action visible at 320 by 568', async ({ page }) => {
     await page.setViewportSize({ width: 320, height: 568 });
-    await page.goto('/');
+    await page.goto('/', { waitUntil: 'domcontentloaded' });
     const button = page.getByRole('button', { name: /מתחילים לשחק/ });
     await expect(button).toBeVisible();
     const box = await button.boundingBox();

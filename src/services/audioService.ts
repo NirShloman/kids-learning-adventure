@@ -6,6 +6,7 @@ import {
   type RecordedVoiceCue,
   type SfxCue
 } from '../assets/audioManifest';
+import { stopNarrationPlayback } from './narrationService';
 
 export type AudioCue = 'correct' | 'retry' | 'select' | 'match' | 'flip' | 'levelStart' | 'levelComplete';
 
@@ -261,13 +262,12 @@ export function playRecordedVoice(
   _gender: unknown,
   fallback?: () => void
 ): void {
-  if (settings.narrationEnabled) fallback?.();
+  if (!settings.narrationEnabled) return;
+  fallback?.();
 }
 
 export function stopNarration(): void {
-  if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
-    window.speechSynthesis.cancel();
-  }
+  stopNarrationPlayback();
   setDucked(false);
 }
 

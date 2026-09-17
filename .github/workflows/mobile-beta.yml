@@ -23,7 +23,7 @@ jobs:
       - uses: android-actions/setup-android@v3
       - run: sdkmanager "platforms;android-36" "build-tools;36.0.0"
       - run: npm ci
-      - run: npm run build:web && npx cap sync android && npm run mobile:verify
+      - run: npm run build:release && npx cap sync android && npm run mobile:verify
       - name: Install release tooling
         run: gem install bundler && bundle install --jobs 4 --retry 3
       - name: Restore Android signing and Play credentials
@@ -60,7 +60,7 @@ jobs:
           cache: npm
       - run: sudo xcode-select -s /Applications/Xcode_26.6.app
       - run: npm ci
-      - run: npm run build:web && npx cap sync ios && npm run mobile:verify
+      - run: npm run build:release && npx cap sync ios && npm run mobile:verify
       - run: gem install bundler && bundle install --jobs 4 --retry 3
       - name: Install Apple signing identity
         shell: bash

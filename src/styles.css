@@ -3540,6 +3540,7 @@ body {
   .game-mode-cinematic { min-height: 190px; border-radius: 20px; }
 
   .hero-card { align-items: center; gap: 8px; }
+  .hero-card__side { max-width: 100%; flex-wrap: wrap; justify-content: center; }
   .hero-card__content p { display: none; }
   .app-version { display: inline-flex; padding: 3px 6px; font-size: .72rem; }
   .hero-card__side .btn { min-height: 44px; padding-inline: 12px; }

@@ -21,7 +21,7 @@ interface SortingGameProps {
 }
 
 export function SortingGame({ age, difficulty, voiceEnabled, onBack, onFinish }: SortingGameProps) {
-  const { speak, stop, getSpeakProps } = useSpeech(voiceEnabled);
+  const { speak, stop, preload, getSpeakProps } = useSpeech(voiceEnabled);
   const [challenges, setChallenges] = useState<SortingChallenge[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -31,6 +31,16 @@ export function SortingGame({ age, difficulty, voiceEnabled, onBack, onFinish }:
   const [isAnswered, setIsAnswered] = useState(false);
   const currentChallenge = challenges[currentIndex];
   const total = challenges.length;
+
+  useEffect(() => {
+    const upcoming = challenges.slice(currentIndex, currentIndex + 3);
+    preload([
+      gameInstructions.sorting.intro,
+      ...upcoming.map((challenge) => challenge.audioText ?? challenge.prompt),
+      ...upcoming.flatMap((challenge) => challenge.options.map((option) => option.label)),
+      'כל הכבוד!', 'מצוין!', 'כמעט!', 'בואו ננסה שוב!'
+    ]);
+  }, [challenges, currentIndex, preload]);
 
   useEffect(() => {
     let isActive = true;

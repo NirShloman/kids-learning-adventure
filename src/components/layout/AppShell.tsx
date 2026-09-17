@@ -8,11 +8,12 @@ interface AppShellProps {
   subtitle: string;
   rightSlot?: ReactNode;
   compact?: boolean;
+  immersive?: boolean;
 }
 
-export function AppShell({ title, subtitle, rightSlot, compact = false, children }: PropsWithChildren<AppShellProps>) {
+export function AppShell({ title, subtitle, rightSlot, compact = false, immersive = false, children }: PropsWithChildren<AppShellProps>) {
   return (
-    <div className={`app-shell ${compact ? 'app-shell--compact' : ''}`}>
+    <div className={`app-shell ${compact ? 'app-shell--compact' : ''} ${immersive ? 'app-shell--adventure' : ''}`}>
       <header className="hero-card">
         <div className="hero-card__identity">
           <BrandLogo variant="mark" className="hero-card__logo-mark" decorative />

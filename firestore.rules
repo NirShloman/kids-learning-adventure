@@ -1,0 +1,11 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Narration administration is performed only by Admin SDK/ADC, which
+    // bypasses client rules. The child-facing runtime has no Firebase SDK.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
