@@ -3,7 +3,7 @@ on:
   push:
     branches: [main, master]
   pull_request:
-    branches: [main, master]
+    branches: [main, master, codex/experiential-games-redesign]
 
 jobs:
   web:
@@ -40,6 +40,8 @@ jobs:
           java-version: 21
           cache: gradle
       - uses: android-actions/setup-android@v3
+        with:
+          packages: platform-tools
       - run: sdkmanager "platforms;android-36" "build-tools;36.0.0"
       - run: npm ci
       - run: npm run build:release && npx cap sync android

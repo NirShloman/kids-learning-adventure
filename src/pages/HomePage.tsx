@@ -4,6 +4,7 @@ import { GameCard } from '../components/games/GameCard';
 import { AmbientVideo } from '../components/common/AmbientVideo';
 import { Button } from '../components/common/Button';
 import { JourneyMap } from '../components/learning/JourneyMap';
+import { DiscoveryCollection } from '../components/games/detective/DiscoveryCollection';
 
 interface HomePageProps {
   settings: LearnerSettings;
@@ -30,6 +31,7 @@ export function HomePage({ settings, onSettingsChange, onSelectGame, onStartAdap
       </AmbientVideo>
       <div className="shared-entry"><Button variant="secondary" onClick={onStartShared}>משחקים יחד באותו מכשיר</Button></div>
       <JourneyMap onSelectWorld={onSelectGame} />
+      <DiscoveryCollection />
       <section className="game-menu-heading" aria-labelledby="game-menu-title">
         <div>
           <span>8 עולמות למידה</span>

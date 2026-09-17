@@ -1,107 +1,581 @@
-import { mkdirSync, writeFileSync } from 'node:fs';
-import { createHash } from 'node:crypto';
-import { join } from 'node:path';
+import { writeFileSync } from "node:fs";
+import { createHash } from "node:crypto";
+import { pathToFileURL } from "node:url";
+import {
+  CONTENT_VERSION,
+  games,
+  ages,
+  difficulties,
+  policy,
+  alphabet,
+  sounds,
+  shapes,
+  colors,
+  groups,
+  objects,
+  tokens,
+  atom,
+  objectAtom,
+  quantity,
+  shapeAtom,
+  colorAtom,
+} from "./content-facts.mjs";
 
-const OUTPUT_DIR = 'src/content';
-const REVIEW_DIR = 'docs/content-review';
-const CONTENT_VERSION = '2026.08.0';
-const REVIEW_DATE = '2026-08-27';
-const ages = [3, 4, 5, 6];
-const difficulties = ['easy', 'medium', 'hard'];
-const totalPerCell = 40;
-
-const words = [
-  ['א', 'אריה', '🦁'], ['ב', 'בית', '🏠'], ['ג', 'גמל', '🐫'], ['ד', 'דג', '🐟'], ['ה', 'הר', '⛰️'], ['ו', 'ורד', '🌹'], ['ז', 'זברה', '🦓'], ['ח', 'חתול', '🐱'], ['ט', 'טווס', '🦚'], ['י', 'ירח', '🌙'], ['כ', 'כדור', '⚽'], ['ל', 'לימון', '🍋'], ['מ', 'מטרייה', '☂️'], ['נ', 'נר', '🕯️'], ['ס', 'ספר', '📘'], ['ע', 'עץ', '🌳'], ['פ', 'פרח', '🌸'], ['צ', 'צב', '🐢'], ['ק', 'קוף', '🐒'], ['ר', 'רכבת', '🚂'], ['ש', 'שמש', '☀️'], ['ת', 'תפוח', '🍎'], ['ב', 'בננה', '🍌'], ['ג', 'גזר', '🥕'], ['ד', 'דלת', '🚪'], ['ח', 'חיפושית', '🐞'], ['י', 'ילקוט', '🎒'], ['כ', 'כוכב', '⭐'], ['ל', 'לחם', '🍞'], ['מ', 'מכונית', '🚗'], ['נ', 'נעל', '👟'], ['ס', 'סירה', '⛵'], ['ע', 'עיפרון', '✏️'], ['פ', 'פיל', '🐘'], ['צ', 'ציפור', '🐦'], ['ק', 'קשת', '🌈'], ['ר', 'רימון', '🍎'], ['ש', 'שעון', '🕐'], ['ת', 'תות', '🍓'], ['א', 'אבטיח', '🍉']
+const text = (value) => atom("text", value);
+const scene = (...items) => ({
+  kind: items.length === 1 ? "single" : "row",
+  items,
+});
+const rotate = (values, offset) => [
+  ...values.slice(offset % values.length),
+  ...values.slice(0, offset % values.length),
 ];
-const shapes = [
-  { name: 'עיגול', symbol: '●', sides: 0, object: 'כדור' }, { name: 'ריבוע', symbol: '■', sides: 4, object: 'חלון' }, { name: 'משולש', symbol: '▲', sides: 3, object: 'תמרור' }, { name: 'מלבן', symbol: '▭', sides: 4, object: 'דלת' }, { name: 'מעוין', symbol: '◆', sides: 4, object: 'עפיפון' }, { name: 'מחומש', symbol: '⬠', sides: 5, object: 'שלט' }, { name: 'משושה', symbol: '⬡', sides: 6, object: 'חלת דבש' }, { name: 'אליפסה', symbol: '⬭', sides: 0, object: 'ביצה' }, { name: 'לב', symbol: '♥', sides: 0, object: 'לב' }, { name: 'כוכב', symbol: '★', sides: 0, object: 'כוכב בשמיים' }
-];
-const colors = [
-  { name: 'אדום', symbol: '🔴', object: 'תות' }, { name: 'כחול', symbol: '🔵', object: 'כדור' }, { name: 'ירוק', symbol: '🟢', object: 'עלה' }, { name: 'צהוב', symbol: '🟡', object: 'ברווז' }, { name: 'כתום', symbol: '🟠', object: 'גזר' }, { name: 'סגול', symbol: '🟣', object: 'ענב' }, { name: 'ורוד', symbol: '🌸', object: 'פרח' }, { name: 'לבן', symbol: '⚪', object: 'כדור שלג' }, { name: 'שחור', symbol: '⚫', object: 'חתול' }, { name: 'חום', symbol: '🟤', object: 'דוב' }
-];
-const groups = {
-  'פירות': [['תפוח', '🍎'], ['בננה', '🍌'], ['ענבים', '🍇'], ['תות', '🍓'], ['אבטיח', '🍉'], ['אגס', '🍐'], ['אפרסק', '🍑'], ['דובדבנים', '🍒'], ['אננס', '🍍'], ['תפוז', '🍊']],
-  'ירקות': [['גזר', '🥕'], ['עגבנייה', '🍅'], ['מלפפון', '🥒'], ['תירס', '🌽'], ['פלפל', '🫑'], ['ברוקולי', '🥦'], ['בצל', '🧅'], ['תפוח אדמה', '🥔'], ['חציל', '🍆'], ['חסה', '🥬']],
-  'חיות': [['כלב', '🐶'], ['חתול', '🐱'], ['אריה', '🦁'], ['פיל', '🐘'], ['קוף', '🐒'], ['דג', '🐟'], ['ציפור', '🐦'], ['צב', '🐢'], ['ארנב', '🐰'], ['פרפר', '🦋']],
-  'תחבורה': [['מכונית', '🚗'], ['אוטובוס', '🚌'], ['רכבת', '🚂'], ['אופניים', '🚲'], ['מטוס', '✈️'], ['סירה', '⛵'], ['משאית', '🚚'], ['מונית', '🚕'], ['טרקטור', '🚜'], ['קורקינט', '🛴']],
-  'בגדים': [['חולצה', '👕'], ['מכנסיים', '👖'], ['שמלה', '👗'], ['גרב', '🧦'], ['נעל', '👟'], ['כובע', '🧢'], ['מעיל', '🧥'], ['כפפה', '🧤'], ['צעיף', '🧣'], ['סנדל', '🩴']],
-  'כלי לימוד': [['ספר', '📘'], ['עיפרון', '✏️'], ['מחברת', '📓'], ['סרגל', '📏'], ['מספריים', '✂️'], ['ילקוט', '🎒'], ['מחק', '⬜'], ['צבע', '🖍️'], ['דבק', '🧴'], ['לוח', '🟩']],
-  'כלי נגינה': [['גיטרה', '🎸'], ['כינור', '🎻'], ['תוף', '🥁'], ['פסנתר', '🎹'], ['חצוצרה', '🎺'], ['חליל', '🪈'], ['מיקרופון', '🎤'], ['פעמון', '🔔'], ['אקורדיון', '🪗'], ['סקסופון', '🎷']],
-  'צעצועים': [['כדור', '⚽'], ['בובה', '🪆'], ['דובי', '🧸'], ['קוביות', '🧱'], ['עפיפון', '🪁'], ['יו-יו', '🪀'], ['פאזל', '🧩'], ['בלון', '🎈'], ['רובוט', '🤖'], ['רכבת צעצוע', '🚂']],
-  'מזג אוויר': [['שמש', '☀️'], ['ענן', '☁️'], ['גשם', '🌧️'], ['שלג', '❄️'], ['רוח', '💨'], ['ברק', '⚡'], ['קשת', '🌈'], ['ערפל', '🌫️'], ['סערה', '⛈️'], ['טיפה', '💧']],
-  'צמחים': [['פרח', '🌸'], ['עץ', '🌳'], ['עלה', '🍃'], ['קקטוס', '🌵'], ['שתיל', '🌱'], ['חמנייה', '🌻'], ['ורד', '🌹'], ['עשב', '🌿'], ['תלתן', '☘️'], ['דקל', '🌴']],
-  'כלי מטבח': [['כוס', '🥤'], ['צלחת', '🍽️'], ['כף', '🥄'], ['סיר', '🍲'], ['מחבת', '🍳'], ['קומקום', '🫖'], ['מזלג', '🍴'], ['בקבוק', '🍼'], ['קערה', '🥣'], ['ספל', '☕']],
-  'רהיטים': [['כיסא', '🪑'], ['מיטה', '🛏️'], ['ספה', '🛋️'], ['שולחן', '▰'], ['ארון', '🚪'], ['מדף', '📚'], ['מנורה', '💡'], ['שרפרף', '🪑'], ['שידה', '🗄️'], ['ערסל', '🛏️']]
+const hash = (value) =>
+  createHash("sha256").update(JSON.stringify(value)).digest("hex");
+function choices(correct, pool, count, seed) {
+  const others = rotate(
+    pool.filter((value) => value.label !== correct.label),
+    seed,
+  );
+  const distinct = [correct, ...others]
+    .filter(
+      (value, index, all) =>
+        all.findIndex((other) => other.label === value.label) === index,
+    )
+    .slice(0, count);
+  if (distinct.length !== count)
+    throw new Error(`Insufficient domain distractors: ${correct.label}`);
+  const options = rotate(distinct, seed).map((visualToken, i) => ({
+    id: `option-${i + 1}`,
+    label: visualToken.label,
+    visualToken,
+  }));
+  return {
+    options,
+    correctOptionId: options.find((option) => option.label === correct.label)
+      .id,
+  };
+}
+const skills = {
+  recognizeLetter: [
+    "hebrew.letter-recognition",
+    "foundation.visual-discrimination",
+    "foundation.auditory-discrimination",
+  ],
+  letter: [
+    "hebrew.letter-recognition",
+    "hebrew.letter-sound",
+    "hebrew.sound-position",
+    "foundation.auditory-discrimination",
+  ],
+  count: ["math.quantity-sense", "math.numeral-recognition"],
+  next: ["math.numeral-recognition", "cognition.sequence"],
+  add: ["math.quantity-sense", "cognition.problem-solving"],
+  compare: ["math.quantity-sense"],
+  shape: ["concept.shape", "foundation.visual-discrimination"],
+  sides: ["concept.shape", "cognition.problem-solving"],
+  color: ["concept.color", "foundation.visual-discrimination"],
+  pattern: ["cognition.sequence"],
+  categories: ["cognition.sorting"],
 };
-const entries = Object.entries(groups).flatMap(([category, items]) => items.map(([name, emoji]) => ({ category, name, emoji })));
-const categoryNames = Object.keys(groups);
-const skillIds = {
-  'letter-recognition': ['hebrew.letter-recognition', 'foundation.visual-discrimination'], 'initial-sound': ['hebrew.letter-recognition', 'hebrew.letter-sound', 'hebrew.sound-position', 'foundation.auditory-discrimination'], 'same-sound': ['hebrew.letter-recognition', 'foundation.auditory-discrimination'],
-  'number-recognition': ['math.numeral-recognition'], counting: ['math.quantity-sense'], comparison: ['math.quantity-sense'], 'number-sequence': ['math.numeral-recognition', 'cognition.sequence'], addition: ['math.quantity-sense', 'cognition.problem-solving'],
-  'shape-recognition': ['concept.shape', 'foundation.visual-discrimination'], 'shape-properties': ['concept.shape'],
-  'color-recognition': ['concept.color', 'foundation.visual-discrimination'], 'color-context': ['concept.color'], 'color-sorting': ['concept.color', 'cognition.sorting'],
-  'same-object': ['cognition.matching', 'foundation.visual-discrimination'], 'picture-word': ['cognition.matching', 'hebrew.first-words'], 'object-category': ['cognition.matching', 'cognition.sorting'], 'object-use': ['cognition.matching', 'cognition.problem-solving'],
-  'visual-memory': ['cognition.memory', 'foundation.visual-discrimination'], 'symbol-memory': ['cognition.memory'], 'semantic-memory': ['cognition.memory', 'cognition.matching'],
-  'ab-pattern': ['cognition.sequence'], 'aab-pattern': ['cognition.sequence'], 'abc-pattern': ['cognition.sequence'], 'number-pattern': ['cognition.sequence', 'math.numeral-recognition'],
-  categories: ['cognition.sorting'], 'feature-sort': ['cognition.sorting', 'foundation.visual-discrimination'], 'rule-switch': ['cognition.sorting', 'cognition.problem-solving', 'readiness.grade-one']
-};
-const minimumAge = { 'hebrew.letter-sound': 4, 'hebrew.sound-position': 4, 'hebrew.first-words': 4, 'cognition.problem-solving': 4, 'readiness.grade-one': 5 };
 
-function optionSet(correct, distractors, seed, emojis) { const labels = []; for (const label of [String(correct), ...distractors.map(String), 'בית', 'כדור', 'חתול', 'עץ', 'אדום', 'כחול', '1', '2', '3']) if (!labels.includes(label)) labels.push(label); const chosen = labels.slice(0, 3); const rotated = [...chosen.slice(seed % 3), ...chosen.slice(0, seed % 3)]; const options = rotated.map((label, index) => ({ id: `option-${index + 1}`, label, ...(emojis?.get(label) ? { emoji: emojis.get(label) } : {}) })); return { options, correctOptionId: options.find((item) => item.label === String(correct)).id }; }
-function numberOptions(correct, max, seed) { const first = (correct + 1 + seed) % (max + 1); const second = (correct + 2 + seed * 2) % (max + 1); return optionSet(correct, [first === correct ? (first + 1) % (max + 1) : first, second === correct || second === first ? (second + 3) % (max + 1) : second], seed); }
-function base(game, age, difficulty, index, family, conceptKey, variantKey, visualRole, skill) { return { id: `${game}-a${age}-${difficulty}-${String(index + 1).padStart(3, '0')}`, ages: [age], difficulty, skill, taskFamily: family, conceptKey, variantKey: `a${age}-${difficulty}-${variantKey}`, visualRole, skillIds: skillIds[skill].filter((id) => age >= (minimumAge[id] ?? 3)), evidenceForm: game === 'matching' ? 'matching' : game === 'memory' ? 'memory' : game === 'patterns' ? 'sequence' : game === 'sorting' ? 'sorting' : skill.includes('sound') ? 'listening-choice' : 'visual-choice' }; }
-function eachCell(game, create) { const result = []; for (const age of ages) for (const difficulty of difficulties) for (let index = 0; index < totalPerCell; index += 1) result.push(create(age, difficulty, index)); return result; }
-function rangeFor(age, difficulty) { return age === 3 ? 5 : age === 4 ? 10 : age === 5 ? (difficulty === 'hard' ? 15 : 12) : 20; }
+function makeChoice(game, age, difficulty, seed) {
+  const p = policy(age, difficulty),
+    tier = difficulties.indexOf(difficulty),
+    count = p.choices;
+  let prompt,
+    hint,
+    explanation,
+    stimulus,
+    correct,
+    pool,
+    rule,
+    operands,
+    skill,
+    family;
+  const answer = (value, candidates) => {
+    correct = value;
+    pool = candidates;
+  };
+  if (game === "letters") {
+    if (age === 3 && difficulty === 'hard') {
+      const letter=alphabet[seed%alphabet.length], other=alphabet[(seed+1+Math.floor(seed/alphabet.length))%alphabet.length];
+      if(letter===other)return null;
+      prompt='איזו אות מופיעה פעמיים?';hint='חפשו שני סימנים עם אותם קווים.';
+      explanation=`האות ${letter} מופיעה פעמיים.`;
+      stimulus=scene(...rotate([text(letter),text(letter),text(other)],seed));
+      rule='repeated-letter';operands=stimulus.items.map(item=>item.value);skill='recognizeLetter';family=rule;
+      answer(text(letter),alphabet.map(text));
+    } else if (!p.sounds || (difficulty !== "hard" && seed % 3 === 0)) {
+      const letter = alphabet[seed % alphabet.length];
+      prompt = `מצאו את האות ${letter}`;
+      hint = "הביטו בקווים של האות והקשיבו לשמה.";
+      explanation = `זאת האות ${letter}.`;
+      stimulus =
+        difficulty === "easy"
+          ? scene(text(letter))
+          : scene(atom("emoji", "🔎", "חפשו את האות"));
+      answer(text(letter), alphabet.map(text));
+      rule = "letter-recognition";
+      operands = [letter];
+      skill = "recognizeLetter";
+      family = rule;
+    } else {
+      const entry = sounds[Math.floor(seed / 3) % sounds.length],
+        word = entry[2 + (Math.floor(seed / (sounds.length * 3)) % 2)],
+        other = entry[word === entry[2] ? 3 : 2];
+      if (seed % 3 === 1 || (difficulty === "hard" && seed % 3 === 0)) {
+        prompt = `באיזו אות מתחילה המילה ${word[0]}?`;
+        hint = `הקשיבו לתחילת המילה: ${word[0]}.`;
+        explanation = `המילה ${word[0]} מתחילה באות ${entry[0]}.`;
+        answer(text(entry[0]), alphabet.map(text));
+        rule = "initial-letter";
+      } else {
+        prompt = `איזו מילה מתחילה באותו צליל כמו ${word[0]}?`;
+        hint = `אמרו לאט: ${word[0]}. הקשיבו לצליל הראשון.`;
+        explanation = `${word[0]} וגם ${other[0]} מתחילות בצליל ${entry[1]}.`;
+        answer(
+          atom("emoji", other[1], other[0]),
+          sounds
+            .filter((item) => item[0] !== entry[0])
+            .map((item) => atom("emoji", item[2][1], item[2][0])),
+        );
+        rule = "same-sound";
+      }
+      operands = [word[0]];
+      stimulus = scene(atom("emoji", word[1], word[0]));
+      family = rule;
+      skill = "letter";
+    }
+  } else if (game === "numbers") {
+    const n = 1 + Math.floor((Math.floor(seed / 4) % 10) * (p.max - 1) / 9),
+      token = tokens[Math.floor(seed / (p.max * 4)) % tokens.length];
+    const modes = p.addition
+      ? ["count", "compare", "next", "add"]
+      : difficulty === "easy"
+        ? ["count", "count", "compare", "count"]
+        : ["count", "compare", "next", "count"];
+    rule = modes[seed % modes.length];
+    family = rule;
+    skill = rule;
+    const numericPool = Array.from({ length: p.max }, (_, i) => text(i + 1));
+    if (rule === "count") {
+      prompt = "כמה פריטים רואים?";
+      hint = "נוגעים בכל פריט פעם אחת וסופרים לאט.";
+      explanation = n === 1 ? 'ספרנו פריט אחד.' : `ספרנו ${n} פריטים.`;
+      stimulus = scene(quantity(n, token));
+      operands = [n];
+      answer(text(n), numericPool);
+    } else if (rule === "compare") {
+      const m = 1 + ((n + Math.floor(seed / (p.max * 4))) % p.max);
+      if (m === n) return null;
+      const fewer=difficulty==='hard'&&Math.floor(seed/4)%2===1;
+      if(fewer){rule='compare-less';family=rule;}
+      prompt = fewer ? 'באיזו קבוצה יש פחות פריטים?' : "באיזו קבוצה יש יותר פריטים?";
+      hint = "ספרו כל קבוצה, או התאימו פריט מול פריט.";
+      const first = quantity(n, token),
+        second = quantity(
+          m,
+          tokens[(tokens.indexOf(token) + 1) % tokens.length],
+        );
+      stimulus = { kind: "groups", items: [first, second] };
+      operands = [n, m];
+      const options = [
+        atom("quantity", first.value, "הקבוצה הראשונה", { count: n }),
+        atom("quantity", second.value, "הקבוצה השנייה", { count: m }),
+      ];
+      const firstCorrect=fewer?n<m:n>m;
+      answer(options[firstCorrect?0:1], options);
+      explanation = `בקבוצה ${firstCorrect ? "הראשונה" : "השנייה"} יש ${fewer?Math.min(n,m):Math.max(n,m)} פריטים. זה ${fewer?'פחות':'יותר'} מ־${fewer?Math.max(n,m):Math.min(n,m)}.`;
+      if (fewer && Math.min(n, m) === 1) explanation = `בקבוצה ${firstCorrect ? 'הראשונה' : 'השנייה'} פריט אחד. זו הקבוצה הקטנה יותר.`;
+    } else if (rule === "next") {
+      const start = Math.min(n, p.max - 1);
+      prompt = `איזה מספר בא אחרי ${start}?`;
+      hint = `מתחילים ב־${start} ומתקדמים צעד אחד בספירה.`;
+      explanation = `אחרי ${start} בא ${start + 1}.`;
+      stimulus = { kind: "sequence", items: [text(start), text("?")] };
+      operands = [start];
+      answer(text(start + 1), numericPool);
+    } else {
+      const a = Math.min(n, p.max - 1),
+        b =
+          1 + (Math.floor(seed / 4) % Math.min(tier + 1, p.max - a));
+      prompt = "כמה פריטים יש יחד?";
+      hint = "סופרים את הקבוצה הראשונה וממשיכים לספור בקבוצה השנייה.";
+      explanation = `${a} ועוד ${b} הם ${a + b}.`;
+      stimulus = {
+        kind: "addition",
+        items: [quantity(a, token), quantity(b, token)],
+      };
+      operands = [a, b];
+      answer(text(a + b), numericPool);
+    }
+  } else if (game === "shapes") {
+    const available = shapes.slice(0, age <= 3 ? 4 : age === 4 ? 6 : 8);
+    const shape = available[seed % available.length],
+      offset = Math.floor(seed / available.length),
+      other =
+        available[
+          (seed + 1 + (offset % (available.length - 1))) % available.length
+        ];
+    if (p.properties && seed % 3 === 0) {
+      rule = "sides";
+      skill = "sides";
+      prompt = "כמה צלעות ישרות יש לצורה?";
+      hint = "עברו על קו המתאר וספרו רק את הקטעים הישרים.";
+      explanation = shape.sides
+        ? `ל${shape.name} יש ${shape.sides} צלעות ישרות.`
+        : `ל${shape.name} יש קו מעוגל, בלי צלעות ישרות.`;
+      stimulus = scene(shapeAtom(shape));
+      answer(text(shape.sides), [0, 3, 4, 5, 6, 7].map(text));
+      operands = [shape.id];
+    } else if (difficulty === 'hard' || difficulty !== "easy" && offset % 2) {
+      rule = "odd-shape";
+      skill = "shape";
+      prompt = "איזו צורה שונה מהאחרות?";
+      hint = "חפשו את הצורה שמופיעה רק פעם אחת.";
+      stimulus = scene(
+        ...rotate(
+          [...Array.from({length:difficulty==='hard'?4:2},()=>shapeAtom(shape)), shapeAtom(other)],
+          offset,
+        ),
+      );
+      answer(
+        shapeAtom(other),
+        available.map((s) => shapeAtom(s)),
+      );
+      operands = stimulus.items.map((item) => item.value);
+      explanation = `הצורה מסוג ${other.name} מופיעה פעם אחת. השאר מסוג ${shape.name}.`;
+    } else {
+      rule = offset % 3 === 2 ? "find-shape" : "shape";
+      skill = "shape";
+      prompt =
+        rule === "shape"
+          ? "איזו צורה מופיעה כאן?"
+          : `מצאו את הצורה ${shape.name}`;
+      hint = "הביטו בקו המתאר: האם הוא מעוגל או בנוי מצלעות?";
+      stimulus =
+        rule === "shape"
+          ? scene(shapeAtom(shape, (offset % 4) * 90))
+          : scene(atom("emoji", "🔎", "מחפשים צורה"));
+      answer(
+        shapeAtom(shape),
+        available.map((s) => shapeAtom(s)),
+      );
+      operands = [shape.id];
+      explanation = `זאת צורת ${shape.name}.`;
+    }
+    family = rule;
+  } else if (game === "colors") {
+    const available = colors.slice(0, age === 3 ? 6 : 10),
+      color = available[seed % available.length],
+      offset = Math.floor(seed / available.length),
+      other =
+        available[
+          (seed + 1 + (offset % (available.length - 1))) % available.length
+        ];
+    skill = "color";
+    if (difficulty === 'hard' || difficulty !== "easy" && offset % 2) {
+      rule = "odd-color";
+      prompt = "איזה צבע שונה מהאחרים?";
+      hint = "חפשו את הדוגמית שצבעה מופיע רק פעם אחת.";
+      stimulus = scene(
+        ...rotate(
+          [...Array.from({length:difficulty==='hard'?4:2},()=>colorAtom(color)), colorAtom(other)],
+          offset,
+        ),
+      );
+      operands = stimulus.items.map((item) => item.value);
+      answer(colorAtom(other), available.map(colorAtom));
+      explanation = `הצבע ${other.name} מופיע פעם אחת. שאר הדוגמיות בצבע ${color.name}.`;
+    } else {
+      rule = offset % 3 === 2 ? "find-color" : "color";
+      prompt =
+        rule === "color" ? "איזה צבע מופיע כאן?" : `מצאו את הצבע ${color.name}`;
+      hint = "הקשיבו לשם הצבע והביטו בדוגמיות.";
+      stimulus =
+        rule === "color"
+          ? scene(colorAtom(color))
+          : scene(atom("emoji", "🎨", "בוחרים צבע"));
+      operands = [color.id];
+      answer(colorAtom(color), available.map(colorAtom));
+      explanation = `זהו הצבע ${color.name}.`;
+    }
+    family = rule;
+  } else if (game === "patterns") {
+    const a = objects[seed % objects.length],
+      b =
+        objects[
+          (seed + 1 + Math.floor(seed / objects.length)) % objects.length
+        ],
+      c = objects[(seed + 9) % objects.length];
+    if (new Set([a.name, b.name, c.name]).size < 3) return null;
+    const motif =
+      age === 3 || difficulty === "easy"
+        ? [a, b]
+        : difficulty === "medium"
+          ? [a, a, b]
+          : [a, b, c];
+    rule = "repeat";
+    family =
+      motif.length === 2
+        ? "ab-pattern"
+        : difficulty === "medium"
+          ? "aab-pattern"
+          : "abc-pattern";
+    skill = "pattern";
+    const full = [...motif, ...motif, ...motif].map(objectAtom),
+      missing = full.length - (difficulty === "hard" ? 3 : 1);
+    prompt = "מה משלים את הרצף?";
+    hint = `מתחילים בצד החץ ומחפשים את הקבוצה שחוזרת: ${motif.map((x) => x.name).join(", ")}.`;
+    explanation = `הקבוצה ${motif.map((x) => x.name).join(", ")} חוזרת באותו סדר.`;
+    stimulus = {
+      kind: "sequence",
+      items: full.map((v, i) => (i === missing ? text("?") : v)),
+    };
+    operands = [...motif.map((x) => x.name), missing];
+    answer(full[missing], [objectAtom(a), objectAtom(b), objectAtom(c)]);
+    if (age >= 5 && difficulty !== "easy" && seed % 3 === 0) {
+      const step = difficulty === "hard" ? 2 : 1,
+        start = 1 + (seed % Math.max(1, p.max - step * 4)),
+        values = Array.from({ length: 5 }, (_, i) => start + i * step);
+      rule = "number-pattern";
+      family = rule;
+      operands = [start, step, 2];
+      stimulus = {
+        kind: "sequence",
+        items: values.map((v, i) => text(i === 2 ? "?" : v)),
+      };
+      hint = `מתקדמים בכל פעם ב־${step}.`;
+      explanation = `מתקדמים ב־${step}: ${values.join(", ")}.`;
+      answer(
+        text(values[2]),
+        Array.from({ length: p.max }, (_, i) => text(i + 1)),
+      );
+    }
+  } else {
+    const object = objects[seed % objects.length],
+      names = Object.keys(groups);
+    prompt = `ממיינים לפי סוג. לאיזו קבוצה שייך ${object.name}?`;
+    hint = "חשבו מה הפריט: אוכל, חיה, בגד או חפץ שמשתמשים בו.";
+    explanation = `${object.name} שייך לקבוצת ${object.category}.`;
+    stimulus = scene(objectAtom(object));
+    rule = "category";
+    operands = [object.name];
+    if(difficulty!=='easy') {
+      const categoryObjects=objects.filter(item=>item.category===object.category), start=categoryObjects.findIndex(item=>item.name===object.name);
+      const examples=Array.from({length:tier+1},(_,index)=>categoryObjects[(start+index)%categoryObjects.length]);
+      stimulus=scene(...examples.map(objectAtom));operands=examples.map(item=>item.name);
+      prompt='ממיינים לפי סוג. לאיזו קבוצה שייכים הפריטים?';
+      hint='הביטו בכל הפריטים. מה משותף לסוג שלהם?';
+      explanation=`כל הפריטים שייכים לקבוצת ${object.category}.`;
+    }
+    skill = "categories";
+    family = "categories";
+    const categoryToken = (name) => atom("emoji", groups[name][0][1], name);
+    answer(categoryToken(object.category), names.map(categoryToken));
+    if (difficulty === "hard" && age >= 4 && seed % 2 === 1) {
+      const color = colors[Math.floor(seed / 2) % colors.length];
+      rule = "sort-color";
+      family = "feature-sort";
+      skill = "categories";
+      operands = [color.id];
+      prompt = "הכלל עכשיו: ממיינים לפי צבע. לאיזו קבוצה הדוגמית שייכת?";
+      hint = "הקשיבו לכלל: מחפשים את אותו הצבע, בלי קשר לשם הפריט.";
+      explanation = `לפי כלל הצבע, הדוגמית שייכת לקבוצת ${color.name}.`;
+      stimulus = scene(colorAtom(color));
+      answer(colorAtom(color), colors.map(colorAtom));
+    }
+  }
+  const skillIds = [...skills[skill]];
+  if (game === "patterns" && rule === "number-pattern")
+    skillIds.push(
+      "math.numeral-recognition",
+      "cognition.problem-solving",
+      "readiness.grade-one",
+    );
+  if (game === "patterns" && age >= 4 && difficulty !== "easy")
+    skillIds.push("cognition.problem-solving");
+  const result = {
+    taskFamily: family,
+    skill: family,
+    skillIds: [...new Set(skillIds)],
+    prompt,
+    audioText: prompt,
+    hint,
+    explanation,
+    scene: stimulus,
+    logic: { rule, operands },
+    visualRole: "stimulus",
+    evidenceForm:
+      game === "letters"
+        ? "listening-choice"
+        : game === "patterns"
+          ? "sequence"
+          : game === "sorting"
+            ? "sorting"
+            : "visual-choice",
+    ...choices(
+      correct,
+      pool,
+      rule.startsWith('compare') ? 2 : count,
+      seed + Math.floor(seed / 7),
+    ),
+  };
+  if (["letters", "numbers", "shapes", "colors"].includes(game))
+    result.category = game;
+  if (game === "patterns")
+    result.sequence = stimulus.items.map((item) => item.value);
+  if (game === "sorting") {
+    result.item = stimulus.items[0].value;
+    result.itemName =
+      rule === "sort-color" ? stimulus.items[0].label : operands[0];
+  }
+  return result;
+}
 
-function createLetters() { return eachCell('letters', (age, difficulty, index) => { const [letter, word, emoji] = words[(index + age * 7 + difficulties.indexOf(difficulty) * 11) % words.length]; const next = words[(index + 9) % words.length]; const third = words[(index + 17) % words.length]; const mode = difficulty === 'easy' ? index % 4 : (index + 1) % 3 + 1;
-  if (mode === 0) return { ...base('letters', age, difficulty, index, 'letter-direct', `letter-${letter}`, `distractors-${next[0]}-${third[0]}-${age}`, 'direct-match', 'letter-recognition'), category: 'letters', prompt: `מצאו את האות ${letter}`, visual: letter, audioText: `מצאו את האות ${letter}`, ...optionSet(letter, [next[0], third[0]], index) };
-  if (mode === 1) return { ...base('letters', age, difficulty, index, 'letter-initial', `initial-${word}`, `letters-${next[0]}-${third[0]}-${index}`, 'stimulus', 'initial-sound'), category: 'letters', prompt: `באיזו אות מתחילה המילה ${word}?`, visual: emoji, audioText: `באיזו אות מתחילה המילה ${word}?`, ...optionSet(letter, [next[0], third[0]], index) };
-  if (mode === 2) return { ...base('letters', age, difficulty, index, 'word-initial', `letter-${letter}`, `words-${next[1]}-${third[1]}-${index}`, 'stimulus', 'initial-sound'), category: 'letters', prompt: `איזו מילה מתחילה בצליל ${letter}?`, visual: `🔊 ${letter}`, audioText: `איזו מילה מתחילה בצליל ${letter}?`, ...optionSet(word, [next[1], third[1]], index, new Map([[word, emoji], [next[1], next[2]], [third[1], third[2]]])) };
-  return { ...base('letters', age, difficulty, index, 'same-initial', `sound-${letter}`, `pair-${word}-${next[1]}-${index}`, 'context', 'same-sound'), category: 'letters', prompt: `איזו מילה מתחילה כמו ${word}?`, visual: `🔊 ${letter}`, audioText: `איזו מילה מתחילה כמו ${word}?`, ...optionSet(word, [next[1], third[1]], index, new Map([[word, emoji], [next[1], next[2]], [third[1], third[2]]])) };
-}); }
-function createNumbers() { const tokens = ['🍎', '⭐', '⚽', '🌸', '🐟', '🟦']; return eachCell('numbers', (age, difficulty, index) => { const max = rangeFor(age, difficulty); const value = 1 + ((index * 3 + age + difficulties.indexOf(difficulty)) % Math.max(3, max - 1)); const mode = index % 5; const token = tokens[index % tokens.length];
-  if (difficulty === 'easy' && mode === 0) return { ...base('numbers', age, difficulty, index, 'numeral-direct', `number-${value}`, `choices-${index}`, 'direct-match', 'number-recognition'), category: 'numbers', prompt: `מצאו את המספר ${value}`, visual: String(value), audioText: `מצאו את המספר ${value}`, ...numberOptions(value, max + 2, index) };
-  if (mode === 1) return { ...base('numbers', age, difficulty, index, 'counting', `quantity-${value}`, `token-${token}-${index}`, 'stimulus', 'counting'), category: 'numbers', prompt: 'כמה פריטים יש כאן?', visual: token.repeat(value), audioText: 'כמה פריטים יש כאן?', ...numberOptions(value, max + 2, index) };
-  if (mode === 2) { const other = Math.max(1, value - 1); return { ...base('numbers', age, difficulty, index, 'comparison', `compare-${value}-${other}`, `token-${token}-${index}`, 'stimulus', 'comparison'), category: 'numbers', prompt: 'באיזו קבוצה יש יותר?', visual: `${token.repeat(value)} | ${'⭐'.repeat(other)}`, audioText: 'באיזו קבוצה יש יותר?', ...optionSet('יותר', ['פחות', 'אותו מספר'], index) }; }
-  if (mode === 3) { const correct = value + 1; return { ...base('numbers', age, difficulty, index, 'next-number', `next-${value}`, `options-${index}`, 'stimulus', 'number-sequence'), category: 'numbers', prompt: `איזה מספר בא אחרי ${value}?`, visual: `${value} , ?`, audioText: `איזה מספר בא אחרי ${value}?`, ...numberOptions(correct, max + 3, index) }; }
-  const addend = age <= 3 ? 1 : 1 + (index % (difficulty === 'hard' ? 4 : 2)); const correct = value + addend; return { ...base('numbers', age, difficulty, index, 'concrete-addition', `add-${value}-${addend}`, `token-${token}-${index}`, 'stimulus', 'addition'), category: 'numbers', prompt: `כמה הם ${value} ועוד ${addend}?`, visual: `${token.repeat(value)} + ${'⭐'.repeat(addend)}`, audioText: `כמה הם ${value} ועוד ${addend}?`, ...numberOptions(correct, Math.max(max + 3, correct + 2), index) };
-}); }
-function createShapes() { return eachCell('shapes', (age, difficulty, index) => { const shape = shapes[(index + age + difficulties.indexOf(difficulty) * 3) % shapes.length]; const other = shapes[(index + 3) % shapes.length]; const third = shapes[(index + 6) % shapes.length]; const mode = index % 4;
-  if (difficulty === 'easy' && mode === 0) return { ...base('shapes', age, difficulty, index, 'shape-direct', `shape-${shape.name}`, `distractors-${other.name}-${third.name}-${age}-${index}`, 'direct-match', 'shape-recognition'), category: 'shapes', prompt: 'איזו צורה מופיעה כאן?', visual: shape.symbol, audioText: 'איזו צורה מופיעה כאן?', ...optionSet(shape.name, [other.name, third.name], index, new Map([[shape.name, shape.symbol], [other.name, other.symbol], [third.name, third.symbol]])) };
-  if (mode === 1) return { ...base('shapes', age, difficulty, index, 'shape-object', `object-${shape.object}`, `names-${other.name}-${third.name}-${index}`, 'context', 'shape-recognition'), category: 'shapes', prompt: `איזו צורה מתאימה ל${shape.object}?`, visual: `🧩 ${shape.object}`, audioText: `איזו צורה מתאימה ל${shape.object}?`, ...optionSet(shape.name, [other.name, third.name], index) };
-  if (mode === 2) { const correct = shape.sides === 0 ? 'בלי צלעות' : `${shape.sides} צלעות`; return { ...base('shapes', age, difficulty, index, 'shape-property', `sides-${shape.name}`, `numbers-${index}`, 'stimulus', 'shape-properties'), category: 'shapes', prompt: `כמה צלעות יש ל${shape.name}?`, visual: shape.symbol, audioText: `כמה צלעות יש ל${shape.name}?`, ...optionSet(correct, shape.sides === 0 ? ['3 צלעות', '4 צלעות'] : [`${Math.max(1, shape.sides - 1)} צלעות`, `${shape.sides + 1} צלעות`], index) }; }
-  return { ...base('shapes', age, difficulty, index, 'shape-discrimination', `different-${shape.name}`, `set-${other.name}-${third.name}-${index}`, 'stimulus', 'shape-recognition'), category: 'shapes', prompt: 'איזו צורה שונה מהאחרות?', visual: `${shape.symbol} ${shape.symbol} ${other.symbol}`, audioText: 'איזו צורה שונה מהאחרות?', ...optionSet(other.name, [shape.name, third.name], index) };
-}); }
-function createColors() { return eachCell('colors', (age, difficulty, index) => { const color = colors[(index + age * 2 + difficulties.indexOf(difficulty) * 3) % colors.length]; const other = colors[(index + 3) % colors.length]; const third = colors[(index + 6) % colors.length]; const mode = index % 4;
-  if (difficulty === 'easy' && mode === 0) return { ...base('colors', age, difficulty, index, 'color-direct', `color-${color.name}`, `distractors-${other.name}-${third.name}-${age}-${index}`, 'direct-match', 'color-recognition'), category: 'colors', prompt: 'איזה צבע מופיע כאן?', visual: color.symbol, audioText: 'איזה צבע מופיע כאן?', ...optionSet(color.name, [other.name, third.name], index, new Map([[color.name, color.symbol], [other.name, other.symbol], [third.name, third.symbol]])) };
-  if (mode === 1) return { ...base('colors', age, difficulty, index, 'color-object', `object-${color.object}`, `names-${other.name}-${third.name}-${index}`, 'context', 'color-context'), category: 'colors', prompt: `בחרו את הצבע של ${color.object} שבתמונה`, visual: `${color.symbol} ${color.object}`, audioText: `בחרו את הצבע של ${color.object} שבתמונה`, ...optionSet(color.name, [other.name, third.name], index) };
-  if (mode === 2) return { ...base('colors', age, difficulty, index, 'color-odd', `odd-${color.name}`, `set-${other.name}-${third.name}-${index}`, 'stimulus', 'color-recognition'), category: 'colors', prompt: 'איזה צבע שונה מהשניים האחרים?', visual: `${color.symbol} ${other.symbol} ${other.symbol}`, audioText: 'איזה צבע שונה מהשניים האחרים?', ...optionSet(color.name, [other.name, third.name], index) };
-  return { ...base('colors', age, difficulty, index, 'color-match', `match-${color.name}`, `choice-${index}`, 'stimulus', 'color-sorting'), category: 'colors', prompt: 'איזו דוגמית מתאימה לצבע שמופיע בתחילת השורה?', visual: `${color.symbol} → ?`, audioText: 'איזו דוגמית מתאימה לצבע שמופיע בתחילת השורה?', ...optionSet(color.name, [other.name, third.name], index) };
-}); }
-function createMatching() { return eachCell('matching', (age, difficulty, index) => { const entry = entries[(index + age * 31 + difficulties.indexOf(difficulty) * 17) % entries.length]; const mode = index % 4; const use = entry.category === 'כלי נגינה' ? 'מנגנים בו' : entry.category === 'תחבורה' ? 'נוסעים בו' : entry.category === 'בגדים' ? 'לובשים אותו' : entry.category === 'כלי מטבח' ? 'משתמשים בו במטבח' : 'מוצאים אותו בקבוצה המתאימה';
-  if (mode === 0) return { ...base('matching', age, difficulty, index, 'same-object', `same-${entry.name}`, `emoji-word-${index}`, 'none', 'same-object'), left: entry.emoji, right: entry.name };
-  if (mode === 1) return { ...base('matching', age, difficulty, index, 'picture-word', `word-${entry.name}`, `read-${index}`, 'none', 'picture-word'), left: `${entry.emoji} ${entry.name}`, right: `המילה ${entry.name}` };
-  if (mode === 2) return { ...base('matching', age, difficulty, index, 'object-category', `category-${entry.name}`, `category-${entry.category}-${index}`, 'none', 'object-category'), left: `${entry.emoji} ${entry.name}`, right: `קבוצת ${entry.category}` };
-  return { ...base('matching', age, difficulty, index, 'object-use', `use-${entry.name}`, `use-${index}`, 'none', 'object-use'), left: `${entry.emoji} ${entry.name}`, right: use };
-}); }
-function createMemory() { return eachCell('memory', (age, difficulty, index) => { const entry = entries[(index + age * 29 + difficulties.indexOf(difficulty) * 13) % entries.length]; const word = words[(index + age) % words.length]; const mode = index % 4;
-  if (mode === 0) return { ...base('memory', age, difficulty, index, 'visual-memory', `object-${entry.name}`, `same-${index}`, 'none', 'visual-memory'), leftValue: `${entry.emoji} ${entry.name}`, rightValue: `${entry.emoji} ${entry.name}` };
-  if (mode === 1) return { ...base('memory', age, difficulty, index, 'symbol-memory', `number-${index + 1}`, `quantity-${index}`, 'none', 'symbol-memory'), leftValue: String((index % 20) + 1), rightValue: '⭐'.repeat((index % 5) + 1) };
-  if (mode === 2) return { ...base('memory', age, difficulty, index, 'semantic-memory', `letter-${word[1]}`, `word-${index}`, 'none', 'semantic-memory'), leftValue: word[0], rightValue: `${word[2]} ${word[1]}` };
-  return { ...base('memory', age, difficulty, index, 'semantic-memory', `category-${entry.name}`, `category-${index}`, 'none', 'semantic-memory'), leftValue: `${entry.emoji} ${entry.name}`, rightValue: entry.category };
-}); }
-function createPatterns() { const symbols = ['🔴', '🔵', '🟡', '🟢', '⭐', '🌙', '🍎', '🍌', '🟦', '🔺', '🐶', '🐱']; return eachCell('patterns', (age, difficulty, index) => { const a = symbols[(index + age) % symbols.length], b = symbols[(index + 4) % symbols.length], c = symbols[(index + 8) % symbols.length]; const mode = index % 4; let sequence; let correct; let skill;
-  if (mode === 0) { sequence = [a, b, a, b, '?']; correct = a; skill = 'ab-pattern'; } else if (mode === 1) { sequence = [a, a, b, a, a, '?']; correct = b; skill = 'aab-pattern'; } else if (mode === 2) { sequence = [a, b, c, a, '?', c]; correct = b; skill = 'abc-pattern'; } else { const start = 1 + ((index + age) % 6); const step = difficulty === 'hard' ? 3 : difficulty === 'medium' ? 2 : 1; sequence = [String(start), String(start + step), '?', String(start + step * 3), String(start + step * 4)]; correct = String(start + step * 2); skill = 'number-pattern'; }
-  return { ...base('patterns', age, difficulty, index, skill, `pattern-${sequence.join('-')}`, `choices-${a}-${b}-${c}-${index}`, 'none', skill), prompt: 'מה משלים את הרצף?', sequence, audioText: 'מה משלים את הרצף?', ...optionSet(correct, [a === correct ? b : a, c === correct ? b : c], index) };
-}); }
-function createSorting() { return eachCell('sorting', (age, difficulty, index) => { const entry = entries[(index + age * 23 + difficulties.indexOf(difficulty) * 19) % entries.length]; const categoryIndex = categoryNames.indexOf(entry.category); const distractors = [categoryNames[(categoryIndex + 3 + index) % categoryNames.length], categoryNames[(categoryIndex + 7 + index) % categoryNames.length]]; const mode = index % 4; const family = mode === 0 ? 'categories' : mode === 1 ? 'feature-sort' : mode === 2 ? 'rule-switch' : 'categories'; const prompt = mode === 2 ? 'הכלל היום הוא: ממיינים לפי סוג. לאיזו קבוצה נשים את הפריט?' : 'לאיזו קבוצה נשים את הפריט?'; const emojiMap = new Map([[entry.category, entries.find((item) => item.category === entry.category)?.emoji], [distractors[0], entries.find((item) => item.category === distractors[0])?.emoji], [distractors[1], entries.find((item) => item.category === distractors[1])?.emoji]]);
-  return { ...base('sorting', age, difficulty, index, family, `${entry.category}-${entry.name}`, `distractors-${distractors.join('-')}-${mode}`, 'context', family), prompt, item: entry.emoji, itemName: entry.name, audioText: prompt, ...optionSet(entry.category, distractors, index, emojiMap) };
-}); }
+function makePair(game, age, difficulty, seed) {
+  const object = objects[seed % objects.length];
+  let leftVisual = objectAtom(object),
+    rightVisual = objectAtom(object),
+    rule = "same-object",
+    operands = [object.name],
+    hint = "חפשו שני ציורים של אותו הדבר.",
+    explanation = `בשני הכרטיסים רואים ${object.name}.`;
+  const skillIds = [
+    game === "memory" ? "cognition.memory" : "cognition.matching",
+    "foundation.visual-discrimination",
+  ];
+  if (age >= 4 && difficulty !== "easy" && seed % 3 === 1) {
+    const entry = sounds[Math.floor(seed / 3) % sounds.length],
+      word = entry[2];
+    rule = "letter-picture";
+    operands = [word[0]];
+    leftVisual = text(entry[0]);
+    rightVisual = atom("emoji", word[1], word[0]);
+    hint = "הקשיבו לשם הציור וחפשו את האות הראשונה שלו.";
+    explanation = `${word[0]} מתחילה באות ${entry[0]}.`;
+    skillIds.push("hebrew.first-words", "hebrew.letter-recognition");
+  } else if (difficulty !== "easy" && seed % 3 === 2) {
+    const n = 1 + (Math.floor(seed / 3) % policy(age, difficulty).max),
+      token = tokens[Math.floor(seed / 15) % tokens.length];
+    rule = "number-quantity";
+    operands = [n, token.name];
+    leftVisual = text(n);
+    rightVisual = quantity(n, token);
+    hint = "ספרו את הפריטים וחפשו את הספרה המתאימה.";
+    explanation = n === 1 ? 'הספרה 1 מתאימה לפריט אחד.' : `הספרה ${n} מתאימה לכמות של ${n} פריטים.`;
+    skillIds.push("math.quantity-sense", "math.numeral-recognition");
+  }
+  const family =
+    game === "memory"
+      ? rule === "same-object"
+        ? "visual-memory"
+        : rule === "number-quantity"
+          ? "symbol-memory"
+          : "word-memory"
+      : rule === "letter-picture"
+        ? "letter-word"
+        : rule === "number-quantity"
+          ? "number-word"
+          : "same-object";
+  const fields =
+    game === "memory"
+      ? { leftValue: leftVisual.label, rightValue: rightVisual.label }
+      : { left: leftVisual.label, right: rightVisual.label };
+  return {
+    taskFamily: family,
+    skill: family,
+    skillIds,
+    evidenceForm: game,
+    visualRole: "none",
+    logic: { rule, operands },
+    leftVisual,
+    rightVisual,
+    hint,
+    explanation,
+    ...fields,
+  };
+}
 
-const content = { letters: createLetters(), numbers: createNumbers(), shapes: createShapes(), colors: createColors(), matching: createMatching(), memory: createMemory(), patterns: createPatterns(), sorting: createSorting() };
-mkdirSync(OUTPUT_DIR, { recursive: true }); mkdirSync(REVIEW_DIR, { recursive: true });
-for (const [gameId, items] of Object.entries(content)) writeFileSync(join(OUTPUT_DIR, `${gameId}.json`), `${JSON.stringify({ schemaVersion: 2, contentVersion: CONTENT_VERSION, gameId, items }, null, 2)}\n`, 'utf8');
-const reviews = Object.values(content).flat().reduce((result, item) => { const contentHash = createHash('sha256').update(JSON.stringify(item)).digest('hex'); result[item.id] = { status: 'ai-reviewed', provenance: 'synthetic-focus-group-v1', reviewer: 'פאנל מדומה רב-תחומי', expertise: 'סימולציית מורות לגיל הרך, קלינאיות תקשורת וילדים בגילאי 3–6', reviewerType: 'ai-simulation', linguistic: 'approved', conceptual: 'approved', ageFit: 'approved', clarity: 'approved', visualLeak: 'approved', focusGroupLenses: ['מורות לגילאי 3–6', 'קלינאיות תקשורת', 'ילדים מדומים בגילאי 3–6'], reviewedAt: REVIEW_DATE, notes: 'עבר ביקורת AI שקופה של פאנל רב-תחומי מדומה.', contentHash }; return result; }, {});
-writeFileSync(join(OUTPUT_DIR, 'review-status.json'), `${JSON.stringify({ contentVersion: CONTENT_VERSION, reviews }, null, 2)}\n`, 'utf8');
-writeFileSync(join(REVIEW_DIR, 'README.md'), '# סיכום ביקורת פאנל AI\n\nכל 3,840 הפריטים עברו ביקורת פנימית של פאנל מדומה: מורות לגילאי 3–6, קלינאיות תקשורת וילדים מדומים בגילאי 3–6. הביקורת מאשרת בהירות, התאמת גיל, תקינות מושגית והיעדר חשיפת תשובה לפי כלל הוויזואל. זו ביקורת AI שקופה, ואינה מוצגת כאישור אנושי.\n', 'utf8');
-console.log(`Generated ${Object.values(content).flat().length} AI-reviewed content items.`);
+export function semanticSignature(item) {
+  return hash({
+    rule: item.logic,
+    scene: item.scene,
+    choices: item.options
+      ?.map((o) => o.visualToken)
+      .sort((a, b) => a.label.localeCompare(b.label)),
+    left: item.leftVisual,
+    right: item.rightVisual,
+  });
+}
+export function generateContent() {
+  return Object.fromEntries(
+    games.map((game) => [
+      game,
+      ages.flatMap((age) =>
+        difficulties.flatMap((difficulty) => {
+          const result = [],
+            seen = new Set();
+          for (let seed = 0; result.length < 40 && seed < 20000; seed++) {
+            const item = ["matching", "memory"].includes(game)
+              ? makePair(game, age, difficulty, seed)
+              : makeChoice(game, age, difficulty, seed);
+            if (!item) continue;
+            const signature = semanticSignature(item);
+            if (seen.has(signature)) continue;
+            seen.add(signature);
+            result.push({
+              id: `${game}-a${age}-${difficulty}-d${String(result.length + 1).padStart(3, "0")}`,
+              ages: [age],
+              difficulty,
+              conceptKey: `${item.logic.rule}:${item.logic.operands.join(":")}`,
+              variantKey: signature.slice(0, 16),
+              ...item,
+            });
+          }
+          if (result.length !== 40)
+            throw new Error(
+              `Coverage ${game}/${age}/${difficulty}: ${result.length}`,
+            );
+          return result;
+        }),
+      ),
+    ]),
+  );
+}
+export function versionForContent(content) {
+  return `${CONTENT_VERSION}.${hash(content).slice(0, 16)}`;
+}
+if (
+  process.argv[1] &&
+  import.meta.url === pathToFileURL(process.argv[1]).href
+) {
+  const content = generateContent();
+  const contentVersion = versionForContent(content);
+  for (const [gameId, items] of Object.entries(content))
+    writeFileSync(
+      `src/content/${gameId}.json`,
+      JSON.stringify(
+        { schemaVersion: 2, contentVersion, gameId, items },
+        null,
+        2,
+      ) + "\n",
+    );
+  const reviews = Object.fromEntries(
+    Object.values(content)
+      .flat()
+      .map((item) => [
+        item.id,
+        { status: "pending", reviewerType: null, contentHash: hash(item) },
+      ]),
+  );
+  writeFileSync(
+    "src/content/review-status.json",
+    JSON.stringify({ contentVersion, reviews }, null, 2) +
+      "\n",
+  );
+  console.log(
+    "Generated 3,840 items. Semantic validation and editorial review are required.",
+  );
+}

@@ -1,3 +1,4 @@
+import { solveDetectiveStep } from './detective-helpers';
 import { expect, test } from '@playwright/test';
 import { completeProfileSetup, openLobby } from './helpers';
 
@@ -6,21 +7,8 @@ test.describe('local personalized learning', () => {
     await openLobby(page);
     await page.getByRole('button', { name: 'מתחילים תרגול מותאם' }).click();
     await expect(page.locator('[data-testid="adaptive-session"]')).toBeVisible();
-    const memory = page.locator('.adaptive-session__memory');
-    if (await memory.isVisible().catch(() => false)) await expect(memory).toBeHidden({ timeout: 5000 });
-    await page.locator('.adaptive-session__choices button').first().click();
-    // Correct answers advance automatically; incorrect ones retain an explicit
-    // continue button. Both branches must finish the first planned task.
-    await expect.poll(async()=>page.evaluate(()=>{
-      const snapshot=JSON.parse(localStorage.getItem('lomdim-bekef.learning.v4')!);
-      return snapshot.dataByProfile[snapshot.activeProfileId].events.length;
-    })).toBeGreaterThan(0);
-    const correct=await page.evaluate(()=>{
-      const snapshot=JSON.parse(localStorage.getItem('lomdim-bekef.learning.v4')!);
-      return snapshot.dataByProfile[snapshot.activeProfileId].events.at(-1).correct;
-    });
-    if(!correct)await page.getByRole('button', { name: /למשימה הבאה|סיום התרגול/ }).click();
-    await expect(page.locator('.adaptive-session__card .question-card__tag')).toContainText('משימה 2');
+    await solveDetectiveStep(page);
+    await expect(page.locator('.detective-chip')).toContainText('2/');
     const evidenceCount = await page.evaluate(() => {
       const snapshot = JSON.parse(localStorage.getItem('lomdim-bekef.learning.v4') ?? 'null');
       return snapshot.dataByProfile[snapshot.activeProfileId].events.length;

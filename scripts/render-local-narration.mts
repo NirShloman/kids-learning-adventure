@@ -4,6 +4,8 @@ import { existsSync, readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { createRequire } from "node:module";
 import { pathToFileURL } from "node:url";
+import { createHash } from 'node:crypto';
+import { NarrationBudget } from './narration-budget.mts';
 import { GoogleTextToSpeechGateway } from "../functions/src/narration/firebase-adapters";
 import {
   DEFAULT_NARRATION_CONFIG,
@@ -56,6 +58,22 @@ console.log(
     characters: missing.reduce((n, t) => n + t.length, 0),
   }),
 );
+const requestFlag = process.argv.indexOf('--request-file');
+if (requestFlag >= 0) {
+  const output = process.argv[requestFlag + 1];
+  if (!output || output.startsWith('--')) throw new Error('--request-file requires a path');
+  const missingSet = new Set(missing);
+  const characters = missing.reduce((sum, text) => sum + text.length, 0);
+  mkdirSync(dirname(resolve(output)), {recursive: true});
+  writeFileSync(output, JSON.stringify({
+    voice: config.voice, date: new Date().toISOString().slice(0, 10),
+    count: missing.length, characters, usdPerMillion: 30,
+    estimatedUsdBeforeTax: characters * 30 / 1_000_000,
+    pricingSource: 'https://cloud.google.com/text-to-speech/pricing',
+    pricingChecked: '2026-09-14', approval: 'pending',
+    entries: catalog.entries.filter((entry: {sourceText: string}) => missingSet.has(validateNarrationText(entry.sourceText)))
+  }, null, 2) + '\n');
+}
 if (!process.argv.includes("--apply")) process.exit(0);
 if (
   process.env.TTS_GENERATION_ENABLED !== "true" ||
@@ -64,7 +82,24 @@ if (
   throw new Error(
     "Explicit generation consent is required: TTS_GENERATION_ENABLED=true and --allow-generation.",
   );
-const gateway = new GoogleTextToSpeechGateway();
+const maxUsdFlag = process.argv.indexOf('--max-usd');
+const maxUsd = maxUsdFlag >= 0 ? Number(process.argv[maxUsdFlag + 1]) : NaN;
+const budgetIdFlag = process.argv.indexOf('--budget-id');
+const continuedBudgetId = budgetIdFlag >= 0 ? process.argv[budgetIdFlag + 1] : undefined;
+if (budgetIdFlag >= 0 && (!continuedBudgetId || !/^[a-f0-9]{64}$/.test(continuedBudgetId) || !existsSync(join(root, 'tmp/narration', `budget-${continuedBudgetId}.jsonl`)))) {
+  throw new Error('--budget-id must refer to an existing approved recording ledger.');
+}
+// Corrections belonging to the same approval keep the original ledger even
+// when the catalog changes, so previous spending is never reset.
+const approvalId = continuedBudgetId ?? createHash('sha256').update(JSON.stringify({ config, texts: [...texts].sort() })).digest('hex');
+const budget = new NarrationBudget(join(root, 'tmp/narration', `budget-${approvalId}.jsonl`), approvalId, maxUsd);
+const paidCharacters = missing.reduce((sum, text) => {
+  const path = join(root, 'public/assets/audio', narrationStoragePath(createNarrationAssetKey(text, config), config));
+  return sum + (existsSync(path) ? 0 : text.length);
+}, 0);
+// Preflight the whole remaining batch before incurring any new cost.
+budget.check(paidCharacters);
+const gateway = new GoogleTextToSpeechGateway(undefined, true);
 let cursor = 0,
   done = 0,
   failed: Error | undefined;
@@ -110,6 +145,10 @@ await Promise.all(
           const start = Math.max(Date.now(), nextStart);
           nextStart = start + 400;
           await delay(Math.max(0, start - Date.now()));
+          if (failed) return;
+          // Reserve synchronously before each request, including retries. The
+          // durable ledger also counts uncertain attempts after a process restart.
+          budget.reserve(assetKey, text.length);
           try {
             audio = Buffer.from(await gateway.synthesize(text, config));
           } catch (error) {
@@ -149,6 +188,7 @@ await Promise.all(
 );
 if (failed) throw failed;
 console.log(`Local narration ready: ${texts.length} texts.`);
+console.log(`Conservative generation cost reserved: USD ${budget.estimatedUsdReserved.toFixed(6)} before tax.`);
 if (process.argv.includes("--publish")) {
   const release = {
     ...manifest,

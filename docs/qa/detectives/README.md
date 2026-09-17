@@ -1,0 +1,68 @@
+# Detective upgrade — local acceptance report
+
+Updated: 2026-09-16. Branch: `codex/trivia-detectives-upgrade`. Base: `codex/experiential-games-redesign` at `152418237597e0a8794725184337e8d96b4d1765`.
+
+This report records actual checks, not a deployment approval. The user approved a USD 0.91 narration cap. Generation completed at a conservative estimated USD 0.90723 before tax, with no request retries; the actual bill may be lower because free-tier credits are not assumed. Strict narration coverage and the release build passed. No merge or deployment has been performed.
+
+## Completed checks
+
+* All 3,840 generated activities passed schema, independent semantic checks and hash-bound AI editorial review. Each of the 96 game/age/level cells contains 40 distinct rendered activities. See [content review](../../content-review/DETECTIVE_REVIEW.md).
+* 197 unit tests and 3 integration tests passed in one complete release run (200 total, no failures). They include every selection cell, corrupt-content rejection, retry/demonstration evidence, checkpoint compatibility, profile isolation, deterministic shuffled boards, resume without consuming another selection, missing/empty content recovery, delayed loading after unmount, strict spending reservations and every spoken detective content binding. An earlier concurrent run timed out in the existing audio-service test, which subsequently passed in isolation and in the complete suite.
+* TypeScript, strict coverage of all 1,982 catalog bindings and `build:release` passed. The existing large-bundle warning remains; no performance improvement is claimed from asset packaging alone.
+* Eighteen real MP3 playback scenarios passed across Android-phone and iPad browser emulation: all eight games plus adaptive practice, hint decoding, recorded completion, no missing narration bindings, no overlapping playback and no continued completion playback after exit. This includes the two-pair age-three boards and adaptive summaries that previously had no generated score-summary recording. The completion voice now celebrates revealing the picture; detailed outcome counts remain visible and accessible.
+* Six final Chromium accessibility/lifecycle scenarios passed: all eight boards in four sizes, enlarged text, keyboard and separate audio controls, a second mistake/demonstration, reload/version invalidation, rapid Next activation, and distinct counting marks in narrow comparison/addition cards. Device sizes: 320×568, 740×360, 768×1024 and 1280×800; the additional quantity case uses widths 320 and 393 with 200% question/answer text.
+* All eight games plus adaptive practice passed preparation, reload and full completion with the browser network disabled on the final release preview. Each case decoded actual locally cached MP3 audio with no missing/failed narration request or media error. The new web preparation button caches recordings for the selected age and level using the existing service worker; native packages already bundle them.
+* All 192 phone/tablet game/age/level scenarios and 24 adaptive scenarios passed in a clean final-curriculum run (216 total). Every adaptive scenario also completed a replay. This run includes the corrected phonology, full number ceilings and distinct difficulty levels. Later narrow-screen CSS changes passed the six dedicated layout/lifecycle scenarios above.
+  The subsequent singular-wording corrections did not change answer rules or board sizes; all content was regenerated/reviewed and revalidated, and the final playback run completed all game types against those corrected packs.
+* The seven browser/device regression configurations passed 374 scenarios, with 18 deliberate duplicate skips, zero flaky cases and zero global runner errors. They cover Chromium, Firefox, WebKit, Android-phone, iPhone, Android-tablet and iPad emulation, including all four existing adventure worlds. This run preceded the final curriculum refinement; the 216-scenario run above verifies the changed content and board sizes.
+* Eleven updated accessibility/lifecycle scenarios passed across Chromium, Android-phone emulation and iPad emulation; four duplicate desktop-only cases were explicitly skipped. Rapid Next activation advances exactly one question.
+* Android `testDebugUnitTest lintDebug assembleDebug` passed against the updated packaged web build: 232 Gradle tasks, 49 executed and 183 up-to-date. Existing SDK XML/deprecation/flat-directory warnings remain non-fatal. ADB reported no attached devices.
+* Integration tests: 3 passed. Administrative narration TypeScript build, local-only privacy validation and mobile configuration verification passed.
+* Production dependency audit: zero vulnerabilities. The final web bundle was synchronized into Android and `assembleDebug` passed again after the layout correction. No physical device was attached.
+* The isolated adventure performance check passed: 120 animated frames, median/p95 frame interval 16.7 ms, mean 60.0 FPS, and 10 pointer-feedback samples with a maximum of 10.2 ms. These are Windows Chromium/Pixel 5 viewport measurements, not physical-phone performance claims.
+* All 87 final delivery scenarios passed against a fixed build: 48 adventure missions, 22 Hebrew letter artwork checks, four recorded playthroughs, one touch protocol case, four adventure offline cases and eight detective offline cases. Compact totals, per-project results and source-report hashes are in [test-results.json](test-results.json).
+
+## Defects found and corrected during acceptance
+
+| Defect | Impact | Correction / evidence |
+| --- | --- | --- |
+| Same consonant but different vowel in three authored word pairs | Incorrect initial-syllable explanations | Replaced the pairs and added reviewed pronunciation fixtures; regenerated the bank and review hashes. |
+| Hot-springs symbol used to represent an oven | Visual did not denote the spoken word | Replaced the word/image with תפוז/🍊 and reviewed תפוח/תפוז. |
+| Quiz preload selected another round before resuming a checkpoint | Consumed recent-selection history unnecessarily | Restore validated saved IDs before selecting fresh questions; unit regression passes. |
+| Preview CORS emitted `Vary: Origin` | Precached modules could miss on offline reload and receive HTML fallback | Same-origin preview disables CORS; all eight offline scenarios pass. Production service-worker logic was unchanged. |
+| Two Next activations before a React commit could use a stale activity | Potential skipped question | Compare the live index against the rendered index before advancing; targeted browser regression added. |
+| Maximum memory board was unnecessarily tall on wide tablets | Needed scrolling between rows | Use two rows for 12–14 cards at widths of at least 1100 CSS px; visually verified in the final tablet capture. |
+| Hash-sorting neighboring card indices clustered pairs | Predictable memory layouts | Seeded Fisher–Yates shuffle preserves checkpoints and distributes pairs; permutation/restoration/distribution tests pass. |
+| Manual content version could stay unchanged after an edit | Saved IDs could refer to changed content | Derive the version suffix from a hash of all generated content; a mutation regression verifies invalidation. |
+| Choice-solving test checked controls before the board/next step was ready | Intermittent false failure in patterns | Await actual board controls and completion of the step transition. The three affected scenarios passed twice in both phone and iPad configurations (12 executions). |
+| Some medium/hard content was identical and number generation did not reach the age ceiling | Manual level did not reliably change the activity | Add explicit visual/quantitative differences within age bounds, monotonic pair-board sizes and complete number ranges; independent curriculum assertions and all 216 device scenarios pass. |
+| Counting marks included bunches/slices and awkward plural labels | Ambiguous quantity and inaccurate spoken grammar | Use whole individual objects and grammatical generic quantity labels; reject incompatible marks during validation. |
+| Narrow answer cards broke enlarged Hebrew words and compressed counting marks | Reduced readability at 320 CSS px | Stack narrow answers/comparison groups; quantity grids wrap while reserving each mark's full width. Maximum-count comparison/addition checks and captures pass. |
+| Eight explanations retained plural wording for one item | Incorrect spoken Hebrew | Four grammatical singular explanations replace them; the whole bank is checked for the old phrase. |
+| Dynamic summary narration did not cover adaptive totals or two-pair boards | Completion could fall back to device speech | Use a locally recorded picture-completion message and verify actual MP3 decoding on phone/tablet. |
+
+The first offline run stopped after two failures and six unrun cases. Those failures remain recorded in `qa-reports/detective-offline.json`; the corrective run `detective-offline-fixed.json` has eight passes. Interrupted earlier runs without final reports are not counted as completed acceptance.
+
+The first broad browser run reached its last scenarios but stalled while closing Windows WebKit workers, with one page-setup timeout and one stalled welcome interaction. It did not produce a final JSON report and is not counted as a clean completed run. The complete rerun uses one worker and disables optional video recording; assertions, screenshots, traces and browser coverage remain enabled. Dedicated adventure recording tests retain their own video configuration.
+
+An intermediate 72-scenario run completed its test cases but failed during Windows WebKit worker teardown; it is not counted as a clean run. The final 216-scenario run completed with exit code zero. Functional tests now block background service workers, while the dedicated production offline projects explicitly allow and exercise them.
+
+The first 87-scenario delivery run overlapped a local rebuild: 86 passed and one failed. Its breakfast scenario requested a replaced asset (`adventure-8szpqoTN.js`, HTTP 404), so that run is not clean acceptance. The entire delivery group subsequently passed all 87 cases against a fixed build; no application change was inferred from this test-orchestration error.
+
+## Reviewed captures
+
+[Small-phone quantities with enlarged text](devices/numbers-320x700.png), [landscape sequence](devices/patterns-740x360.png), [tablet colors](devices/colors-1280x800.png), [maximum 14-card tablet board](devices/memory-1280x800.png). The narrow quantity and maximum memory layouts were visually inspected. These are browser screenshots, not physical-device captures.
+
+## Remote delivery status
+
+* [PR #3](https://github.com/NirShloman/kids-learning-adventure/pull/3) is open against `codex/experiential-games-redesign`. No merge or deployment was performed.
+* At commit `aaea82ed0cfeb9cc18e42533938ed6350cda74f7`, [mobile CI run 35062357824](https://github.com/NirShloman/kids-learning-adventure/actions/runs/35062357824) passed all Web gates and the iOS simulator build on macOS/Xcode 26.6.
+* Android CI failed before application compilation: `android-actions/setup-android@v3` requested the unavailable legacy SDK package `tools`. Local Android unit/lint/assembly passed. Following the user's instruction to continue after the proposed infrastructure fix, the workflow now specifies `packages: platform-tools`. The action's existing command-line tools setup and Android 36 installation remain in place; the corrected CI run is still required.
+* [Browser CI run 35062357806](https://github.com/NirShloman/kids-learning-adventure/actions/runs/35062357806) completed with 737 passes, 24 deliberate skips and one flaky existing adventure test. The Safari drag scenario stalled while entering the adventure before exercising drag, then passed in nine seconds on retry. Three shards passed; the fourth correctly failed the strict no-flaky gate. Sixteen smoke cases, the performance case and four adventure offline cases also passed. The rerun retains all assertions and the no-flaky gate.
+* Final screenshots, local test totals and [narration execution](narration-execution.json) are attached; delivery is not declared fully green while the corrected remote gates remain pending.
+
+The Safari drag scenario subsequently passed five consecutive local executions with unchanged assertions and video enabled (`qa-reports/detective-safari-ci-recheck.json`). This supports a transient runner/browser stall but does not replace a clean remote gate.
+
+## Environment limitations
+
+Browser device emulation is not a physical-device test. No physical Android phone/tablet or iPhone/iPad test, native OS kill/relaunch test, child comprehension study, or professional pedagogical endorsement is claimed. Local Windows cannot compile the iOS target. These limitations remain explicit even if browser and CI gates pass.

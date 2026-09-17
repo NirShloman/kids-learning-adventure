@@ -2,34 +2,285 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://lomdim-bekef.local/content-envelope.schema.json",
   "type": "object",
-  "required": ["schemaVersion", "contentVersion", "gameId", "items"],
+  "required": [
+    "schemaVersion",
+    "contentVersion",
+    "gameId",
+    "items"
+  ],
   "additionalProperties": false,
   "properties": {
-    "schemaVersion": { "const": 2 },
-    "contentVersion": { "type": "string", "minLength": 1 },
-    "gameId": { "enum": ["letters", "numbers", "shapes", "colors", "matching", "memory", "patterns", "sorting"] },
+    "schemaVersion": {
+      "const": 2
+    },
+    "contentVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "gameId": {
+      "enum": [
+        "letters",
+        "numbers",
+        "shapes",
+        "colors",
+        "matching",
+        "memory",
+        "patterns",
+        "sorting"
+      ]
+    },
     "items": {
       "type": "array",
       "minItems": 480,
       "items": {
         "type": "object",
-        "required": ["id", "ages", "difficulty", "skill", "taskFamily", "conceptKey", "variantKey", "visualRole", "skillIds", "evidenceForm"],
+        "required": [
+          "id",
+          "ages",
+          "difficulty",
+          "skill",
+          "taskFamily",
+          "conceptKey",
+          "variantKey",
+          "visualRole",
+          "skillIds",
+          "evidenceForm",
+          "hint",
+          "explanation",
+          "logic"
+        ],
         "properties": {
-          "id": { "type": "string", "minLength": 4 },
+          "id": {
+            "type": "string",
+            "minLength": 4
+          },
           "ages": {
             "type": "array",
             "minItems": 1,
             "uniqueItems": true,
-            "items": { "enum": [3, 4, 5, 6] }
+            "items": {
+              "enum": [
+                3,
+                4,
+                5,
+                6
+              ]
+            }
           },
-          "difficulty": { "enum": ["easy", "medium", "hard"] },
-          "skill": { "type": "string", "minLength": 2 },
-          "taskFamily": { "type": "string", "minLength": 2 },
-          "conceptKey": { "type": "string", "minLength": 2 },
-          "variantKey": { "type": "string", "minLength": 2 },
-          "visualRole": { "enum": ["stimulus", "context", "direct-match", "none"] },
-          "skillIds": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 3 } },
-          "evidenceForm": { "enum": ["visual-choice", "listening-choice", "matching", "memory", "sequence", "sorting", "adventure-drag", "adventure-navigation", "shared-turn", "shared-cooperation"] }
+          "difficulty": {
+            "enum": [
+              "easy",
+              "medium",
+              "hard"
+            ]
+          },
+          "skill": {
+            "type": "string",
+            "minLength": 2
+          },
+          "taskFamily": {
+            "type": "string",
+            "minLength": 2
+          },
+          "conceptKey": {
+            "type": "string",
+            "minLength": 2
+          },
+          "variantKey": {
+            "type": "string",
+            "minLength": 2
+          },
+          "visualRole": {
+            "enum": [
+              "stimulus",
+              "context",
+              "direct-match",
+              "none"
+            ]
+          },
+          "skillIds": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 3
+            }
+          },
+          "evidenceForm": {
+            "enum": [
+              "visual-choice",
+              "listening-choice",
+              "matching",
+              "memory",
+              "sequence",
+              "sorting",
+              "adventure-drag",
+              "adventure-navigation",
+              "shared-turn",
+              "shared-cooperation"
+            ]
+          },
+          "hint": {
+            "type": "string",
+            "minLength": 4,
+            "maxLength": 260
+          },
+          "explanation": {
+            "type": "string",
+            "minLength": 4,
+            "maxLength": 260
+          },
+          "logic": {
+            "type": "object",
+            "required": [
+              "rule",
+              "operands"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "rule": {
+                "type": "string",
+                "minLength": 2
+              },
+              "operands": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "scene": {
+            "$ref": "#/$defs/scene"
+          },
+          "leftVisual": {
+            "$ref": "#/$defs/token"
+          },
+          "rightVisual": {
+            "$ref": "#/$defs/token"
+          },
+          "options": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 3,
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "label",
+                "visualToken"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "label": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "visualToken": {
+                  "$ref": "#/$defs/token"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "token": {
+      "type": "object",
+      "required": [
+        "kind",
+        "value",
+        "label"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "text",
+            "emoji",
+            "shape",
+            "color",
+            "quantity"
+          ]
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        },
+        "rotation": {
+          "type": "number"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "quantity"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "count"
+            ],
+            "properties": {
+              "count": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 20
+              }
+            }
+          }
+        }
+      ]
+    },
+    "scene": {
+      "type": "object",
+      "required": [
+        "kind",
+        "items"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "single",
+            "row",
+            "groups",
+            "addition",
+            "sequence"
+          ]
+        },
+        "items": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/token"
+          }
         }
       }
     }

@@ -163,6 +163,46 @@ export function saveActivePlan(profileId: string, plan: SessionPlan | null): voi
   const snapshot = getLearningSnapshot(); const data = getProfileData(profileId, snapshot);
   writeSnapshot({ ...snapshot, dataByProfile: { ...snapshot.dataByProfile, [profileId]: { ...data, activePlan: plan } }, updatedAt: nowIso() });
 }
+
+export function getDetectiveProgress(profileId: string): import('../types/detective.types').DetectiveProgress {
+  return getProfileData(profileId).detectives ?? { rounds: {}, discoveries: [] };
+}
+
+/** Evidence and the matching gameplay checkpoint share one local atomic snapshot. */
+export function saveDetectiveRound(profileId: string, scope: import('../types/detective.types').DiscoveryScope,
+  round: import('../types/detective.types').DetectiveRound, evidence?: NewLearningEvent): void {
+  const snapshot = getLearningSnapshot();
+  if (!snapshot.profiles.some(profile => profile.id === profileId)) return;
+  let data = getProfileData(profileId, snapshot);
+  if (evidence && !data.events.some(event => event.sessionId === evidence.sessionId && event.contentId === evidence.contentId && event.attemptNumber === evidence.attemptNumber)) {
+    const now = effectiveNow(new Date(), data.lastEffectiveNow);
+    const event: LearningEvent = { ...evidence, id: createId('event'), occurredAt: now.toISOString(), effectiveDay: now.toISOString().slice(0, 10) };
+    const mastery = { ...data.mastery };
+    for (const skillId of event.skillIds) mastery[skillId] = applyLearningEvent(mastery[skillId] ?? emptyMastery(skillId), event, mastery, now);
+    const countKey = `${event.effectiveDay}:${event.contentId}`;
+    // A retry is another attempt, not another presentation of the content.
+    data = { ...data, mastery, events: [...data.events, event].slice(-MAX_EVENTS), lastEffectiveNow: now.toISOString(),
+      dailyContentCounts: { ...data.dailyContentCounts, [countKey]: (data.dailyContentCounts[countKey] ?? 0) + (event.attemptNumber === 1 ? 1 : 0) } };
+  }
+  const progress = data.detectives ?? {rounds: {}, discoveries: []};
+  writeSnapshot({...snapshot, dataByProfile: {...snapshot.dataByProfile, [profileId]: {...data,
+    detectives: {...progress, rounds: {...progress.rounds, [scope]: round}}}}, updatedAt: nowIso()});
+}
+
+export function finishDetectiveRound(profileId: string, scope: import('../types/detective.types').DiscoveryScope,
+  round: import('../types/detective.types').DetectiveRound): import('../types/detective.types').DiscoveryResult {
+  const snapshot = getLearningSnapshot(), data = getProfileData(profileId, snapshot);
+  const progress = data.detectives ?? {rounds: {}, discoveries: []};
+  const existing = progress.discoveries.find(value => value.id === round.id);
+  if (existing) return existing;
+  const outcomes = Object.values(round.outcomes);
+  const result = {id: round.id, scope, completedAt: nowIso(), independent: outcomes.filter(v=>v==='independent').length,
+    assisted: outcomes.filter(v=>v==='assisted').length, demonstrated: outcomes.filter(v=>v==='demonstrated').length};
+  const rounds = {...progress.rounds}; delete rounds[scope];
+  writeSnapshot({...snapshot, dataByProfile: {...snapshot.dataByProfile, [profileId]: {...data,
+    detectives: {rounds, discoveries: [...progress.discoveries, result].slice(-200), last: result}}}, updatedAt: nowIso()});
+  return result;
+}
 export function completeJourneyLevel(profileId: string, levelId: string, gameId: LocalGameSession['gameId']): void {
   const snapshot = getLearningSnapshot(); const data = getProfileData(profileId, snapshot);
   const order: LocalGameSession['gameId'][] = ['letters', 'numbers', 'shapes', 'colors'];
