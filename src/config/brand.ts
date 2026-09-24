@@ -1,10 +1,10 @@
 export const brand = {
-  hebrewName: 'ידע׳לה',
-  latinName: 'Yedale',
-  pronunciation: "יֶדַע, לֶה",
+  hebrewName: 'עולמיה',
+  latinName: 'Olamia',
+  pronunciation: 'עוֹלָמִיָּה',
   tagline: 'משחקים. מגלים. מתקדמים.',
   descriptor: 'הרפתקת למידה בעברית',
   ageDescriptor: 'לגילאי 3–6',
   storeDescription: 'הרפתקת למידה בעברית לילדים בגילאי 3 עד 6',
-  accessibilityLabel: 'ידע׳לה, הרפתקת למידה בעברית'
+  accessibilityLabel: 'עולמיה, הרפתקת למידה בעברית'
 } as const;

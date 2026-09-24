@@ -1,5 +1,6 @@
 :root {
-  font-family: 'Rubik', 'Segoe UI', Arial, sans-serif;
+  --font-family: 'Heebo Variable', 'Segoe UI', Arial, sans-serif;
+  font-family: var(--font-family);
   line-height: 1.5;
   font-weight: 400;
   color: var(--ink);

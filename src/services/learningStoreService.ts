@@ -5,6 +5,7 @@ import type {
 } from '../types';
 import { applyLearningEvent, effectiveNow, emptyMastery } from '../learning/masteryEngine';
 import { getLocalDataStore } from './localDataStore';
+import { collectionMilestones, worldCollection, worldProgress } from '../data/worldCollection';
 
 export const SNAPSHOT_KEY = 'lomdim-bekef.learning.v4';
 const MIGRATION_MARKER_KEY = 'lomdim-bekef.migration.v4';
@@ -33,6 +34,15 @@ function read<T>(key: string, fallback: T): T {
   catch { return fallback; }
 }
 function writeSnapshot(snapshot: LearningSnapshotV4): LearningSnapshotV4 {
+  // Earned keepsakes outlive the bounded session / discovery history.
+  for (const data of Object.values(snapshot.dataByProfile)) {
+    const decorations = new Set(data.journey.decorationIds);
+    for (const world of worldCollection) {
+      const { count } = worldProgress(data, world.gameId);
+      for (const milestone of collectionMilestones) if (count >= milestone) decorations.add(`keepsake:${world.gameId}:${milestone}`);
+    }
+    data.journey = { ...data.journey, decorationIds: [...decorations] };
+  }
   void getLocalDataStore().set(SNAPSHOT_KEY, JSON.stringify(snapshot)); return snapshot;
 }
 function isAge(value: unknown): value is Age { return value === 3 || value === 4 || value === 5 || value === 6; }

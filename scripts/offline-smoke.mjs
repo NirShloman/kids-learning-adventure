@@ -2,6 +2,7 @@ import { spawn } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { chromium } from '@playwright/test';
+import { readFileSync } from 'node:fs';
 
 const rootDir = dirname(dirname(fileURLToPath(import.meta.url)));
 const viteCli = join(rootDir, 'node_modules', 'vite', 'bin', 'vite.js');
@@ -59,18 +60,28 @@ try {
   await page.goto(baseURL);
   await page.evaluate(() => navigator.serviceWorker.ready);
   await page.reload({ waitUntil: 'networkidle' });
+  const manifest = JSON.parse(readFileSync(join(rootDir, 'src/assets/generatedNarrationManifest.json'), 'utf8'));
+  const brandAudio = manifest.entries['מתחילים לשחק ולגלות עם עוֹלָמִיָּה.'];
+  const readRange = () => page.evaluate(async (url) => {
+    const response = await fetch(url, { headers: { Range: 'bytes=0-127' } });
+    return { status: response.status, type: response.headers.get('content-type'), bytes: Array.from(new Uint8Array(await response.arrayBuffer())) };
+  }, brandAudio.localPath);
+  const onlineAudio = await readRange();
+  if (onlineAudio.status !== 206 || onlineAudio.bytes.length !== 128 || !onlineAudio.type?.includes('audio/mpeg')) throw new Error('Narration range request failed.');
 
   await page.getByRole('button', { name: /מתחילים לשחק/ }).click();
   await openLettersQuiz(page);
 
   await context.setOffline(true);
+  const offlineAudio = await readRange();
+  if (JSON.stringify(offlineAudio) !== JSON.stringify(onlineAudio)) throw new Error('Offline narration bytes differ.');
   await page.reload({ waitUntil: 'domcontentloaded' });
   await page.getByRole('button', { name: /מתחילים לשחק/ }).click();
   await openLettersQuiz(page);
 
   const canvasCount = await page.locator('canvas').count();
   if (canvasCount > 2) throw new Error(`Expected at most two active canvases, found ${canvasCount}.`);
-  console.log('Offline smoke passed: shell, local font, image assets, game chunk, and letters JSON loaded from same-origin cache.');
+  console.log('Offline smoke passed: shell, local font, image assets, game chunk, letters JSON and byte-range MP3 narration loaded from same-origin cache.');
 } finally {
   await browser?.close();
   server.kill();

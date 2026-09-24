@@ -60,18 +60,18 @@ function classify(relativePath) {
     notes_risk: 'Obtain authorship, license, and chain-of-title evidence before release.'
   };
 
-  if (normalized.includes('node_modules/@fontsource/rubik/files/')) {
+  if (normalized.includes('node_modules/@fontsource-variable/heebo/files/')) {
     return {
       ...base,
-      creator_provider: 'The Rubik Project Authors',
-      creation_tool: 'Rubik font project / @fontsource package',
+      creator_provider: 'The Heebo Project Authors',
+      creation_tool: 'Heebo font project / @fontsource package',
       creation_or_receipt_date: 'Package installed; exact font creation date not established here',
-      input_source: '@fontsource/rubik 5.3.0',
-      claimed_rights_holder: 'Rubik Project Authors',
+      input_source: '@fontsource-variable/heebo 5.3.0',
+      claimed_rights_holder: 'Heebo Project Authors',
       license_agreement: 'SIL Open Font License 1.1; license file present',
       commercial_store_distribution: 'YES, subject to OFL 1.1',
       attribution_required: 'License and copyright notice must accompany distribution',
-      evidence_document: 'node_modules/@fontsource/rubik/LICENSE; THIRD_PARTY_NOTICES',
+      evidence_document: 'node_modules/@fontsource-variable/heebo/LICENSE; THIRD_PARTY_NOTICES',
       status: 'APPROVED_LICENSE_VERIFIED',
       notes_risk: 'Do not sell the font by itself; preserve OFL notice and Reserved Font Name rules.'
     };
@@ -164,9 +164,9 @@ const roots = [
   join(root, 'docs', 'art-direction'),
   join(root, 'docs', 'asset-sources')
 ];
-const rubikFiles = walk(join(root, 'node_modules', '@fontsource', 'rubik', 'files'))
-  .filter((path) => /rubik-hebrew-(400|500|600|700|800|900)-normal\.(woff2?|ttf)$/i.test(path));
-const files = [...new Set([...roots.flatMap(walk), ...rubikFiles])]
+const heeboFiles = walk(join(root, 'node_modules', '@fontsource-variable', 'heebo', 'files'))
+  .filter((path) => /heebo-(hebrew|latin)-wght-normal\.(woff2?|ttf)$/i.test(path));
+const files = [...new Set([...roots.flatMap(walk), ...heeboFiles])]
   .filter((path) => mediaExtensions.has(extname(path).toLowerCase()))
   .sort();
 
@@ -288,8 +288,8 @@ function packageNotice([packageName, displayName]) {
 
 const riveLicense = `MIT License\n\nCopyright (c) 2021 Rive\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.`;
 const riveWasmLicense = riveLicense.replace('2021 Rive', '2020-2021 Rive');
-const rubikLicense = readFileSync(join(root, 'node_modules', '@fontsource', 'rubik', 'LICENSE'), 'utf8').trim();
-const notices = `THIRD-PARTY SOFTWARE AND FONT NOTICES\nGenerated from package-lock.json and installed license files on 2026-08-22.\nThis file covers direct and bundled runtime components identified by the audit.\nDevelopment-only tools are documented separately in docs/legal/DEPENDENCY_LICENSE_AUDIT.md.\n\n${packages.map(packageNotice).join('\n\n')}\n\n-------------------------------------------------------------------------------\nRive React runtime (@rive-app/react-webgl2) 4.29.5\nDeclared license: MIT\n\n${riveLicense}\n\n-------------------------------------------------------------------------------\nRive WebGL2 runtime (@rive-app/webgl2) 2.38.5\nDeclared license: MIT\n\n${riveWasmLicense}\n\n-------------------------------------------------------------------------------\nRubik via @fontsource/rubik 5.3.0\nDeclared license: SIL Open Font License 1.1\n\n${rubikLicense}\n`;
+const heeboLicense = readFileSync(join(root, 'node_modules', '@fontsource-variable', 'heebo', 'LICENSE'), 'utf8').trim();
+const notices = `THIRD-PARTY SOFTWARE AND FONT NOTICES\nGenerated from package-lock.json and installed license files on 2026-08-22.\nThis file covers direct and bundled runtime components identified by the audit.\nDevelopment-only tools are documented separately in docs/legal/DEPENDENCY_LICENSE_AUDIT.md.\n\n${packages.map(packageNotice).join('\n\n')}\n\n-------------------------------------------------------------------------------\nRive React runtime (@rive-app/react-webgl2) 4.29.5\nDeclared license: MIT\n\n${riveLicense}\n\n-------------------------------------------------------------------------------\nRive WebGL2 runtime (@rive-app/webgl2) 2.38.5\nDeclared license: MIT\n\n${riveWasmLicense}\n\n-------------------------------------------------------------------------------\nHeebo via @fontsource-variable/heebo 5.3.0\nDeclared license: SIL Open Font License 1.1\n\n${heeboLicense}\n`;
 writeFileSync(join(root, 'THIRD_PARTY_NOTICES'), notices, 'utf8');
 writeFileSync(join(root, 'public', 'THIRD_PARTY_NOTICES.txt'), notices, 'utf8');
 

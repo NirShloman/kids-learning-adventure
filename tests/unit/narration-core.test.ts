@@ -7,12 +7,22 @@ import {
   validateNarrationText
 } from '../../functions/src/narration/core';
 import { narrationBindingInputFingerprint } from '../../functions/src/narration/binding-input';
+import { brand } from '../../src/config/brand';
+import { toNarrationText } from '../../src/utils/narrationText';
 
 describe('Hebrew narration core', () => {
+  it('keeps Olamia display, catalog, backend and vocalized lookup in agreement', () => {
+    for (const input of ['ברוכים הבאים לעולמיה!', 'ברוכים הבאים לOlamia!', 'ברוכים הבאים לעוֹלָמִיָּה!']) {
+      const expected = `ברוכים הבאים ל${brand.pronunciation}!`.normalize('NFC');
+      expect(normalizeHebrewNarration(input)).toBe(expected);
+      expect(normalizeHebrewNarration(toNarrationText(input))).toBe(expected);
+      expect(toNarrationText(toNarrationText(input))).toBe(toNarrationText(input));
+    }
+  });
   it('normalizes technical noise without changing Hebrew, niqqud, numbers or mixed text', () => {
     expect(normalizeHebrewNarration('  שָׁלוֹם  ,  Google 3!\n\nמה נשמע? ')).toBe('שָׁלוֹם, Google 3! מה נשמע?');
     expect(normalizeHebrewNarration('<b>שלושה</b>\u200B תפוחים')).toBe('שלושה תפוחים');
-    expect(normalizeHebrewNarration('מתחילים לשחק עם ידע׳לה.')).toBe("מתחילים לשחק עם יֶדַע, לֶה.");
+    expect(normalizeHebrewNarration('מתחילים לשחק עם עולמיה.')).toBe('מתחילים לשחק עם עוֹלָמִיָּה.');
   });
 
   it('creates deterministic keys and changes them for every synthesis input', () => {

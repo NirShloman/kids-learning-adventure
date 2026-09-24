@@ -113,7 +113,7 @@ export function Toy({
                 scene?.getAttribute("data-strong-snap") === "true" ? 44 : 24;
               target = [
                 ...(scene?.querySelectorAll("[data-drop-zone]") ?? []),
-              ].find((node) => {
+              ].filter((node) => {
                 const box = node.getBoundingClientRect();
                 return (
                   node.getAttribute("aria-disabled") !== "true" &&
@@ -122,7 +122,13 @@ export function Toy({
                   event.clientY >= box.top - tolerance &&
                   event.clientY <= box.bottom + tolerance
                 );
-              });
+              }).sort((a, b) => {
+                const distance = (node: Element) => {
+                  const box = node.getBoundingClientRect();
+                  return Math.hypot(event.clientX - (box.left + box.width / 2), event.clientY - (box.top + box.height / 2));
+                };
+                return distance(a) - distance(b);
+              })[0];
             }
             if (target && target.getAttribute("aria-disabled") !== "true")
               onDrop?.(value);
@@ -249,7 +255,7 @@ export function LetterPiece({
     const measure = () => {
       const ctx = document.createElement("canvas").getContext("2d");
       if (!active || !ctx) return;
-      ctx.font = "800 156px Rubik";
+      ctx.font = '800 156px "Heebo Variable"';
       ctx.textAlign = "center";
       const metrics = ctx.measureText(letter);
       const width =
@@ -299,7 +305,7 @@ export function LetterPiece({
         x="90"
         y="139"
         textAnchor="middle"
-        fontFamily="Rubik"
+        fontFamily="Heebo Variable"
         fontWeight="800"
         fontSize="156"
         fill={complete ? "#7755b1" : "#dfb355"}

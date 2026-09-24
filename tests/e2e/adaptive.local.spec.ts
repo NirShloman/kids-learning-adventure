@@ -5,7 +5,7 @@ import { completeProfileSetup, openLobby } from './helpers';
 test.describe('local personalized learning', () => {
   test('starts an adaptive plan and records item-level evidence', async ({ page }) => {
     await openLobby(page);
-    await page.getByRole('button', { name: 'מתחילים תרגול מותאם' }).click();
+    await page.getByRole('button',{name:'🌱 המסלול שלי'}).click(); await page.getByRole('button',{name:'מתחילים תרגול מותאם'}).click();
     await expect(page.locator('[data-testid="adaptive-session"]')).toBeVisible();
     await solveDetectiveStep(page);
     await expect(page.locator('.detective-chip')).toContainText('2/');
@@ -18,6 +18,7 @@ test.describe('local personalized learning', () => {
 
   test('creates, selects and deletes isolated profiles in the parent area', async ({ page }) => {
     await openLobby(page);
+    await page.locator('.shell-menu > summary').click();
     await page.getByRole('button', { name: 'אזור הורים' }).click();
     const prompt = await page.locator('label[for="parent-answer"]').textContent();
     const factors = prompt?.match(/(\d+)\s*×\s*(\d+)/);
@@ -25,6 +26,7 @@ test.describe('local personalized learning', () => {
     await page.getByRole('button', { name: 'פתיחת אזור הורים' }).click();
     await page.getByRole('button', { name: 'הוספת פרופיל' }).click();
     await completeProfileSetup(page);
+    await page.locator('.shell-menu > summary').click();
     await page.getByRole('button', { name: 'אזור הורים' }).click();
     const secondPrompt=await page.locator('label[for="parent-answer"]').textContent();
     const secondFactors=secondPrompt?.match(/(\d+)\s*×\s*(\d+)/);
@@ -42,7 +44,7 @@ test.describe('local personalized learning', () => {
 
   test('offers both non-competitive shared-play modes', async ({ page }) => {
     await openLobby(page);
-    await page.getByRole('button', { name: 'משחקים יחד באותו מכשיר' }).click();
+    await page.getByRole('button', { name: '🤝 יחד' }).click();
     await expect(page.getByRole('button', { name: /שני ילדים בתורות/ })).toBeVisible();
     await expect(page.getByRole('button', { name: /הורה וילד/ })).toBeVisible();
   });

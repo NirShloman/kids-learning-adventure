@@ -37,6 +37,8 @@ import { createProfile, getActiveProfile, getLearningSnapshot } from './services
 import { configureSpeechPreferences } from './services/speechService';
 import { configureNarrationPreferences } from './services/narrationService';
 import { brand } from './config/brand';
+import { useChildViewport } from './hooks/useChildViewport';
+import './child-layout.css';
 
 const quizGameIds: GameId[] = ['letters', 'numbers', 'shapes', 'colors'];
 const MatchingGame = lazy(() => import('./components/games/matching/MatchingGame').then((module) => ({ default: module.MatchingGame })));
@@ -48,6 +50,7 @@ const ExperienceGame = lazy(() => import('./components/games/experience/Experien
 const AdventureSummary = lazy(() => import('./components/games/experience/AdventureSummary').then((module) => ({ default: module.AdventureSummary })));
 
 function App() {
+  useChildViewport();
   const [learner, setLearner] = useState<LocalLearnerState>(() => getLocalLearnerState());
   const settings: LearnerSettings = {
     age: learner.age,
@@ -450,7 +453,7 @@ function App() {
     <AppShell
       title={selectedGame?.title ?? brand.hebrewName}
       subtitle={selectedGame ? brand.descriptor : 'בוחרים משחק, מתנסים ומתקדמים בקצב שלכם.'}
-      compact={Boolean(selectedGame && !result)}
+      compact={Boolean(selectedGame)}
       immersive={selectedGameMode === 'experience'}
       rightSlot={(
         <>

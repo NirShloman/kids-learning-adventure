@@ -4,9 +4,10 @@ import sharp from 'sharp';
 
 const root = process.cwd();
 const brandSourceDir = path.join(root, 'assets', 'brand', 'source');
-const horizontalLogoSource = path.join(brandSourceDir, 'yadaale_logo_horizontal.png');
-const appIconSource = path.join(brandSourceDir, 'yadaale_app_icon_1024.png');
-const smallMarkSource = path.join(brandSourceDir, 'yadaale_small_icon_1024.png');
+const horizontalLogoSource = path.join(brandSourceDir, 'olamia_logo_horizontal.png');
+const latinLogoSource = path.join(brandSourceDir, 'olamia_logo_latin.png');
+const appIconSource = path.join(brandSourceDir, 'olamia_app_icon_1024.png');
+const smallMarkSource = path.join(brandSourceDir, 'olamia_small_icon_1024.png');
 const background = { r: 255, g: 253, b: 248, alpha: 1 };
 const brandPurple = { r: 43, g: 23, b: 106, alpha: 1 };
 const transparent = { r: 0, g: 0, b: 0, alpha: 0 };
@@ -60,7 +61,8 @@ let cleanHorizontalLogo;
 let cleanSmallMark;
 
 async function getHorizontalLogo() {
-  cleanHorizontalLogo ??= removeBakedLightBackground(horizontalLogoSource);
+  // The renamed logo has real alpha; preserve pale owl highlights.
+  cleanHorizontalLogo ??= sharp(horizontalLogoSource).trim().png().toBuffer();
   return cleanHorizontalLogo;
 }
 
@@ -104,12 +106,15 @@ async function writeWebBrandAssets() {
     .trim()
     .resize({ width: 1200, withoutEnlargement: true })
     .webp({ quality: 92, alphaQuality: 100 })
-    .toFile(path.join(destinationDir, 'yadaale-logo-horizontal.webp'));
+    .toFile(path.join(destinationDir, 'olamia-logo-horizontal.webp'));
+  await sharp(latinLogoSource).trim().resize({ width: 1200, withoutEnlargement: true })
+    .webp({ quality: 92, alphaQuality: 100 })
+    .toFile(path.join(destinationDir, 'olamia-logo-latin.webp'));
   await sharp(await getSmallMark())
     .trim()
     .resize({ width: 512, withoutEnlargement: true })
     .webp({ quality: 92, alphaQuality: 100 })
-    .toFile(path.join(destinationDir, 'yadaale-mark.webp'));
+    .toFile(path.join(destinationDir, 'olamia-mark.webp'));
 }
 
 async function renderSplash(width, height, destination) {

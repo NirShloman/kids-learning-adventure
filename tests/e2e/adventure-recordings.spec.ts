@@ -24,7 +24,6 @@ for (const game of ['letters', 'numbers', 'shapes', 'colors'] as const) {
       const id = await page.getByTestId('adventure').getAttribute('data-mission');
       await solveMission(page, adventureMissions.find(m => m.id === id)!);
       await page.screenshot({ path: info.outputPath(`${game}-success-${index}.png`) });
-      await page.locator('.adventure-celebration .adventure-primary').click();
       if (index < 2) await page.locator('.adventure-intro .adventure-primary').click();
     }
     await expect(page.getByTestId('adventure-summary')).toBeVisible();

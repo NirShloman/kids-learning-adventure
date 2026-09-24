@@ -39,4 +39,25 @@ describe('native narration fallback', () => {
       language: 'he-IL'
     })));
   });
+
+  it('only starts the latest request while native voice availability is pending', async () => {
+    nativeMocks.available = false;
+    vi.resetModules();
+    const speech = await import('../../src/services/speechService');
+    await Promise.resolve();
+    let resolveFirst!: (value: {available: boolean}) => void;
+    let resolveLast!: (value: {available: boolean}) => void;
+    nativeMocks.narrationAvailable.mockImplementationOnce(() => new Promise(resolve => { resolveFirst = resolve; }));
+    nativeMocks.narrationAvailable.mockImplementationOnce(() => new Promise(resolve => { resolveLast = resolve; }));
+    const first = vi.fn(), last = vi.fn();
+    speech.speakHebrew('הוראה ישנה', {onSettled:first});
+    speech.speakHebrew('משוב חדש', {onSettled:last});
+    expect(first).toHaveBeenCalledExactlyOnceWith('cancelled');
+    resolveFirst({available:true});await Promise.resolve();
+    expect(nativeMocks.speak).not.toHaveBeenCalled();
+    resolveLast({available:true});await Promise.resolve();
+    expect(nativeMocks.speak).toHaveBeenCalledExactlyOnceWith(expect.objectContaining({text:'משוב חדש',requestId:expect.any(String)}));
+    expect(last).not.toHaveBeenCalled();
+    speech.stopSpeaking();expect(last).toHaveBeenCalledExactlyOnceWith('cancelled');
+  });
 });

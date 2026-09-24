@@ -49,9 +49,9 @@ public class MainActivity extends BridgeActivity {
                     .findFirst().orElse(null);
                 if (hebrewVoice != null) tts.setVoice(hebrewVoice);
                 tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                    @Override public void onStart(String utteranceId) { emitSpeechState(true); }
-                    @Override public void onDone(String utteranceId) { emitSpeechState(false); }
-                    @Override public void onError(String utteranceId) { emitSpeechState(false); }
+                    @Override public void onStart(String utteranceId) { emitSpeechState(true, utteranceId, false); }
+                    @Override public void onDone(String utteranceId) { emitSpeechState(false, utteranceId, false); }
+                    @Override public void onError(String utteranceId) { emitSpeechState(false, utteranceId, true); }
                 });
             });
         }
@@ -77,9 +77,11 @@ public class MainActivity extends BridgeActivity {
             }
         }
 
-        private void emitSpeechState(boolean speaking) {
+        private void emitSpeechState(boolean speaking, String requestId, boolean error) {
             JSObject event = new JSObject();
             event.put("speaking", speaking);
+            event.put("requestId", requestId);
+            event.put("error", error);
             notifyListeners("speechState", event);
         }
 
@@ -137,17 +139,20 @@ public class MainActivity extends BridgeActivity {
         @PluginMethod
         public void speak(PluginCall call) {
             String text = call.getString("text", "");
-            if (!ttsReady || hebrewVoice == null || text.isEmpty()) { call.resolve(); return; }
+            if (!ttsReady || hebrewVoice == null || text.isEmpty()) { call.reject("Speech unavailable"); return; }
             tts.setSpeechRate(call.getFloat("rate", 0.84f));
             tts.setPitch(call.getFloat("pitch", 1.04f));
-            tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, UUID.randomUUID().toString());
+            String requestId = call.getString("requestId", UUID.randomUUID().toString());
+            if (tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, requestId) == TextToSpeech.ERROR) {
+                call.reject("Speech failed"); return;
+            }
             call.resolve();
         }
 
         @PluginMethod
         public void stopSpeaking(PluginCall call) {
             if (tts != null) tts.stop();
-            emitSpeechState(false);
+            emitSpeechState(false, "", false);
             call.resolve();
         }
 

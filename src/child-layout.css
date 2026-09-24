@@ -1,0 +1,254 @@
+/* Child screens share a viewport budget. Content can still reflow/scroll at large text sizes. */
+:root { --child-height: 100dvh; --child-stage-height: max(var(--child-height), calc(var(--child-height) + 40rem - 640px)); }
+body .app-shell {
+  height: var(--child-stage-height); width: 100%; max-width: 1280px; margin: auto;
+  padding: max(8px, env(safe-area-inset-top)) max(10px, env(safe-area-inset-right)) max(8px, env(safe-area-inset-bottom)) max(10px, env(safe-area-inset-left));
+  display: flex; flex-direction: column; gap: 8px;
+}
+body .app-shell > main { flex: 1; min-height: 0; }
+body .app-shell > .hero-card { flex: none; flex-direction: row; padding: 4px 12px; margin: 0; min-height: 64px; border-radius: 20px; gap: 8px; }
+body .hero-card__content h1 { font-size: 1.4rem; margin: 0; }
+body .hero-card__content p, body .hero-card__eyebrow { display: none; }
+body .hero-card__logo-mark .brand-logo__mark { width: 44px; height: 44px; }
+body .app-shell--compact > .hero-card { display: none; }
+body .app-shell.app-shell--adventure { padding: 0; gap: 0; max-width: none; }
+.shell-menu { position: relative; z-index: 30; }
+.shell-menu > summary, .offline-menu > summary { display: grid; place-items: center; min-width: 56px; min-height: 56px; cursor: pointer; list-style: none; border-radius: 16px; background: #edf4f0; }
+.shell-menu:not([open]) > .shell-menu__panel { display: none; }
+.shell-menu__panel { position: absolute; left: 0; top: 100%; width: min(280px, 85vw); padding: 12px; display: grid; gap: 8px; border-radius: 20px; background: #fff; box-shadow: 0 8px 30px #24364930; }
+.shell-menu__panel .btn { max-width: none; white-space: normal; }
+.page-controls { display: flex; align-items: center; justify-content: center; gap: 12px; flex: none; }
+.page-controls button, .child-nav button { min-width: 56px; min-height: 56px; border: 2px solid #c7dcd5; border-radius: 16px; background: #fff; color: #294958; font-weight: 600; padding: 6px 10px; }
+.page-controls button:disabled { opacity: .45; }
+.child-nav { display: grid; grid-template-columns: repeat(5, minmax(56px, 1fr)); gap: 4px; flex: none; }
+.child-nav button { padding: 4px 2px; font-size: .75rem; line-height: 1.25; }
+.child-nav button span { display: block; font-size: 1.35rem; }
+.child-nav button[aria-current] { background: #d8f3e6; border-color: #24847b; }
+body .child-home { height: 100%; display: flex; flex-direction: column; gap: 8px; }
+.home-view { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 8px; }
+.home-view > h2 { margin: 0; font-size: clamp(1.1rem, 3vw, 1.6rem); text-align: center; }
+body .child-home .home-grid { flex: 1; min-height: 0; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 0; }
+body .child-home .game-card { min-height: 56px; padding: 0; display: flex; flex-direction: column; align-items: stretch; gap: 0; border-radius: 24px; text-align: right; cursor: pointer; background: #fffdfa; border: 1px solid #e4dfd5; box-shadow: 0 6px 18px #514e6012; }
+body .child-home .game-card::before, body .child-home .game-card::after { display: none; }
+body .child-home .game-card__visual { width: 100%; min-height: 0; height: auto; flex: 1; max-height: none; margin: 0; border-radius: 0; overflow: hidden; background: #eee9df; }
+.game-card__cover { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+.game-card:hover .game-card__cover { transform: scale(1.035); }
+.game-card__caption { display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; gap: 6px; flex: none; }
+.game-card__world-name { display: block; color: #626478; font-size: .78rem; }
+body .child-home .game-card__icon { display: none; }
+body .child-home .game-card h3 { font-size: clamp(1rem, 2.6vw, 1.4rem); margin: 0; }
+.game-card__play { display: grid; place-items: center; flex: none; width: 32px; height: 32px; border-radius: 50%; font-size: 1.15rem; background: #edf3ef; color: #205d56; }
+html[data-fewer-items="true"] .child-home .home-grid > :nth-child(n) { display: flex; }
+.child-settings { display: flex; flex-direction: column; gap: 14px; width: min(500px, 100%); margin: auto; }
+.child-settings .voice-toggle { min-height: 56px; }
+body .child-home .journey-map { flex: 1; min-height: 0; margin: 0; padding: 8px; display: flex; flex-direction: column; gap: 8px; }
+body .child-home .journey-map > div:first-child { display: none; }
+body .child-home .journey-map__worlds { flex: 1; min-height: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+body .journey-map__worlds button { min-height: 56px; padding: 8px; }
+body .detective-collection { margin: 0; padding: 10px; flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 8px; }
+body .detective-collection h2 { margin: 0; font-size: 1.2rem; }
+body .detective-collection-grid { flex: 1; min-height: 0; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); grid-template-rows: repeat(2,minmax(0,1fr)); margin: 0; gap: 8px; }
+body .detective-collection-grid figure { min-height: 0; display: flex; flex-direction: column; }
+body .detective-collection-grid .discovery-picture { min-height: 0; flex: 1; border-radius: 16px; }
+body .detective-collection-grid svg { height: 100%; width: 100%; }
+body .detective-collection-grid figcaption { font-size: .8rem; margin: 2px; }
+
+/* The full film is visible; decoration never crops the characters. */
+body .welcome { height: var(--child-stage-height); min-height: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: minmax(0, 1fr); gap: 20px; padding: max(16px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) max(16px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left)); background: radial-gradient(at top, #effcf5, #bce3dc); }
+body .welcome__video { position: relative; inset: auto; grid-column: 2; grid-row: 1; align-self: center; aspect-ratio: 16/9; height: auto; max-height: 100%; border-radius: 28px; overflow: hidden; box-shadow: 0 12px 40px #1a536b22; }
+body .welcome__shade { display: none; }
+body .welcome__content { grid-column: 1; grid-row: 1; align-self: center; justify-self: center; max-width: 560px; gap: 16px; }
+body .welcome__logo .brand-logo__wordmark { width: min(100%, 380px); }
+body .welcome__start { min-height: 64px; }
+.ambient-video__media { object-fit: contain; }
+@media (orientation: portrait) {
+  body .welcome { grid-template-columns: 1fr; grid-template-rows: minmax(0, 1fr) auto; gap: 16px; }
+  body .welcome__video { grid-column: 1; grid-row: 1; width: min(100%, 900px); justify-self: center; }
+  body .welcome__content { grid-row: 2; align-self: end; }
+}
+
+/* Single game stage: header, activity, reserved feedback. */
+body .detective-game.game-world { height: 100%; min-height: 0; max-width: 1240px; padding: 8px; display: flex; flex-direction: column; gap: 8px; overflow: visible; }
+#root > .detective-game.game-world { height: var(--child-stage-height); padding-top: max(8px, env(safe-area-inset-top)); padding-bottom: max(8px, env(safe-area-inset-bottom)); }
+body .detective-game .detective-header { margin: 0; min-height: 56px; gap: 8px; }
+body .detective-game .detective-header h1 { font-size: 1.25rem; }
+body .detective-game .detective-eyebrow { display: none; }
+body .detective-game .detective-layout { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: 12px; align-items: stretch; }
+body .detective-game .detective-case { grid-column: 2; grid-row: 1; position: static; display: flex; flex-direction: column; justify-content: center; padding: 12px; min-height: 0; }
+body .detective-game .detective-card { grid-column: 1; grid-row: 1; display: flex; flex-direction: column; min-height: 0; padding: 12px; gap: 8px; }
+body .detective-game .detective-card-top { flex-wrap: nowrap; gap: 8px; flex: none; }
+body .detective-game .detective-tools { flex-wrap: nowrap; gap: 4px; }
+body .detective-game .detective-tool { padding: 6px; font-size: .85rem; }
+body .detective-game .detective-chip { padding: 4px; font-size: .75rem; }
+body .detective-game .detective-card h2 { font-size: clamp(1rem, 2.7vw, 1.5rem); line-height: 1.3; margin: 0; }
+body .detective-game .detective-card > p { display: none; }
+body .detective-game .detective-stimulus { min-height: 56px; flex: 1; padding: 8px; margin: 0; gap: 8px; }
+body .detective-game .detective-stimulus--groups { flex-direction: row; }
+body .detective-game .detective-stimulus--groups .detective-stimulus-item { width: auto; padding: 4px; }
+body .detective-game .detective-stimulus--sequence { min-width: 0; gap: 2px; padding-inline: 4px; }
+body .detective-game .detective-stimulus--sequence .detective-token { font-size: clamp(16px,2.2vw,26px); }
+body .detective-game .detective-stimulus--sequence .detective-shape,
+body .detective-game .detective-stimulus--sequence .detective-swatch { width: 100%; max-width: 28px; height: 28px; }
+body .detective-game .detective-shape, body .detective-game .detective-swatch { width: clamp(32px, 6vw, 64px); height: clamp(32px, 6vw, 64px); }
+body .detective-game .detective-token { font-size: clamp(26px, 5vw, 48px); }
+body .detective-game .detective-quantity { font-size: clamp(14px, 2.6vw, 24px); }
+body .detective-game .detective-answers { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; flex: 1; min-height: 120px; }
+body .detective-game .detective-answers[data-count="2"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+body .detective-game .detective-answer { min-height: 56px !important; padding: 6px; gap: 4px; border-radius: 16px; }
+body .detective-game .detective-answer-label { font-size: .9rem; }
+body .detective-game .detective-option-audio { min-height: 56px; padding: 4px; }
+body .detective-game .detective-pair-grid { flex: 1; min-height: 0; margin: 0; grid-template-columns: repeat(4,minmax(0,1fr)); grid-auto-rows: minmax(56px,1fr); gap: 8px; }
+body .detective-game .detective-pair-grid--matching { grid-template-columns: repeat(2,minmax(0,1fr)); }
+body .detective-game .detective-pair-column { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); grid-auto-rows: minmax(56px,1fr); gap: 8px; }
+body .detective-game .detective-pair-card { min-width: 56px; min-height: 56px !important; padding: 4px; gap: 2px; border-radius: 14px; transition: background .2s, transform .2s; }
+body .detective-game .detective-pair-card[aria-pressed="true"] { animation: child-flip .25s ease-out; }
+body .detective-game .detective-pair-card small { font-size: .65rem; }
+body .detective-game .detective-pair-card .detective-token { font-size: clamp(24px, 4vw, 38px); }
+body .detective-game .detective-pair-card .detective-quantity { font-size: 12px; }
+body .detective-game .detective-feedback { flex: none; min-height: 56px; margin: 0; padding: 8px 12px; font-size: .95rem; line-height: 1.35; display: grid; place-items: center; text-align: center; }
+.offline-menu { position: relative; flex: none; }
+.offline-menu > summary { font-size: .8rem; padding: 4px 8px; }
+.offline-menu > .detective-offline, .offline-menu > .adventure-offline-preparation { position: absolute; z-index: 40; top: 100%; left: 0; width: min(270px, 80vw); background: #fff; padding: 12px; border-radius: 18px; box-shadow: 0 8px 25px #2345; }
+.offline-menu:not([open]) > div { display: none; }
+@keyframes child-flip { from { transform: rotateY(65deg); } to { transform: rotateY(0); } }
+@media (max-width: 850px) {
+  body .detective-game .detective-layout { grid-template-columns: minmax(0,1fr); }
+  body .detective-game .detective-case { display: none; }
+  body .detective-game .detective-card { padding: 8px; }
+}
+@media (min-width: 900px) and (min-height: 650px) {
+  body .child-home .home-grid { grid-template-columns: repeat(4,minmax(0,1fr)); }
+}
+@media (max-height: 450px) and (orientation: landscape) {
+  body .app-shell { gap: 4px; padding-top: 4px; padding-bottom: 4px; }
+  body .app-shell.app-shell--adventure { padding: 0; gap: 0; }
+  body .app-shell > .hero-card { min-height: 56px; }
+  body .child-home .home-grid { grid-template-columns: repeat(4,minmax(0,1fr)); grid-template-rows: minmax(0,1fr); }
+  body .child-home { gap: 4px; }
+  .home-view { gap: 4px; }
+  .home-view > h2 { display: none; }
+  body .child-home .journey-map__worlds { grid-template-columns: repeat(4,minmax(0,1fr)); }
+  body .child-home .journey-map__worlds button { padding: 4px; gap: 2px; }
+  body .child-home .journey-map__worlds button span { font-size: 1.2rem; }
+  body .child-home .game-card { padding: 0; gap: 0; }
+  .game-card__caption { padding: 4px 10px; }
+  .game-card__world-name { display: none; }
+  .child-nav button span { display: inline; font-size: 1rem; margin-inline-end: 4px; }
+  body .detective-game.game-world { gap: 4px; padding: 4px; }
+  body .detective-game .detective-layout { grid-template-columns: 1fr; }
+  body .detective-game .detective-case { display: none; }
+  body .detective-game .detective-card { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); grid-template-rows: auto minmax(56px,1fr) auto; padding: 4px; gap: 4px; }
+  body .detective-game .detective-card-top { grid-column: 2; grid-row: 1; }
+  body .detective-game .detective-card h2 { grid-column: 1; grid-row: 1; align-self: center; }
+  body .detective-game .detective-stimulus { grid-column: 1; grid-row: 2; }
+  body .detective-game .detective-answers { grid-column: 2; grid-row: 2; min-height: 56px; }
+  body .detective-game .detective-answer-wrap { position: relative; }
+  body .detective-game .detective-option-audio { position: absolute; inset: auto 0 0 auto; background: #ffffffe8; width: 56px; font-size: 0 !important; }
+  body .detective-game .detective-option-audio::after { content: '🔊'; font-size: 1rem; }
+  body .detective-game .detective-answer { padding-bottom: 56px; }
+  body .detective-game .detective-feedback { grid-column: 1/-1; grid-row: 3; }
+  body .detective-game .detective-pair-grid { grid-column: 1/-1; grid-row: 2; grid-template-columns: repeat(7,minmax(0,1fr)); grid-auto-rows: minmax(56px,1fr); }
+  body .detective-game .detective-pair-grid--matching { grid-template-columns: 1fr 1fr; }
+  body .detective-game .detective-pair-column { grid-template-columns: repeat(4,minmax(0,1fr)); }
+}
+
+/* Entry, setup, shared play and results use the same height budget. */
+body .profile-setup, body .shared-play { height: var(--child-stage-height); min-height: 0; padding: max(8px,env(safe-area-inset-top)) 12px max(8px,env(safe-area-inset-bottom)); display: grid; place-items: center; }
+body .profile-setup__card, body .shared-play > section { max-height: 100%; width: min(700px,100%); padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+body .profile-setup__card h1, body .shared-play h1 { margin: 0; font-size: clamp(1.2rem,3vw,1.8rem); }
+body .profile-setup__card p { margin: 0; font-size: .85rem; }
+body .profile-setup__logo { display: none; }
+body .profile-setup__gender { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; }
+body .profile-setup__gender button { flex: 1; min-height: 80px; padding: 8px; }
+body .profile-setup__learning { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+body .profile-setup input, body .profile-setup select, body .shared-play select { min-height: 56px; }
+body .profile-setup__field, body .profile-setup input, body .profile-setup select { min-width: 0; width: 100%; }
+.setup-actions { display: flex; gap: 8px; }
+body .setup-actions button { flex: 1; min-height: 56px; margin: 0; }
+body .shared-play__choices { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 8px; }
+body .shared-play__choices button { min-height: 80px; padding: 12px 6px; }
+body .shared-play__modes { gap: 12px; }
+body .shared-play p, body .shared-play .question-card__tag,
+body .shared-play__modes, body .shared-play__choices, body .shared-play__participants { margin: 0; }
+body .shared-play__modes button { padding: 10px; gap: 4px; }
+body .shared-play__participants label { flex: 1; min-width: 0; }
+body .shared-play__participants select { width: 100%; }
+.shared-feedback { min-height: 56px; display: grid; place-items: center; background: #e8f4ec; border-radius: 16px; }
+body .game-world:not(.detective-game) { height: 100%; min-height: 0; display: flex; flex-direction: column; padding: 8px; gap: 8px; }
+body .game-world__hud { min-height: 56px; padding: 0; gap: 8px; }
+body .game-world__identity h2 { font-size: 1.2rem; }
+body .game-world__eyebrow, body .game-world__icon { display: none; }
+body .game-world__stage { flex: 1; min-height: 0; padding: 0; display: flex; }
+body .game-mode-selector { flex: 1; min-height: 0; padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+body .game-mode-selector h2, body .game-mode-selector p { margin: 0; }
+body .game-mode-selector__options { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 0; }
+body .game-mode-card { min-height: 56px; padding: 12px; gap: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+body .game-mode-card .adventure-mode-preview { min-height: 0; height: auto !important; max-height: 24vh; flex: 1; object-fit: contain !important; }
+body .game-mode-card__icon { font-size: 2rem; }
+body .game-mode-card strong { font-size: 1.2rem; }
+body .summary-card { height: 100%; min-height: 0; padding: 12px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; overflow: visible; }
+#root > .summary-card { height: var(--child-stage-height); }
+body .summary-card h1, body .summary-card h2, body .summary-card h3, body .summary-card p { margin: 0; }
+body .summary-card h2 { font-size: 1.4rem; }
+body .summary-card__reward, body .summary-card__emoji { display: none; }
+body .summary-card .question-card__tag { margin: 0; }
+body .summary-card .detective-summary { min-height: 0; display: flex; flex-direction: column; align-items: center; gap: 8px; flex: 1; max-height: 60vh; }
+body .summary-card .discovery-picture { min-height: 0; flex: 1; width: min(260px,70vw); }
+body .summary-card .discovery-picture svg { height: 100%; }
+body .summary-card .detective-summary-counts { gap: 12px; }
+body .summary-card .detective-summary-counts p { font-size: .75rem; }
+body .summary-card .detective-summary-counts strong { font-size: 1rem; }
+body .summary-card .stars { margin: 0; font-size: 2rem; min-height: 0; }
+body .summary-card .summary-stars-motion { height: 46px; min-height: 0; }
+body .summary-card__actions { margin: 0; display: flex; flex-direction: row; width: 100%; justify-content: center; gap: 8px; }
+body .summary-card__actions button { min-height: 56px; padding: 8px 12px; }
+body .adventure-collection.summary-card { align-items: stretch; }
+body .adventure-collection .adventure-reward-grid { flex: 1; min-height: 0; grid-template-columns: repeat(2,minmax(0,1fr)); grid-template-rows: repeat(2,minmax(0,1fr)); gap: 8px; margin: 0; }
+body .adventure-collection .adventure-reward-grid > button { min-height: 56px; padding: 6px; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+body .adventure-collection .adventure-reward-grid .adventure-world-creation { flex: 1; height: auto; min-height: 0; }
+body .adventure-collection .adventure-summary-actions { margin: 0; }
+body .adventure { height: var(--child-stage-height); min-height: 0; padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); }
+@media (max-width: 400px) {
+  body .adventure-tray .adventure-toy { width: 60px; height: 64px; }
+}
+@media (max-height: 550px) and (orientation: landscape) {
+  body .adventure-board { grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
+  body .adventure-tray { gap: 6px; padding-inline: 8px; }
+  body .adventure-tray .adventure-toy { width: 56px; height: 60px; }
+}
+button:active:not(:disabled) { filter: brightness(.95); }
+button:focus-visible, summary:focus-visible { outline: 4px solid #186bad; outline-offset: 2px; }
+@media (max-height: 450px) {
+  body .welcome__copy span { display: none; }
+  body .welcome__content { gap: 8px; }
+  body .welcome__logo .brand-logo__wordmark { max-height: 80px; object-fit: contain; }
+  body .profile-setup__card, body .shared-play > section { gap: 6px; padding: 8px; }
+  body .profile-setup__eyebrow, body .profile-setup__card > p:not(.setup-progress):not([role="alert"]) { display: none; }
+  body .shared-play__modes { grid-template-columns: 1fr 1fr; }
+  body .shared-play__modes button { min-height: 56px; padding: 8px; }
+  body .shared-play__participants { display: flex; gap: 8px; }
+  body .shared-play--question > section { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
+  body .shared-play--question header { grid-column: 1/-1; }
+  body .shared-play--question .question-card__tag { grid-column: 1; grid-row: 2; }
+  body .shared-play--question h1 { grid-column: 1; grid-row: 3; }
+  body .shared-play--question .shared-play__choices { grid-column: 2; grid-row: 2/4; }
+  body .shared-play--question .shared-feedback { grid-column: 1/-1; font-size: .85rem; padding: 4px; }
+  body .game-mode-selector > p, body .game-mode-selector > .question-card__tag { display: none; }
+  body .game-mode-card { padding: 6px; gap: 4px; }
+  body .game-mode-card .adventure-mode-preview { max-height: 56px; }
+  body .summary-card { gap: 4px; }
+  body .summary-card .detective-summary { display: grid; grid-template-columns: 120px 1fr; max-height: 125px; gap: 4px 12px; }
+  body .summary-card .discovery-picture { grid-column: 1; grid-row: 1/4; width: 120px; height: 110px; }
+  body .summary-card .detective-summary h3, body .summary-card .detective-summary p, body .summary-card .detective-summary-counts { grid-column: 2; }
+  body .summary-card .summary-stars-motion { height: 32px; }
+  body .adventure-collection .adventure-reward-grid { grid-template-columns: repeat(4,minmax(0,1fr)); grid-template-rows: minmax(56px,1fr); }
+}
+@media (prefers-reduced-motion: reduce) { body .detective-game .detective-pair-card { animation: none; transition: none; } }
+html[data-reduced-motion="true"] .detective-game .detective-pair-card { animation: none; transition: none; }
+body .detective-game.detective-large-targets button { min-height: 68px !important; min-width: 68px; }
+@media (max-width: 400px) {
+  body .detective-game.detective-large-targets .detective-pair-grid { grid-template-columns: repeat(3,minmax(68px,1fr)); min-height: min-content; }
+  body .detective-game.detective-large-targets .detective-pair-grid--matching { grid-template-columns: 1fr 1fr; }
+  body .detective-game.detective-large-targets .detective-pair-column { grid-template-columns: 1fr; }
+  body .detective-game.detective-large-targets .detective-card { min-height: min-content; }
+}

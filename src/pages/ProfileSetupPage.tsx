@@ -19,6 +19,7 @@ interface ProfileSetupPageProps {
 }
 
 export function ProfileSetupPage({ learner, isNew, onSave }: ProfileSetupPageProps) {
+  const [step, setStep] = useState(0);
   const [name, setName] = useState(isNew ? '' : learner.name);
   const [gender, setGender] = useState<LearnerGender | null>(isNew ? null : learner.gender);
   const [age, setAge] = useState<LocalLearnerState['age'] | null>(isNew ? null : learner.age);
@@ -30,6 +31,10 @@ export function ProfileSetupPage({ learner, isNew, onSave }: ProfileSetupPagePro
 
   function handleSubmit(event: FormEvent) {
     event.preventDefault();
+    if (step < 2) {
+      if (step === 0 && !nameIsValid) { setShowErrors(true); return; }
+      setShowErrors(false); setStep(step + 1); return;
+    }
     if (!nameIsValid || !choicesAreValid) {
       setShowErrors(true);
       return;
@@ -45,20 +50,22 @@ export function ProfileSetupPage({ learner, isNew, onSave }: ProfileSetupPagePro
         <h1>{isNew ? 'מי מצטרף אלינו להרפתקה?' : 'בואו נתאים את הפרופיל'}</h1>
         <p>הפרטים נשמרים רק במכשיר הזה ומכוונים את השאלות והמשחקים.</p>
 
-        <label className="profile-setup__field" htmlFor="learner-name">
+        <p className="setup-progress" role="status">שלב {step + 1} מתוך 3</p>
+        {step === 0 && <><label className="profile-setup__field" htmlFor="learner-name">
           <span>כינוי (אופציונלי)</span>
-          <input id="learner-name" value={name} onChange={(event) => setName(event.target.value)} autoComplete="off" inputMode="text" maxLength={30} placeholder="אפשר לדלג" aria-invalid={showErrors && !nameIsValid} autoFocus />
+          <input id="learner-name" value={name} onChange={(event) => setName(event.target.value)} autoComplete="off" inputMode="text" maxLength={30} placeholder="אפשר לדלג" aria-invalid={showErrors && !nameIsValid} />
         </label>
         {showErrors && !nameIsValid ? <p className="profile-setup__error" role="alert">אם בוחרים כינוי, יש לכתוב אותו בעברית.</p> : null}
+        </>}
 
-        <fieldset className="profile-setup__gender">
+        {step === 1 && <fieldset className="profile-setup__gender">
           <legend>איזו דמות תלווה אותך? (אופציונלי)</legend>
           <button type="button" className={gender === 'boy' ? 'is-selected' : ''} aria-pressed={gender === 'boy'} onClick={() => setGender('boy')}><span aria-hidden="true">👦</span>אני בן</button>
           <button type="button" className={gender === 'girl' ? 'is-selected' : ''} aria-pressed={gender === 'girl'} onClick={() => setGender('girl')}><span aria-hidden="true">👧</span>אני בת</button>
           <button type="button" className={gender === null ? 'is-selected' : ''} aria-pressed={gender === null} onClick={() => setGender(null)}><span aria-hidden="true">✨</span>בלי העדפה</button>
-        </fieldset>
+        </fieldset>}
 
-        <div className="profile-setup__learning" aria-label="הגדרות למידה">
+        {step === 2 && <div className="profile-setup__learning" aria-label="הגדרות למידה">
           <SelectField id="learner-age" label="גיל" value={age ?? ''} onChange={(event) => setAge(Number(event.target.value) as LocalLearnerState['age'])} aria-invalid={showErrors && age === null}>
             <option value="" disabled>בחרו גיל</option>
             {ageOptions.map((option) => <option key={option} value={option}>{option}</option>)}
@@ -67,10 +74,13 @@ export function ProfileSetupPage({ learner, isNew, onSave }: ProfileSetupPagePro
             <option value="" disabled>בחרו רמה</option>
             {difficultyOptions.map((option) => <option key={option.id} value={option.id}>{option.label}</option>)}
           </SelectField>
-        </div>
+        </div>}
         {showErrors && !choicesAreValid ? <p className="profile-setup__error" role="alert">צריך לבחור גיל ורמה כדי להתאים את המשחקים.</p> : null}
 
-        <button className="profile-setup__submit" type="submit">יאללה, מתחילים!</button>
+        <div className="setup-actions">
+          {step > 0 && <button className="btn btn--secondary" type="button" onClick={() => { setShowErrors(false); setStep(step - 1); }}>חזרה</button>}
+          <button className="profile-setup__submit" type="submit">{step < 2 ? 'ממשיכים' : 'יאללה, מתחילים!'}</button>
+        </div>
       </form>
     </main>
   );

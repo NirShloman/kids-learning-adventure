@@ -2,7 +2,7 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 import letters from '../../src/content/letters.json';
 import type { DetectiveItem } from '../../src/types/detective.types';
-import { answerChoice, answerPair, canResume, newRound, useHint, orderBySeed } from '../../src/components/games/detective/detectiveEngine';
+import { answerChoice, answerPair, canResume, newRound, useHint, orderBySeed, resumeRound } from '../../src/components/games/detective/detectiveEngine';
 import { createProfile, getProfileData, saveDetectiveRound, finishDetectiveRound, getDetectiveProgress, deleteProfile } from '../../src/services/learningStoreService';
 const item=letters.items.find(v=>v.ages[0]===4&&v.difficulty==='medium') as DetectiveItem;
 const correct=item.correctOptionId!,wrong=item.options!.filter(v=>v.id!==correct);
@@ -18,12 +18,20 @@ describe('detective state and local evidence',()=>{
     expect(adjacent/boards.length).toBeLessThan(2);
     expect(cards).toEqual(Array.from({length:14},(_,i)=>i));
   });
-  it('offers one retry and then demonstrates, without awarding independent success',()=>{
+  it('allows repeated mistakes until the child solves the question',()=>{
     const first=answerChoice(round(),item,wrong[0].id);
     expect(first.attempts[item.id]).toBe(1);expect(first.outcomes[item.id]).toBeUndefined();expect(first.hinted).toContain(item.id);
-    expect(answerChoice(first,item,wrong[0].id)).toBe(first);
-    const second=answerChoice(first,item,wrong[1].id);expect(second.outcomes[item.id]).toBe('demonstrated');
-    expect(answerChoice(second,item,correct)).toBe(second);
+    const repeated=answerChoice(first,item,wrong[0].id);
+    expect(repeated.attempts[item.id]).toBe(2);
+    expect(repeated.outcomes[item.id]).toBeUndefined();
+    const second=answerChoice(repeated,item,wrong[1].id);expect(second.outcomes[item.id]).toBeUndefined();
+    expect(answerChoice(second,item,correct).outcomes[item.id]).toBe('assisted');
+  });
+  it('reopens legacy demonstrations while retaining genuine answers and attempts',()=>{
+    const old={...round(),steps:[{gameId:'letters' as const,ids:[item.id]},{gameId:'letters' as const,ids:['next']}],index:1,outcomes:{[item.id]:'demonstrated' as const,next:'independent' as const},attempts:{[item.id]:2}};
+    const restored=resumeRound(old);
+    expect(restored.index).toBe(0);expect(restored.outcomes).toEqual({next:'independent'});
+    expect(restored.attempts).toEqual(old.attempts);expect(old.outcomes[item.id]).toBe('demonstrated');
   });
   it('distinguishes independent, hinted, retry and pair outcomes',()=>{
     expect(answerChoice(round(),item,correct).outcomes[item.id]).toBe('independent');

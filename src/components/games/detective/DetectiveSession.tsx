@@ -6,6 +6,9 @@ import type {
 } from "../../../types/detective.types";
 import type { LearnerProfile, VisualToken } from "../../../types";
 import { useSpeech } from "../../../hooks/useSpeech";
+import { useGameFeedback } from "../../../hooks/useGameFeedback";
+import { DetectiveOfflinePreparation } from './DetectiveOfflinePreparation';
+import { platformRuntime } from '../../../services/platformRuntime';
 import {
   saveDetectiveRound,
   finishDetectiveRound,
@@ -24,7 +27,7 @@ import {
 } from "./DetectiveVisual";
 import { gameDefinitions } from "../../../data/games";
 import "./detective.css";
-import { DetectiveOfflinePreparation } from './DetectiveOfflinePreparation';
+
 
 interface Props {
   profile: LearnerProfile;
@@ -48,8 +51,8 @@ export function DetectiveSession({
     live = useRef(initialRound);
   const [selection, setSelection] = useState<string[]>([]),
     selectionRef = useRef<string[]>([]);
-  const [pairFeedback, setPairFeedback] = useState(""),
-    pairLocked = useRef(false);
+  const feedback = useGameFeedback(voiceEnabled);
+  const [pairPhase, setPairPhase] = useState<'first' | 'second' | 'feedback'>('first');
   const [peek, setPeek] = useState<string | null>(null);
   const startedAt = useRef(performance.now()),
     finishGuard = useRef(false),
@@ -139,40 +142,41 @@ export function DetectiveSession({
     );
   }
   function choose(optionId: string) {
+    if (feedback.locked.current) return;
     const before = live.current,
       next = answerChoice(before, current, optionId);
     if (before === next) return;
     commit(next, current, optionId === current.correctOptionId, before);
-    speak(
-      next.outcomes[current.id]
-        ? (current.explanation ?? "כל הכבוד!")
-        : (current.hint ?? "ננסה שוב."),
-    );
+    const correct = optionId === current.correctOptionId;
+    feedback.run(correct ? (current.explanation ?? 'כל הכבוד!') : (current.hint ?? 'ננסה שוב.'),
+      () => { if (correct) advance(); else startedAt.current = performance.now(); }, correct);
   }
   function hint() {
-    if (pairLocked.current) return;
+    if (feedback.locked.current) return;
     const item = pairMode
       ? stepItems.find((item) => !live.current.outcomes[item.id])
       : current;
     if (!item || live.current.outcomes[item.id]) return;
     commit(useHint(live.current, item.id));
-    speak(item.hint ?? "נביט שוב.");
     if (pairMode) {
       setPeek(item.id);
       selectionRef.current = [];
       setSelection([]);
+      setPairPhase('feedback');
+      feedback.run(item.hint ?? 'נביט שוב.', clearPair);
+    } else {
+      speak(item.hint ?? 'נביט שוב.');
     }
   }
   function clearPair() {
     selectionRef.current = [];
     setSelection([]);
-    setPairFeedback("");
     setPeek(null);
-    pairLocked.current = false;
+    setPairPhase('first');
     startedAt.current = performance.now();
   }
   function pairClick(cardId: string) {
-    if (pairLocked.current || peek) return;
+    if (feedback.locked.current || peek) return;
     const card = cards.find((c) => c.id === cardId);
     if (
       !card ||
@@ -189,19 +193,22 @@ export function DetectiveSession({
     const next = [...selectionRef.current, cardId];
     selectionRef.current = next;
     setSelection(next);
-    if (next.length !== 2 || !first) return;
-    pairLocked.current = true;
+    setPairPhase('second');
+    if (next.length !== 2 || !first) { speak(card.token.label, { mode: 'hint' }); return; }
+    setPairPhase('feedback');
     const correct = first.item.id === card.item.id;
     const before = live.current,
       updated = answerPair(before, first.item.id, correct);
     commit(updated, first.item, correct, before);
-    const feedback = correct
+    const text = correct
       ? (first.item.explanation ?? "מצאנו זוג!")
       : "הכרטיסים שונים. נזכור אותם וננסה שוב.";
-    setPairFeedback(feedback);
-    speak(feedback);
+    feedback.run(text, () => {
+      clearPair();
+      if (step.ids.every(id => live.current.outcomes[id])) advance();
+    }, correct);
   }
-  function next() {
+  function advance() {
     const latest = live.current;
     // Two activations can arrive before React commits the next activity.
     if (
@@ -211,15 +218,20 @@ export function DetectiveSession({
       return;
     stop();
     clearPair();
-    if (latest.index + 1 === latest.steps.length) {
+    const remaining = latest.steps.findIndex((entry, index) => index > latest.index && entry.ids.some(id => !latest.outcomes[id]));
+    if (remaining < 0) {
       if (finishGuard.current) return;
       finishGuard.current = true;
       finishDetectiveRound(profile.id, scope, latest);
       onFinish(latest);
       return;
     }
-    commit({ ...latest, index: latest.index + 1 });
+    commit({ ...latest, index: remaining });
   }
+  // An answered checkpoint can be restored between feedback and its transition.
+  useEffect(() => {
+    if (complete && !feedback.locked.current) feedback.run(current.explanation ?? 'כל הכבוד!', advance, true);
+  }, [round.index]);
   function renderPair(card: (typeof cards)[number]) {
     const matched = Boolean(round.outcomes[card.item.id]),
       selected = selection.includes(card.id),
@@ -240,7 +252,7 @@ export function DetectiveSession({
             visible ? card.token.label : `קלף ${cards.indexOf(card) + 1}, סגור`
           }
           aria-pressed={selected}
-          disabled={matched || Boolean(peek) || pairLocked.current}
+          disabled={matched || Boolean(peek) || feedback.busy}
           onClick={() => pairClick(card.id)}
         >
           {visible ? (
@@ -251,18 +263,6 @@ export function DetectiveSession({
           ) : (
             <span aria-hidden="true">✦</span>
           )}
-        </button>
-        <button
-          type="button"
-          className="detective-option-audio"
-          style={{ visibility: visible && !matched ? "visible" : "hidden" }}
-          disabled={!voiceEnabled || !visible || matched}
-          aria-label={
-            visible ? `הקראת כרטיס: ${card.token.label}` : "הקראת כרטיס"
-          }
-          onClick={() => speak(card.token.label)}
-        >
-          🔊 הקראה
         </button>
       </div>
     );
@@ -276,10 +276,12 @@ export function DetectiveSession({
       data-game={step.gameId}
       data-age={round.age}
       data-difficulty={round.difficulty}
+      data-pair-phase={pairPhase}
+      data-feedback={feedback.busy}
     >
       <header className="detective-header">
         <div>
-          <span className="detective-eyebrow">ידע׳לה · בלשי התגליות</span>
+          <span className="detective-eyebrow">עולמיה · בלשי התגליות</span>
           <h1>{scope === "mixed" ? "תרגול מותאם" : title}</h1>
         </div>
         <button
@@ -324,17 +326,18 @@ export function DetectiveSession({
               {title} · {round.index + 1}/{round.steps.length}
             </span>
             <div className="detective-tools">
+              {import.meta.env.PROD && !platformRuntime.native && <details className="offline-menu"><summary aria-label="שמירה ללא רשת">⇩</summary><DetectiveOfflinePreparation items={items} round={round} /></details>}
               <button
                 className="detective-tool"
                 aria-label="הקראת ההוראה"
-                disabled={!voiceEnabled}
+                disabled={!voiceEnabled || feedback.busy}
                 onClick={() => speak(prompt)}
               >
                 🔊 שוב
               </button>
               <button
                 className="detective-tool"
-                disabled={complete || pairLocked.current}
+                disabled={complete || feedback.busy}
                 onClick={hint}
               >
                 💡 רמז
@@ -368,7 +371,7 @@ export function DetectiveSession({
                         }
                         data-correct={correct}
                         aria-label={option.label}
-                        disabled={Boolean(outcome) || wrong}
+                        disabled={Boolean(outcome) || feedback.busy}
                         onClick={() => choose(option.id)}
                       >
                         {option.visualToken ? (
@@ -389,7 +392,7 @@ export function DetectiveSession({
                         type="button"
                         className="detective-option-audio"
                         aria-label={`הקראת תשובה: ${option.label}`}
-                        disabled={!voiceEnabled}
+                        disabled={!voiceEnabled || feedback.busy}
                         onClick={() => speak(option.label)}
                       >
                         🔊 הקראה
@@ -398,33 +401,6 @@ export function DetectiveSession({
                   );
                 })}
               </div>
-              {outcome ? (
-                <div className="detective-feedback" role="status">
-                  <strong>
-                    {outcome === "independent"
-                      ? "גיליתם בעצמכם!"
-                      : outcome === "assisted"
-                        ? "הרמז עזר לגלות!"
-                        : "מגלים ביחד"}
-                  </strong>
-                  <p>{current.explanation}</p>
-                  <button
-                    className="detective-tool"
-                    disabled={!voiceEnabled}
-                    onClick={() => speak(current.explanation ?? "")}
-                  >
-                    🔊 הקראת ההסבר
-                  </button>
-                </div>
-              ) : hasHint ? (
-                <div
-                  className="detective-feedback detective-feedback--hint"
-                  role="status"
-                >
-                  <strong>נחשוב יחד</strong>
-                  <p>{current.hint}</p>
-                </div>
-              ) : null}
             </>
           ) : (
             <>
@@ -443,43 +419,14 @@ export function DetectiveSession({
                     ))
                   : cards.map(renderPair)}
               </div>
-              {peek ? (
-                <div
-                  className="detective-feedback detective-feedback--hint"
-                  role="status"
-                >
-                  <p>
-                    {stepItems.find((item) => item.id === peek)?.explanation}
-                  </p>
-                  <button className="detective-next" onClick={clearPair}>
-                    מסתירים ומנסים
-                  </button>
-                </div>
-              ) : null}
-              {pairFeedback ? (
-                <div className="detective-feedback" role="status">
-                  <p>{pairFeedback}</p>
-                  {!complete ? (
-                    <button className="detective-next" onClick={clearPair}>
-                      ממשיכים לחפש
-                    </button>
-                  ) : null}
-                </div>
-              ) : null}
             </>
           )}
-          {complete ? (
-            <button type="button" className="detective-next" onClick={next}>
-              {round.index + 1 === round.steps.length
-                ? "מגלים את התמונה"
-                : pairMode
-                  ? "לתגלית הבאה"
-                  : "לשאלה הבאה"}
-            </button>
-          ) : null}
+          <div className={`detective-feedback ${!outcome && hasHint ? 'detective-feedback--hint' : ''}`} role="status" aria-live="polite">
+            {outcome && feedback.busy && !pairMode && <strong>{outcome === 'independent' ? 'גיליתם בעצמכם!' : 'הרמז עזר לגלות!'}</strong>}
+            {feedback.message || (pairMode ? `מצאנו ${stepItems.filter(item => round.outcomes[item.id]).length} מתוך ${stepItems.length} זוגות` : hasHint ? current.hint : 'מקשיבים, חושבים ובוחרים')}
+          </div>
         </div>
       </div>
-      <DetectiveOfflinePreparation items={items} round={round} />
       <span className="visually-hidden">{discoveryThemes[scope].icon}</span>
     </section>
   );

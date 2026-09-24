@@ -23,6 +23,7 @@ public final class NativeLearningPlugin: CAPPlugin, CAPBridgedPlugin, AVSpeechSy
     ]
 
     private let synthesizer = AVSpeechSynthesizer()
+    private var speechRequests: [ObjectIdentifier: String] = [:]
     private let fileManager = FileManager.default
 
     public override func load() {
@@ -80,8 +81,9 @@ public final class NativeLearningPlugin: CAPPlugin, CAPBridgedPlugin, AVSpeechSy
     }
 
     @objc public func speak(_ call: CAPPluginCall) {
-        guard let voice = hebrewVoice, let text = call.getString("text"), !text.isEmpty else { call.resolve(); return }
+        guard let voice = hebrewVoice, let text = call.getString("text"), !text.isEmpty else { call.reject("Speech unavailable"); return }
         let utterance = AVSpeechUtterance(string: text)
+        speechRequests[ObjectIdentifier(utterance)] = call.getString("requestId") ?? UUID().uuidString
         utterance.voice = voice
         utterance.rate = Float(call.getDouble("rate") ?? 0.84) * AVSpeechUtteranceDefaultSpeechRate
         utterance.pitchMultiplier = Float(call.getDouble("pitch") ?? 1.04)
@@ -97,15 +99,15 @@ public final class NativeLearningPlugin: CAPPlugin, CAPBridgedPlugin, AVSpeechSy
     }
 
     public func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didStart utterance: AVSpeechUtterance) {
-        notifyListeners("speechState", data: ["speaking": true])
+        notifyListeners("speechState", data: ["speaking": true, "requestId": speechRequests[ObjectIdentifier(utterance)] ?? ""])
     }
 
     public func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
-        notifyListeners("speechState", data: ["speaking": false])
+        notifyListeners("speechState", data: ["speaking": false, "requestId": speechRequests.removeValue(forKey: ObjectIdentifier(utterance)) ?? ""])
     }
 
     public func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {
-        notifyListeners("speechState", data: ["speaking": false])
+        notifyListeners("speechState", data: ["speaking": false, "requestId": speechRequests.removeValue(forKey: ObjectIdentifier(utterance)) ?? "", "error": true])
     }
 }
 

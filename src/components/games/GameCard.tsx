@@ -1,10 +1,7 @@
-import type { CSSProperties } from 'react';
 import { GameDefinition } from '../../types';
 import { gameInstructions } from '../../data/gameInstructions';
 import { useSpeech } from '../../hooks/useSpeech';
-import { Button } from '../common/Button';
-import { GameImage } from '../common/GameImage';
-import { imageAssets } from '../../assets/assetManifest';
+import { worldCollection } from '../../data/worldCollection';
 import { motion } from 'motion/react';
 
 interface GameCardProps {
@@ -16,30 +13,28 @@ interface GameCardProps {
 export function GameCard({ game, voiceEnabled, onPlay }: GameCardProps) {
   const { getSpeakProps } = useSpeech(voiceEnabled);
   const speechText = gameInstructions[game.id]?.hoverText ?? `${game.title}. ${game.description}`;
-  const backgroundStyle = game.backgroundAssetId
-    ? { '--game-card-art': `url(${imageAssets[game.backgroundAssetId]})` } as CSSProperties
-    : undefined;
+  const world = worldCollection.find(world => world.gameId === game.id)!;
 
   return (
-    <motion.article
+    <motion.button
+      type="button"
+      onClick={() => onPlay(game.id)}
+      aria-label={`מתחילים את ${game.title}`}
       className={`game-card game-card--${game.accent} game-card--premium`}
       data-game-id={game.id}
-      style={backgroundStyle}
       tabIndex={0}
       whileHover={{ y: -7, scale: 1.015 }}
       whileTap={{ scale: 0.98 }}
       transition={{ type: 'spring', stiffness: 360, damping: 25 }}
       {...getSpeakProps<HTMLElement>(speechText)}
     >
-      <div className="game-card__shine" aria-hidden="true" />
       <div className="game-card__visual" aria-hidden="true">
-        <GameImage assetId={game.imageAssetId} alt="" className="game-card__image" decorative />
-        <span className="game-card__icon">{game.emoji}</span>
+        <img src={world.art} alt="" className="game-card__cover" decoding="async" />
       </div>
-      <h3>{game.title}</h3>
-      <p>{game.description}</p>
-      <small>מתאים לגילאי {game.recommendedAges.join(', ')}</small>
-      <Button onClick={() => onPlay(game.id)} fullWidth {...getSpeakProps<HTMLButtonElement>(`מתחילים את ${game.title}`)}>מתחילים</Button>
-    </motion.article>
+      <div className="game-card__caption">
+        <div><h3>{game.title}</h3><span className="game-card__world-name">{world.name}</span></div>
+        <span className="game-card__play" aria-hidden="true">←</span>
+      </div>
+    </motion.button>
   );
 }

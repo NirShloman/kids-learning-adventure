@@ -23,6 +23,7 @@ for (const game of ["letters", "numbers", "shapes", "colors"] as const)
         colors: "צבעים",
       }[game] as "אותיות",
     );
+    await page.locator(".offline-menu > summary").click();
     await page
       .getByRole("button", { name: "שמירה למשחק ללא רשת", exact: true })
       .click();

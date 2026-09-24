@@ -8,5 +8,5 @@ export function toNarrationText(text: string): string {
   for(const prefix of ['קלף ','רמז: התשובה היא ']){
     if(text.startsWith(prefix))return prefix+toNarrationText(text.slice(prefix.length));
   }
-  return text.replace(/ידע[׳']לה/gu, brand.pronunciation);
+  return text.replace(/עולמיה|\bOlamia\b/giu, brand.pronunciation);
 }

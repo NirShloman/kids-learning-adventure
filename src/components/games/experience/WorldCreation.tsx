@@ -167,7 +167,7 @@ export function WorldCreation({
                 : "139"
             }
             textAnchor="middle"
-            fontFamily="Rubik"
+            fontFamily="Heebo Variable"
             fontWeight="800"
             fontSize="65"
             fill="#75558e"

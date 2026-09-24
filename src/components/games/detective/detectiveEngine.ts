@@ -104,8 +104,7 @@ export function answerChoice(
 ): DetectiveRound {
   if (
     round.outcomes[item.id] ||
-    !item.options?.some((option) => option.id === optionId) ||
-    round.wrongOptions[item.id]?.includes(optionId)
+    !item.options?.some((option) => option.id === optionId)
   )
     return round;
   const attempt = (round.attempts[item.id] ?? 0) + 1,
@@ -114,9 +113,7 @@ export function answerChoice(
     ? attempt === 1 && !round.hinted.includes(item.id)
       ? "independent"
       : "assisted"
-    : attempt >= 2
-      ? "demonstrated"
-      : undefined;
+    : undefined;
   return {
     ...round,
     attempts: { ...round.attempts, [item.id]: attempt },
@@ -128,12 +125,19 @@ export function answerChoice(
       ? round.wrongOptions
       : {
           ...round.wrongOptions,
-          [item.id]: [...(round.wrongOptions[item.id] ?? []), optionId],
+          [item.id]: [...new Set([...(round.wrongOptions[item.id] ?? []), optionId])],
         },
     outcomes: outcome
       ? { ...round.outcomes, [item.id]: outcome }
       : round.outcomes,
   };
+}
+/** Replay old demonstrations in active sessions, keeping genuine answers and all history. */
+export function resumeRound(round: DetectiveRound): DetectiveRound {
+  if (!Object.values(round.outcomes).includes('demonstrated')) return round;
+  const outcomes = Object.fromEntries(Object.entries(round.outcomes).filter(([, value]) => value !== 'demonstrated'));
+  const index = round.steps.findIndex(step => step.ids.some(id => !outcomes[id]));
+  return { ...round, outcomes, index: index < 0 ? round.index : index };
 }
 export function answerPair(
   round: DetectiveRound,

@@ -74,11 +74,13 @@ test("AUDIO-01: real packaged narration plays, repeats without overlap and respe
     .click();
   // The styled switch exposes its label as the touch target; the native input
   // is visually hidden beneath that label on compact layouts.
-  await page.locator('label[for="learner-voice"]').click();
+  await page.getByRole('button', { name: '⚙️ צלילים' }).click();
+  await page.locator('#learner-voice').uncheck();
   await expect(page.locator("#learner-voice")).not.toBeChecked();
   const before = await page.evaluate(
     () => (window as any).__adventureAudio.plays,
   );
+  await page.getByRole('button', { name: '🎲 משחקים' }).click();
   await openGame(page, "מספרים");
   await selectGameMode(page, "experience");
   await page.locator(".adventure-intro .adventure-primary").click();

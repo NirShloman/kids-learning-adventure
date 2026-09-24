@@ -41,6 +41,7 @@ function toAsset(data: Record<string, unknown>): NarrationAsset {
     cached: false,
     ...(typeof data.checksum === 'string' ? { checksum: data.checksum } : {}),
     ...(typeof data.byteLength === 'number' ? { byteLength: data.byteLength } : {}),
+    ...(typeof data.durationMs === 'number' ? { durationMs: data.durationMs } : {}),
     ...(typeof data.retryCount === 'number' ? { retryCount: data.retryCount } : {}),
     ...(typeof data.errorCode === 'string' ? { errorCode: data.errorCode } : {}),
     ...(typeof data.leaseOwner === 'string' ? { leaseOwner: data.leaseOwner } : {}),
@@ -182,6 +183,10 @@ export class FirebaseStorageGateway implements NarrationStorageGateway {
     } catch (error) {
       const code = error && typeof error === 'object' ? Number((error as { code?: unknown }).code) : 0;
       if (code !== 412) throw error;
+      const [existing] = await file.getMetadata();
+      if (existing.metadata?.checksum !== metadata.checksum || Number(existing.size) !== audio.byteLength) {
+        throw new Error('IMMUTABLE_AUDIO_CONFLICT');
+      }
     }
     return publicDownloadUrl(bucket.name, path);
   }

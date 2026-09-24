@@ -38,7 +38,7 @@ for (const [letter] of alphabet)
             Number(clip.getAttribute("height")),
           );
           ctx.clip();
-          ctx.font = "800 156px Rubik";
+          ctx.font = `800 156px ${getComputedStyle(text).fontFamily}`;
           ctx.textAlign = "center";
           ctx.fillText(text.textContent!, 90, 139);
           const data = ctx.getImageData(0, 0, 180, 180).data;

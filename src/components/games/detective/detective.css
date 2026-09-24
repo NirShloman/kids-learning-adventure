@@ -7,7 +7,7 @@
   margin: auto;
   padding: 16px max(12px, env(safe-area-inset-right))
     max(24px, env(safe-area-inset-bottom));
-  font-family: Rubik, sans-serif;
+  font-family: var(--font-family);
 }
 .detective-header {
   display: flex;

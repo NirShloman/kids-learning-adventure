@@ -10,8 +10,8 @@ interface BrandLogoProps {
 export function BrandLogo({ className = '', decorative = false, tagline = brand.tagline, variant = 'full' }: BrandLogoProps) {
   const classNames = ['brand-logo', `brand-logo--${variant}`, className].filter(Boolean).join(' ');
   const source = variant === 'full'
-    ? '/assets/brand/yadaale-logo-horizontal.webp'
-    : '/assets/brand/yadaale-mark.webp';
+    ? '/assets/brand/olamia-logo-horizontal.webp'
+    : '/assets/brand/olamia-mark.webp';
 
   return (
     <div
