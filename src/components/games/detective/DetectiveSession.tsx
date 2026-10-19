@@ -248,6 +248,7 @@ export function DetectiveSession({
               : `matching-${card.side === "a" ? "left" : "right"}`
           }
           data-pair-id={card.item.id}
+          data-token-kind={card.token.kind}
           aria-label={
             visible ? card.token.label : `קלף ${cards.indexOf(card) + 1}, סגור`
           }
@@ -408,6 +409,7 @@ export function DetectiveSession({
               <div
                 className={`detective-pair-grid ${step.gameId === "matching" ? "detective-pair-grid--matching" : ""}`}
                 data-card-count={cards.length}
+                data-counting={stepItems.some(item => item.leftVisual?.kind === 'quantity' || item.rightVisual?.kind === 'quantity')}
               >
                 {step.gameId === "matching"
                   ? ["a", "b"].map((side) => (

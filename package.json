@@ -5,6 +5,8 @@
   "type": "module",
   "description": "אפליקציית Web/PWA משודרגת ללימוד חוויתי בעברית לילדים בגילאי 3-6, עם קול הדרכה, לובי עשיר, אנימציות, משחקים נוספים ומאגר שאלות מורחב.",
   "scripts": {
+    "store:check": "npm audit --omit=dev --audit-level=high && node scripts/store-readiness.mjs --online",
+    "store:inventory": "node scripts/store-readiness.mjs",
     "dev": "vite",
     "build": "npm run validate:content && npm run validate:privacy && tsc -b && vite build && node scripts/finalize-service-worker.mjs",
     "build:web": "npm run build",
@@ -12,9 +14,10 @@
     "build:native": "npm run build && npm run cap:sync",
     "build:native:release": "npm run build:release && npm run cap:sync",
     "cap:sync": "cap sync",
-    "android:bundle": "npm run build:native:release && node scripts/run-gradle.mjs bundleRelease",
+    "android:bundle": "npm run store:check && npm run build:native:release && node scripts/run-gradle.mjs :app:bundleRelease",
     "ios:archive": "npm run build:native:release && xcodebuild -project ios/App/App.xcodeproj -scheme App -configuration Release -archivePath build/LomdimBekef.xcarchive archive",
     "mobile:verify": "node scripts/verify-mobile-config.mjs",
+    "android:verify:apk": "node scripts/verify-android-apk.mjs",
     "mobile:assets": "node scripts/generate-mobile-assets.mjs",
     "deploy": "npm run build:release && wrangler deploy",
     "preview": "vite preview --host 0.0.0.0",
@@ -50,6 +53,7 @@
     "test:offline": "node scripts/offline-smoke.mjs",
     "test:e2e": "playwright test --project=local-chromium --project=local-firefox --project=local-webkit --project=mobile-chrome --project=mobile-safari --project=mobile-android-tablet --project=mobile-ipad --project=adventure-content --project=adventure-touch --project=adventure-recordings --project=detective-matrix-phone --project=detective-matrix-tablet --project=detective-offline --project=detective-adaptive-phone --project=detective-adaptive-tablet",
     "test:e2e:smoke": "playwright test tests/e2e/smoke.local.spec.ts --project=local-chromium --project=mobile-chrome",
+    "test:e2e:release": "node scripts/release-browser-tests.mjs",
     "test:e2e:visual": "playwright test tests/e2e/experience-visual.local.spec.ts --project=local-chromium --project=mobile-chrome",
     "test:e2e:ui": "playwright test --ui",
     "test:e2e:local": "playwright test --project=local-chromium --project=local-firefox --project=local-webkit --project=mobile-chrome --project=mobile-safari --project=mobile-android-tablet --project=mobile-ipad",
@@ -60,10 +64,10 @@
     "test:detectives:offline": "node scripts/run-detective-offline.mjs"
   },
   "dependencies": {
-    "@capacitor/android": "8.5.0",
+    "@capacitor/android": "8.5.3",
     "@capacitor/app": "8.0.1",
-    "@capacitor/core": "8.5.0",
-    "@capacitor/ios": "8.5.0",
+    "@capacitor/core": "8.5.3",
+    "@capacitor/ios": "8.5.3",
     "@capacitor/splash-screen": "8.0.1",
     "@fontsource-variable/heebo": "^5.3.0",
     "@rive-app/react-webgl2": "^4.29.5",
@@ -79,15 +83,20 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.2",
-    "@capacitor/cli": "8.5.0",
+    "@capacitor/cli": "8.5.3",
     "@playwright/test": "^1.60.0",
     "@types/matter-js": "^0.20.2",
     "@types/node": "^25.9.1",
     "ajv": "^8.20.0",
     "jsdom": "^29.1.1",
-    "sharp": "0.35.3",
+    "sharp": "0.35.5",
     "tsx": "^4.20.6",
     "vitest": "^4.0.14",
     "wrangler": "^4.112.0"
+  },
+  "overrides": {
+    "xcode": {
+      "uuid": "11.1.1"
+    }
   }
 }

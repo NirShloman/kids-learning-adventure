@@ -69,7 +69,7 @@ body .welcome__start { min-height: 64px; }
 
 /* Single game stage: header, activity, reserved feedback. */
 body .detective-game.game-world { height: 100%; min-height: 0; max-width: 1240px; padding: 8px; display: flex; flex-direction: column; gap: 8px; overflow: visible; }
-#root > .detective-game.game-world { height: var(--child-stage-height); padding-top: max(8px, env(safe-area-inset-top)); padding-bottom: max(8px, env(safe-area-inset-bottom)); }
+#root > .persistence-content > .detective-game.game-world { height: var(--child-stage-height); padding-top: max(8px, env(safe-area-inset-top)); padding-bottom: max(8px, env(safe-area-inset-bottom)); }
 body .detective-game .detective-header { margin: 0; min-height: 56px; gap: 8px; }
 body .detective-game .detective-header h1 { font-size: 1.25rem; }
 body .detective-game .detective-eyebrow { display: none; }
@@ -105,6 +105,46 @@ body .detective-game .detective-pair-card[aria-pressed="true"] { animation: chil
 body .detective-game .detective-pair-card small { font-size: .65rem; }
 body .detective-game .detective-pair-card .detective-token { font-size: clamp(24px, 4vw, 38px); }
 body .detective-game .detective-pair-card .detective-quantity { font-size: 12px; }
+
+/* Counting cards need space for the objects, including quantities up to 14.
+   Scroll the board rather than shrinking the things children must count. */
+body .detective-game[data-game="memory"] .detective-pair-grid[data-counting="true"] {
+  grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+  grid-template-rows: none;
+  grid-auto-rows: minmax(160px, 1fr);
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  align-content: start;
+  padding: 4px;
+  scroll-padding-block: 4px;
+}
+body .detective-game[data-game="memory"] .detective-pair-grid[data-counting="true"] .detective-pair-card {
+  padding: 8px 4px;
+  flex-shrink: 0;
+}
+body .detective-game[data-game="memory"] .detective-pair-card .detective-quantity {
+  font-size: 22px;
+  line-height: 1.2;
+  grid-template-columns: repeat(5, 1em);
+  width: max-content;
+  max-width: none;
+  gap: 5px 0;
+  direction: ltr;
+}
+body .detective-game[data-game="memory"] .detective-pair-card .detective-quantity > span {
+  display: grid;
+  place-items: center;
+  width: 1em;
+  min-height: 1.2em;
+}
+body .detective-game[data-game="memory"] .detective-pair-grid[data-counting="true"] .detective-token {
+  font-size: 36px;
+}
+@media (min-width: 360px) {
+  body .detective-game[data-game="memory"] .detective-pair-grid[data-counting="true"] { grid-template-columns: repeat(auto-fit, minmax(148px, 1fr)); }
+  body .detective-game[data-game="memory"] .detective-pair-card .detective-quantity { font-size: 26px; }
+}
 body .detective-game .detective-feedback { flex: none; min-height: 56px; margin: 0; padding: 8px 12px; font-size: .95rem; line-height: 1.35; display: grid; place-items: center; text-align: center; }
 .offline-menu { position: relative; flex: none; }
 .offline-menu > summary { font-size: .8rem; padding: 4px 8px; }
@@ -187,7 +227,7 @@ body .game-mode-card .adventure-mode-preview { min-height: 0; height: auto !impo
 body .game-mode-card__icon { font-size: 2rem; }
 body .game-mode-card strong { font-size: 1.2rem; }
 body .summary-card { height: 100%; min-height: 0; padding: 12px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; overflow: visible; }
-#root > .summary-card { height: var(--child-stage-height); }
+#root > .persistence-content > .summary-card { height: var(--child-stage-height); }
 body .summary-card h1, body .summary-card h2, body .summary-card h3, body .summary-card p { margin: 0; }
 body .summary-card h2 { font-size: 1.4rem; }
 body .summary-card__reward, body .summary-card__emoji { display: none; }
@@ -245,6 +285,17 @@ button:focus-visible, summary:focus-visible { outline: 4px solid #186bad; outlin
 }
 @media (prefers-reduced-motion: reduce) { body .detective-game .detective-pair-card { animation: none; transition: none; } }
 html[data-reduced-motion="true"] .detective-game .detective-pair-card { animation: none; transition: none; }
+@media (max-height: 450px) and (orientation: landscape) {
+  body .detective-game[data-game="memory"] .detective-card:has(.detective-pair-grid[data-counting="true"]) {
+    grid-template-columns: minmax(160px, .8fr) minmax(0, 2fr);
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    gap: 8px;
+  }
+  body .detective-game[data-game="memory"] .detective-card:has(.detective-pair-grid[data-counting="true"]) .detective-card-top { grid-column: 1; grid-row: 1; flex-wrap: wrap; gap: 4px; }
+  body .detective-game[data-game="memory"] .detective-card:has(.detective-pair-grid[data-counting="true"]) h2 { grid-column: 1; grid-row: 2; }
+  body .detective-game[data-game="memory"] .detective-card .detective-pair-grid[data-counting="true"] { grid-column: 2; grid-row: 1 / -1; }
+  body .detective-game[data-game="memory"] .detective-card:has(.detective-pair-grid[data-counting="true"]) .detective-feedback { grid-column: 1; grid-row: 3; }
+}
 body .detective-game.detective-large-targets button { min-height: 68px !important; min-width: 68px; }
 @media (max-width: 400px) {
   body .detective-game.detective-large-targets .detective-pair-grid { grid-template-columns: repeat(3,minmax(68px,1fr)); min-height: min-content; }

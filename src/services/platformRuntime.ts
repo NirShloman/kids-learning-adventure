@@ -7,7 +7,7 @@ interface NativeLearningPlugin {
   remove(options: { key: string }): Promise<void>;
   clear(): Promise<void>;
   narrationAvailable(options: { language: string }): Promise<{ available: boolean }>;
-  speak(options: { text: string; language: string; rate: number; pitch: number; requestId?: string }): Promise<void>;
+  speak(options: { text: string; language: string; rate: number; pitch: number; volume?: number; requestId?: string }): Promise<void>;
   stopSpeaking(): Promise<void>;
   addListener(
     eventName: 'speechState',
@@ -27,23 +27,32 @@ export const platformRuntime: PlatformRuntime = {
   platform: Capacitor.getPlatform() as PlatformRuntime['platform']
 };
 
-let initialized = false;
+let initialization: Promise<void> | undefined;
 
-export async function initializePlatformRuntime(): Promise<void> {
-  if (initialized || !platformRuntime.native) return;
-  initialized = true;
-
-  await CapacitorApp.addListener('appStateChange', ({ isActive }) => {
+async function initialize(): Promise<void> {
+  const handles: PluginListenerHandle[] = [];
+  try {
+  handles.push(await CapacitorApp.addListener('appStateChange', ({ isActive }) => {
     window.dispatchEvent(new CustomEvent('lomdim:app-state', { detail: { isActive } }));
-  });
+  }));
 
   if (platformRuntime.platform === 'android') {
-    await CapacitorApp.addListener('backButton', ({ canGoBack }) => {
+    handles.push(await CapacitorApp.addListener('backButton', ({ canGoBack }) => {
       const event = new CustomEvent('lomdim:native-back', { cancelable: true });
       window.dispatchEvent(event);
       if (event.defaultPrevented) return;
       if (canGoBack) window.history.back();
       else void CapacitorApp.minimizeApp();
-    });
+    }));
   }
+  } catch (error) {
+    await Promise.allSettled(handles.map(handle => handle.remove()));
+    throw error;
+  }
+}
+
+export async function initializePlatformRuntime(): Promise<void> {
+  if (!platformRuntime.native) return;
+  initialization ??= initialize().catch(error => { initialization = undefined; throw error; });
+  await initialization;
 }

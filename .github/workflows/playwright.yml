@@ -31,7 +31,7 @@ jobs:
       run: npm run build:release
     - name: Desktop and mobile smoke tests
       if: matrix.shard == 1
-      run: npm run test:e2e:smoke
+      run: npm run test:e2e:release
       env:
         PLAYWRIGHT_OUTPUT_DIR: qa-results/smoke
         PLAYWRIGHT_HTML_OUTPUT_DIR: qa-reports/smoke

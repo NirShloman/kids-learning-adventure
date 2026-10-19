@@ -3,6 +3,18 @@ default_platform(:android)
 platform :android do
   desc "Build a signed Android App Bundle and publish it to Internal Testing"
   lane :beta do
+    sh("npm", "--prefix", File.expand_path("..", __dir__), "run", "store:check")
+    tracks = ['internal', 'alpha', 'beta', 'production']
+    highest = tracks.flat_map do |track|
+      google_play_track_version_codes(
+        package_name: "com.nirshloman.lomdimbekef",
+        track: track,
+        json_key: ENV.fetch("GOOGLE_PLAY_SERVICE_ACCOUNT_PATH")
+      )
+    end.map(&:to_i).max || 0
+    # Serialize releases in GitHub Actions, then allocate against Play itself.
+    ENV['ANDROID_VERSION_CODE'] ||= (highest + 1).to_s
+    UI.user_error!("ANDROID_VERSION_CODE must exceed Play's #{highest}") unless ENV['ANDROID_VERSION_CODE'].to_i > highest
     gradle(project_dir: "android", task: "clean bundleRelease")
     upload_to_play_store(
       package_name: "com.nirshloman.lomdimbekef",

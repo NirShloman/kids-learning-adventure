@@ -2,6 +2,8 @@
 
 Audit date: 2026-08-22; versions are from `package-lock.json`.
 
+Update 2026-10-10: Capacitor core/android/ios/CLI moved to 8.5.3 to fix GHSA-rvm3-566m-v7fv; runtime notices now identify 8.5.3. Heebo has replaced Rubik and its full OFL notice is included in the shipped notices. Development transitive packages were patched; xcode's UUID dependency is overridden to CommonJS-compatible uuid 11.1.1 (xcode uses only v4). A full npm audit after these updates reported zero vulnerabilities. The table below is the historical August audit, not the current resolved dependency list. Final native binary review remains required.
+
 ## Shipped web/runtime components
 
 | Component | Version | License | Notice action |

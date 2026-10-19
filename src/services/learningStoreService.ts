@@ -30,8 +30,9 @@ function createId(prefix: string): string {
     ? `${prefix}-${crypto.randomUUID()}` : `${prefix}-${Date.now()}-${Math.random().toString(16).slice(2)}`;
 }
 function read<T>(key: string, fallback: T): T {
-  try { const value = getLocalDataStore().getCached(key); return value ? JSON.parse(value) as T : fallback; }
-  catch { return fallback; }
+  const value = getLocalDataStore().getCached(key);
+  // Missing data is a new installation; unreadable data requires recovery.
+  return value ? JSON.parse(value) as T : fallback;
 }
 function writeSnapshot(snapshot: LearningSnapshotV4): LearningSnapshotV4 {
   // Earned keepsakes outlive the bounded session / discovery history.
@@ -88,8 +89,17 @@ function migratedSnapshot(): LearningSnapshotV4 {
 }
 
 export function getLearningSnapshot(): LearningSnapshotV4 {
-  const stored = read<LearningSnapshotV4 | null>(SNAPSHOT_KEY, null);
-  if (stored?.schemaVersion === 4) return stored;
+  const raw = getLocalDataStore().getCached(SNAPSHOT_KEY);
+  if (raw !== null) {
+    // A broken primary snapshot must never be mistaken for a new installation.
+    const stored = JSON.parse(raw) as LearningSnapshotV4;
+    if (!stored || stored.schemaVersion !== 4 || !Array.isArray(stored.profiles) ||
+      !stored.dataByProfile || typeof stored.dataByProfile !== 'object' ||
+      stored.profiles.some(profile => !profile || typeof profile.id !== 'string' || !stored.dataByProfile[profile.id])) {
+      throw new Error('Local learning snapshot is unreadable');
+    }
+    return stored;
+  }
   const snapshot = migratedSnapshot();
   void getLocalDataStore().set(MIGRATION_MARKER_KEY, JSON.stringify({ state: 'writing', startedAt: nowIso() }));
   writeSnapshot(snapshot);
@@ -232,7 +242,9 @@ export function saveProfileRecentContent(profileId: string, key: string, ids: st
 }
 export async function deleteAllLearningData(): Promise<void> {
   const store = getLocalDataStore();
-  for (const key of [SNAPSHOT_KEY, MIGRATION_MARKER_KEY, OLD_LEARNER_KEY, OLD_SESSIONS_KEY, OLD_RECENT_KEY, LEGACY_PLAYERS_KEY, LEGACY_SESSIONS_KEY]) await store.remove(key);
+  // Native deletion is atomic; web deletion uses a durable tombstone while
+  // preserving unrelated keys belonging to the same origin.
+  await store.clear();
   if (typeof caches !== 'undefined') for (const key of await caches.keys()) await caches.delete(key);
   if (typeof navigator !== 'undefined' && 'serviceWorker' in navigator) for (const registration of await navigator.serviceWorker.getRegistrations()) await registration.unregister();
 }

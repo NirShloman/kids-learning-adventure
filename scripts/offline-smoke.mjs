@@ -6,8 +6,9 @@ import { readFileSync } from 'node:fs';
 
 const rootDir = dirname(dirname(fileURLToPath(import.meta.url)));
 const viteCli = join(rootDir, 'node_modules', 'vite', 'bin', 'vite.js');
-const baseURL = 'http://127.0.0.1:4179';
-const server = spawn(process.execPath, [viteCli, 'preview', '--host', '127.0.0.1', '--port', '4179'], {
+const port = process.env.OFFLINE_SMOKE_PORT ?? '4181';
+const baseURL = `http://127.0.0.1:${port}`;
+const server = spawn(process.execPath, [viteCli, 'preview', '--host', '127.0.0.1', '--port', port, '--strictPort'], {
   cwd: rootDir,
   stdio: 'ignore',
   windowsHide: true
@@ -15,6 +16,7 @@ const server = spawn(process.execPath, [viteCli, 'preview', '--host', '127.0.0.1
 
 async function waitForServer() {
   for (let attempt = 0; attempt < 40; attempt += 1) {
+    if (server.exitCode !== null) throw new Error('Preview server exited; use an unused OFFLINE_SMOKE_PORT.');
     try {
       const response = await fetch(baseURL);
       if (response.ok) return;
@@ -27,11 +29,10 @@ async function waitForServer() {
 }
 
 async function openLettersQuiz(page) {
-  await page.locator('.game-card').filter({ hasText: 'אותיות' }).first()
-    .getByRole('button', { name: 'מתחילים' }).click();
+  await page.getByRole('button', { name: 'מתחילים את אותיות', exact: true }).click();
   const skip = page.locator('.game-entry__skip');
   if (await skip.isVisible().catch(() => false)) await skip.click();
-  await page.getByRole('button', { name: /טריוויה/ }).click();
+  await page.locator('.game-mode-card:not(.game-mode-card--featured)').click();
   await page.locator('[data-testid="quiz-option"]').first().waitFor();
 }
 

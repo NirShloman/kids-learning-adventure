@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "operator": {
+    "legalName": null,
+    "developerName": null,
+    "privacyEmail": null,
+    "supportEmail": null,
+    "postalAddress": null,
+    "privacyUrl": null,
+    "supportUrl": null
+  },
+  "inputFingerprint": null,
+  "approvals": {
+    "androidDevices": null,
+    "educationalReview": null,
+    "childUsability": null,
+    "playConsoleDeclarations": null,
+    "brandClearance": null
+  }
+}

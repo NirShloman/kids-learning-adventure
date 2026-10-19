@@ -2,6 +2,8 @@
 
 Current decision: **NO-GO** (2026-08-26).
 
+Update 2026-10-10: decision remains **NO-GO** pending operator identity, public legal URLs, current media rights evidence, physical-device/child acceptance and Play declarations. Technical remediation and current evidence are tracked in `docs/release/README.md` and `docs/GOOGLE_PLAY_REMEDIATION_2026-10-10.md`. `npm run store:check` enforces the recorded release conditions. Historical asset counts and check results below remain dated August evidence.
+
 ## Blockers
 
 - [ ] Close the six MP3 original-download/production mapping, historical terms/account evidence, and shortened-file edit chains; Google provenance is already supported.

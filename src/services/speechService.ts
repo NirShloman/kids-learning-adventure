@@ -155,7 +155,8 @@ function speakSafeText(safeText: string, mode: SpeechMode, slow = false, onSettl
       text: safeText,
       language: 'he-IL',
       rate: useSlowRate ? 0.68 : CHILD_FRIENDLY_SPEECH_RATE,
-      pitch: CHILD_FRIENDLY_SPEECH_PITCH
+      pitch: CHILD_FRIENDLY_SPEECH_PITCH,
+      volume: configuredSpeechVolume
     }).catch(() => settle('error'));
     return;
   }

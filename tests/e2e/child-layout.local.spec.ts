@@ -12,10 +12,18 @@ async function fits(page: import('@playwright/test').Page) {
   const metrics = await page.evaluate(() => ({ width: innerWidth, height: innerHeight, scroll: document.documentElement.scrollHeight, horizontal: document.documentElement.scrollWidth, shell: document.querySelector('.app-shell')?.className, padding: document.querySelector('.app-shell') ? getComputedStyle(document.querySelector('.app-shell')!).padding : '', stage: document.querySelector('.adventure')?.getBoundingClientRect().toJSON() }));
   expect(metrics.horizontal, 'horizontal overflow').toBeLessThanOrEqual(metrics.width + 1);
   expect(metrics.scroll, JSON.stringify(metrics)).toBeLessThanOrEqual(metrics.height + 1);
+  const countingBoard = page.locator('[data-game="memory"] .detective-pair-grid[data-counting="true"]');
+  if (await countingBoard.count()) {
+    const board = await countingBoard.boundingBox();
+    expect(board!.y).toBeGreaterThanOrEqual(0);
+    expect(board!.y + board!.height).toBeLessThanOrEqual(metrics.height + 1);
+  }
   for (const target of await page.locator('button:visible').all()) {
     const box = await target.boundingBox();
     if (!box) continue;
-    expect(box.y + box.height, await target.getAttribute('class') ?? '').toBeLessThanOrEqual(metrics.height + 1);
+    // Counting cards can scroll inside the board so their objects remain readable.
+    const scrollsInBoard = await target.evaluate(node => Boolean(node.closest('[data-game="memory"] .detective-pair-grid[data-counting="true"]')));
+    if (!scrollsInBoard) expect(box.y + box.height, await target.getAttribute('class') ?? '').toBeLessThanOrEqual(metrics.height + 1);
     expect(box.width, await target.textContent() ?? '').toBeGreaterThanOrEqual(55.9);
     expect(box.height, await target.textContent() ?? '').toBeGreaterThanOrEqual(55.9);
   }

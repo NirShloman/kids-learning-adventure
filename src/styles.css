@@ -1430,11 +1430,6 @@ html[data-fewer-items="true"] .home-grid > :nth-child(n+5) { display: none; }
   cursor: pointer;
   box-shadow: var(--shadow-soft);
 }
-.game-mode-card--featured {
-  border-color: var(--world-accent);
-  background: linear-gradient(145deg, var(--world-accent-soft), #fff);
-  transform: scale(1.02);
-}
 .game-mode-card:hover, .game-mode-card:focus-visible { transform: translateY(-4px); outline: 4px solid rgb(49 65 92 / .18); }
 .game-mode-card__icon { font-size: 3.6rem; }
 .game-mode-card strong { font-size: 1.5rem; }
@@ -3670,3 +3665,10 @@ body {
   .profile-setup__gender button { min-height: 62px; grid-template-columns: auto 1fr; justify-items: start; padding-inline: 18px; }
   .profile-setup__gender button span { font-size: 1.6rem; }
 }
+/* Keep the current game mounted while a failed checkpoint is retried. */
+.app-recovery { position: fixed; inset: 0; z-index: 10000; display: grid; place-items: center; overflow: auto; padding: 24px; background: #fff9ee; color: #31415c; }
+.app-recovery__card { width: min(100%, 480px); padding: 24px; border-radius: 24px; background: white; text-align: center; box-shadow: 0 12px 40px #31415c20; }
+.app-recovery__card h1 { font-size: clamp(1.4rem, 5vw, 2rem); line-height: 1.4; }
+.app-recovery__card p { line-height: 1.7; }
+.app-recovery__card button { min-height: 56px; margin-top: 12px; }
+.persistence-saving { position: fixed; z-index: 9999; bottom: max(8px, env(safe-area-inset-bottom)); inset-inline-end: 12px; padding: 6px 12px; border-radius: 12px; background: #fff9ee; color: #31415c; font-size: .875rem; pointer-events: none; }

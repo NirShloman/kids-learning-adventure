@@ -3,7 +3,23 @@ import react from '@vitejs/plugin-react';
 import packageJson from './package.json';
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    {
+      name: 'local-narration-playback-manifest',
+      enforce: 'pre',
+      apply: 'build',
+      transform(source, id) {
+        if (!id.replaceAll('\\', '/').endsWith('/src/assets/generatedNarrationManifest.json')) return;
+        // Cloud archive/provenance metadata remains in the source manifest.
+        // The player only needs the bundled path, keeping startup local and small.
+        const manifest = JSON.parse(source);
+        return JSON.stringify({ ...manifest, entries: Object.fromEntries(
+          Object.entries(manifest.entries).map(([text, asset]) => [text, { localPath: (asset as { localPath: string }).localPath }])
+        ) });
+      }
+    }
+  ],
   define: {
     __APP_VERSION__: JSON.stringify(packageJson.version)
   },

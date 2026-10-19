@@ -51,6 +51,7 @@ export function ProfileSetupPage({ learner, isNew, onSave }: ProfileSetupPagePro
         <p>הפרטים נשמרים רק במכשיר הזה ומכוונים את השאלות והמשחקים.</p>
 
         <p className="setup-progress" role="status">שלב {step + 1} מתוך 3</p>
+        <div className="setup-steps" aria-label="שלבי ההיכרות">{['כינוי', 'דמות', 'למידה'].map((label, index) => <span key={label} className={index <= step ? 'is-reached' : ''} aria-current={index === step ? 'step' : undefined}><b aria-hidden="true">{index < step ? '✓' : index + 1}</b>{label}</span>)}</div>
         {step === 0 && <><label className="profile-setup__field" htmlFor="learner-name">
           <span>כינוי (אופציונלי)</span>
           <input id="learner-name" value={name} onChange={(event) => setName(event.target.value)} autoComplete="off" inputMode="text" maxLength={30} placeholder="אפשר לדלג" aria-invalid={showErrors && !nameIsValid} />

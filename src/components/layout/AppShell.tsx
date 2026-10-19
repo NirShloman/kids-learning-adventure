@@ -2,6 +2,7 @@ import { PropsWithChildren, ReactNode } from 'react';
 import { AppVersion } from '../common/AppVersion';
 import { BrandLogo } from '../common/BrandLogo';
 import { brand } from '../../config/brand';
+import { InterfaceIcon } from '../common/InterfaceIcon';
 
 interface AppShellProps {
   title: string;
@@ -24,7 +25,7 @@ export function AppShell({ title, subtitle, rightSlot, compact = false, immersiv
           </div>
         </div>
         <details className="hero-card__side shell-menu">
-          <summary aria-label="אפשרויות ופרופיל">☰</summary>
+          <summary aria-label="אפשרויות ופרופיל"><InterfaceIcon name="menu" /></summary>
           <div className="shell-menu__panel">
           {rightSlot}
           <AppVersion />

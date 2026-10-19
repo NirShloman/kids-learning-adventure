@@ -79,7 +79,6 @@ export function GameModeSelector({
             />
             <strong>משחק חווייתי</strong>
             <span>{adventureWorlds[gameId].title}</span>
-            <kbd>נוגעים ומשחקים</kbd>
           </button>
           <button
             type="button"

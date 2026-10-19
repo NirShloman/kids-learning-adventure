@@ -16,12 +16,12 @@ export interface NarrationEntry {
 }
 
 interface GeneratedNarrationAsset {
-  assetKey: string;
+  assetKey?: string;
   localPath: string;
-  storagePath: string;
-  audioUrl: string;
-  checksum: string;
-  byteLength: number;
+  storagePath?: string;
+  audioUrl?: string;
+  checksum?: string;
+  byteLength?: number;
   durationMs?: number;
 }
 

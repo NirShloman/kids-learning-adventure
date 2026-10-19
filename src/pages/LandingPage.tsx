@@ -37,6 +37,7 @@ export function LandingPage({ voiceEnabled, onStart }: LandingPageProps) {
       <div className="welcome__shade" aria-hidden="true" />
       <section className="welcome__content" aria-labelledby="welcome-title">
         <BrandLogo className="welcome__logo" variant="full" tagline="" decorative />
+        <span className="welcome__eyebrow">סקרנות קטנה. עולם שלם.</span>
         <div className="welcome__copy">
           <h1 id="welcome-title" className="visually-hidden">{brand.hebrewName}</h1>
           <p>{brand.tagline}</p>
@@ -51,6 +52,7 @@ export function LandingPage({ voiceEnabled, onStart }: LandingPageProps) {
           <span aria-hidden="true">▶</span>
           מתחילים לשחק
         </button>
+        <p className="welcome__note">לגלות, לשחק ולצמוח · לגילאי 3–6</p>
       </section>
 
     </main>
