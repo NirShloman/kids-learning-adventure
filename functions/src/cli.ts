@@ -1,4 +1,4 @@
-import { createHash } from 'node:crypto';
+import { createHash, randomUUID } from 'node:crypto';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { homedir } from 'node:os';
@@ -8,7 +8,7 @@ import { getApps, initializeApp } from 'firebase-admin/app';
 import { FieldValue, getFirestore } from 'firebase-admin/firestore';
 import { getStorage } from 'firebase-admin/storage';
 import { parseBuffer } from 'music-metadata';
-import { DEFAULT_NARRATION_CONFIG, normalizeHebrewNarration } from './narration/core.js';
+import { DEFAULT_NARRATION_CONFIG, normalizeHebrewNarration, createNarrationAssetKey, narrationStoragePath, checksumAudio, type NarrationAsset } from './narration/core.js';
 import {
   FirebaseStorageGateway,
   FirestoreNarrationRepository,
@@ -68,7 +68,89 @@ function requireGenerationConsent(): void {
 
 function initializeAdmin(): void {
   ensureLocalAdc();
-  if (!getApps().length) initializeApp();
+  const options = {
+    ...(flag('project') || process.env.GOOGLE_CLOUD_PROJECT ? { projectId: flag('project') ?? process.env.GOOGLE_CLOUD_PROJECT } : {}),
+    ...(flag('bucket') || process.env.FIREBASE_STORAGE_BUCKET ? { storageBucket: flag('bucket') ?? process.env.FIREBASE_STORAGE_BUCKET } : {})
+  };
+  if (!getApps().length) initializeApp(Object.keys(options).length ? options : undefined);
+}
+
+// Import already-approved recordings into the cloud catalog without calling TTS.
+async function archiveLocal(): Promise<void> {
+  const selected = config();
+  const catalog = readCatalog();
+  const manifest = JSON.parse(readFileSync(join(projectRoot, 'src/assets/generatedNarrationManifest.json'), 'utf8'));
+  if (manifest.schemaVersion !== 1 || Object.entries(selected).some(([key, value]) => manifest.config?.[key] !== value)) {
+    throw new Error('Local manifest voice configuration does not match the selected configuration.');
+  }
+  const prepared: Array<{ binding: CatalogEntry; audio: Buffer; asset: NarrationAsset }> = [];
+  // Complete local validation before any cloud writes.
+  for (const binding of catalog.entries) {
+    const text = normalizeHebrewNarration(binding.sourceText);
+    const entry = manifest.entries[text];
+    const assetKey = createNarrationAssetKey(text, selected);
+    const storagePath = narrationStoragePath(assetKey, selected);
+    if (!entry || entry.assetKey !== assetKey || entry.storagePath !== storagePath || entry.localPath !== `/assets/audio/${storagePath}`) {
+      throw new Error(`Local asset does not match catalog binding: ${binding.id}`);
+    }
+    const audio = readFileSync(join(projectRoot, 'public', 'assets', 'audio', storagePath));
+    if (!audio.length || audio.length !== entry.byteLength || checksumAudio(audio) !== entry.checksum) throw new Error(`Invalid audio: ${assetKey}`);
+    const metadata = await parseBuffer(audio, { mimeType: 'audio/mpeg' }, { duration: true });
+    if (!(metadata.format.duration && metadata.format.duration > 0)) throw new Error(`Invalid MP3: ${assetKey}`);
+    prepared.push({ binding, audio, asset: { ...selected, assetKey, storagePath, sourceText: text, normalizedText: text,
+      checksum: entry.checksum, byteLength: audio.length, durationMs: Math.round(metadata.format.duration * 1000),
+      audioUrl: '', status: 'generating', cached: false } });
+  }
+  console.log(JSON.stringify({ command: 'archive-local', assets: prepared.length, bytes: prepared.reduce((sum, row) => sum + row.audio.length, 0), synthesisRequests: 0, apply: hasFlag('apply') }));
+  if (!hasFlag('apply')) return;
+  initializeAdmin();
+  const repository = new FirestoreNarrationRepository();
+  const storage = new FirebaseStorageGateway();
+  const firestore = getFirestore();
+  let cursor = 0, uploaded = 0, reused = 0, bindingsUpdated = 0;
+  let failure: unknown;
+  await Promise.all(Array.from({ length: 4 }, async () => {
+    while (!failure) {
+      const row = prepared[cursor++];
+      if (!row) return;
+      const owner = randomUUID();
+      try {
+        const lease = await repository.acquireLease(row.asset, owner, Date.now(), 300_000);
+        let ready = lease.asset;
+        if (lease.outcome === 'busy') throw new Error(`Asset is being generated: ${row.asset.assetKey}`);
+        if (lease.outcome === 'ready') {
+          if (ready.checksum !== row.asset.checksum) throw new Error(`Cloud/local checksum conflict: ${row.asset.assetKey}`);
+          reused++;
+        } else {
+          const audioUrl = await storage.put(row.asset.storagePath, row.audio, {
+            assetKey: row.asset.assetKey, language: selected.language, voice: selected.voice,
+            ttsVersion: String(selected.version), checksum: row.asset.checksum!
+          });
+          ready = await repository.complete(row.asset.assetKey, owner, { audioUrl, checksum: row.asset.checksum,
+            byteLength: row.audio.length, durationMs: row.asset.durationMs, status: 'ready' });
+          uploaded++;
+        }
+        const reference = firestore.collection('narrationBindings').doc(row.binding.id);
+        const desired = {
+          ...selected, sourceText: row.asset.normalizedText, sourceType: row.binding.sourceType, sourceId: row.binding.sourceId,
+          sourceRefs: row.binding.sources ?? [{ sourceType: row.binding.sourceType, sourceId: row.binding.sourceId }],
+          assetKey: ready.assetKey, audioUrl: ready.audioUrl, storagePath: ready.storagePath,
+          checksum: ready.checksum, durationMs: row.asset.durationMs, status: 'ready'
+        };
+        const snapshot = await reference.get();
+        if (!snapshot.exists || Object.entries(desired).some(([key, value]) => JSON.stringify(snapshot.data()?.[key]) !== JSON.stringify(value))) {
+          await reference.set({ ...desired, importedFromLocal: true, updatedAt: FieldValue.serverTimestamp() }, { merge: true });
+          bindingsUpdated++;
+        }
+        if ((uploaded + reused) % 100 === 0) console.log(`Archived ${uploaded + reused}/${prepared.length}`);
+      } catch (error) {
+        failure = error;
+        await repository.fail(row.asset.assetKey, owner, 'LOCAL_ARCHIVE_FAILED', 0);
+      }
+    }
+  }));
+  if (failure) throw failure;
+  console.log(JSON.stringify({ uploaded, reused, bindingsUpdated, synthesisRequests: 0 }));
 }
 
 function ensureLocalAdc(): void {
@@ -104,7 +186,7 @@ async function voices(): Promise<void> {
 }
 
 const sampleSentences = [
-  "שלום! איזה כיף שבאתם ליֶדַע, לֶה!",
+  'שלום! איזה כיף שבאתם לעוֹלָמִיָּה!',
   'בואו נמצא את התשובה הנכונה.',
   'איזו חיה עושה מו?',
   'כמה תפוחים אתם רואים בתמונה?',
@@ -202,32 +284,45 @@ async function sync(): Promise<void> {
   initializeAdmin();
   const firestore = getFirestore();
   const bucket = getStorage().bucket();
-  const bindings = await firestore.collection('narrationBindings').where('status', '==', 'ready').get();
+  const catalog = readCatalog();
+  if (!catalog.entries.length) throw new Error('Refusing to publish an empty narration catalog.');
+  const selected = config();
+  const bindings = [];
+  for (let offset = 0; offset < catalog.entries.length; offset += 400) {
+    bindings.push(...await firestore.getAll(...catalog.entries.slice(offset, offset + 400)
+      .map(entry => firestore.collection('narrationBindings').doc(entry.id))));
+  }
+  // Old voice/version bindings stay archived, but must never enter the active release.
+  for (const [index, binding] of bindings.entries()) {
+    const data = binding.data();
+    const text = normalizeHebrewNarration(catalog.entries[index]!.sourceText);
+    // A single forced regeneration can coexist with unrevised recordings.
+    // Preserve that binding's immutable revision in the per-asset manifest.
+    const assetConfig = { ...selected, ...(typeof data?.revision === 'string' && data.revision ? { revision: data.revision } : {}) };
+    const expectedKey = createNarrationAssetKey(text, assetConfig);
+    if (!data || data.status !== 'ready' || data.sourceText !== text || data.assetKey !== expectedKey ||
+      data.storagePath !== narrationStoragePath(expectedKey, selected) || !/^[a-f0-9]{64}$/.test(data.checksum ?? '') ||
+      Object.entries(selected).some(([key, value]) => data[key] !== value)) {
+      throw new Error(`Catalog binding is not ready for this voice/version: ${binding.id}`);
+    }
+  }
   const byText: Record<string, Record<string, unknown>> = {};
   let downloaded = 0;
   let reused = 0;
-  for (const binding of bindings.docs) {
-    const data = binding.data();
-    if (typeof data.sourceText !== 'string' || typeof data.assetKey !== 'string' || typeof data.storagePath !== 'string') continue;
+  for (const binding of bindings) {
+    const data = binding.data()!;
     const destination = join(projectRoot, 'public', 'assets', 'audio', data.storagePath);
-    let audio: Buffer;
-    if (existsSync(destination)) {
-      audio = readFileSync(destination);
-      const checksum = createHash('sha256').update(audio).digest('hex');
-      if (checksum === data.checksum) reused += 1;
-      else {
-        [audio] = await bucket.file(data.storagePath).download();
-        mkdirSync(dirname(destination), { recursive: true });
-        writeFileSync(destination, audio);
-        downloaded += 1;
-      }
-    } else {
-      [audio] = await bucket.file(data.storagePath).download();
+    let audio: Buffer | null = existsSync(destination) ? readFileSync(destination) : null;
+    const mustDownload = !audio || checksumAudio(audio) !== data.checksum;
+    if (mustDownload) [audio] = await bucket.file(data.storagePath).download();
+    if (!audio?.length || checksumAudio(audio) !== data.checksum) throw new Error(`Downloaded audio checksum mismatch: ${binding.id}`);
+    const metadata = await parseBuffer(audio, { mimeType: 'audio/mpeg' }, { duration: true });
+    if (!(metadata.format.duration && metadata.format.duration > 0)) throw new Error(`Invalid MP3: ${binding.id}`);
+    if (mustDownload) {
       mkdirSync(dirname(destination), { recursive: true });
       writeFileSync(destination, audio);
-      downloaded += 1;
-    }
-    const metadata = await parseBuffer(audio, { mimeType: 'audio/mpeg' }, { duration: true });
+      downloaded++;
+    } else reused++;
     byText[data.sourceText] = {
       assetKey: data.assetKey,
       localPath: `/assets/audio/${data.storagePath}`,
@@ -235,6 +330,7 @@ async function sync(): Promise<void> {
       audioUrl: data.audioUrl,
       checksum: data.checksum,
       byteLength: audio.byteLength,
+      ...(typeof data.revision === 'string' && data.revision ? { revision: data.revision } : {}),
       durationMs: metadata.format.duration ? Math.round(metadata.format.duration * 1000) : undefined
     };
   }
@@ -242,10 +338,10 @@ async function sync(): Promise<void> {
   writeFileSync(manifestPath, `${JSON.stringify({
     schemaVersion: 1,
     generatedAt: new Date().toISOString(),
-    config: config(),
+    config: selected,
     entries: Object.fromEntries(Object.entries(byText).sort(([first], [second]) => first.localeCompare(second)))
   }, null, 2)}\n`);
-  console.log(JSON.stringify({ readyBindings: bindings.size, uniqueRuntimeTexts: Object.keys(byText).length, downloaded, reused, manifestPath }, null, 2));
+  console.log(JSON.stringify({ readyBindings: bindings.length, uniqueRuntimeTexts: Object.keys(byText).length, downloaded, reused, manifestPath }, null, 2));
 }
 
 async function regenerate(): Promise<void> {
@@ -330,6 +426,7 @@ function help(): void {
   console.log(`Narration administration commands:
   voices
   samples --allow-generation [--voices voice,voice] [--output path]
+  archive-local [--apply] --project project-id --bucket bucket-name
   backfill --apply --approved-voice [--voice name] [--catalog path]
   sync --apply
   regenerate --apply (--id id | --all) [--force --revision value]
@@ -337,7 +434,7 @@ function help(): void {
   smoke --allow-generation --approved-voice [--text text]`);
 }
 
-const commands: Record<string, () => Promise<void> | void> = { voices, samples, backfill, sync, regenerate, cleanup, smoke, help };
+const commands: Record<string, () => Promise<void> | void> = { voices, samples, 'archive-local': archiveLocal, backfill, sync, regenerate, cleanup, smoke, help };
 try {
   await (commands[command] ?? help)();
 } catch (error) {

@@ -41,6 +41,7 @@ export interface NarrationAsset {
   cached: boolean;
   checksum?: string;
   byteLength?: number;
+  durationMs?: number;
   retryCount?: number;
   errorCode?: string;
   leaseOwner?: string;
@@ -58,9 +59,9 @@ export class NarrationValidationError extends Error {
 export function normalizeHebrewNarration(input: string): string {
   return input
     .normalize('NFC')
-    // The visual brand spelling is ידע׳לה; niqqud makes its owner-approved
-    // pronunciation (יֶדַע, לֶה) explicit as two spoken words for Hebrew voices.
-    .replace(/ידע[׳']לה/gu, "יֶדַע, לֶה")
+    // Owner-approved Olamia sample: he-IL-Chirp3-HD-Aoede, rate 0.92.
+    // Keep this substitution aligned with the frontend narration lookup.
+    .replace(/עולמיה|\bOlamia\b/giu, 'עוֹלָמִיָּה')
     .replace(/<[^>]*>/g, ' ')
     .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g, ' ')
     .replace(/[\u200B-\u200D\u2060\uFEFF]/g, '')

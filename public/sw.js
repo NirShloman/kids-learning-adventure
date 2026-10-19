@@ -1,11 +1,11 @@
-const CACHE_NAME = 'yedale-v1.3.2-name-20260827';
+const CACHE_NAME = 'olamia-v1.3.2-name-20260827';
 const STATIC_ASSETS = [
   '/',
   '/manifest.webmanifest',
   '/icons/favicon-32.png',
   '/icons/icon-192.png',
-  '/assets/brand/yadaale-mark.webp',
-  '/assets/brand/yadaale-logo-horizontal.webp'
+  '/assets/brand/olamia-mark.webp',
+  '/assets/brand/olamia-logo-horizontal.webp'
 ];
 
 function isSameOriginRequest(request) {
@@ -17,6 +17,36 @@ async function cacheResponse(cacheKey, response) {
   const cache = await caches.open(CACHE_NAME);
   await cache.put(cacheKey, response.clone());
   return response;
+}
+
+async function narrationResponse(request) {
+  // Media elements request byte ranges. Cache one complete, immutable recording
+  // on demand so subsequent ranges can also be served without a network.
+  const url = request.url;
+  let response = await caches.match(url);
+  if (!response) {
+    const headers = new Headers(request.headers);
+    headers.delete('range');
+    response = await fetch(new Request(request, { headers }));
+    if (response.status === 200 && response.headers.get('content-type')?.includes('audio/')) {
+      await cacheResponse(url, response);
+    }
+  }
+  const range = request.headers.get('range');
+  if (!range || response.status !== 200) return response;
+  const bytes = await response.arrayBuffer();
+  const match = /^bytes=(\d*)-(\d*)$/.exec(range);
+  const start = match?.[1] ? Number(match[1]) : Math.max(0, bytes.byteLength - Number(match?.[2]));
+  const end = match?.[1] && match[2] ? Math.min(Number(match[2]), bytes.byteLength - 1) : bytes.byteLength - 1;
+  if (!match || (!match[1] && !match[2]) || !Number.isSafeInteger(start) || !Number.isSafeInteger(end) || start > end || start >= bytes.byteLength) {
+    return new Response(null, { status: 416, headers: { 'Content-Range': `bytes */${bytes.byteLength}` } });
+  }
+  const headers = new Headers(response.headers);
+  headers.delete('content-encoding');
+  headers.set('Accept-Ranges', 'bytes');
+  headers.set('Content-Range', `bytes ${start}-${end}/${bytes.byteLength}`);
+  headers.set('Content-Length', String(end - start + 1));
+  return new Response(bytes.slice(start, end + 1), { status: 206, headers });
 }
 
 self.addEventListener('install', (event) => {
@@ -33,6 +63,11 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET' || !isSameOriginRequest(event.request)) return;
+
+  if (new URL(event.request.url).pathname.startsWith('/assets/audio/narration/')) {
+    event.respondWith(narrationResponse(event.request));
+    return;
+  }
 
   if (event.request.mode === 'navigate') {
     event.respondWith(

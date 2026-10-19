@@ -22,10 +22,72 @@ class FakeAudio {
   constructor(public src = '') { FakeAudio.instances.push(this); }
   load() {}
   play() { this.onplay?.(); return Promise.resolve(); }
-  pause() {}
+  pause = vi.fn();
 }
 
 describe('frontend narration service', () => {
+  it('settles only the requested recording and cancels it exactly once', () => {
+    const first=vi.fn(),second=vi.fn();
+    narration.playNarrationUrl('/assets/audio/narration/request-one.mp3','אחד',{onSettled:first});
+    const stale=FakeAudio.instances.at(-1)!.onended;
+    narration.playNarrationUrl('/assets/audio/narration/request-two.mp3','שניים',{onSettled:second});
+    expect(first).toHaveBeenCalledExactlyOnceWith('cancelled');
+    stale?.();expect(second).not.toHaveBeenCalled();
+    FakeAudio.instances.at(-1)!.onended?.();
+    expect(second).toHaveBeenCalledExactlyOnceWith('ended');
+    narration.stopNarrationPlayback();expect(second).toHaveBeenCalledTimes(1);
+  });
+  it('a failed recording waits for its speech fallback rather than treating failure as completion', () => {
+    const settled=vi.fn();
+    narration.playNarrationUrl('/assets/audio/narration/fallback-request.mp3','שלום',{onSettled:settled});
+    FakeAudio.instances.at(-1)!.onerror?.();
+    expect(settled).not.toHaveBeenCalled();
+    speech.speak.mock.calls.at(-1)![1].onSettled('ended');
+    expect(settled).toHaveBeenCalledExactlyOnceWith('ended');
+  });
+  it('keeps preload batches bounded even when a caller supplies the entire catalog', () => {
+    const before = FakeAudio.instances.length;
+    narration.preloadNarrationUrls(Array.from({ length: 500 }, (_, index) => `/assets/audio/narration/bounded-${index}.mp3`));
+    expect(FakeAudio.instances.length - before).toBe(narration.MAX_PRELOAD_NARRATIONS);
+  });
+
+  it('pauses, resumes, changes volume and stops the current MP3 without speech fallback', () => {
+    narration.playNarrationUrl('/assets/audio/narration/playback-controls.mp3', 'בדיקה');
+    const audio = FakeAudio.instances.at(-1)!;
+    audio.currentTime = 1.5;
+    narration.pauseNarration();
+    expect(audio.pause).toHaveBeenCalled();
+    expect(narration.isNarrationPlaying()).toBe(false);
+    narration.resumeNarration();
+    expect(audio.currentTime).toBe(1.5);
+    expect(narration.isNarrationPlaying()).toBe(true);
+    narration.setNarrationVolume(0.3);
+    expect(audio.volume).toBe(0.3);
+    narration.stopNarrationPlayback();
+    expect(audio.currentTime).toBe(0);
+    expect(narration.isNarrationPlaying()).toBe(false);
+    expect(speech.speak).not.toHaveBeenCalled();
+  });
+
+  it('falls back exactly once on playback failure and ignores stale errors', () => {
+    narration.playNarrationUrl('/assets/audio/narration/broken.mp3', 'עולמיה');
+    const audio = FakeAudio.instances.at(-1)!;
+    const staleError = audio.onerror;
+    staleError?.();
+    staleError?.();
+    expect(speech.speak).toHaveBeenCalledTimes(1);
+    expect(speech.speak).toHaveBeenCalledWith('עוֹלָמִיָּה', {});
+  });
+  it('settles a queued request when a newer guided request replaces it', () => {
+    const first = vi.fn(), second = vi.fn();
+    narration.playNarrationUrl('/assets/audio/narration/current.mp3', 'פעיל');
+    narration.playNarrationUrl('/assets/audio/narration/first.mp3', 'ראשון', { mode: 'guided', onSettled: first });
+    narration.playNarrationUrl('/assets/audio/narration/second.mp3', 'שני', { mode: 'guided', onSettled: second });
+    expect(first).toHaveBeenCalledExactlyOnceWith('cancelled');
+    expect(second).not.toHaveBeenCalled();
+    narration.stopNarrationPlayback();
+    expect(second).toHaveBeenCalledExactlyOnceWith('cancelled');
+  });
   beforeEach(() => {
     FakeAudio.instances = [];
     speech.speak.mockClear();

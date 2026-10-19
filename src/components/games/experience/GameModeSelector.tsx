@@ -4,6 +4,7 @@ import { useSpeech } from "../../../hooks/useSpeech";
 import { GameWorld } from "../GameWorld";
 import { adventureWorlds } from "../../../content/adventureMissions";
 import { OfflinePreparation } from "./OfflinePreparation";
+import { platformRuntime } from '../../../services/platformRuntime';
 import {
   getActiveProfile,
   getAdventureProgress,
@@ -95,7 +96,7 @@ export function GameModeSelector({
             <span>מקשיבים ובוחרים תשובה</span>
           </button>
         </div>
-        <OfflinePreparation gameId={gameId} />
+        {import.meta.env.PROD && !platformRuntime.native && <details className="offline-menu"><summary>שמירה ללא רשת</summary><OfflinePreparation gameId={gameId} /></details>}
         {hasCollection && (
           <button
             type="button"

@@ -17,7 +17,21 @@ let narrationVolume = 0.8;
 let slowNarration = false;
 let playing = false;
 const recordedCache = new Map<string, HTMLAudioElement>();
+export const MAX_PRELOAD_NARRATIONS = 12;
+export const MAX_CACHED_NARRATIONS = 32;
 const listeners = new Set<PlaybackListener>();
+
+function cacheRecording(path: string, audio: HTMLAudioElement): void {
+  recordedCache.delete(path);
+  recordedCache.set(path, audio);
+  for (const [key, cached] of recordedCache) {
+    if (recordedCache.size <= MAX_CACHED_NARRATIONS) break;
+    if (cached === activeRecording || cached === audio) continue;
+    cached.onplay = cached.onended = cached.onerror = null;
+    cached.pause();
+    recordedCache.delete(key);
+  }
+}
 
 function notify(event: 'start' | 'end'): void {
   playing = event === 'start';
@@ -56,6 +70,7 @@ function startRecording(audio: HTMLAudioElement, entry: NarrationEntry, options:
     activeRequest = null;
     activeText = '';
     notify('end');
+    options.onSettled?.('ended');
     playPendingGuided();
   };
   audio.onerror = () => { if (isCurrent()) fallback(entry, options); };
@@ -72,8 +87,9 @@ export function configureNarrationPreferences(volume: number, slow: boolean): vo
 
 export function playNarration(entry: NarrationEntry, options: NarrationPlaybackOptions = {}): void {
   const mode = options.mode ?? 'manual';
-  if (activeRecording && mode === 'hint') return;
+  if (activeRecording && mode === 'hint') { options.onSettled?.('cancelled'); return; }
   if (activeRecording && mode === 'guided') {
+    pendingGuided?.options.onSettled?.('cancelled');
     pendingGuided = { text: entry.text, options };
     return;
   }
@@ -85,7 +101,7 @@ export function playNarration(entry: NarrationEntry, options: NarrationPlaybackO
   }
 
   const audio = recordedCache.get(entry.recordedPath) ?? new Audio(entry.recordedPath);
-  recordedCache.set(entry.recordedPath, audio);
+  cacheRecording(entry.recordedPath, audio);
   activeRecording = audio;
   activeText = entry.text;
   audio.currentTime = 0;
@@ -105,11 +121,15 @@ export function playNarrationUrl(url: string, text = '', options: NarrationPlayb
 
 export function preloadNarration(entries: NarrationEntry[]): void {
   if (typeof Audio === 'undefined') return;
+  const seen = new Set<string>();
   for (const entry of entries) {
+    if (!entry.recordedPath || seen.has(entry.recordedPath)) continue;
+    if (seen.size >= MAX_PRELOAD_NARRATIONS) break;
+    seen.add(entry.recordedPath);
     if (!entry.recordedPath || recordedCache.has(entry.recordedPath)) continue;
     const audio = new Audio(entry.recordedPath);
     audio.preload = 'auto';
-    recordedCache.set(entry.recordedPath, audio);
+    cacheRecording(entry.recordedPath, audio);
     audio.load();
   }
 }
@@ -142,6 +162,9 @@ export function resumeNarration(): void {
 
 export function stopNarrationPlayback(): void {
   playbackGeneration += 1;
+  const callback = activeRequest?.options.onSettled;
+  activeRequest = null;
+  pendingGuided?.options.onSettled?.('cancelled');
   pendingGuided = null;
   if (activeRecording) {
     activeRecording.onplay = null;
@@ -155,6 +178,7 @@ export function stopNarrationPlayback(): void {
   }
   activeRequest = null;
   stopSpeaking();
+  callback?.('cancelled');
 }
 
 export function setNarrationVolume(volume: number): void {

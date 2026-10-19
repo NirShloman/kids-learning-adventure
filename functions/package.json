@@ -9,6 +9,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "cli": "tsx src/cli.ts",
+    "test:emulator": "firebase emulators:exec --config ../firebase.json --project demo-olamia-narration --only firestore,storage \"node --import tsx --test tests/narration-emulator.test.ts\"",
     "serve": "npm run build && firebase emulators:start --only functions,firestore,storage",
     "deploy": "npm run build && firebase deploy --only functions,firestore:rules,storage"
   },

@@ -13,7 +13,7 @@ interface AppShellProps {
 
 export function AppShell({ title, subtitle, rightSlot, compact = false, immersive = false, children }: PropsWithChildren<AppShellProps>) {
   return (
-    <div className={`app-shell ${compact ? 'app-shell--compact' : ''} ${immersive ? 'app-shell--adventure' : ''}`}>
+    <div className={`app-shell ${compact ? 'app-shell--compact' : ''} ${immersive ? 'app-shell--adventure' : ''}`} style={immersive ? { padding: 0, gap: 0 } : undefined}>
       <header className="hero-card">
         <div className="hero-card__identity">
           <BrandLogo variant="mark" className="hero-card__logo-mark" decorative />
@@ -23,10 +23,13 @@ export function AppShell({ title, subtitle, rightSlot, compact = false, immersiv
             <p>{subtitle}</p>
           </div>
         </div>
-        <div className="hero-card__side">
+        <details className="hero-card__side shell-menu">
+          <summary aria-label="אפשרויות ופרופיל">☰</summary>
+          <div className="shell-menu__panel">
           {rightSlot}
           <AppVersion />
-        </div>
+          </div>
+        </details>
       </header>
       <main>{children}</main>
     </div>

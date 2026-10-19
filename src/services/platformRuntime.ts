@@ -7,11 +7,11 @@ interface NativeLearningPlugin {
   remove(options: { key: string }): Promise<void>;
   clear(): Promise<void>;
   narrationAvailable(options: { language: string }): Promise<{ available: boolean }>;
-  speak(options: { text: string; language: string; rate: number; pitch: number }): Promise<void>;
+  speak(options: { text: string; language: string; rate: number; pitch: number; requestId?: string }): Promise<void>;
   stopSpeaking(): Promise<void>;
   addListener(
     eventName: 'speechState',
-    listener: (event: { speaking: boolean }) => void
+    listener: (event: { speaking: boolean; requestId?: string; error?: boolean }) => void
   ): Promise<PluginListenerHandle>;
 }
 

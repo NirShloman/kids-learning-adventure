@@ -30,5 +30,5 @@ export function useSpeech(enabled: boolean) {
     if (enabled) preloadNarrationTexts(texts);
   }, [enabled]);
 
-  return { speak, stop, preload, getSpeakProps, isSupported: canSpeak() };
+  return { speak, stop, preload, getSpeakProps, isSupported: typeof Audio !== 'undefined' || canSpeak() };
 }

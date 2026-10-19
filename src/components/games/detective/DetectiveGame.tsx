@@ -23,7 +23,7 @@ import {
   getSortingChallenges,
   pairCount,
 } from "../../../services/questionService";
-import { canResume, newRound } from "./detectiveEngine";
+import { canResume, newRound, resumeRound } from "./detectiveEngine";
 import { DetectiveSession } from "./DetectiveSession";
 import { calculateStars } from "../../../utils/helpers";
 
@@ -61,7 +61,7 @@ export function DetectiveGame({
       const bank = await loadGameContent<DetectiveItem>(gameId),
         saved = getDetectiveProgress(profile.id).rounds[gameId];
       if (canResume(saved, bank.contentVersion, age, difficulty, bank.items)) {
-        if (active) setLoaded({ items: bank.items, round: saved });
+        if (active) setLoaded({ items: bank.items, round: resumeRound(saved) });
         return;
       }
       const count = Math.max(

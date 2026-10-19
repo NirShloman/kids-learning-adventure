@@ -24,13 +24,13 @@ for (const title of quizGames) {
   });
 }
 
-test('offers a hint after an error and always waits for explicit progression', async ({ page }) => {
+test('offers a retry after an error and advances after success feedback', async ({ page }) => {
   await openLobby(page); await openGame(page, 'אותיות'); await selectGameMode(page, 'quiz');
   const status = page.locator('.detective-chip'); const initial = await status.textContent();
   await page.locator('[data-testid="quiz-option"][data-correct="true"]').click();
   await expect(page.locator('.option-card--correct')).toBeVisible();
   await page.waitForTimeout(1100); await expect(status).toHaveText(initial!);
-  await page.getByRole('button', { name: 'לשאלה הבאה', exact: true }).click();
+  await expect(status).not.toHaveText(initial!);
   await page.locator('[data-testid="quiz-option"][data-correct="false"]').first().click();
   await expect(page.locator('.detective-feedback--hint')).toBeVisible();
   await expect(page.locator('[data-testid="quiz-option"][data-correct="true"]')).toBeEnabled();

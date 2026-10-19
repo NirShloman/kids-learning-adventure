@@ -29,7 +29,6 @@ for (const game of ["letters", "numbers", "shapes", "colors"] as const)
     );
     for (let i = 0; i < 3; i++) {
       await solveMission(page, adventureMissions.find((m) => m.id === ids[i])!);
-      await page.locator(".adventure-celebration .adventure-primary").click();
       if (i < 2)
         await page.locator(".adventure-intro .adventure-primary").click();
     }

@@ -167,24 +167,25 @@ test("choice controls support keyboard, separate narration and non-color feedbac
   expect(results.violations).toEqual([]);
 });
 
-test("a second distinct mistake demonstrates the answer and cannot inflate the score", async ({
+test("a second mistake keeps the question open until solved", async ({
   page,
 }) => {
   await bootDetective(page, 4, "medium");
   await enterDetective(page, "letters");
   await page.locator('.detective-answer[data-correct="false"]').nth(0).click();
   await page.locator('.detective-answer[data-correct="false"]').nth(1).click();
-  await expect(page.locator(".detective-feedback")).toContainText("מגלים ביחד");
+  await expect(page.locator(".detective-chip")).toContainText("1/");
   await expect(
     page.locator('.detective-answer[data-correct="true"]'),
-  ).toBeDisabled();
+  ).toBeEnabled();
   await solveDetectiveStep(page);
   await finishDetective(page);
   const outcome = await page.evaluate(() => {
     const s = JSON.parse(localStorage.getItem("lomdim-bekef.learning.v4")!);
     return s.dataByProfile[s.activeProfileId].detectives.last;
   });
-  expect(outcome.demonstrated).toBe(1);
+  expect(outcome.demonstrated).toBe(0);
+  expect(outcome.assisted).toBeGreaterThan(0);
 });
 
 test("reload resumes completed activity and repairs an obsolete checkpoint", async ({
@@ -210,14 +211,13 @@ test("reload resumes completed activity and repairs an obsolete checkpoint", asy
   await expect(page.locator(".detective-chip")).toContainText("1/");
 });
 
-test("rapid next activations advance exactly one activity", async ({
+test("rapid answer activations advance exactly one activity", async ({
   page,
 }) => {
   await bootDetective(page, 4, "medium");
   await enterDetective(page, "letters");
-  await page.locator('.detective-answer[data-correct="true"]').click();
   await page
-    .getByRole("button", { name: "לשאלה הבאה", exact: true })
+    .locator('.detective-answer[data-correct="true"]')
     .evaluate((button) => {
       (button as HTMLButtonElement).click();
       (button as HTMLButtonElement).click();

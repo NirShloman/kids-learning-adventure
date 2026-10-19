@@ -28,7 +28,7 @@ for (const game of ['letters', 'numbers', 'shapes', 'colors', 'patterns', 'sorti
     });
     await bootDetective(page, 3, 'easy', true);
     if (game === 'mixed') {
-      await page.getByRole('button', { name: 'מתחילים תרגול מותאם' }).click();
+      await page.getByRole('button',{name:'🌱 המסלול שלי'}).click(); await page.getByRole('button',{name:'מתחילים תרגול מותאם'}).click();
       await expect(page.getByTestId('adaptive-session')).toBeVisible();
     } else await enterDetective(page, game);
     await expect.poll(() => page.evaluate(() => (window as any).__detectiveAudio.decoded.length)).toBeGreaterThan(0);

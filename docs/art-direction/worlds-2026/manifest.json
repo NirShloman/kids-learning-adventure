@@ -1,0 +1,54 @@
+{
+  "generator": "Built-in image_gen",
+  "date": "2026-09-23",
+  "assets": [
+    {
+      "id": "letters",
+      "prompt": "Use case: stylized-concept. Asset type: premium children's learning app game cover, landscape 3:2. Create a beautifully art-directed miniature storybook diorama, tactile sculpted clay and felt, sophisticated animated feature quality, rich material detail, gentle volumetric light, rounded friendly shapes, clear hero silhouette readable at thumbnail size. A magical floating little island centered and fully visible with generous margins, soft atmospheric background. No UI, frame, lettering, numbers, watermarks or logos. High quality finished illustration, coherent composition, not clipart, not collage. An enchanting lilac library treehouse growing from an open ivory book, a tiny lavender owl reading, curved wooden book shelves, a few floating blank page books, soft lavender and peach twilight, tiny golden fireflies.",
+      "source": "C:\\Users\\User\\.codex\\generated_images\\01a0cf95-127b-7f22-bdfd-484c648501ec\\exec-d7606a7d-15cb-4680-9e54-6334921efa72.png",
+      "output": "public/assets/worlds/letters.webp"
+    },
+    {
+      "id": "numbers",
+      "prompt": "Use case: stylized-concept. Asset type: premium children's learning app game cover, landscape 3:2. Create a beautifully art-directed miniature storybook diorama, tactile sculpted clay and felt, sophisticated animated feature quality, rich material detail, gentle volumetric light, rounded friendly shapes, clear hero silhouette readable at thumbnail size. A magical floating little island centered and fully visible with generous margins, soft atmospheric background. No UI, frame, lettering, numbers, watermarks or logos. High quality finished illustration, coherent composition, not clipart, not collage. A tiny turquoise observatory island, a friendly blue baby whale floating beside a golden telescope, three luminous tiny planets and bead-like counting stars arranged in groups, teal and deep cornflower sky, whimsical cosmic exploration.",
+      "source": "C:\\Users\\User\\.codex\\generated_images\\01a0cf95-127b-7f22-bdfd-484c648501ec\\exec-134bbd8b-b5c8-44fb-95d9-c1bb9958a26d.png",
+      "output": "public/assets/worlds/numbers.webp"
+    },
+    {
+      "id": "shapes",
+      "prompt": "Use case: stylized-concept. Asset type: premium children's learning app game cover, landscape 3:2. Create a beautifully art-directed miniature storybook diorama, tactile sculpted clay and felt, sophisticated animated feature quality, rich material detail, gentle volumetric light, rounded friendly shapes, clear hero silhouette readable at thumbnail size. A magical floating little island centered and fully visible with generous margins, soft atmospheric background. No UI, frame, lettering, numbers, watermarks or logos. High quality finished illustration, coherent composition, not clipart, not collage. A sunlit apricot toy architect island, a friendly terracotta fox building a beautiful little castle from wooden circles, triangles, cylinders and cubes, sculpted geometric trees, cream and coral sunrise.",
+      "source": "C:\\Users\\User\\.codex\\generated_images\\01a0cf95-127b-7f22-bdfd-484c648501ec\\exec-93719544-c06c-458f-a079-03627a6fcaff.png",
+      "output": "public/assets/worlds/shapes.webp"
+    },
+    {
+      "id": "colors",
+      "prompt": "Use case: stylized-concept. Asset type: premium children's learning app game cover, landscape 3:2. Create a beautifully art-directed miniature storybook diorama, tactile sculpted clay and felt, sophisticated animated feature quality, rich material detail, gentle volumetric light, rounded friendly shapes, clear hero silhouette readable at thumbnail size. A magical floating little island centered and fully visible with generous margins, soft atmospheric background. No UI, frame, lettering, numbers, watermarks or logos. High quality finished illustration, coherent composition, not clipart, not collage. An emerald artist garden island, a small mint chameleon with rainbow spots beside ceramic paint pots, a giant sculptural rainbow arch, lush colorful flowers and a little paintbrush, juicy pink, teal and butter yellow.",
+      "source": "C:\\Users\\User\\.codex\\generated_images\\01a0cf95-127b-7f22-bdfd-484c648501ec\\exec-02f15bec-180b-4301-9726-785601b458db.png",
+      "output": "public/assets/worlds/colors.webp"
+    },
+    {
+      "id": "matching",
+      "prompt": "Use case: stylized-concept. Asset type: premium children's learning app game cover, landscape 3:2. Create a beautifully art-directed miniature storybook diorama, tactile sculpted clay and felt, sophisticated animated feature quality, rich material detail, gentle volumetric light, rounded friendly shapes, clear hero silhouette readable at thumbnail size. A magical floating little island centered and fully visible with generous margins, soft atmospheric background. No UI, frame, lettering, numbers, watermarks or logos. High quality finished illustration, coherent composition, not clipart, not collage. A tranquil mint garden with a little stone bridge connecting two matching halves, two friendly tiny bunny companions holding matching heart shaped leaves, paired flowers and rounded puzzle stepping stones, sage and blush sky.",
+      "source": "C:\\Users\\User\\.codex\\generated_images\\01a0cf95-127b-7f22-bdfd-484c648501ec\\exec-aef4b389-fcf2-4455-92d2-073aca6b080b.png",
+      "output": "public/assets/worlds/matching.webp"
+    },
+    {
+      "id": "memory",
+      "prompt": "Use case: stylized-concept. Asset type: premium children's learning app game cover, landscape 3:2. Create a beautifully art-directed miniature storybook diorama, tactile sculpted clay and felt, sophisticated animated feature quality, rich material detail, gentle volumetric light, rounded friendly shapes, clear hero silhouette readable at thumbnail size. A magical floating little island centered and fully visible with generous margins, soft atmospheric background. No UI, frame, lettering, numbers, watermarks or logos. High quality finished illustration, coherent composition, not clipart, not collage. A dreamy midnight blue island with a friendly sleepy golden baby elephant among a few large upright matching picture cards showing simple moons and stars, a crescent moon and warm glowing lanterns, soft purple and honey light.",
+      "source": "C:\\Users\\User\\.codex\\generated_images\\01a0cf95-127b-7f22-bdfd-484c648501ec\\exec-a4f73420-16c2-48ff-808c-28c3f73bf392.png",
+      "output": "public/assets/worlds/memory.webp"
+    },
+    {
+      "id": "patterns",
+      "prompt": "Use case: stylized-concept. Asset type: premium children's learning app game cover, landscape 3:2. Create a beautifully art-directed miniature storybook diorama, tactile sculpted clay and felt, sophisticated animated feature quality, rich material detail, gentle volumetric light, rounded friendly shapes, clear hero silhouette readable at thumbnail size. A magical floating little island centered and fully visible with generous margins, soft atmospheric background. No UI, frame, lettering, numbers, watermarks or logos. High quality finished illustration, coherent composition, not clipart, not collage. A coral and turquoise musical island, a tiny cheerful teal songbird conducting a curved toy train with alternating coral and yellow carriages, repeating round topiary trees, flowing rhythmic composition, pale aqua sky.",
+      "source": "C:\\Users\\User\\.codex\\generated_images\\01a0cf95-127b-7f22-bdfd-484c648501ec\\exec-13ab74f9-9902-46c5-ba86-aa12b605ef98.png",
+      "output": "public/assets/worlds/patterns.webp"
+    },
+    {
+      "id": "sorting",
+      "prompt": "Use case: stylized-concept. Asset type: premium children's learning app game cover, landscape 3:2. Create a beautifully art-directed miniature storybook diorama, tactile sculpted clay and felt, sophisticated animated feature quality, rich material detail, gentle volumetric light, rounded friendly shapes, clear hero silhouette readable at thumbnail size. A magical floating little island centered and fully visible with generous margins, soft atmospheric background. No UI, frame, lettering, numbers, watermarks or logos. High quality finished illustration, coherent composition, not clipart, not collage. A cozy honey colored woodland market island, a friendly caramel squirrel arranging bright fruit into little woven baskets and wooden toys into crates, an elegant leafy canopy, ochre, sage green and cream sunlight.",
+      "source": "C:\\Users\\User\\.codex\\generated_images\\01a0cf95-127b-7f22-bdfd-484c648501ec\\exec-be1d1af8-c627-4373-a019-e864d3ce27f4.png",
+      "output": "public/assets/worlds/sorting.webp"
+    }
+  ]
+}

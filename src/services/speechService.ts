@@ -10,6 +10,7 @@ export type SpeechMode = 'hint' | 'guided' | 'manual';
 export interface SpeakOptions {
   mode?: SpeechMode;
   slow?: boolean;
+  onSettled?: (result: 'ended' | 'cancelled' | 'error') => void;
 }
 
 const FEMALE_HEBREW_VOICE_HINTS = [
@@ -43,6 +44,15 @@ let pendingGuidedText = '';
 let nativeSpeechAvailable = false;
 let configuredSpeechVolume = 0.8;
 let configuredSlowSpeech = false;
+let speechGeneration = 0;
+let activeSettlement: SpeakOptions['onSettled'];
+let activeNativeId = '';
+
+function settleSpeech(result: 'ended' | 'cancelled' | 'error') {
+  const callback = activeSettlement;
+  activeSettlement = undefined;
+  callback?.(result);
+}
 
 export function configureSpeechPreferences(volume: number, slow: boolean): void {
   configuredSpeechVolume = Math.max(0, Math.min(1, volume));
@@ -126,19 +136,27 @@ function refreshSpeechState() {
   isSpeaking = window.speechSynthesis.speaking || window.speechSynthesis.pending;
 }
 
-function speakSafeText(safeText: string, mode: SpeechMode, slow = false): void {
+function speakSafeText(safeText: string, mode: SpeechMode, slow = false, onSettled?: SpeakOptions['onSettled']): void {
+  settleSpeech('cancelled');
+  const generation = ++speechGeneration;
+  activeSettlement = onSettled;
+  const settle = (result: 'ended' | 'error') => {
+    if (generation === speechGeneration) settleSpeech(result);
+  };
   const useSlowRate = slow || configuredSlowSpeech;
   if (platformRuntime.native) {
     if (mode === 'manual') {
       pendingGuidedText = '';
       void nativeLearning.stopSpeaking();
     }
+    activeNativeId = `speech-${generation}`;
     void nativeLearning.speak({
+      requestId: activeNativeId,
       text: safeText,
       language: 'he-IL',
       rate: useSlowRate ? 0.68 : CHILD_FRIENDLY_SPEECH_RATE,
       pitch: CHILD_FRIENDLY_SPEECH_PITCH
-    });
+    }).catch(() => settle('error'));
     return;
   }
   const utterance = new SpeechSynthesisUtterance(safeText);
@@ -148,20 +166,25 @@ function speakSafeText(safeText: string, mode: SpeechMode, slow = false): void {
   utterance.pitch = CHILD_FRIENDLY_SPEECH_PITCH;
   utterance.voice = cachedHebrewVoice ?? getPreferredHebrewVoice();
   utterance.onstart = () => {
+    if (generation !== speechGeneration) return;
     isSpeaking = true;
     notifySpeechLifecycle('start');
   };
   utterance.onend = () => {
+    if (generation !== speechGeneration) return;
     isSpeaking = false;
     notifySpeechLifecycle('end');
+    settle('ended');
     if (!pendingGuidedText) return;
     const nextText = pendingGuidedText;
     pendingGuidedText = '';
     speakHebrew(nextText, { mode: 'guided' });
   };
   utterance.onerror = () => {
+    if (generation !== speechGeneration) return;
     isSpeaking = false;
     notifySpeechLifecycle('end');
+    settle('error');
   };
 
   if (mode === 'manual') {
@@ -174,33 +197,44 @@ function speakSafeText(safeText: string, mode: SpeechMode, slow = false): void {
 
 export function speakHebrew(text: string, options: SpeakOptions = {}): void {
   if (platformRuntime.native && !nativeSpeechAvailable) {
+    const generation = ++speechGeneration;
+    settleSpeech('cancelled');
+    activeSettlement = options.onSettled;
     void nativeLearning.narrationAvailable({ language: 'he-IL' }).then(({ available }) => {
+      if (generation !== speechGeneration) return;
       nativeSpeechAvailable = available;
+      activeSettlement = undefined;
       if (available) speakHebrew(text, options);
+      else options.onSettled?.('error');
     }).catch(() => {
+      if (generation !== speechGeneration) return;
       nativeSpeechAvailable = false;
+      settleSpeech('error');
     });
     return;
   }
-  if (!canSpeak()) return;
+  if (!canSpeak()) { options.onSettled?.('error'); return; }
 
   const mode = options.mode ?? 'manual';
   const safeText = normalizeSpeechText(text);
-  if (!safeText || shouldSkipRepeatedSpeech(safeText)) return;
+  if (!safeText || (!options.onSettled && shouldSkipRepeatedSpeech(safeText))) { options.onSettled?.('cancelled'); return; }
 
   refreshSpeechState();
 
-  if (isSpeaking && mode === 'hint') return;
+  if (isSpeaking && mode === 'hint') { options.onSettled?.('cancelled'); return; }
 
-  if (isSpeaking && mode === 'guided') {
+  if (isSpeaking && mode === 'guided' && !options.onSettled) {
     pendingGuidedText = safeText;
     return;
   }
 
-  speakSafeText(safeText, mode, options.slow);
+  speakSafeText(safeText, mode, options.slow, options.onSettled);
 }
 
 export function stopSpeaking(): void {
+  ++speechGeneration;
+  activeNativeId = '';
+  settleSpeech('cancelled');
   pendingGuidedText = '';
   isSpeaking = false;
   if (platformRuntime.native) {
@@ -219,10 +253,12 @@ if (platformRuntime.native) {
   }).catch(() => {
     nativeSpeechAvailable = false;
   });
-  void nativeLearning.addListener('speechState', ({ speaking }) => {
+  void nativeLearning.addListener('speechState', ({ speaking, requestId, error }) => {
+    if (requestId !== activeNativeId) return;
     nativeSpeechAvailable = true;
     isSpeaking = speaking;
     notifySpeechLifecycle(speaking ? 'start' : 'end');
+    if (!speaking) settleSpeech(error ? 'error' : 'ended');
     if (speaking || !pendingGuidedText) return;
     const nextText = pendingGuidedText;
     pendingGuidedText = '';

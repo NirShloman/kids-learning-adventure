@@ -1,4 +1,4 @@
-# ידע׳לה | Yedale
+# עולמיה | Olamia
 
 הרפתקת למידה בעברית לילדים בגילאי 3–6. אותו קוד נבנה כ־PWA וכאפליקציות Capacitor ל־Android ול־iOS. האפליקציה local-first: אין Firebase, מסד נתונים, התחברות או שירות ענן בזמן ריצה. Firebase Functions ו־Google Cloud TTS משמשים רק ב־pipeline המנהלי ליצירת קובצי קריינות שנארזים מראש.
 

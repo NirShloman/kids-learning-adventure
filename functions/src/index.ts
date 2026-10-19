@@ -28,6 +28,16 @@ export const generateNarrationBinding = onDocumentWritten({
   const afterData = after.data();
   if (!afterData) return;
   if (beforeData && narrationBindingInputFingerprint(beforeData) === narrationBindingInputFingerprint(afterData)) return;
+  const fingerprint = narrationBindingInputFingerprint(afterData);
+  // Delivery can be duplicated or out of order. An older result must never
+  // replace the output of a newer edit while synthesis is in flight.
+  const current = await after.ref.get();
+  if (!current.exists || narrationBindingInputFingerprint(current.data()) !== fingerprint) return;
+  const updateIfCurrent = (updates: Record<string, unknown>) => getFirestore().runTransaction(async transaction => {
+    const latest = await transaction.get(after.ref);
+    if (!latest.exists || narrationBindingInputFingerprint(latest.data()) !== fingerprint) return;
+    transaction.update(after.ref, updates);
+  });
 
   const sourceText = typeof afterData.sourceText === 'string' ? afterData.sourceText : '';
   const force = afterData.forceGeneration === true;
@@ -50,7 +60,7 @@ export const generateNarrationBinding = onDocumentWritten({
       force,
       requestId: event.id
     });
-    await after.ref.set({
+    await updateIfCurrent({
       assetKey: asset.assetKey,
       audioUrl: asset.audioUrl,
       storagePath: asset.storagePath,
@@ -61,21 +71,21 @@ export const generateNarrationBinding = onDocumentWritten({
       updatedAt: FieldValue.serverTimestamp(),
       forceGeneration: false,
       errorCode: FieldValue.delete()
-    }, { merge: true });
+    });
   } catch (error) {
     if (error instanceof NarrationGenerationDisabledError) {
-      await after.ref.set({ status: 'pending', updatedAt: FieldValue.serverTimestamp() }, { merge: true });
+      await updateIfCurrent({ status: 'pending', updatedAt: FieldValue.serverTimestamp() });
       logger.info('Narration generation disabled', { bindingId: event.params.bindingId });
       return;
     }
     const errorCode = error && typeof error === 'object' && 'code' in error ? String(error.code) : 'GENERATION_FAILED';
-    await after.ref.set({
+    await updateIfCurrent({
       status: 'failed',
       errorCode: errorCode.replace(/[^A-Za-z0-9_-]/g, '_').slice(0, 64),
       lastErrorAt: FieldValue.serverTimestamp(),
       updatedAt: FieldValue.serverTimestamp(),
       forceGeneration: false
-    }, { merge: true });
+    });
     throw error;
   }
 });

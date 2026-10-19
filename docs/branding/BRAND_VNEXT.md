@@ -1,6 +1,6 @@
 # Brand vNext — foundations and implementation brief
 
-Status: approved production direction — ידע׳לה / Yedale
+Status: historical brief — superseded by [Olamia](OLAMIA.md) on 2026-09-17.
 Created: 2026-08-26
 Hebrew spelling corrected by the owner: 2026-08-27
 

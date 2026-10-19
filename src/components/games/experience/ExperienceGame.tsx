@@ -29,8 +29,9 @@ import {
   getProfileData,
   saveAdventureProgress,
 } from "../../../services/learningStoreService";
+import { useGameFeedback } from "../../../hooks/useGameFeedback";
 import { useSpeech } from "../../../hooks/useSpeech";
-import { playAudioCue, playSfx } from "../../../services/audioService";
+import { playSfx } from "../../../services/audioService";
 import {
   isCorrectAction,
   itemLabel,
@@ -83,6 +84,7 @@ export function ExperienceGame(props: ExperienceGameProps) {
   const profile = useRef(getActiveProfile()).current;
   const skin = avatarId ?? (gender === "boy" ? "nir-kippah" : "shir");
   const { speak, stop, preload } = useSpeech(voiceEnabled);
+  const response = useGameFeedback(voiceEnabled);
   const progressRef = useRef<AdventureProgress>(
     profile
       ? getAdventureProgress(profile.id, gameId)
@@ -156,7 +158,6 @@ export function ExperienceGame(props: ExperienceGameProps) {
   const [loadError, setLoadError] = useState(false);
   const [retryLoad, setRetryLoad] = useState(0);
   const busyRef = useRef(false);
-  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const startedRef = useRef(performance.now());
   const mission = adventureMissions.find(
     (m) => m.id === checkpoint.missionIds[checkpoint.missionIndex],
@@ -228,37 +229,36 @@ export function ExperienceGame(props: ExperienceGameProps) {
           checkpoint.seed,
         ).map((s) => s.prompt),
       ]);
-    if (!loading && !paused)
+    if (!loading && !paused && !response.locked.current)
       speak(intro ? `${mission.title}. ${mission.story}` : step.prompt);
     startedRef.current = performance.now();
     return stop;
-  }, [mission.id, step.id, intro, loading, paused, speak, stop, preload]);
+  }, [mission.id, step.id, intro, loading, speak, stop, preload]);
   useEffect(() => {
     const pause = () => {
       if (document.hidden) {
         setPaused(true);
         stop();
         setSelected(null);
-      }
+      } else setPaused(false);
     };
     const appPause = (e: Event) => {
       if (!(e as CustomEvent<{ isActive: boolean }>).detail.isActive) {
         setPaused(true);
         stop();
         setSelected(null);
-      }
+      } else setPaused(false);
     };
     document.addEventListener("visibilitychange", pause);
     window.addEventListener("lomdim:app-state", appPause);
     return () => {
       document.removeEventListener("visibilitychange", pause);
       window.removeEventListener("lomdim:app-state", appPause);
-      if (timerRef.current) clearTimeout(timerRef.current);
       stop();
     };
   }, [stop]);
   const answer = (value: string, rotation = 0) => {
-    if (busyRef.current || intro || paused || loading) return;
+    if (busyRef.current || response.locked.current || intro || paused || loading) return;
     const current = checkpointRef.current;
     const correct = isCorrectAction(step, value, rotation);
     const evidence = profile
@@ -293,20 +293,18 @@ export function ExperienceGame(props: ExperienceGameProps) {
       persist(next, evidence);
       setCheckpoint(next);
       setFeedback("כמעט. נבדוק וננסה שוב.");
-      playSfx("wrongTarget");
-      speak("ננסה שוב. אפשר להיעזר ברמז.");
+
       busyRef.current = true;
       setBusy(true);
-      timerRef.current = setTimeout(() => {
+      response.run("ננסה שוב. אפשר להיעזר ברמז.", () => {
         busyRef.current = false;
         setBusy(false);
-      }, 350);
+      }, false);
       return;
     }
     busyRef.current = true;
     setBusy(true);
     setFeedback("מצוין!");
-    playAudioCue("match");
     const finished = current.stepIndex + 1 >= steps.length;
     const next = {
       ...current,
@@ -335,22 +333,21 @@ export function ExperienceGame(props: ExperienceGameProps) {
         ].slice(-120),
       };
     persist(next, evidence);
-    timerRef.current = setTimeout(
+    response.run("מצוין!",
       () => {
         setSelected(null);
         setFeedback("");
         if (finished) {
           setCelebration(true);
           playSfx("levelComplete");
-          if (!document.hidden)
-            speak(`הצלחנו! ${mission.reward} נוספה לאוסף שלנו.`);
+
         } else {
           setCheckpoint(next);
           busyRef.current = false;
           setBusy(false);
         }
       },
-      reduced ? 160 : 750,
+      true,
     );
   };
   const nextMission = () => {
@@ -368,7 +365,11 @@ export function ExperienceGame(props: ExperienceGameProps) {
     setBusy(false);
     busyRef.current = false;
   };
+  useEffect(() => {
+    if (celebration && !paused) response.run(`הצלחנו! ${mission.reward} נוספה לאוסף שלנו.`, nextMission);
+  }, [celebration, paused]);
   const hint = () => {
+    if (response.locked.current) return;
     const next = { ...checkpointRef.current, hint: true };
     persist(next);
     setCheckpoint(next);
@@ -455,6 +456,7 @@ export function ExperienceGame(props: ExperienceGameProps) {
             type="button"
             className="adventure-icon-button"
             aria-label="השמעת ההוראה"
+            disabled={response.busy}
             onClick={() => speak(intro ? mission.story : step.prompt)}
           >
             ♪
@@ -522,16 +524,7 @@ export function ExperienceGame(props: ExperienceGameProps) {
               />
               <h2>איזה יופי, הצלחנו!</h2>
               <p>{mission.reward} נוספה לאוסף שלנו</p>
-              <button
-                type="button"
-                className="adventure-primary"
-                onClick={nextMission}
-              >
-                {checkpointRef.current.missionIndex >= 3
-                  ? "לאוסף שלי"
-                  : "להרפתקה הבאה"}{" "}
-                ←
-              </button>
+              <p role="status">עוד רגע ממשיכים…</p>
             </div>
           ) : (
             <>
@@ -557,7 +550,7 @@ export function ExperienceGame(props: ExperienceGameProps) {
                 role="status"
                 aria-live="polite"
               >
-                {feedback || (
+                {feedback || response.message || (
                   <span dir="ltr">
                     {Math.min(checkpoint.stepIndex + 1, steps.length)} /{" "}
                     {steps.length}
@@ -572,7 +565,7 @@ export function ExperienceGame(props: ExperienceGameProps) {
               <p>המשחק מחכה בדיוק כאן.</p>
               <button
                 className="adventure-primary"
-                onClick={() => setPaused(false)}
+                onClick={() => { setPaused(false); response.resume(); }}
               >
                 ממשיכים לשחק
               </button>

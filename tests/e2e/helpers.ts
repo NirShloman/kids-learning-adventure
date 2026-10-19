@@ -33,7 +33,9 @@ export async function completeProfileSetup(page: Page, gender: 'boy' | 'girl' = 
   const nameInput = page.locator('#learner-name');
   if (!await nameInput.isVisible().catch(() => false)) return;
   await nameInput.fill('נועה');
+  await page.getByRole('button', {name:'ממשיכים',exact:true}).click();
   await page.locator('.profile-setup__gender button').nth(gender === 'boy' ? 0 : 1).click();
+  await page.getByRole('button', {name:'ממשיכים',exact:true}).click();
   await page.locator('#learner-age').selectOption('4');
   await page.locator('#learner-difficulty').selectOption('medium');
   await page.getByRole('button', { name: 'יאללה, מתחילים!' }).click();
@@ -47,10 +49,13 @@ export async function openLobby(page: Page, gender: 'boy' | 'girl' = 'girl') {
   await page.getByRole('button', { name: /מתחילים לשחק/ }).click();
   await completeProfileSetup(page, gender);
   await expect(page.locator('.home-grid')).toBeVisible();
-  await page.locator('#learner-voice').uncheck({ force: true });
+  await page.getByRole('button',{name:'⚙️ צלילים'}).click();
+  await page.getByLabel('🔊 הקראה',{exact:true}).uncheck();
+  await page.getByRole('button',{name:'🎲 משחקים'}).click();
 }
 
 export async function chooseHomeSettings(page: Page, age: number, difficultyValue: 'easy' | 'medium' | 'hard') {
+  await page.locator('.shell-menu > summary').click();
   await page.getByRole('button', { name: 'אזור הורים' }).click();
   const prompt = await page.locator('label[for="parent-answer"]').textContent();
   const factors = prompt?.match(/(\d+)\s*×\s*(\d+)/);
@@ -65,8 +70,9 @@ export async function chooseHomeSettings(page: Page, age: number, difficultyValu
 
 export async function openGame(page: Page, title: GameTitle) {
   const card = page.locator('.game-card').filter({ hasText: title }).first();
+  if (!await card.count()) await page.getByRole('button',{name:'לעמוד הבא',exact:true}).click();
   await expect(card).toBeVisible();
-  await card.getByRole('button', { name: 'מתחילים' }).click();
+  await card.click();
   const skip = page.getByRole('button', { name: 'דלגו למשחק' });
   if (await skip.isVisible().catch(() => false)) await activate(skip).catch(() => undefined);
   await expect(page.locator('.game-world')).toBeVisible();

@@ -1,0 +1,54 @@
+{
+  "generator": "Built-in image_gen",
+  "date": "2026-09-23",
+  "assets": [
+    {
+      "id": "letters",
+      "prompt": "Use case: stylized-concept. Asset type: single premium collectible figurine for a children's game treasure collection. Square composition, entire object visible centered with generous negative space and small soft grounding shadow on a seamless warm ivory studio background (#fffaf0). Exceptional polished 3D sculpted ceramic and felt designer toy, tactile fine detail, restrained gold metallic accents, beautifully balanced physical collectible object, soft warm studio lighting, charming expressive face and rounded child-friendly forms. Not an app screenshot, no text, no numbers, no logo, no grid, no extra unrelated props. Subject: A lavender owl perched on an ornate golden storybook key, nestled inside an open miniature ivory book with purple blossoms.",
+      "source": "C:\\Users\\User\\.codex\\generated_images\\01a0cf95-127b-7f22-bdfd-484c648501ec\\exec-c03034c2-b423-44f1-8b87-354ca539555c.png",
+      "output": "public/assets/worlds/letters-keepsake.webp"
+    },
+    {
+      "id": "numbers",
+      "prompt": "Use case: stylized-concept. Asset type: single premium collectible figurine for a children's game treasure collection. Square composition, entire object visible centered with generous negative space and small soft grounding shadow on a seamless warm ivory studio background (#fffaf0). Exceptional polished 3D sculpted ceramic and felt designer toy, tactile fine detail, restrained gold metallic accents, beautifully balanced physical collectible object, soft warm studio lighting, charming expressive face and rounded child-friendly forms. Not an app screenshot, no text, no numbers, no logo, no grid, no extra unrelated props. Subject: A little turquoise whale curled around a golden celestial compass with a tiny blue planet hovering above it.",
+      "source": "C:\\Users\\User\\.codex\\generated_images\\01a0cf95-127b-7f22-bdfd-484c648501ec\\exec-063313fe-ecba-4e6e-9061-977f06e48889.png",
+      "output": "public/assets/worlds/numbers-keepsake.webp"
+    },
+    {
+      "id": "shapes",
+      "prompt": "Use case: stylized-concept. Asset type: single premium collectible figurine for a children's game treasure collection. Square composition, entire object visible centered with generous negative space and small soft grounding shadow on a seamless warm ivory studio background (#fffaf0). Exceptional polished 3D sculpted ceramic and felt designer toy, tactile fine detail, restrained gold metallic accents, beautifully balanced physical collectible object, soft warm studio lighting, charming expressive face and rounded child-friendly forms. Not an app screenshot, no text, no numbers, no logo, no grid, no extra unrelated props. Subject: A little terracotta fox sitting beside a golden castle key and a tiny castle made of tactile peach, coral and cream geometric blocks.",
+      "source": "C:\\Users\\User\\.codex\\generated_images\\01a0cf95-127b-7f22-bdfd-484c648501ec\\exec-30b44020-fa1f-4c5f-97f6-a72aeefa32b3.png",
+      "output": "public/assets/worlds/shapes-keepsake.webp"
+    },
+    {
+      "id": "colors",
+      "prompt": "Use case: stylized-concept. Asset type: single premium collectible figurine for a children's game treasure collection. Square composition, entire object visible centered with generous negative space and small soft grounding shadow on a seamless warm ivory studio background (#fffaf0). Exceptional polished 3D sculpted ceramic and felt designer toy, tactile fine detail, restrained gold metallic accents, beautifully balanced physical collectible object, soft warm studio lighting, charming expressive face and rounded child-friendly forms. Not an app screenshot, no text, no numbers, no logo, no grid, no extra unrelated props. Subject: A friendly mint chameleon holding a golden paintbrush in a ceramic rainbow garden pot with a tiny sculptural rainbow.",
+      "source": "C:\\Users\\User\\.codex\\generated_images\\01a0cf95-127b-7f22-bdfd-484c648501ec\\exec-b16e0526-2481-47c8-b429-49f885a12663.png",
+      "output": "public/assets/worlds/colors-keepsake.webp"
+    },
+    {
+      "id": "matching",
+      "prompt": "Use case: stylized-concept. Asset type: single premium collectible figurine for a children's game treasure collection. Square composition, entire object visible centered with generous negative space and small soft grounding shadow on a seamless warm ivory studio background (#fffaf0). Exceptional polished 3D sculpted ceramic and felt designer toy, tactile fine detail, restrained gold metallic accents, beautifully balanced physical collectible object, soft warm studio lighting, charming expressive face and rounded child-friendly forms. Not an app screenshot, no text, no numbers, no logo, no grid, no extra unrelated props. Subject: Two tiny cream and blush bunnies cuddling a luminous rose quartz heart, sitting on sage green leaves.",
+      "source": "C:\\Users\\User\\.codex\\generated_images\\01a0cf95-127b-7f22-bdfd-484c648501ec\\exec-0b7f4614-ede5-4900-8ef6-2617cb3a8761.png",
+      "output": "public/assets/worlds/matching-keepsake.webp"
+    },
+    {
+      "id": "memory",
+      "prompt": "Use case: stylized-concept. Asset type: single premium collectible figurine for a children's game treasure collection. Square composition, entire object visible centered with generous negative space and small soft grounding shadow on a seamless warm ivory studio background (#fffaf0). Exceptional polished 3D sculpted ceramic and felt designer toy, tactile fine detail, restrained gold metallic accents, beautifully balanced physical collectible object, soft warm studio lighting, charming expressive face and rounded child-friendly forms. Not an app screenshot, no text, no numbers, no logo, no grid, no extra unrelated props. Subject: A sleepy golden baby elephant hugging a glowing crescent moon lantern on a lavender cloud.",
+      "source": "C:\\Users\\User\\.codex\\generated_images\\01a0cf95-127b-7f22-bdfd-484c648501ec\\exec-863106d0-2c47-4fa1-b835-da4d79ac3ca7.png",
+      "output": "public/assets/worlds/memory-keepsake.webp"
+    },
+    {
+      "id": "patterns",
+      "prompt": "Use case: stylized-concept. Asset type: single premium collectible figurine for a children's game treasure collection. Square composition, entire object visible centered with generous negative space and small soft grounding shadow on a seamless warm ivory studio background (#fffaf0). Exceptional polished 3D sculpted ceramic and felt designer toy, tactile fine detail, restrained gold metallic accents, beautifully balanced physical collectible object, soft warm studio lighting, charming expressive face and rounded child-friendly forms. Not an app screenshot, no text, no numbers, no logo, no grid, no extra unrelated props. Subject: A teal songbird holding a tiny golden conductor wand on a coral and butter yellow miniature toy train.",
+      "source": "C:\\Users\\User\\.codex\\generated_images\\01a0cf95-127b-7f22-bdfd-484c648501ec\\exec-f0aad4a5-3e93-4009-9346-6605c67023cd.png",
+      "output": "public/assets/worlds/patterns-keepsake.webp"
+    },
+    {
+      "id": "sorting",
+      "prompt": "Use case: stylized-concept. Asset type: single premium collectible figurine for a children's game treasure collection. Square composition, entire object visible centered with generous negative space and small soft grounding shadow on a seamless warm ivory studio background (#fffaf0). Exceptional polished 3D sculpted ceramic and felt designer toy, tactile fine detail, restrained gold metallic accents, beautifully balanced physical collectible object, soft warm studio lighting, charming expressive face and rounded child-friendly forms. Not an app screenshot, no text, no numbers, no logo, no grid, no extra unrelated props. Subject: A friendly caramel squirrel in a beautifully woven miniature basket with a gold acorn and bright tiny fruit.",
+      "source": "C:\\Users\\User\\.codex\\generated_images\\01a0cf95-127b-7f22-bdfd-484c648501ec\\exec-9dc45b77-fe24-4cbd-8f37-41023c6a1260.png",
+      "output": "public/assets/worlds/sorting-keepsake.webp"
+    }
+  ]
+}

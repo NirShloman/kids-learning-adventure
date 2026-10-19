@@ -4,7 +4,7 @@ import {bootDetective, finishDetective, solveDetectiveStep} from './detective-he
 for (const age of [3,4,5,6] as const) for (const difficulty of ['easy','medium','hard'] as const) {
   test(`adaptive age ${age} ${difficulty}: selected level, pair size and replay`, async ({page}) => {
     await bootDetective(page,age,difficulty);
-    await page.getByRole('button',{name:'מתחילים תרגול מותאם'}).click();
+    await page.getByRole('button',{name:'🌱 המסלול שלי'}).click(); await page.getByRole('button',{name:'מתחילים תרגול מותאם'}).click();
     await expect(page.getByTestId('adaptive-session')).toBeVisible();
     const readRound=()=>page.evaluate(()=>{
       const snapshot=JSON.parse(localStorage.getItem('lomdim-bekef.learning.v4')!);

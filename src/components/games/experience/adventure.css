@@ -19,7 +19,7 @@
   color: #46372e;
   overflow: hidden;
   background: #f8eddb;
-  font-family: Rubik, sans-serif;
+  font-family: var(--font-family);
 }
 .adventure *,
 .adventure-collection * {

@@ -21,6 +21,7 @@ import { getDetectivePairs } from "../services/questionService";
 import {
   canResume,
   newRound,
+  resumeRound,
 } from "../components/games/detective/detectiveEngine";
 import { DetectiveSession } from "../components/games/detective/DetectiveSession";
 import { SummaryPage } from "./SummaryPage";
@@ -68,7 +69,7 @@ export function AdaptiveSessionPage({ profile, onBack, onComplete }: Props) {
       if (
         canResume(saved, version, profile.age, profile.manualDifficulty, items)
       ) {
-        if (active) setLoaded({ items, round: saved });
+        if (active) setLoaded({ items, round: resumeRound(saved) });
         return;
       }
       const data = getProfileData(profile.id);

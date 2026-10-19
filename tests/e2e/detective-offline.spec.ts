@@ -17,14 +17,16 @@ for(const game of ['letters','numbers','shapes','colors','patterns','sorting','m
     });
     const enter=async()=>{
       if(game!=='mixed')return enterDetective(page,game);
-      await page.getByRole('button',{name:'מתחילים תרגול מותאם'}).click();
+      await page.getByRole('button',{name:'🌱 המסלול שלי'}).click(); await page.getByRole('button',{name:'מתחילים תרגול מותאם'}).click();
       await expect(page.getByTestId('adaptive-session')).toBeVisible();
     };
     await bootDetective(page,5,'medium',true);await page.evaluate(()=>navigator.serviceWorker.ready.then(()=>true));
     await expect.poll(()=>page.evaluate(()=>Boolean(navigator.serviceWorker.controller))).toBe(true);
     await enter();
+    await page.locator('.offline-menu > summary').click();
     await page.getByRole('button',{name:'שמירה למשחק ללא רשת',exact:true}).click();
     await expect(page.getByRole('button',{name:'המשחק מוכן גם ללא רשת',exact:true})).toBeVisible({timeout:120_000});
+    await page.locator('.offline-menu > summary').click();
     if(!['matching','memory'].includes(game))await solveDetectiveStep(page);
     await context.setOffline(true);await page.reload({waitUntil:'commit'});
     await page.getByRole('button',{name:/מתחילים לשחק/}).click();await enter();

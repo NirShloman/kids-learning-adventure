@@ -1,5 +1,18 @@
 # Hebrew narration architecture
 
+## Approved Olamia voice and pronunciation
+
+The owner approved **עולמיה / Olamia**, pronounced **עוֹלָמִיָּה**, and the
+`he-IL-Chirp3-HD-Aoede` sample at `speakingRate=0.92` on 2026-09-17.
+The accepted sample is `tmp/narration/pronunciation-variants/12-olamia-stress-review/`.
+Public spelling belongs in `src/config/brand.ts`; frontend lookup and backend
+normalization supply the same vocalized spelling. See `docs/branding/OLAMIA.md`.
+
+The rebrand changes one of the 1,982 current catalog texts. Only that text was
+regenerated; unchanged content keeps its existing immutable assets and version.
+The cumulative local-generation ledger remained within USD 0.91 before tax
+(USD 0.908280 conservatively reserved, including prior generation).
+
 ## Runtime and data flow
 
 ### Local release asset export
@@ -95,8 +108,8 @@ TTS_GENERATION_ENABLED=false
 TTS_SERVICE_ACCOUNT=narration-runtime@PROJECT_ID.iam.gserviceaccount.com
 ```
 
-Aoede is provisional. `TTS_GENERATION_ENABLED` must remain `false` through the
-first deploy and voice review. Voice, speaking rate, audio format, version and
+Aoede is approved for Olamia. `TTS_GENERATION_ENABLED` stays `false` unless an
+explicit cloud-generation run is requested. Voice, speaking rate, audio format, version and
 normalized text are included in the asset hash. Changing any of them creates a
 new immutable object.
 
@@ -129,6 +142,24 @@ pronunciation and consistency across all sentences. Then set `TTS_VOICE` to the
 selected full voice name.
 
 ## Catalog, backfill and synchronization
+
+For approved assets already generated locally, `archive-local` validates the
+entire active catalog, then imports MP3s and metadata under leases and immutable
+Storage preconditions. It never invokes TTS. Without `--apply` it is a local
+dry run. Use explicit deployment values; no project/bucket IDs are committed:
+
+```bash
+npm --prefix functions run cli -- archive-local
+npm --prefix functions run cli -- archive-local --apply --project PROJECT_ID --bucket BUCKET_NAME
+npm run narration:sync -- --apply --project PROJECT_ID --bucket BUCKET_NAME
+```
+
+The import is resumable and idempotent. Existing ready assets must have matching
+checksums. Bindings are only changed when their content or metadata differs.
+Imports are not counted as synthesis usage. Keep the local generation ledger
+for historical synthesis costs; cloud `ttsUsage` describes cloud-service calls.
+Sync selects only active catalog bindings with matching text, voice, version,
+immutable path and checksum. Any missing or stale binding aborts publication.
 
 Build and inspect the catalog without contacting Google:
 
@@ -180,7 +211,8 @@ npm run narration:regenerate -- --apply --all
 ```
 
 Forced generation must create a new immutable revision and cannot overwrite a
-cached URL:
+cached URL. Sync preserves that revision per asset, including when only one
+binding is regenerated; release validation includes it in the expected hash:
 
 ```bash
 npm run narration:regenerate -- --apply --all --force --revision voice-review-2026-09
@@ -214,6 +246,28 @@ Monthly totals are stored in `ttsUsage/YYYY-MM` as `charactersSent`, `requests`,
   use browser or native speech fallback.
 
 ## Production checklist
+
+### Verification commands
+
+`npm run test:narration:emulator` starts Firestore and Storage emulators against
+the isolated `demo-olamia-narration` project (Java 21+ required). It invokes the
+exported binding handler with real emulator document snapshots and substitutes
+only the synthesis gateway with an existing MP3 fixture. It covers duplicate
+events/text, output-only writes, failure cleanup, stale events, transaction
+leases, expired lease recovery, metadata and idempotent usage. No Google TTS
+request is made. Because the Storage emulator does not implement generation
+preconditions, that test simulates GCS's 412 response and verifies the resulting
+metadata check against emulator Storage.
+
+`npm run test:offline` verifies the production app shell and a cached MP3 byte
+range after network disconnection. Narration recordings are cached on demand;
+the service worker does not pre-download the whole narration catalog. Native
+packages include the full active catalog for first-launch offline playback.
+
+The 2026-09-18 implementation and cloud verification results are recorded in
+`docs/qa/OLAMIA_RELEASE.md`.
+
+### Operator checklist
 
 - [ ] Enable Cloud Text-to-Speech API in the exact Firebase/Google project.
 - [ ] Confirm Blaze billing and Text-to-Speech quota.

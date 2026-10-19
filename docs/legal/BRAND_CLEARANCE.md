@@ -1,5 +1,9 @@
 # Preliminary brand and name review
 
+Current product name: **עולמיה / Olamia**, owner-approved 2026-09-17.
+Pronunciation: **עוֹלָמִיָּה**. Implementation: `docs/branding/OLAMIA.md`.
+The older reviews below are historical and do not establish clearance of Olamia.
+
 Search date: 2026-08-22. This is a preliminary exact-term screen, not legal clearance or a similarity/opposition analysis.
 
 ## Owner-selected name — ידע׳לה / Yedale
@@ -10,7 +14,7 @@ Owner spelling confirmation: 2026-08-27.
 - Apple App Store queries in the Israeli and US storefronts did not return an exact app-title match; a Google Play exact-name screen found no match.
 - Public web searches returned personal-name references, not a child-learning or software brand using the exact name.
 - `yedale.com` and `yedale.app` did not resolve and returned “not found” from their respective registry RDAP endpoints on the review date. Availability can change at any moment and is not proof of legal availability.
-- The owner-selected public spelling is `ידע׳לה` in Hebrew and `Yedale` in Latin script, pronounced `יֶדַעְלֶה`.
+- The owner-selected public spelling is `ידע׳לה` in Hebrew and `Yedale` in Latin script, pronounced `יֶדַע, לֶה`.
 
 Result: `REVIEW REQUIRED`. The Latin-name screen and prior Hebrew search remain useful background, but the corrected Hebrew spelling requires a refreshed exact, punctuation-normalized, phonetic, transliteration, and similarity search. Before public release, obtain legal advice for the intended goods and territories, register the core domains and social handles, and file the approved Hebrew and Latin word marks in the relevant classes. Do not use the ® symbol until registration is granted.
 
