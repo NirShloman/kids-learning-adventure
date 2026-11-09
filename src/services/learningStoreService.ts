@@ -17,6 +17,13 @@ const LEGACY_SESSIONS_KEY = 'kids-learning-adventure.sessions';
 const MAX_EVENTS = 5_000;
 const MAX_SESSIONS = 500;
 
+interface LearningRepository { read(): LearningSnapshotV4; write(snapshot: LearningSnapshotV4): void; clear(): Promise<void> }
+let repository: LearningRepository | undefined;
+export function configureLearningRepository(value: LearningRepository | undefined): () => void {
+  repository = value;
+  return () => { if (repository === value) repository = undefined; };
+}
+
 export const defaultAccessibilitySettings: AccessibilitySettings = {
   noTimeLimit: true, reducedMotion: false, reducedParticles: false,
   reducedBackgroundAudio: false, fewerItems: false, largeTouchTargets: false,
@@ -36,7 +43,9 @@ function read<T>(key: string, fallback: T): T {
 }
 function writeSnapshot(snapshot: LearningSnapshotV4): LearningSnapshotV4 {
   // Earned keepsakes outlive the bounded session / discovery history.
-  for (const data of Object.values(snapshot.dataByProfile)) {
+  const previous = repository?.read();
+  for (const [profileId,data] of Object.entries(snapshot.dataByProfile)) {
+    if (previous?.dataByProfile[profileId] === data) continue;
     const decorations = new Set(data.journey.decorationIds);
     for (const world of worldCollection) {
       const { count } = worldProgress(data, world.gameId);
@@ -44,7 +53,9 @@ function writeSnapshot(snapshot: LearningSnapshotV4): LearningSnapshotV4 {
     }
     data.journey = { ...data.journey, decorationIds: [...decorations] };
   }
-  void getLocalDataStore().set(SNAPSHOT_KEY, JSON.stringify(snapshot)); return snapshot;
+  if (repository) repository.write(snapshot);
+  else void getLocalDataStore().set(SNAPSHOT_KEY, JSON.stringify(snapshot));
+  return snapshot;
 }
 function isAge(value: unknown): value is Age { return value === 3 || value === 4 || value === 5 || value === 6; }
 function isDifficulty(value: unknown): value is Difficulty { return value === 'easy' || value === 'medium' || value === 'hard'; }
@@ -89,6 +100,7 @@ function migratedSnapshot(): LearningSnapshotV4 {
 }
 
 export function getLearningSnapshot(): LearningSnapshotV4 {
+  if (repository) return repository.read();
   const raw = getLocalDataStore().getCached(SNAPSHOT_KEY);
   if (raw !== null) {
     // A broken primary snapshot must never be mistaken for a new installation.
@@ -241,6 +253,7 @@ export function saveProfileRecentContent(profileId: string, key: string, ids: st
   writeSnapshot({ ...snapshot, dataByProfile: { ...snapshot.dataByProfile, [profileId]: next }, updatedAt: nowIso() });
 }
 export async function deleteAllLearningData(): Promise<void> {
+  if (repository) return repository.clear();
   const store = getLocalDataStore();
   // Native deletion is atomic; web deletion uses a durable tombstone while
   // preserving unrelated keys belonging to the same origin.

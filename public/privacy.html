@@ -8,9 +8,14 @@
 <body>
 <button type="button" onclick="history.back()">חזרה לאפליקציה</button>
 <h1>מדיניות פרטיות — עולמיה | Olamia</h1>
-<p>עדכון אחרון: 10 באוקטובר 2026</p>
+<p>עדכון אחרון: 19 באוקטובר 2026</p>
 <p><strong>בעל השליטה/מפעיל:</strong> <span class="placeholder">[יש להשלים שם משפטי לפני פרסום]</span><br><strong>יצירת קשר לפרטיות:</strong> <span class="placeholder">[יש להשלים כתובת דוא״ל לפני פרסום]</span><br><strong>כתובת:</strong> <span class="placeholder">[יש להשלים כתובת לפני פרסום]</span></p>
-<p>האפליקציה מיועדת לילדים בגילאי 3–6, ללא חשבון משתמש. מדיניות זו מתארת את ההתנהגות שנבדקה בגרסה 1.2.0; יש לעדכן אותה לפני כל שינוי באיסוף או בשירותי צד שלישי.</p>
+<p>האפליקציה מיועדת לילדים בגילאי 3–6. גרסאות המובייל והמצב המקומי פועלים ללא חשבון. פיילוט הגנים ב־Web, כאשר הוא מופעל, משתמש בחשבון צוות ובשמירה בענן כמפורט להלן. יש להשלים את פרטי המפעיל לפני פרסום.</p>
+<h2>פיילוט הגנים ב־Web — חשבון צוות וסנכרון</h2>
+<p>לכל גן חשבון צוות משותף באימייל וסיסמה. לילדים אין חשבונות התחברות. הצוות מוסיף שם או כינוי, קבוצת גיל, דמות והעדפות. הפרופיל, הגדרות הנגישות והקול, ניסיונות המשחק, סיכומי המפגשים, האוספים וההתקדמות נשמרים ב־Google Firebase Authentication ו־Cloud Firestore בפרויקט נפרד מתשתית יצירת הקריינות. אתר ה־Web וקובצי המשחק מוגשים באמצעות Cloudflare. ספקי האחסון עשויים לעבד כתובות IP ויומנים תפעוליים לשם אספקת השירות ואבטחתו.</p>
+<p>נתוני הגן ותור השמירה נשמרים במחשב ב־IndexedDB. חזרה למשחק ללא רשת לאחר פתיחה מחדש זמינה רק במחשב שהצוות סימן כאמין והכין מראש. שינויים מסונכרנים בחידוש החיבור; שינויים שטרם גובו מסומנים במפורש. אין לפנות נתוני דפדפן לפני השלמת הסנכרון. קוד הצוות הוא שער בממשק ואינו תחליף להרשאות חשבון הגן. במחשב מנותק לא ניתן לקבל מיד שינויי קוד או מחיקות שנעשו במחשב אחר.</p>
+<p>מחיקת ילד מאזור הצוות דורשת חיבור ומסירה את נתוניו הפעילים בענן; נשמר מזהה מחיקה ללא שם כדי למנוע החזרה ממחשב שהיה מנותק. גיבויים מיועדים להישמר עד 30 יום לאחר יצירתם, בכפוף להפעלת הגיבוי לפני ההשקה. מחשב מנותק יתעדכן במחיקה לאחר חיבור וסנכרון. יציאה מהחשבון מנקה את נתוני הגן המקומיים לאחר השלמת גיבוי הפעולות הממתינות. אין בפיילוט פרסום, אנליטיקה, הקלטת קול או צילום ילדים.</p>
+<p>העברת פרופילים קיימים מהמצב המקומי לענן נעשית רק באישור מפורש של הצוות. באחריות המפעיל והגן להסדיר את ההרשאות וההודעות הנדרשות לשימוש בנתוני הילדים לפני תחילת הפעילות. משך שמירת נתוני הגן הפעילים ופרטי פנייה למחיקה: <span class="placeholder">[יש להשלים מדיניות שמירה ופרטי קשר לפני הפיילוט]</span>.</p>
 <h2>מה נשמר במכשיר</h2>
 <p>כינוי אופציונלי, גיל בטווח 3–6 (לא תאריך לידה), העדפת דמות אופציונלית, רמת קושי, הגדרות קול ומוזיקה, היסטוריית משחקים, ציונים, התקדמות ותוכן אחרון נשמרים באחסון הפרטי של האפליקציה במכשיר כדי להפעיל את המשחק ולהתאימו.</p>
 <h2>מה אינו נאסף בגרסת המובייל שנבדקה</h2>
@@ -28,6 +33,7 @@
 <hr>
 <section dir="ltr" lang="en">
 <h1>Privacy Policy — Olamia</h1>
+<p>The optional Web kindergarten pilot uses a shared staff email/password account, Firebase Authentication and Cloud Firestore to store child nicknames, age bands, preferences, learning events, session summaries and progress. Cloudflare hosts the Web application. Trusted classroom computers keep an IndexedDB cache and a durable synchronization queue for offline play. Children have no login credentials. Individual deletion requires connectivity; anonymous deletion markers prevent stale offline devices from restoring deleted children. Backup retention is intended to be 30 days once configured. Offline computers receive deletions after reconnecting. Operator contact details and the active-data retention policy must be completed before the pilot. The local/mobile behavior below remains separate.</p>
 <p><strong>Controller/operator:</strong> <span class="placeholder">[legal name required before publication]</span><br><strong>Privacy email:</strong> <span class="placeholder">[email required]</span><br><strong>Address:</strong> <span class="placeholder">[address required]</span></p>
 <p>The reviewed mobile app has no account. It stores an optional nickname, age band (3–6, not a birth date), optional character preference, settings, play history, scores, progress, and recent content only in the app’s private on-device storage. The reviewed code does not transmit those values to the operator or third parties and contains no ads, analytics, tracking, Firebase, crash reporting, or advertising-ID access.</p>
 <p>Parents can erase all local profile, settings, history, progress, and recent-content data from the gated Parent Area. Hebrew narration recordings are generated before release and bundled with the mobile application; gameplay does not request cloud voice generation. When a recording is unavailable, the app may use an installed local Hebrew system voice. Voice availability depends on the device. The app does not record audio or request microphone access. A hosted Web/PWA version makes ordinary requests to its host and may create security/server logs; it requires a completed hosting disclosure before public deployment.</p>

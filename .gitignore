@@ -1,5 +1,6 @@
 node_modules/
 dist/
+dist-pilot/
 tmp/
 reports/
 
@@ -32,3 +33,5 @@ Thumbs.db
 /functions/lib/
 /functions/.firebase/
 /functions/tmp/
+/pilot-functions/lib/
+/pilot-functions/.firebase/

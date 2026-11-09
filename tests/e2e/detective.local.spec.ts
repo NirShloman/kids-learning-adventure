@@ -23,7 +23,7 @@ test('detective smoke: hint, automatic progression, checkpoint and collection',a
   await page.screenshot({path:testInfo.outputPath('detective-summary.png'),fullPage:true});
   await page.getByRole('button',{name:'לתפריט המשחקים',exact:true}).click();
   await page.getByRole('button',{name:'🏆 האוסף שלי'}).click();
-  await expect(page.locator('.detective-collection')).toBeVisible();expect(errors).toEqual([]);
+  await expect(page.getByRole('region',{name:'האוסף שלי',exact:true})).toBeVisible();expect(errors).toEqual([]);
 });
 
 test('adaptive uses the same visible activities and finishes a mixed discovery',async({page})=>{

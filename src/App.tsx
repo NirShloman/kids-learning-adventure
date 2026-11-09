@@ -49,7 +49,8 @@ const QuizGame = lazy(() => import('./components/games/quiz/QuizGame').then((mod
 const ExperienceGame = lazy(() => import('./components/games/experience/ExperienceGame').then((module) => ({ default: module.ExperienceGame })));
 const AdventureSummary = lazy(() => import('./components/games/experience/AdventureSummary').then((module) => ({ default: module.AdventureSummary })));
 
-function App() {
+interface AppProps { pilotMode?: boolean; onStaff?: () => void; sharedParticipants?: string[] }
+function App({ pilotMode = false, onStaff, sharedParticipants }: AppProps = {}) {
   useChildViewport();
   const [learner, setLearner] = useState<LocalLearnerState>(() => getLocalLearnerState());
   const settings: LearnerSettings = {
@@ -67,12 +68,12 @@ function App() {
   const [playSessionKey, setPlaySessionKey] = useState(0);
   const [quizQuestions, setQuizQuestions] = useState<QuizQuestion[]>([]);
   const [isQuizLoading, setIsQuizLoading] = useState(false);
-  const [showLanding, setShowLanding] = useState(true);
+  const [showLanding, setShowLanding] = useState(!pilotMode);
   const [showProfileSetup, setShowProfileSetup] = useState(false);
   const [profileSetupMode, setProfileSetupMode] = useState<'create' | 'edit'>('create');
   const [showParentArea, setShowParentArea] = useState(false);
   const [showAdaptiveSession, setShowAdaptiveSession] = useState(false);
-  const [showSharedPlay, setShowSharedPlay] = useState(false);
+  const [showSharedPlay, setShowSharedPlay] = useState(Boolean(sharedParticipants));
   const [isEnteringGame, setIsEnteringGame] = useState(false);
   const [isIntroPlaying, setIsIntroPlaying] = useState(false);
   const recordedPlaySessionKeyRef = useRef<number | null>(null);
@@ -309,6 +310,7 @@ function App() {
   }
 
   function handleStartShared() {
+    if (pilotMode) { onStaff?.(); return; }
     setIsIntroPlaying(false);
     stopMusic(160);
     setShowSharedPlay(true);
@@ -436,7 +438,7 @@ function App() {
     if (profile) return <AdaptiveSessionPage profile={profile} onBack={() => setShowAdaptiveSession(false)} onComplete={() => setShowAdaptiveSession(false)} />;
   }
 
-  if (showSharedPlay) return <SharedPlayPage profiles={getLearningSnapshot().profiles} onBack={() => setShowSharedPlay(false)} />;
+  if (showSharedPlay) return <SharedPlayPage profiles={getLearningSnapshot().profiles} fixedParticipants={sharedParticipants} onBack={() => { setShowSharedPlay(false); if (pilotMode) onStaff?.(); }} />;
 
   if (showParentArea) {
     return <ParentAreaPage learner={learner} onBack={() => setShowParentArea(false)} onAddProfile={handleAddProfile} onReloadState={() => setLearner(getLocalLearnerState())} onReset={async () => {
@@ -457,14 +459,14 @@ function App() {
       immersive={selectedGameMode === 'experience'}
       rightSlot={(
         <>
-          <Button variant="ghost" className="app-shell__profile-button" onClick={() => { setProfileSetupMode('edit'); setShowProfileSetup(true); }}>
+          <Button variant="ghost" className="app-shell__profile-button" onClick={() => { if (pilotMode) { onStaff?.(); return; } setProfileSetupMode('edit'); setShowProfileSetup(true); }}>
             {learner.name ? `הפרופיל של ${learner.name}` : 'עריכת פרופיל'}
           </Button>
-          <Button variant="ghost" className="app-shell__lobby-button" onClick={handleBackToLanding} {...getSpeakProps<HTMLButtonElement>('חזרה למסך הפתיחה')}>
+          <Button variant="ghost" className="app-shell__lobby-button" onClick={pilotMode ? onStaff : handleBackToLanding} {...getSpeakProps<HTMLButtonElement>('חזרה למסך הפתיחה')}>
             למסך הפתיחה
           </Button>
-          <Button variant="ghost" className="app-shell__parent-button" onClick={() => setShowParentArea(true)}>
-            אזור הורים
+          <Button variant="ghost" className="app-shell__parent-button" onClick={() => { if (pilotMode) onStaff?.(); else setShowParentArea(true); }}>
+            {pilotMode ? 'אזור צוות והחלפת ילד' : 'אזור הורים'}
           </Button>
         </>
       )}

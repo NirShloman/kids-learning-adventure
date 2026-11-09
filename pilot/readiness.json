@@ -1,0 +1,5 @@
+{
+  "operator": { "legalName": null, "privacyEmail": null, "supportEmail": null, "address": null, "activeDataRetention": null },
+  "deployment": { "pilotProjectId": null, "narrationProjectId": null, "webUrl": null, "publicSignupDisabled": false, "backupsVerified": false, "restoreVerified": false, "alertsVerified": false },
+  "acceptance": { "classroomComputer": null, "teacherWalkthrough": null, "educationalReview": null, "mediaRights": null, "fiveDayPilot": null }
+}

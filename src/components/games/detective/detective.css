@@ -267,9 +267,11 @@
     background 0.15s,
     border-color 0.15s;
 }
-.detective-answer:hover:not(:disabled) {
-  border-color: #248580;
-  background: #f0fbf5;
+@media (hover: hover) and (pointer: fine) {
+  .detective-answer:hover:not(:disabled) {
+    border-color: #248580;
+    background: #f0fbf5;
+  }
 }
 .detective-answer .detective-token {
   font-size: 44px;

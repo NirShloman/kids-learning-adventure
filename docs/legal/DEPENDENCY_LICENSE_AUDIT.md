@@ -2,6 +2,8 @@
 
 Audit date: 2026-08-22; versions are from `package-lock.json`.
 
+Update 2026-10-19: the optional kindergarten Web pilot adds Firebase JavaScript SDK 12.19.0 (Apache-2.0) and its idb dependency (ISC). Firebase copyright notices and the full Apache/ISC licenses were appended to both shipped notice files. Zod's MIT notice is included for the pilot validation/tooling code. The pilot adapter is dynamically loaded only when explicitly enabled on Web; native/local runtime network behavior remains local. Production dependency audits for the root, pilot Functions and narration Functions report zero known vulnerabilities after compatible patches. The Firebase CLI development dependency chain still reports seven development-only findings; no forced major downgrade was applied. These dependency checks do not establish media distribution rights.
+
 Update 2026-10-10: Capacitor core/android/ios/CLI moved to 8.5.3 to fix GHSA-rvm3-566m-v7fv; runtime notices now identify 8.5.3. Heebo has replaced Rubik and its full OFL notice is included in the shipped notices. Development transitive packages were patched; xcode's UUID dependency is overridden to CommonJS-compatible uuid 11.1.1 (xcode uses only v4). A full npm audit after these updates reported zero vulnerabilities. The table below is the historical August audit, not the current resolved dependency list. Final native binary review remains required.
 
 ## Shipped web/runtime components

@@ -5,6 +5,9 @@
   "type": "module",
   "description": "אפליקציית Web/PWA משודרגת ללימוד חוויתי בעברית לילדים בגילאי 3-6, עם קול הדרכה, לובי עשיר, אנימציות, משחקים נוספים ומאגר שאלות מורחב.",
   "scripts": {
+    "pilot:functions:build": "npm --prefix pilot-functions run build",
+    "pilot:test:browser": "node scripts/pilot-browser-tests.mjs",
+    "pilot:readiness": "node scripts/pilot-readiness.mjs",
     "store:check": "npm audit --omit=dev --audit-level=high && node scripts/store-readiness.mjs --online",
     "store:inventory": "node scripts/store-readiness.mjs",
     "dev": "vite",
@@ -19,7 +22,7 @@
     "mobile:verify": "node scripts/verify-mobile-config.mjs",
     "android:verify:apk": "node scripts/verify-android-apk.mjs",
     "mobile:assets": "node scripts/generate-mobile-assets.mjs",
-    "deploy": "npm run build:release && wrangler deploy",
+    "deploy": "node scripts/pilot-deploy-gate.mjs && npm run build:release && wrangler deploy",
     "preview": "vite preview --host 0.0.0.0",
     "typecheck": "tsc -b",
     "generate:content": "node scripts/generate-static-content.mjs",
@@ -74,12 +77,14 @@
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "5.2.0",
+    "firebase": "12.19.0",
     "matter-js": "^0.20.0",
     "motion": "^12.42.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "typescript": "^5.6.2",
-    "vite": "^8.1.5"
+    "vite": "^8.1.5",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.2",
@@ -88,6 +93,7 @@
     "@types/matter-js": "^0.20.2",
     "@types/node": "^25.9.1",
     "ajv": "^8.20.0",
+    "fake-indexeddb": "^6.2.6",
     "jsdom": "^29.1.1",
     "sharp": "0.35.5",
     "tsx": "^4.20.6",
@@ -95,6 +101,8 @@
     "wrangler": "^4.112.0"
   },
   "overrides": {
+    "@firebase/app": "0.16.2",
+    "@grpc/grpc-js": "^1.13.6",
     "xcode": {
       "uuid": "11.1.1"
     }

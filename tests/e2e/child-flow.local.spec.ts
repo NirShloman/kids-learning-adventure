@@ -117,9 +117,9 @@ test('large collections paginate without hiding creations or scrolling',async({p
   },adventureMissions.filter(m=>m.gameId==='letters'));
   await page.reload();await page.getByRole('button',{name:/מתחילים לשחק/}).click();
   await page.getByRole('button',{name:'🏆 האוסף שלי'}).click();
-  for(const count of [4,4,1]) {
-    await expect(page.locator('.detective-collection figure')).toHaveCount(count);await visibleControlsFit(page);
-    if(count===4)await page.getByRole('button',{name:'לעמוד הבא',exact:true}).click();
+  for(const index of [0,1]) {
+    await expect(page.locator('.collection-grid > button')).toHaveCount(4);await visibleControlsFit(page);
+    if(index===0)await page.getByRole('button',{name:'לעמוד הבא',exact:true}).click();
   }
   await page.getByRole('button',{name:'🎲 משחקים'}).click();await openGame(page,'אותיות');
   await page.getByRole('button',{name:'האוסף שלי ✦'}).click();

@@ -6,7 +6,7 @@ import { isValidHebrewName, normalizeHebrewName } from '../utils/hebrew';
 import { deleteProfile, getLearningSnapshot, getProfileData, selectProfile, updateProfile } from '../services/learningStoreService';
 import { skillGraph } from '../learning/skillGraph';
 
-interface ParentAreaPageProps { learner: LocalLearnerState; onBack: () => void; onAddProfile: () => void; onReloadState: () => void; onReset: () => Promise<void> }
+interface ParentAreaPageProps { learner: LocalLearnerState; onBack: () => void; onAddProfile: () => void; onReloadState: () => void; onReset: () => Promise<void>; staffAuthorized?: boolean }
 const statusLabels: Record<MasteryStatus, string> = { new: 'חדש', exposed: 'נחשף', practicing: 'בתרגול', 'almost-mastered': 'כמעט שולט', mastered: 'נרכש', 'needs-reinforcement': 'דורש חיזוק' };
 const accessibilityLabels: Record<keyof AccessibilitySettings, string> = {
   noTimeLimit: 'ללא הגבלת זמן', reducedMotion: 'פחות אנימציה', reducedParticles: 'פחות חלקיקים',
@@ -23,9 +23,9 @@ function trendFor(profile: LearnerProfile): string {
   return change > 0.08 ? 'מגמת שיפור' : change < -0.08 ? 'כדאי לחזק חומר מוכר' : 'התקדמות יציבה';
 }
 
-export function ParentAreaPage({ learner, onBack, onAddProfile, onReloadState, onReset }: ParentAreaPageProps) {
+export function ParentAreaPage({ learner, onBack, onAddProfile, onReloadState, onReset, staffAuthorized = false }: ParentAreaPageProps) {
   const challenge = useMemo(() => { const first = 7 + Math.floor(Math.random() * 3); const second = 6 + Math.floor(Math.random() * 3); return { first, second, answer: first * second }; }, []);
-  const [answer, setAnswer] = useState(''); const [unlocked, setUnlocked] = useState(false); const [error, setError] = useState(false);
+  const [answer, setAnswer] = useState(''); const [unlocked, setUnlocked] = useState(staffAuthorized); const [error, setError] = useState(false);
   const [revision, setRevision] = useState(0);
   const snapshot = useMemo(() => getLearningSnapshot(), [learner.updatedAt, revision]);
   const active = snapshot.profiles.find((profile) => profile.id === snapshot.activeProfileId) ?? null;
@@ -37,7 +37,7 @@ export function ParentAreaPage({ learner, onBack, onAddProfile, onReloadState, o
   function saveProfile(event: FormEvent) {
     event.preventDefault(); if (!active) return;
     const normalized = normalizeHebrewName(name);
-    if (normalized && !isValidHebrewName(normalized)) { setError(true); return; }
+    if (!staffAuthorized && normalized && !isValidHebrewName(normalized)) { setError(true); return; }
     updateProfile(active.id, { name: normalized }); setError(false); refresh();
   }
   function patchActive(updates: Partial<LearnerProfile>) { if (!active) return; updateProfile(active.id, updates); refresh(); }
@@ -49,16 +49,16 @@ export function ParentAreaPage({ learner, onBack, onAddProfile, onReloadState, o
   </section></main>;
 
   return <main className="parent-area parent-area--dashboard" dir="rtl"><section className="parent-area__card">
-    <header className="parent-dashboard__header"><div><span className="question-card__tag">מקום לצמוח, בקצב האישי</span><h1>{active?.name ? `המסע של ${active.name}` : 'מבט קטן על ההתקדמות'}</h1><p>כאן רואים מה כבר התגלה ומה כדאי לתרגל. ההתקדמות נשמרת במכשיר.</p></div><Button onClick={onBack}>חזרה לאפליקציה</Button></header>
+    <header className="parent-dashboard__header"><div><span className="question-card__tag">מקום לצמוח, בקצב האישי</span><h1>{active?.name ? `המסע של ${active.name}` : 'מבט קטן על ההתקדמות'}</h1><p>{staffAuthorized ? 'כאן רואים מה כבר התגלה ומה כדאי לתרגל. מצב הגיבוי מופיע בסרגל הגן.' : 'כאן רואים מה כבר התגלה ומה כדאי לתרגל. ההתקדמות נשמרת במכשיר.'}</p></div><Button onClick={onBack}>{staffAuthorized ? 'חזרה לילדי הגן' : 'חזרה לאפליקציה'}</Button></header>
     <nav className="parent-dashboard__nav" aria-label="ניווט באזור הורים"><a href="#parent-overview">תמונת מצב</a><a href="#parent-skills">מיומנויות</a><a href="#parent-preferences">פרופיל והעדפות</a><a href="#parent-accessibility">נגישות וצלילים</a></nav>
 
-    <section className="parent-dashboard__section" aria-labelledby="profiles-title"><h2 id="profiles-title">פרופילים מקומיים</h2><div className="profile-list">
+    {!staffAuthorized && <section className="parent-dashboard__section" aria-labelledby="profiles-title"><h2 id="profiles-title">פרופילים מקומיים</h2><div className="profile-list">
       {snapshot.profiles.map((profile) => <div className={profile.id === active?.id ? 'profile-chip is-active' : 'profile-chip'} key={profile.id}>
         <button type="button" onClick={() => { selectProfile(profile.id); setName(profile.name); refresh(); }}><span aria-hidden="true">{profile.avatarId === 'shir' ? '👧' : '👦'}</span>{profile.name || `ילד/ה בגיל ${profile.age}`}</button>
         <button type="button" aria-label={`מחיקת הפרופיל ${profile.name || ''}`} onClick={() => { if (window.confirm('למחוק את הפרופיל וההתקדמות שלו?')) { deleteProfile(profile.id); refresh(); } }}>×</button>
       </div>)}
       <Button variant="secondary" onClick={onAddProfile}>הוספת פרופיל</Button>
-    </div></section>
+    </div></section>}
 
     {active && data ? <>
       <section id="parent-overview" className="parent-dashboard__summary" aria-label="תמונת מצב"><article><span>מגמה לפי הפעילויות האחרונות</span><strong>{trendFor(active)}</strong></article><article><span>זמן משחק משוער</span><strong>{data.sessions.length ? `${Math.round(data.sessions.reduce((sum, session) => sum + session.durationSeconds, 0) / 60)} דקות` : 'טרם תועד'}</strong></article><article><span>פעילות אחרונה</span><strong>{data.events.length ? new Date(data.events[data.events.length - 1].occurredAt).toLocaleDateString('he-IL') : 'מתחילים עכשיו'}</strong></article></section>
@@ -82,10 +82,10 @@ export function ParentAreaPage({ learner, onBack, onAddProfile, onReloadState, o
       </div></section>
     </> : <p>צרו פרופיל כדי להתחיל.</p>}
 
-    <section className="parent-area__actions"><a className="button button--ghost" href="/privacy.html">מדיניות פרטיות</a><a className="button button--ghost" href="/terms.html">תנאי שימוש</a><a className="button button--ghost" href="/purchases.html">רכישות</a><a className="button button--ghost" href="/copyright.html">זכויות יוצרים</a><a className="button button--ghost" href="/licenses.html">רישיונות</a><a className="button button--ghost" href="/support.html">תמיכה</a><Button variant="ghost" onClick={async () => {
+    <section className="parent-area__actions"><a className="button button--ghost" href="/privacy.html">מדיניות פרטיות</a><a className="button button--ghost" href="/terms.html">תנאי שימוש</a><a className="button button--ghost" href="/purchases.html">רכישות</a><a className="button button--ghost" href="/copyright.html">זכויות יוצרים</a><a className="button button--ghost" href="/licenses.html">רישיונות</a><a className="button button--ghost" href="/support.html">תמיכה</a>{!staffAuthorized && <Button variant="ghost" onClick={async () => {
       if (!window.confirm('למחוק לצמיתות את כל נתוני האפליקציה מהמכשיר?')) return;
       try { await onReset(); }
       catch { window.alert('המחיקה לא הושלמה. השאירו את האפליקציה פתוחה, נסו שוב את השמירה ואז חזרו למחיקה.'); }
-    }}>מחיקת כל הנתונים מהמכשיר</Button></section>
+    }}>מחיקת כל הנתונים מהמכשיר</Button>}</section>
   </section></main>;
 }

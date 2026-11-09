@@ -51,6 +51,8 @@ export function DetectiveSession({
     live = useRef(initialRound);
   const [selection, setSelection] = useState<string[]>([]),
     selectionRef = useRef<string[]>([]);
+  // Saved attempts are learning history; only the current feedback paints an answer.
+  const [choice, setChoice] = useState<{ itemId: string; optionId: string } | null>(null);
   const feedback = useGameFeedback(voiceEnabled);
   const [pairPhase, setPairPhase] = useState<'first' | 'second' | 'feedback'>('first');
   const [peek, setPeek] = useState<string | null>(null);
@@ -146,10 +148,14 @@ export function DetectiveSession({
     const before = live.current,
       next = answerChoice(before, current, optionId);
     if (before === next) return;
+    setChoice({ itemId: current.id, optionId });
     commit(next, current, optionId === current.correctOptionId, before);
     const correct = optionId === current.correctOptionId;
     feedback.run(correct ? (current.explanation ?? 'כל הכבוד!') : (current.hint ?? 'ננסה שוב.'),
-      () => { if (correct) advance(); else startedAt.current = performance.now(); }, correct);
+      () => {
+        setChoice(null);
+        if (correct) advance(); else startedAt.current = performance.now();
+      }, correct);
   }
   function hint() {
     if (feedback.locked.current) return;
@@ -352,17 +358,19 @@ export function DetectiveSession({
             <>
               <Stimulus scene={current.scene} />
               <div
+                key={`${round.id}:${round.index}:${current.id}`}
                 className="detective-answers"
                 data-count={current.options?.length}
               >
                 {current.options?.map((option) => {
                   const correct = option.id === current.correctOptionId,
-                    wrong = round.wrongOptions[current.id]?.includes(option.id);
+                    active = feedback.busy && choice?.itemId === current.id && choice.optionId === option.id,
+                    wrong = active && !correct;
                   return (
                     <div className="detective-answer-wrap" key={option.id}>
                       <button
                         type="button"
-                        className={`detective-answer ${outcome && correct ? "option-card--correct" : ""} ${wrong ? "option-card--wrong" : ""}`}
+                        className={`detective-answer ${active && correct ? "option-card--correct" : ""} ${wrong ? "option-card--wrong" : ""}`}
                         data-testid={
                           step.gameId === "patterns"
                             ? "pattern-option"
@@ -383,7 +391,7 @@ export function DetectiveSession({
                             {option.label}
                           </span>
                         ) : null}
-                        {outcome && correct ? (
+                        {active && correct ? (
                           <span>✓</span>
                         ) : wrong ? (
                           <span>ננסה אחרת</span>

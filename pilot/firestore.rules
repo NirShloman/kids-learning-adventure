@@ -1,0 +1,16 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function member(garden) {
+      return request.auth != null
+        && exists(/databases/$(database)/documents/memberships/$(request.auth.uid))
+        && get(/databases/$(database)/documents/memberships/$(request.auth.uid)).data.kindergartenId == garden
+        && get(/databases/$(database)/documents/memberships/$(request.auth.uid)).data.disabled == false;
+    }
+    match /kindergartens/{garden}/{kind}/{document} {
+      allow read: if member(garden) && kind in ['profiles', 'states', 'checkpoints'];
+      allow write: if false;
+    }
+    match /{document=**} { allow read, write: if false; }
+  }
+}

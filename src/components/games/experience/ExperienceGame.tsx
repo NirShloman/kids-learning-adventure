@@ -297,6 +297,7 @@ export function ExperienceGame(props: ExperienceGameProps) {
       busyRef.current = true;
       setBusy(true);
       response.run("ננסה שוב. אפשר להיעזר ברמז.", () => {
+        setSelected(null);
         busyRef.current = false;
         setBusy(false);
       }, false);

@@ -7,18 +7,20 @@ import { getQuizQuestions } from '../services/questionService';
 import { recordLearningEvent, saveSessionSummary } from '../services/learningStoreService';
 import { skillIdsForLegacySkill } from '../learning/skillGraph';
 
-interface SharedPlayPageProps { profiles: LearnerProfile[]; onBack: () => void }
+interface SharedPlayPageProps { profiles: LearnerProfile[]; onBack: () => void; fixedParticipants?: string[] }
 type SharedMode = 'turns' | 'cooperation';
 
-export function SharedPlayPage({ profiles, onBack }: SharedPlayPageProps) {
-  const [mode, setMode] = useState<SharedMode | null>(null);
-  const [firstId, setFirstId] = useState(profiles[0]?.id ?? 'guest-1');
-  const [secondId, setSecondId] = useState(profiles[1]?.id ?? 'guest-2');
-  const [ready, setReady] = useState(false);
+export function SharedPlayPage({ profiles, onBack, fixedParticipants }: SharedPlayPageProps) {
+  const [mode, setMode] = useState<SharedMode | null>(fixedParticipants ? 'turns' : null);
+  const [firstId, setFirstId] = useState(fixedParticipants?.[0] ?? profiles[0]?.id ?? 'guest-1');
+  const [secondId, setSecondId] = useState(fixedParticipants?.[1] ?? profiles[1]?.id ?? 'guest-2');
+  const [ready, setReady] = useState(Boolean(fixedParticipants));
   const [error, setError] = useState(false);
+  const [loadAttempt, setLoadAttempt] = useState(0);
   const [hinted, setHinted] = useState(false);
   const attempt = useRef(1);
   const score = useRef(0);
+  const participantScores = useRef<Record<string, { correct: number; total: number }>>({});
   const finished = useRef(false);
   const voiceEnabled = profiles.find(p => p.id === firstId)?.narrationEnabled ?? false;
   const feedback = useGameFeedback(voiceEnabled);
@@ -40,12 +42,13 @@ export function SharedPlayPage({ profiles, onBack }: SharedPlayPageProps) {
       .then(items => { if (active) { setQuestions(items.slice(0, 6)); setError(!items.length); } })
       .catch(() => { if (active) setError(true); });
     return () => { active = false; };
-  }, [firstId, mode, ready]);
+  }, [firstId, mode, ready, loadAttempt]);
 
   function answer(optionId: string) {
     const question = questions[index]; if (!question || feedback.locked.current || finished.current) return;
     const correct = optionId === question.correctOptionId; setSelected(optionId); if (correct) { score.current += 1; setTeamScore(score.current); }
     const participantId = mode === 'turns' ? (index % 2 === 0 ? firstId : secondId) : firstId;
+    if (correct) { const previous = participantScores.current[participantId] ?? { correct: 0, total: 0 }; participantScores.current[participantId] = { correct: previous.correct + 1, total: previous.total + 1 }; }
     if (!participantId.startsWith('guest')) recordLearningEvent({ profileId: participantId, sessionId: sessionId.current,
       contentId: question.id, skillIds: question.skillIds ?? skillIdsForLegacySkill(question.skill), gameId: question.category,
       evidenceForm: mode === 'turns' ? 'shared-turn' : 'shared-cooperation', correct, attemptNumber: attempt.current, hintUsed: mode === 'cooperation' || hinted,
@@ -66,7 +69,7 @@ export function SharedPlayPage({ profiles, onBack }: SharedPlayPageProps) {
     for (const profileId of [...new Set(participantIds)].filter((id) => !id.startsWith('guest'))) saveSessionSummary({
       id: `${sessionId.current}-${profileId}`, profileId, mode: mode === 'turns' ? 'shared-turns' : 'shared-cooperation',
       startedAt: startedAt.current.toISOString(), completedAt: completedAt.toISOString(),
-      durationSeconds: Math.max(1, Math.round((completedAt.getTime() - startedAt.current.getTime()) / 1000)), correct: score.current, total: questions.length
+      durationSeconds: Math.max(1, Math.round((completedAt.getTime() - startedAt.current.getTime()) / 1000)), correct: participantScores.current[profileId]?.correct ?? 0, total: participantScores.current[profileId]?.total ?? 0
     });
     setIndex(questions.length);
   }
@@ -76,7 +79,7 @@ export function SharedPlayPage({ profiles, onBack }: SharedPlayPageProps) {
 
   if (!mode) return <main className="shared-play" dir="rtl"><section><span className="question-card__tag">משחק משותף מקומי</span><h1>לומדים יחד, בלי מנצחים ומפסידים</h1><p>בוחרים דרך לשתף פעולה. אין צורך ברשת והמידע נשאר במכשיר.</p><div className="shared-play__modes"><button onClick={() => setMode('turns')}><strong>שני ילדים בתורות</strong><span>כל אחד מקבל תור קצר והכוכבים שייכים לקבוצה.</span></button><button onClick={() => setMode('cooperation')}><strong>הורה וילד</strong><span>המבוגר נותן רמז והילד או הילדה מגלים.</span></button></div><Button variant="ghost" onClick={onBack}>חזרה</Button></section></main>;
   if (!ready) return <main className="shared-play" dir="rtl"><section><h1>מי משחקים יחד?</h1>    <div className="shared-play__participants"><label>משתתף/ת ראשון/ה<select value={firstId} onChange={(event) => setFirstId(event.target.value)}>{profiles.map((profile) => <option key={profile.id} value={profile.id}>{profile.name || `גיל ${profile.age}`}</option>)}<option value="guest-1">אורח/ת</option></select></label>{mode === 'turns' ? <label>משתתף/ת שני/ה<select value={secondId} onChange={(event) => setSecondId(event.target.value)}>{profiles.filter((profile) => profile.id !== firstId).map((profile) => <option key={profile.id} value={profile.id}>{profile.name || `גיל ${profile.age}`}</option>)}<option value="guest-2">אורח/ת</option></select></label> : null}</div><Button onClick={() => setReady(true)}>מתחילים יחד</Button><Button variant="ghost" onClick={onBack}>חזרה</Button></section></main>;
-  if (error) return <main className="shared-play" dir="rtl"><section><p role="alert">לא הצלחנו להכין את המשחק.</p><Button onClick={() => { setError(false); setReady(false); }}>ננסה שוב</Button><Button onClick={onBack}>חזרה</Button></section></main>;
+  if (error) return <main className="shared-play" dir="rtl"><section><p role="alert">לא הצלחנו להכין את המשחק.</p><Button onClick={() => { setError(false); if (fixedParticipants) setLoadAttempt(value=>value+1); else setReady(false); }}>ננסה שוב</Button><Button onClick={onBack}>חזרה</Button></section></main>;
   if (!questions.length) return <main className="shared-play" dir="rtl"><p>מכינים משימה משותפת...</p></main>;
   if (index >= questions.length) return <main className="shared-play" dir="rtl"><section><h1>איזו עבודת צוות נהדרת!</h1><p>אספתם יחד {teamScore} כוכבי קבוצה. כל ניסיון עזר לקבוצה ללמוד.</p><Button onClick={onBack}>חזרה לעולמות</Button></section></main>;
   const question = questions[index]; const currentId = mode === 'turns' ? (index % 2 === 0 ? firstId : secondId) : firstId;

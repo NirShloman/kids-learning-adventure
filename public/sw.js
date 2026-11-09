@@ -51,7 +51,6 @@ async function narrationResponse(request) {
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(STATIC_ASSETS)));
-  self.skipWaiting();
 });
 
 self.addEventListener('activate', (event) => {
@@ -86,6 +85,25 @@ self.addEventListener('fetch', (event) => {
 });
 
 self.addEventListener('message', (event) => {
+  if (event.data?.type === 'ACTIVATE_UPDATE') { self.skipWaiting(); return; }
+  if (event.data?.type === 'PREPARE_PILOT_OFFLINE') {
+    event.waitUntil((async()=>{
+      try {
+        // The built, same-origin manifest is authoritative, never message-supplied URLs.
+        const response=await fetch('/pilot-offline.json',{cache:'no-store'});
+        if(!response.ok)throw new Error('Manifest missing');
+        const urls=await response.json();
+        if(!Array.isArray(urls)||!urls.length||urls.length>10000||!urls.every(url=>typeof url==='string'&&url.startsWith('/')&&!url.startsWith('//')&&!url.includes('..')&&!url.includes('?')&&new URL(url,self.location.origin).origin===self.location.origin))throw new Error('Invalid manifest');
+        const cache=await caches.open(CACHE_NAME);let cursor=0,ok=true;
+        await Promise.all(Array.from({length:4},async()=>{
+          while(cursor<urls.length){const url=urls[cursor++];if(await cache.match(url))continue;
+            try{const asset=await fetch(url);if(!asset.ok||asset.status===206||(!url.endsWith('.html')&&url!=='/'&&asset.headers.get('content-type')?.includes('text/html'))){ok=false;continue;}await cache.put(url,asset);}catch{ok=false;}
+          }
+        }));
+        event.ports[0]?.postMessage({ok,cacheName:CACHE_NAME});
+      }catch{event.ports[0]?.postMessage({ok:false});}
+    })());return;
+  }
   if (event.data?.type === 'PREPARE_ADVENTURE_OFFLINE') {
     const urls = Array.isArray(event.data.urls) ? event.data.urls : [];
     const allowed = urls.length > 0 && urls.length < 2000 && urls.every(url =>

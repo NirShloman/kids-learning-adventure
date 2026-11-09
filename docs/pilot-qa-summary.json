@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-19",
+  "timezone": "Asia/Jerusalem",
+  "sourceFingerprint": "fa63cde997451e1411846d49d165c854a2b8ecd0710acd0c3c422dda4d571c9d",
+  "version": "1.2.0",
+  "deployed": false,
+  "pilotLaunchApproved": false,
+  "unit": {
+    "passed": 234
+  },
+  "integration": {
+    "passed": 12
+  },
+  "firebaseEmulator": {
+    "passed": 6
+  },
+  "desktopRegression": {
+    "latestOutcomes": {
+      "expected": 238,
+      "skipped": 4
+    },
+    "rawReports": [
+      "test-results/results.json",
+      "qa-reports/pilot-regression.json"
+    ]
+  },
+  "pilotBrowsers": {
+    "latestOutcomes": {
+      "expected": 24
+    },
+    "byProject": [
+      {
+        "project": "pilot-firefox-1366",
+        "expected": 4
+      },
+      {
+        "project": "pilot-firefox-1920",
+        "expected": 4
+      },
+      {
+        "project": "pilot-edge-1366",
+        "expected": 4
+      },
+      {
+        "project": "pilot-edge-1920",
+        "expected": 4
+      },
+      {
+        "project": "pilot-chrome-1366",
+        "expected": 4
+      },
+      {
+        "project": "pilot-chrome-1920",
+        "expected": 4
+      }
+    ],
+    "rawReports": [
+      "qa-reports/pilot-initial.json",
+      "qa-reports/pilot.json",
+      "qa-reports/pilot-auth-final.json"
+    ]
+  },
+  "productionDependencyAudit": {
+    "root": 0,
+    "pilotFunctions": 0,
+    "narrationFunctions": 0
+  },
+  "developmentToolingAudit": {
+    "knownFindings": 7,
+    "scope": "firebase-tools development dependency chain; not shipped as server production dependencies"
+  },
+  "evidenceLimitations": [
+    "Synthetic accounts and data only",
+    "Browser tests ran on the development computer, not a classroom computer",
+    "No live cloud signup/password-reset verification",
+    "No production backup, restore or notification delivery test",
+    "Operator details, educational and media-rights approvals remain incomplete"
+  ]
+}

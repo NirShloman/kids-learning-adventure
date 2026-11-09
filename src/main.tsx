@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import { registerServiceWorker } from './services/pwaService';
 import { initializeLocalDataStore, localPersistence } from './services/localDataStore';
-import { initializePlatformRuntime } from './services/platformRuntime';
+import { initializePlatformRuntime, platformRuntime } from './services/platformRuntime';
 import { AppErrorBoundary, PersistenceGuard, RecoveryScreen } from './components/common/AppRecovery';
 import '@fontsource-variable/heebo';
 import './styles.css';
@@ -20,9 +20,12 @@ async function bootstrap() {
   try {
     await initializePlatformRuntime();
     await initializeLocalDataStore();
-    root.render(<React.StrictMode><AppErrorBoundary><PersistenceGuard><App /></PersistenceGuard></AppErrorBoundary></React.StrictMode>);
+    const pilotConfigured = !platformRuntime.native && import.meta.env.VITE_PILOT_ENABLED === '1';
+    const RootApp = pilotConfigured ? (await import('./pilot/PilotApp')).default : App;
+    root.render(<AppErrorBoundary><PersistenceGuard>{pilotConfigured ? <RootApp /> : <React.StrictMode><RootApp /></React.StrictMode>}</PersistenceGuard></AppErrorBoundary>);
     registerServiceWorker();
-  } catch {
+  } catch (error) {
+    if (import.meta.env.DEV || import.meta.env.MODE === 'pilot-test') console.error('Bootstrap failed', error);
     showInitializationFailure();
   }
 }
